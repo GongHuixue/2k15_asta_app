@@ -1,0 +1,605 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Tue Mar 25 2014 09:15:27 GMT+0530-->
+<resources>
+<!--Layout_Setup_Settings_frequency_v0.9.psd-->
+<dimen name="setup_settings_frequency_04_panels_npanels_standard_bg_height">422dp</dimen>
+
+<dimen name="setup_settings_frequency_04_panels_npanels_standard_bg_width">946dp</dimen>
+
+<dimen name="setup_settings_frequency_04_panels_npanels_standard_bg_x1">0dp</dimen>
+
+<dimen name="setup_settings_frequency_04_panels_npanels_standard_bg_y1">59dp</dimen>
+
+<dimen name="setup_settings_frequency_04_panels_npanels_standard_bg_x2">946dp</dimen>
+
+<dimen name="setup_settings_frequency_04_panels_npanels_standard_bg_y2">481dp</dimen>
+
+<dimen name="setup_settings_frequency_04_panels_npanel_titlebar_normal_01_height">422dp</dimen>
+
+<dimen name="setup_settings_frequency_04_panels_npanel_titlebar_normal_01_width">48dp</dimen>
+
+<dimen name="setup_settings_frequency_04_panels_npanel_titlebar_normal_01_x1">0dp</dimen>
+
+<dimen name="setup_settings_frequency_04_panels_npanel_titlebar_normal_01_y1">59dp</dimen>
+
+<dimen name="setup_settings_frequency_04_panels_npanel_titlebar_normal_01_x2">48dp</dimen>
+
+<dimen name="setup_settings_frequency_04_panels_npanel_titlebar_normal_01_y2">481dp</dimen>
+
+<dimen name="setup_settings_frequency_04_panels_npanel_titlebar_normal_02_height">422dp</dimen>
+
+<dimen name="setup_settings_frequency_04_panels_npanel_titlebar_normal_02_width">48dp</dimen>
+
+<dimen name="setup_settings_frequency_04_panels_npanel_titlebar_normal_02_x1">48dp</dimen>
+
+<dimen name="setup_settings_frequency_04_panels_npanel_titlebar_normal_02_y1">59dp</dimen>
+
+<dimen name="setup_settings_frequency_04_panels_npanel_titlebar_normal_02_x2">96dp</dimen>
+
+<dimen name="setup_settings_frequency_04_panels_npanel_titlebar_normal_02_y2">481dp</dimen>
+
+<dimen name="setup_settings_frequency_04_panels_npanel_titlebar_activated_height">422dp</dimen>
+
+<dimen name="setup_settings_frequency_04_panels_npanel_titlebar_activated_width">48dp</dimen>
+
+<dimen name="setup_settings_frequency_04_panels_npanel_titlebar_activated_x1">96dp</dimen>
+
+<dimen name="setup_settings_frequency_04_panels_npanel_titlebar_activated_y1">59dp</dimen>
+
+<dimen name="setup_settings_frequency_04_panels_npanel_titlebar_activated_x2">144dp</dimen>
+
+<dimen name="setup_settings_frequency_04_panels_npanel_titlebar_activated_y2">481dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_list01_row01_height">42dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_list01_row01_width">328dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_list01_row01_x1">144dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_list01_row01_y1">80dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_list01_row01_x2">472dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_list01_row01_y2">122dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_list01_row02_height">42dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_list01_row02_width">328dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_list01_row02_x1">144dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_list01_row02_y1">122dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_list01_row02_x2">472dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_list01_row02_y2">164dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_list01_panels_divider_height">378.5dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_list01_panels_divider_width">1dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_list01_panels_divider_x1">471dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_list01_panels_divider_y1">81dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_list01_panels_divider_x2">472dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_list01_panels_divider_y2">459.5dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_list02_picker01_height">140dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_list02_picker01_width">88dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_list02_picker01_x1">496dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_list02_picker01_y1">81dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_list02_picker01_x2">584dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_list02_picker01_y2">221dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_picker_dot_height">30dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_picker_dot_width">2dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_picker_dot_x1">590dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_picker_dot_y1">138.5dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_picker_dot_x2">592dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_picker_dot_y2">168.5dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_list02_picker02_height">140dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_list02_picker02_width">70dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_list02_picker02_x1">598dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_list02_picker02_y1">81dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_list02_picker02_x2">668dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_list02_picker02_y2">221dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_list02_panels_divider_height">378.5dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_list02_panels_divider_width">1dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_list02_panels_divider_x1">784dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_list02_panels_divider_y1">81dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_list02_panels_divider_x2">785dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_list02_panels_divider_y2">459.5dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_list02_cancel_button_normal_text_height">20dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_list02_cancel_button_normal_text_width">104dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_list02_cancel_button_normal_text_x1">508dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_list02_cancel_button_normal_text_y1">429.5dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_list02_cancel_button_normal_text_x2">612dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_list02_cancel_button_normal_text_y2">449.5dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_list02_cancel_button_normal_height">42dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_list02_cancel_button_normal_width">136dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_list02_cancel_button_normal_x1">492dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_list02_cancel_button_normal_y1">417dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_list02_cancel_button_normal_x2">628dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_list02_cancel_button_normal_y2">459dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_list02_done_button_normal_text_height">20dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_list02_done_button_normal_text_width">104dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_list02_done_button_normal_text_x1">644dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_list02_done_button_normal_text_y1">429.5dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_list02_done_button_normal_text_x2">748dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_list02_done_button_normal_text_y2">449.5dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_list02_done_button_normal_height">42dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_list02_done_button_normal_width">136dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_list02_done_button_normal_x1">628dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_list02_done_button_normal_y1">417dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_list02_done_button_normal_x2">764dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_list02_done_button_normal_y2">459dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_column03_description_text_height">111.5dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_column03_description_text_width">127dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_column03_description_text_x1">797dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_column03_description_text_y1">93.5dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_column03_description_text_x2">924dp</dimen>
+
+<dimen name="setup_settings_frequency_04_npanel_column03_description_text_y2">205dp</dimen>
+
+<dimen name="setup_settings_frequency_03_panels_npanels_standard_bg_height">422dp</dimen>
+
+<dimen name="setup_settings_frequency_03_panels_npanels_standard_bg_width">946dp</dimen>
+
+<dimen name="setup_settings_frequency_03_panels_npanels_standard_bg_x1">0dp</dimen>
+
+<dimen name="setup_settings_frequency_03_panels_npanels_standard_bg_y1">59dp</dimen>
+
+<dimen name="setup_settings_frequency_03_panels_npanels_standard_bg_x2">946dp</dimen>
+
+<dimen name="setup_settings_frequency_03_panels_npanels_standard_bg_y2">481dp</dimen>
+
+<dimen name="setup_settings_frequency_03_panels_npanel_titlebar_normal_01_height">422dp</dimen>
+
+<dimen name="setup_settings_frequency_03_panels_npanel_titlebar_normal_01_width">48dp</dimen>
+
+<dimen name="setup_settings_frequency_03_panels_npanel_titlebar_normal_01_x1">0dp</dimen>
+
+<dimen name="setup_settings_frequency_03_panels_npanel_titlebar_normal_01_y1">59dp</dimen>
+
+<dimen name="setup_settings_frequency_03_panels_npanel_titlebar_normal_01_x2">48dp</dimen>
+
+<dimen name="setup_settings_frequency_03_panels_npanel_titlebar_normal_01_y2">481dp</dimen>
+
+<dimen name="setup_settings_frequency_03_panels_npanel_titlebar_normal_02_height">422dp</dimen>
+
+<dimen name="setup_settings_frequency_03_panels_npanel_titlebar_normal_02_width">48dp</dimen>
+
+<dimen name="setup_settings_frequency_03_panels_npanel_titlebar_normal_02_x1">48dp</dimen>
+
+<dimen name="setup_settings_frequency_03_panels_npanel_titlebar_normal_02_y1">59dp</dimen>
+
+<dimen name="setup_settings_frequency_03_panels_npanel_titlebar_normal_02_x2">96dp</dimen>
+
+<dimen name="setup_settings_frequency_03_panels_npanel_titlebar_normal_02_y2">481dp</dimen>
+
+<dimen name="setup_settings_frequency_03_panels_npanel_titlebar_activated_height">422dp</dimen>
+
+<dimen name="setup_settings_frequency_03_panels_npanel_titlebar_activated_width">48dp</dimen>
+
+<dimen name="setup_settings_frequency_03_panels_npanel_titlebar_activated_x1">96dp</dimen>
+
+<dimen name="setup_settings_frequency_03_panels_npanel_titlebar_activated_y1">59dp</dimen>
+
+<dimen name="setup_settings_frequency_03_panels_npanel_titlebar_activated_x2">144dp</dimen>
+
+<dimen name="setup_settings_frequency_03_panels_npanel_titlebar_activated_y2">481dp</dimen>
+
+<dimen name="setup_settings_frequency_03_npanel_list01_row01_height">42dp</dimen>
+
+<dimen name="setup_settings_frequency_03_npanel_list01_row01_width">328dp</dimen>
+
+<dimen name="setup_settings_frequency_03_npanel_list01_row01_x1">144dp</dimen>
+
+<dimen name="setup_settings_frequency_03_npanel_list01_row01_y1">80dp</dimen>
+
+<dimen name="setup_settings_frequency_03_npanel_list01_row01_x2">472dp</dimen>
+
+<dimen name="setup_settings_frequency_03_npanel_list01_row01_y2">122dp</dimen>
+
+<dimen name="setup_settings_frequency_03_npanel_list01_row02_height">42dp</dimen>
+
+<dimen name="setup_settings_frequency_03_npanel_list01_row02_width">328dp</dimen>
+
+<dimen name="setup_settings_frequency_03_npanel_list01_row02_x1">144dp</dimen>
+
+<dimen name="setup_settings_frequency_03_npanel_list01_row02_y1">122dp</dimen>
+
+<dimen name="setup_settings_frequency_03_npanel_list01_row02_x2">472dp</dimen>
+
+<dimen name="setup_settings_frequency_03_npanel_list01_row02_y2">164dp</dimen>
+
+<dimen name="setup_settings_frequency_03_npanel_list01_panels_divider_height">378.5dp</dimen>
+
+<dimen name="setup_settings_frequency_03_npanel_list01_panels_divider_width">1dp</dimen>
+
+<dimen name="setup_settings_frequency_03_npanel_list01_panels_divider_x1">471dp</dimen>
+
+<dimen name="setup_settings_frequency_03_npanel_list01_panels_divider_y1">81dp</dimen>
+
+<dimen name="setup_settings_frequency_03_npanel_list01_panels_divider_x2">472dp</dimen>
+
+<dimen name="setup_settings_frequency_03_npanel_list01_panels_divider_y2">459.5dp</dimen>
+
+<dimen name="setup_settings_frequency_03_npanel_list02_picker01_height">140dp</dimen>
+
+<dimen name="setup_settings_frequency_03_npanel_list02_picker01_width">70dp</dimen>
+
+<dimen name="setup_settings_frequency_03_npanel_list02_picker01_x1">496dp</dimen>
+
+<dimen name="setup_settings_frequency_03_npanel_list02_picker01_y1">81dp</dimen>
+
+<dimen name="setup_settings_frequency_03_npanel_list02_picker01_x2">566dp</dimen>
+
+<dimen name="setup_settings_frequency_03_npanel_list02_picker01_y2">221dp</dimen>
+
+<dimen name="setup_settings_frequency_03_npanel_picker_dot_height">30dp</dimen>
+
+<dimen name="setup_settings_frequency_03_npanel_picker_dot_width">2dp</dimen>
+
+<dimen name="setup_settings_frequency_03_npanel_picker_dot_x1">572dp</dimen>
+
+<dimen name="setup_settings_frequency_03_npanel_picker_dot_y1">138.5dp</dimen>
+
+<dimen name="setup_settings_frequency_03_npanel_picker_dot_x2">574dp</dimen>
+
+<dimen name="setup_settings_frequency_03_npanel_picker_dot_y2">168.5dp</dimen>
+
+<dimen name="setup_settings_frequency_03_npanel_list02_picker02_height">140dp</dimen>
+
+<dimen name="setup_settings_frequency_03_npanel_list02_picker02_width">88dp</dimen>
+
+<dimen name="setup_settings_frequency_03_npanel_list02_picker02_x1">580dp</dimen>
+
+<dimen name="setup_settings_frequency_03_npanel_list02_picker02_y1">81dp</dimen>
+
+<dimen name="setup_settings_frequency_03_npanel_list02_picker02_x2">668dp</dimen>
+
+<dimen name="setup_settings_frequency_03_npanel_list02_picker02_y2">221dp</dimen>
+
+<dimen name="setup_settings_frequency_03_npanel_list02_panels_divider_height">378.5dp</dimen>
+
+<dimen name="setup_settings_frequency_03_npanel_list02_panels_divider_width">1dp</dimen>
+
+<dimen name="setup_settings_frequency_03_npanel_list02_panels_divider_x1">784dp</dimen>
+
+<dimen name="setup_settings_frequency_03_npanel_list02_panels_divider_y1">81dp</dimen>
+
+<dimen name="setup_settings_frequency_03_npanel_list02_panels_divider_x2">785dp</dimen>
+
+<dimen name="setup_settings_frequency_03_npanel_list02_panels_divider_y2">459.5dp</dimen>
+
+<dimen name="setup_settings_frequency_03_npanel_column03_description_text_height">111.5dp</dimen>
+
+<dimen name="setup_settings_frequency_03_npanel_column03_description_text_width">127dp</dimen>
+
+<dimen name="setup_settings_frequency_03_npanel_column03_description_text_x1">797dp</dimen>
+
+<dimen name="setup_settings_frequency_03_npanel_column03_description_text_y1">93.5dp</dimen>
+
+<dimen name="setup_settings_frequency_03_npanel_column03_description_text_x2">924dp</dimen>
+
+<dimen name="setup_settings_frequency_03_npanel_column03_description_text_y2">205dp</dimen>
+
+<dimen name="setup_settings_frequency_02_panels_npanels_standard_bg_height">422dp</dimen>
+
+<dimen name="setup_settings_frequency_02_panels_npanels_standard_bg_width">946dp</dimen>
+
+<dimen name="setup_settings_frequency_02_panels_npanels_standard_bg_x1">0dp</dimen>
+
+<dimen name="setup_settings_frequency_02_panels_npanels_standard_bg_y1">59dp</dimen>
+
+<dimen name="setup_settings_frequency_02_panels_npanels_standard_bg_x2">946dp</dimen>
+
+<dimen name="setup_settings_frequency_02_panels_npanels_standard_bg_y2">481dp</dimen>
+
+<dimen name="setup_settings_frequency_02_panels_npanel_titlebar_normal_01_height">422dp</dimen>
+
+<dimen name="setup_settings_frequency_02_panels_npanel_titlebar_normal_01_width">48dp</dimen>
+
+<dimen name="setup_settings_frequency_02_panels_npanel_titlebar_normal_01_x1">0dp</dimen>
+
+<dimen name="setup_settings_frequency_02_panels_npanel_titlebar_normal_01_y1">59dp</dimen>
+
+<dimen name="setup_settings_frequency_02_panels_npanel_titlebar_normal_01_x2">48dp</dimen>
+
+<dimen name="setup_settings_frequency_02_panels_npanel_titlebar_normal_01_y2">481dp</dimen>
+
+<dimen name="setup_settings_frequency_02_panels_npanel_titlebar_normal_02_height">422dp</dimen>
+
+<dimen name="setup_settings_frequency_02_panels_npanel_titlebar_normal_02_width">48dp</dimen>
+
+<dimen name="setup_settings_frequency_02_panels_npanel_titlebar_normal_02_x1">48dp</dimen>
+
+<dimen name="setup_settings_frequency_02_panels_npanel_titlebar_normal_02_y1">59dp</dimen>
+
+<dimen name="setup_settings_frequency_02_panels_npanel_titlebar_normal_02_x2">96dp</dimen>
+
+<dimen name="setup_settings_frequency_02_panels_npanel_titlebar_normal_02_y2">481dp</dimen>
+
+<dimen name="setup_settings_frequency_02_panels_npanel_titlebar_activated_height">422dp</dimen>
+
+<dimen name="setup_settings_frequency_02_panels_npanel_titlebar_activated_width">48dp</dimen>
+
+<dimen name="setup_settings_frequency_02_panels_npanel_titlebar_activated_x1">96dp</dimen>
+
+<dimen name="setup_settings_frequency_02_panels_npanel_titlebar_activated_y1">59dp</dimen>
+
+<dimen name="setup_settings_frequency_02_panels_npanel_titlebar_activated_x2">144dp</dimen>
+
+<dimen name="setup_settings_frequency_02_panels_npanel_titlebar_activated_y2">481dp</dimen>
+
+<dimen name="setup_settings_frequency_02_npanel_list01_row01_height">42dp</dimen>
+
+<dimen name="setup_settings_frequency_02_npanel_list01_row01_width">328dp</dimen>
+
+<dimen name="setup_settings_frequency_02_npanel_list01_row01_x1">144dp</dimen>
+
+<dimen name="setup_settings_frequency_02_npanel_list01_row01_y1">80dp</dimen>
+
+<dimen name="setup_settings_frequency_02_npanel_list01_row01_x2">472dp</dimen>
+
+<dimen name="setup_settings_frequency_02_npanel_list01_row01_y2">122dp</dimen>
+
+<dimen name="setup_settings_frequency_02_npanel_list01_row02_height">42dp</dimen>
+
+<dimen name="setup_settings_frequency_02_npanel_list01_row02_width">328dp</dimen>
+
+<dimen name="setup_settings_frequency_02_npanel_list01_row02_x1">144dp</dimen>
+
+<dimen name="setup_settings_frequency_02_npanel_list01_row02_y1">122dp</dimen>
+
+<dimen name="setup_settings_frequency_02_npanel_list01_row02_x2">472dp</dimen>
+
+<dimen name="setup_settings_frequency_02_npanel_list01_row02_y2">164dp</dimen>
+
+<dimen name="setup_settings_frequency_02_npanel_list01_panels_divider_height">378.5dp</dimen>
+
+<dimen name="setup_settings_frequency_02_npanel_list01_panels_divider_width">1dp</dimen>
+
+<dimen name="setup_settings_frequency_02_npanel_list01_panels_divider_x1">471dp</dimen>
+
+<dimen name="setup_settings_frequency_02_npanel_list01_panels_divider_y1">81dp</dimen>
+
+<dimen name="setup_settings_frequency_02_npanel_list01_panels_divider_x2">472dp</dimen>
+
+<dimen name="setup_settings_frequency_02_npanel_list01_panels_divider_y2">459.5dp</dimen>
+
+<dimen name="setup_settings_frequency_02_npanel_list02_picker01_height">140dp</dimen>
+
+<dimen name="setup_settings_frequency_02_npanel_list02_picker01_width">70dp</dimen>
+
+<dimen name="setup_settings_frequency_02_npanel_list02_picker01_x1">496dp</dimen>
+
+<dimen name="setup_settings_frequency_02_npanel_list02_picker01_y1">81dp</dimen>
+
+<dimen name="setup_settings_frequency_02_npanel_list02_picker01_x2">566dp</dimen>
+
+<dimen name="setup_settings_frequency_02_npanel_list02_picker01_y2">221dp</dimen>
+
+<dimen name="setup_settings_frequency_02_npanel_picker_dot_height">30dp</dimen>
+
+<dimen name="setup_settings_frequency_02_npanel_picker_dot_width">2dp</dimen>
+
+<dimen name="setup_settings_frequency_02_npanel_picker_dot_x1">572dp</dimen>
+
+<dimen name="setup_settings_frequency_02_npanel_picker_dot_y1">138.5dp</dimen>
+
+<dimen name="setup_settings_frequency_02_npanel_picker_dot_x2">574dp</dimen>
+
+<dimen name="setup_settings_frequency_02_npanel_picker_dot_y2">168.5dp</dimen>
+
+<dimen name="setup_settings_frequency_02_npanel_list02_picker02_height">140dp</dimen>
+
+<dimen name="setup_settings_frequency_02_npanel_list02_picker02_width">70dp</dimen>
+
+<dimen name="setup_settings_frequency_02_npanel_list02_picker02_x1">580dp</dimen>
+
+<dimen name="setup_settings_frequency_02_npanel_list02_picker02_y1">81dp</dimen>
+
+<dimen name="setup_settings_frequency_02_npanel_list02_picker02_x2">650dp</dimen>
+
+<dimen name="setup_settings_frequency_02_npanel_list02_picker02_y2">221dp</dimen>
+
+<dimen name="setup_settings_frequency_02_npanel_list02_panels_divider_height">378.5dp</dimen>
+
+<dimen name="setup_settings_frequency_02_npanel_list02_panels_divider_width">1dp</dimen>
+
+<dimen name="setup_settings_frequency_02_npanel_list02_panels_divider_x1">784dp</dimen>
+
+<dimen name="setup_settings_frequency_02_npanel_list02_panels_divider_y1">81dp</dimen>
+
+<dimen name="setup_settings_frequency_02_npanel_list02_panels_divider_x2">785dp</dimen>
+
+<dimen name="setup_settings_frequency_02_npanel_list02_panels_divider_y2">459.5dp</dimen>
+
+<dimen name="setup_settings_frequency_02_npanel_column03_description_text_height">111.5dp</dimen>
+
+<dimen name="setup_settings_frequency_02_npanel_column03_description_text_width">127dp</dimen>
+
+<dimen name="setup_settings_frequency_02_npanel_column03_description_text_x1">797dp</dimen>
+
+<dimen name="setup_settings_frequency_02_npanel_column03_description_text_y1">93.5dp</dimen>
+
+<dimen name="setup_settings_frequency_02_npanel_column03_description_text_x2">924dp</dimen>
+
+<dimen name="setup_settings_frequency_02_npanel_column03_description_text_y2">205dp</dimen>
+
+<dimen name="setup_settings_frequency_01_panels_npanels_standard_bg_height">422dp</dimen>
+
+<dimen name="setup_settings_frequency_01_panels_npanels_standard_bg_width">946dp</dimen>
+
+<dimen name="setup_settings_frequency_01_panels_npanels_standard_bg_x1">0dp</dimen>
+
+<dimen name="setup_settings_frequency_01_panels_npanels_standard_bg_y1">59dp</dimen>
+
+<dimen name="setup_settings_frequency_01_panels_npanels_standard_bg_x2">946dp</dimen>
+
+<dimen name="setup_settings_frequency_01_panels_npanels_standard_bg_y2">481dp</dimen>
+
+<dimen name="setup_settings_frequency_01_panels_npanel_titlebar_normal_01_height">422dp</dimen>
+
+<dimen name="setup_settings_frequency_01_panels_npanel_titlebar_normal_01_width">48dp</dimen>
+
+<dimen name="setup_settings_frequency_01_panels_npanel_titlebar_normal_01_x1">0dp</dimen>
+
+<dimen name="setup_settings_frequency_01_panels_npanel_titlebar_normal_01_y1">59dp</dimen>
+
+<dimen name="setup_settings_frequency_01_panels_npanel_titlebar_normal_01_x2">48dp</dimen>
+
+<dimen name="setup_settings_frequency_01_panels_npanel_titlebar_normal_01_y2">481dp</dimen>
+
+<dimen name="setup_settings_frequency_01_panels_npanel_titlebar_normal_02_height">422dp</dimen>
+
+<dimen name="setup_settings_frequency_01_panels_npanel_titlebar_normal_02_width">48dp</dimen>
+
+<dimen name="setup_settings_frequency_01_panels_npanel_titlebar_normal_02_x1">48dp</dimen>
+
+<dimen name="setup_settings_frequency_01_panels_npanel_titlebar_normal_02_y1">59dp</dimen>
+
+<dimen name="setup_settings_frequency_01_panels_npanel_titlebar_normal_02_x2">96dp</dimen>
+
+<dimen name="setup_settings_frequency_01_panels_npanel_titlebar_normal_02_y2">481dp</dimen>
+
+<dimen name="setup_settings_frequency_01_panels_npanel_titlebar_activated_height">422dp</dimen>
+
+<dimen name="setup_settings_frequency_01_panels_npanel_titlebar_activated_width">48dp</dimen>
+
+<dimen name="setup_settings_frequency_01_panels_npanel_titlebar_activated_x1">96dp</dimen>
+
+<dimen name="setup_settings_frequency_01_panels_npanel_titlebar_activated_y1">59dp</dimen>
+
+<dimen name="setup_settings_frequency_01_panels_npanel_titlebar_activated_x2">144dp</dimen>
+
+<dimen name="setup_settings_frequency_01_panels_npanel_titlebar_activated_y2">481dp</dimen>
+
+<dimen name="setup_settings_frequency_01_npanel_list01_row01_height">42dp</dimen>
+
+<dimen name="setup_settings_frequency_01_npanel_list01_row01_width">328dp</dimen>
+
+<dimen name="setup_settings_frequency_01_npanel_list01_row01_x1">144dp</dimen>
+
+<dimen name="setup_settings_frequency_01_npanel_list01_row01_y1">80dp</dimen>
+
+<dimen name="setup_settings_frequency_01_npanel_list01_row01_x2">472dp</dimen>
+
+<dimen name="setup_settings_frequency_01_npanel_list01_row01_y2">122dp</dimen>
+
+<dimen name="setup_settings_frequency_01_npanel_list01_row02_height">42dp</dimen>
+
+<dimen name="setup_settings_frequency_01_npanel_list01_row02_width">328dp</dimen>
+
+<dimen name="setup_settings_frequency_01_npanel_list01_row02_x1">144dp</dimen>
+
+<dimen name="setup_settings_frequency_01_npanel_list01_row02_y1">122dp</dimen>
+
+<dimen name="setup_settings_frequency_01_npanel_list01_row02_x2">472dp</dimen>
+
+<dimen name="setup_settings_frequency_01_npanel_list01_row02_y2">164dp</dimen>
+
+<dimen name="setup_settings_frequency_01_npanel_list01_panels_divider_height">378.5dp</dimen>
+
+<dimen name="setup_settings_frequency_01_npanel_list01_panels_divider_width">1dp</dimen>
+
+<dimen name="setup_settings_frequency_01_npanel_list01_panels_divider_x1">471dp</dimen>
+
+<dimen name="setup_settings_frequency_01_npanel_list01_panels_divider_y1">81dp</dimen>
+
+<dimen name="setup_settings_frequency_01_npanel_list01_panels_divider_x2">472dp</dimen>
+
+<dimen name="setup_settings_frequency_01_npanel_list01_panels_divider_y2">459.5dp</dimen>
+
+<dimen name="setup_settings_frequency_01_npanel_list02_picker_height">140dp</dimen>
+
+<dimen name="setup_settings_frequency_01_npanel_list02_picker_width">88dp</dimen>
+
+<dimen name="setup_settings_frequency_01_npanel_list02_picker_x1">496dp</dimen>
+
+<dimen name="setup_settings_frequency_01_npanel_list02_picker_y1">81dp</dimen>
+
+<dimen name="setup_settings_frequency_01_npanel_list02_picker_x2">584dp</dimen>
+
+<dimen name="setup_settings_frequency_01_npanel_list02_picker_y2">221dp</dimen>
+
+<dimen name="setup_settings_frequency_01_npanel_list02_panels_divider_height">378.5dp</dimen>
+
+<dimen name="setup_settings_frequency_01_npanel_list02_panels_divider_width">1dp</dimen>
+
+<dimen name="setup_settings_frequency_01_npanel_list02_panels_divider_x1">784dp</dimen>
+
+<dimen name="setup_settings_frequency_01_npanel_list02_panels_divider_y1">81dp</dimen>
+
+<dimen name="setup_settings_frequency_01_npanel_list02_panels_divider_x2">785dp</dimen>
+
+<dimen name="setup_settings_frequency_01_npanel_list02_panels_divider_y2">459.5dp</dimen>
+
+<dimen name="setup_settings_frequency_01_npanel_column03_description_text_height">111.5dp</dimen>
+
+<dimen name="setup_settings_frequency_01_npanel_column03_description_text_width">127dp</dimen>
+
+<dimen name="setup_settings_frequency_01_npanel_column03_description_text_x1">797dp</dimen>
+
+<dimen name="setup_settings_frequency_01_npanel_column03_description_text_y1">93.5dp</dimen>
+
+<dimen name="setup_settings_frequency_01_npanel_column03_description_text_x2">924dp</dimen>
+
+<dimen name="setup_settings_frequency_01_npanel_column03_description_text_y2">205dp</dimen>
+
+</resources>

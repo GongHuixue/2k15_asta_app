@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.droidtv.tunerservice"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="19" android:targetSdkVersion="19"/>
+	<!-- permission to read the images over a hard-disk-->
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.READ_MEDIA_STORAGE"/>
+	<uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE"/>
+	<uses-permission android:name="android.permission.CHANGE_COMPONENT_ENABLED_STATE"/>
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="org.droidtv.providers.tv.favorite.WRITE_FAVORITE_DATA"/>
+	<uses-permission android:name="org.droidtv.providers.tv.favorite.READ_FAVORITE_DATA"/>
+	<uses-permission android:name="com.android.providers.tv.permission.WRITE_EPG_DATA"/>
+	<uses-permission android:name="com.android.providers.tv.permission.READ_EPG_DATA"/>
+	<uses-permission android:name="com.android.providers.tv.permission.ACCESS_ALL_EPG_DATA" />
+	<uses-permission android:name="org.droidtv.tv.smarttv.permission.provider.IPEPG_READ"/>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE" />
+	<uses-permission android:name="android.permission.SET_TIME"/>
+	<uses-permission android:name="android.permission.SET_TIME_ZONE" />
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="org.droidtv.tv.permission.BASIC" />
+	<uses-permission android:name="org.droidtv.tv.permission.FRONTEND_CONTROL"
+					 android:protectionLevel="dangerous" />
+    <uses-permission android:name="org.droidtv.tv.permission.TV_CONTROL" />
+	<uses-permission android:name="org.droidtv.tv.permission.provider.CHANNEL_READ" />
+    <uses-permission android:name="org.droidtv.tv.permission.provider.CHANNEL_WRITE" />
+    <uses-permission android:name="org.droidtv.tv.permission.USER_SETTING_ACCESS" />
+	<uses-permission android:name="android.permission.ALL_EPG_DATA"/>
+	<uses-permission android:name="org.droidtv.tv.permission.provider.DEVICE_READ" android:protectionLevel="dangerous"/>
+	<uses-permission android:name="org.droidtv.tv.permission.provider.DEVICE_WRITE" android:protectionLevel="dangerous"/>
+	<uses-permission android:name="android.permission.MODIFY_PARENTAL_CONTROLS" />
+	<uses-permission android:name="android.permission.SHUTDOWN" />
+	<uses-permission android:name="android.permission.REBOOT" />
+	<uses-permission android:name="android.permission.DEVICE_POWER"/>
+	<uses-permission android:name="org.droidtv.providers.tv.frequency.READ_FREQUENCY_DATA" />
+    <uses-permission android:name="org.droidtv.providers.tv.frequency.WRITE_FREQUENCY_DATA" />
+    <uses-permission android:name="org.droidtv.providers.tv.favorite.WRITE_FAVORITE_DATA" />
+    <uses-permission android:name="org.droidtv.providers.tv.favorite.READ_FAVORITE_DATA" />
+	<uses-permission android:name="org.droidtv.tv.permission.TPV_APP_ACCESS"/>
+	<uses-permission android:name="android.permission.INTERNET"/><!--min.jiang add 2016-01-23-->
+    <application
+        android:icon="@org.droidtv.ui.tvwidget2k15:drawable/input_shelf_icon_73_watch_tv"
+		android:name="org.droidtv.tunerservice.TunerApplication"
+        android:persistent="true"
+		android:allowBackup="false"
+        android:label="@org.droidtv.ui.strings:string/MAIN_LABEL_WATCH_TV"
+        android:theme="@style/transparent_theme">
+		<uses-library android:name="org.droidtv.ui" />
+		        
+		<service  android:name="org.droidtv.tunerservice.TunerService"
+				  android:permission="android.permission.BIND_TV_INPUT">
+			<intent-filter>
+				<action android:name="android.media.tv.TvInputService" />
+            </intent-filter>
+			<meta-data android:name="android.media.tv.input"
+              android:resource="@xml/tvinputservice" />
+		</service>
+        <service android:name="org.droidtv.tunerservice.services.StreamingService"
+                 android:exported="true" >
+             <intent-filter>
+             <action android:name="org.droidtv.tunerservice.services.streamingservice.TVSTREAMINGCONTROL" />
+			 <category android:name="android.intent.category.DEFAULT"/>
+			 </intent-filter>
+             <intent-filter>
+             <action android:name="org.droidtv.tunerservice.services.streamingservice.TVSTREAMINGPLAYCONTROL" />
+			 <category android:name="android.intent.category.DEFAULT"/>
+             </intent-filter>
+        </service>
+		
+		<receiver android:name=".bcstreceiver.InstallationReceiver">
+	    <intent-filter >
+				<action android:name="org.droidtv.euinstallertc.CHANNEL_INSTALL_START" />
+				<action android:name="org.droidtv.euinstallertc.CHANNEL_INSTALL_COMPLETE" />
+				<action android:name="org.droidtv.euinstallertc.CHANNEL_INSTALL_STOPPED" />
+				<action android:name="org.droidtv.euinstallersat.SATELLITE_INSTALL_START" />
+				<action android:name="org.droidtv.euinstallersat.SATELLITE_INSTALL_COMPLETE" />
+				<action android:name="org.droidtv.euinstallersat.SATELLITE_INSTALL_STOPPED" />
+	    </intent-filter>
+	 </receiver>
+		
+     <receiver
+	 	android:name=".bcstreceiver.AlarmReceiver">
+   		<intent-filter>
+			<action android:name="org.droidtv.playtv.PVRAlarmReceiver" />
+   	    	 	<data android:scheme="rec"/>
+			<data android:scheme="rem"/>
+	   	</intent-filter>
+	 </receiver>
+        <provider
+            android:name="org.droidtv.tunerservice.provider.recordremind.RecordRemindProvider"
+            android:exported="true"
+            android:authorities="org.droidtv.tunerservice.provider.recordremind" >  
+        </provider>
+		
+		<activity
+            android:name="org.droidtv.euinstallertc.settings.ChannelSettingsActivity"
+            android:configChanges="locale|layoutDirection"
+            android:excludeFromRecents="true"
+            android:process=":euinstallertc" 
+            android:theme="@style/transparent_theme"
+            android:launchMode="singleInstance" >
+            <intent-filter>
+                <action android:name="org.droidtv.euinstallertc.LAUNCH_CHANNEL_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="org.droidtv.euinstallertc.wizard.InstallerWizardActivity"
+            android:configChanges="locale|layoutDirection"
+            android:excludeFromRecents="true"
+            android:process=":euinstallertc" 
+            android:theme="@style/transparent_theme"
+            android:launchMode="singleInstance" >
+            <intent-filter>
+                <action android:name="org.droidtv.euinstallertc.LAUNCH_CHANNEL_INSTALL_WIZARD" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="org.droidtv.euinstallertc.wizard.settings.DigitalReceptionTestActivity"
+            android:configChanges="locale|layoutDirection"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTop" 
+            android:process=":euinstallertc" 
+            android:theme="@style/translucent_theme">
+            <intent-filter>
+                <action android:name="org.droidtv.euinstallertc.LAUNCH_DIGITAL_RECEPTION_TEST" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="org.droidtv.euinstallertc.wizard.settings.AnalogueManualInstallationActivity"
+            android:configChanges="locale|layoutDirection"
+            android:excludeFromRecents="true"
+            android:process=":euinstallertc" 
+            android:theme="@style/transparent_theme"
+            android:launchMode="singleInstance" >
+            <intent-filter>
+                <action android:name="org.droidtv.euinstallertc.LAUNCH_ANALOGUE_MANUAL_INSTALLATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <service
+            android:name="org.droidtv.euinstallertc.wizard.settings.AutomaticChannelUpdateService"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="org.droidtv.euinstallertc.LAUNCH_AUTOMATIC_CHANNEL_UPDATE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="org.droidtv.euinstallertc.wizard.settings.ChannelUpdateMessageService"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="org.droidtv.euinstallertc.LAUNCH_CHANNEL_UPDATE_MESSAGE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="org.droidtv.euinstallertc.wizard.settings.ClearPersistentService"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="org.droidtv.euinstallertc.LAUNCH_CLEAR_PERSISTENT_MESSAGE" />
+            </intent-filter>
+        </service>        
+        <activity
+            android:name="org.droidtv.euinstallertc.wizard.settings.WizardSettingsActivity"
+            android:configChanges="locale|layoutDirection"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTop"
+            android:process=":euinstallertc" 
+            android:theme="@style/translucent_theme" >
+        </activity>
+        <activity
+            android:name="org.droidtv.euinstallertc.wizard.screen.LCNConflictScreenActivity"
+            android:configChanges="locale|layoutDirection"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTop" 
+            android:process=":euinstallertc" 
+            android:theme="@style/translucent_theme">
+        </activity>
+        <activity
+            android:name="org.droidtv.euinstallertc.notification.CamUpdateDialogActivity"
+            android:configChanges="locale|layoutDirection"
+            android:excludeFromRecents="true"
+            android:process=":euinstallertc" 
+            android:launchMode="singleTop"
+            android:theme="@style/transparent_theme" >
+        </activity>
+        <activity
+            android:name="org.droidtv.euinstallertc.wizard.screen.ACIPageActivity"
+            android:configChanges="locale|layoutDirection"
+            android:excludeFromRecents="true"
+            android:process=":euinstallertc" 
+            android:launchMode="singleTop" 
+            android:theme="@style/translucent_theme">
+        </activity>
+        <activity
+            android:name="org.droidtv.euinstallertc.notification.NetworkUpdateDialogActivity"
+            android:configChanges="locale|layoutDirection"
+            android:excludeFromRecents="true"
+            android:process=":euinstallertc" 
+            android:launchMode="singleTop"
+            android:theme="@style/translucent_theme" >
+        </activity>
+        <activity
+            android:name="org.droidtv.euinstallertc.notification.NetworkUpdateInstallActivity"
+            android:configChanges="locale|layoutDirection"
+            android:excludeFromRecents="true"
+            android:process=":euinstallertc" 
+            android:launchMode="singleTop" 
+            android:theme="@style/transparent_theme">
+        </activity>
+
+        <receiver
+            android:name="org.droidtv.euinstallertc.brdcstreceiver.InstallerBootLoader"
+	    android:process=":euinstallertc" 
+            android:exported="true" >
+            <intent-filter android:priority="10">
+                <action android:name="org.droidtv.tv.tvpower.tv_power_boot_completed" />
+                <action android:name="org.droidtv.tv.tvpower.TV_POWER_STATE_CHANGE_BEGIN" />
+                <action android:name="org.droidtv.tv.tvpower.TV_POWER_STATE_CHANGED" />
+                <action android:name="org.droidtv.intent.action.settings.ClearData" />
+                <action android:name="org.droidtv.intent.action.settings.OptionCode" />
+            </intent-filter>
+            <intent-filter android:priority="-100" >
+                <action android:name="org.droidtv.settings.FACTORY_RESET" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="org.droidtv.euinstallertc.model.mwapi.EuInstallScheduleUpdateReceiver"
+        		  android:process=":euinstallertc" >
+            <intent-filter>
+                <action android:name="org.droidtv.installer.SchedulUpdateAlm" />
+
+                <data android:scheme="scheduleUpdateAlarm" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="org.droidtv.euinstallertc.brdcstreceiver.TimeChangeReceiver"
+	    android:process=":euinstallertc">
+            <intent-filter>
+                <action android:name="android.intent.action.TIME_SET" />
+            </intent-filter>
+        </receiver>
+		<receiver android:name="com.google.android.tv.receiver.TvInputReceiver">
+            <intent-filter>
+                <action android:name="android.media.tv.action.QUERY_CONTENT_RATING_SYSTEMS" />
+            </intent-filter>
+            <meta-data android:name="android.media.tv.metadata.CONTENT_RATING_SYSTEMS"
+                    android:resource="@xml/tv_content_rating_systems" />
+        </receiver>
+	
+        <service
+            android:name="org.droidtv.euinstallertc.service.EuInstallerService"
+	    android:process=":euinstallertc" 
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="org.droidtv.euinstallertc.INSTALLER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="org.droidtv.euinstallertc.MEDIASERVICE" />
+            </intent-filter>
+        </service>
+        
+        <activity
+            android:name="org.droidtv.euinstallertc.service.DirectTuneHandleActivity"
+	    	android:process=":euinstallertc" 
+         >
+        </activity>
+
+	<activity
+            android:name="org.droidtv.euinstallertc.service.WixpDirectTuneHandleActivity"
+	    	android:process=":euinstallertc"
+		android:theme="@style/translucent_theme" 
+         >
+        </activity>
+        
+        <activity
+            android:name="org.droidtv.euinstallertc.service.AnalogDirectTuneHandleActivity"
+	    	android:process=":euinstallertc" 
+         >
+        </activity>
+        
+        <activity
+            android:name="org.droidtv.euinstallertc.service.WixpAnalogDirectTuneHandleActivity"
+	    	android:process=":euinstallertc" 
+	    	android:theme="@style/translucent_theme" 
+         >
+        </activity>
+       		
+		<activity
+            android:name="org.droidtv.euinstallersat.wizard.SatelliteInstallationActivity"
+            android:configChanges="locale|layoutDirection"
+	    	android:process=":euinstallersat" 
+	    	android:theme="@style/translucent_theme"
+            android:excludeFromRecents="true" >
+            <intent-filter>
+                <action android:name="org.droidtv.euinstallersat.LAUNCH_SATELLITE_INSTALL_WIZARD" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="org.droidtv.euinstallersat.wizard.settings.WizardSettingsActivity"
+            android:configChanges="locale|layoutDirection"
+	   		android:process=":euinstallersat"
+	   		android:theme="@style/translucent_theme"
+            android:excludeFromRecents="true" >
+        </activity>
+        <activity
+            android:name="org.droidtv.euinstallersat.wizard.settings.connectionTypeWizard.ConnTypeActivity"
+            android:configChanges="locale|layoutDirection"
+	    	android:process=":euinstallersat" 
+	    	android:theme="@style/translucent_theme"
+            android:excludeFromRecents="true" >
+        </activity>
+        <activity
+            android:name="org.droidtv.euinstallersat.settings.SatelliteSettingsActivity"
+            android:configChanges="locale|layoutDirection"
+	   		android:process=":euinstallersat" 
+	   		android:theme="@style/transparent_theme"
+            android:excludeFromRecents="true" >
+            <intent-filter>
+                <action android:name="org.droidtv.euinstallersat.LAUNCH_SATELLITE_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="org.droidtv.euinstallersat.notification.CamOpProfDialogActivity"
+            android:configChanges="locale|layoutDirection"
+            android:excludeFromRecents="true"
+	    	android:process=":euinstallersat" 
+            android:launchMode="singleTop" >
+        </activity>
+        <activity
+            android:name="org.droidtv.euinstallersat.notification.CamOpProfInstallActivity"
+            android:configChanges="locale|layoutDirection"
+            android:excludeFromRecents="true"
+	   		android:process=":euinstallersat" 
+            android:launchMode="singleTop" >
+        </activity>
+        <activity
+            android:name="org.droidtv.euinstallersat.notification.BackGroundUpdateInstallActivity"
+            android:configChanges="locale|layoutDirection"
+            android:excludeFromRecents="true"
+	    	android:process=":euinstallersat" 
+            android:launchMode="singleTop" >
+        </activity>
+        <activity
+            android:name="org.droidtv.euinstallersat.notification.CamUpdateDialogActivity"
+            android:configChanges="locale|layoutDirection"
+            android:excludeFromRecents="true"
+	    	android:process=":euinstallersat" 
+            android:launchMode="singleTop" >
+        </activity>
+<!-- 
+        <receiver
+            android:name="org.droidtv.euinstallersat.brdcstreceiver.InstallerBootLoader"
+            android:process=":euinstallersat"
+            android:exported="true" >
+            <intent-filter android:priority="10" >
+                <action android:name="org.droidtv.tv.tvpower.tv_power_boot_completed" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="org.droidtv.tv.tvpower.TV_POWER_STATE_CHANGE_BEGIN" />
+                <action android:name="org.droidtv.tv.tvpower.TV_POWER_STATE_CHANGED" />
+                <action android:name="org.droidtv.NON_INTERRUPTIBLE"/>
+            </intent-filter>
+        </receiver>
+ -->        
+		<receiver android:name="org.droidtv.tunerservice.bcstreceiver.MainRatingReceiver">
+			<intent-filter>
+				<action android:name="android.media.tv.action.BLOCKED_RATINGS_CHANGED" />
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.media.tv.action.PARENTAL_CONTROLS_ENABLED_CHANGED" />
+			</intent-filter>
+			<intent-filter>
+				<action android:name="org.droidtv.tv.tvpower.tv_power_boot_completed" />
+			</intent-filter>
+		</receiver>
+<!-- 		
+        <service
+            android:name="org.droidtv.euinstallersat.service.SatInstallerService"
+	   		android:process=":euinstallersat" 
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="org.droidtv.euinstallersat.INSTALLER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="org.droidtv.euinstallersat.MEDIASERVICE" />
+            </intent-filter>
+        </service>
+  -->       
+        <receiver
+            android:name="org.droidtv.tunerservice.bcstreceiver.PowerBroadcastReceiver"
+            android:exported="true" >
+            <intent-filter android:priority="5" >
+                <action android:name="org.droidtv.tv.tvpower.TV_POWER_STATE_CHANGE_BEGIN" />
+                <action android:name="org.droidtv.tv.tvpower.TV_POWER_STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+        
+        <service
+            android:name="org.droidtv.tunerservice.services.sbyservice.SemiStandbyService"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="org.droidtv.tunerservice.services.SemiStandbyService" />
+                <category android:name="android.intent.category.DEFAULT"/> 
+            </intent-filter>
+        </service>
+		
+		<!-- Channel List Copy Activity -->
+		<activity	
+			android:name="org.droidtv.tunerservice.channellistcopy.Copy" 		
+			android:enabled="true"		
+			android:exported="true"		
+			 >		
+			<intent-filter>		
+				<action android:name="org.droidtv.tvcontentprovider.copy.CHANNELLIST_TOUSB" >
+			</action>	
+				<category android:name="android.intent.category.DEFAULT"/>		
+			</intent-filter>		
+			<intent-filter>		
+		    <action android:name="org.droidtv.tvcontentprovider.copy.CHANNELLIST_FROMUSB" >		
+		    </action>		
+		    <category android:name="android.intent.category.DEFAULT"/>		
+		    </intent-filter>
+		</activity>
+
+		 <service
+            android:name="org.droidtv.tunerservice.ClonechannelService"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="org.droidtv.action.ACTION_CLONE_INSTALL" />
+                <category android:name="android.intent.category.DEFAULT"/> 
+            </intent-filter>
+        </service>
+		
+		
+<!-- HTV clone feature needs access settings in MW /*161031GaryYe cable operator[TF415PHIEUMTK01-184] Ensure all the Wizards settings are cloned*/-->
+        <service
+            android:name="org.droidtv.euinstallertc.service.AccessCableOperatorIntentService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="org.droidtv.installer.ChangeMwCableOperator" />
+            </intent-filter>
+        </service>
+        
+    </application>
+    <!--
+These are broadcast receiver notifications generated by installer apks
+to indicate the state of installation.
+one caveat : background installation may not have END notification at all.   
+extras:  "InstallMode" = "Auto"/"Update"/"Background"/"DTR"/"AnalogueManual"    
+extras:  "InstallMedium" = "Terrestrial/Cable"
+    <intent-filter>
+        <action android:name="org.droidtv.euinstallertc.CHANNEL_INSTALL_START" />
+        <action android:name="org.droidtv.euinstallertc.CHANNEL_INSTALL_COMPLETE" />
+        <action android:name="org.droidtv.euinstallertc.CHANNEL_INSTALL_STOPPED" />
+    </intent-filter>
+    -->
+    <!--
+These are broadcast receiver notifications generated by installer apks
+to indicate the state of installation.
+ 
+extras:  "InstallMode" = "Auto"/"Update"/"Background"/"DTR"/"Prescan"/   
+
+    <intent-filter>
+        <action android:name="org.droidtv.euinstallersat.SATELLITE_INSTALL_START" />
+        <action android:name="org.droidtv.euinstallersat.SATELLITE_INSTALL_COMPLETE" />
+        <action android:name="org.droidtv.euinstallersat.SATELLITE_INSTALL_STOPPED" />
+    </intent-filter>
+    -->
+
+</manifest>

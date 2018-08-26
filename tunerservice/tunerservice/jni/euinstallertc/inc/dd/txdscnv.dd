@@ -1,0 +1,43 @@
+/*
+ *  Copyright(C) 2003 Koninklijke Philips Electronics N.V.,
+ *  All Rights Reserved.
+ *  This  source code and any compilation or derivative thereof is the
+ *  proprietary information of Koninklijke Philips Electronics N.V.
+ *  and is confidential in nature.
+ *  Under no circumstances is this software to be exposed to or placed
+ *  under an Open Source License of any type without the expressed
+ *  written permission of Koninklijke Philips Electronics N.V.
+ *
+ *          %name: txdscnv.dd %
+ *       %version: TVG_tv550r4dev %
+ * %date_modified: Fri Mar 05 14:47:27 2004 %
+ *    %derived_by: lakshminb %
+ */
+
+#ifndef _TXDSCNV_DD_
+#define _TXDSCNV_DD_
+
+
+/** koala group CTxtPageDisplayConvertTypes **/
+
+/** koala using infraglobals **/
+/** koala using CTxtPlatformTypes **/
+/** koala using CTxtIrDisplayDriverTypes**/
+
+
+/** koala type TxtPageConfigStruct **/
+typedef struct 
+{
+    TWindowId       window_id;
+/*    PageNr    page_number;
+    Subcode   subcode; */
+    TxtPageHandle   hnd;
+    int             presentation_level;
+    Bool            suppress_row_24;
+    Bool            suppress_header;
+    Bool            suppress_picture;
+    Bool            suppress_side_panels;
+    Bool            suppress_row_attribs;
+} TxtPageConfigStruct;
+
+#endif

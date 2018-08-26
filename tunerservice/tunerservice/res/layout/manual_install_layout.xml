@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.droidtv.euinstallertc.util.RalativeLayoutView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/settings_dtr_analog_collapsed_npanel_container_width"
+    android:layout_height="@dimen/settings_dtr_analog_collapsed_npanel_container_height"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true"
+    android:gravity="left" >
+
+    <RelativeLayout
+        android:id="@+id/layout_dtr_1"
+        android:layout_width="@dimen/settings_dtr_analog_collapsed_npanel_container_width"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="-88dp"
+        android:layout_marginTop="-98dp" >
+
+        <TextView
+            android:id="@+id/dtrHeaderText"
+            style="@style/dtr_settings_picker_title_text_style"
+            android:layout_width="@dimen/settings_dtr_analog_collapsed_container_picker_width"
+            android:layout_height="@dimen/dtr_settings_picker_title_text_height"
+            android:layout_marginLeft="@dimen/settings_dtr_analog_collapsed_container_picker_x1"
+            android:layout_marginTop="@dimen/settings_dtr_analog_collapsed_container_picker_y1"
+            android:text="@org.droidtv.ui.strings:string/MISC_MHZ" />
+
+        <org.droidtv.ui.tvwidget2k15.inputPicker.InputPicker
+            android:id="@+id/left_picker"
+            style="@org.droidtv.ui.tvwidget2k15:style/inputPickerStyle"
+            android:layout_width="@dimen/settings_dtr_analog_collapsed_container_picker_width"
+            android:layout_height="@dimen/settings_dtr_analog_collapsed_container_picker_height"
+            android:layout_marginLeft="@dimen/settings_dtr_analog_collapsed_container_picker_x1"
+            android:layout_marginTop="118dp" />
+
+        <View
+            android:id="@+id/dividerBottom"
+            android:layout_width="@dimen/settings_dtr_analog_collapsed_bottom_divider_width"
+            android:layout_height="@dimen/settings_dtr_analog_collapsed_bottom_divider_height"
+            android:layout_marginLeft="@dimen/settings_dtr_analog_collapsed_bottom_divider_x1"
+            android:layout_marginTop="@dimen/settings_dtr_analog_collapsed_bottom_divider_y1"
+            android:background="@org.droidtv.ui.tvwidget2k15:drawable/pickers_divider_normal" />
+
+        <Button
+            android:id="@+id/button_dtr_search"
+            style="@org.droidtv.ui.tvwidget2k15:style/button_style"
+            android:layout_width="@dimen/settings_dtr_analog_collapsed_button_search_width"
+            android:layout_height="@dimen/settings_dtr_analog_collapsed_button_search_height"
+            android:layout_marginLeft="@dimen/settings_dtr_analog_collapsed_button_search_x1"
+            android:layout_marginTop="@dimen/settings_dtr_analog_collapsed_button_search_y1"
+            android:text="@org.droidtv.ui.strings:string/MAIN_BUTTON_SEARCH"
+            android:textAppearance="@style/dtr_search_npanel_search_button_default_text_style" />
+
+        <Button
+            android:id="@+id/button_dtr_done"
+            style="@org.droidtv.ui.tvwidget2k15:style/button_style"
+            android:layout_width="@dimen/settings_dtr_analog_collapsed_button_done_width"
+            android:layout_height="@dimen/settings_dtr_analog_collapsed_button_done_height"
+            android:layout_marginLeft="@dimen/settings_dtr_analog_collapsed_button_done_x1"
+            android:layout_marginTop="@dimen/settings_dtr_analog_collapsed_button_done_y1"
+            android:text="@org.droidtv.ui.strings:string/MAIN_BUTTON_DONE" />
+    </RelativeLayout>
+
+</org.droidtv.euinstallertc.util.RalativeLayoutView>

@@ -1,0 +1,282 @@
+/*
+ *  Copyright(C) 2003 Koninklijke Philips Electronics N.V.,
+ *  All Rights Reserved.
+ *  This  source code and any compilation or derivative thereof is the
+ *  proprietary information of Koninklijke Philips Electronics N.V.
+ *  and is confidential in nature.
+ *  Under no circumstances is this software to be exposed to or placed
+ *  under an Open Source License of any type without the expressed
+ *  written permission of Koninklijke Philips Electronics N.V.
+ *
+ *          %name: HsvSatelliteGlobals.dd %
+ *       %version: FUSIONR3Ext_TVG13.1.1 %
+ * %date_modified: Thu Sep 18 18:13:01 2008 %
+ *    %derived_by: anuma %
+ */
+
+
+#ifndef _HSVSATELLITEGLOBALS_DD_
+#define _HSVSATELLITEGLOBALS_DD_
+
+/** koala group HsvSatelliteGlobals **/
+/** koala using infraglobals **/
+/** koala using HsvProgramLocals **/
+
+#define MAX_SATELLITE_NAME_LEN	(23)
+#define MAX_NUM_BARKER_MUX		(50)
+#define MAX_PACKAGENAME_LEN 	(100)
+/*Package details*/
+#define	NO_OF_PACKAGES_SUPPORTED		13
+
+#define 	NO_SORTING_PACKAGE_ID (0)
+
+
+/* Bouquet ids of M7 packages*/ 
+#define	CANALDIGITAAL_SD_BOUQUET_ID		19
+#define	CANALDIGITAAL_HD_BOUQUET_ID		18
+#define	TVVLAANDEREN_SD_BOUQUET_ID		21
+#define	TVVLAANDEREN_HD_BOUQUET_ID		20
+#define	TELESAT_BEL_BOUQUET_ID			22
+#define	TELESAT_LUX_BOUQUET_ID			23
+#define	AUSRTIA_BOUQUET_ID				24
+#define	CZECH_REPUBLIC_BOUQUET_ID		25
+#define	SLOVAK_REPUBLIC_BOUQUET_ID		26
+#define AUSTRIASAT_MAGYA_PACKAGE_ID			35 /*33 and 34 are used for Freesat and AstraLCN in AD branch*/
+#define FRANSAT_PACKAGE_ID			(31)
+#define OP_PROFILE_PACKAGE_ID			(32)
+#define FIND_FRANSAT_PACKAGE(PackageId)  ( FRANSAT_PACKAGE_ID == ( PackageId & 0xFFFF ) )
+#define GET_FRANSAT_PACKAGE(PackageId)  (PackageId&0xFFFF)
+#define CYFRAPLUS_POLSAT_PACKAGE_ID		(4)
+#define	CYFROWY_POLSAT_PACKAGE_ID		(5)
+#define	POLAND_N_PACKAGE_ID			(6)
+#define	SMART_HDPLUS_PACKAGE_ID			(9)
+#define NTVPLUS_PACKAGE_ID				(29)
+#define AUSTRIA_CHANNELLIST_PACKAGE_ID			(1)
+#define GERMAN_HDPLUS_PACKAGE_ID			(3)
+#define	CYFRAPLUS_POLSAT_BOUQUET_ID		(0xC024)
+#define FREESAT_PACKAGE_ID             (33)
+#define TRICOLOR_SD_PACKAGE_ID			(36)
+#define TRICOLOR_HD_PACKAGE_ID			(37)
+
+
+#define CANALDIGITAL_NORWAY_PACKAGE_ID	 14
+#define CANALDIGITAL_SWEDEN_PACKAGE_ID   15
+#define CANALDIGITAL_FINLAND_PACKAGE_ID  16
+#define CANALDIGITAL_DENMARK_PACKAGE_ID  17
+
+#define DIGITURK_TURKSAT_PACKAGE_ID		(27)
+#define DIGITURK_EUTELSAT_PACKAGE_ID	(28)
+#define DIGITURK_TURKSAT_42E_BOUQUET_ID	(0x97)
+#define DIGITURK_EUTELSAT_W3_BOUQUET_ID (0x10FC)
+#define DIGITURK_EUTELSAT_W3_SD_BOUQUET_ID	(128)
+
+#define	DSMART_TURKSAT_HOTBIRD_PACKAGE_ID 	(12)
+#define DSMART_TURKSAT_PACKAGE_ID  			(13)
+#define	TURKEY_FTA_PACKAGE_ID				(30)
+
+#define	ASTRA_LCN_BOUQUET_ID			34
+
+
+#define MAX_FILE_NAME_SIZE              (100)
+#define UNIVERSAL_LOW_LO_FREQ	9750000
+#define UNIVERSAL_HIGH_LO_FREQ	10600000
+#define CIRCULAR_HIGH_LO_FREQ	10750000
+
+
+// Constants to match with TvSettings of TvContentProvider & db file
+
+
+#define CYFRAPLUS_POLSAT_MATCH_SETTINGS_DB_PACKAGE_ID 	(3)
+#define CYFROWY_POLSAT_MATCH_SETTINGS_DB_PACKAGE_ID		(4)
+#define POLAND_N_MATCH_SETTINGS_DB_PACKAGE_ID			(5)
+#define DIGITURK_TURKSAT_MATCH_SETTINGS_DB_PACKAGE_ID	(6)
+#define NTVPLUS_MATCH_SETTINGS_DB_PACKAGE_ID				(8)
+#define DIGITURK_EUTELSAT_MATCH_SETTINGS_DB_PACKAGE_ID	(9)
+#define ASTRALCN_MATCH_SETTINGS_DB_PACKAGE_ID	(11)
+#define TRICOLOR_MATCH_SETTINGS_DB_PACKAGE_ID	(13)
+
+
+
+
+
+typedef	struct HsvInstalledSatellites 
+{
+	int	NumberOfLnbs;
+	struct {
+		int		LnbType;
+		int		LnbNumber;
+		Bool	IsLnbFree; // This tells whether the satellite is installed on this LNB or not
+		Bool	IsServiceScanComplete;
+		Nat16	SatelliteName[100];
+	} SatelliteDetails[4];
+} HsvInstalledSatellites; /** koala type HsvInstalledSatellites **/
+
+typedef	struct HsvPackageStructure{
+	Nat32	Index;
+	Nat32	PackageId;
+	Nat16	PackageName[64];
+	Nat16	PackageListName[100];
+	Nat8	PredefinedListBinFile[32];
+} HsvPackageStructure; /** koala type HsvPackageStructure **/
+
+typedef struct HsvSatelliteMapping
+{	
+	Nat16 	SatelliteName[MAX_SATELLITE_NAME_LEN];
+	int		OrbitalPosition;
+	Nat8	SatelliteId;
+	Nat8	EastWestFlag;
+	Nat16	MduType;
+	Nat8	SatIP;
+} HsvSatelliteMapping; /** koala type HsvSatelliteMapping **/
+
+typedef	struct HsvSatelliteList 
+{
+	Nat8	SatelliteId;
+	int		BouquetId;
+	int 	NetworkId;
+	int 	NetworkId1;
+	int 	PrescanFrequency;
+	int 	Polarization;
+	int		TsId;
+	int		PreferredRegion;
+	int		ModulationSystem;
+	int		ModulationType;
+	int		FECInner;
+	int		RollOffFactor;
+	Nat32	SymbolRate;	
+} HsvSatelliteList; /** koala type HsvSatelliteList **/
+
+typedef struct {
+    Nat32                   Frequency;
+	Nat32					TPID;					/* Newly Added */
+    Nat32                   SSignalStrength;
+    Nat32                   QSignalStrength;
+	Nat32                   SymbolRate;
+	Nat32					SDSDFrequency;
+	Nat32					PlpId;					/* Added. May be in future will be used as quatenarary key */
+    Nat16                   ChannelInformation;      
+	Nat8					LnbNumber;				/* PRIMARY KEY: Newly Added */
+	Nat8					Polarization;			/* TERTIARY KEY: Newly Added */
+	Nat8					LnbType;
+    Nat8    	            ModulationType;   
+    Nat8                    CodeRateHigh;         
+    Nat8                    CodeRateLow;         
+    Nat8                    HierarchyMode;    
+    Nat8                    IqMode;           
+    Nat8                    ChannelBandwidth; 
+    Nat8                    StreamPriority;
+	Nat8    	            ModulationStd;
+	Nat8    	            CodeRate;
+	int						FECInner;
+	int						RollOff;
+}HsvInstallationPTC;    /** koala type HsvInstallationPTC **/
+
+typedef struct SignalStrengthStatus
+{
+    Nat32                   QSigStrength;
+    Nat32                   SSigStrength;
+
+    Bool                    QSigStrMeasured;
+    Bool                    SSigStrMeasured;
+    Bool                    SigStrMeasured;    
+    
+    Nat32                   QMinSigStr;                         /*minimum signal strength supported*/     
+    Nat32                   QMaxSigStr;                         /*maximum signal strength supported*/
+    Nat32                   SMinSigStr;                         /*minimum signal strength supported*/     
+    Nat32                   SMaxSigStr;                         /*maximum signal strength supported*/
+}TypeSignalStrengthStatus;  /** koala type TypeSignalStrengthStatus **/
+
+
+typedef enum 
+{
+
+	SymbolRateModeAuto,
+	SymbolRateModeManual
+} HsvManualInstallSymbolRateMode;	/** koala type HsvManualInstallSymbolRateMode **/
+
+typedef enum
+{
+	PolarisationHorizontal = 0,
+    PolarisationVertical   = 1
+} HsvManualInstallPolarization; /** koala type HsvManualInstallPolarization **/
+
+typedef enum
+{
+	DVBS	= 0,
+	DVBS2	= 1
+} HsvModulationStandard; /** koala type HsvModulationStandard **/
+
+
+typedef enum HsvSatelliteId
+{
+	/* Any New Satellite added should be at the end. If any existing values are changed
+		corresponding update has to be done in 
+		s2\hysvc\comp\installation\hsvdvbsins\SatelliteBouquetList.xml also.
+		Otherwise the package selection menu will misbehave */
+	ASTRA_19_2_E = 1,
+	HOTBIRD_13_0_E = 2,
+	ASTRA_23_5_E = 3,
+	ASTRA_28_2_E = 4,
+	TURKSAT_42_0_E = 5,
+	EUTELSAT_W3A_7A = 6,
+	THOR_1W = 7,
+	EUTELSAT_W3A_7E_MDU4 = 8,
+	EUTELSAT_W3A_7A_MDU5 = 9,
+	EUTELSAT_W3A_7E_MDU3 = 10,
+	EUTELSAT_W3A_7E_MDU2 = 11,
+	EUTELSAT_W3A_7E_MDU1 = 12,
+	EUTELSAT_W4_36E = 13,
+	EUTELSAT_5_W = 14,
+	EUTELSAT_9_A = 15,
+	UNKNOWN_SATELLITE	= 16,
+	INVALID_SATELLITE	=	0xFFFF
+} HsvSatelliteId;	/** koala type HsvSatelliteId **/
+
+typedef enum HsvRegion
+{
+	REGION_TURKEY = 1,
+	REGION_FRANCE = 2,
+	REGION_RUSSIA = 3,
+	REGION_POLAND = 4,
+	REGION_NORDIG = 5,
+	REGION_UK = 6,
+	REGION_HUNGARY = 7,
+	REGION_INVALID = 0xFFFF
+} HsvRegion;	/** koala type HsvRegion **/
+
+
+typedef enum HsvSatellitPackageGroup
+{
+	M7 = 1,
+	CanalDigital = 2,
+	Fransat = 7,
+}HsvPackageGroup;
+
+typedef struct
+{
+    Nat16 Pid;
+    Nat16 TableId;
+	Nat16 BouquetId;
+	Nat16 FreesatPostCodeTableType;
+}HsvSDMSIDataValues;	/** koala type HsvSDMSIDataValues **/
+
+typedef struct FrequencyDataList
+{
+    int     LnbNumber;
+    Nat32   Frequency;
+	Nat32   SymRate;
+    int     Polarization;
+    Nat16   OriginalNetworkId;
+    Nat16   TsId;
+} FrequencyDataList;    /** koala type FrequencyDataList **/
+
+//del if not neccessary s2PRmerge Sutendra
+typedef enum ChannelLibNotifyMsg 
+{
+	ChannellibInitialized,
+	SettingsTurnedOn
+} ChannelLibNotifyMsg; /** koala type ChannelLibNotifyMsg **/
+/* Frequecy Tolerence for MUX comparison */
+#define FREQUENCY_TOLERANCE_FOR_MUX_COMPARISON  (2000)
+#define	CREATE_TPID(LnbNumber,Frequency,Polarization)	(((LnbNumber&0x0F) << 28) | ((Frequency&0xFFFFFF) << 4) | (Polarization & 0x01))
+#endif

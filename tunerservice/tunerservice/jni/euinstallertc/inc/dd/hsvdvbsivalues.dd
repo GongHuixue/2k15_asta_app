@@ -1,0 +1,30 @@
+/*
+ *  Copyright(C) 2003 Koninklijke Philips Electronics N.V.,
+ *  All Rights Reserved.
+ *  This  source code and any compilation or derivative thereof is the
+ *  proprietary information of Koninklijke Philips Electronics N.V.
+ *  and is confidential in nature.
+ *  Under no circumstances is this software to be exposed to or placed
+ *  under an Open Source License of any type without the expressed
+ *  written permission of Koninklijke Philips Electronics N.V.
+ *
+ *          %name: hsvdvbsivalues.dd %
+ *       %version: TVG_tv550r4dev1 %
+ * %date_modified: Thu Sep 18 18:19:50 2008 %
+ *    %derived_by: integration %
+ */
+ 
+/** koala group hsvdvbsivalues **/ /* define koala group to escape koala warning */
+
+
+
+#define ASCII(X)    ( (Nat32) (X) )
+#define COUNTRYCODE(X,Y,Z)  ( (ASCII(X) << 16) | (ASCII(Y) << 8) | ASCII(Z) )
+
+#ifndef COUNTRYITEM
+#define COUNTRYITEM(a, b, c)
+#endif
+
+COUNTRYITEM(	COUNTRYCODE('A','U','S'),		1,  Austraila)
+COUNTRYITEM(	COUNTRYCODE('G','B','R'),		2,  Britian)
+#undef COUNTRYITEM 

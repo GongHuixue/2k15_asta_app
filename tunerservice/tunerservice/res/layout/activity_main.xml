@@ -1,0 +1,8 @@
+<org.droidtv.ui.tvwidget2k15.wizardframework.WizardScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    	android:id="@+id/wizardScreen"
+    	android:background="@color/color_npanel_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        
+</org.droidtv.ui.tvwidget2k15.wizardframework.WizardScreen>
+

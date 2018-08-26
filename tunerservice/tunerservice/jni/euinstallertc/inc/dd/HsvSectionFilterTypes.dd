@@ -1,0 +1,66 @@
+/*
+ *  Copyright(C) 2003 Koninklijke Philips Electronics N.V.,
+ *  All Rights Reserved.
+ *  This  source code and any compilation or derivative thereof is the
+ *  proprietary information of Koninklijke Philips Electronics N.V.
+ *  and is confidential in nature.
+ *  Under no circumstances is this software to be exposed to or placed
+ *  under an Open Source License of any type without the expressed
+ *  written permission of Koninklijke Philips Electronics N.V.
+ *
+ *    %name: HsvSectionFilterTypes.dd %
+ *    %version: TVG_tv550r4dev %
+ *    %date_modified: Thu Aug 14 15:01:22 2008 %
+ *    %derived_by: lakshminb %
+ */
+
+
+/** koala group HsvSectionFilterTypes **/
+/** koala using infraglobals **/
+/** koala using HsvGlobals **/
+
+#ifndef _HsvSectionFilterTypes_DD_
+#define _HsvSectionFilterTypes_DD_
+
+
+typedef enum HsvSectionCrcMode
+{
+    HsvCrcModeSkipBadSections   = 1,
+    HsvCrcModeAcceptAllSections = 2,
+    HsvCrcModeDontCheckCrc      = 3
+}HsvSectionCrcMode; /** koala type HsvSectionCrcMode**/
+
+
+typedef enum HsvSectionCrcStatus
+{
+    HsvCrcStatusOk              = 1,
+    HsvCrcStatusNotOk           = 2,
+    HsvCrcStatusNotChecked      = 3,
+    HsvCrcStatusNoCrc           = 4
+}HsvSectionCrcStatus; /** koala type HsvSectionCrcStatus **/
+
+
+typedef struct HsvSectionFilterConfig
+{
+    int                         BufferSize;
+    HsvSectionCrcMode           CrcMode;
+    Bool                        ContinuousMode;    
+    int                         cookie;
+    int                         pid;
+}HsvSectionFilterConfig; /** koala type HsvSectionFilterConfig **/
+
+typedef struct HsvSectionFilterListConfig
+{
+    int                         BufferSize;
+    HsvSectionCrcMode           CrcMode;
+    Bool                        ContinuousMode;    
+    int                         cookie;
+    int                         pid;
+    Nat32                       TimeOut;
+    Nat32                       ListLength;
+}HsvSectionFilterListConfig; /** koala type HsvSectionFilterListConfig **/
+
+/** koala type HsvSectionFilterCallback **/
+typedef Bool (*HsvSectionFilterCallback)(HsvDestination dest, int cookie, int eventid, int primarySectionSize, Nat8 * PrimarySectionStartAddress, int secondarySectionSize,  Nat8 * SecondarySectionStartAddress, HsvSectionCrcStatus crc);
+
+#endif

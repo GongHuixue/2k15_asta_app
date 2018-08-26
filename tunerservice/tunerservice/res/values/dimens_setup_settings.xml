@@ -1,0 +1,967 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Tue Dec 03 2013 19:11:14 GMT+0530-->
+<resources>
+<!--Layout_Setup_Settings_v0.8.psd-->
+<dimen name="setup_settings_header_text_height">28dp</dimen>
+
+<dimen name="setup_settings_header_text_width">459dp</dimen>
+
+<dimen name="setup_settings_header_text_x1">21dp</dimen>
+
+<dimen name="setup_settings_header_text_y1">22dp</dimen>
+
+<dimen name="setup_settings_header_text_x2">480dp</dimen>
+
+<dimen name="setup_settings_header_text_y2">50dp</dimen>
+
+<dimen name="setup_settings_singleslider_panels_npanel_standard_bg_height">422dp</dimen>
+
+<dimen name="setup_settings_singleslider_panels_npanel_standard_bg_width">322dp</dimen>
+
+<dimen name="setup_settings_singleslider_panels_npanel_standard_bg_x1">0dp</dimen>
+
+<dimen name="setup_settings_singleslider_panels_npanel_standard_bg_y1">59dp</dimen>
+
+<dimen name="setup_settings_singleslider_panels_npanel_standard_bg_x2">322dp</dimen>
+
+<dimen name="setup_settings_singleslider_panels_npanel_standard_bg_y2">481dp</dimen>
+
+<dimen name="setup_settings_singleslider_panels_npanel_titlebar_normal_height">422dp</dimen>
+
+<dimen name="setup_settings_singleslider_panels_npanel_titlebar_normal_width">48dp</dimen>
+
+<dimen name="setup_settings_singleslider_panels_npanel_titlebar_normal_x1">0dp</dimen>
+
+<dimen name="setup_settings_singleslider_panels_npanel_titlebar_normal_y1">59dp</dimen>
+
+<dimen name="setup_settings_singleslider_panels_npanel_titlebar_normal_x2">48dp</dimen>
+
+<dimen name="setup_settings_singleslider_panels_npanel_titlebar_normal_y2">481dp</dimen>
+
+<dimen name="setup_settings_singleslider_panels_npanel_titlebar_normal_text_height">323dp</dimen>
+
+<dimen name="setup_settings_singleslider_panels_npanel_titlebar_normal_text_width">26dp</dimen>
+
+<dimen name="setup_settings_singleslider_panels_npanel_titlebar_normal_text_x1">12dp</dimen>
+
+<dimen name="setup_settings_singleslider_panels_npanel_titlebar_normal_text_y1">91dp</dimen>
+
+<dimen name="setup_settings_singleslider_panels_npanel_titlebar_normal_text_x2">38dp</dimen>
+
+<dimen name="setup_settings_singleslider_panels_npanel_titlebar_normal_text_y2">414dp</dimen>
+
+<dimen name="setup_settings_singleslider_panels_npanel_titlebar_activated_height">422dp</dimen>
+
+<dimen name="setup_settings_singleslider_panels_npanel_titlebar_activated_width">48dp</dimen>
+
+<dimen name="setup_settings_singleslider_panels_npanel_titlebar_activated_x1">48dp</dimen>
+
+<dimen name="setup_settings_singleslider_panels_npanel_titlebar_activated_y1">59dp</dimen>
+
+<dimen name="setup_settings_singleslider_panels_npanel_titlebar_activated_x2">96dp</dimen>
+
+<dimen name="setup_settings_singleslider_panels_npanel_titlebar_activated_y2">481dp</dimen>
+
+<dimen name="setup_settings_singleslider_panels_npanel_titlebar_activated_text_height">323dp</dimen>
+
+<dimen name="setup_settings_singleslider_panels_npanel_titlebar_activated_text_width">26dp</dimen>
+
+<dimen name="setup_settings_singleslider_panels_npanel_titlebar_activated_text_x1">58.5dp</dimen>
+
+<dimen name="setup_settings_singleslider_panels_npanel_titlebar_activated_text_y1">91dp</dimen>
+
+<dimen name="setup_settings_singleslider_panels_npanel_titlebar_activated_text_x2">84.5dp</dimen>
+
+<dimen name="setup_settings_singleslider_panels_npanel_titlebar_activated_text_y2">414dp</dimen>
+
+<dimen name="setup_settings_singleslider_npanel_slider_height">378dp</dimen>
+
+<dimen name="setup_settings_singleslider_npanel_slider_width">120dp</dimen>
+
+<dimen name="setup_settings_singleslider_npanel_slider_x1">144dp</dimen>
+
+<dimen name="setup_settings_singleslider_npanel_slider_y1">81dp</dimen>
+
+<dimen name="setup_settings_singleslider_npanel_slider_x2">264dp</dimen>
+
+<dimen name="setup_settings_singleslider_npanel_slider_y2">459dp</dimen>
+
+<dimen name="setup_settings_picker_panels_npanels_standard_bg_height">422dp</dimen>
+
+<dimen name="setup_settings_picker_panels_npanels_standard_bg_width">946dp</dimen>
+
+<dimen name="setup_settings_picker_panels_npanels_standard_bg_x1">0dp</dimen>
+
+<dimen name="setup_settings_picker_panels_npanels_standard_bg_y1">59dp</dimen>
+
+<dimen name="setup_settings_picker_panels_npanels_standard_bg_x2">946dp</dimen>
+
+<dimen name="setup_settings_picker_panels_npanels_standard_bg_y2">481dp</dimen>
+
+<dimen name="setup_settings_picker_panels_npanel_titlebar_normal_01_height">422dp</dimen>
+
+<dimen name="setup_settings_picker_panels_npanel_titlebar_normal_01_width">48dp</dimen>
+
+<dimen name="setup_settings_picker_panels_npanel_titlebar_normal_01_x1">0dp</dimen>
+
+<dimen name="setup_settings_picker_panels_npanel_titlebar_normal_01_y1">59dp</dimen>
+
+<dimen name="setup_settings_picker_panels_npanel_titlebar_normal_01_x2">48dp</dimen>
+
+<dimen name="setup_settings_picker_panels_npanel_titlebar_normal_01_y2">481dp</dimen>
+
+<dimen name="setup_settings_picker_panels_npanel_titlebar_normal_01_text_height">313dp</dimen>
+
+<dimen name="setup_settings_picker_panels_npanel_titlebar_normal_01_text_width">26dp</dimen>
+
+<dimen name="setup_settings_picker_panels_npanel_titlebar_normal_01_text_x1">12dp</dimen>
+
+<dimen name="setup_settings_picker_panels_npanel_titlebar_normal_01_text_y1">91dp</dimen>
+
+<dimen name="setup_settings_picker_panels_npanel_titlebar_normal_01_text_x2">38dp</dimen>
+
+<dimen name="setup_settings_picker_panels_npanel_titlebar_normal_01_text_y2">404dp</dimen>
+
+<dimen name="setup_settings_picker_panels_npanel_titlebar_normal_02_height">422dp</dimen>
+
+<dimen name="setup_settings_picker_panels_npanel_titlebar_normal_02_width">48dp</dimen>
+
+<dimen name="setup_settings_picker_panels_npanel_titlebar_normal_02_x1">48dp</dimen>
+
+<dimen name="setup_settings_picker_panels_npanel_titlebar_normal_02_y1">59dp</dimen>
+
+<dimen name="setup_settings_picker_panels_npanel_titlebar_normal_02_x2">96dp</dimen>
+
+<dimen name="setup_settings_picker_panels_npanel_titlebar_normal_02_y2">481dp</dimen>
+
+<dimen name="setup_settings_picker_panels_npanel_titlebar_normal_02_text_height">313dp</dimen>
+
+<dimen name="setup_settings_picker_panels_npanel_titlebar_normal_02_text_width">26dp</dimen>
+
+<dimen name="setup_settings_picker_panels_npanel_titlebar_normal_02_text_x1">58.5dp</dimen>
+
+<dimen name="setup_settings_picker_panels_npanel_titlebar_normal_02_text_y1">91dp</dimen>
+
+<dimen name="setup_settings_picker_panels_npanel_titlebar_normal_02_text_x2">84.5dp</dimen>
+
+<dimen name="setup_settings_picker_panels_npanel_titlebar_normal_02_text_y2">404dp</dimen>
+
+<dimen name="setup_settings_picker_panels_npanel_titlebar_activated_height">422dp</dimen>
+
+<dimen name="setup_settings_picker_panels_npanel_titlebar_activated_width">48dp</dimen>
+
+<dimen name="setup_settings_picker_panels_npanel_titlebar_activated_x1">96dp</dimen>
+
+<dimen name="setup_settings_picker_panels_npanel_titlebar_activated_y1">59dp</dimen>
+
+<dimen name="setup_settings_picker_panels_npanel_titlebar_activated_x2">144dp</dimen>
+
+<dimen name="setup_settings_picker_panels_npanel_titlebar_activated_y2">481dp</dimen>
+
+<dimen name="setup_settings_picker_panels_npanel_titlebar_activated_text_height">313dp</dimen>
+
+<dimen name="setup_settings_picker_panels_npanel_titlebar_activated_text_width">26dp</dimen>
+
+<dimen name="setup_settings_picker_panels_npanel_titlebar_activated_text_x1">106.5dp</dimen>
+
+<dimen name="setup_settings_picker_panels_npanel_titlebar_activated_text_y1">91dp</dimen>
+
+<dimen name="setup_settings_picker_panels_npanel_titlebar_activated_text_x2">132.5dp</dimen>
+
+<dimen name="setup_settings_picker_panels_npanel_titlebar_activated_text_y2">404dp</dimen>
+
+<dimen name="setup_settings_picker_npanel_list01_row01_height">42dp</dimen>
+
+<dimen name="setup_settings_picker_npanel_list01_row01_width">328dp</dimen>
+
+<dimen name="setup_settings_picker_npanel_list01_row01_x1">144dp</dimen>
+
+<dimen name="setup_settings_picker_npanel_list01_row01_y1">80dp</dimen>
+
+<dimen name="setup_settings_picker_npanel_list01_row01_x2">472dp</dimen>
+
+<dimen name="setup_settings_picker_npanel_list01_row01_y2">122dp</dimen>
+
+<dimen name="setup_settings_picker_npanel_list01_row01_text_height">22dp</dimen>
+
+<dimen name="setup_settings_picker_npanel_list01_row01_text_width">258.5dp</dimen>
+
+<dimen name="setup_settings_picker_npanel_list01_row01_text_x1">165.5dp</dimen>
+
+<dimen name="setup_settings_picker_npanel_list01_row01_text_y1">90dp</dimen>
+
+<dimen name="setup_settings_picker_npanel_list01_row01_text_x2">424dp</dimen>
+
+<dimen name="setup_settings_picker_npanel_list01_row01_text_y2">112dp</dimen>
+
+<dimen name="setup_settings_picker_npanel_list01_row02_height">42dp</dimen>
+
+<dimen name="setup_settings_picker_npanel_list01_row02_width">328dp</dimen>
+
+<dimen name="setup_settings_picker_npanel_list01_row02_x1">144dp</dimen>
+
+<dimen name="setup_settings_picker_npanel_list01_row02_y1">122dp</dimen>
+
+<dimen name="setup_settings_picker_npanel_list01_row02_x2">472dp</dimen>
+
+<dimen name="setup_settings_picker_npanel_list01_row02_y2">164dp</dimen>
+
+<dimen name="setup_settings_picker_npanel_list01_row02_text_height">22dp</dimen>
+
+<dimen name="setup_settings_picker_npanel_list01_row02_text_width">258.5dp</dimen>
+
+<dimen name="setup_settings_picker_npanel_list01_row02_text_x1">165.5dp</dimen>
+
+<dimen name="setup_settings_picker_npanel_list01_row02_text_y1">132.5dp</dimen>
+
+<dimen name="setup_settings_picker_npanel_list01_row02_text_x2">424dp</dimen>
+
+<dimen name="setup_settings_picker_npanel_list01_row02_text_y2">154.5dp</dimen>
+
+<dimen name="setup_settings_picker_npanel_list01_panels_divider_height">378.5dp</dimen>
+
+<dimen name="setup_settings_picker_npanel_list01_panels_divider_width">1dp</dimen>
+
+<dimen name="setup_settings_picker_npanel_list01_panels_divider_x1">471dp</dimen>
+
+<dimen name="setup_settings_picker_npanel_list01_panels_divider_y1">81dp</dimen>
+
+<dimen name="setup_settings_picker_npanel_list01_panels_divider_x2">472dp</dimen>
+
+<dimen name="setup_settings_picker_npanel_list01_panels_divider_y2">459.5dp</dimen>
+
+<dimen name="setup_settings_picker_npanel_day_picker_height">140dp</dimen>
+
+<dimen name="setup_settings_picker_npanel_day_picker_width">70dp</dimen>
+
+<dimen name="setup_settings_picker_npanel_day_picker_x1">496dp</dimen>
+
+<dimen name="setup_settings_picker_npanel_day_picker_y1">93dp</dimen>
+
+<dimen name="setup_settings_picker_npanel_day_picker_x2">566dp</dimen>
+
+<dimen name="setup_settings_picker_npanel_day_picker_y2">233dp</dimen>
+
+<dimen name="setup_settings_picker_npanel_day_picker_label_text_height">20dp</dimen>
+
+<dimen name="setup_settings_picker_npanel_day_picker_label_text_width">70dp</dimen>
+
+<dimen name="setup_settings_picker_npanel_day_picker_label_text_x1">496dp</dimen>
+
+<dimen name="setup_settings_picker_npanel_day_picker_label_text_y1">241.5dp</dimen>
+
+<dimen name="setup_settings_picker_npanel_day_picker_label_text_x2">566dp</dimen>
+
+<dimen name="setup_settings_picker_npanel_day_picker_label_text_y2">261.5dp</dimen>
+
+<dimen name="setup_settings_picker_npanel_month_picker_height">140dp</dimen>
+
+<dimen name="setup_settings_picker_npanel_month_picker_width">70dp</dimen>
+
+<dimen name="setup_settings_picker_npanel_month_picker_x1">574.5dp</dimen>
+
+<dimen name="setup_settings_picker_npanel_month_picker_y1">93dp</dimen>
+
+<dimen name="setup_settings_picker_npanel_month_picker_x2">644.5dp</dimen>
+
+<dimen name="setup_settings_picker_npanel_month_picker_y2">233dp</dimen>
+
+<dimen name="setup_settings_picker_npanel_month_picker_label_text_height">20dp</dimen>
+
+<dimen name="setup_settings_picker_npanel_month_picker_label_text_width">70dp</dimen>
+
+<dimen name="setup_settings_picker_npanel_month_picker_label_text_x1">574.5dp</dimen>
+
+<dimen name="setup_settings_picker_npanel_month_picker_label_text_y1">241.5dp</dimen>
+
+<dimen name="setup_settings_picker_npanel_month_picker_label_text_x2">644.5dp</dimen>
+
+<dimen name="setup_settings_picker_npanel_month_picker_label_text_y2">261.5dp</dimen>
+
+<dimen name="setup_settings_picker_npanel_year_picker_height">140dp</dimen>
+
+<dimen name="setup_settings_picker_npanel_year_picker_width">70dp</dimen>
+
+<dimen name="setup_settings_picker_npanel_year_picker_x1">652.5dp</dimen>
+
+<dimen name="setup_settings_picker_npanel_year_picker_y1">93dp</dimen>
+
+<dimen name="setup_settings_picker_npanel_year_picker_x2">722.5dp</dimen>
+
+<dimen name="setup_settings_picker_npanel_year_picker_y2">233dp</dimen>
+
+<dimen name="setup_settings_picker_npanel_year_picker_label_text_height">20dp</dimen>
+
+<dimen name="setup_settings_picker_npanel_year_picker_label_text_width">70dp</dimen>
+
+<dimen name="setup_settings_picker_npanel_year_picker_label_text_x1">652.5dp</dimen>
+
+<dimen name="setup_settings_picker_npanel_year_picker_label_text_y1">241.5dp</dimen>
+
+<dimen name="setup_settings_picker_npanel_year_picker_label_text_x2">722.5dp</dimen>
+
+<dimen name="setup_settings_picker_npanel_year_picker_label_text_y2">261.5dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_panels_npanel_standard_bg_height">422.5dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_panels_npanel_standard_bg_width">362dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_panels_npanel_standard_bg_x1">0dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_panels_npanel_standard_bg_y1">59dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_panels_npanel_standard_bg_x2">362dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_panels_npanel_standard_bg_y2">481.5dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_panels_npanel_titlebar_normal_height">420dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_panels_npanel_titlebar_normal_width">48dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_panels_npanel_titlebar_normal_x1">0dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_panels_npanel_titlebar_normal_y1">59dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_panels_npanel_titlebar_normal_x2">48dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_panels_npanel_titlebar_normal_y2">479dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_panels_npanel_titlebar_normal_text_height">313dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_panels_npanel_titlebar_normal_text_width">26dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_panels_npanel_titlebar_normal_text_x1">12dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_panels_npanel_titlebar_normal_text_y1">91dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_panels_npanel_titlebar_normal_text_x2">38dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_panels_npanel_titlebar_normal_text_y2">404dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_panels_npanel_titlebar_activated_height">422dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_panels_npanel_titlebar_activated_width">48dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_panels_npanel_titlebar_activated_x1">48dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_panels_npanel_titlebar_activated_y1">59dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_panels_npanel_titlebar_activated_x2">96dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_panels_npanel_titlebar_activated_y2">481dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_panels_npanel_titlebar_activated_text_height">313dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_panels_npanel_titlebar_activated_text_width">26dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_panels_npanel_titlebar_activated_text_x1">58.5dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_panels_npanel_titlebar_activated_text_y1">91dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_panels_npanel_titlebar_activated_text_x2">84.5dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_panels_npanel_titlebar_activated_text_y2">404dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_panels_npanel_titlebar_activated_folder_icon_height">19dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_panels_npanel_titlebar_activated_folder_icon_width">24dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_panels_npanel_titlebar_activated_folder_icon_x1">60.5dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_panels_npanel_titlebar_activated_folder_icon_y1">431dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_panels_npanel_titlebar_activated_folder_icon_x2">84.5dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_panels_npanel_titlebar_activated_folder_icon_y2">450dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_list_row01_height">42dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_list_row01_width">256dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_list_row01_x1">96dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_list_row01_y1">80dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_list_row01_x2">352dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_list_row01_y2">122dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_list_row01_text_height">22dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_list_row01_text_width">212dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_list_row01_text_x1">118dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_list_row01_text_y1">90.5dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_list_row01_text_x2">330dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_list_row01_text_y2">112.5dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_list_row02_height">42dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_list_row02_width">256dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_list_row02_x1">96dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_list_row02_y1">122dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_list_row02_x2">352dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_list_row02_y2">164dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_list_row02_text_height">22dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_list_row02_text_width">212dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_list_row02_text_x1">118dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_list_row02_text_y1">132.5dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_list_row02_text_x2">330dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_list_row02_text_y2">154.5dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_powermeter_panels_standard_bg_height">104dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_powermeter_panels_standard_bg_width">171dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_powermeter_panels_standard_bg_x1_old">775dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_powermeter_panels_standard_bg_x1">813dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_powermeter_panels_standard_bg_y1">377dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_powermeter_panels_standard_bg_x2">946dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_powermeter_panels_standard_bg_y2">481dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_powermeter_height">64dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_powermeter_width">76dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_powermeter_x1">822.5dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_powermeter_y1">397dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_powermeter_x2">898.5dp</dimen>
+
+<dimen name="setup_settings_collapsed_tiny_powermeter_y2">461dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_panels_npanel_standard_bg_height">422dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_panels_npanel_standard_bg_width">442dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_panels_npanel_standard_bg_x1">-8dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_panels_npanel_standard_bg_y1">59dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_panels_npanel_standard_bg_x2">434dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_panels_npanel_standard_bg_y2">481dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_panels_npanel_titlebar_normal_height">422dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_panels_npanel_titlebar_normal_width">48dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_panels_npanel_titlebar_normal_x1">0dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_panels_npanel_titlebar_normal_y1">59dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_panels_npanel_titlebar_normal_x2">48dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_panels_npanel_titlebar_normal_y2">481dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_panels_npanel_titlebar_normal_text_height">313dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_panels_npanel_titlebar_normal_text_width">26dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_panels_npanel_titlebar_normal_text_x1">12dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_panels_npanel_titlebar_normal_text_y1">91dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_panels_npanel_titlebar_normal_text_x2">38dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_panels_npanel_titlebar_normal_text_y2">404dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_panels_npanel_titlebar_activated_height">422dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_panels_npanel_titlebar_activated_width">48dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_panels_npanel_titlebar_activated_x1">48dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_panels_npanel_titlebar_activated_y1">59dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_panels_npanel_titlebar_activated_x2">96dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_panels_npanel_titlebar_activated_y2">481dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_panels_npanel_titlebar_activated_text_height">313dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_panels_npanel_titlebar_activated_text_width">26dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_panels_npanel_titlebar_activated_text_x1">58.5dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_panels_npanel_titlebar_activated_text_y1">91dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_panels_npanel_titlebar_activated_text_x2">84.5dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_panels_npanel_titlebar_activated_text_y2">404dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_panels_npanel_titlebar_activated_folder_icon_height">19dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_panels_npanel_titlebar_activated_folder_icon_width">24dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_panels_npanel_titlebar_activated_folder_icon_x1">60.5dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_panels_npanel_titlebar_activated_folder_icon_y1">431dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_panels_npanel_titlebar_activated_folder_icon_x2">84.5dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_panels_npanel_titlebar_activated_folder_icon_y2">450dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_list_row01_height">42dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_list_row01_width">328dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_list_row01_x1">96dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_list_row01_y1">80dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_list_row01_x2">424dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_list_row01_y2">122dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_list_row01_text_height">22dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_list_row01_text_width">246dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_list_row01_text_x1">118dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_list_row01_text_y1">90.5dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_list_row01_text_x2">364dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_list_row01_text_y2">112.5dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_list_row02_height">42dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_list_row02_width">328dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_list_row02_x1">96dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_list_row02_y1">122dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_list_row02_x2">424dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_list_row02_y2">164dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_list_row02_text_height">22dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_list_row02_text_width">245dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_list_row02_text_x1">118dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_list_row02_text_y1">132.5dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_list_row02_text_x2">363dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_list_row02_text_y2">154.5dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_powermeter_panels_standard_bg_height">104dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_powermeter_panels_standard_bg_width">171dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_powermeter_panels_standard_bg_x1">775dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_powermeter_panels_standard_bg_y1">377dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_powermeter_panels_standard_bg_x2">946dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_powermeter_panels_standard_bg_y2">481dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_powermeter_height">64dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_powermeter_width">76dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_powermeter_x1">822.5dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_powermeter_y1">397dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_powermeter_x2">898.5dp</dimen>
+
+<dimen name="setup_settings_collapsed_small_powermeter_y2">461dp</dimen>
+
+<dimen name="setup_settings_panels_npanels_standard_bg_height">422dp</dimen>
+
+<dimen name="setup_settings_panels_npanels_standard_bg_width">946dp</dimen>
+
+<dimen name="setup_settings_panels_npanels_standard_bg_x1">0dp</dimen>
+
+<dimen name="setup_settings_panels_npanels_standard_bg_y1">59dp</dimen>
+
+<dimen name="setup_settings_panels_npanels_standard_bg_x2">946dp</dimen>
+
+<dimen name="setup_settings_panels_npanels_standard_bg_y2">481dp</dimen>
+
+<dimen name="setup_settings_panels_npanel_titlebar_normal_01_height">422dp</dimen>
+
+<dimen name="setup_settings_panels_npanel_titlebar_normal_01_width">48dp</dimen>
+
+<dimen name="setup_settings_panels_npanel_titlebar_normal_01_x1">0dp</dimen>
+
+<dimen name="setup_settings_panels_npanel_titlebar_normal_01_y1">59dp</dimen>
+
+<dimen name="setup_settings_panels_npanel_titlebar_normal_01_x2">48dp</dimen>
+
+<dimen name="setup_settings_panels_npanel_titlebar_normal_01_y2">481dp</dimen>
+
+<dimen name="setup_settings_panels_npanel_titlebar_normal_01_text_height">313dp</dimen>
+
+<dimen name="setup_settings_panels_npanel_titlebar_normal_01_text_width">26dp</dimen>
+
+<dimen name="setup_settings_panels_npanel_titlebar_normal_01_text_x1">12dp</dimen>
+
+<dimen name="setup_settings_panels_npanel_titlebar_normal_01_text_y1">91dp</dimen>
+
+<dimen name="setup_settings_panels_npanel_titlebar_normal_01_text_x2">38dp</dimen>
+
+<dimen name="setup_settings_panels_npanel_titlebar_normal_01_text_y2">404dp</dimen>
+
+<dimen name="setup_settings_panels_npanel_titlebar_normal_01_dots_icon_height">19dp</dimen>
+
+<dimen name="setup_settings_panels_npanel_titlebar_normal_01_dots_icon_width">24dp</dimen>
+
+<dimen name="setup_settings_panels_npanel_titlebar_normal_01_dots_icon_x1">12.5dp</dimen>
+
+<dimen name="setup_settings_panels_npanel_titlebar_normal_01_dots_icon_y1">431dp</dimen>
+
+<dimen name="setup_settings_panels_npanel_titlebar_normal_01_dots_icon_x2">36.5dp</dimen>
+
+<dimen name="setup_settings_panels_npanel_titlebar_normal_01_dots_icon_y2">450dp</dimen>
+
+<dimen name="setup_settings_panels_npanel_titlebar_normal_02_height">422dp</dimen>
+
+<dimen name="setup_settings_panels_npanel_titlebar_normal_02_width">48dp</dimen>
+
+<dimen name="setup_settings_panels_npanel_titlebar_normal_02_x1">48dp</dimen>
+
+<dimen name="setup_settings_panels_npanel_titlebar_normal_02_y1">59dp</dimen>
+
+<dimen name="setup_settings_panels_npanel_titlebar_normal_02_x2">96dp</dimen>
+
+<dimen name="setup_settings_panels_npanel_titlebar_normal_02_y2">481dp</dimen>
+
+<dimen name="setup_settings_panels_npanel_titlebar_normal_02_text_height">313dp</dimen>
+
+<dimen name="setup_settings_panels_npanel_titlebar_normal_02_text_width">26dp</dimen>
+
+<dimen name="setup_settings_panels_npanel_titlebar_normal_02_text_x1">58.5dp</dimen>
+
+<dimen name="setup_settings_panels_npanel_titlebar_normal_02_text_y1">91dp</dimen>
+
+<dimen name="setup_settings_panels_npanel_titlebar_normal_02_text_x2">84.5dp</dimen>
+
+<dimen name="setup_settings_panels_npanel_titlebar_normal_02_text_y2">404dp</dimen>
+
+<dimen name="setup_settings_panels_npanel_titlebar_normal_02_folder_icon_height">19dp</dimen>
+
+<dimen name="setup_settings_panels_npanel_titlebar_normal_02_folder_icon_width">24dp</dimen>
+
+<dimen name="setup_settings_panels_npanel_titlebar_normal_02_folder_icon_x1">60.5dp</dimen>
+
+<dimen name="setup_settings_panels_npanel_titlebar_normal_02_folder_icon_y1">431dp</dimen>
+
+<dimen name="setup_settings_panels_npanel_titlebar_normal_02_folder_icon_x2">84.5dp</dimen>
+
+<dimen name="setup_settings_panels_npanel_titlebar_normal_02_folder_icon_y2">450dp</dimen>
+
+<dimen name="setup_settings_panels_npanel_titlebar_activated_height">422dp</dimen>
+
+<dimen name="setup_settings_panels_npanel_titlebar_activated_width">48dp</dimen>
+
+<dimen name="setup_settings_panels_npanel_titlebar_activated_x1">96dp</dimen>
+
+<dimen name="setup_settings_panels_npanel_titlebar_activated_y1">59dp</dimen>
+
+<dimen name="setup_settings_panels_npanel_titlebar_activated_x2">144dp</dimen>
+
+<dimen name="setup_settings_panels_npanel_titlebar_activated_y2">481dp</dimen>
+
+<dimen name="setup_settings_panels_npanel_titlebar_activated_text_height">313dp</dimen>
+
+<dimen name="setup_settings_panels_npanel_titlebar_activated_text_width">26dp</dimen>
+
+<dimen name="setup_settings_panels_npanel_titlebar_activated_text_x1">106.5dp</dimen>
+
+<dimen name="setup_settings_panels_npanel_titlebar_activated_text_y1">91dp</dimen>
+
+<dimen name="setup_settings_panels_npanel_titlebar_activated_text_x2">132.5dp</dimen>
+
+<dimen name="setup_settings_panels_npanel_titlebar_activated_text_y2">404dp</dimen>
+
+<dimen name="setup_settings_panels_npanel_titlebar_activated_folder_icon_height">19dp</dimen>
+
+<dimen name="setup_settings_panels_npanel_titlebar_activated_folder_icon_width">24dp</dimen>
+
+<dimen name="setup_settings_panels_npanel_titlebar_activated_folder_icon_x1">108.5dp</dimen>
+
+<dimen name="setup_settings_panels_npanel_titlebar_activated_folder_icon_y1">431dp</dimen>
+
+<dimen name="setup_settings_panels_npanel_titlebar_activated_folder_icon_x2">132.5dp</dimen>
+
+<dimen name="setup_settings_panels_npanel_titlebar_activated_folder_icon_y2">450dp</dimen>
+
+<dimen name="setup_settings_npanel_list01_row01_height">42dp</dimen>
+
+<dimen name="setup_settings_npanel_list01_row01_width">328dp</dimen>
+
+<dimen name="setup_settings_npanel_list01_row01_x1">144dp</dimen>
+
+<dimen name="setup_settings_npanel_list01_row01_y1">80dp</dimen>
+
+<dimen name="setup_settings_npanel_list01_row01_x2">472dp</dimen>
+
+<dimen name="setup_settings_npanel_list01_row01_y2">122dp</dimen>
+
+<dimen name="setup_settings_npanel_list01_row01_text_height">22dp</dimen>
+
+<dimen name="setup_settings_npanel_list01_row01_text_width">258.5dp</dimen>
+
+<dimen name="setup_settings_npanel_list01_row01_text_x1">165.5dp</dimen>
+
+<dimen name="setup_settings_npanel_list01_row01_text_y1">90.5dp</dimen>
+
+<dimen name="setup_settings_npanel_list01_row01_text_x2">424dp</dimen>
+
+<dimen name="setup_settings_npanel_list01_row01_text_y2">112.5dp</dimen>
+
+<dimen name="setup_settings_npanel_list01_row01_arrow_height">16dp</dimen>
+
+<dimen name="setup_settings_npanel_list01_row01_arrow_width">9.5dp</dimen>
+
+<dimen name="setup_settings_npanel_list01_row01_arrow_x1">438dp</dimen>
+
+<dimen name="setup_settings_npanel_list01_row01_arrow_y1">94dp</dimen>
+
+<dimen name="setup_settings_npanel_list01_row01_arrow_x2">447.5dp</dimen>
+
+<dimen name="setup_settings_npanel_list01_row01_arrow_y2">110dp</dimen>
+
+<dimen name="setup_settings_npanel_list01_row02_height">42dp</dimen>
+
+<dimen name="setup_settings_npanel_list01_row02_width">328dp</dimen>
+
+<dimen name="setup_settings_npanel_list01_row02_x1">144dp</dimen>
+
+<dimen name="setup_settings_npanel_list01_row02_y1">122dp</dimen>
+
+<dimen name="setup_settings_npanel_list01_row02_x2">472dp</dimen>
+
+<dimen name="setup_settings_npanel_list01_row02_y2">164dp</dimen>
+
+<dimen name="setup_settings_npanel_list01_row02_text_height">22dp</dimen>
+
+<dimen name="setup_settings_npanel_list01_row02_text_width">258.5dp</dimen>
+
+<dimen name="setup_settings_npanel_list01_row02_text_x1">165.5dp</dimen>
+
+<dimen name="setup_settings_npanel_list01_row02_text_y1">132.5dp</dimen>
+
+<dimen name="setup_settings_npanel_list01_row02_text_x2">424dp</dimen>
+
+<dimen name="setup_settings_npanel_list01_row02_text_y2">154.5dp</dimen>
+
+<dimen name="setup_settings_npanel_list01_panels_divider_height">378.5dp</dimen>
+
+<dimen name="setup_settings_npanel_list01_panels_divider_width">1dp</dimen>
+
+<dimen name="setup_settings_npanel_list01_panels_divider_x1">471dp</dimen>
+
+<dimen name="setup_settings_npanel_list01_panels_divider_y1">81dp</dimen>
+
+<dimen name="setup_settings_npanel_list01_panels_divider_x2">472dp</dimen>
+
+<dimen name="setup_settings_npanel_list01_panels_divider_y2">459.5dp</dimen>
+
+<dimen name="setup_settings_npanel_list02_row01_activated_height">42dp</dimen>
+
+<dimen name="setup_settings_npanel_list02_row01_activated_width">328dp</dimen>
+
+<dimen name="setup_settings_npanel_list02_row01_activated_x1">472dp</dimen>
+
+<dimen name="setup_settings_npanel_list02_row01_activated_y1">80dp</dimen>
+
+<dimen name="setup_settings_npanel_list02_row01_activated_x2">800dp</dimen>
+
+<dimen name="setup_settings_npanel_list02_row01_activated_y2">122dp</dimen>
+
+<dimen name="setup_settings_npanel_list02_row01_activated_tick_mark_height">20.5dp</dimen>
+
+<dimen name="setup_settings_npanel_list02_row01_activated_tick_mark_width">20dp</dimen>
+
+<dimen name="setup_settings_npanel_list02_row01_activated_tick_mark_x1">496dp</dimen>
+
+<dimen name="setup_settings_npanel_list02_row01_activated_tick_mark_y1">91dp</dimen>
+
+<dimen name="setup_settings_npanel_list02_row01_activated_tick_mark_x2">516dp</dimen>
+
+<dimen name="setup_settings_npanel_list02_row01_activated_tick_mark_y2">111.5dp</dimen>
+
+<dimen name="setup_settings_npanel_list02_row01_activated_text_height">22dp</dimen>
+
+<dimen name="setup_settings_npanel_list02_row01_activated_text_width">215.5dp</dimen>
+
+<dimen name="setup_settings_npanel_list02_row01_activated_text_x1">521dp</dimen>
+
+<dimen name="setup_settings_npanel_list02_row01_activated_text_y1">90.5dp</dimen>
+
+<dimen name="setup_settings_npanel_list02_row01_activated_text_x2">736.5dp</dimen>
+
+<dimen name="setup_settings_npanel_list02_row01_activated_text_y2">112.5dp</dimen>
+
+<dimen name="setup_settings_npanel_list02_row02_height">42dp</dimen>
+
+<dimen name="setup_settings_npanel_list02_row02_width">328dp</dimen>
+
+<dimen name="setup_settings_npanel_list02_row02_x1">472dp</dimen>
+
+<dimen name="setup_settings_npanel_list02_row02_y1">122dp</dimen>
+
+<dimen name="setup_settings_npanel_list02_row02_x2">800dp</dimen>
+
+<dimen name="setup_settings_npanel_list02_row02_y2">164dp</dimen>
+
+<dimen name="setup_settings_npanel_list02_row02_text_height">22dp</dimen>
+
+<dimen name="setup_settings_npanel_list02_row02_text_width">215.5dp</dimen>
+
+<dimen name="setup_settings_npanel_list02_row02_text_x1">521dp</dimen>
+
+<dimen name="setup_settings_npanel_list02_row02_text_y1">133.5dp</dimen>
+
+<dimen name="setup_settings_npanel_list02_row02_text_x2">736.5dp</dimen>
+
+<dimen name="setup_settings_npanel_list02_row02_text_y2">155.5dp</dimen>
+
+<dimen name="setup_settings_npanel_list02_panels_divider_height">378.5dp</dimen>
+
+<dimen name="setup_settings_npanel_list02_panels_divider_width">1dp</dimen>
+
+<dimen name="setup_settings_npanel_list02_panels_divider_x1">784dp</dimen>
+
+<dimen name="setup_settings_npanel_list02_panels_divider_y1">81dp</dimen>
+
+<dimen name="setup_settings_npanel_list02_panels_divider_x2">785dp</dimen>
+
+<dimen name="setup_settings_npanel_list02_panels_divider_y2">459.5dp</dimen>
+
+<dimen name="setup_settings_npanel_column03_image01_height">60dp</dimen>
+
+<dimen name="setup_settings_npanel_column03_image01_width">103dp</dimen>
+
+<dimen name="setup_settings_npanel_column03_image01_x1">809dp</dimen>
+
+<dimen name="setup_settings_npanel_column03_image01_y1">81dp</dimen>
+
+<dimen name="setup_settings_npanel_column03_image01_x2">912dp</dimen>
+
+<dimen name="setup_settings_npanel_column03_image01_y2">141dp</dimen>
+
+<dimen name="setup_settings_npanel_column03_image01_text_height">18.5dp</dimen>
+
+<dimen name="setup_settings_npanel_column03_image01_text_width">102dp</dimen>
+
+<dimen name="setup_settings_npanel_column03_image01_text_x1">810dp</dimen>
+
+<dimen name="setup_settings_npanel_column03_image01_text_y1">146dp</dimen>
+
+<dimen name="setup_settings_npanel_column03_image01_text_x2">912dp</dimen>
+
+<dimen name="setup_settings_npanel_column03_image01_text_y2">164.5dp</dimen>
+
+<dimen name="setup_settings_npanel_column03_image02_height">60dp</dimen>
+
+<dimen name="setup_settings_npanel_column03_image02_width">103dp</dimen>
+
+<dimen name="setup_settings_npanel_column03_image02_x1">809dp</dimen>
+
+<dimen name="setup_settings_npanel_column03_image02_y1">176dp</dimen>
+
+<dimen name="setup_settings_npanel_column03_image02_x2">912dp</dimen>
+
+<dimen name="setup_settings_npanel_column03_image02_y2">236dp</dimen>
+
+<dimen name="setup_settings_npanel_column03_image02_text_height">18.5dp</dimen>
+
+<dimen name="setup_settings_npanel_column03_image02_text_width">102dp</dimen>
+
+<dimen name="setup_settings_npanel_column03_image02_text_x1">810dp</dimen>
+
+<dimen name="setup_settings_npanel_column03_image02_text_y1">241dp</dimen>
+
+<dimen name="setup_settings_npanel_column03_image02_text_x2">912dp</dimen>
+
+<dimen name="setup_settings_npanel_column03_image02_text_y2">259.5dp</dimen>
+
+<dimen name="setup_settings_npanel_column03_panels_horizontal_divider_01_height">0.5dp</dimen>
+
+<dimen name="setup_settings_npanel_column03_panels_horizontal_divider_01_width">127dp</dimen>
+
+<dimen name="setup_settings_npanel_column03_panels_horizontal_divider_01_x1">797dp</dimen>
+
+<dimen name="setup_settings_npanel_column03_panels_horizontal_divider_01_y1">264.5dp</dimen>
+
+<dimen name="setup_settings_npanel_column03_panels_horizontal_divider_01_x2">924dp</dimen>
+
+<dimen name="setup_settings_npanel_column03_panels_horizontal_divider_01_y2">265dp</dimen>
+
+<dimen name="setup_settings_npanel_column03_description_text_height">112.5dp</dimen>
+
+<dimen name="setup_settings_npanel_column03_description_text_width">130.5dp</dimen>
+
+<dimen name="setup_settings_npanel_column03_description_text_x1">796dp</dimen>
+
+<dimen name="setup_settings_npanel_column03_description_text_y1">272.5dp</dimen>
+
+<dimen name="setup_settings_npanel_column03_description_text_x2">926.5dp</dimen>
+
+<dimen name="setup_settings_npanel_column03_description_text_y2">385dp</dimen>
+
+<dimen name="setup_settings_npanel_column03_panels_horizontal_divider_02_height">0.5dp</dimen>
+
+<dimen name="setup_settings_npanel_column03_panels_horizontal_divider_02_width">127dp</dimen>
+
+<dimen name="setup_settings_npanel_column03_panels_horizontal_divider_02_x1">797dp</dimen>
+
+<dimen name="setup_settings_npanel_column03_panels_horizontal_divider_02_y1">389.5dp</dimen>
+
+<dimen name="setup_settings_npanel_column03_panels_horizontal_divider_02_x2">924dp</dimen>
+
+<dimen name="setup_settings_npanel_column03_panels_horizontal_divider_02_y2">390dp</dimen>
+
+<dimen name="setup_settings_npanel_column03_powermeter_height">64dp</dimen>
+
+<dimen name="setup_settings_npanel_column03_powermeter_width">76dp</dimen>
+
+<dimen name="setup_settings_npanel_column03_powermeter_x1">822.5dp</dimen>
+
+<dimen name="setup_settings_npanel_column03_powermeter_y1">397dp</dimen>
+
+<dimen name="setup_settings_npanel_column03_powermeter_x2">898.5dp</dimen>
+
+<dimen name="setup_settings_npanel_column03_powermeter_y2">461dp</dimen>
+
+<!-- Custom dimens: Contextual hint -->
+<dimen name="setup_hint_description_marginLeft_orig">20dp</dimen>
+<dimen name="setup_hint_description_marginTop_orig">215dp</dimen>
+<dimen name="setup_hint_description_marginLeft_top_align">18dp</dimen>
+<dimen name="setup_hint_description_marginTop_top_align">2dp</dimen>
+<dimen name="setup_hint_delta_divider_powermeter">7.5dp</dimen>
+
+<!-- Dimen for setup Text background -->
+<dimen name="setup_title_text_background_height">90dp</dimen>
+
+<dimen name="setup_settings_hint_view_width">200dp</dimen>
+
+</resources>

@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_npanel_bg" >
+
+	<TextView
+		android:id="@+id/bgupdateInstall_Header"
+		android:layout_width="@dimen/wizards_input_step_top_gradient_width"
+		android:layout_height="@dimen/wizards_input_step_top_gradient_height" 
+		android:paddingLeft="@dimen/wizards_input_step_wizards_header_icon_x1"
+		android:textAppearance="@org.droidtv.ui.tvwidget2k15:style/hlr"
+		android:layout_gravity="center_vertical"
+		android:gravity="center_vertical"
+		android:drawableLeft="@org.droidtv.ui.tvwidget2k15:drawable/wizards_header_icon"
+		android:drawablePadding="@dimen/wizards_input_step_header_textding_width"
+		android:text="@org.droidtv.ui.strings:string/MAIN_SATELLITE_INSTALLATION"/>
+
+	<ProgressBar
+        android:id="@+id/bgupdateInstall_Header_Progress"
+		style="@org.droidtv.ui.tvwidget2k15:style/ProgressBarStyleWizard"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/wizards_satellite_fullscan_progress_bar_height"
+		android:layout_marginLeft="@dimen/wizards_satellite_fullscan_progress_bar_x1"
+        android:layout_marginTop="@dimen/wizards_satellite_fullscan_progress_bar_y1"/>
+
+    <org.droidtv.ui.tvwidget2k15.VerticalText
+        android:id="@+id/bgupdateInstall_verticalText"
+        style="@org.droidtv.ui.tvwidget2k15:style/verticalTextStyle"
+        android:drawableBottom="@org.droidtv.ui.tvwidget2k15:drawable/drawable_text_view"
+        android:layout_width="48dp"
+        android:layout_height="@dimen/wizards_satellite_fullscan_wizard_stacks_height"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="@dimen/wizards_satellite_fullscan_wizard_stacks_y1"
+		android:textColor="#FFFFFF"
+        android:text="@org.droidtv.ui.strings:string/MAIN_VB_SAT_UPDATING" />
+    
+     <View
+        android:id="@+id/bg_verticaldivider_left"
+        android:layout_width="@dimen/wizards_satellite_fullscan_wizard_container_divider_width"
+        android:layout_height="@dimen/wizards_satellite_fullscan_wizard_container_divider_height"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="@dimen/wizards_satellite_fullscan_wizard_container_divider_y1"
+        android:background="@org.droidtv.ui.tvwidget2k15:drawable/npaneldivider" />
+    
+    <TextView
+        android:id="@+id/bg_satname"
+        style="@org.droidtv.ui.tvwidget2k15:style/lml"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/sat_wizard_install_satellite_fullscan_npanel_col01_row01_text_height"
+        android:layout_marginLeft="@dimen/wizard_install_satellite_fullscan_npanel_col01_row01_text_x1"
+        android:layout_marginTop="@dimen/sat_wizard_install_satellite_fullscan_npanel_col01_unit01_header_text_y1"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/bg_tvchAdd"
+        style = "@org.droidtv.ui.tvwidget2k15:style/lml"
+        android:layout_width="@dimen/sat_wizard_install_satellite_fullscan_npanel_col01_row02_text_width"
+        android:layout_height="@dimen/sat_wizard_install_satellite_fullscan_npanel_col01_row02_text_height"
+        android:layout_marginLeft="@dimen/wizard_install_satellite_fullscan_npanel_col01_row02_text_x1"
+        android:layout_marginTop="@dimen/wizard_install_satellite_fullscan_npanel_col01_row01_text_y1"
+        android:text="@org.droidtv.ui.strings:string/MAIN_WI_SAT_TV_CHANNELS_ADDED"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/bg_tvchAddValue"
+        style = "@org.droidtv.ui.tvwidget2k15:style/lml"
+        android:layout_width="@dimen/sat_wizard_install_satellite_fullscan_npanel_col01_row02_unit01_text_width"
+        android:layout_height="@dimen/sat_wizard_install_satellite_fullscan_npanel_col01_row02_unit01_text_height"
+        android:layout_marginLeft="@dimen/sat_wizard_install_satellite_fullscan_npanel_col01_row02_unit01_text_x1"
+        android:layout_marginTop="@dimen/wizard_install_satellite_fullscan_npanel_col01_row01_text_y1"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/bg_radiochAdd"
+        style = "@org.droidtv.ui.tvwidget2k15:style/lml"
+        android:layout_width="@dimen/sat_wizard_install_satellite_fullscan_npanel_col01_row02_text_width"
+        android:layout_height="@dimen/sat_wizard_install_satellite_fullscan_npanel_col01_row02_text_height"
+        android:layout_marginLeft="@dimen/wizard_install_satellite_fullscan_npanel_col01_row02_text_x1"
+        android:layout_marginTop="@dimen/wizard_install_satellite_fullscan_npanel_col01_row02_unit01_text_y1"
+        android:text="@org.droidtv.ui.strings:string/MAIN_WI_SAT_RADIO_CHANNELS_ADDED"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/bg_radiochAddValue"
+        style = "@org.droidtv.ui.tvwidget2k15:style/lml"
+        android:layout_width="@dimen/sat_wizard_install_satellite_fullscan_npanel_col01_row02_unit02_text_width"
+        android:layout_height="@dimen/sat_wizard_install_satellite_fullscan_npanel_col01_row02_unit02_text_height"
+        android:layout_marginLeft="@dimen/sat_wizard_install_satellite_fullscan_npanel_col01_row02_unit01_text_x1"
+        android:layout_marginTop="@dimen/wizard_install_satellite_fullscan_npanel_col01_row02_unit01_text_y1"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/bg_tvchRemove"
+        style = "@org.droidtv.ui.tvwidget2k15:style/lml"
+        android:layout_width="@dimen/sat_wizard_install_satellite_fullscan_npanel_col01_row02_text_width"
+        android:layout_height="@dimen/sat_wizard_install_satellite_fullscan_npanel_col01_row02_text_height"
+        android:layout_marginLeft="@dimen/wizard_install_satellite_fullscan_npanel_col01_row02_text_x1"
+        android:layout_marginTop="176.5dp"
+        android:text="@org.droidtv.ui.strings:string/MAIN_WI_SAT_TV_CHANNELS_REMOVED"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/bg_tvchRemoveValue"
+        style = "@org.droidtv.ui.tvwidget2k15:style/lml"
+        android:layout_width="@dimen/sat_wizard_install_satellite_fullscan_npanel_col01_row02_unit02_text_width"
+        android:layout_height="@dimen/sat_wizard_install_satellite_fullscan_npanel_col01_row02_unit02_text_height"
+        android:layout_marginLeft="@dimen/sat_wizard_install_satellite_fullscan_npanel_col01_row02_unit01_text_x1"
+        android:layout_marginTop="176.5dp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/bg_radiochremove"
+        style = "@org.droidtv.ui.tvwidget2k15:style/lml"
+        android:layout_width="@dimen/sat_wizard_install_satellite_fullscan_npanel_col01_row02_text_width"
+        android:layout_height="@dimen/sat_wizard_install_satellite_fullscan_npanel_col01_row02_text_height"
+        android:layout_marginLeft="@dimen/wizard_install_satellite_fullscan_npanel_col01_row02_text_x1"
+        android:layout_marginTop="205.5dp"
+        android:text="@org.droidtv.ui.strings:string/MAIN_WI_SAT_RADIO_CHANNELS_REMOVED"
+        android:visibility="visible" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/bg_radiochremovevalue"
+        style = "@org.droidtv.ui.tvwidget2k15:style/lml"
+        android:layout_width="@dimen/sat_wizard_install_satellite_fullscan_npanel_col01_row02_unit02_text_width"
+        android:layout_height="@dimen/sat_wizard_install_satellite_fullscan_npanel_col01_row02_unit02_text_height"
+        android:layout_marginLeft="@dimen/sat_wizard_install_satellite_fullscan_npanel_col01_row02_unit01_text_x1"
+        android:layout_marginTop="205.5dp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/bg_steptext"
+        style = "@org.droidtv.ui.tvwidget2k15:style/lml"
+        android:layout_width="@dimen/wizards_satellite_fullscan_step_progressbar_header_text_width"
+        android:layout_height="@dimen/wizards_satellite_fullscan_step_progressbar_header_text_height"
+        android:layout_marginLeft="@dimen/wizards_satellite_fullscan_step_progressbar_header_text_x1"
+        android:layout_marginTop="@dimen/wizards_satellite_fullscan_step_progressbar_header_text_y1"
+        android:text="@org.droidtv.ui.strings:string/MAIN_WI_STEP" />
+
+    <ProgressBar
+        android:id="@+id/bg_installationProgress"
+        style="@org.droidtv.ui.tvwidget2k15:style/ProgressBarStyleDefault.Wizard"
+        android:layout_width="@dimen/wizards_satellite_fullscan_step_progressbar_width"
+        android:layout_height="@dimen/wizards_satellite_fullscan_step_progressbar_height"
+        android:layout_marginLeft="@dimen/wizards_satellite_fullscan_step_progressbar_x1"
+        android:layout_marginTop="@dimen/wizards_satellite_fullscan_step_progressbar_y1" />
+
+    <TextView
+        android:id="@+id/bg_steptextVal"
+        style = "@org.droidtv.ui.tvwidget2k15:style/lsl"
+        android:layout_width="@dimen/wizards_satellite_fullscan_step_progressbar_value_text_width"
+        android:layout_height="@dimen/wizards_satellite_fullscan_step_progressbar_value_text_height"
+        android:layout_marginLeft="@dimen/wizards_satellite_fullscan_step_progressbar_value_text_x1"
+        android:layout_marginTop="@dimen/wizards_satellite_fullscan_step_progressbar_value_text_y1" />
+
+    <TextView
+        android:id="@+id/bg_totalprogresstext"
+        style = "@org.droidtv.ui.tvwidget2k15:style/lml"
+        android:layout_width="@dimen/wizards_satellite_fullscan_total_progress_progressbar_header_text_width"
+        android:layout_height="@dimen/wizards_satellite_fullscan_total_progress_progressbar_header_text_height"
+        android:layout_marginLeft="@dimen/wizards_satellite_fullscan_total_progress_progressbar_header_text_x1"
+        android:layout_marginTop="@dimen/wizards_satellite_fullscan_total_progress_progressbar_header_text_y1"
+        android:text="@org.droidtv.ui.strings:string/MAIN_WI_TOTAL_PROGRESS" />
+
+    <ProgressBar
+        android:id="@+id/bg_totalProgress"
+        style="@org.droidtv.ui.tvwidget2k15:style/ProgressBarStyleDefault.Wizard"
+        android:layout_width="@dimen/wizards_satellite_fullscan_total_progress_progressbar_width"
+        android:layout_height="@dimen/wizards_satellite_fullscan_total_progress_progressbar_height"
+        android:layout_marginLeft="@dimen/wizards_satellite_fullscan_total_progress_progressbar_x1"
+        android:layout_marginTop="@dimen/wizards_satellite_fullscan_total_progress_progressbar_y1" />
+
+    <TextView
+        android:id="@+id/bg_totalprogresstextVal"
+        style = "@org.droidtv.ui.tvwidget2k15:style/lsl"
+        android:layout_width="@dimen/wizards_satellite_fullscan_total_progress_progressbar_value_text_width"
+        android:layout_height="@dimen/wizards_satellite_fullscan_total_progress_progressbar_value_text_height"
+        android:layout_marginLeft="@dimen/wizards_satellite_fullscan_total_progress_progressbar_value_text_x1"
+        android:layout_marginTop="@dimen/wizards_satellite_fullscan_total_progress_progressbar_value_text_y1" />
+  
+    <View
+        android:id="@+id/bg_verticaldivider"
+        android:layout_width="@dimen/wizards_satellite_fullscan_wizard_container_divider_width"
+        android:layout_height="@dimen/wizards_satellite_fullscan_wizard_container_divider_height"
+        android:layout_marginLeft="@dimen/wizards_satellite_fullscan_wizard_container_divider_x1"
+        android:layout_marginTop="@dimen/wizards_satellite_fullscan_wizard_container_divider_y1"
+        android:background="@org.droidtv.ui.tvwidget2k15:drawable/npaneldivider" />
+      
+    <Button 
+		android:id = "@+id/bg_finishbtn"
+		style="@org.droidtv.ui.tvwidget2k15:style/button_style"
+		android:layout_width="@dimen/wizards_satellite_fullscan_footer_button_next_width"
+		android:layout_height="@dimen/wizards_satellite_fullscan_footer_button_next_height"
+		android:layout_marginLeft="@dimen/wizards_satellite_fullscan_footer_button_next_x1"
+		android:layout_marginTop="@dimen/wizards_satellite_fullscan_footer_button_next_y1"
+		android:text="@org.droidtv.ui.strings:string/MAIN_BUTTON_DONE"/>
+      
+    <ProgressBar
+        android:id="@+id/progressBarSpinner" 
+        android:layout_width="@dimen/wizards_satellite_fullscan_wizard_container_02_loader_width" 
+        android:layout_height="@dimen/wizards_satellite_fullscan_wizard_container_02_loader_height" 
+        android:layout_marginLeft="@dimen/wizards_satellite_fullscan_wizard_container_02_loader_x1"
+        android:layout_marginTop="@dimen/wizards_satellite_fullscan_wizard_container_02_loader_y1"
+        style="@org.droidtv.ui.tvwidget2k15:style/IndeterminateSpinnerStyle" />
+    
+     <TextView
+        android:id="@+id/bg_belowspinnertext"
+        style = "@org.droidtv.ui.tvwidget2k15:style/bnl"
+        android:layout_width="@dimen/wizards_satellite_fullscan_wizard_container_02_hint_description_text_width"
+        android:layout_height="@dimen/wizards_satellite_fullscan_wizard_container_02_hint_description_text_height"
+        android:layout_marginLeft="@dimen/wizards_satellite_fullscan_wizard_container_02_hint_description_text_x1"
+        android:layout_marginTop="@dimen/wizards_satellite_fullscan_wizard_container_02_hint_description_text_y1"
+        android:text="@org.droidtv.ui.strings:string/MAIN_MSG_SAT_CHANNEL_LIST_UPDATE_BUSY"
+        android:visibility="visible" />
+    
+</RelativeLayout>

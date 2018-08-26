@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/codelay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/enter_code"
+            style="@style/input_modal_dialog_09_pinentry_title01_text_style"
+            android:layout_width="@dimen/input_modal_dialog_09_pinentry_title01_text_width"
+            android:layout_height="@dimen/input_modal_dialog_09_pinentry_title01_text_height"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="30dp"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:text="@org.droidtv.ui.strings:string/MAIN_WI_PINCODE_ENTER" />
+
+        <EditText
+            android:id="@+id/input_pin"
+            android:layout_width="@dimen/input_modal_dialog_09_pinentry_text_field01_width"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:digits="0123456789"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_horizontal"
+            android:inputType="number"
+            android:maxLength="4"
+            android:textColor="#ffffff" >
+        </EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/codelay1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/enter_code_again"
+            style="@style/input_modal_dialog_09_pinentry_title02_text_style"
+            android:layout_width="@dimen/input_modal_dialog_09_pinentry_title02_text_width"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:text="@org.droidtv.ui.strings:string/MAIN_WI_PINCODE_CONFIRM" />
+
+        <EditText
+            android:id="@+id/input_pin_again"
+            android:layout_width="@dimen/input_modal_dialog_09_pinentry_text_field02_width"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:digits="0123456789"
+            android:enabled="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="center_horizontal"
+            android:inputType="number"
+            android:maxLength="4"
+            android:textColor="#ffffff" >
+        </EditText>
+    </LinearLayout>
+
+</LinearLayout>

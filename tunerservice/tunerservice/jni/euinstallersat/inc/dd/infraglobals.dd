@@ -1,0 +1,441 @@
+/*
+ *  Copyright(C) 2003 Koninklijke Philips Electronics N.V.,
+ *  All Rights Reserved.
+ *  This  source code and any compilation or derivative thereof is the
+ *  proprietary information of Koninklijke Philips Electronics N.V.
+ *  and is confidential in nature.
+ *  Under no circumstances is this software to be exposed to or placed
+ *  under an Open Source License of any type without the expressed
+ *  written permission of Koninklijke Philips Electronics N.V.
+ *
+ *          %name: infraglobals.dd %
+ *       %version: brg45mgr#7.2 %
+ * %date_modified: Wed Nov 10 13:39:39 2010 %
+ *    %derived_by: verbekej %
+ *       %version: brg45mgr#7.2 %
+ * %date_modified: Wed Nov 10 13:39:39 2010 %
+ *    %derived_by: verbekej %
+ */
+
+#ifndef _INFRAGLOBALS_DD_
+#define _INFRAGLOBALS_DD_
+
+/* This file is depricated and should be removed in due time                  */
+/* It no longer contains any usefull code, but refers to the new type files   */
+/* For time being it will serve as proxy for all former Mg-R (dd) types       */
+
+
+#include "tmStdTypes/inc/phStdTypes.h"
+
+#include "tmStdTypes/inc/phExtraTypes.h"
+
+
+#if defined (LittleEndian) && defined(SDE4_BUILD)
+/* The Mg-R builds do not use the LittleEndian type, so it is undefined here     */
+/* The LittleEndian type is declared in phExtraTypes.h when a SDE4 build is done */
+/* A Win32 build will redefine this type later in winperf.h                      */
+/* The LittleEndian type is undefined here to avoid type clash with winperf.h    */
+#undef LittleEndian
+#endif
+
+
+/* Remove any definition of ASSERT, assert and STRINGIFY */
+/* since they will be replaced by our own ones           */
+#ifdef ASSERT
+#undef ASSERT
+#endif
+#ifdef assert
+#undef assert
+#endif
+#ifdef STRINGIFY
+#undef STRINGIFY
+#endif
+
+/* Include the custom include */
+#if defined (ISEXTRAINCLUDE)
+#define HASH(x) #x
+#define MAKESTRING(x) HASH(x)
+#include MAKESTRING( ISEXTRAINCLUDE )
+#undef MAKESTRING
+#undef HASH
+#endif
+
+/** koala public group infraglobals **/
+
+
+/*
+**  MACROS for MACROS
+*/
+#define STRINGIFY(s)    #s
+
+
+/*
+**  USEFUL MACROS
+*/
+#ifndef _CC51
+#ifdef __QAC__
+#undef TRACEPRINT
+#define TRACEPRINT printf
+#else
+#ifndef TRACEPRINT
+#define TRACEPRINT( x, ... ) ((void)0)
+#endif
+#endif
+#endif
+
+/** koala public group CONCAT **/
+#define CONCAT(a,b)     a##b
+
+
+/*
+**  PLAIN TYPES
+*/
+
+/** koala public type Bool                 **/
+/** koala public type String               **/
+/** koala public type ConstString          **/
+/** koala public type Int8                 **/
+/** koala public type Int16                **/
+/** koala public type Int32                **/
+/** koala public type Address              **/
+/** koala public type ConstAddress         **/
+/** koala public type Pointer              **/
+/** koala public type ConstPointer         **/
+
+typedef unsigned int Nat;         /** koala public type Nat **/
+
+typedef UInt8   Nat8;             /** koala public type Nat8 **/
+typedef UInt16  Nat16;            /** koala public type Nat16 **/
+typedef UInt32  Nat32;            /** koala public type Nat32 **/
+#ifndef _CC51
+typedef UInt64  Nat64;            /** koala public type Nat64 **/
+#endif
+
+#if defined(CHECKBUILD)
+typedef int Any;
+#else
+/* Any is explicitly empty */			/** koala public type Any **/
+#endif  /* CHECKBUILD */
+
+typedef Int32 DateTime;                  /** koala public type DateTime **/
+typedef void (*Function)(void);          /** koala public type Function **/
+typedef void (*FunctionInt)(int);        /** koala public type FunctionInt **/
+typedef void (*FunctionIntInt)(int,int); /** koala public type FunctionIntInt **/
+typedef Nat FResult;                     /** koala public type FResult **/
+
+
+
+
+
+#ifndef CHAR_BIT
+#define CHAR_BIT      8         /* number of bits in a char */
+#endif
+#ifndef SCHAR_MIN
+#define SCHAR_MIN   (-128)      /* minimum signed char value */
+#endif
+#ifndef SCHAR_MAX
+#define SCHAR_MAX     127       /* maximum signed char value */
+#endif
+#ifndef UCHAR_MIN
+#define UCHAR_MIN     0         /* minimum unsigned char value */
+#endif
+#ifndef UCHAR_MAX
+#define UCHAR_MAX     0xff      /* maximum unsigned char value */
+#endif
+
+#ifndef CHAR_MIN
+#define CHAR_MIN    SCHAR_MIN   /* mimimum char value */
+#endif
+#ifndef CHAR_MAX
+#define CHAR_MAX    SCHAR_MAX   /* maximum char value */
+#endif
+
+#ifndef NAT8_MIN
+#define NAT8_MIN      0
+#endif
+#ifndef NAT8_MAX
+#define NAT8_MAX      255U
+#endif
+#ifndef NAT16_MIN
+#define NAT16_MIN     0
+#endif
+#ifndef NAT16_MAX
+#define NAT16_MAX     65535U
+#endif
+#ifndef NAT32_MIN
+#define NAT32_MIN     0
+#endif
+#ifndef NAT32_MAX
+#define NAT32_MAX     4294967295UL
+#endif
+
+#define NAT_MIN   NAT32_MIN
+#define NAT_MAX   NAT32_MAX
+
+#ifndef INT_MIN
+#define INT_MIN   INT32_MIN
+#endif
+#ifndef INT_MAX
+#define INT_MAX   INT32_MAX
+#endif
+
+#if defined(_WIN32) && defined(_CHAR_UNSIGNED)
+#error Chars are unsigned, change CHAR_MIN in infraglobals.dd
+#endif
+
+
+#ifdef NEAR
+#undef NEAR
+#endif
+
+
+#define NEAR                 /** koala public type NEAR **/
+
+#ifdef STBUP
+#define ROM
+#elif defined _CC51
+#define ROM         _rom
+#elif defined STBUP_TASKING
+#define ROM        _rom
+#else
+#define ROM        const     /** koala public type ROM **/
+#endif
+
+#define ROMADDR ROM*        /** koala public type ROMADDR **/
+
+#ifndef HUGE
+#define HUGE                /** koala public type HUGE **/
+#endif
+
+
+/*
+**  DEBUG PRINT
+*/
+
+
+/** koala public group RPT **/
+
+
+#if defined(WIN32) && !defined(__QAC__) /* !QAC until SDE fix (SDE now defines WIN32 for QAC) */
+#include <crtdbg.h>
+#else /* on non Win32: debug macros should generate no code */
+#define _RPT0(rptno, msg)
+#define _RPT1(rptno, msg, arg1)
+#define _RPT2(rptno, msg, arg1, arg2)
+#define _RPT3(rptno, msg, arg1, arg2, arg3)
+#define _RPT4(rptno, msg, arg1, arg2, arg3, arg4)
+#define _RPTF0(rptno, msg)
+#define _RPTF1(rptno, msg, arg1)
+#define _RPTF2(rptno, msg, arg1, arg2)
+#define _RPTF3(rptno, msg, arg1, arg2, arg3)
+#define _RPTF4(rptno, msg, arg1, arg2, arg3, arg4)
+#endif
+
+
+#if defined(VIPER) && defined(_DEBUG) /* DEBUGPRINT for Viper */
+extern int  printf (const char *, ...);
+#define DBGPRINT( txt )                          printf( txt )
+#define DBGPRINT1( fmt, arg1 )                   printf( fmt, arg1 )
+#define DBGPRINT2( fmt, arg1, arg2 )             printf( fmt, arg1, arg2 )
+#define DBGPRINT3( fmt, arg1, arg2, arg3 )       printf( fmt, arg1, arg2, arg3 )
+#define DBGPRINT4( fmt, arg1, arg2, arg3, arg4 ) printf( fmt, arg1, arg2, arg3, arg4 )
+#else /* debug macros should generate no code */
+#define DBGPRINT( txt )
+#define DBGPRINT1( fmt, arg1 )
+#define DBGPRINT2( fmt, arg1, arg2 )
+#define DBGPRINT3( fmt, arg1, arg2, arg3 )
+#define DBGPRINT4( fmt, arg1, arg2, arg3, arg4 )
+#endif
+
+
+/*
+**  UNUSED
+*/
+
+
+/** koala public group UNUSED **/
+
+/* We need to access p, to suppress the 'parameter not used' warning.
+** But using should also have a side effect (this rules out p==0), or QAC complains.
+** Solutions like p++ do not work, because p could be a void pointer or func pointer or a struct
+*/
+#if defined(__QAC__)
+#define UNUSED(p)  ( *(char*)&(p) = 0 )
+#else
+#define UNUSED(p)  ( (void) ( (void)(p),0) )
+#endif
+
+
+/*
+**  ASSERT
+*/
+
+
+/** koala public group ASSERT **/
+/* Asserts are enabled for both Debug & Retail builds. */
+
+/*     +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/*     ++ Static analysys targets                                         ++ */
+/*     +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+#if defined(__QAC__) || defined(__AMBER__)
+
+extern int qac_dummy;
+#define is_assert(e)        ((qac_dummy)=(e))
+#define assert(e)           is_assert(e)
+#define ASSERT(e)           is_assert(e)
+#define ASSERT_NO_NOTIFY(e) is_assert(e)
+
+/*     +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/*     ++ Other targets                                                   ++ */
+/*     +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+#else  /* __QAC__ */
+
+/*         +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/*         ++ 1. Define an appropriate 'is_assert' for each target        ++ */
+/*         +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/*         -------------------- WIN32 -------------------------------------- */
+#if defined(WIN32)
+#include <assert.h>
+#define is_assert(exp) (void)( (exp) || (_assert(#exp, __FILE__, __LINE__), 0) )
+#undef assert
+
+/*         -------------------- LINUX -------------------------------------- */
+#elif defined(LINUX)
+
+#include <stdio.h>    /* fflush */
+#include <pthread.h>  /* pthread_kill */
+
+#ifdef DMALLOC
+#include <string.h>
+#include <strings.h>
+#include <stdlib.h>
+#include "dmalloc.h"
+#endif
+extern unsigned int sleep(unsigned int seconds);
+
+/* #define is_assert(e) ({printf("ASSERT in %s (%d)failed\n", __FILE__, __LINE__ );sleep(1);exit(1);}) */
+
+/* For PR eh24#478 */
+#define is_assert(e) ({ printf("ASSERT '%s' failed at %s:%d in %s()\n",#e,__FILE__,__LINE__, __FUNCTION__); \
+                        fflush(0); \
+                        printf("                              \n"); \
+                        sleep(5); \
+                        pthread_kill( pthread_self(), 23 /*SIGSTOP*/ );})
+
+
+/*         -------------------- MIPS --------------------------------------- */
+#elif defined(__mips)
+__asm void is_assert(void)
+{
+    nop
+#if defined(__mips16)
+    .short  0xe801     /* sdbbp 0 On SDS 7.6.3 it is disassembled as illegal instruction(bug in SDS)
+                          On Ashling Pathfinder 1.0.1b it dissassembles correctly */
+#else
+    .long   0x7000003f /* sdbbp 0  On Ashling Pathfinder 1.0.1b disassembled as nop (bug in Ashling)
+                          On SDS it dissassembles correctly*/
+#endif
+}
+
+
+/*         -------------------- VIPER -------------------------------------- */
+#elif defined(VIPER)
+/* software debug break point in pr3940 mips processor */
+/* instruction: sdbbp is not recognized by GNU assembler so machine code is */
+/* directly stored */
+#define is_assert(e)  ({__asm__ (".long   0x7000003f");})
+
+
+/*         -------------------- Standby Processor w/Tasking 8051 Compiler -- */
+#elif defined (STBUP_TASKING)
+/*assert_break is implemented in assembly as a jmp $ to avoid compiler warning w135*/
+_inline void assert_break(void)
+{
+#pragma asm
+        MOV        0FEH, #55H  ;put 0x55 in wdtkey register to disable watchdog
+        MOV        A    ,0A8H  ; 
+        ANL        A   ,#07FH  ; disable interrupt to emulate real break
+        MOV        0A8H,A      ;
+        SJMP    $           ;halt execution by continuous jump to current instruction pointer
+#pragma endasm
+}
+
+#define is_assert(e)    (!(e) ? assert_break() : (void)0)
+
+/*-------------------- TCS ------------------------------------ */
+#elif defined (__TCS__)
+void
+tmDbg_AssertError( 
+    String  expr,   	//  I: The actual expression that failed in string format
+    String  fil,    	//  I: The file name of the file that contained the assert
+    unsigned long  lin, //  I: The line number where the assert occurred
+    String  message     //  I: An extra message to be output (may be Null)
+    );
+
+#define is_assert(assertion)  ( !(assertion) ? tmDbg_AssertError( #assertion, __FILE__, __LINE__, Null ) : (void)0)
+
+/*         -------------------- Default ------------------------------------ */
+#else
+static void is_assert(e)
+{
+    while(1);          /* best way to do "break" on any platform */
+}
+#endif  /* WIN32, MIPS */
+
+
+/*         +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/*         ++ 2. Evaluate DEBUGVAR for each target                        ++ */
+/*         +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+#define DEBUGVAR(v) CONCAT(debugflag_,v)
+
+#if defined(MODIDX)          /* defined in headers generated by SDE4 R1.6. */
+#if (MODIDX == 0)            /* "first" module contained in the component. */
+#ifndef ISNODEBUGFLAG        /* user override for automatic debugflag generation */
+int DEBUGVAR(PREFIX) = 1;    /* Declare debugflag for this module         */
+#endif
+#else                        /* non-"first" module. */
+extern int DEBUGVAR(PREFIX);
+#endif
+#else                        /* MGR SDE (or pre-R1.6 SDE4) */
+extern int DEBUGVAR(PREFIX);
+#endif /* defined(MODIDX) */
+
+
+
+#define TRG_ASSERT(e)  (((DEBUGVAR(PREFIX)) ? is_assert(e),0 : 0))
+
+/*         +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/*         ++ 3. Define 'ASSERT' and 'assert'                             ++ */
+/*         +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* Only define the standard ASSERT implementation if requested */
+#ifndef ISNOASSERT
+
+extern Bool is__AssertHook (void) ; /* Defined in sub\infra\comp\isast\isast_m.c */
+#if defined(STBUP_TASKING)
+#define ASSERT(e)           (((DEBUGVAR(PREFIX)) ? (void)(is_assert(e),0) : (void)0))
+#else
+#define ASSERT(e)           ((void)((DEBUGVAR(PREFIX)) ? ( !(e) && is__AssertHook() ? is_assert(e),0 : 0) : 0))
+#endif
+
+#if defined(STBUP_TASKING)
+#define ASSERT_NO_NOTIFY(e) ASSERT(e)
+#else
+#define ASSERT_NO_NOTIFY(e) ((void)( !(e) ? (void)(TRG_ASSERT(e),0) : (void)0))
+#endif
+
+#endif /* ISNOASSERT */
+
+
+
+
+/* Generate a compile warning when 'assert' is used instead of 'ASSERT'.  */
+/* Function 'todo_Use_ASSERT_InsteadOfObsolete_assert' is defined in infra\comp\isftl_m.c. */
+#define assert(e)   (todo_Use_ASSERT_InsteadOfObsolete_assert(e),ASSERT(e))
+
+
+#endif /* __QAC__ */
+
+#endif  /* _INFRAGLOBALS_DD_ */

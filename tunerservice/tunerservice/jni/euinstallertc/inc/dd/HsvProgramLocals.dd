@@ -1,0 +1,235 @@
+/*
+ *  Copyright(C) 2009 Koninklijke Philips Electronics N.V.,
+ *  All Rights Reserved.
+ *  This  source code and any compilation or derivative thereof is the
+ *  proprietary information of Koninklijke Philips Electronics N.V.
+ *  and is confidential in nature.
+ *  Under no circumstances is this software to be exposed to or placed
+ *  under an Open Source License of any type without the expressed
+ *  written permission of Koninklijke Philips Electronics N.V.
+ *
+ *          %name: HsvProgramLocals.dd %
+ *       %version: cltv1_fusion_15 % 
+ * %date_modified: Tue Apr 07 11:43:03 2009 %
+ *    %derived_by: lakshminb %  
+ */
+
+/** koala group HsvProgramLocals **/
+/** koala using infraglobals **/
+
+/** koala type HsvProgramDataTableIdMap **/
+/** koala type HsvPgdatPresetData **/
+/** koala type HsvPgdatAnalogData **/
+/** koala type HsvPgdatDigServiceData **/
+/** koala type HsvPgdatDigFreqMapData **/
+/** koala type HsvPgdatDigTSData **/
+/** koala type HsvPgDatAttributes **/
+/** koala using AppApiChannelLibTypes **/
+
+typedef AppApiChannel       HsvChannel;			/** koala type HsvChannel **/
+
+#define NO
+#define NONE
+#define NAME
+#define A(x)    [x]
+
+typedef enum
+{
+#define SCALAR_ITEM(attrib, a_type, ptr, supp, field, f_type, applic)   HsvPgDat##attrib,
+#define VECTOR_ITEM(attrib, a_type, ptr, supp, field, f_type, applic)   HsvPgDat##attrib,
+#ifndef __cplusplus
+#include "../data/hsvpgdat_attrib.h"
+#include "../data/hsvpgdat_Presetattrib.h"
+#else
+#include "hsvpgdat_attrib.h"
+#include "hsvpgdat_Presetattrib.h"
+#endif
+#undef SCALAR_ITEM
+#undef VECTOR_ITEM
+HsvPgDatLastAttribute
+}HsvPgDatAttributes;
+
+typedef struct
+{
+#define PRESET_ITEM(item, type, bit, siz, def)      type item siz;
+#ifndef __cplusplus
+#include "../data/hsvpgdat_tcs_presetitems.h"
+#else
+#include "hsvpgdat_tcs_presetitems.h"
+#endif
+#undef PRESET_ITEM
+}HsvPgdatPresetData;
+
+typedef struct
+{
+#define ANALOG_ITEM(item, type, bit, siz, def)      type item siz;
+#ifndef __cplusplus
+#include "../data/hsvpgdat_analogitems.h"
+#else
+#include "hsvpgdat_analogitems.h"
+#endif
+#undef ANALOG_ITEM
+}HsvPgdatAnalogData;
+
+typedef struct
+{
+#define DIGSRVC_ITEM(item, type, bit, siz, def)      type item siz;
+#ifndef __cplusplus
+#include "../data/hsvpgdat_tcs_digsrvcitems.h"
+#else
+#include "hsvpgdat_tcs_digsrvcitems.h"
+#endif
+#undef DIGSRVC_ITEM
+}HsvPgdatDigServiceData;
+
+typedef struct
+{
+#define FREQMAP_ITEM(item, type, bit, siz, def)      type item siz;
+#ifndef __cplusplus
+#include "../data/hsvpgdat_freqmapitems.h"
+#else
+#include "hsvpgdat_freqmapitems.h"
+#endif
+#undef FREQMAP_ITEM
+}HsvPgdatDigFreqMapData;
+
+typedef struct
+{
+#define DIGTS_ITEM(item, type, bit, siz, def)      type item siz;
+#ifndef __cplusplus
+#include "../data/hsvpgdat_tcs_digtsitems.h"
+#else
+#include "hsvpgdat_tcs_digtsitems.h"
+#endif
+#undef DIGTS_ITEM
+}HsvPgdatDigTSData;
+
+typedef struct
+{
+#define SATINFO_ITEM(item, type, bit, siz, def)      type item siz;
+#ifndef __cplusplus
+#include "../data/hsvpgdat_satinfoitems.h"
+#else
+#include "hsvpgdat_satinfoitems.h"
+#endif
+#undef SATINFO_ITEM
+}HsvPgdatSatInfoData;
+
+typedef struct 
+{
+#define TVPROVIDER_PRESET_ITEM(item, type, bit, siz, def)      type item siz;
+#define	TVPROVIDER_DIGSRVC_ITEM(item, type, bit, siz, def)      type item siz;
+#define	TVPROVIDER_ANALOG_ITEM(item, type, bit, siz, def)      type item siz;
+#define TVPROVIDER_COMMON_ITEM(item, type, bit, siz, def, pre, ana, srv, ts)      type item siz;
+#define TVPROVIDER_DIGTS_ITEM(item, type, bit, siz, def)      type item siz;
+#define TVPROVIDER_COMMON_VECTOR_ITEM(item, type, bit, siz, def)      type item siz;
+#define TVPROVIDER_DIGSRVC_VECTOR_ITEM(item, type, bit, siz, def)      type item siz;
+#include "hsvpgdat_tvproviderblobdata.h"
+#undef  TVPROVIDER_PRESET_ITEM
+#undef  TVPROVIDER_DIGSRVC_ITEM
+#undef TVPROVIDER_ANALOG_ITEM
+#undef TVPROVIDER_COMMON_ITEM
+#undef TVPROVIDER_DIGTS_ITEM
+#undef TVPROVIDER_COMMON_VECTOR_ITEM
+#undef TVPROVIDER_DIGSRVC_VECTOR_ITEM
+
+} HsvPgdatTvProviderBlobData;
+
+#undef NO
+#undef NAME
+#undef A
+#undef NONE
+
+/* This needs to look */      
+
+#define HsvUnknownPtc -1                                     
+
+#define ASSIGN_PRESET_KEYS(data, channel)      ((((HsvPgdatPresetData*)(data))->Type = (channel)->Type),                        \
+                                                (((HsvPgdatPresetData*)(data))->PresetNumber = (channel)->Channel.Digit)                           \
+                                               )
+                                               
+#define ASSIGN_CHANNEL_FROM_PRESET(data, channel)  (((channel)->Type = ((HsvPgdatPresetData*)(data))->Type),                            \
+                                                    ((channel)->Channel.Digit = ((HsvPgdatPresetData*)(data))->PresetNumber) ,       \
+                                                    ((channel)->Ptc = 0) \
+                                                   )
+                                               
+#define ASSIGN_DIGSVC_KEYS(data, preset)       ((((HsvPgdatDigServiceData*)(data))->OriginalNetworkId = ((HsvPgdatPresetData*)(preset))->OriginalNetworkId),    \
+												(((HsvPgdatDigServiceData*)(data))->Frequency = ((HsvPgdatPresetData*)(preset))->Frequency),    \
+                                                (((HsvPgdatDigServiceData*)(data))->ServiceId = ((HsvPgdatPresetData*)(preset))->ServiceId),                     \
+												(((HsvPgdatDigServiceData*)(data))->StreamPriority = ((HsvPgdatPresetData*)(preset))->StreamPriority)                     \
+                                               )
+
+#define ASSIGN_CAM_DIGSVC_KEYS(data, preset)       ((((HsvPgdatDigServiceData*)(data))->OriginalNetworkId = ((HsvPgdatPresetData*)(preset))->OriginalNetworkId),    \
+												(((HsvPgdatDigServiceData*)(data))->Frequency = ((HsvPgdatPresetData*)(preset))->Frequency),    \
+                                                (((HsvPgdatDigServiceData*)(data))->ServiceId = ((HsvPgdatPresetData*)(preset))->ServiceId),                     \
+												(((HsvPgdatDigServiceData*)(data))->LCN = ((HsvPgdatPresetData*)(preset))->PresetNumber)                     \
+                                               )
+                                               
+#define ASSIGN_CHANNEL_FROM_SVC(data, channel)     (((channel)->Type = AppApiOnePart),                                                  \
+                                                    ((channel)->Channel.Digit = ((HsvPgdatDigServiceData*)(data))->PresetNumber) ,  \
+                                                    ((channel)->Ptc = 0) \
+                                                    )
+                                               
+
+#define ASSIGN_ANALOG_KEYS(data, preset)       ((((HsvPgdatAnalogData*)(data))->PresetNumber = ((HsvPgdatPresetData*)(preset))->AnalogTablePreset)        \
+                                               )
+                                               
+#define ASSIGN_CHANNEL_FROM_ANALOG(data, channel)  (((channel)->Type = AppApiAnalog),                                                \
+                                                    ((channel)->Ptc = ((HsvPgdatAnalogData*)(data))->PresetNumber),                          \
+                                                    ((channel)->Channel.Digit = ((HsvPgdatAnalogData*)(data))->PresetNumber)              \
+                                                   )
+
+
+#define ASSIGN_FREQMAP_KEYS(data, preset)      ((((HsvPgdatDigFreqMapData*)(data))->OriginalNetworkId = ((HsvPgdatPresetData*)(preset))->OriginalNetworkId),        \
+                                                (((HsvPgdatDigFreqMapData*)(data))->Tsid = ((HsvPgdatPresetData*)(preset))->Tsid)                                  \
+                                               )
+
+#define ASSIGN_DIGTS_KEYS(data, preset)      ((((HsvPgdatDigTSData*)(data))->Frequency = ((HsvPgdatPresetData*)(preset))->Frequency))
+                                               
+
+
+#define ASSIGN_PRESET_FROM_PSVC(presetdat, psvcdat) ((presetdat.OriginalNetworkId = psvcdat->OriginalNetworkId), \
+                                                     (presetdat.ServiceId = psvcdat->ServiceId),\
+                                                     (presetdat.Tsid = psvcdat->Tsid),\
+			                                         (presetdat.StreamPriority	= psvcdat->StreamPriority),\
+                                                     (presetdat.Frequency = psvcdat->Frequency))
+
+
+#define ASSIGN_PRESET_FROM_SVC(presetdat, svcdat)((presetdat.OriginalNetworkId = svcdat.OriginalNetworkId),\
+                                                  (presetdat.ServiceId = svcdat.ServiceId),\
+                                                  (presetdat.Tsid = svcdat.Tsid),\
+						                          (presetdat.StreamPriority = svcdat.StreamPriority),\
+                                                  (presetdat.Frequency = svcdat.Frequency))
+
+
+
+#define ASSIGN_SVC_FROM_PRESET(svcdat,presetdat)((svcdat.OriginalNetworkId = presetdat.OriginalNetworkId), \
+                                                 (svcdat.ServiceId = presetdat.ServiceId), \
+                                                 (svcdat.Frequency = presetdat.Frequency), \
+                                                 (svcdat.StreamPriority = presetdat.StreamPriority))
+
+#define ASSIGN_KEYS_OF_CAM_SVC(svcdat1, svcdat2){ \
+													svcdat1.OriginalNetworkId	= svcdat2.OriginalNetworkId; \
+													svcdat1.ServiceId			= svcdat2.ServiceId; \
+													svcdat1.Frequency			= svcdat2.Frequency; \
+													svcdat1.LCN					= svcdat2.LCN; \
+												}
+
+#define ASSIGN_CAM_SVC_FROM_PRESET(svcdat, presetdat){ \
+													svcdat.OriginalNetworkId	= presetdat.OriginalNetworkId; \
+													svcdat.ServiceId			= presetdat.ServiceId; \
+													svcdat.Frequency			= presetdat.Frequency; \
+													svcdat.LCN					= presetdat.PresetNumber; \
+													}
+
+
+
+#define TXTCOOKIE								(nvmtxt_iPresent())?nvmtxt_GetDefaultCookieValue():0
+#define APPSCOOKIE								(nvmapps_iPresent())?nvmapps_GetDefaultCookieValue():0	
+#define CESVCCOOKIE								(nvmcesvc_iPresent())?nvmcesvc_GetDefaultCookieValue():0
+
+#define ASSIGN_DEFAULTCOOKIES(svcdat)			
+/* ((svcdat).CesvcCookie  = CESVCCOOKIE),\
+												  ((svcdat).AppsCookie  = APPSCOOKIE),\
+												  ((svcdat).TxtCookie   = TXTCOOKIE) )
+*/

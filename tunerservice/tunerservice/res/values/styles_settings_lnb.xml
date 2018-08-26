@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Tue Sep 23 2014 14:42:36 GMT+0530-->
+<resources>
+<style name="settings_lnb_step02_container_02_hint_title_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/llr">
+	<item name="android:gravity">left</item>
+</style>
+<style name="settings_lnb_step02_container_02_hint_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/bnl">
+	<item name="android:gravity">left</item>
+</style>
+</resources>

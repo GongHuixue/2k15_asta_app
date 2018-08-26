@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.droidtv.euinstallersat.wizard.settings.connectionTypeWizard.ConnTypeWizard
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/connTypeWizard"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:tag="Installation" >
+
+</org.droidtv.euinstallersat.wizard.settings.connectionTypeWizard.ConnTypeWizard>

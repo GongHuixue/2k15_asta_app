@@ -1,0 +1,84 @@
+/*
+ *  Copyright(C) 2003 Koninklijke Philips Electronics N.V.,
+ *  All Rights Reserved.
+ *  This  source code and any compilation or derivative thereof is the
+ *  proprietary information of Koninklijke Philips Electronics N.V.
+ *  and is confidential in nature.
+ *  Under no circumstances is this software to be exposed to or placed
+ *  under an Open Source License of any type without the expressed
+ *  written permission of Koninklijke Philips Electronics N.V.
+ *
+ *          %name: infralocals.dd %
+ *       %version: TVG_tv550r4dev %
+ * %date_modified: Tue Aug 21 13:31:41 2007 %
+ *    %derived_by: lakshminb %
+ */
+
+
+#ifndef _INFRALOCALS_DD_
+#define _INFRALOCALS_DD_
+
+
+/** koala public group infralocals **/
+
+
+#ifdef _CC51
+/*******************************/
+/**** Tasking 8051 Compiler ****/
+/*******************************/
+#define BIT             _bit                /** koala public type BIT **/
+#define BITBYTE         _bitbyte            /** koala public type BITBYTE **/
+
+#define SFRBIT          _sfrbit             /** koala public type SFRBIT **/
+#define SFRBYTE         _sfrbyte            /** koala public type SFRBYTE **/
+
+#define SRAM            _data               /** koala public type SRAM **/         /* Direct addressable RAM (fasted) */
+#define BRAM            _bdat               /** koala public type BRAM **/         /* Bit addressable RAM (fasted) */
+#define IRAM            _idat               /** koala public type IRAM **/         /* Indirect addressable RAM (fast) */
+#define PRAM            _pdat               /** koala public type PRAM **/         /* External RAM within 256 bytes */
+#define XRAM            _xdat               /** koala public type XRAM **/         /* External RAM */
+
+#define INTERRUPT(vect) _interrupt(vect)    /** koala public type INTERRUPT **/    
+#define INTNOVECT       INTERRUPT(NULL)     /** koala public type INTNOVECT **/    /* Ugly fix for koala interface (who doesn't allow parameters in modifiers) */
+#define USING(bank)     _using(bank)        /** koala public type USING **/        
+
+#define AT(addr)        _at(addr)           /** koala public type AT **/           
+#define ATBIT(addr,bit) _atbit(addr,bit)    /** koala public type ATBIT **/        
+
+#define INLINE          _inline             /** koala public type INLINE **/       
+#define REENTRANT       _reentrant          /** koala public type REENTRANT **/    
+
+#else /* _WIN32 */
+/**********************************/
+/**** Microsoft Win32 Compiler ****/
+/**********************************/
+#define BIT             unsigned char       /* Win32 compiler doens't support the _bit type specifier */
+#define BITBYTE         unsigned char       /* Win32 compiler doens't support the _bitbyte type specifier */
+
+#define SFRBIT          unsigned char       /* Win32 compiler doens't support the _sfrbit type specifier */
+#define SFRBYTE         unsigned char       /* Win32 compiler doens't support the _sfrbyte type specifier */
+
+#define SRAM                                /* Win32 compiler doens't support the _data storage type */
+#define BRAM                                /* Win32 compiler doens't support the _bdat storage type */
+#define IRAM                                /* Win32 compiler doens't support the _idat storage type */
+#define PRAM                                /* Win32 compiler doens't support the _pdat storage type */
+#define XRAM                                /* Win32 compiler doens't support the _xdat storage type */
+
+#define INTERRUPT(vect)                     /* Win32 compiler doens't support the _interrupt type qualifier */
+#define INTNOVECT       INTERRUPT(NULL)     /* Ugly fix for koala interface (who doesn't allow parameters in modifiers) */
+#define USING(bank)                         /* Win32 compiler doens't support the _using type qualifier */
+
+#define AT(addr)                            /* Win32 compiler doens't support the _at attribute */
+#define ATBIT(addr,bit)                     /* Win32 compiler doens't support the _atbit attribute */
+
+#define INLINE                              /* Win32 compiler doens't support the _inline keyword */
+#define REENTRANT                           /* Win32 compiler doens't support the _reentrant keyword */
+#define BDAT                                /* Win32 compiler doens't support the _reentrant keyword */
+
+#define _plmprocedure                       /* Win32 compiler doens't support the _plmprocedure keyword */
+#define _noregaddr                          /* Win32 compiler doens't support the _noregaddr keyword */
+#define _putbit(x)                          /* Win32 compiler doens't supply built-in _putbit function */
+
+#endif
+
+#endif

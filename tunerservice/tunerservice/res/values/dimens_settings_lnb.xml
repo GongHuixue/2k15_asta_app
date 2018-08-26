@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Tue Sep 23 2014 14:42:36 GMT+0530-->
+<resources>
+<!--Layout_Settings_LNB_v2.1.psd-->
+<dimen name="settings_lnb_topmenu_bar_height">84dp</dimen>
+
+<dimen name="settings_lnb_topmenu_bar_width">960dp</dimen>
+
+<dimen name="settings_lnb_topmenu_bar_x1">0dp</dimen>
+
+<dimen name="settings_lnb_topmenu_bar_y1">0dp</dimen>
+
+<dimen name="settings_lnb_topmenu_bar_x2">960dp</dimen>
+
+<dimen name="settings_lnb_topmenu_bar_y2">84dp</dimen>
+
+<dimen name="settings_lnb_colorkey_bar_height">44dp</dimen>
+
+<dimen name="settings_lnb_colorkey_bar_width">960dp</dimen>
+
+<dimen name="settings_lnb_colorkey_bar_x1">0dp</dimen>
+
+<dimen name="settings_lnb_colorkey_bar_y1">496dp</dimen>
+
+<dimen name="settings_lnb_colorkey_bar_x2">960dp</dimen>
+
+<dimen name="settings_lnb_colorkey_bar_y2">540dp</dimen>
+
+<dimen name="settings_lnb_step01_npanel_container_height">362dp</dimen>
+
+<dimen name="settings_lnb_step01_npanel_container_width">960dp</dimen>
+
+<dimen name="settings_lnb_step01_npanel_container_x1">0dp</dimen>
+
+<dimen name="settings_lnb_step01_npanel_container_y1">98dp</dimen>
+
+<dimen name="settings_lnb_step01_npanel_container_x2">960dp</dimen>
+
+<dimen name="settings_lnb_step01_npanel_container_y2">460dp</dimen>
+
+<dimen name="settings_lnb_step01_npanel_stacks_height">362dp</dimen>
+
+<dimen name="settings_lnb_step01_npanel_stacks_width">88dp</dimen>
+
+<dimen name="settings_lnb_step01_npanel_stacks_x1">0dp</dimen>
+
+<dimen name="settings_lnb_step01_npanel_stacks_y1">98dp</dimen>
+
+<dimen name="settings_lnb_step01_npanel_stacks_x2">88dp</dimen>
+
+<dimen name="settings_lnb_step01_npanel_stacks_y2">460dp</dimen>
+
+<dimen name="settings_lnb_step01_npanel_list_container_height">362dp</dimen>
+
+<dimen name="settings_lnb_step01_npanel_list_container_width">298dp</dimen>
+
+<dimen name="settings_lnb_step01_npanel_list_container_x1">88dp</dimen>
+
+<dimen name="settings_lnb_step01_npanel_list_container_y1">98dp</dimen>
+
+<dimen name="settings_lnb_step01_npanel_list_container_x2">386dp</dimen>
+
+<dimen name="settings_lnb_step01_npanel_list_container_y2">460dp</dimen>
+
+<dimen name="settings_lnb_step01_npanel_list_container_divider_height">362dp</dimen>
+
+<dimen name="settings_lnb_step01_npanel_list_container_divider_width">1dp</dimen>
+
+<dimen name="settings_lnb_step01_npanel_list_container_divider_x1">386dp</dimen>
+
+<dimen name="settings_lnb_step01_npanel_list_container_divider_y1">98dp</dimen>
+
+<dimen name="settings_lnb_step01_npanel_list_container_divider_x2">387dp</dimen>
+
+<dimen name="settings_lnb_step01_npanel_list_container_divider_y2">460dp</dimen>
+
+<dimen name="settings_lnb_step01_npanel_container_02_height">362dp</dimen>
+
+<dimen name="settings_lnb_step01_npanel_container_02_width">573dp</dimen>
+
+<dimen name="settings_lnb_step01_npanel_container_02_x1">387dp</dimen>
+
+<dimen name="settings_lnb_step01_npanel_container_02_y1">98dp</dimen>
+
+<dimen name="settings_lnb_step01_npanel_container_02_x2">960dp</dimen>
+
+<dimen name="settings_lnb_step01_npanel_container_02_y2">460dp</dimen>
+
+<dimen name="settings_lnb_step01_npanel_container_02_padding_left_height">20dp</dimen>
+
+<dimen name="settings_lnb_step01_npanel_container_02_padding_left_width">20dp</dimen>
+
+<dimen name="settings_lnb_step01_npanel_container_02_padding_left_x1">387dp</dimen>
+
+<dimen name="settings_lnb_step01_npanel_container_02_padding_left_y1">98dp</dimen>
+
+<dimen name="settings_lnb_step01_npanel_container_02_padding_left_x2">407dp</dimen>
+
+<dimen name="settings_lnb_step01_npanel_container_02_padding_left_y2">118dp</dimen>
+
+<dimen name="settings_lnb_step01_npanel_container_02_padding_right_height">20dp</dimen>
+
+<dimen name="settings_lnb_step01_npanel_container_02_padding_right_width">20dp</dimen>
+
+<dimen name="settings_lnb_step01_npanel_container_02_padding_right_x1">940dp</dimen>
+
+<dimen name="settings_lnb_step01_npanel_container_02_padding_right_y1">98dp</dimen>
+
+<dimen name="settings_lnb_step01_npanel_container_02_padding_right_x2">960dp</dimen>
+
+<dimen name="settings_lnb_step01_npanel_container_02_padding_right_y2">118dp</dimen>
+
+<dimen name="settings_lnb_step01_container_02_picker_01_height">166dp</dimen>
+
+<dimen name="settings_lnb_step01_container_02_picker_01_width">52dp</dimen>
+
+<dimen name="settings_lnb_step01_container_02_picker_01_x1">417dp</dimen>
+
+<dimen name="settings_lnb_step01_container_02_picker_01_y1">98dp</dimen>
+
+<dimen name="settings_lnb_step01_container_02_picker_01_x2">469dp</dimen>
+
+<dimen name="settings_lnb_step01_container_02_picker_01_y2">264dp</dimen>
+
+<dimen name="settings_lnb_step01_container_02_picker_01_padding_left_height">10dp</dimen>
+
+<dimen name="settings_lnb_step01_container_02_picker_01_padding_left_width">10dp</dimen>
+
+<dimen name="settings_lnb_step01_container_02_picker_01_padding_left_x1">407dp</dimen>
+
+<dimen name="settings_lnb_step01_container_02_picker_01_padding_left_y1">98dp</dimen>
+
+<dimen name="settings_lnb_step01_container_02_picker_01_padding_left_x2">417dp</dimen>
+
+<dimen name="settings_lnb_step01_container_02_picker_01_padding_left_y2">108dp</dimen>
+
+<dimen name="settings_lnb_step01_container_02_picker_dot_height">5dp</dimen>
+
+<dimen name="settings_lnb_step01_container_02_picker_dot_width">5dp</dimen>
+
+<dimen name="settings_lnb_step01_container_02_picker_dot_x1">474dp</dimen>
+
+<dimen name="settings_lnb_step01_container_02_picker_dot_y1">178.5dp</dimen>
+
+<dimen name="settings_lnb_step01_container_02_picker_dot_x2">479dp</dimen>
+
+<dimen name="settings_lnb_step01_container_02_picker_dot_y2">183.5dp</dimen>
+
+<dimen name="settings_lnb_step01_container_02_picker_dot_padding_left_height">5dp</dimen>
+
+<dimen name="settings_lnb_step01_container_02_picker_dot_padding_left_width">5dp</dimen>
+
+<dimen name="settings_lnb_step01_container_02_picker_dot_padding_left_x1">469dp</dimen>
+
+<dimen name="settings_lnb_step01_container_02_picker_dot_padding_left_y1">178.5dp</dimen>
+
+<dimen name="settings_lnb_step01_container_02_picker_dot_padding_left_x2">474dp</dimen>
+
+<dimen name="settings_lnb_step01_container_02_picker_dot_padding_left_y2">183.5dp</dimen>
+
+<dimen name="settings_lnb_step01_container_02_picker_dot_padding_right_height">5dp</dimen>
+
+<dimen name="settings_lnb_step01_container_02_picker_dot_padding_right_width">5dp</dimen>
+
+<dimen name="settings_lnb_step01_container_02_picker_dot_padding_right_x1">479dp</dimen>
+
+<dimen name="settings_lnb_step01_container_02_picker_dot_padding_right_y1">178.5dp</dimen>
+
+<dimen name="settings_lnb_step01_container_02_picker_dot_padding_right_x2">484dp</dimen>
+
+<dimen name="settings_lnb_step01_container_02_picker_dot_padding_right_y2">183.5dp</dimen>
+
+<dimen name="settings_lnb_step01_container_02_picker_02_height">166dp</dimen>
+
+<dimen name="settings_lnb_step01_container_02_picker_02_width">52dp</dimen>
+
+<dimen name="settings_lnb_step01_container_02_picker_02_x1">484dp</dimen>
+
+<dimen name="settings_lnb_step01_container_02_picker_02_y1">98dp</dimen>
+
+<dimen name="settings_lnb_step01_container_02_picker_02_x2">536dp</dimen>
+
+<dimen name="settings_lnb_step01_container_02_picker_02_y2">264dp</dimen>
+
+<dimen name="settings_lnb_step02_npanel_container_height">362dp</dimen>
+
+<dimen name="settings_lnb_step02_npanel_container_width">960dp</dimen>
+
+<dimen name="settings_lnb_step02_npanel_container_x1">0dp</dimen>
+
+<dimen name="settings_lnb_step02_npanel_container_y1">98dp</dimen>
+
+<dimen name="settings_lnb_step02_npanel_container_x2">960dp</dimen>
+
+<dimen name="settings_lnb_step02_npanel_container_y2">460dp</dimen>
+
+<dimen name="settings_lnb_step02_npanel_stacks_height">362dp</dimen>
+
+<dimen name="settings_lnb_step02_npanel_stacks_width">88dp</dimen>
+
+<dimen name="settings_lnb_step02_npanel_stacks_x1">0dp</dimen>
+
+<dimen name="settings_lnb_step02_npanel_stacks_y1">98dp</dimen>
+
+<dimen name="settings_lnb_step02_npanel_stacks_x2">88dp</dimen>
+
+<dimen name="settings_lnb_step02_npanel_stacks_y2">460dp</dimen>
+
+<dimen name="settings_lnb_step02_npanel_container_01_height">286dp</dimen>
+
+<dimen name="settings_lnb_step02_npanel_container_01_width">179dp</dimen>
+
+<dimen name="settings_lnb_step02_npanel_container_01_x1">88dp</dimen>
+
+<dimen name="settings_lnb_step02_npanel_container_01_y1">98dp</dimen>
+
+<dimen name="settings_lnb_step02_npanel_container_01_x2">267dp</dimen>
+
+<dimen name="settings_lnb_step02_npanel_container_01_y2">384dp</dimen>
+
+<dimen name="settings_lnb_step02_npanel_container_01_padding_left_height">30dp</dimen>
+
+<dimen name="settings_lnb_step02_npanel_container_01_padding_left_width">30dp</dimen>
+
+<dimen name="settings_lnb_step02_npanel_container_01_padding_left_x1">88dp</dimen>
+
+<dimen name="settings_lnb_step02_npanel_container_01_padding_left_y1">98dp</dimen>
+
+<dimen name="settings_lnb_step02_npanel_container_01_padding_left_x2">118dp</dimen>
+
+<dimen name="settings_lnb_step02_npanel_container_01_padding_left_y2">128dp</dimen>
+
+<dimen name="settings_lnb_step02_npanel_container_01_padding_right_height">30dp</dimen>
+
+<dimen name="settings_lnb_step02_npanel_container_01_padding_right_width">30dp</dimen>
+
+<dimen name="settings_lnb_step02_npanel_container_01_padding_right_x1">237dp</dimen>
+
+<dimen name="settings_lnb_step02_npanel_container_01_padding_right_y1">98dp</dimen>
+
+<dimen name="settings_lnb_step02_npanel_container_01_padding_right_x2">267dp</dimen>
+
+<dimen name="settings_lnb_step02_npanel_container_01_padding_right_y2">128dp</dimen>
+
+<dimen name="settings_lnb_step02_container_01_picker_01_height">166dp</dimen>
+
+<dimen name="settings_lnb_step02_container_01_picker_01_width">52dp</dimen>
+
+<dimen name="settings_lnb_step02_container_01_picker_01_x1">118dp</dimen>
+
+<dimen name="settings_lnb_step02_container_01_picker_01_y1">98dp</dimen>
+
+<dimen name="settings_lnb_step02_container_01_picker_01_x2">170dp</dimen>
+
+<dimen name="settings_lnb_step02_container_01_picker_01_y2">264dp</dimen>
+
+<dimen name="settings_lnb_step02_container_02_picker_dot_height">5dp</dimen>
+
+<dimen name="settings_lnb_step02_container_02_picker_dot_width">5dp</dimen>
+
+<dimen name="settings_lnb_step02_container_02_picker_dot_x1">175dp</dimen>
+
+<dimen name="settings_lnb_step02_container_02_picker_dot_y1">178.5dp</dimen>
+
+<dimen name="settings_lnb_step02_container_02_picker_dot_x2">180dp</dimen>
+
+<dimen name="settings_lnb_step02_container_02_picker_dot_y2">183.5dp</dimen>
+
+<dimen name="settings_lnb_step02_container_02_picker_dot_padding_left_height">5dp</dimen>
+
+<dimen name="settings_lnb_step02_container_02_picker_dot_padding_left_width">5dp</dimen>
+
+<dimen name="settings_lnb_step02_container_02_picker_dot_padding_left_x1">170dp</dimen>
+
+<dimen name="settings_lnb_step02_container_02_picker_dot_padding_left_y1">178.5dp</dimen>
+
+<dimen name="settings_lnb_step02_container_02_picker_dot_padding_left_x2">175dp</dimen>
+
+<dimen name="settings_lnb_step02_container_02_picker_dot_padding_left_y2">183.5dp</dimen>
+
+<dimen name="settings_lnb_step02_container_02_picker_dot_padding_right_height">5dp</dimen>
+
+<dimen name="settings_lnb_step02_container_02_picker_dot_padding_right_width">5dp</dimen>
+
+<dimen name="settings_lnb_step02_container_02_picker_dot_padding_right_x1">180dp</dimen>
+
+<dimen name="settings_lnb_step02_container_02_picker_dot_padding_right_y1">178.5dp</dimen>
+
+<dimen name="settings_lnb_step02_container_02_picker_dot_padding_right_x2">185dp</dimen>
+
+<dimen name="settings_lnb_step02_container_02_picker_dot_padding_right_y2">183.5dp</dimen>
+
+<dimen name="settings_lnb_step02_container_02_picker_02_height">166dp</dimen>
+
+<dimen name="settings_lnb_step02_container_02_picker_02_width">52dp</dimen>
+
+<dimen name="settings_lnb_step02_container_02_picker_02_x1">185dp</dimen>
+
+<dimen name="settings_lnb_step02_container_02_picker_02_y1">98dp</dimen>
+
+<dimen name="settings_lnb_step02_container_02_picker_02_x2">237dp</dimen>
+
+<dimen name="settings_lnb_step02_container_02_picker_02_y2">264dp</dimen>
+
+<dimen name="settings_lnb_step02_npanel_container_02_height">286dp</dimen>
+
+<dimen name="settings_lnb_step02_npanel_container_02_width">693dp</dimen>
+
+<dimen name="settings_lnb_step02_npanel_container_02_x1">267dp</dimen>
+
+<dimen name="settings_lnb_step02_npanel_container_02_y1">98dp</dimen>
+
+<dimen name="settings_lnb_step02_npanel_container_02_x2">960dp</dimen>
+
+<dimen name="settings_lnb_step02_npanel_container_02_y2">384dp</dimen>
+
+<dimen name="settings_lnb_step02_npanel_container_02_padding_left_height">30dp</dimen>
+
+<dimen name="settings_lnb_step02_npanel_container_02_padding_left_width">30dp</dimen>
+
+<dimen name="settings_lnb_step02_npanel_container_02_padding_left_x1">267dp</dimen>
+
+<dimen name="settings_lnb_step02_npanel_container_02_padding_left_y1">98dp</dimen>
+
+<dimen name="settings_lnb_step02_npanel_container_02_padding_left_x2">297dp</dimen>
+
+<dimen name="settings_lnb_step02_npanel_container_02_padding_left_y2">128dp</dimen>
+
+<dimen name="settings_lnb_step02_npanel_container_02_padding_right_height">20dp</dimen>
+
+<dimen name="settings_lnb_step02_npanel_container_02_padding_right_width">20dp</dimen>
+
+<dimen name="settings_lnb_step02_npanel_container_02_padding_right_x1">940dp</dimen>
+
+<dimen name="settings_lnb_step02_npanel_container_02_padding_right_y1">98dp</dimen>
+
+<dimen name="settings_lnb_step02_npanel_container_02_padding_right_x2">960dp</dimen>
+
+<dimen name="settings_lnb_step02_npanel_container_02_padding_right_y2">118dp</dimen>
+
+<dimen name="settings_lnb_step02_container_02_hint_title_text_height">22dp</dimen>
+
+<dimen name="settings_lnb_step02_container_02_hint_title_text_width">533dp</dimen>
+
+<dimen name="settings_lnb_step02_container_02_hint_title_text_x1">297dp</dimen>
+
+<dimen name="settings_lnb_step02_container_02_hint_title_text_y1">98dp</dimen>
+
+<dimen name="settings_lnb_step02_container_02_hint_title_text_x2">830dp</dimen>
+
+<dimen name="settings_lnb_step02_container_02_hint_title_text_y2">120dp</dimen>
+
+<dimen name="settings_lnb_step02_container_02_hint_text_height">180dp</dimen>
+
+<dimen name="settings_lnb_step02_container_02_hint_text_width">533dp</dimen>
+
+<dimen name="settings_lnb_step02_container_02_hint_text_x1">297dp</dimen>
+
+<dimen name="settings_lnb_step02_container_02_hint_text_y1">125.5dp</dimen>
+
+<dimen name="settings_lnb_step02_container_02_hint_text_x2">830dp</dimen>
+
+<dimen name="settings_lnb_step02_container_02_hint_text_y2">305.5dp</dimen>
+
+<dimen name="settings_lnb_step02_npanel_bottom_divider_height">1dp</dimen>
+
+<dimen name="settings_lnb_step02_npanel_bottom_divider_width">832dp</dimen>
+
+<dimen name="settings_lnb_step02_npanel_bottom_divider_x1">108dp</dimen>
+
+<dimen name="settings_lnb_step02_npanel_bottom_divider_y1">383dp</dimen>
+
+<dimen name="settings_lnb_step02_npanel_bottom_divider_x2">940dp</dimen>
+
+<dimen name="settings_lnb_step02_npanel_bottom_divider_y2">384dp</dimen>
+
+<dimen name="settings_lnb_step02_npanel_footer_container_height">76dp</dimen>
+
+<dimen name="settings_lnb_step02_npanel_footer_container_width">872dp</dimen>
+
+<dimen name="settings_lnb_step02_npanel_footer_container_x1">88dp</dimen>
+
+<dimen name="settings_lnb_step02_npanel_footer_container_y1">384dp</dimen>
+
+<dimen name="settings_lnb_step02_npanel_footer_container_x2">960dp</dimen>
+
+<dimen name="settings_lnb_step02_npanel_footer_container_y2">460dp</dimen>
+
+<dimen name="settings_lnb_step02_npanel_footer_container_padding_height">20dp</dimen>
+
+<dimen name="settings_lnb_step02_npanel_footer_container_padding_width">20dp</dimen>
+
+<dimen name="settings_lnb_step02_npanel_footer_container_padding_x1">88dp</dimen>
+
+<dimen name="settings_lnb_step02_npanel_footer_container_padding_y1">384dp</dimen>
+
+<dimen name="settings_lnb_step02_npanel_footer_container_padding_x2">108dp</dimen>
+
+<dimen name="settings_lnb_step02_npanel_footer_container_padding_y2">404dp</dimen>
+
+<dimen name="settings_lnb_step02_button_cancel_height">36dp</dimen>
+
+<dimen name="settings_lnb_step02_button_cancel_width">160dp</dimen>
+
+<dimen name="settings_lnb_step02_button_cancel_x1">604dp</dimen>
+
+<dimen name="settings_lnb_step02_button_cancel_y1">404dp</dimen>
+
+<dimen name="settings_lnb_step02_button_cancel_x2">764dp</dimen>
+
+<dimen name="settings_lnb_step02_button_cancel_y2">440dp</dimen>
+
+<dimen name="settings_lnb_step02_button_done_height">36dp</dimen>
+
+<dimen name="settings_lnb_step02_button_done_width">160dp</dimen>
+
+<dimen name="settings_lnb_step02_button_done_x1">780dp</dimen>
+
+<dimen name="settings_lnb_step02_button_done_y1">404dp</dimen>
+
+<dimen name="settings_lnb_step02_button_done_x2">940dp</dimen>
+
+<dimen name="settings_lnb_step02_button_done_y2">440dp</dimen>
+
+</resources>

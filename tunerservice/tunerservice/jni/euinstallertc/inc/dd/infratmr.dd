@@ -1,0 +1,25 @@
+/*
+ *  Copyright(C) 2003 Koninklijke Philips Electronics N.V.,
+ *  All Rights Reserved.
+ *  This  source code and any compilation or derivative thereof is the
+ *  proprietary information of Koninklijke Philips Electronics N.V.
+ *  and is confidential in nature.
+ *  Under no circumstances is this software to be exposed to or placed
+ *  under an Open Source License of any type without the expressed
+ *  written permission of Koninklijke Philips Electronics N.V.
+ *
+ *          %name: infratmr.dd %
+ *       %version: 1 %
+ * %date_modified: Fri May 30 18:18:52 2008 %
+ *    %derived_by: verbekej %
+ */
+
+#ifndef _INFRATMR_DD_
+#define _INFRATMR_DD_
+
+/** koala public group infratmr **/
+/** koala public using infraglobals **/
+
+typedef int STimer;  /** koala public type STimer **/
+
+#endif

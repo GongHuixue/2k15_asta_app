@@ -1,0 +1,32 @@
+/*
+ *  Copyright(C) 2003 Koninklijke Philips Electronics N.V.,
+ *  All Rights Reserved.
+ *  This  source code and any compilation or derivative thereof is the
+ *  proprietary information of Koninklijke Philips Electronics N.V.
+ *  and is confidential in nature.
+ *  Under no circumstances is this software to be exposed to or placed
+ *  under an Open Source License of any type without the expressed
+ *  written permission of Koninklijke Philips Electronics N.V.
+ *
+ *          %name: DTvColorDecode.dd %
+ *       %version: TVG_tv550r4dev %
+ * %date_modified: Tue Aug 21 13:32:23 2007 %
+ *    %derived_by: lakshminb %
+ */
+
+#ifndef _DTVCOLORDECODE_DD_
+#define _DTVCOLORDECODE_DD_
+
+/** koala public group tvcolordecoding **/
+
+/** koala public type TvColorSystem **/
+typedef enum
+{
+    tvUnknownColorSystem = 0,
+    tvInvalidColorSystem,
+    tvPal,
+    tvSecam,
+    tvNtsc
+} TvColorSystem;
+
+#endif /* _DTVCOLORDECODE_DD_ */

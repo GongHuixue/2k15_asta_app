@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Thu Nov 14 2013 12:31:54 GMT+0530-->
+<resources>
+<!--Layout_Wizard_PinEntry_v0.9.psd-->
+<dimen name="wizard_pinentry_header_text_height">28dp</dimen>
+
+<dimen name="wizard_pinentry_header_text_width">459dp</dimen>
+
+<dimen name="wizard_pinentry_header_text_x1">21dp</dimen>
+
+<dimen name="wizard_pinentry_header_text_y1">21dp</dimen>
+
+<dimen name="wizard_pinentry_header_text_x2">480dp</dimen>
+
+<dimen name="wizard_pinentry_header_text_y2">49dp</dimen>
+
+<dimen name="wizard_pinentry_progress_bar_height">4dp</dimen>
+
+<dimen name="wizard_pinentry_progress_bar_width">136dp</dimen>
+
+<dimen name="wizard_pinentry_progress_bar_x1">24dp</dimen>
+
+<dimen name="wizard_pinentry_progress_bar_y1">52dp</dimen>
+
+<dimen name="wizard_pinentry_progress_bar_x2">160dp</dimen>
+
+<dimen name="wizard_pinentry_progress_bar_y2">56dp</dimen>
+
+<dimen name="wizard_pinentry_panels_npanel_wizard_bg_height">422dp</dimen>
+
+<dimen name="wizard_pinentry_panels_npanel_wizard_bg_width">960dp</dimen>
+
+<dimen name="wizard_pinentry_panels_npanel_wizard_bg_x1">0dp</dimen>
+
+<dimen name="wizard_pinentry_panels_npanel_wizard_bg_y1">59dp</dimen>
+
+<dimen name="wizard_pinentry_panels_npanel_wizard_bg_x2">960dp</dimen>
+
+<dimen name="wizard_pinentry_panels_npanel_wizard_bg_y2">481dp</dimen>
+
+<dimen name="wizard_pinentry_panels_npanel_titlebar_normal_01_height">422dp</dimen>
+
+<dimen name="wizard_pinentry_panels_npanel_titlebar_normal_01_width">48dp</dimen>
+
+<dimen name="wizard_pinentry_panels_npanel_titlebar_normal_01_x1">0dp</dimen>
+
+<dimen name="wizard_pinentry_panels_npanel_titlebar_normal_01_y1">59dp</dimen>
+
+<dimen name="wizard_pinentry_panels_npanel_titlebar_normal_01_x2">48dp</dimen>
+
+<dimen name="wizard_pinentry_panels_npanel_titlebar_normal_01_y2">481dp</dimen>
+
+<dimen name="wizard_pinentry_panels_npanel_titlebar_normal_01_text_height">313dp</dimen>
+
+<dimen name="wizard_pinentry_panels_npanel_titlebar_normal_01_text_width">26dp</dimen>
+
+<dimen name="wizard_pinentry_panels_npanel_titlebar_normal_01_text_x1">12dp</dimen>
+
+<dimen name="wizard_pinentry_panels_npanel_titlebar_normal_01_text_y1">91dp</dimen>
+
+<dimen name="wizard_pinentry_panels_npanel_titlebar_normal_01_text_x2">38dp</dimen>
+
+<dimen name="wizard_pinentry_panels_npanel_titlebar_normal_01_text_y2">404dp</dimen>
+
+<dimen name="wizard_pinentry_panels_npanel_titlebar_normal_01_dots_icon_height">19dp</dimen>
+
+<dimen name="wizard_pinentry_panels_npanel_titlebar_normal_01_dots_icon_width">24dp</dimen>
+
+<dimen name="wizard_pinentry_panels_npanel_titlebar_normal_01_dots_icon_x1">12dp</dimen>
+
+<dimen name="wizard_pinentry_panels_npanel_titlebar_normal_01_dots_icon_y1">430dp</dimen>
+
+<dimen name="wizard_pinentry_panels_npanel_titlebar_normal_01_dots_icon_x2">36dp</dimen>
+
+<dimen name="wizard_pinentry_panels_npanel_titlebar_normal_01_dots_icon_y2">449dp</dimen>
+
+<dimen name="wizard_pinentry_panels_npanel_titlebar_activated_height">422dp</dimen>
+
+<dimen name="wizard_pinentry_panels_npanel_titlebar_activated_width">48dp</dimen>
+
+<dimen name="wizard_pinentry_panels_npanel_titlebar_activated_x1">48dp</dimen>
+
+<dimen name="wizard_pinentry_panels_npanel_titlebar_activated_y1">59dp</dimen>
+
+<dimen name="wizard_pinentry_panels_npanel_titlebar_activated_x2">96dp</dimen>
+
+<dimen name="wizard_pinentry_panels_npanel_titlebar_activated_y2">481dp</dimen>
+
+<dimen name="wizard_pinentry_panels_npanel_titlebar_activated_text_height">313dp</dimen>
+
+<dimen name="wizard_pinentry_panels_npanel_titlebar_activated_text_width">25dp</dimen>
+
+<dimen name="wizard_pinentry_panels_npanel_titlebar_activated_text_x1">59dp</dimen>
+
+<dimen name="wizard_pinentry_panels_npanel_titlebar_activated_text_y1">91dp</dimen>
+
+<dimen name="wizard_pinentry_panels_npanel_titlebar_activated_text_x2">84dp</dimen>
+
+<dimen name="wizard_pinentry_panels_npanel_titlebar_activated_text_y2">404dp</dimen>
+
+<dimen name="wizard_pinentry_npanel_title01_text_height">22dp</dimen>
+
+<dimen name="wizard_pinentry_npanel_title01_text_width">457dp</dimen>
+
+<dimen name="wizard_pinentry_npanel_title01_text_x1">117.5dp</dimen>
+
+<dimen name="wizard_pinentry_npanel_title01_text_y1">90.5dp</dimen>
+
+<dimen name="wizard_pinentry_npanel_title01_text_x2">574.5dp</dimen>
+
+<dimen name="wizard_pinentry_npanel_title01_text_y2">112.5dp</dimen>
+
+<dimen name="wizard_pinentry_npanel_text_field01_height">50dp</dimen>
+
+<dimen name="wizard_pinentry_npanel_text_field01_width">220dp</dimen>
+
+<dimen name="wizard_pinentry_npanel_text_field01_x1">120dp</dimen>
+
+<dimen name="wizard_pinentry_npanel_text_field01_y1">118dp</dimen>
+
+<dimen name="wizard_pinentry_npanel_text_field01_x2">340dp</dimen>
+
+<dimen name="wizard_pinentry_npanel_text_field01_y2">168dp</dimen>
+
+<dimen name="wizard_pinentry_npanel_title02_text_height">22dp</dimen>
+
+<dimen name="wizard_pinentry_npanel_title02_text_width">457dp</dimen>
+
+<dimen name="wizard_pinentry_npanel_title02_text_x1">117.5dp</dimen>
+
+<dimen name="wizard_pinentry_npanel_title02_text_y1">174.5dp</dimen>
+
+<dimen name="wizard_pinentry_npanel_title02_text_x2">574.5dp</dimen>
+
+<dimen name="wizard_pinentry_npanel_title02_text_y2">196.5dp</dimen>
+
+<dimen name="wizard_pinentry_npanel_text_field02_height">50dp</dimen>
+
+<dimen name="wizard_pinentry_npanel_text_field02_width">220dp</dimen>
+
+<dimen name="wizard_pinentry_npanel_text_field02_x1">120dp</dimen>
+
+<dimen name="wizard_pinentry_npanel_text_field02_y1">202dp</dimen>
+
+<dimen name="wizard_pinentry_npanel_text_field02_x2">340dp</dimen>
+
+<dimen name="wizard_pinentry_npanel_text_field02_y2">252dp</dimen>
+
+<dimen name="wizard_pinentry_npanel_panels_divider_height">314dp</dimen>
+
+<dimen name="wizard_pinentry_npanel_panels_divider_width">1dp</dimen>
+
+<dimen name="wizard_pinentry_npanel_panels_divider_x1">703dp</dimen>
+
+<dimen name="wizard_pinentry_npanel_panels_divider_y1">80dp</dimen>
+
+<dimen name="wizard_pinentry_npanel_panels_divider_x2">704dp</dimen>
+
+<dimen name="wizard_pinentry_npanel_panels_divider_y2">394dp</dimen>
+
+<dimen name="wizard_pinentry_npanel_col02_description_text_height">152dp</dimen>
+
+<dimen name="wizard_pinentry_npanel_col02_description_text_width">212.5dp</dimen>
+
+<dimen name="wizard_pinentry_npanel_col02_description_text_x1">725dp</dimen>
+
+<dimen name="wizard_pinentry_npanel_col02_description_text_y1">90.5dp</dimen>
+
+<dimen name="wizard_pinentry_npanel_col02_description_text_x2">937.5dp</dimen>
+
+<dimen name="wizard_pinentry_npanel_col02_description_text_y2">242.5dp</dimen>
+
+<dimen name="wizard_pinentry_npanel_panels_horizontal_divider_height">1dp</dimen>
+
+<dimen name="wizard_pinentry_npanel_panels_horizontal_divider_width">856dp</dimen>
+
+<dimen name="wizard_pinentry_npanel_panels_horizontal_divider_x1">100dp</dimen>
+
+<dimen name="wizard_pinentry_npanel_panels_horizontal_divider_y1">412dp</dimen>
+
+<dimen name="wizard_pinentry_npanel_panels_horizontal_divider_x2">956dp</dimen>
+
+<dimen name="wizard_pinentry_npanel_panels_horizontal_divider_y2">413dp</dimen>
+
+<dimen name="wizard_pinentry_npanel_previous_button_normal_height">42dp</dimen>
+
+<dimen name="wizard_pinentry_npanel_previous_button_normal_width">168dp</dimen>
+
+<dimen name="wizard_pinentry_npanel_previous_button_normal_x1">604dp</dimen>
+
+<dimen name="wizard_pinentry_npanel_previous_button_normal_y1">421dp</dimen>
+
+<dimen name="wizard_pinentry_npanel_previous_button_normal_x2">772dp</dimen>
+
+<dimen name="wizard_pinentry_npanel_previous_button_normal_y2">463dp</dimen>
+
+<dimen name="wizard_pinentry_npanel_previous_button_normal_text_height">20dp</dimen>
+
+<dimen name="wizard_pinentry_npanel_previous_button_normal_text_width">136dp</dimen>
+
+<dimen name="wizard_pinentry_npanel_previous_button_normal_text_x1">620dp</dimen>
+
+<dimen name="wizard_pinentry_npanel_previous_button_normal_text_y1">433.5dp</dimen>
+
+<dimen name="wizard_pinentry_npanel_previous_button_normal_text_x2">756dp</dimen>
+
+<dimen name="wizard_pinentry_npanel_previous_button_normal_text_y2">453.5dp</dimen>
+
+<dimen name="wizard_pinentry_npanel_next_button_default_height">42dp</dimen>
+
+<dimen name="wizard_pinentry_npanel_next_button_default_width">168dp</dimen>
+
+<dimen name="wizard_pinentry_npanel_next_button_default_x1">772dp</dimen>
+
+<dimen name="wizard_pinentry_npanel_next_button_default_y1">421dp</dimen>
+
+<dimen name="wizard_pinentry_npanel_next_button_default_x2">940dp</dimen>
+
+<dimen name="wizard_pinentry_npanel_next_button_default_y2">463dp</dimen>
+
+<dimen name="wizard_pinentry_npanel_next_button_default_text_height">20dp</dimen>
+
+<dimen name="wizard_pinentry_npanel_next_button_default_text_width">136dp</dimen>
+
+<dimen name="wizard_pinentry_npanel_next_button_default_text_x1">788dp</dimen>
+
+<dimen name="wizard_pinentry_npanel_next_button_default_text_y1">433.5dp</dimen>
+
+<dimen name="wizard_pinentry_npanel_next_button_default_text_x2">924dp</dimen>
+
+<dimen name="wizard_pinentry_npanel_next_button_default_text_y2">453.5dp</dimen>
+
+</resources>

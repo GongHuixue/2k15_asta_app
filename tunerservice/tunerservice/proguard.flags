@@ -1,0 +1,78 @@
+-dontoptimize
+-keep public class org.droidtv.euinstallertc.model.mwapi.EuInstallerTC {
+*;
+}
+
+-keep class org.droidtv.euinstallertc.settings.*{
+*;
+}
+
+-keep class org.droidtv.euinstallertc.wizard.settings.*{
+*;
+}
+
+-keep class org.droidtv.ui.comps.setupmenuframework.common.*{
+*;
+}
+-keep class org.droidtv.euinstallertc.model.mwapi.TcInstallerTvProviderData {
+*;
+}
+-keep class org.droidtv.euinstallersat.model.mwapi.SatInstaller {
+*;
+}
+-keep class org.droidtv.euinstallersat.model.mwapi.InstallationState {
+*;
+}
+-keep class org.droidtv.euinstallersat.model.mwapi.HsvPackageStructure {
+*;
+}
+-keep class org.droidtv.euinstallersat.model.mwapi.HsvInstalledSatellites {
+*;
+}
+-keep class org.droidtv.euinstallersat.model.mwapi.SITableIds {
+*;
+}
+-keep class org.droidtv.euinstallersat.model.mwapi.HsvSDMSIDataValues {
+*;
+}
+-keep class org.droidtv.euinstallersat.model.mwapi.LnbSettingsEntry {
+*;
+}
+-keep class org.droidtv.euinstallersat.model.mwapi.OperatorProfileNitData {
+*;
+}
+-keep class org.droidtv.euinstallersat.model.mwapi.OperatorProfileSearchStatus {
+*;
+}
+-keep class org.droidtv.euinstallersat.model.mwapi.OperatorProfileStatusInfo {
+*;
+}
+-keep class org.droidtv.euinstallersat.model.mwapi.OperatorProfileTuneData {
+*;
+}
+-keep class org.droidtv.euinstallersat.model.mwapi.OperatorSearchSettings {
+*;
+}
+-keep class org.droidtv.euinstallersat.model.mwapi.OperatorTuneStatus {
+*;
+}
+-keep class org.droidtv.euinstallersat.model.mwapi.SatInstallerTvProviderData {
+*;
+}
+
+-keep class org.droidtv.euinstallersat.wizard.settings.*{
+*;
+}
+-keep class org.droidtv.euinstallersat.settings.*{
+*;
+}
+
+-keep class org.droidtv.euinstallersat.settings.node.*{
+*;
+}
+
+-keep class org.droidtv.euinstallersat.wizard.settings.*{
+*;
+}
+
+

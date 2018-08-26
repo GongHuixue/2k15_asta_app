@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <org.droidtv.euinstallertc.wizard.screen.InstallationStartScreen
+        android:id="@+id/wizardInstallation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="@org.droidtv.ui.strings:string/MAIN_VB_AUTOSTORE_START" >
+    </org.droidtv.euinstallertc.wizard.screen.InstallationStartScreen>
+
+    <org.droidtv.euinstallertc.wizard.screen.ReinstallUpdate
+        android:id="@+id/wizardStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="@org.droidtv.ui.strings:string/MAIN_VB_AUTOSTORE_OR_UPDATE" >
+    </org.droidtv.euinstallertc.wizard.screen.ReinstallUpdate>
+
+    <org.droidtv.euinstallertc.wizard.screen.CountryScreen
+        android:id="@+id/countrySelector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="@org.droidtv.ui.strings:string/MAIN_VB_AUTOSTORE_COUNTRY" >
+    </org.droidtv.euinstallertc.wizard.screen.CountryScreen>
+    
+     <org.droidtv.euinstallertc.wizard.screen.PinEntryScreen
+        android:id="@+id/pincodeSelector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="@org.droidtv.ui.strings:string/MAIN_VB_PINCODE" >
+    </org.droidtv.euinstallertc.wizard.screen.PinEntryScreen>
+
+    <org.droidtv.euinstallertc.wizard.screen.TimeZoneScreen
+        android:id="@+id/timezoneSelector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="@org.droidtv.ui.strings:string/MAIN_VB_AUTOSTORE_TIMEZONE" >
+    </org.droidtv.euinstallertc.wizard.screen.TimeZoneScreen>
+
+    <org.droidtv.euinstallertc.wizard.screen.AntennaCableScreen
+        android:id="@+id/mediumSelector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="@org.droidtv.ui.strings:string/MAIN_VB_AUTOSTORE_ANTENNA_CABLE" >
+    </org.droidtv.euinstallertc.wizard.screen.AntennaCableScreen>
+
+    <org.droidtv.euinstallertc.wizard.screen.DigitalAnalogueScreen
+        android:id="@+id/countrymediumSelector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="@org.droidtv.ui.strings:string/MAIN_VB_AUTOSTORE_ANALOGUE_DIGITAL" >
+    </org.droidtv.euinstallertc.wizard.screen.DigitalAnalogueScreen>
+
+    <org.droidtv.euinstallertc.wizard.screen.OperatorScreen
+        android:id="@+id/operatorSelector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="@org.droidtv.ui.strings:string/MAIN_VB_AUTOSTORE_CABLE_OPERATOR" >
+    </org.droidtv.euinstallertc.wizard.screen.OperatorScreen>
+
+    <org.droidtv.euinstallertc.wizard.screen.SearchScreen
+        android:id="@+id/start1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="@org.droidtv.ui.strings:string/MAIN_VB_AUTOSTORE_START_SEARCH" >
+    </org.droidtv.euinstallertc.wizard.screen.SearchScreen>
+
+    <org.droidtv.euinstallertc.wizard.screen.SearchingScreen
+        android:id="@+id/autostore1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="@org.droidtv.ui.strings:string/MAIN_VB_AUTOSTORE_SEARCHING" >
+    </org.droidtv.euinstallertc.wizard.screen.SearchingScreen>
+
+    <org.droidtv.euinstallertc.wizard.screen.FinishScreen
+        android:id="@+id/finish1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="@org.droidtv.ui.strings:string/MAIN_VB_AUTOSTORE_SEARCH_FINISHED" >
+    </org.droidtv.euinstallertc.wizard.screen.FinishScreen>
+
+    <org.droidtv.euinstallertc.wizard.screen.StartUpdateScreen
+        android:id="@+id/updatewizard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="@org.droidtv.ui.strings:string/MAIN_VB_UPDATE_START" >
+    </org.droidtv.euinstallertc.wizard.screen.StartUpdateScreen>
+
+    <org.droidtv.euinstallertc.wizard.screen.UpdatingScreen
+        android:id="@+id/updatingwizard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="@org.droidtv.ui.strings:string/MAIN_VB_UPDATE_UPDATING" >
+    </org.droidtv.euinstallertc.wizard.screen.UpdatingScreen>
+
+    <org.droidtv.euinstallertc.wizard.screen.UpdateComplete
+        android:id="@+id/updateFinished"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="@org.droidtv.ui.strings:string/MAIN_VB_UPDATE_FINISHED" >
+    </org.droidtv.euinstallertc.wizard.screen.UpdateComplete>
+    
+    <org.droidtv.euinstallertc.wizard.screen.TerrestrialOperatorScreen
+        android:id="@+id/terrestrialOperator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="@org.droidtv.ui.strings:string/MAIN_VB_AUTOSTORE_CABLE_OPERATOR" >
+    </org.droidtv.euinstallertc.wizard.screen.TerrestrialOperatorScreen>
+    
+    <org.droidtv.euinstallertc.wizard.screen.HBBTVPrivacyStatementScreen
+        android:id="@+id/hbbtvOnlinePrivacy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="@org.droidtv.ui.strings:string/MAIN_VB_ONLINE_PRIVACY" >
+    </org.droidtv.euinstallertc.wizard.screen.HBBTVPrivacyStatementScreen>
+
+</LinearLayout>

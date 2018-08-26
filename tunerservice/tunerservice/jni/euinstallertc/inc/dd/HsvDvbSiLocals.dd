@@ -1,0 +1,152 @@
+/*
+ *  Copyright(C) 2003 Koninklijke Philips Electronics N.V.,
+ *  All Rights Reserved.
+ *  This  source code and any compilation or derivative thereof is the
+ *  proprietary information of Koninklijke Philips Electronics N.V.
+ *  and is confidential in nature.
+ *  Under no circumstances is this software to be exposed to or placed
+ *  under an Open Source License of any type without the expressed
+ *  written permission of Koninklijke Philips Electronics N.V.
+ *
+ *          %name: HsvDvbSiLocals.dd %
+ *       %version: TVG_tv550r4dev1.1.1 %
+ * %date_modified: Mon Nov 17 18:41:16 2008 %
+ *    %derived_by: adarshlr %
+ */
+ 
+
+/** koala group HsvDvbSiLocals **/
+/** koala using infraglobals **/
+/** koala using HsvSdmGlobals **/
+
+#ifndef _DVBSILOCALS
+#define _DVBSILOCALS
+
+/* fixme: Use bit fields */
+typedef struct HsvNITSection {
+    Nat16 Original_NetworkId;   /* Primary Key */
+    Nat16 Tsid;                 /* Secondary Key */
+    Bool  LCNPresent;
+    Nat8  VersionNumber;    /* TimeStamp */
+} HsvNITSection; /** koala type HsvNITSection **/
+
+typedef struct HsvLogicalChannel {
+    Nat16 NetworkId;
+    Nat16 Original_NetworkId;   /* Primary Key */
+    Nat16 ServiceId;            /* Secondary Key */
+    Nat16 LogicalChannelNum;
+    Bool  VisibleService;
+    Nat8  VersionNumber;    /* TimeStamp */
+} HsvLogicalChannel; /** koala type HsvLogicalChannel **/
+
+
+typedef struct HsvSDTSection {
+    Nat16 Original_NetworkId;        /* Primary Key */
+    Nat16 ServiceId;        /* Primary Key */
+    Nat16 ServiceName[MAXSERVICENAMELEN + 1];   /** koala using HsvMaxServiceLen **/
+    Nat8  ServiceType;
+    Bool  EIT_Schedule_Flag;
+    Bool  EIT_Present_Following_Flag;
+    Nat8  Running_Status;
+    Bool  Free_CA_Mode;
+    Nat8  VersionNumber;    /* TimeStamp */
+    Bool  Free_Ci_Mode;
+	Bool  Match_Brand_Flag;
+	Nat16 NumBrandIds; 
+	Nat16 Brand_Ids[23];
+	Nat16 TsId;
+} HsvSDTSection; /** koala type HsvSDTSection **/
+ 
+
+
+#define MAX_CONTENTS 1  /* We take only the first content */
+
+
+typedef struct HsvEITSection {
+    Nat16 Original_NetworkId;
+	Nat16 TsId;
+    Nat8  TableId;
+	Nat16 ServiceId;
+    DateTime dt;    /** koala using infraglobals **/
+	Nat16 EventId;
+	Nat32 Duration;
+	Nat8  RunningStatus;
+	Bool  Free_CA_Mode;
+
+	HsvContentDescription			ContentDesc[MAX_CONTENTS];
+	HsvDatabaseEventDescription		EvtDesc;    /** koala using HsvDatabaseEventDescription **/
+} HsvEITSection; /** koala type HsvEITSection **/
+
+
+typedef struct {
+    Nat16 OriginalNetworkId;
+	Nat16 TsId;
+	Nat16 ServiceId;
+    DateTime StartTime;    /** koala using infraglobals **/
+	Nat16 EventId;
+	Nat32 Duration;	
+	Nat8  ContentNibble;
+    Nat8  Version;	
+	char  ShortName[MAX_SHORTNAME_SIZE];	
+	char  ShortDesc[MAX_SHORTDESC_SIZE];	    
+} HsvEITSchedule; /** koala type HsvEITSchedule **/
+
+#define MAX_SCH_SHORTNAME_SIZE 80
+
+typedef struct {
+    Nat16 OriginalNetworkId;
+	Nat16 TsId;
+	Nat16 ServiceId;
+    DateTime StartTime;    /** koala using infraglobals **/	
+	Nat32 Duration;	
+	Nat8 ShortNameLen;
+    char  ShortName[MAX_SCH_SHORTNAME_SIZE];
+    Nat8 ShortDescLen;
+    Nat8 *ShortDescPtr;		
+    Nat16 EventId;
+	Nat8  ContentNibble;
+	Nat8  Version;	    
+	int   language;	    
+} HsvEITScheduleRam; /** koala type HsvEITScheduleRam **/
+
+
+
+/****************To maintain per demux property and section info************/
+typedef Bool (* HsvPropertyPopulate )( HsvDemux dmx, Address Table, int pptyindex, int secindex, int code); /** koala using HsvDemux **/
+
+typedef struct HsvPropertyInfo {
+    int property;
+    int dbtable;
+    Nat32 confdiv;
+    HsvPropertyPopulate Populate; /** koala using HsvDemux **/
+}HsvPropertyInfo; /** koala type HsvPropertyInfo **/
+
+
+typedef struct HsvSectionInfo {
+    int tid;
+    int secid;
+    Nat32 confdiv;
+}HsvSectionInfo; /** koala type HsvSectionInfo **/
+
+typedef struct
+{
+    Nat16 OriginalNetworkId;
+	Nat16 TsId;
+    Nat16 ServiceId;
+
+}HsvEPGChannelList; /** koala type HsvEPGChannelList **/
+
+typedef struct{
+	Nat16 OriginalNetworkId;
+	Nat16 TsId;
+	Nat16 ServiceId;
+	DateTime StartTime;    /** koala using infraglobals **/
+	Nat16 EventId;
+	Nat32 Duration;
+	Nat8  ContentNibble;
+    HsvEventDescription EvtDesc;
+}HsvEITScheduleViewData; /** koala type HsvEITScheduleViewData **/
+
+
+
+#endif

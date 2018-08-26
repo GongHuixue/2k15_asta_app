@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.droidtv.euinstallertc.util.RalativeLayoutView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="664dp"
+    android:layout_height="@dimen/dtr_settings_npanel_container_height"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true"
+    android:gravity="left" >
+    
+    <RelativeLayout
+        android:id="@+id/layout_dtr_1"
+        android:layout_width="664dp"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="-88dp"
+        android:layout_marginTop="-98dp" >
+
+        <RelativeLayout
+            android:id="@+id/layout_dtr_radioList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="false" >
+
+            <org.droidtv.ui.tvwidget2k15.wizardframework.common.RadioSelector
+                android:id="@+id/dtr_radioList_channels"
+                style="@org.droidtv.ui.tvwidget2k15:style/DefaultListViewStyle"
+                android:layout_width="@dimen/dtr_settings_npanel_container_01_width"
+                android:layout_height="@dimen/dtr_settings_npanel_container_01_height"
+                android:layout_marginLeft="@dimen/dtr_settings_npanel_container_01_x1"
+                android:layout_marginTop="@dimen/dtr_settings_npanel_container_01_y1"
+                android:focusable="true"
+                android:scrollbars="vertical" >
+            </org.droidtv.ui.tvwidget2k15.wizardframework.common.RadioSelector>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_dtr_pickerList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/dtrHeaderText"
+                style="@style/dtr_search_satellite_npanel_picker_header_text_style"
+                android:layout_width="@dimen/dtr_settings_picker_title_text_width"
+                android:layout_height="@dimen/dtr_settings_picker_title_text_height"
+                android:layout_marginLeft="@dimen/dtr_settings_picker_title_text_x1"
+                android:layout_marginTop="@dimen/dtr_settings_picker_title_text_y1"
+                android:text="@org.droidtv.ui.strings:string/MISC_MHZ" />
+
+            <org.droidtv.ui.tvwidget2k15.inputPicker.InputPicker
+                android:id="@+id/left_picker"
+                style="@org.droidtv.ui.tvwidget2k15:style/inputPickerStyle"
+                android:layout_width="@dimen/dtr_settings_picker_01_width"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dtr_settings_picker_01_x1"
+                android:layout_marginTop="@dimen/dtr_settings_picker_01_y1" />
+
+            <View
+                android:id="@+id/dividerDot"
+                android:layout_width="@dimen/dtr_settings_picker_dot_width"
+                android:layout_height="@dimen/dtr_settings_picker_dot_height"
+                android:layout_marginLeft="@dimen/dtr_settings_picker_dot_x1"
+                android:layout_marginTop="@dimen/dtr_settings_picker_dot_y1"
+                android:background="@org.droidtv.ui.tvwidget2k15:drawable/page_navigation_paging_dots_more" />
+
+            <org.droidtv.ui.tvwidget2k15.inputPicker.InputPicker
+                android:id="@+id/right_picker"
+                style="@org.droidtv.ui.tvwidget2k15:style/inputPickerDecimalStyle"
+                android:layout_width="@dimen/dtr_settings_picker_02_width"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dtr_settings_picker_02_x1"
+                android:layout_marginTop="@dimen/dtr_settings_picker_02_y1" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/dividerBottom"
+            android:layout_width="@dimen/dtr_settings_bottom_diver_width"
+            android:layout_height="@dimen/dtr_settings_bottom_diver_height"
+            android:layout_marginLeft="@dimen/dtr_settings_bottom_diver_x1"
+            android:layout_marginTop="@dimen/dtr_settings_bottom_diver_y1"
+            android:background="@org.droidtv.ui.tvwidget2k15:drawable/panels_horizontal_divider" />
+
+        <Button
+            android:id="@+id/button_dtr_network"
+            style="@org.droidtv.ui.tvwidget2k15:style/button_style"
+            android:layout_width="@dimen/dtr_settings_button_network_width"
+            android:layout_height="@dimen/dtr_settings_button_network_height"
+            android:layout_marginLeft="@dimen/dtr_settings_button_network_x1"
+            android:layout_marginTop="@dimen/dtr_settings_button_network_y1"
+            android:text="@org.droidtv.ui.strings:string/MAIN_BUTTON_NETWORK_1_2" />
+
+        <Button
+            android:id="@+id/button_dtr_search"
+            style="@org.droidtv.ui.tvwidget2k15:style/button_style"
+            android:layout_width="@dimen/dtr_settings_button_search_width"
+            android:layout_height="@dimen/dtr_settings_button_search_height"
+            android:layout_marginLeft="@dimen/dtr_settings_button_search_x1"
+            android:layout_marginTop="@dimen/dtr_settings_button_search_y1"
+            android:text="@org.droidtv.ui.strings:string/MAIN_BUTTON_SEARCH" />
+
+        <Button
+            android:id="@+id/button_dtr_done"
+            style="@org.droidtv.ui.tvwidget2k15:style/button_style"
+            android:layout_width="@dimen/dtr_settings_button_done_width"
+            android:layout_height="@dimen/dtr_settings_button_done_height"
+            android:layout_marginLeft="@dimen/dtr_settings_button_done_x1"
+            android:layout_marginTop="@dimen/dtr_settings_button_done_y1"
+            android:text="@org.droidtv.ui.strings:string/MAIN_BUTTON_DONE" />
+
+        <LinearLayout
+            android:id="@+id/dtr_result_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/result1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dtr_settings_result_string01_text_x1"
+                android:layout_marginTop="@dimen/dtr_settings_result_string01_text_y1"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/static_dtr_name"
+                    style="@style/dtr_settings_result_string01_text_style"
+                    android:layout_width="@dimen/dtr_settings_result_string01_text_width"
+                    android:layout_height="@dimen/dtr_settings_result_string01_text_height"
+                    android:text="@org.droidtv.ui.strings:string/MAIN_NETWORK_NAME_COLON" />
+
+                <TextView
+                    android:id="@+id/textView_dtr_networkName"
+                    style="@style/dtr_settings_result_string01_status_text_style"
+                    android:layout_width="@dimen/dtr_settings_result_string01_status_text_width"
+                    android:layout_height="@dimen/dtr_settings_result_string01_status_text_height"
+                    android:layout_marginLeft="24dp"
+                    android:ellipsize="end"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/result2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dtr_settings_result_string02_text_x1"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/static_dtr_quality"
+                    style="@style/dtr_settings_result_string02_text_style"
+                    android:layout_width="@dimen/dtr_settings_result_string02_text_width"
+                    android:layout_height="@dimen/dtr_settings_result_string02_text_height"
+                    android:text="@org.droidtv.ui.strings:string/MAIN_SIGNAL_QUALITY_COLON" />
+
+                <org.droidtv.euinstallertc.util.SignalIndicatorView
+                    android:id="@+id/sigQualityIndicator"
+                    android:layout_width="@dimen/dtr_settings_result_string02_status_signal_quality_height"
+                    android:layout_height="@dimen/dtr_settings_result_string02_status_signal_quality_width"
+                    android:layout_marginLeft="24dp" />
+
+                <TextView
+                    android:id="@+id/textView_dtr_quality"
+                    style="@style/dtr_settings_result_string02_status_signal_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dtr_settings_result_string02_status_signal_text_height"
+                    android:layout_marginLeft="2dp" />
+            </LinearLayout>
+
+            <LinearLayout
+				android:id="@+id/result3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dtr_settings_result_string03_text_x1"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/static_dtr_sigStrength"
+                    style="@style/dtr_settings_result_string03_text_style"
+                    android:layout_width="@dimen/dtr_settings_result_string03_text_width"
+                    android:layout_height="@dimen/dtr_settings_result_string03_text_height"
+                    android:text="@org.droidtv.ui.strings:string/MAIN_SIGNAL_STRENGTH_COLON" />
+
+                <org.droidtv.euinstallertc.util.SignalIndicatorView
+                    android:id="@+id/sigStrengthIndicator"
+                    android:layout_width="@dimen/dtr_settings_result_string03_status_signal_strength_height"
+                    android:layout_height="@dimen/dtr_settings_result_string03_status_signal_strength_width"
+                    android:layout_marginLeft="24dp" />
+
+                <TextView
+                    android:id="@+id/textView_dtr_sigStrength"
+                    style="@style/dtr_settings_result_string03_status_signal_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dtr_settings_result_string03_status_signal_text_height"
+                    android:layout_marginLeft="2dp" />
+            </LinearLayout>
+
+            <LinearLayout
+				android:id="@+id/result4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dtr_settings_result_string04_text_x1"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/title_textView_dtr_networkNumber"
+                    style="@style/dtr_settings_result_string04_text_style"
+                    android:layout_width="@dimen/dtr_settings_result_string04_text_width"
+                    android:layout_height="@dimen/dtr_settings_result_string04_text_height"
+                    android:text="@org.droidtv.ui.strings:string/MAIN_NETWORK_NUMBER" />
+
+                <TextView
+                    android:id="@+id/textView_dtr_networkNumber"
+                    style="@style/dtr_settings_result_string04_status_text_style"
+                    android:layout_width="@dimen/dtr_settings_result_string04_status_text_width"
+                    android:layout_height="@dimen/dtr_settings_result_string04_status_text_height"
+                    android:layout_marginLeft="24dp" />
+            </LinearLayout>
+
+            <LinearLayout
+				android:id="@+id/result5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dtr_settings_result_string05_text_x1"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/static_textView_dtr_rate"
+                    style="@style/dtr_settings_result_string05_text_style"
+                    android:layout_width="@dimen/dtr_settings_result_string05_text_width"
+                    android:layout_height="@dimen/dtr_settings_result_string05_text_height"
+                    android:text="@org.droidtv.ui.strings:string/MAIN_SYMBOL_RATE_COLON" />
+
+                <TextView
+                    android:id="@+id/textView_dtr_rate"
+                    style="@style/dtr_settings_result_string05_status_text_style"
+                    android:layout_width="@dimen/dtr_settings_result_string05_status_text_width"
+                    android:layout_height="@dimen/dtr_settings_result_string05_status_text_height"
+                    android:layout_marginLeft="24dp" />
+            </LinearLayout>
+
+            <LinearLayout
+				android:id="@+id/result6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dtr_settings_result_string06_text_x1"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/static_dtrTxt_modulation"
+                    style="@style/dtr_settings_result_string06_text_style"
+                    android:layout_width="@dimen/dtr_settings_result_string06_text_width"
+                    android:layout_height="@dimen/dtr_settings_result_string06_text_height"
+                    android:text="@org.droidtv.ui.strings:string/MAIN_MODULATION_COLON" />
+
+                <TextView
+                    android:id="@+id/textView_dtr_modulation"
+                    style="@style/dtr_settings_result_string06_status_text_style"
+                    android:layout_width="@dimen/dtr_settings_result_string06_status_text_width"
+                    android:layout_height="@dimen/dtr_settings_result_string06_status_text_height"
+                    android:layout_marginLeft="24dp" />
+            </LinearLayout>
+
+            <LinearLayout
+				android:id="@+id/result7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dtr_settings_result_string07_text_x1"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/static_dtrTxt_channelsFound"
+                    style="@style/dtr_settings_result_string07_text_style"
+                    android:layout_width="@dimen/dtr_settings_result_string07_text_width"
+                    android:layout_height="@dimen/dtr_settings_result_string07_text_height"
+                    android:text="@org.droidtv.ui.strings:string/MAIN_WI_CHANNELS_FOUND" />
+
+                <TextView
+                    android:id="@+id/textView_dtr_channels_found"
+                    style="@style/dtr_settings_result_string07_status_text_style"
+                    android:layout_width="@dimen/dtr_settings_result_string07_status_text_width"
+                    android:layout_height="@dimen/dtr_settings_result_string07_status_text_height"
+                    android:layout_marginLeft="24dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</org.droidtv.euinstallertc.util.RalativeLayoutView>

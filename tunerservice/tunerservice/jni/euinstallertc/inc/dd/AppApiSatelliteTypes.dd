@@ -1,0 +1,42 @@
+/** koala group AppApiSatelliteTypes **/
+
+#ifndef _APPAPISATELLITETYPES_DD_
+#define _APPAPISATELLITETYPES_DD_
+
+
+typedef enum
+{
+	/* Any New Satellite added should be at the end. NOTE: If any existing values are changed
+		corresponding update has to be done in SatellitePackageList.xml also */
+
+	APPAPISAT_ASTRA_19_2_E = 1,
+	APPAPISAT_HOTBIRD_13_0_E = 2,
+	APPAPISAT_ASTRA_23_5_E = 3,
+	APPAPISAT_ASTRA_28_2_E = 4,
+	APPAPISAT_TURKSAT_42_0_E = 5,
+	APPAPISAT_EUTELSAT_W3A_7A = 6,
+	APPAPISAT_THOR_1W = 7,
+	APPAPISAT_TURKSAT_42E_MDU = 8,
+	APPAPISAT_EUTELSAT_W3A_7A_MDU2 = 9,
+	APPAPISAT_EUTELSAT_W3A_7E_MDU3 = 10,
+	APPAPISAT_EUTELSAT_W3A_7E_MDU4 = 11,
+	APPAPISAT_EUTELSAT_W3A_7E_MDU1 = 12,
+	APPAPISAT_EUTELSAT_W4_36E = 13,
+	APPAPISAT_UNKNOWN_SATELLITE	= 14,
+	APPAPISAT_INVALID_SATELLITE	=	0xFFFF
+} AppApiSatelliteIds;	/** koala type AppApiSatelliteIds **/
+
+
+typedef enum AppApiPackageGroup
+{
+	APPAPISAT_None = 0,
+	APPAPISAT_M7 = 1,
+	APPAPISAT_CanalDigital = 2,
+	APPAPISAT_Poland = 3,
+	APPAPISAT_Ntvplus = 4,
+	APPAPISAT_DigiTurk = 5,
+	APPAPISAT_N = 6 
+} AppApiPackageGroup;	/** koala type AppApiPackageGroup **/
+
+
+#endif

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.droidtv.euinstallertc.settingsframework.SettingsNode xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/HOTEL_SETUP_MENU"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:tag="@org.droidtv.ui.strings:string/MAIN_VB_CHANNEL_INSTALLATION" >
+
+    <org.droidtv.euinstallertc.settingsframework.SettingsNode
+        android:id="@+id/MAIN_SEARCH_FOR_CHANNELS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        controllable="true"
+        easyPQ="@array/ch_search_for_channels"
+        eumContext="org.droidtv.euinstallertc.settings.ChannelHelpConstants.ContextID_search_for_channels"
+        eumContextLevel="3"
+        android:tag="@org.droidtv.ui.strings:string/MAIN_SEARCH_FOR_CHANNELS" >
+    </org.droidtv.euinstallertc.settingsframework.SettingsNode>
+
+    <org.droidtv.euinstallertc.settingsframework.common.ListSettingsNode
+        android:id="@+id/MAIN_AUTOMATIC_CHANNEL_UPDATE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        data="@array/service_off_on"
+        data_id="@array/automaticUpdateOptions"
+        easyPQ="@array/ch_automatic_channel_update"
+        eumContext="org.droidtv.euinstallertc.settings.ChannelHelpConstants.ContextID_automatic_channel_update"
+        eumContextLevel="3"
+        list_type="TYPE_GENERIC_LIST"
+        android:tag="@org.droidtv.ui.strings:string/MAIN_AUTOMATIC_CHANNEL_UPDATE" >
+    </org.droidtv.euinstallertc.settingsframework.common.ListSettingsNode>
+
+    <org.droidtv.euinstallertc.settingsframework.common.ListSettingsNode
+        android:id="@+id/MAIN_CHANNEL_UPDATE_MESSAGE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        data="@array/service_off_on"
+        data_id="@array/startupMessageOptions"
+        easyPQ="@array/ch_channel_update_message"
+        eumContext="org.droidtv.euinstallertc.settings.ChannelHelpConstants.ContextID_channel_update_message"
+        eumContextLevel="3"
+        list_type="TYPE_GENERIC_LIST"
+        android:tag="@org.droidtv.ui.strings:string/MAIN_CHANNEL_UPDATE_MESSAGE" >
+    </org.droidtv.euinstallertc.settingsframework.common.ListSettingsNode>
+
+    <org.droidtv.euinstallertc.settingsframework.SettingsNode
+        android:id="@+id/MAIN_DIGITAL_TEST_RECEPTION"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        controllable="true"
+        easyPQ="@array/ch_digital_test_reception"
+        eumContext="org.droidtv.euinstallertc.settings.ChannelHelpConstants.ContextID_digital_reception_test"
+        eumContextLevel="3"
+        android:tag="@org.droidtv.ui.strings:string/MAIN_DIGITAL_TEST_RECEPTION" >
+
+        <org.droidtv.euinstallertc.settingsframework.common.ListSettingsNode
+            android:id="@+id/MAIN_FREQUENCY_NUMBER"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            controllable="true"
+            data="@array/menu_frequncy_number"
+            data_id="@array/indexedvalues"
+            easyPQ="@array/ch_frequncy_number"
+            eumContext="org.droidtv.euinstallertc.settings.ChannelHelpConstants.ContextID_symbol_rate_mode"
+            eumContextLevel="3"
+            list_type="TYPE_GENERIC_LIST"
+            android:tag="@org.droidtv.ui.strings:string/MAIN_FREQUENCY_NUMBER" >
+        </org.droidtv.euinstallertc.settingsframework.common.ListSettingsNode>
+
+        <org.droidtv.euinstallertc.settings.node.DTRScreen
+            android:id="@+id/MAIN_SEARCH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            controllable="true"
+            easyPQ="@array/ch_search"
+            eumContext="org.droidtv.euinstallertc.settings.ChannelHelpConstants.ContextID_search"
+            eumContextLevel="3"
+            android:tag="@org.droidtv.ui.strings:string/MAIN_SEARCH" >
+        </org.droidtv.euinstallertc.settings.node.DTRScreen>
+    </org.droidtv.euinstallertc.settingsframework.SettingsNode>
+
+    <org.droidtv.euinstallertc.settingsframework.SettingsNode
+        android:id="@+id/MAIN_ANALOGUE_MANUAL_INSTALLATION"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        controllable="true"
+        easyPQ="@array/ch_analogue_manual_installation"
+        eumContext="org.droidtv.euinstallertc.settings.ChannelHelpConstants.ContextID_manual_installation"
+        eumContextLevel="3"
+        android:tag="@org.droidtv.ui.strings:string/MAIN_ANALOGUE_MANUAL_INSTALLATION" >
+
+        <org.droidtv.euinstallertc.settingsframework.common.ListSettingsNode
+            android:id="@+id/MAIN_SYSTEM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            controllable="true"
+            data="@array/menu_country_string"
+            data_id="@array/menu_item_id"
+            easyPQ="@array/ch_system"
+            eumContext="org.droidtv.euinstallertc.settings.ChannelHelpConstants.ContextID_system"
+            eumContextLevel="3"
+            android:tag="@org.droidtv.ui.strings:string/MAIN_SYSTEM" >
+        </org.droidtv.euinstallertc.settingsframework.common.ListSettingsNode>
+
+        <org.droidtv.euinstallertc.settings.node.ManualInstallationScreen
+            android:id="@+id/MAIN_FIND_CHANNEL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            controllable="true"
+            easyPQ="@array/ch_search"
+            eumContext="org.droidtv.euinstallertc.settings.ChannelHelpConstants.ContextID_search_channel"
+            eumContextLevel="3"
+            android:tag="@org.droidtv.ui.strings:string/MAIN_FIND_CHANNEL" >
+        </org.droidtv.euinstallertc.settings.node.ManualInstallationScreen>
+
+        <org.droidtv.euinstallertc.settingsframework.SettingsNode
+            android:id="@+id/MAIN_STORE_CURRENT_CHANNEL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            controllable="true"
+            easyPQ="@array/ch_store_current_channel"
+            eumContext="org.droidtv.euinstallertc.settings.ChannelHelpConstants.ContextID_store_current_channel"
+            eumContextLevel="3"
+            android:tag="@org.droidtv.ui.strings:string/MAIN_STORE_CURRENT_CHANNEL" >
+        </org.droidtv.euinstallertc.settingsframework.SettingsNode>
+
+        <org.droidtv.euinstallertc.settingsframework.SettingsNode
+            android:id="@+id/MAIN_STORE_AS_NEW_CHANNEL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            controllable="true"
+            easyPQ="@array/ch_store_as_new_channel"
+            eumContext="org.droidtv.euinstallertc.settings.ChannelHelpConstants.ContextID_store_as_new_channel"
+            eumContextLevel="3"
+            android:tag="@org.droidtv.ui.strings:string/MAIN_STORE_AS_NEW_CHANNEL" >
+        </org.droidtv.euinstallertc.settingsframework.SettingsNode>
+    </org.droidtv.euinstallertc.settingsframework.SettingsNode>
+
+    <org.droidtv.euinstallertc.settingsframework.SettingsNode
+        android:id="@+id/MAIN_REORDER"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        controllable="true"
+        easyPQ="@array/ch_reorder"
+        eumContext="org.droidtv.euinstallertc.settings.ChannelHelpConstants.ContextID_reorder"
+        eumContextLevel="3"
+        android:tag="@org.droidtv.ui.strings:string/MAIN_REORDER" >
+    </org.droidtv.euinstallertc.settingsframework.SettingsNode>
+
+</org.droidtv.euinstallertc.settingsframework.SettingsNode>

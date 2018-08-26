@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Tue Jan 27 2015 18:02:25 GMT+0530-->
+<resources>
+<style name="wizards_satellite_prescan_header_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/hlr">
+	<item name="android:gravity">left</item>
+</style>
+<style name="wizards_satellite_prescan_list_row01_signal_quality_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/lml">
+	<item name="android:gravity">left</item>
+</style>
+<style name="wizards_satellite_prescan_list_row01_signal_quality_value_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/lml">
+	<item name="android:gravity">left</item>
+</style>
+<style name="wizards_satellite_prescan_list_row01_signal_strength_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/lml">
+	<item name="android:gravity">left</item>
+</style>
+<style name="wizards_satellite_prescan_list_row01_signal_strength_value_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/lml">
+	<item name="android:gravity">left</item>
+</style>
+<style name="wizards_satellite_prescan_list_row02_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/lml">
+	<item name="android:gravity">left</item>
+</style>
+<style name="wizards_satellite_prescan_list_row02_signal_quality_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/lml">
+	<item name="android:gravity">left</item>
+</style>
+<style name="wizards_satellite_prescan_list_row02_signal_quality_value_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/lml">
+	<item name="android:gravity">left</item>
+</style>
+<style name="wizards_satellite_prescan_list_row02_signal_strength_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/lml">
+	<item name="android:gravity">left</item>
+</style>
+<style name="wizards_satellite_prescan_list_row02_signal_strength_value_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/lml">
+	<item name="android:gravity">left</item>
+</style>
+<style name="wizards_satellite_prescan_list_row03_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/lml">
+	<item name="android:gravity">left</item>
+</style>
+<style name="wizards_satellite_prescan_list_row03_signal_quality_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/lml">
+	<item name="android:gravity">left</item>
+</style>
+<style name="wizards_satellite_prescan_list_row03_signal_quality_value_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/lml">
+	<item name="android:gravity">left</item>
+</style>
+<style name="wizards_satellite_prescan_list_row03_signal_strength_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/lml">
+	<item name="android:gravity">left</item>
+</style>
+<style name="wizards_satellite_prescan_list_row03_signal_strength_value_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/lml">
+	<item name="android:gravity">left</item>
+</style>
+<style name="wizards_satellite_prescan_list_row04_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/lml">
+	<item name="android:gravity">left</item>
+</style>
+<style name="wizards_satellite_prescan_list_row04_signal_quality_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/lml">
+	<item name="android:gravity">left</item>
+</style>
+<style name="wizards_satellite_prescan_list_row04_signal_quality_value_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/lml">
+	<item name="android:gravity">left</item>
+</style>
+<style name="wizards_satellite_prescan_list_row04_signal_strength_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/lml">
+	<item name="android:gravity">left</item>
+</style>
+<style name="wizards_satellite_prescan_list_row04_signal_strength_value_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/lml">
+	<item name="android:gravity">left</item>
+</style>
+<style name="wizards_satellite_prescan_wizard_container_02_description_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/bnl">
+	<item name="android:gravity">left</item>
+</style>
+</resources>

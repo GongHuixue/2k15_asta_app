@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.droidtv.euinstallertc.util.RalativeLayoutView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/settings_digit_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="-386dp"
+        android:layout_marginTop="-98dp" >
+
+        <org.droidtv.ui.tvwidget2k15.inputPicker.InputPicker
+            android:id="@+id/settings_picker_left"
+            style="@org.droidtv.ui.tvwidget2k15:style/inputPickerStyle"
+            android:layout_width="@dimen/settings_lnb_step01_container_02_picker_01_width"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/settings_lnb_step01_container_02_picker_01_x1"
+            android:layout_marginTop="@dimen/settings_lnb_step01_container_02_picker_01_y1" >
+        </org.droidtv.ui.tvwidget2k15.inputPicker.InputPicker>
+
+        <View
+            android:id="@+id/settings_decimal_dot"
+            android:layout_width="@dimen/settings_lnb_step01_container_02_picker_dot_width"
+            android:layout_height="@dimen/settings_lnb_step01_container_02_picker_dot_height"
+            android:layout_marginLeft="@dimen/settings_lnb_step01_container_02_picker_dot_x1"
+            android:layout_marginTop="@dimen/settings_lnb_step01_container_02_picker_dot_y1"
+            android:background="@org.droidtv.ui.tvwidget2k15:drawable/page_navigation_paging_dots_more"
+            android:focusable="false" />
+
+        <org.droidtv.ui.tvwidget2k15.inputPicker.InputPicker
+            android:id="@+id/settings_picker_right"
+            style="@org.droidtv.ui.tvwidget2k15:style/inputPickerDecimalStyle"
+            android:layout_width="@dimen/settings_lnb_step01_container_02_picker_02_width"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/settings_lnb_step01_container_02_picker_02_x1"
+            android:layout_marginTop="@dimen/settings_lnb_step01_container_02_picker_02_y1" >
+        </org.droidtv.ui.tvwidget2k15.inputPicker.InputPicker>
+
+        <Button
+            android:id="@+id/settings_button_cancel"
+            style="@org.droidtv.ui.tvwidget2k15:style/button_style"
+            android:layout_width="@dimen/settings_lnb_step02_button_cancel_width"
+            android:layout_height="@dimen/settings_lnb_step02_button_cancel_height"
+            android:layout_marginLeft="902dp"
+            android:layout_marginTop="@dimen/settings_lnb_step02_button_cancel_y1"
+            android:text="@org.droidtv.ui.strings:string/MAIN_BUTTON_CANCEL"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/settings_button_done"
+            style="@org.droidtv.ui.tvwidget2k15:style/button_style"
+            android:layout_width="@dimen/settings_lnb_step02_button_done_width"
+            android:layout_height="@dimen/settings_lnb_step02_button_done_height"
+            android:layout_marginLeft="1078dp"
+            android:layout_marginTop="@dimen/settings_lnb_step02_button_done_y1"
+            android:text="@org.droidtv.ui.strings:string/MAIN_BUTTON_DONE"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+</org.droidtv.euinstallertc.util.RalativeLayoutView>

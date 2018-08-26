@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+     <!-- Custom dimens: Contextual hint -->
+    <dimen name="sat_setup_hint_description_marginTop_orig">215dp</dimen>
+    <!--  -->
+</resources>

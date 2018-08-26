@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    
+    <org.droidtv.euinstallersat.wizard.settings.connectionTypeWizard.screen.SettingsScreen
+        android:id="@+id/settings"
+        android:tag="@org.droidtv.ui.strings:string/MAIN_VB_SAT_AUTOSTORE_CONNECTION_TYPE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+    </org.droidtv.euinstallersat.wizard.settings.connectionTypeWizard.screen.SettingsScreen>
+    
+    <org.droidtv.euinstallersat.wizard.settings.connectionTypeWizard.screen.UniCableUBNScreen
+        android:id="@+id/unicableubn"
+        android:tag="@org.droidtv.ui.strings:string/MAIN_VB_SAT_AUTOSTORE_UB_NUMBER"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+    </org.droidtv.euinstallersat.wizard.settings.connectionTypeWizard.screen.UniCableUBNScreen>
+    
+    
+    <org.droidtv.euinstallersat.wizard.settings.connectionTypeWizard.screen.UniCableUBFScreen
+        android:id="@+id/unicableubf"
+        android:tag="@org.droidtv.ui.strings:string/MAIN_VB_SAT_AUTOSTORE_UB_FREQUENCY"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+    </org.droidtv.euinstallersat.wizard.settings.connectionTypeWizard.screen.UniCableUBFScreen>
+	
+
+	<org.droidtv.euinstallersat.wizard.settings.connectionTypeWizard.screen.UniCableUBNScreenTuner2
+        android:id="@+id/unicableubn2"
+        android:tag="@org.droidtv.ui.strings:string/MAIN_VB_SAT_AUTOSTORE_UB_NUMBER_TUNER_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+    </org.droidtv.euinstallersat.wizard.settings.connectionTypeWizard.screen.UniCableUBNScreenTuner2>
+    
+    
+    <org.droidtv.euinstallersat.wizard.settings.connectionTypeWizard.screen.UniCableUBFScreenTuner2
+        android:id="@+id/unicableubf2"
+        android:tag="@org.droidtv.ui.strings:string/MAIN_VB_SAT_AUTOSTORE_UB_FREQUENCY_TUNER_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+    </org.droidtv.euinstallersat.wizard.settings.connectionTypeWizard.screen.UniCableUBFScreenTuner2>
+    
+    <org.droidtv.euinstallersat.wizard.settings.connectionTypeWizard.screen.LNBSelectionScreen
+        android:id="@+id/lnbselection"
+        android:tag="@org.droidtv.ui.strings:string/MAIN_LNB_SELECTION"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+    </org.droidtv.euinstallersat.wizard.settings.connectionTypeWizard.screen.LNBSelectionScreen>
+    
+</LinearLayout>

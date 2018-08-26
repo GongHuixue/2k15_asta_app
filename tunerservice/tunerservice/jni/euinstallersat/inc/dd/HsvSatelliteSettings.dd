@@ -1,0 +1,131 @@
+/*
+ *  Copyright(C) 2003 Koninklijke Philips Electronics N.V.,
+ *  All Rights Reserved.
+ *  This  source code and any compilation or derivative thereof is the
+ *  proprietary information of Koninklijke Philips Electronics N.V.
+ *  and is confidential in nature.
+ *  Under no circumstances is this software to be exposed to or placed
+ *  under an Open Source License of any type without the expressed
+ *  written permission of Koninklijke Philips Electronics N.V.
+ *
+ *    %name: HsvSatelliteSettings.dd %
+ *    %version:  FUSION_TVG_6.1.1.2.1 %
+ *    %date_modified:  %
+ *    %derived_by:  anuma %
+ */
+
+
+/** koala using HsvLnbType	**/
+/** koala using HsvSatelliteList **/
+/** koala group HsvSatelliteSettings **/
+
+#define MAX_LNB_SUPPORTED		4
+
+
+typedef	enum
+{
+	UnicableUserBand1,
+	UnicableUserBand2,
+	UnicableUserBand3,
+	UnicableUserBand4,
+	UnicableUserBand5,
+	UnicableUserBand6,
+	UnicableUserBand7,
+	UnicableUserBand8,
+	UnicableUserBandMax
+} UniCableUserBands;
+
+typedef enum
+{
+	LnbConnectionSingle,
+	LnbConnectionDiSeqcMini,
+	LnbConnectionDiSeqc1_0,
+	LnbConnectionUnicableLnb,
+	LnbConnectionUnicableSwitch,
+	LnbConnectionSatIp
+} HsvLnbConnectionType;	/**	koala type	HsvLnbConnectionType **/
+
+typedef	enum 
+{
+	LnbUniversal,
+	LnbUnicable,
+	LnbCustom,
+	LnbCircular,
+	LnbMdutype1,
+	LnbMdutype2,
+	LnbMdutype3,
+	LnbMdutype4,
+	LnbMdutype5,
+	LnbMdutype6,
+	LnbInvalid,
+} HsvLnbType;	/** koala type	HsvLnbType	**/
+
+
+typedef enum LnbTone
+{
+	LnbToneOn,
+	LnbToneOff,
+	LnbToneAuto
+} LnbTone;	/** koala type LnbTone **/
+
+typedef enum LnbPower
+{
+	LnbPower14V,
+	LnbPower18V,
+	LnbPowerAuto
+} LnbPower;	/** koala type LnbPower **/
+
+typedef enum HsvLnbStatus
+{
+	LnbInstalled,
+	LnbFree,
+	LnbDuplicate,
+	LnbManualInstalled,
+	LnbM7Installed
+}HsvLnbStatus;	/** koala type HsvLnbStatus	**/
+
+typedef struct LnbSettingsEntry 
+{
+	HsvLnbType	LnbType;
+	HsvLnbStatus	LnbStatus;
+	int			LowLoFreq;		/* For universal both low and high LO values are applicable. For single only low LO applicable */
+	int			HighLoFreq;
+	Nat8		ToneControl;
+	Nat8		LnbPower;
+	Nat8		UserBand;	/* Valid for Unicable */
+	int			UserBandFrequency;	/* Valid for Unicable */
+    	int         SatelliteId;
+	Bool		UpdateInstallEnabled;
+} LnbSettingsEntry;	/** koala type LnbSettingsEntry **/
+
+typedef	struct HsvLnbSettings 
+{
+	HsvLnbConnectionType	ConnectionType;
+	LnbSettingsEntry		LnbSettings[MAX_LNB_SUPPORTED];
+}HsvLnbSettings; /** koala type HsvLnbSettings **/
+
+/* Complete installation settings */
+typedef struct HsvSatInstallationSettings 
+{
+	struct HsvSatSettingsHeader 
+	{
+		Nat32	RecordSize;
+		Nat32	PrimaryVersion;
+		Nat32	SecondaryVersion;
+	} Header;
+
+	HsvLnbSettings		HsvLnbset;
+	Nat32					PackageId;
+	Bool				PackageOnly;
+	int               Frequency;
+	Bool 				Polarization;
+	int 				SymbolRate;
+	Bool 				SymbolRateMode;
+	int					RegionIndex;
+
+	struct HsvSatSettingsFooter 
+	{
+		Nat32	Crc;
+	} Footer;
+} HsvSatInstallationSettings; /** koala type HsvSatInstallationSettings **/
+

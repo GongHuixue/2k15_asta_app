@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+<RelativeLayout
+        android:id="@+id/layout_dtr_1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="-100dp"
+        android:layout_marginTop="-82dp" >
+        
+    <TextView
+        android:id="@+id/postCode_bodytitletext"
+        style = "@style/wizard_pinentry_npanel_title01_text_style"
+        android:layout_width="@dimen/wizard_pinentry_npanel_title01_text_width"
+        android:layout_height="@dimen/wizard_pinentry_npanel_title01_text_height"
+        android:layout_marginLeft="@dimen/wizard_pinentry_npanel_title01_text_x1"
+       	android:layout_marginTop="@dimen/wizard_pinentry_npanel_title01_text_y1"
+        android:text="@org.droidtv.ui.strings:string/MAIN_WI_SAT_BOUQUET_FREESAT"/>
+        
+    <EditText
+        android:id="@+id/postCode_edittext"
+        android:layout_width="@dimen/wizard_pinentry_npanel_text_field01_width"
+        android:layout_height="@dimen/wizard_pinentry_npanel_text_field01_height"
+        android:layout_marginLeft="105dp"
+        android:layout_marginTop="@dimen/wizard_pinentry_npanel_text_field01_y1"
+        android:imeOptions="actionDone"
+        android:digits="0123456789 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+        android:hint="@org.droidtv.ui.strings:string/MAIN_TEXTENTRY_HINT_SAT_POSTCODE"
+        android:inputType="textCapCharacters|textNoSuggestions"
+        android:singleLine="true"/>
+        
+</RelativeLayout>
+</RelativeLayout>

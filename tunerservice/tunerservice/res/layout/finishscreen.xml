@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/wizard_install_satellite_fullscan_panels_npanel_wizard_bg_height" >
+
+    <RelativeLayout
+        android:id="@+id/layout_finish"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/wizard_install_satellite_fullscan_panels_npanel_wizard_bg_height"
+        android:layout_marginLeft="-115dp"
+        android:layout_marginTop="-90dp" >
+
+        <TextView
+            android:id="@+id/radio"
+            style="@style/wizard_install_satellite_fullscan_npanel_col01_unit02_header_text_style"
+            android:layout_width="@dimen/sat_wizard_install_satellite_fullscan_npanel_col01_unit02_header_text_width"
+            android:layout_height="@dimen/sat_wizard_install_satellite_fullscan_npanel_col01_unit02_header_text_height"
+            android:layout_marginLeft="@dimen/sat_wizard_install_satellite_fullscan_npanel_col01_unit02_header_text_x1"
+            android:layout_marginTop="@dimen/sat_wizard_install_satellite_fullscan_npanel_col01_unit02_header_text_y1"
+            android:text="@org.droidtv.ui.strings:string/MAIN_WI_SAT_RADIO" />
+
+        <TextView
+            android:id="@+id/tv"
+            style="@style/wizard_install_satellite_fullscan_npanel_col01_unit01_header_text_style"
+            android:layout_width="@dimen/sat_wizard_install_satellite_fullscan_npanel_col01_unit01_header_text_width"
+            android:layout_height="@dimen/sat_wizard_install_satellite_fullscan_npanel_col01_unit01_header_text_height"
+            android:layout_marginLeft="@dimen/sat_wizard_install_satellite_fullscan_npanel_col01_unit01_header_text_x1"
+            android:layout_marginTop="@dimen/sat_wizard_install_satellite_fullscan_npanel_col01_unit01_header_text_y1"
+            android:text="@org.droidtv.ui.strings:string/MAIN_WI_SAT_TV" />
+
+        <TextView
+            android:id="@+id/satelnb1text"
+            style="@style/wizard_install_satellite_fullscan_npanel_col01_row01_text_style"
+            android:layout_width="@dimen/sat_wizard_install_satellite_fullscan_npanel_col01_row01_text_width"
+            android:layout_height="@dimen/sat_wizard_install_satellite_fullscan_npanel_col01_row01_text_height"
+            android:layout_marginLeft="@dimen/wizard_install_satellite_fullscan_npanel_col01_row01_text_x1"
+            android:layout_marginTop="@dimen/wizard_install_satellite_fullscan_npanel_col01_row01_text_y1"
+            android:visibility="visible" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/tvvalue"
+            style="@style/wizard_install_satellite_fullscan_npanel_col01_row01_unit01_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/sat_wizard_install_satellite_fullscan_npanel_col01_row01_unit01_text_height"
+            android:layout_marginLeft="@dimen/sat_wizard_install_satellite_fullscan_npanel_col01_row01_unit01_text_x1"
+            android:layout_marginTop="@dimen/wizard_install_satellite_fullscan_npanel_col01_row01_unit01_text_y1" />
+
+        <TextView
+            android:id="@+id/radiovalue"
+            style="@style/wizard_install_satellite_fullscan_npanel_col01_row01_unit01_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/sat_wizard_install_satellite_fullscan_npanel_col01_row01_unit02_text_height"
+            android:layout_marginLeft="@dimen/sat_wizard_install_satellite_fullscan_npanel_col01_row01_unit02_text_x1"
+            android:layout_marginTop="@dimen/wizard_install_satellite_fullscan_npanel_col01_row01_unit02_text_y1" />
+
+        <TextView
+            android:id="@+id/satellitelnb2text"
+            style="@style/wizard_install_satellite_fullscan_npanel_col01_row01_text_style"
+            android:layout_width="@dimen/sat_wizard_install_satellite_fullscan_npanel_col01_row02_text_width"
+            android:layout_height="@dimen/sat_wizard_install_satellite_fullscan_npanel_col01_row02_text_height"
+            android:layout_marginLeft="@dimen/wizard_install_satellite_fullscan_npanel_col01_row02_text_x1"
+            android:layout_marginTop="@dimen/wizard_install_satellite_fullscan_npanel_col01_row02_text_y1"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tvvalue2"
+            style="@style/wizard_install_satellite_fullscan_npanel_col01_row01_unit01_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/sat_wizard_install_satellite_fullscan_npanel_col01_row02_unit01_text_height"
+            android:layout_marginLeft="@dimen/sat_wizard_install_satellite_fullscan_npanel_col01_row02_unit01_text_x1"
+            android:layout_marginTop="@dimen/wizard_install_satellite_fullscan_npanel_col01_row02_unit01_text_y1" />
+
+        <TextView
+            android:id="@+id/radiovalue2"
+            style="@style/wizard_install_satellite_fullscan_npanel_col01_row01_unit01_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/sat_wizard_install_satellite_fullscan_npanel_col01_row02_unit02_text_height"
+            android:layout_marginLeft="@dimen/sat_wizard_install_satellite_fullscan_npanel_col01_row02_unit02_text_x1"
+            android:layout_marginTop="@dimen/wizard_install_satellite_fullscan_npanel_col01_row02_unit02_text_y1" />
+
+        <TextView
+            android:id="@+id/satellitelnb3text"
+            style="@style/wizard_install_satellite_fullscan_npanel_col01_row01_text_style"
+            android:layout_width="@dimen/sat_wizard_install_satellite_fullscan_npanel_col01_row02_text_width"
+            android:layout_height="@dimen/sat_wizard_install_satellite_fullscan_npanel_col01_row02_text_height"
+            android:layout_marginLeft="@dimen/wizard_install_satellite_fullscan_npanel_col01_row02_text_x1"
+            android:layout_marginTop="176.5dp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tvvalue3"
+            style="@style/wizard_install_satellite_fullscan_npanel_col01_row01_unit01_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/sat_wizard_install_satellite_fullscan_npanel_col01_row02_unit01_text_height"
+            android:layout_marginLeft="@dimen/sat_wizard_install_satellite_fullscan_npanel_col01_row02_unit01_text_x1"
+            android:layout_marginTop="176.5dp" />
+
+        <TextView
+            android:id="@+id/radiovalue3"
+            style="@style/wizard_install_satellite_fullscan_npanel_col01_row01_unit01_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/sat_wizard_install_satellite_fullscan_npanel_col01_row02_unit02_text_height"
+            android:layout_marginLeft="@dimen/sat_wizard_install_satellite_fullscan_npanel_col01_row02_unit02_text_x1"
+            android:layout_marginTop="176.5dp" />
+
+        <TextView
+            android:id="@+id/satellitelnb4text"
+            style="@style/wizard_install_satellite_fullscan_npanel_col01_row01_text_style"
+            android:layout_width="@dimen/sat_wizard_install_satellite_fullscan_npanel_col01_row02_text_width"
+            android:layout_height="@dimen/sat_wizard_install_satellite_fullscan_npanel_col01_row02_text_height"
+            android:layout_marginLeft="@dimen/wizard_install_satellite_fullscan_npanel_col01_row02_text_x1"
+            android:layout_marginTop="205.5dp" />
+
+        <TextView
+            android:id="@+id/tvvalue4"
+            style="@style/wizard_install_satellite_fullscan_npanel_col01_row01_unit01_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/sat_wizard_install_satellite_fullscan_npanel_col01_row02_unit01_text_height"
+            android:layout_marginLeft="@dimen/sat_wizard_install_satellite_fullscan_npanel_col01_row02_unit01_text_x1"
+            android:layout_marginTop="205.5dp" />
+
+        <TextView
+            android:id="@+id/radiovalue4"
+            style="@style/wizard_install_satellite_fullscan_npanel_col01_row01_unit01_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/sat_wizard_install_satellite_fullscan_npanel_col01_row02_unit02_text_height"
+            android:layout_marginLeft="@dimen/sat_wizard_install_satellite_fullscan_npanel_col01_row02_unit02_text_x1"
+            android:layout_marginTop="205.5dp" />
+        
+         <TextView
+            android:id="@+id/satellitelnb5text"
+            style="@style/wizard_install_satellite_fullscan_npanel_col01_row01_text_style"
+            android:layout_width="@dimen/sat_wizard_install_satellite_fullscan_npanel_col01_row02_text_width"
+            android:layout_height="@dimen/sat_wizard_install_satellite_fullscan_npanel_col01_row02_text_height"
+            android:layout_marginLeft="@dimen/wizard_install_satellite_fullscan_npanel_col01_row02_text_x1"
+            android:layout_marginTop="234.5dp" />
+
+        <TextView
+            android:id="@+id/tvvalue5"
+            style="@style/wizard_install_satellite_fullscan_npanel_col01_row01_unit01_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/sat_wizard_install_satellite_fullscan_npanel_col01_row02_unit01_text_height"
+            android:layout_marginLeft="@dimen/sat_wizard_install_satellite_fullscan_npanel_col01_row02_unit01_text_x1"
+            android:layout_marginTop="234.5dp" />
+
+        <TextView
+            android:id="@+id/radiovalue5"
+            style="@style/wizard_install_satellite_fullscan_npanel_col01_row01_unit01_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/sat_wizard_install_satellite_fullscan_npanel_col01_row02_unit02_text_height"
+            android:layout_marginLeft="@dimen/sat_wizard_install_satellite_fullscan_npanel_col01_row02_unit02_text_x1"
+            android:layout_marginTop="234.5dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

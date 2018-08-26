@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/wizard_install_satellite_fullscan_panels_npanel_wizard_bg_height" >
+
+    <RelativeLayout
+        android:id="@+id/layout_dtr_1"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/wizard_install_satellite_fullscan_panels_npanel_wizard_bg_height"
+        android:layout_marginLeft="-115dp"
+        android:layout_marginTop="-90dp" >
+
+        <TextView
+            android:id="@+id/satellitelnb1text"
+            style="@style/wizard_install_satellite_prescan_npanel_list_row01_text_style"
+            android:layout_width="@dimen/wizard_install_satellite_prescan_npanel_list_row01_text_width"
+            android:layout_height="@dimen/wizard_install_satellite_prescan_npanel_list_row01_text_height"
+            android:layout_marginLeft="@dimen/wizard_install_satellite_prescan_npanel_list_row01_text_x1"
+            android:layout_marginTop="@dimen/wizard_install_satellite_prescan_npanel_list_row01_text_y1" />
+
+        <TextView
+            android:id="@+id/sat1quality"
+            style="@style/wizard_install_satellite_prescan_npanel_list_row01_signal_quality_text_style"
+            android:layout_width="@dimen/wizard_install_satellite_prescan_npanel_list_row01_signal_quality_text_width"
+            android:layout_height="@dimen/wizard_install_satellite_prescan_npanel_list_row01_signal_quality_text_height"
+            android:layout_marginLeft="@dimen/wizard_install_satellite_prescan_npanel_list_row01_signal_quality_text_x1"
+            android:layout_marginTop="@dimen/wizard_install_satellite_prescan_npanel_list_row01_signal_quality_text_y1"
+            android:text="@org.droidtv.ui.strings:string/MAIN_SIGNAL_QUALITY_COLON" />
+
+        <org.droidtv.euinstallersat.util.SignalIndicatorView
+            android:id="@+id/sat1signalquality"
+            android:layout_width="@dimen/wizard_install_satellite_prescan_npanel_list_row01_signal_quality_width"
+            android:layout_height="@dimen/wizard_install_satellite_prescan_npanel_list_row01_signal_quality_height"
+            android:layout_marginLeft="@dimen/wizard_install_satellite_prescan_npanel_list_row01_signal_quality_x1"
+            android:layout_marginTop="@dimen/wizard_install_satellite_prescan_npanel_list_row01_signal_quality_y1" />
+
+        <TextView
+            android:id="@+id/sat1qualityval"
+            style="@style/wizard_install_satellite_prescan_npanel_list_row01_signal_quality_value_text_style"
+            android:layout_width="@dimen/wizard_install_satellite_prescan_npanel_list_row01_signal_quality_value_text_width"
+            android:layout_height="@dimen/wizard_install_satellite_prescan_npanel_list_row01_signal_quality_value_text_height"
+            android:layout_marginLeft="655.5dp"
+            android:layout_marginTop="@dimen/wizard_install_satellite_prescan_npanel_list_row01_signal_quality_value_text_y1" />
+
+        <ProgressBar
+            android:id="@+id/lnb1progressbar"
+            style="@org.droidtv.ui.tvwidget2k15:style/ProgressBarStyleDefault.Wizard"
+            android:layout_width="@dimen/wizard_install_satellite_prescan_npanel_row01_progress_bar_width"
+            android:layout_height="@dimen/wizard_install_satellite_prescan_npanel_row01_progress_bar_height"
+            android:layout_marginLeft="@dimen/wizard_install_satellite_prescan_npanel_row01_progress_bar_x1"
+            android:layout_marginTop="@dimen/wizard_install_satellite_prescan_npanel_row01_progress_bar_y1" />
+
+        <TextView
+            android:id="@+id/sat1signalstrengthText"
+            style="@style/wizard_install_satellite_prescan_npanel_list_row01_signal_strength_text_style"
+            android:layout_width="@dimen/wizard_install_satellite_prescan_npanel_list_row01_signal_strength_text_width"
+            android:layout_height="@dimen/wizard_install_satellite_prescan_npanel_list_row01_signal_strength_text_height"
+            android:layout_marginLeft="@dimen/wizard_install_satellite_prescan_npanel_list_row01_signal_strength_text_x1"
+            android:layout_marginTop="@dimen/wizard_install_satellite_prescan_npanel_list_row01_signal_strength_text_y1"
+            android:text="@org.droidtv.ui.strings:string/MAIN_SIGNAL_STRENGTH_COLON" />
+
+        <org.droidtv.euinstallersat.util.SignalIndicatorView
+            android:id="@+id/sat1signalstrength"
+            android:layout_width="@dimen/wizard_install_satellite_prescan_npanel_list_row01_signal_strength_width"
+            android:layout_height="@dimen/wizard_install_satellite_prescan_npanel_list_row01_signal_strength_height"
+            android:layout_marginLeft="@dimen/wizard_install_satellite_prescan_npanel_list_row01_signal_strength_x1"
+            android:layout_marginTop="118.5dp" />
+
+        <TextView
+            android:id="@+id/sat1signalstrengthval"
+            style="@style/wizard_install_satellite_prescan_npanel_list_row01_signal_strength_value_text_style"
+            android:layout_width="@dimen/wizard_install_satellite_prescan_npanel_list_row01_signal_strength_value_text_width"
+            android:layout_height="@dimen/wizard_install_satellite_prescan_npanel_list_row01_signal_strength_value_text_height"
+            android:layout_marginLeft="@dimen/wizard_install_satellite_prescan_npanel_list_row01_signal_strength_value_text_x1"
+            android:layout_marginTop="@dimen/wizard_install_satellite_prescan_npanel_list_row01_signal_strength_value_text_y1" />
+
+        <TextView
+            android:id="@+id/satellitelnb2text"
+            style="@style/wizard_install_satellite_prescan_npanel_list_row01_text_style"
+            android:layout_width="@dimen/wizard_install_satellite_prescan_npanel_list_row01_text_width"
+            android:layout_height="@dimen/wizard_install_satellite_prescan_npanel_list_row01_text_height"
+            android:layout_marginLeft="@dimen/wizard_install_satellite_prescan_npanel_list_row01_text_x1"
+            android:layout_marginTop="@dimen/wizard_install_satellite_prescan_npanel_list_row02_text_y1" />
+
+        <TextView
+            android:id="@+id/sat2quality"
+            style="@style/wizard_install_satellite_prescan_npanel_list_row02_signal_quality_text_style"
+            android:layout_width="@dimen/wizard_install_satellite_prescan_npanel_list_row02_signal_quality_text_width"
+            android:layout_height="@dimen/wizard_install_satellite_prescan_npanel_list_row02_signal_quality_text_height"
+            android:layout_marginLeft="@dimen/wizard_install_satellite_prescan_npanel_list_row02_signal_quality_text_x1"
+            android:layout_marginTop="@dimen/wizard_install_satellite_prescan_npanel_list_row02_signal_quality_text_y1"
+            android:text="@org.droidtv.ui.strings:string/MAIN_SIGNAL_QUALITY_COLON" />
+
+        <org.droidtv.euinstallersat.util.SignalIndicatorView
+            android:id="@+id/sat2signalquality"
+            android:layout_width="@dimen/wizard_install_satellite_prescan_npanel_list_row02_signal_quality_width"
+            android:layout_height="@dimen/wizard_install_satellite_prescan_npanel_list_row02_signal_quality_height"
+            android:layout_marginLeft="@dimen/wizard_install_satellite_prescan_npanel_list_row02_signal_quality_x1"
+            android:layout_marginTop="165dp" />
+
+        <TextView
+            android:id="@+id/sat2qualityval"
+            style="@style/wizard_install_satellite_prescan_npanel_list_row01_signal_quality_value_text_style"
+            android:layout_width="@dimen/wizard_install_satellite_prescan_npanel_list_row02_signal_quality_value_text_width"
+            android:layout_height="@dimen/wizard_install_satellite_prescan_npanel_list_row02_signal_quality_value_text_height"
+            android:layout_marginLeft="655.5dp"
+            android:layout_marginTop="@dimen/wizard_install_satellite_prescan_npanel_list_row02_signal_quality_value_text_y1" />
+
+        <ProgressBar
+            android:id="@+id/lnb2progressbar"
+            style="@org.droidtv.ui.tvwidget2k15:style/ProgressBarStyleDefault.Wizard"
+            android:layout_width="@dimen/wizard_install_satellite_prescan_npanel_row01_progress_bar_width"
+            android:layout_height="@dimen/wizard_install_satellite_prescan_npanel_row01_progress_bar_height"
+            android:layout_marginLeft="@dimen/wizard_install_satellite_prescan_npanel_row01_progress_bar_x1"
+            android:layout_marginTop="@dimen/wizard_install_satellite_prescan_npanel_list_row02_progress_bar_y1" />
+
+        <TextView
+            android:id="@+id/sat2signalstrengthText"
+            style="@style/wizard_install_satellite_prescan_npanel_list_row01_signal_strength_text_style"
+            android:layout_width="@dimen/wizard_install_satellite_prescan_npanel_list_row02_signal_strength_text_width"
+            android:layout_height="@dimen/wizard_install_satellite_prescan_npanel_list_row02_signal_strength_text_height"
+            android:layout_marginLeft="@dimen/wizard_install_satellite_prescan_npanel_list_row02_signal_strength_text_x1"
+            android:layout_marginTop="@dimen/wizard_install_satellite_prescan_npanel_list_row02_signal_strength_text_y1"
+            android:text="@org.droidtv.ui.strings:string/MAIN_SIGNAL_STRENGTH_COLON" />
+
+        <org.droidtv.euinstallersat.util.SignalIndicatorView
+            android:id="@+id/sat2signalstrength"
+            android:layout_width="@dimen/wizard_install_satellite_prescan_npanel_list_row02_signal_strength_width"
+            android:layout_height="@dimen/wizard_install_satellite_prescan_npanel_list_row02_signal_strength_height"
+            android:layout_marginLeft="@dimen/wizard_install_satellite_prescan_npanel_list_row02_signal_strength_x1"
+            android:layout_marginTop="189dp" />
+
+        <TextView
+            android:id="@+id/sat2signalstrengthval"
+            style="@style/wizard_install_satellite_prescan_npanel_list_row01_signal_strength_value_text_style"
+            android:layout_width="@dimen/wizard_install_satellite_prescan_npanel_list_row01_signal_strength_value_text_width"
+            android:layout_height="@dimen/wizard_install_satellite_prescan_npanel_list_row01_signal_strength_value_text_height"
+            android:layout_marginLeft="@dimen/wizard_install_satellite_prescan_npanel_list_row01_signal_strength_value_text_x1"
+            android:layout_marginTop="@dimen/wizard_install_satellite_prescan_npanel_list_row02_signal_strength_value_text_y1" />
+
+        <TextView
+            android:id="@+id/satellitelnb3text"
+            style="@style/wizard_install_satellite_prescan_npanel_list_row01_text_style"
+            android:layout_width="@dimen/wizard_install_satellite_prescan_npanel_list_row01_text_width"
+            android:layout_height="@dimen/wizard_install_satellite_prescan_npanel_list_row01_text_height"
+            android:layout_marginLeft="@dimen/wizard_install_satellite_prescan_npanel_list_row01_text_x1"
+            android:layout_marginTop="230.5dp" />
+
+        <TextView
+            android:id="@+id/sat3quality"
+            style="@style/wizard_install_satellite_prescan_npanel_list_row01_signal_quality_text_style"
+            android:layout_width="@dimen/wizard_install_satellite_prescan_npanel_list_row01_signal_quality_text_width"
+            android:layout_height="@dimen/wizard_install_satellite_prescan_npanel_list_row01_signal_quality_text_height"
+            android:layout_marginLeft="@dimen/wizard_install_satellite_prescan_npanel_list_row01_signal_quality_text_x1"
+            android:layout_marginTop="232dp"
+            android:text="@org.droidtv.ui.strings:string/MAIN_SIGNAL_QUALITY_COLON" />
+
+        <org.droidtv.euinstallersat.util.SignalIndicatorView
+            android:id="@+id/sat3signalquality"
+            android:layout_width="@dimen/wizard_install_satellite_prescan_npanel_list_row01_signal_quality_width"
+            android:layout_height="@dimen/wizard_install_satellite_prescan_npanel_list_row01_signal_quality_height"
+            android:layout_marginLeft="@dimen/wizard_install_satellite_prescan_npanel_list_row01_signal_quality_x1"
+            android:layout_marginTop="235.5dp" />
+
+        <TextView
+            android:id="@+id/sat3qualityval"
+            style="@style/wizard_install_satellite_prescan_npanel_list_row01_signal_quality_value_text_style"
+            android:layout_width="@dimen/wizard_install_satellite_prescan_npanel_list_row02_signal_quality_value_text_width"
+            android:layout_height="@dimen/wizard_install_satellite_prescan_npanel_list_row02_signal_quality_value_text_height"
+            android:layout_marginLeft="655.5dp"
+            android:layout_marginTop="232dp" />
+
+        <ProgressBar
+            android:id="@+id/lnb3progressbar"
+            style="@org.droidtv.ui.tvwidget2k15:style/ProgressBarStyleDefault.Wizard"
+            android:layout_width="@dimen/wizard_install_satellite_prescan_npanel_row01_progress_bar_width"
+            android:layout_height="@dimen/wizard_install_satellite_prescan_npanel_row01_progress_bar_height"
+            android:layout_marginLeft="@dimen/wizard_install_satellite_prescan_npanel_row01_progress_bar_x1"
+            android:layout_marginTop="259dp" />
+
+        <TextView
+            android:id="@+id/sat3signalstrengthText"
+            style="@style/wizard_install_satellite_prescan_npanel_list_row01_signal_strength_text_style"
+            android:layout_width="@dimen/wizard_install_satellite_prescan_npanel_list_row01_signal_strength_text_width"
+            android:layout_height="@dimen/wizard_install_satellite_prescan_npanel_list_row01_signal_strength_text_height"
+            android:layout_marginLeft="@dimen/wizard_install_satellite_prescan_npanel_list_row01_signal_strength_text_x1"
+            android:layout_marginTop="256dp"
+            android:text="@org.droidtv.ui.strings:string/MAIN_SIGNAL_STRENGTH_COLON" />
+
+        <org.droidtv.euinstallersat.util.SignalIndicatorView
+            android:id="@+id/sat3signalstrength"
+            android:layout_width="@dimen/wizard_install_satellite_prescan_npanel_list_row01_signal_strength_width"
+            android:layout_height="@dimen/wizard_install_satellite_prescan_npanel_list_row01_signal_strength_height"
+            android:layout_marginLeft="@dimen/wizard_install_satellite_prescan_npanel_list_row01_signal_strength_x1"
+            android:layout_marginTop="259.5dp" />
+
+        <TextView
+            android:id="@+id/sat3signalstrengthval"
+            style="@style/wizard_install_satellite_prescan_npanel_list_row01_signal_strength_value_text_style"
+            android:layout_width="@dimen/wizard_install_satellite_prescan_npanel_list_row01_signal_strength_value_text_width"
+            android:layout_height="@dimen/wizard_install_satellite_prescan_npanel_list_row01_signal_strength_value_text_height"
+            android:layout_marginLeft="@dimen/wizard_install_satellite_prescan_npanel_list_row01_signal_strength_value_text_x1"
+            android:layout_marginTop="256dp" />
+
+        <TextView
+            android:id="@+id/satellitelnb4text"
+            style="@style/wizard_install_satellite_prescan_npanel_list_row01_text_style"
+            android:layout_width="@dimen/wizard_install_satellite_prescan_npanel_list_row01_text_width"
+            android:layout_height="@dimen/wizard_install_satellite_prescan_npanel_list_row01_text_height"
+            android:layout_marginLeft="@dimen/wizard_install_satellite_prescan_npanel_list_row01_text_x1"
+            android:layout_marginTop="305dp" />
+
+        <TextView
+            android:id="@+id/sat4quality"
+            style="@style/wizard_install_satellite_prescan_npanel_list_row01_signal_quality_text_style"
+            android:layout_width="@dimen/wizard_install_satellite_prescan_npanel_list_row01_signal_quality_text_width"
+            android:layout_height="@dimen/wizard_install_satellite_prescan_npanel_list_row01_signal_quality_text_height"
+            android:layout_marginLeft="@dimen/wizard_install_satellite_prescan_npanel_list_row01_signal_quality_text_x1"
+            android:layout_marginTop="306.5dp"
+            android:text="@org.droidtv.ui.strings:string/MAIN_SIGNAL_QUALITY_COLON" />
+
+        <org.droidtv.euinstallersat.util.SignalIndicatorView
+            android:id="@+id/sat4signalquality"
+            android:layout_width="@dimen/wizard_install_satellite_prescan_npanel_list_row01_signal_quality_width"
+            android:layout_height="@dimen/wizard_install_satellite_prescan_npanel_list_row01_signal_quality_height"
+            android:layout_marginLeft="@dimen/wizard_install_satellite_prescan_npanel_list_row01_signal_quality_x1"
+            android:layout_marginTop="310dp" />
+
+        <TextView
+            android:id="@+id/sat4qualityval"
+            style="@style/wizard_install_satellite_prescan_npanel_list_row01_signal_quality_value_text_style"
+            android:layout_width="@dimen/wizard_install_satellite_prescan_npanel_list_row02_signal_quality_value_text_width"
+            android:layout_height="@dimen/wizard_install_satellite_prescan_npanel_list_row02_signal_quality_value_text_height"
+            android:layout_marginLeft="655.5dp"
+            android:layout_marginTop="306.5dp" />
+
+        <ProgressBar
+            android:id="@+id/lnb4progressbar"
+            style="@org.droidtv.ui.tvwidget2k15:style/ProgressBarStyleDefault.Wizard"
+            android:layout_width="@dimen/wizard_install_satellite_prescan_npanel_row01_progress_bar_width"
+            android:layout_height="@dimen/wizard_install_satellite_prescan_npanel_row01_progress_bar_height"
+            android:layout_marginLeft="@dimen/wizard_install_satellite_prescan_npanel_row01_progress_bar_x1"
+            android:layout_marginTop="329.5dp" />
+
+        <TextView
+            android:id="@+id/sat4signalstrengthText"
+            style="@style/wizard_install_satellite_prescan_npanel_list_row01_signal_strength_text_style"
+            android:layout_width="@dimen/wizard_install_satellite_prescan_npanel_list_row01_signal_strength_text_width"
+            android:layout_height="@dimen/wizard_install_satellite_prescan_npanel_list_row01_signal_strength_text_height"
+            android:layout_marginLeft="@dimen/wizard_install_satellite_prescan_npanel_list_row01_signal_strength_text_x1"
+            android:layout_marginTop="330.5dp"
+            android:text="@org.droidtv.ui.strings:string/MAIN_SIGNAL_STRENGTH_COLON" />
+
+        <org.droidtv.euinstallersat.util.SignalIndicatorView
+            android:id="@+id/sat4signalstrength"
+            android:layout_width="@dimen/wizard_install_satellite_prescan_npanel_list_row01_signal_strength_width"
+            android:layout_height="@dimen/wizard_install_satellite_prescan_npanel_list_row01_signal_strength_height"
+            android:layout_marginLeft="@dimen/wizard_install_satellite_prescan_npanel_list_row01_signal_strength_x1"
+            android:layout_marginTop="334dp" />
+
+        <TextView
+            android:id="@+id/sat4signalstrengthval"
+            style="@style/wizard_install_satellite_prescan_npanel_list_row01_signal_strength_value_text_style"
+            android:layout_width="@dimen/wizard_install_satellite_prescan_npanel_list_row01_signal_strength_value_text_width"
+            android:layout_height="@dimen/wizard_install_satellite_prescan_npanel_list_row01_signal_strength_value_text_height"
+            android:layout_marginLeft="@dimen/wizard_install_satellite_prescan_npanel_list_row01_signal_strength_value_text_x1"
+            android:layout_marginTop="330.5dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/SETUP_MENU"
+    applicationClassName="org.droidtv.euinstallertc.wizard.settings.DigitalReceptionTestActivity"
+    cookie="org.droidtv.euinstallertc.settings.SettingsConstants.MAIN_DIGITAL_TEST_RECEPTION"
+    label="org.droidtv.ui.strings.R.string.MAIN_DIGITAL_TEST_RECEPTION" >
+
+    <menu
+        android:id="@+id/MAIN_DIGITAL_TEST_RECEPTION"
+        applicationClassName="org.droidtv.euinstallertc.settings.SettingsHandler"
+        contextID="digital_reception_test"
+        contextLevel="3"
+        cookie="org.droidtv.euinstallertc.settings.SettingsConstants.MAIN_DIGITAL_TEST_RECEPTION"
+        easyPQ="org.droidtv.tunerservice.R.array.hide_hint"
+        label="org.droidtv.ui.strings.R.string.MAIN_DIGITAL_TEST_RECEPTION" >
+        <item
+            android:id="@+id/MAIN_FREQUENCY_NUMBER"
+            applicationClassName="org.droidtv.euinstallertc.settings.SettingsHandler"
+            contextID="frequency_number"
+            contextLevel="3"
+            cookie="org.droidtv.euinstallertc.settings.SettingsConstants.MAIN_FREQUENCY_NUMBER"
+            cookieList="org.droidtv.tunerservice.R.array.generic_index"
+            easyPQ="org.droidtv.tunerservice.R.array.ch_frequncy_number"
+            label="org.droidtv.ui.strings.R.string.MAIN_FREQUENCY_NUMBER"
+            listType="generic"
+            nodeType="org.droidtv.ui.tvwidget2k15.setupmenuframework.common.ListMenuItem"
+            textList="org.droidtv.tunerservice.R.array.generic_off_on">
+        </item>
+        <item
+            android:id="@+id/MAIN_SEARCH"
+            applicationClassName="org.droidtv.euinstallertc.settings.SettingsHandler"
+            collapse="true"
+            contextID="search"
+            contextLevel="3"
+            cookie="org.droidtv.euinstallertc.settings.SettingsConstants.MAIN_SEARCH"
+            easyPQ="org.droidtv.tunerservice.R.array.hide_hint"
+            label="org.droidtv.ui.strings.R.string.MAIN_SEARCH"
+            nodeType="org.droidtv.euinstallertc.settings.DTRMenuItem">
+        </item>
+        <item
+            android:id="@+id/MAIN_DVBT_SEARCH"
+            applicationClassName="org.droidtv.euinstallertc.settings.SettingsHandler"
+            collapse="true"
+            contextID="search"
+            contextLevel="3"
+            cookie="org.droidtv.euinstallertc.settings.SettingsConstants.MAIN_DVBT_SEARCH"
+            easyPQ="org.droidtv.tunerservice.R.array.hide_hint"
+            label="DVB-T Search"
+            nodeType="org.droidtv.euinstallertc.settings.DTRMenuItem">
+        </item>
+        <item
+            android:id="@+id/MAIN_DVBC_SEARCH"
+            applicationClassName="org.droidtv.euinstallertc.settings.SettingsHandler"
+            collapse="true"
+            contextID="search"
+            contextLevel="3"
+            cookie="org.droidtv.euinstallertc.settings.SettingsConstants.MAIN_DVBC_SEARCH"
+            easyPQ="org.droidtv.tunerservice.R.array.hide_hint"
+            label="DVB-C Search"
+            nodeType="org.droidtv.euinstallertc.settings.DTRMenuItem">
+        </item>
+    </menu>
+
+    <menu
+        android:id="@+id/MAIN_REORDER"
+        applicationClassName="org.droidtv.euinstallertc.settings.SettingsHandler"
+        contextID="reorder"
+        contextLevel="3"
+        cookie="org.droidtv.euinstallertc.settings.SettingsConstants.MAIN_REORDER"
+        easyPQ="org.droidtv.tunerservice.R.array.ch_reorder"
+        label="org.droidtv.ui.strings.R.string.MAIN_REORDER" >
+    </menu>
+
+</menu>

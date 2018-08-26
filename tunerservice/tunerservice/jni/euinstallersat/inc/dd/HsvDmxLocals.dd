@@ -1,0 +1,95 @@
+/*
+ *  Copyright(C) 2002 Koninklijke Philips Electronics N.V.,
+ *  All Rights Reserved.
+ *  This  source code and any compilation or derivative thereof is the
+ *  proprietary information of Koninklijke Philips Electronics N.V.
+ *  and is confidential in nature.
+ *  Under no circumstances is this software to be exposed to or placed
+ *  under an Open Source License of any type without the expressed
+ *  written permission of Koninklijke Philips Electronics N.V.      
+ *     
+*	 %name:		HsvDmxLocals.dd %
+*             %version: TVG_3 %
+*	%created_by:	shreeshav %
+*	%date_created:	Mon Aug 13 11:18:46 2012 %
+*             %date_modified: Tue Oct 28 16:00:05 2008 %
+*             %derived_by: shreeshav %                  
+ *############################################################
+ */
+
+#ifndef _DMXLOCALS_DD_
+#define _DMXLOCALS_DD_
+
+/** koala group HsvDmxLocals **/
+/** koala using HsvSdmLocals **/
+/** koala using infraglobals **/
+/** koala using HsvSdmGlobals **/
+/** koala using HsvSectionFilterTypes **/
+/** koala using HsvGlobals  **/
+
+#define HSV_SECTION_BUFFER_SIZE (1024*8)
+#define HSV_PES_BUFFER_SIZE     (1024*256)
+
+#define PES_FILTER_LIST_LENGTH		10
+#define SECTION_FILTER_LIST_LENGTH	100	
+
+/** koala type HsvRequestType **/
+typedef enum
+{
+    HsvSection,
+    HsvSectionExtnTblId,
+    HsvSectionExtnTblId2,
+    HsvFilter,
+    HsvPes,
+    HsvFilterList,
+    HsvPesList,
+}HsvRequestType;
+
+/** koala type DmxMessage **/
+typedef struct
+{
+    Nat16       Pid;
+    Nat16       TableId;
+    HsvDemux    Demux;
+    Nat32       SubscrId;
+
+    Nat32       CrcStatus;
+    Nat32       Size;
+    Address     Addr;
+	Nat32       SSize;
+    Address     SAddr;
+    Nat32       DataCookie;  //todo check PED
+}DmxMessage;
+
+/** koala type HsvDmxRequestInfo **/
+typedef struct
+{
+    int                    Pid;
+    int                    TableId;
+    Nat32                  PlfSubscrId;
+    HsvRequestType         RequestType;
+    int                    TableIdExtn;
+    /* Extn2 is 9 and 10 byte from start of table. Typically used for
+    SDT Other where a SDT with matching ONID & TSID is required */
+    int                    TableIdExtn2;
+	Bool				   Active;
+	Bool				   ForceCancel;
+    int                    NoOfSubscribers;
+    Nat32                  SubscrIds[MAX_REQUESTS_PER_SECTION];
+}HsvDmxRequestInfo;
+
+/** koala type HsvDmxBufferInfo **/
+typedef struct
+{
+    int                             Pid;
+    int                             TableId;
+    Nat32                           Cookie;
+    HsvSectionCallback              SctCallback;
+    HsvPesCallback                  PesCallback;
+    HsvSectionFilterCallback        SctFltCallBack;
+    int                             VersionNumber;
+    Nat64                           RecdSections;
+	int 							tableidextn;
+}HsvDmxBufferInfo;
+
+#endif

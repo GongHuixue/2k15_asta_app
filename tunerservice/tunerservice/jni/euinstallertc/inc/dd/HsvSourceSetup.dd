@@ -1,0 +1,33 @@
+/*
+ *  Copyright(C) 2003 Koninklijke Philips Electronics N.V.,
+ *  All Rights Reserved.
+ *  This  source code and any compilation or derivative thereof is the
+ *  proprietary information of Koninklijke Philips Electronics N.V.
+ *  and is confidential in nature.
+ *  Under no circumstances is this software to be exposed to or placed
+ *  under an Open Source License of any type without the expressed
+ *  written permission of Koninklijke Philips Electronics N.V.
+ *
+ *          %name: HsvSourceSetup.dd %
+ *       %version: TVG_tv550r4dev %
+ * %date_modified: Thu Sep 18 18:25:37 2008 %
+ *    %derived_by: lakshminb %
+ */
+
+
+#ifndef _HSVSOURCESETUP_DD_
+#define _HSVSOURCESETUP_DD_
+
+/** koala type HsvSrcSetup **/
+/** koala using infraglobals **/
+
+typedef struct
+{
+    int WindowID;
+    int Source;
+    Nat32 SourceDesignator;
+    Nat32 WindowDesignator;
+}HsvSourceSetupInfo; /** koala type HsvSourceSetupInfo **/
+
+#endif
+

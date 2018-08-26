@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Wed Jan 08 2014 13:41:35 GMT+0530-->
+<resources>
+<!--Layout_Wizards_UniCable_v1.1.psd-->
+<dimen name="wizards_unicable_header_text_height">28dp</dimen>
+
+<dimen name="wizards_unicable_header_text_width">459dp</dimen>
+
+<dimen name="wizards_unicable_header_text_x1">21dp</dimen>
+
+<dimen name="wizards_unicable_header_text_y1">21dp</dimen>
+
+<dimen name="wizards_unicable_header_text_x2">480dp</dimen>
+
+<dimen name="wizards_unicable_header_text_y2">49dp</dimen>
+
+<dimen name="wizards_unicable_progress_bar_height">4dp</dimen>
+
+<dimen name="wizards_unicable_progress_bar_width">136dp</dimen>
+
+<dimen name="wizards_unicable_progress_bar_x1">24dp</dimen>
+
+<dimen name="wizards_unicable_progress_bar_y1">52dp</dimen>
+
+<dimen name="wizards_unicable_progress_bar_x2">160dp</dimen>
+
+<dimen name="wizards_unicable_progress_bar_y2">56dp</dimen>
+
+<dimen name="wizards_unicable_panels_npanel_wizard_bg_height">422dp</dimen>
+
+<dimen name="wizards_unicable_panels_npanel_wizard_bg_width">960.5dp</dimen>
+
+<dimen name="wizards_unicable_panels_npanel_wizard_bg_x1">-0.5dp</dimen>
+
+<dimen name="wizards_unicable_panels_npanel_wizard_bg_y1">59dp</dimen>
+
+<dimen name="wizards_unicable_panels_npanel_wizard_bg_x2">960dp</dimen>
+
+<dimen name="wizards_unicable_panels_npanel_wizard_bg_y2">481dp</dimen>
+
+<dimen name="wizards_unicable_panels_npanel_titlebar_normal_height">422dp</dimen>
+
+<dimen name="wizards_unicable_panels_npanel_titlebar_normal_width">48dp</dimen>
+
+<dimen name="wizards_unicable_panels_npanel_titlebar_normal_x1">0dp</dimen>
+
+<dimen name="wizards_unicable_panels_npanel_titlebar_normal_y1">59dp</dimen>
+
+<dimen name="wizards_unicable_panels_npanel_titlebar_normal_x2">48dp</dimen>
+
+<dimen name="wizards_unicable_panels_npanel_titlebar_normal_y2">481dp</dimen>
+
+<dimen name="wizards_unicable_panels_npanel_titlebar_normal_text_height">313dp</dimen>
+
+<dimen name="wizards_unicable_panels_npanel_titlebar_normal_text_width">26dp</dimen>
+
+<dimen name="wizards_unicable_panels_npanel_titlebar_normal_text_x1">12dp</dimen>
+
+<dimen name="wizards_unicable_panels_npanel_titlebar_normal_text_y1">91dp</dimen>
+
+<dimen name="wizards_unicable_panels_npanel_titlebar_normal_text_x2">38dp</dimen>
+
+<dimen name="wizards_unicable_panels_npanel_titlebar_normal_text_y2">404dp</dimen>
+
+<dimen name="wizards_unicable_panels_npanel_titlebar_normal_dots_icon_height">19dp</dimen>
+
+<dimen name="wizards_unicable_panels_npanel_titlebar_normal_dots_icon_width">24dp</dimen>
+
+<dimen name="wizards_unicable_panels_npanel_titlebar_normal_dots_icon_x1">12dp</dimen>
+
+<dimen name="wizards_unicable_panels_npanel_titlebar_normal_dots_icon_y1">430dp</dimen>
+
+<dimen name="wizards_unicable_panels_npanel_titlebar_normal_dots_icon_x2">36dp</dimen>
+
+<dimen name="wizards_unicable_panels_npanel_titlebar_normal_dots_icon_y2">449dp</dimen>
+
+<dimen name="wizards_unicable_panels_npanel_titlebar_activated_height">422dp</dimen>
+
+<dimen name="wizards_unicable_panels_npanel_titlebar_activated_width">48dp</dimen>
+
+<dimen name="wizards_unicable_panels_npanel_titlebar_activated_x1">48dp</dimen>
+
+<dimen name="wizards_unicable_panels_npanel_titlebar_activated_y1">59dp</dimen>
+
+<dimen name="wizards_unicable_panels_npanel_titlebar_activated_x2">96dp</dimen>
+
+<dimen name="wizards_unicable_panels_npanel_titlebar_activated_y2">481dp</dimen>
+
+<dimen name="wizards_unicable_panels_npanel_titlebar_activated_text_height">313dp</dimen>
+
+<dimen name="wizards_unicable_panels_npanel_titlebar_activated_text_width">26dp</dimen>
+
+<dimen name="wizards_unicable_panels_npanel_titlebar_activated_text_x1">58.5dp</dimen>
+
+<dimen name="wizards_unicable_panels_npanel_titlebar_activated_text_y1">91dp</dimen>
+
+<dimen name="wizards_unicable_panels_npanel_titlebar_activated_text_x2">84.5dp</dimen>
+
+<dimen name="wizards_unicable_panels_npanel_titlebar_activated_text_y2">404dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_bg_normal_height">50dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_bg_normal_width">343dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_bg_normal_x1">112dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_bg_normal_y1">84.5dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_bg_normal_x2">455dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_bg_normal_y2">134.5dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_digit_01_text_height">18.5dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_digit_01_text_width">14dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_digit_01_text_x1">136.5dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_digit_01_text_y1">100dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_digit_01_text_x2">150.5dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_digit_01_text_y2">118.5dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_formatted_divider_01_height">30dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_formatted_divider_01_width">2dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_formatted_divider_01_x1">165.5dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_formatted_divider_01_y1">94.5dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_formatted_divider_01_x2">167.5dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_formatted_divider_01_y2">124.5dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_digit_02_text_height">18.5dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_digit_02_text_width">14dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_digit_02_text_x1">179dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_digit_02_text_y1">100dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_digit_02_text_x2">193dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_digit_02_text_y2">118.5dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_formatted_divider_02_height">30dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_formatted_divider_02_width">2dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_formatted_divider_02_x1">204.5dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_formatted_divider_02_y1">94.5dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_formatted_divider_02_x2">206.5dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_formatted_divider_02_y2">124.5dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_digit_03_text_height">18.5dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_digit_03_text_width">14dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_digit_03_text_x1">218dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_digit_03_text_y1">100dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_digit_03_text_x2">232dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_digit_03_text_y2">118.5dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_formatted_divider_03_height">30dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_formatted_divider_03_width">2dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_formatted_divider_03_x1">243.5dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_formatted_divider_03_y1">94.5dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_formatted_divider_03_x2">245.5dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_formatted_divider_03_y2">124.5dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_digit_04_text_height">18.5dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_digit_04_text_width">14dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_digit_04_text_x1">257dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_digit_04_text_y1">100dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_digit_04_text_x2">271dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_digit_04_text_y2">118.5dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_formatted_divider_04_height">30dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_formatted_divider_04_width">2dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_formatted_divider_04_x1">282.5dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_formatted_divider_04_y1">94.5dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_formatted_divider_04_x2">284.5dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_formatted_divider_04_y2">124.5dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_ip_divider_height">30dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_ip_divider_width">2dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_ip_divider_x1">302dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_ip_divider_y1">94.5dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_ip_divider_x2">304dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_ip_divider_y2">124.5dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_formatted_divider_05_height">30dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_formatted_divider_05_width">2dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_formatted_divider_05_x1">321.5dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_formatted_divider_05_y1">94.5dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_formatted_divider_05_x2">323.5dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_formatted_divider_05_y2">124.5dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_digit_05_text_height">18.5dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_digit_05_text_width">14dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_digit_05_text_x1">335dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_digit_05_text_y1">100dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_digit_05_text_x2">349dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_digit_05_text_y2">118.5dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_formatted_divider_06_height">30dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_formatted_divider_06_width">2dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_formatted_divider_06_x1">360.5dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_formatted_divider_06_y1">94.5dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_formatted_divider_06_x2">362.5dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_formatted_divider_06_y2">124.5dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_digit_06_text_height">18.5dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_digit_06_text_width">14dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_digit_06_text_x1">374dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_digit_06_text_y1">100dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_digit_06_text_x2">388dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_digit_06_text_y2">118.5dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_formatted_divider_07_height">30dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_formatted_divider_07_width">2dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_formatted_divider_07_x1">399.5dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_formatted_divider_07_y1">94.5dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_formatted_divider_07_x2">401.5dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_formatted_divider_07_y2">124.5dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_digit_07_text_height">18.5dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_digit_07_text_width">14dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_digit_07_text_x1">416dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_digit_07_text_y1">100dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_digit_07_text_x2">430dp</dimen>
+
+<dimen name="wizards_unicable_npanel_textfield_digit_07_text_y2">118.5dp</dimen>
+
+<dimen name="wizards_unicable_npanel_string01_text_height">22dp</dimen>
+
+<dimen name="wizards_unicable_npanel_string01_text_width">501dp</dimen>
+
+<dimen name="wizards_unicable_npanel_string01_text_x1">117dp</dimen>
+
+<dimen name="wizards_unicable_npanel_string01_text_y1">340dp</dimen>
+
+<dimen name="wizards_unicable_npanel_string01_text_x2">618dp</dimen>
+
+<dimen name="wizards_unicable_npanel_string01_text_y2">362dp</dimen>
+
+<dimen name="wizards_unicable_npanel_string02_text_height">22dp</dimen>
+
+<dimen name="wizards_unicable_npanel_string02_text_width">501dp</dimen>
+
+<dimen name="wizards_unicable_npanel_string02_text_x1">117dp</dimen>
+
+<dimen name="wizards_unicable_npanel_string02_text_y1">369dp</dimen>
+
+<dimen name="wizards_unicable_npanel_string02_text_x2">618dp</dimen>
+
+<dimen name="wizards_unicable_npanel_string02_text_y2">391dp</dimen>
+
+<dimen name="wizards_unicable_npanel_list_panels_divider_height">314dp</dimen>
+
+<dimen name="wizards_unicable_npanel_list_panels_divider_width">1dp</dimen>
+
+<dimen name="wizards_unicable_npanel_list_panels_divider_x1">703dp</dimen>
+
+<dimen name="wizards_unicable_npanel_list_panels_divider_y1">80dp</dimen>
+
+<dimen name="wizards_unicable_npanel_list_panels_divider_x2">704dp</dimen>
+
+<dimen name="wizards_unicable_npanel_list_panels_divider_y2">394dp</dimen>
+
+<dimen name="wizards_unicable_npanel_col02_description_string_text_height">158.5dp</dimen>
+
+<dimen name="wizards_unicable_npanel_col02_description_string_text_width">211dp</dimen>
+
+<dimen name="wizards_unicable_npanel_col02_description_string_text_x1">725dp</dimen>
+
+<dimen name="wizards_unicable_npanel_col02_description_string_text_y1">90.5dp</dimen>
+
+<dimen name="wizards_unicable_npanel_col02_description_string_text_x2">936dp</dimen>
+
+<dimen name="wizards_unicable_npanel_col02_description_string_text_y2">249dp</dimen>
+
+<dimen name="wizards_unicable_npanel_panels_horizontal_divider_height">1dp</dimen>
+
+<dimen name="wizards_unicable_npanel_panels_horizontal_divider_width">856dp</dimen>
+
+<dimen name="wizards_unicable_npanel_panels_horizontal_divider_x1">100dp</dimen>
+
+<dimen name="wizards_unicable_npanel_panels_horizontal_divider_y1">412dp</dimen>
+
+<dimen name="wizards_unicable_npanel_panels_horizontal_divider_x2">956dp</dimen>
+
+<dimen name="wizards_unicable_npanel_panels_horizontal_divider_y2">413dp</dimen>
+
+<dimen name="wizards_unicable_npanel_previous_button_normal_height">42dp</dimen>
+
+<dimen name="wizards_unicable_npanel_previous_button_normal_width">168dp</dimen>
+
+<dimen name="wizards_unicable_npanel_previous_button_normal_x1">604dp</dimen>
+
+<dimen name="wizards_unicable_npanel_previous_button_normal_y1">421dp</dimen>
+
+<dimen name="wizards_unicable_npanel_previous_button_normal_x2">772dp</dimen>
+
+<dimen name="wizards_unicable_npanel_previous_button_normal_y2">463dp</dimen>
+
+<dimen name="wizards_unicable_npanel_previous_button_normal_text_height">20dp</dimen>
+
+<dimen name="wizards_unicable_npanel_previous_button_normal_text_width">136dp</dimen>
+
+<dimen name="wizards_unicable_npanel_previous_button_normal_text_x1">620dp</dimen>
+
+<dimen name="wizards_unicable_npanel_previous_button_normal_text_y1">433.5dp</dimen>
+
+<dimen name="wizards_unicable_npanel_previous_button_normal_text_x2">756dp</dimen>
+
+<dimen name="wizards_unicable_npanel_previous_button_normal_text_y2">453.5dp</dimen>
+
+<dimen name="wizards_unicable_npanel_next_button_default_height">42dp</dimen>
+
+<dimen name="wizards_unicable_npanel_next_button_default_width">168dp</dimen>
+
+<dimen name="wizards_unicable_npanel_next_button_default_x1">772dp</dimen>
+
+<dimen name="wizards_unicable_npanel_next_button_default_y1">421dp</dimen>
+
+<dimen name="wizards_unicable_npanel_next_button_default_x2">940dp</dimen>
+
+<dimen name="wizards_unicable_npanel_next_button_default_y2">463dp</dimen>
+
+<dimen name="wizards_unicable_npanel_next_button_default_text_height">20dp</dimen>
+
+<dimen name="wizards_unicable_npanel_next_button_default_text_width">136dp</dimen>
+
+<dimen name="wizards_unicable_npanel_next_button_default_text_x1">788dp</dimen>
+
+<dimen name="wizards_unicable_npanel_next_button_default_text_y1">433.5dp</dimen>
+
+<dimen name="wizards_unicable_npanel_next_button_default_text_x2">924dp</dimen>
+
+<dimen name="wizards_unicable_npanel_next_button_default_text_y2">453.5dp</dimen>
+
+</resources>

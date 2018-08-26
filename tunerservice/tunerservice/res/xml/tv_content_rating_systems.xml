@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+** Copyright 2014 Google Inc. All rights reserved.
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
+<rating-system-definitions xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="1">
+
+   <!-- TV content rating system for DVB -->
+    <rating-system-definition android:name="DVB"
+        android:country="CZ, IL, MK, AL, AM, AT, AZ, BY, BA, BG, HR, DK, BE, EE, FI, GE, DE, GR, IT, HU, KZ, LV, LT, LU, ME, NL, NO, PL, PT, RO, RU, SK, SI, RS, SE, CH, TR, UA, US, MY, TW, TH, ID, IE, GB, AE, VN"
+        android:title="@string/title_dvb">
+        <rating-definition android:name="DVB_NONE"
+            android:title="None"
+            android:description="@org.droidtv.ui.strings:string/MAIN_NONE"
+            android:contentAgeHint="0" />
+        <rating-definition android:name="DVB_4"
+            android:title="4"
+            android:description="@org.droidtv.ui.strings:string/MAIN_AGE_4"
+            android:contentAgeHint="4" />
+        <rating-definition android:name="DVB_5"
+            android:title="5"
+            android:description="@org.droidtv.ui.strings:string/MAIN_AGE_5"
+            android:contentAgeHint="5" />
+        <rating-definition android:name="DVB_6"
+            android:title="6"
+            android:description="@org.droidtv.ui.strings:string/MAIN_AGE_6"
+            android:contentAgeHint="6" />
+        <rating-definition android:name="DVB_7"
+            android:title="7"
+            android:description="@org.droidtv.ui.strings:string/MAIN_AGE_7"
+            android:contentAgeHint="7" />
+        <rating-definition android:name="DVB_8"
+            android:title="8"
+            android:description="@org.droidtv.ui.strings:string/MAIN_AGE_8"
+            android:contentAgeHint="8" />
+        <rating-definition android:name="DVB_9"
+            android:title="9"
+            android:description="@org.droidtv.ui.strings:string/MAIN_AGE_9"
+            android:contentAgeHint="9" />
+        <rating-definition android:name="DVB_10"
+            android:title="10"
+            android:description="@org.droidtv.ui.strings:string/MAIN_AGE_10"
+            android:contentAgeHint="10" />
+        <rating-definition android:name="DVB_11"
+            android:title="11"
+            android:description="@org.droidtv.ui.strings:string/MAIN_AGE_11"
+            android:contentAgeHint="11" />
+        <rating-definition android:name="DVB_12"
+            android:title="12"
+            android:description="@org.droidtv.ui.strings:string/MAIN_AGE_12"
+            android:contentAgeHint="12" />
+        <rating-definition android:name="DVB_13"
+            android:title="13"
+            android:description="@org.droidtv.ui.strings:string/MAIN_AGE_13"
+            android:contentAgeHint="13" />
+        <rating-definition android:name="DVB_14"
+            android:title="14"
+            android:description="@org.droidtv.ui.strings:string/MAIN_AGE_14"
+            android:contentAgeHint="14" />
+        <rating-definition android:name="DVB_15"
+            android:title="15"
+            android:description="@org.droidtv.ui.strings:string/MAIN_AGE_15"
+            android:contentAgeHint="15" />
+        <rating-definition android:name="DVB_16"
+            android:title="16"
+            android:description="@org.droidtv.ui.strings:string/MAIN_AGE_16"
+            android:contentAgeHint="16" />
+        <rating-definition android:name="DVB_17"
+            android:title="17"
+            android:description="@org.droidtv.ui.strings:string/MAIN_AGE_17"
+            android:contentAgeHint="17" />
+        <rating-definition android:name="DVB_18"
+            android:title="18"
+            android:description="@org.droidtv.ui.strings:string/MAIN_AGE_18"
+            android:contentAgeHint="18" />
+        <rating-order>
+			<rating android:name="DVB_NONE" />
+            <rating android:name="DVB_4" />
+            <rating android:name="DVB_5" />
+            <rating android:name="DVB_6" />
+            <rating android:name="DVB_7" />
+            <rating android:name="DVB_8" />
+            <rating android:name="DVB_9" />
+            <rating android:name="DVB_10" />
+            <rating android:name="DVB_11" />
+            <rating android:name="DVB_12" />
+            <rating android:name="DVB_13" />
+            <rating android:name="DVB_14" />
+            <rating android:name="DVB_15" />
+            <rating android:name="DVB_16" />
+            <rating android:name="DVB_17" />
+            <rating android:name="DVB_18" />
+        </rating-order>
+    </rating-system-definition>
+
+     <!-- TV content rating system for Spain DVB -->
+    <rating-system-definition android:name="ES_DVB"
+        android:title="@string/title_dvb"
+        android:country="ES">          
+        <rating-definition android:name="ES_DVB_NONE"
+            android:title="None"
+            android:description="@org.droidtv.ui.strings:string/MAIN_NONE"
+            android:contentAgeHint="0" />
+        <rating-definition android:name="ES_DVB_4"
+            android:title="4"
+            android:description="@org.droidtv.ui.strings:string/MAIN_AGE_4"
+            android:contentAgeHint="4" />
+        <rating-definition android:name="ES_DVB_5"
+            android:title="5"
+            android:description="@org.droidtv.ui.strings:string/MAIN_AGE_5"
+            android:contentAgeHint="5" />
+        <rating-definition android:name="ES_DVB_6"
+            android:title="6"
+            android:description="@org.droidtv.ui.strings:string/MAIN_AGE_6"
+            android:contentAgeHint="6" />
+        <rating-definition android:name="ES_DVB_7"
+            android:title="7"
+            android:description="@org.droidtv.ui.strings:string/MAIN_AGE_7"
+            android:contentAgeHint="7" />
+        <rating-definition android:name="ES_DVB_8"
+            android:title="8"
+            android:description="@org.droidtv.ui.strings:string/MAIN_AGE_8"
+            android:contentAgeHint="8" />
+        <rating-definition android:name="ES_DVB_9"
+            android:title="9"
+            android:description="@org.droidtv.ui.strings:string/MAIN_AGE_9"
+            android:contentAgeHint="9" />
+        <rating-definition android:name="ES_DVB_10"
+            android:title="10"
+            android:description="@org.droidtv.ui.strings:string/MAIN_AGE_10"
+            android:contentAgeHint="10" />
+        <rating-definition android:name="ES_DVB_11"
+            android:title="11"
+            android:description="@org.droidtv.ui.strings:string/MAIN_AGE_11"
+            android:contentAgeHint="11" />
+        <rating-definition android:name="ES_DVB_12"
+            android:title="12"
+            android:description="@org.droidtv.ui.strings:string/MAIN_AGE_12"
+            android:contentAgeHint="12" />
+        <rating-definition android:name="ES_DVB_13"
+            android:title="13"
+            android:description="@org.droidtv.ui.strings:string/MAIN_AGE_13"
+            android:contentAgeHint="13" />
+        <rating-definition android:name="ES_DVB_14"
+            android:title="14"
+            android:description="@org.droidtv.ui.strings:string/MAIN_AGE_14"
+            android:contentAgeHint="14" />
+        <rating-definition android:name="ES_DVB_15"
+            android:title="15"
+            android:description="@org.droidtv.ui.strings:string/MAIN_AGE_15"
+            android:contentAgeHint="15" />
+        <rating-definition android:name="ES_DVB_16"
+            android:title="16"
+            android:description="@org.droidtv.ui.strings:string/MAIN_AGE_16"
+            android:contentAgeHint="16" />
+        <rating-definition android:name="ES_DVB_17"
+            android:title="17"
+            android:description="@org.droidtv.ui.strings:string/MAIN_AGE_17"
+            android:contentAgeHint="17" />
+        <rating-definition android:name="ES_DVB_18"
+            android:title="18"
+            android:description="@org.droidtv.ui.strings:string/MAIN_AGE_18"
+            android:contentAgeHint="18" />
+        <rating-definition android:name="ES_DVB_X"
+            android:title="X-Rated"
+            android:description="@org.droidtv.ui.strings:string/MAIN_X_RATED"
+            android:contentAgeHint="18" />
+        <rating-order>
+            <rating android:name="ES_DVB_NONE" />
+            <rating android:name="ES_DVB_4" />
+            <rating android:name="ES_DVB_5" />
+            <rating android:name="ES_DVB_6" />
+            <rating android:name="ES_DVB_7" />
+            <rating android:name="ES_DVB_8" />
+            <rating android:name="ES_DVB_9" />
+            <rating android:name="ES_DVB_10" />
+            <rating android:name="ES_DVB_11" />
+            <rating android:name="ES_DVB_12" />
+            <rating android:name="ES_DVB_13" />
+            <rating android:name="ES_DVB_14" />
+            <rating android:name="ES_DVB_15" />
+            <rating android:name="ES_DVB_16" />
+            <rating android:name="ES_DVB_17" />
+            <rating android:name="ES_DVB_18" />
+            <rating android:name="ES_DVB_X" />
+        </rating-order>
+    </rating-system-definition>
+
+    <!-- TV content rating system for France DVB -->
+    <rating-system-definition android:name="FR_DVB"
+        android:title="@string/title_dvb"
+        android:country="FR">
+	<rating-definition android:name="FR_DVB_NONE"
+            android:title="None"
+            android:description="@org.droidtv.ui.strings:string/MAIN_NONE"
+            android:contentAgeHint="0" />
+        <rating-definition android:name="FR_DVB_4"
+            android:title="4"
+            android:description="@org.droidtv.ui.strings:string/MAIN_AGE_4"
+            android:contentAgeHint="4" />
+        <rating-definition android:name="FR_DVB_5"
+            android:title="5"
+            android:description="@org.droidtv.ui.strings:string/MAIN_AGE_5"
+            android:contentAgeHint="5" />
+        <rating-definition android:name="FR_DVB_6"
+            android:title="6"
+            android:description="@org.droidtv.ui.strings:string/MAIN_AGE_6"
+            android:contentAgeHint="6" />
+        <rating-definition android:name="FR_DVB_7"
+            android:title="7"
+            android:description="@org.droidtv.ui.strings:string/MAIN_AGE_7"
+            android:contentAgeHint="7" />
+        <rating-definition android:name="FR_DVB_8"
+            android:title="8"
+            android:description="@org.droidtv.ui.strings:string/MAIN_AGE_8"
+            android:contentAgeHint="8" />
+        <rating-definition android:name="FR_DVB_9"
+            android:title="9"
+            android:description="@org.droidtv.ui.strings:string/MAIN_AGE_9"
+            android:contentAgeHint="9" />
+        <rating-definition android:name="FR_DVB_10"
+            android:title="10"
+            android:description="@org.droidtv.ui.strings:string/MAIN_AGE_10"
+            android:contentAgeHint="10" />
+        <rating-definition android:name="FR_DVB_11"
+            android:title="11"
+            android:description="@org.droidtv.ui.strings:string/MAIN_AGE_11"
+            android:contentAgeHint="11" />
+        <rating-definition android:name="FR_DVB_12"
+            android:title="12"
+            android:description="@org.droidtv.ui.strings:string/MAIN_AGE_12"
+            android:contentAgeHint="12" />
+        <rating-definition android:name="FR_DVB_13"
+            android:title="13"
+            android:description="@org.droidtv.ui.strings:string/MAIN_AGE_13"
+            android:contentAgeHint="13" />
+        <rating-definition android:name="FR_DVB_14"
+            android:title="14"
+            android:description="@org.droidtv.ui.strings:string/MAIN_AGE_14"
+            android:contentAgeHint="14" />
+        <rating-definition android:name="FR_DVB_15"
+            android:title="15"
+            android:description="@org.droidtv.ui.strings:string/MAIN_AGE_15"
+            android:contentAgeHint="15" />
+        <rating-definition android:name="FR_DVB_16"
+            android:title="16"
+            android:description="@org.droidtv.ui.strings:string/MAIN_AGE_16"
+            android:contentAgeHint="16" />
+        <rating-definition android:name="FR_DVB_17"
+            android:title="17"
+            android:description="@org.droidtv.ui.strings:string/MAIN_AGE_17"
+            android:contentAgeHint="17" />
+        <rating-definition android:name="FR_DVB_18"
+            android:title="18"
+            android:description="@org.droidtv.ui.strings:string/MAIN_AGE_18"
+            android:contentAgeHint="18" />
+        <rating-order>
+	    <rating android:name="FR_DVB_NONE" />
+            <rating android:name="FR_DVB_4" />
+            <rating android:name="FR_DVB_5" />
+            <rating android:name="FR_DVB_6" />
+            <rating android:name="FR_DVB_7" />
+            <rating android:name="FR_DVB_8" />
+            <rating android:name="FR_DVB_9" />
+            <rating android:name="FR_DVB_10" />
+            <rating android:name="FR_DVB_11" />
+            <rating android:name="FR_DVB_12" />
+            <rating android:name="FR_DVB_13" />
+            <rating android:name="FR_DVB_14" />
+            <rating android:name="FR_DVB_15" />
+            <rating android:name="FR_DVB_16" />
+            <rating android:name="FR_DVB_17" />
+            <rating android:name="FR_DVB_18" />
+        </rating-order>
+    </rating-system-definition>
+
+    <!-- TV content rating system for Singapore DVB -->
+    <rating-system-definition android:name="SG_TV"
+        android:title="@string/title_dvb"
+        android:country="SG">
+        <rating-definition android:name="SG_TV_NONE"
+            android:title="0"
+            android:description="@org.droidtv.ui.strings:string/MAIN_NONE"
+            android:contentAgeHint="0" />
+        <rating-definition android:name="SG_TV_G"
+            android:title="4"
+            android:description="@org.droidtv.ui.strings:string/MAIN_RATING_G"
+            android:contentAgeHint="4" />
+        <rating-definition android:name="SG_TV_PG"
+            android:title="7"
+            android:description="@org.droidtv.ui.strings:string/MAIN_RATING_PG"
+            android:contentAgeHint="7" />
+        <rating-definition android:name="SG_TV_PG13"
+            android:title="13"
+            android:description="@org.droidtv.ui.strings:string/RATING_PG_13"
+            android:contentAgeHint="13" />
+        <rating-definition android:name="SG_TV_NC16"
+            android:title="16"
+            android:description="@org.droidtv.ui.strings:string/RATING_NC_16"
+            android:contentAgeHint="16" />
+        <rating-definition android:name="SG_TV_M18"
+            android:title="18"
+            android:description="@org.droidtv.ui.strings:string/RATING_M_18"
+            android:contentAgeHint="18" />
+        <rating-definition android:name="SG_TV_R21"
+            android:title="21"
+            android:description="@org.droidtv.ui.strings:string/RATING_R_21"
+            android:contentAgeHint="21" />
+        <rating-order>
+            <rating android:name="SG_TV_NONE" />
+            <rating android:name="SG_TV_G" />
+            <rating android:name="SG_TV_PG" />
+            <rating android:name="SG_TV_PG13" />
+            <rating android:name="SG_TV_NC16" />
+            <rating android:name="SG_TV_M18" />
+            <rating android:name="SG_TV_R21" />
+        </rating-order>
+    </rating-system-definition>
+
+    <!-- TV content rating system for Australia DVB -->
+    <rating-system-definition android:name="AU_TV"
+        android:title="@string/title_dvb"
+        android:country="AU, AUS">
+        <rating-definition android:name="AU_TV_NONE"
+            android:title="0"
+            android:description="@org.droidtv.ui.strings:string/MAIN_NONE"
+            android:contentAgeHint="0" />
+        <rating-definition android:name="AU_TV_G"
+            android:title="7"
+            android:description="@org.droidtv.ui.strings:string/RATING_BLOCK_G_ABOVE"
+            android:contentAgeHint="7" />
+        <rating-definition android:name="AU_TV_PG"
+            android:title="11"
+            android:description="@org.droidtv.ui.strings:string/RATING_BLOCK_PG_ABOVE"
+            android:contentAgeHint="11" />
+        <rating-definition android:name="AU_TV_M"
+            android:title="13"
+            android:description="@org.droidtv.ui.strings:string/RATING_BLOCK_M_ABOVE"
+            android:contentAgeHint="13" />
+        <rating-definition android:name="AU_TV_MA"
+            android:title="15"
+            android:description="@org.droidtv.ui.strings:string/RATING_BLOCK_MA_ABOVE"
+            android:contentAgeHint="15" />
+        <rating-definition android:name="AU_TV_R"
+            android:title="18"
+            android:description="@org.droidtv.ui.strings:string/RATING_BLOCK_R_ABOVE"
+            android:contentAgeHint="18" />
+        <rating-definition android:name="AU_TV_ALL"
+            android:title="22"
+            android:description="@org.droidtv.ui.strings:string/RATING_BLOCK_ALL"
+            android:contentAgeHint="22" />
+        <rating-order>
+            <rating android:name="AU_TV_NONE" />
+            <rating android:name="AU_TV_G" />
+            <rating android:name="AU_TV_PG" />
+            <rating android:name="AU_TV_M" />
+            <rating android:name="AU_TV_MA" />
+            <rating android:name="AU_TV_R" />
+            <rating android:name="AU_TV_ALL" />
+        </rating-order>
+    </rating-system-definition>
+
+    <!-- TV content rating system for New Zealand DVB -->
+    <rating-system-definition android:name="NZ_TV"
+        android:title="@string/title_dvb"
+        android:country="NZ">
+        <rating-definition android:name="NZ_TV_NONE"
+            android:title="0"
+            android:description="@org.droidtv.ui.strings:string/MAIN_NONE"
+            android:contentAgeHint="0" />
+        <rating-definition android:name="NZ_TV_G"
+            android:title="9"
+            android:description="@org.droidtv.ui.strings:string/MAIN_RATING_G_NZ"
+            android:contentAgeHint="9" />
+        <rating-definition android:name="NZ_TV_PGR"
+            android:title="11"
+            android:description="@org.droidtv.ui.strings:string/MAIN_RATING_PGR_NZ"
+            android:contentAgeHint="11" />
+        <rating-definition android:name="NZ_TV_AO"
+            android:title="15"
+            android:description="@org.droidtv.ui.strings:string/MAIN_RATING_AO_NZ"
+            android:contentAgeHint="15" />
+        <rating-order>
+            <rating android:name="NZ_TV_NONE" />
+            <rating android:name="NZ_TV_G" />
+            <rating android:name="NZ_TV_PGR" />
+            <rating android:name="NZ_TV_AO" />
+        </rating-order>
+    </rating-system-definition>
+</rating-system-definitions>
+

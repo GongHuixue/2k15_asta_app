@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+>
+    
+    <org.droidtv.ui.tvwidget2k15.wizardframework.common.CheckBoxSelector 
+    android:id="@+id/checkboxselector"
+    android:layout_width="match_parent"
+    android:layout_marginTop="10dp"
+    android:layout_height="match_parent">
+</org.droidtv.ui.tvwidget2k15.wizardframework.common.CheckBoxSelector>
+
+    <TextView
+        android:id="@+id/nochannel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:visibility="invisible"
+        android:layout_marginLeft="114dp"></TextView>
+</RelativeLayout>

@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Thu Jan 09 2014 09:59:43 GMT+0530-->
+<resources>
+<!--Layout_Wizard_Install_Satellite_fullscan_v1.1.psd-->
+<dimen name="wizard_install_satellite_fullscan_header_text_height">25dp</dimen>
+<dimen name="sat_wizard_install_satellite_fullscan_header_text_height">28dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_header_text_width">240dp</dimen>
+<dimen name="sat_wizard_install_satellite_fullscan_header_text_width">459dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_header_text_x1">21dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_header_text_y1">20.5dp</dimen>
+<dimen name="sat_wizard_install_satellite_fullscan_header_text_y1">21dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_header_text_x2">261dp</dimen>
+<dimen name="sat_wizard_install_satellite_fullscan_header_text_x2">480dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_header_text_y2">45.5dp</dimen>
+<dimen name="sat_wizard_install_satellite_fullscan_header_text_y2">49dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_progress_bar_height">4dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_progress_bar_width">136dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_progress_bar_x1">24dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_progress_bar_y1">52dp</dimen>
+<dimen name="sat_wizard_install_satellite_fullscan_progress_bar_y1">51dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_progress_bar_x2">160dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_progress_bar_y2">56dp</dimen>
+<dimen name="sat_wizard_install_satellite_fullscan_progress_bar_y2">55dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_panels_npanel_wizard_bg_height">422dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_panels_npanel_wizard_bg_width">960.5dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_panels_npanel_wizard_bg_x1">-0.5dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_panels_npanel_wizard_bg_y1">59dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_panels_npanel_wizard_bg_x2">960dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_panels_npanel_wizard_bg_y2">481dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_panels_npanel_titlebar_normal_height">422dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_panels_npanel_titlebar_normal_width">48dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_panels_npanel_titlebar_normal_x1">0dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_panels_npanel_titlebar_normal_y1">59dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_panels_npanel_titlebar_normal_x2">48dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_panels_npanel_titlebar_normal_y2">481dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_panels_npanel_titlebar_normal_text_height">313dp</dimen>
+<dimen name="sat_wizard_install_satellite_fullscan_panels_npanel_titlebar_normal_text_height">314dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_panels_npanel_titlebar_normal_text_width">26dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_panels_npanel_titlebar_normal_text_x1">12dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_panels_npanel_titlebar_normal_text_y1">91dp</dimen>
+<dimen name="sat_wizard_install_satellite_fullscan_panels_npanel_titlebar_normal_text_y1">90dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_panels_npanel_titlebar_normal_text_x2">38dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_panels_npanel_titlebar_normal_text_y2">404dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_panels_npanel_titlebar_activated_height">422dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_panels_npanel_titlebar_activated_width">48dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_panels_npanel_titlebar_activated_x1">48dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_panels_npanel_titlebar_activated_y1">59dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_panels_npanel_titlebar_activated_x2">96dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_panels_npanel_titlebar_activated_y2">481dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_panels_npanel_titlebar_activated_text_height">313dp</dimen>
+<dimen name="sat_wizard_install_satellite_fullscan_panels_npanel_titlebar_activated_text_height">314dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_panels_npanel_titlebar_activated_text_width">26dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_panels_npanel_titlebar_activated_text_x1">58.5dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_panels_npanel_titlebar_activated_text_y1">91dp</dimen>
+<dimen name="sat_wizard_install_satellite_fullscan_panels_npanel_titlebar_activated_text_y1">90dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_panels_npanel_titlebar_activated_text_x2">84.5dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_panels_npanel_titlebar_activated_text_y2">404dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_unit01_header_text_height">21dp</dimen>
+<dimen name="sat_wizard_install_satellite_fullscan_npanel_col01_unit01_header_text_height">22dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_unit01_header_text_width">30dp</dimen>
+<dimen name="sat_wizard_install_satellite_fullscan_npanel_col01_unit01_header_text_width">100.5dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_unit01_header_text_x1">535dp</dimen>
+<dimen name="sat_wizard_install_satellite_fullscan_npanel_col01_unit01_header_text_x1">451dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_unit01_header_text_y1">90.5dp</dimen>
+<dimen name="sat_wizard_install_satellite_fullscan_npanel_col01_unit01_header_text_y1">89.5dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_unit01_header_text_x2">565dp</dimen>
+<dimen name="sat_wizard_install_satellite_fullscan_npanel_col01_unit01_header_text_x2">551.5dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_unit01_header_text_y2">111.5dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_unit02_header_text_height">21dp</dimen>
+<dimen name="sat_wizard_install_satellite_fullscan_npanel_col01_unit02_header_text_height">22dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_unit02_header_text_width">67.5dp</dimen>
+<dimen name="sat_wizard_install_satellite_fullscan_npanel_col01_unit02_header_text_width">100dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_unit02_header_text_x1">606.5dp</dimen>
+<dimen name="sat_wizard_install_satellite_fullscan_npanel_col01_unit02_header_text_x1">581.5dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_unit02_header_text_y1">90.5dp</dimen>
+<dimen name="sat_wizard_install_satellite_fullscan_npanel_col01_unit02_header_text_y1">89.5dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_unit02_header_text_x2">674dp</dimen>
+<dimen name="sat_wizard_install_satellite_fullscan_npanel_col01_unit02_header_text_x2">681.5dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_unit02_header_text_y2">111.5dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_row01_text_height">22.5dp</dimen>
+<dimen name="sat_wizard_install_satellite_fullscan_npanel_col01_row01_text_height">22dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_row01_text_width">385dp</dimen>
+<dimen name="sat_wizard_install_satellite_fullscan_npanel_col01_row01_text_width">314.5dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_row01_text_x1">116dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_row01_text_y1">118.5dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_row01_text_x2">501dp</dimen>
+<dimen name="sat_wizard_install_satellite_fullscan_npanel_col01_row01_text_x2">430.5dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_row01_text_y2">141dp</dimen>
+<dimen name="sat_wizard_install_satellite_fullscan_npanel_col01_row01_text_y2">140.5dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_row01_unit01_text_height">22.5dp</dimen>
+<dimen name="sat_wizard_install_satellite_fullscan_npanel_col01_row01_unit01_text_height">22dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_row01_unit01_text_width">23dp</dimen>
+<dimen name="sat_wizard_install_satellite_fullscan_npanel_col01_row01_unit01_text_width">100.5dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_row01_unit01_text_x1">536.5dp</dimen>
+<dimen name="sat_wizard_install_satellite_fullscan_npanel_col01_row01_unit01_text_x1">451dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_row01_unit01_text_y1">118.5dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_row01_unit01_text_x2">559.5dp</dimen>
+<dimen name="sat_wizard_install_satellite_fullscan_npanel_col01_row01_unit01_text_x2">551.5dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_row01_unit01_text_y2">141dp</dimen>
+<dimen name="sat_wizard_install_satellite_fullscan_npanel_col01_row01_unit01_text_y2">140.5dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_row01_unit02_text_height">22.5dp</dimen>
+<dimen name="sat_wizard_install_satellite_fullscan_npanel_col01_row01_unit02_text_height">22dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_row01_unit02_text_width">23dp</dimen>
+<dimen name="sat_wizard_install_satellite_fullscan_npanel_col01_row01_unit02_text_width">100dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_row01_unit02_text_x1">619dp</dimen>
+<dimen name="sat_wizard_install_satellite_fullscan_npanel_col01_row01_unit02_text_x1">581.5dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_row01_unit02_text_y1">118.5dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_row01_unit02_text_x2">642dp</dimen>
+<dimen name="sat_wizard_install_satellite_fullscan_npanel_col01_row01_unit02_text_x2">681.5dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_row01_unit02_text_y2">141dp</dimen>
+<dimen name="sat_wizard_install_satellite_fullscan_npanel_col01_row01_unit02_text_y2">140.5dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_row02_text_height">22.5dp</dimen>
+<dimen name="sat_wizard_install_satellite_fullscan_npanel_col01_row02_text_height">22dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_row02_text_width">385dp</dimen>
+<dimen name="sat_wizard_install_satellite_fullscan_npanel_col01_row02_text_width">314.5dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_row02_text_x1">116dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_row02_text_y1">147.5dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_row02_text_x2">501dp</dimen>
+<dimen name="sat_wizard_install_satellite_fullscan_npanel_col01_row02_text_x2">430.5dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_row02_text_y2">170dp</dimen>
+<dimen name="sat_wizard_install_satellite_fullscan_npanel_col01_row02_text_y2">169.5dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_row02_unit01_text_height">22.5dp</dimen>
+<dimen name="sat_wizard_install_satellite_fullscan_npanel_col01_row02_unit01_text_height">22dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_row02_unit01_text_width">23dp</dimen>
+<dimen name="sat_wizard_install_satellite_fullscan_npanel_col01_row02_unit01_text_width">100.5dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_row02_unit01_text_x1">536.5dp</dimen>
+<dimen name="sat_wizard_install_satellite_fullscan_npanel_col01_row02_unit01_text_x1">451dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_row02_unit01_text_y1">147.5dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_row02_unit01_text_x2">559.5dp</dimen>
+<dimen name="sat_wizard_install_satellite_fullscan_npanel_col01_row02_unit01_text_x2">551.5dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_row02_unit01_text_y2">170dp</dimen>
+<dimen name="sat_wizard_install_satellite_fullscan_npanel_col01_row02_unit01_text_y2">169.5dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_row02_unit02_text_height">22.5dp</dimen>
+<dimen name="sat_wizard_install_satellite_fullscan_npanel_col01_row02_unit02_text_height">22dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_row02_unit02_text_width">23dp</dimen>
+<dimen name="sat_wizard_install_satellite_fullscan_npanel_col01_row02_unit02_text_width">100dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_row02_unit02_text_x1">619dp</dimen>
+<dimen name="sat_wizard_install_satellite_fullscan_npanel_col01_row02_unit02_text_x1">581.5dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_row02_unit02_text_y1">147.5dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_row02_unit02_text_x2">642dp</dimen>
+<dimen name="sat_wizard_install_satellite_fullscan_npanel_col01_row02_unit02_text_x2">681.5dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_row02_unit02_text_y2">170dp</dimen>
+<dimen name="sat_wizard_install_satellite_fullscan_npanel_col01_row02_unit02_text_y2">169.5dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_progress_bar01_header_text_height">22dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_progress_bar01_header_text_width">139dp</dimen>
+<dimen name="sat_wizard_install_satellite_fullscan_npanel_col01_progress_bar01_header_text_width">268dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_progress_bar01_header_text_x1">115.5dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_progress_bar01_header_text_y1">297.5dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_progress_bar01_header_text_x2">254.5dp</dimen>
+<dimen name="sat_wizard_install_satellite_fullscan_npanel_col01_progress_bar01_header_text_x2">383.5dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_progress_bar01_header_text_y2">319.5dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_progress_bar01_height">4dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_progress_bar01_width">136dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_progress_bar01_x1">118.5dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_progress_bar01_y1">325dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_progress_bar01_x2">254.5dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_progress_bar01_y2">329dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_progress_bar01_text_height">18dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_progress_bar01_text_width">34.5dp</dimen>
+<dimen name="sat_wizard_install_satellite_fullscan_npanel_col01_progress_bar01_text_width">39dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_progress_bar01_text_x1">261.5dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_progress_bar01_text_y1">314dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_progress_bar01_text_x2">296dp</dimen>
+<dimen name="sat_wizard_install_satellite_fullscan_npanel_col01_progress_bar01_text_x2">300.5dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_progress_bar01_text_y2">332dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_progress_bar02_header_text_height">22dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_progress_bar02_header_text_width">139dp</dimen>
+<dimen name="sat_wizard_install_satellite_fullscan_npanel_col01_progress_bar02_header_text_width">268dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_progress_bar02_header_text_x1">115.5dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_progress_bar02_header_text_y1">355.5dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_progress_bar02_header_text_x2">254.5dp</dimen>
+<dimen name="sat_wizard_install_satellite_fullscan_npanel_col01_progress_bar02_header_text_x2">383.5dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_progress_bar02_header_text_y2">377.5dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_progress_bar02_height">4dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_progress_bar02_width">136dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_progress_bar02_x1">118.5dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_progress_bar02_y1">384dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_progress_bar02_x2">254.5dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_progress_bar02_y2">388dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_progress_bar02_text_height">18dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_progress_bar02_text_width">34.5dp</dimen>
+<dimen name="sat_wizard_install_satellite_fullscan_npanel_col01_progress_bar02_text_width">39dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_progress_bar02_text_x1">261.5dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_progress_bar02_text_y1">373dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_progress_bar02_text_x2">296dp</dimen>
+<dimen name="sat_wizard_install_satellite_fullscan_npanel_col01_progress_bar02_text_x2">300.5dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col01_progress_bar02_text_y2">391dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_panels_divider_height">904dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_panels_divider_width">1dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_panels_divider_x1">703dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_panels_divider_y1">79dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_panels_divider_x2">704dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_panels_divider_y2">983dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col02_loaders_waiting_ani_height">27dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col02_loaders_waiting_ani_width">27.5dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col02_loaders_waiting_ani_x1">728dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col02_loaders_waiting_ani_y1">93dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col02_loaders_waiting_ani_x2">755.5dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col02_loaders_waiting_ani_y2">120dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col02_description_text1_l_bsr_height">42dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col02_description_text1_l_bsr_width">189.5dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col02_description_text1_l_bsr_x1">722.5dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col02_description_text1_l_bsr_y1">129.5dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col02_description_text1_l_bsr_x2">912dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col02_description_text1_l_bsr_y2">171.5dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col02_description_text_height">152dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col02_description_text_width">211dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col02_description_text_x1">725dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col02_description_text_y1">129.5dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col02_description_text_x2">936dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_col02_description_text_y2">281.5dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_horizontal_divider_height">1dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_horizontal_divider_width">857dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_horizontal_divider_x1">99dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_horizontal_divider_y1">412dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_horizontal_divider_x2">956dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_horizontal_divider_y2">413dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_cancel_button_normal_height">42dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_cancel_button_normal_width">168dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_cancel_button_normal_x1">116dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_cancel_button_normal_y1">421dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_cancel_button_normal_x2">284dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_cancel_button_normal_y2">463dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_button_activated_text_height">20dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_button_activated_text_width">136dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_button_activated_text_x1">132dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_button_activated_text_y1">433.5dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_button_activated_text_x2">268dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_button_activated_text_y2">453.5dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_search_button_normal_height">42dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_search_button_normal_width">168dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_search_button_normal_x1">436dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_search_button_normal_y1">421dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_search_button_normal_x2">604dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_search_button_normal_y2">463dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_search_button_normal_text_height">20dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_search_button_normal_text_width">136dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_search_button_normal_text_x1">452dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_search_button_normal_text_y1">433.5dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_search_button_normal_text_x2">588dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_search_button_normal_text_y2">453.5dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_previous_button_normal_height">42dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_previous_button_normal_width">168dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_previous_button_normal_x1">604dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_previous_button_normal_y1">421dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_previous_button_normal_x2">772dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_previous_button_normal_y2">463dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_previous_button_normal_text_height">20dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_previous_button_normal_text_width">136dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_previous_button_normal_text_x1">620dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_previous_button_normal_text_y1">433.5dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_previous_button_normal_text_x2">756dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_previous_button_normal_text_y2">453.5dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_next_button_default_height">42dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_next_button_default_width">168dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_next_button_default_x1">772dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_next_button_default_y1">421dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_next_button_default_x2">940dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_next_button_default_y2">463dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_next_button_default_text_height">20dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_next_button_default_text_width">136dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_next_button_default_text_x1">788dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_next_button_default_text_y1">433.5dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_next_button_default_text_x2">924dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_npanel_next_button_default_text_y2">453.5dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_colorkey_bar_height">24dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_colorkey_bar_width">960dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_colorkey_bar_x1">0dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_colorkey_bar_y1">516dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_colorkey_bar_x2">960dp</dimen>
+
+<dimen name="wizard_install_satellite_fullscan_colorkey_bar_y2">540dp</dimen>
+
+</resources>

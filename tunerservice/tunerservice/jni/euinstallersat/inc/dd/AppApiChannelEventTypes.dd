@@ -1,0 +1,29 @@
+
+#ifndef _APPAPICHANNELEVENTTYPES_DD_
+#define _APPAPICHANNELEVENTTYPES_DD_
+
+/** koala group AppApiChannelEventTypes **/
+/** koala using AppApiAnalogTypes **/
+/** koala using AppApiChannelLibTypes **/
+
+typedef struct
+{
+    AppApiChannel   Channel;
+}AppApiSelectChannelType;               /** koala type AppApiSelectChannelType **/
+
+typedef struct
+{
+    AppApiTvSystem  TvSystem;
+}AppApiSetTvSystemType;                 /** koala type AppApiSetTvSystemType **/
+
+typedef struct
+{
+    Nat32 Frequency;
+}AppApiSetFrequencyType;                /** koala type AppApiSetFrequencyType **/
+
+typedef struct
+{
+    int medium;
+}AppApiSelectMediumType;                /** koala type AppApiSelectMediumType **/
+
+#endif

@@ -1,0 +1,151 @@
+/*
+ *  Copyright(C) 2003 Koninklijke Philips Electronics N.V.,
+ *  All Rights Reserved.
+ *  This  source code and any compilation or derivative thereof is the
+ *  proprietary information of Koninklijke Philips Electronics N.V.
+ *  and is confidential in nature.
+ *  Under no circumstances is this software to be exposed to or placed
+ *  under an Open Source License of any type without the expressed
+ *  written permission of Koninklijke Philips Electronics N.V.
+ *
+ *          %name: HsvDvbSiGlobals.dd %
+ *       %version: TVG_1 %
+ * %date_modified: Thu Feb 12 12:35:34 2009 %
+ *    %derived_by: aneeshc %
+ */
+ 
+
+/** koala group HsvDvbSiGlobals **/
+/** koala using infraglobals **/
+
+#ifndef _DVBSIGLOBALS
+#define _DVBSIGLOBALS
+
+/* fixme: Use bit fields */
+typedef struct HsvDVBTS {
+    Nat16 Original_NetworkId;   /* Primary Key */
+    Nat16 Tsid;                 /* Primary Key */
+    Bool  LCNPresent;
+} HsvDVBTS; /** koala type HsvDVBTS **/
+
+typedef struct HsvDVBLCN {
+    Nat16 LogicalChannelNum;    /* Primary Key */
+    Nat16 Original_NetworkId;
+    Nat16 ServiceId;
+} HsvDVBLCN; /** koala type HsvDVBLCN **/
+
+
+/*  LinkageType
+    0x00 reserved for future use
+    0x01 information service
+    0x02 EPG service
+    0x03 CA replacement service
+    0x04 TS containing complete Network/Bouquet SI
+    0x05 service replacement service
+    0x06 data broadcast service
+    0x07 RCS Map
+    0x08 mobile hand-over
+    0x09 System Software Update Service (TS 102 006 [20])
+    0x0A TS containing SSU BAT or NIT (TS 102 006 [20])
+    0x0B IP/MAC Notification Service (EN 301 192 [37])
+    0x0C TS containing INT BAT or NIT (EN 301 192 [37])
+	0x82 NORDIG HDSimulcast Replacement Linkage Info
+*/
+typedef enum {
+    InvalidLinkage = 0,
+    Information_Service,
+    EPG_Service,
+    CA_Replacement_Service,
+    TS_Containing_Complete_Network_Bouquet_SI,
+    Service_Replacement_Service,
+    Data_Broadcast_Service,
+    RCS_Map,
+    Mobile_Handover,
+    SystemSoftwareUpdate,
+    TS_Containg_SSU_BAT_OR_NIT,
+    IP_MAC_Notification_Service,
+    TS_Containing_INT_BAT_NIT,
+	HDSimulcastNORDIG = 0x82,
+	SGT_Ref_Service = 0x93
+} HsvLinkageType ;   /** koala type HsvLinkageType **/
+
+typedef struct HsvLinkageInfo {
+    HsvLinkageType  LinkageType;
+    Nat16 Original_NetworkId;
+    Nat16 Tsid;
+    Nat16 ServiceId;
+    Nat16 ActualOnId;               /* OnId of the service for which we are storing the linkage info */
+    Nat16 ActualSvcId;              /* SvcID of the service for which we are storing the linkage info */
+    Nat32 OUI;
+} HsvLinkageInfo; /** koala type HsvLinkageInfo **/
+
+typedef struct HsvParentalRatingDescription {
+	Nat32  CountryId;
+	Nat8   Rating;
+    Bool   DataValid;
+} HsvParentalRatingDescription; /** koala type HsvParentalRatingDescription **/
+
+
+typedef struct HsvLinkageDescription {
+
+	Nat16  TSID;
+	Nat16  ONID;
+    Nat16  ServiceId;
+	Nat8   LinkageType;
+	Nat16  Private_ByteLen;
+	Nat16   Private_Byte[40];
+	Nat8   VersionNum;
+
+} HsvLinkageDescription; /** koala type HsvLinkageDescription **/
+
+typedef struct HsvContentDescription {
+	Nat8  ContentNibble;  /* Content_Nibble */
+	Nat8  UserNibble; /* User Nibble */
+} HsvContentDescription; /** koala type HsvContentDescription **/
+
+#define MAX_SHORT_NAME_SIZE (40 + 1) 
+#define MAX_SHORTDESC_SIZE (255 + 1)
+#define MAX_EXTENDEDNAME_SIZE (25)
+//#define MAX_EXTENDEDDESC_SIZE (256 + 1)
+#define MAX_EVENT_ITEMS 5
+#define MAX_EXTENDEDTEXT_SIZE 25
+
+/* This structure goes into strapi */
+typedef struct HsvEventDescription {
+	Nat8 LanguageId;
+    /*fixme : This should be Nat16 */
+	Nat16 ShortName[MAX_SHORT_NAME_SIZE];	/* Null terminated Unicode */
+	Nat16 ShortDesc[MAX_SHORTDESC_SIZE];	/* Null terminated Unicode */
+} HsvEventDescription;  /** koala type HsvEventDescription **/
+
+/* This structure goes into database */
+typedef struct HsvDatabaseEventDescription {
+	Nat8 LanguageId;
+    /*fixme : This should be Nat16 */
+	Nat16 ShortName[MAX_SHORT_NAME_SIZE + 1];	/* Null terminated Unicode */
+	Nat16  ShortDesc[MAX_SHORTDESC_SIZE];	/* Hold incoming text buffer as is */
+    Nat16  ExtendedDesc[MAX_SHORTDESC_SIZE]; /* Hold incoming text buffer as is */
+} HsvDatabaseEventDescription; /** koala type HsvDatabaseEventDescription **/
+
+#if 0
+typedef struct HsvDVBEvent {
+    Nat16 ServiceId;    /* Primary Key */
+    Nat16 EventId;
+    DateTime dt;    /** koala using infraglobals **/
+    Nat32 Duration;
+    Nat8  ContentNibble;  /* Content_Nibble */
+	Nat8  UserNibble;    /* User Nibble */
+    HsvEventDescription EvtDesc;    
+} HsvDVBEvent; /** koala type HsvDVBEvent **/
+#endif
+typedef struct HsvTimeOffsetDescription {
+    Nat8  CountryId;
+    Nat8  Timezone;
+    Bool  Polarity;
+    DateTime TimeOffset;
+    DateTime ChangeDt;
+    DateTime NextTimeOffset;
+    int   Version;
+}HsvTimeOffsetDescription; /** koala type HsvTimeOffsetDescription **/
+
+#endif

@@ -1,0 +1,47 @@
+/*  Copyright(C) 2003 Koninklijke Philips Electronics N.V.,
+*  All Rights Reserved.
+* This  source code and any compilation or derivative thereof is the
+*  proprietary information of Koninklijke Philips Electronics N.V.
+*  and is confidential in nature.
+*  Under no circumstances is this software to be exposed to or placed
+*  under an Open Source License of any type without the expressed
+*  written permission of Koninklijke Philips Electronics N.V.
+*  		%name: HsvDVBEventConf.dd %
+*      	%version: TVG_tv550r4dev %
+* 		%date_modified: Thu Sep 18 18:22:51 2008 %
+*   	     %derived_by: lakshminb %
+*/
+
+/** koala group HsvDVBEventConfiguration **/
+
+#ifndef HSVDVBEVENTITEM
+#define _HSVDVBCONFINTERNAL
+#define HSVDVBEVENTITEM(event, std, intf)  HsvEvt##std##intf##event,
+/* (EventName, Type of the Event, Standard, Interface that provides it )*/
+typedef enum
+{
+    HsvEvtNull   =   1,
+#endif
+    /* Nit Events */
+HSVDVBEVENTITEM(LCN,                dvb, nit)
+HSVDVBEVENTITEM(LCNAvailability,    dvb, nit)
+
+    /* Sdt Events */
+
+    /* Eit Events */
+
+    /* Tdt Events */
+
+    /* Tot Events */
+
+    /* Pat Events */
+
+    /* Pmt Events */
+
+#ifdef _HSVDVBCONFINTERNAL
+    HsvEvtLastEvent
+} HsvDVBEventType;
+#undef _HSVDVBCONFINTERNAL
+#endif
+#undef HSVDVBEVENTITEM
+

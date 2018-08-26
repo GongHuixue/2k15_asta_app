@@ -1,0 +1,51 @@
+/*  Copyright(C) 2003 Koninklijke Philips Electronics N.V.,
+*  All Rights Reserved.
+* This  source code and any compilation or derivative thereof is the
+*  proprietary information of Koninklijke Philips Electronics N.V.
+*  and is confidential in nature.
+*  Under no circumstances is this software to be exposed to or placed
+*  under an Open Source License of any type without the expressed
+*  written permission of Koninklijke Philips Electronics N.V.
+*  		%name: HsvEITTableParser.dd %
+*      	%version: TVG_tv550r4dev1 %
+* 		%date_modified: Thu Sep 18 18:08:23 2008 %
+*   	     %derived_by: integration %
+*/
+/*  Generated code. Dont edit. */
+
+/* Defining koala group to escape koala warning */
+/** koala group HsvEITPropertyConf **/
+
+/** koala using infraglobals **/
+/** koala using HsvDvbTablesCommon **/
+
+#ifndef HSVEITHEADER
+#define HSVEITHEADER(field, typ, declfunc, parfunc, secfunc, bits, name)
+#endif
+
+#define HSVLONGTABLE HSVEITHEADER
+#ifndef __cplusplus
+#include "../hsvdvbsi/hsvtableparser.h"
+#else
+#include "hsvtableparser.h"
+#endif
+HSVEITHEADER(Tsid	,Nat16	,Linear	,NA	,GetBits	,16	,transport_stream_id	)
+HSVEITHEADER(Orig_NWId	,Nat16	,Linear	,NA	,GetBits	,16	,original_network_id	)
+HSVEITHEADER(SegLastSection	,Nat8	,Linear	,NA	,GetBits	,8	,segment_last_section_number	)
+HSVEITHEADER(LastTableId	,Nat8	,Linear	,NA	,GetBits	,8	,last_table_id	)
+#undef HSVEITHEADER
+
+#ifndef HSVEITDATA
+#define HSVEITDATA(field, typ, declfunc, parfunc, secfunc, bits, name)
+#endif
+
+HSVEITDATA(EventId	,Nat16	,Linear	,NA	,GetBits	,16	,event_id	)
+HSVEITDATA(StartDate	,Nat16	,Linear	,NA	,GetBits	,16	,start_date	)
+HSVEITDATA(StartTime	,Nat32	,Linear	,NA	,GetBits	,24	,start_time	)
+HSVEITDATA(Duration	,Nat32	,Linear	,NA	,GetBits	,24	,duration	)
+HSVEITDATA(RunningStatus	,Nat8	,Linear	,NA	,GetBits	,3	,running_status	)
+HSVEITDATA(FreeCAMode	,Bool	,Linear	,NA	,GetBits	,1	,free_CA_mode	)
+HSVEITDATA(DescLen	,Nat16	,Linear	,NA	,GetBits	,12	,descriptors_loop_length	)
+HSVEITDATA(NA	,NA	,NA	,NA	,GetDescriptor	,DescLen	,descriptor	)
+#undef HSVEITDATA
+

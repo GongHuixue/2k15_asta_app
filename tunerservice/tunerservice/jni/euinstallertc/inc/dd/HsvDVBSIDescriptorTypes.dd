@@ -1,0 +1,574 @@
+/*  Copyright(C) 2003 Koninklijke Philips Electronics N.V.,
+*  All Rights Reserved.
+* This  source code and any compilation or derivative thereof is the
+*  proprietary information of Koninklijke Philips Electronics N.V.
+*  and is confidential in nature.
+*  Under no circumstances is this software to be exposed to or placed
+*  under an Open Source License of any type without the expressed
+*  written permission of Koninklijke Philips Electronics N.V.
+*  		%name: HsvDVBSIDescriptorTypes.dd %
+*      	%version: TVG_Fusion_1 %
+* 		%date_modified: Thu Nov 13 12:13:18 2008 %
+*   	     %derived_by: integration %
+*/
+/*  Generated code. Dont edit. */
+/** koala group HsvDVBSIDescriptorTypes **/
+/** koala using infraglobals **/
+/** koala using HsvDvbTablesCommon **/
+/** koala using HsvDVBSIDescriptorTypes **/
+/** koala using HsvDVBSSUHookTypes **/
+
+#ifndef _DVBSIDESCRIPTORS_DD
+#define _DVBSIDESCRIPTORS_DD
+#define MAX_LCN2_CHANNEL_LISTS 5
+typedef struct {
+Bool  DescriptorValid;
+int NumISOAudioInfo;
+struct HsvISOAudioInfo {
+#define HSVISOAUDIOINFO(field, typ, declfunc, parfunc, secfunc, bits, name) \
+		decl_##declfunc(typ, field, 0)
+#include "HsvDVBSIDescriptorParser.dd"
+} ISOAudioInfo[4];
+
+} HsvISO_639_languageDescriptor; /** koala type HsvISO_639_languageDescriptor **/
+#undef HSVISOAUDIOINFO
+
+typedef struct {
+Bool  DescriptorValid;
+int NumLinkageWrapper;
+struct HsvLinkageWrapper {
+#define HSVLINKAGEWRAPPER(field, typ, declfunc, parfunc, secfunc, bits, name) \
+		decl_##declfunc(typ, field, 0)
+#include "HsvDVBSIDescriptorParser.dd"
+struct HsvLinkageHeader {
+#define HSVLINKAGEHEADER(field, typ, declfunc, parfunc, secfunc, bits, name) \
+		decl_##declfunc(typ, field, 0)
+#include "HsvDVBSIDescriptorParser.dd"
+} LinkageHeader;
+
+/*struct HsvSwlDlPvtData {
+#define HSVSWDLPRIVATEDATA(field, typ, declfunc, parfunc, secfunc, bits, name) \
+		decl_##declfunc(typ, field, 0)
+#include "HsvDVBSIDescriptorParser.dd"
+} SwdlPvtData;*/
+} LinkageWrapper[50];
+
+} HsvLinkageDescriptor; /** koala type HsvLinkageDescriptor **/
+#undef HSVLINKAGEHEADER
+
+typedef struct {
+Bool  DescriptorValid;
+int NumExtendedEventWrapper;
+struct HsvExtendedEventWrapper {
+struct HsvDescriptorInfo {
+#define HSVDESCRIPTORINFO(field, typ, declfunc, parfunc, secfunc, bits, name) \
+		decl_##declfunc(typ, field, 0)
+#include "HsvDVBSIDescriptorParser.dd"
+} DescriptorInfo;
+
+int NumEventItems;
+struct HsvEventItems {
+#define HSVEVENTITEMS(field, typ, declfunc, parfunc, secfunc, bits, name) \
+		decl_##declfunc(typ, field, 0)
+#include "HsvDVBSIDescriptorParser.dd"
+int NumEventDesc;
+struct HsvEventDesc {
+#define HSVEVENTDESC(field, typ, declfunc, parfunc, secfunc, bits, name) \
+		decl_##declfunc(typ, field, 0)
+#include "HsvDVBSIDescriptorParser.dd"
+} EventDesc;
+
+int NumItemDescChar;
+struct HsvItemDescChar {
+#define HSVITEMDESCCHAR(field, typ, declfunc, parfunc, secfunc, bits, name) \
+		decl_##declfunc(typ, field, 0)
+#include "HsvDVBSIDescriptorParser.dd"
+} ItemDescChar[50];
+
+int NumEvent;
+struct HsvEvent {
+#define HSVEVENT(field, typ, declfunc, parfunc, secfunc, bits, name) \
+		decl_##declfunc(typ, field, 0)
+#include "HsvDVBSIDescriptorParser.dd"
+} Event;
+
+int NumItemChar;
+struct HsvItemChar {
+#define HSVITEMCHAR(field, typ, declfunc, parfunc, secfunc, bits, name) \
+		decl_##declfunc(typ, field, 0)
+#include "HsvDVBSIDescriptorParser.dd"
+} ItemChar[100];
+
+} EventItems[16];
+
+#undef HSVEVENTITEMS
+#undef HSVEVENTDESC
+#undef HSVITEMDESCCHAR
+#undef HSVEVENT
+#undef HSVITEMCHAR
+
+struct HsvItemText {
+#define HSVITEMTEXT(field, typ, declfunc, parfunc, secfunc, bits, name) \
+		decl_##declfunc(typ, field, 0)
+#include "HsvDVBSIDescriptorParser.dd"
+} ItemText;
+
+int NumText;
+struct HsvText {
+#define HSVTEXT(field, typ, declfunc, parfunc, secfunc, bits, name) \
+		decl_##declfunc(typ, field, 0)
+#include "HsvDVBSIDescriptorParser.dd"
+} Text[256];
+}ExtendedEventWrapper[16];
+
+} HsvExtendedEventDescriptor; /** koala type HsvExtendedEventDescriptor **/
+#undef HSVTEXT
+
+typedef struct {
+Bool  DescriptorValid;
+int NumShortEventWrapper;
+struct HsvShortEventWrapper {
+#define HSVSHORTEVENTWRAPPER(field, typ, declfunc, parfunc, secfunc, bits, name) \
+		decl_##declfunc(typ, field, 0)
+#include "HsvDVBSIDescriptorParser.dd"
+int NumShortEventHeader;
+struct HsvShortEventHeader {
+#define HSVSHORTEVENTHEADER(field, typ, declfunc, parfunc, secfunc, bits, name) \
+		decl_##declfunc(typ, field, 0)
+#include "HsvDVBSIDescriptorParser.dd"
+} ShortEventHeader;
+
+int NumShortEventChar;
+struct HsvShortEventChar {
+#define HSVSHORTEVENTCHAR(field, typ, declfunc, parfunc, secfunc, bits, name) \
+		decl_##declfunc(typ, field, 0)
+#include "HsvDVBSIDescriptorParser.dd"
+} ShortEventChar[100];
+
+int NumShortItemText;
+struct HsvShortItemText {
+#define HSVSHORTITEMTEXT(field, typ, declfunc, parfunc, secfunc, bits, name) \
+		decl_##declfunc(typ, field, 0)
+#include "HsvDVBSIDescriptorParser.dd"
+} ShortItemText;
+
+int NumShortText;
+struct HsvShortText {
+#define HSVSHORTTEXT(field, typ, declfunc, parfunc, secfunc, bits, name) \
+		decl_##declfunc(typ, field, 0)
+#include "HsvDVBSIDescriptorParser.dd"
+} ShortText[256];
+
+} ShortEventWrapper[5];
+
+} HsvShortEventDescriptor; /** koala type HsvShortEventDescriptor **/
+
+#undef HSVSHORTEVENTHEADER
+#undef HSVSHORTEVENTCHAR
+#undef HSVSHORTITEMTEXT
+#undef HSVSHORTTEXT
+
+typedef struct {
+Bool  DescriptorValid;
+struct HsvPrivateInfo {
+#define HSVPRIVATEINFO(field, typ, declfunc, parfunc, secfunc, bits, name) \
+		decl_##declfunc(typ, field, 0)
+#include "HsvDVBSIDescriptorParser.dd"
+} PrivateInfo;
+
+} HsvPrivate_Data_SpecifierDescriptor; /** koala type HsvPrivate_Data_SpecifierDescriptor **/
+#undef HSVPRIVATEINFO
+
+typedef struct {
+Bool  DescriptorValid;
+struct HsvAC3Header {
+#define HSVAC3HEADER(field, typ, declfunc, parfunc, secfunc, bits, name) \
+		decl_##declfunc(typ, field, 0)
+#include "HsvDVBSIDescriptorParser.dd"
+} AC3Header;
+
+
+
+struct HsvAC3Info {
+#define HSVAC3INFO(field, typ, declfunc, parfunc, secfunc, bits, name) \
+		decl_##declfunc(typ, field, 0)
+#include "HsvDVBSIDescriptorParser.dd"
+} AC3Info;
+
+int NumIgnoreStruct;
+struct HsvIgnoreStruct {
+#define HSVIGNORESTRUCT(field, typ, declfunc, parfunc, secfunc, bits, name) \
+		decl_##declfunc(typ, field, 0)
+#include "HsvDVBSIDescriptorParser.dd"
+} IgnoreStruct[1];
+
+} HsvAC3Descriptor; /** koala type HsvAC3Descriptor **/
+
+#undef HSVAC3INFO
+#undef HSVAC3HEADER
+#undef HSVIGNORESTRUCT
+
+typedef struct {
+Bool  DescriptorValid;
+struct HsvNetworkName {
+#define HSVNETWORKNAME(field, typ, declfunc, parfunc, secfunc, bits, name) \
+		decl_##declfunc(typ, field, 0)
+#include "HsvDVBSIDescriptorParser.dd"
+int NumNwNameString;
+struct HsvNwNameString {
+#define HSVNWNAMESTRING(field, typ, declfunc, parfunc, secfunc, bits, name) \
+		decl_##declfunc(typ, field, 0)
+#include "HsvDVBSIDescriptorParser.dd"
+} NwNameString[68];
+
+} NetworkName;
+
+} HsvNetwork_NameDescriptor; /** koala type HsvNetwork_NameDescriptor **/
+
+#undef HSVNETWORKNAME
+#undef HSVNWNAMESTRING
+
+typedef struct {
+Bool  DescriptorValid;
+int NumVBIDataInfo;
+struct HsvVBIDataInfo {
+#define HSVVBIDATAINFO(field, typ, declfunc, parfunc, secfunc, bits, name) \
+		decl_##declfunc(typ, field, 0)
+#include "HsvDVBSIDescriptorParser.dd"
+int NumVBIDataHeaderInfo;
+struct HsvVBIDataHeaderInfo {
+#define HSVVBIDATAHEADERINFO(field, typ, declfunc, parfunc, secfunc, bits, name) \
+		decl_##declfunc(typ, field, 0)
+#include "HsvDVBSIDescriptorParser.dd"
+} VBIDataHeaderInfo;
+
+#undef HSVVBIDATAINFO
+#undef HSVVBIDATAHEADERINFO
+
+
+int NumVBIServiceDesc;
+struct HsvVBIServiceDesc {
+#define HSVVBISERVICEDESC(field, typ, declfunc, parfunc, secfunc, bits, name) \
+		decl_##declfunc(typ, field, 0)
+#include "HsvDVBSIDescriptorParser.dd"
+} VBIServiceDesc[10];
+
+} VBIDataInfo[10];
+
+} HsvVBI_dataDescriptor; /** koala type HsvVBI_dataDescriptor **/
+#undef HSVVBISERVICEDESC
+
+typedef struct {
+Bool  DescriptorValid;
+int NumVBITeletextInfo;
+struct HsvVBITeletextInfo {
+#define HSVVBITELETEXTINFO(field, typ, declfunc, parfunc, secfunc, bits, name) \
+		decl_##declfunc(typ, field, 0)
+#include "HsvDVBSIDescriptorParser.dd"
+} VBITeletextInfo[10];
+
+} HsvVBI_teletextDescriptor; /** koala type HsvVBI_teletextDescriptor **/
+#undef HSVVBITELETEXTINFO
+
+
+typedef struct {
+Bool  DescriptorValid;
+struct HsvServiceDesc {
+#define HSVSERVICEDESC(field, typ, declfunc, parfunc, secfunc, bits, name) \
+		decl_##declfunc(typ, field, 0)
+#include "HsvDVBSIDescriptorParser.dd"
+} ServiceDesc;
+
+int NumSvcProviderChar;
+struct HsvSvcProviderChar {
+#define HSVSVCPROVIDERCHAR(field, typ, declfunc, parfunc, secfunc, bits, name) \
+		decl_##declfunc(typ, field, 0)
+#include "HsvDVBSIDescriptorParser.dd"
+} SvcProviderChar[30];
+
+#undef HSVSERVICEDESC
+#undef HSVSVCPROVIDERCHAR
+
+struct HsvServiceName {
+#define HSVSERVICENAME(field, typ, declfunc, parfunc, secfunc, bits, name) \
+		decl_##declfunc(typ, field, 0)
+#include "HsvDVBSIDescriptorParser.dd"
+} ServiceName;
+
+int NumSvcChar;
+struct HsvSvcChar {
+#define HSVSVCCHAR(field, typ, declfunc, parfunc, secfunc, bits, name) \
+		decl_##declfunc(typ, field, 0)
+#include "HsvDVBSIDescriptorParser.dd"
+} SvcChar[32];
+
+} HsvServiceDescriptor; /** koala type HsvServiceDescriptor **/
+#undef HSVSVCCHAR
+
+
+typedef struct {
+Bool  DescriptorValid;
+struct HsvStreamIdInfo {
+#define HSVSTREAMIDINFO(field, typ, declfunc, parfunc, secfunc, bits, name) \
+		decl_##declfunc(typ, field, 0)
+#include "HsvDVBSIDescriptorParser.dd"
+} StreamIdInfo;
+
+} HsvStream_IdentifierDescriptor; /** koala type HsvStream_IdentifierDescriptor **/
+#undef HSVSTREAMIDINFO
+
+
+
+typedef struct {
+Bool  DescriptorValid;
+int NumCAIDInfo;
+struct HsvCAIDInfo {
+#define HSVCAIDINFO(field, typ, declfunc, parfunc, secfunc, bits, name) \
+		decl_##declfunc(typ, field, 0)
+#include "HsvDVBSIDescriptorParser.dd"
+} CAIDInfo[10];
+
+} HsvCA_identifierDescriptor; /** koala type HsvCA_identifierDescriptor **/
+#undef HSVCAIDINFO
+
+
+typedef struct {
+Bool  DescriptorValid;
+int NumContentInfo;
+struct HsvContentInfo {
+#define HSVCONTENTINFO(field, typ, declfunc, parfunc, secfunc, bits, name) \
+		decl_##declfunc(typ, field, 0)
+#include "HsvDVBSIDescriptorParser.dd"
+} ContentInfo[10];
+
+} HsvContentDescriptor; /** koala type HsvContentDescriptor **/
+#undef HSVCONTENTINFO
+
+typedef struct {
+Bool  DescriptorValid;
+int NumRatingInfo;
+struct HsvRatingInfo {
+#define HSVRATINGINFO(field, typ, declfunc, parfunc, secfunc, bits, name) \
+		decl_##declfunc(typ, field, 0)
+#include "HsvDVBSIDescriptorParser.dd"
+} RatingInfo[10];
+
+} HsvParental_RatingDescriptor; /** koala type HsvParental_RatingDescriptor **/
+
+#undef HSVRATINGINFO
+
+typedef struct {
+Bool  DescriptorValid;
+int NumTeletextInfo;
+struct HsvTeletextInfo {
+#define HSVTELETEXTINFO(field, typ, declfunc, parfunc, secfunc, bits, name) \
+		decl_##declfunc(typ, field, 0)
+#include "HsvDVBSIDescriptorParser.dd"
+} TeletextInfo[10];
+
+} HsvTeletextDescriptor; /** koala type HsvTeletextDescriptor **/
+
+#undef HSVTELETEXTINFO
+
+typedef struct {
+Bool  DescriptorValid;
+int NumTimeOffset;
+struct HsvTimeOffset {
+#define HSVTIMEOFFSET(field, typ, declfunc, parfunc, secfunc, bits, name) \
+		decl_##declfunc(typ, field, 0)
+#include "HsvDVBSIDescriptorParser.dd"
+} TimeOffset[50];
+
+} HsvLocalTimeOffsetDescriptor; /** koala type HsvLocalTimeOffsetDescriptor **/
+#undef HSVTIMEOFFSET
+
+typedef struct {
+Bool  DescriptorValid;
+int NumSubtilingInfo;
+struct HsvSubtilingInfo {
+#define HSVSUBTILINGINFO(field, typ, declfunc, parfunc, secfunc, bits, name) \
+		decl_##declfunc(typ, field, 0)
+#include "HsvDVBSIDescriptorParser.dd"
+} SubtilingInfo[10];
+
+} HsvSubtitlingDescriptor; /** koala type HsvSubtitlingDescriptor **/
+
+#undef HSVSUBTILINGINFO
+
+typedef struct {
+Bool  DescriptorValid;
+int NumDBIDWrapper;
+struct HsvData_broadcast_idWrapper {
+struct HsvDBID_Header {
+#define HSVDBID_HEADER(field, typ, declfunc, parfunc, secfunc, bits, name) \
+		decl_##declfunc(typ, field, 0)
+#include "HsvDVBSIDescriptorParser.dd"
+} DBID_Header;
+/*struct HsvDBID_Data {
+#define HSVDBID_DATA(field, typ, declfunc, parfunc, secfunc, bits, name) \
+		decl_##declfunc(typ, field, 0)
+#include "HsvDVBSIDescriptorParser.dd"
+} DBID_Data;*/
+} Data_broadcastWrapper [ 5 ];
+} HsvData_broadcast_idDescriptor; /** koala type HsvData_broadcast_idDescriptor **/
+
+
+typedef struct {
+Bool  DescriptorValid;
+int NumLogical_Channel_Info;
+struct HsvLogical_Channel_Info {
+#define HSVLOGICAL_CHANNEL_INFO(field, typ, declfunc, parfunc, secfunc, bits, name) \
+		decl_##declfunc(typ, field, 0)
+#include "HsvDVBSIDescriptorParser.dd"
+} Logical_Channel_Info[100];
+
+int NumDummyLCN;
+struct HsvDummyLCN {
+#define HSVDUMMYLCN(field, typ, declfunc, parfunc, secfunc, bits, name) \
+		decl_##declfunc(typ, field, 0)
+#include "HsvDVBSIDescriptorParser.dd"
+} DummyLCN[1];
+
+} HsvLogical_ChannelDescriptor; /** koala type HsvLogical_ChannelDescriptor **/
+
+#undef HSVLOGICAL_CHANNEL_INFO
+#undef HSVDUMMYLCN
+
+typedef struct 
+{
+    Bool  DescriptorValid;
+}HsvGenericDescriptor;
+
+typedef struct {
+Bool  DescriptorValid;
+int   AACTypeFlag;
+int   AACType;
+int   AACProfileAndLevel;
+} HsvAACDescriptor; /** koala type HsvAACDescriptor **/
+
+typedef struct {
+Bool  DescriptorValid;
+int   level_idc;
+int   profile_idc;
+} HsvAVCDescriptor; /** koala type HsvAVCDescriptor **/
+
+typedef struct {
+Bool  DescriptorValid;
+int	  component_flag;
+int	  bsid_flag;
+int	  mainid_flag;
+int	  asvc_flag;
+int	  mixinfoexists;
+int	  substream1_flag;
+int	  substream2_flag;
+int	  substream3_flag;
+Nat8  bsid;
+Nat8  mainid;
+Nat8  asvc;
+Nat8  substream1;
+Nat8  substream2;
+Nat8  substream3;
+
+int	  component_type;
+
+} HsvAC3PlusDescriptor; /** koala type HsvAC3PlusDescriptor **/
+
+typedef struct{
+Bool  DescriptorValid;
+int NumCDS;
+struct CDS {
+#define HSVCABLEDELSYS(field, typ, declfunc, parfunc, secfunc, bits, name) \
+		decl_##declfunc(typ, field, 0)
+#include "HsvDVBSIDescriptorParser.dd"
+} CDS[10];
+
+} HsvCable_Del_SysDescriptor; /** koala type HsvCable_Del_SysDescriptor **/
+#undef HSVCABLEDELSYS
+
+
+
+typedef struct{
+Bool  DescriptorValid;
+
+struct HsvFreqListHeader {
+#define HSVFREQLISTHEADER(field, typ, declfunc, parfunc, secfunc, bits, name) \
+		decl_##declfunc(typ, field, 0)
+#include "HsvDVBSIDescriptorParser.dd"
+} FreqListHeader;
+
+int NumFreqListCfs;
+struct HsvFreqListCfs {
+#define HSVFREQLISTCFS(field, typ, declfunc, parfunc, secfunc, bits, name) \
+		decl_##declfunc(typ, field, 0)
+#include "HsvDVBSIDescriptorParser.dd"
+} FreqListCfs[10];
+
+} HsvFreq_ListDescriptor;                 
+
+#undef HSVFREQLISTHEADER
+#undef HSVFREQLISTCFS
+typedef struct{
+Bool DescriptorValid;
+int NumLogicalChannel2Wrapper;
+struct HsvLogicalChannel2Wrapper {
+struct HsvLCNv2Header1{
+#define HSVLCNV2HEADER1(field, typ, declfunc, parfunc, secfunc, bits, name) \
+		decl_##declfunc(typ, field, 0)
+#include "HsvDVBSIDescriptorParser.dd"
+} LCNv2Header1;
+
+struct HsvLCNv2Header2{
+#define HSVLCNV2HEADER2(field, typ, declfunc, parfunc, secfunc, bits, name) \
+		decl_##declfunc(typ, field, 0)
+#include "HsvDVBSIDescriptorParser.dd"
+} LCNv2Header2;
+
+int NumLCN2Info;
+struct HsvLCN2Info{
+#define HSVLCN2INFO(field, typ, declfunc, parfunc, secfunc, bits, name) \
+		decl_##declfunc(typ, field, 0)
+#include "HsvDVBSIDescriptorParser.dd"
+} LCN2Info[100];
+
+}LogicalChannel2Wrapper[MAX_LCN2_CHANNEL_LISTS];
+} HsvLogical_Channel2Descriptor;
+
+#undef HSVLCNV2HEADER1
+#undef HSVLCNV2HEADER2
+#undef HSVLCN2INFO
+
+typedef struct {
+Bool  DescriptorValid;
+int NumHDSLCNInfo;
+struct HsvHDSLCNInfo {
+#define HSVHDSLCNINFO(field, typ, declfunc, parfunc, secfunc, bits, name) \
+		decl_##declfunc(typ, field, 0)
+#include "HsvDVBSIDescriptorParser.dd"
+} HDSLCNInfo[100];
+
+} HsvHDSimulcastLCNDescriptor;
+
+#undef HSVHDSLCNINFO
+
+typedef struct {
+Bool  DescriptorValid;
+int NumSRVCATRBInfo;
+struct HsvSRVCATRBInfo {
+#define HSVSRVCATRBDESCINFO(field, typ, declfunc, parfunc, secfunc, bits, name) \
+		decl_##declfunc(typ, field, 0)
+#include "HsvDVBSIDescriptorParser.dd"
+} SRVCATRBInfo[100];
+
+} HsvServiceAttributeDescriptor;
+
+#undef HSVSRVCATRBDESCINFO
+
+typedef struct {
+Bool  DescriptorValid;
+Bool  Mix_Type;
+Nat8  Editorial_Classification;
+Nat8  Reserved;
+Bool  Language_Code_Present;
+Nat32 ISO_639_Language_Code;
+} HsvSupplementaryAudioDescriptor; /** koala type HsvSupplementaryAudioDescriptor **/
+#endif 

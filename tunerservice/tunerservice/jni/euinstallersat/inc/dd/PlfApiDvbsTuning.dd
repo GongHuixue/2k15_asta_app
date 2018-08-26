@@ -1,0 +1,69 @@
+/*
+ *  Copyright(C) 2003 Koninklijke Philips Electronics N.V.,
+ *  All Rights Reserved.
+ *  This  source code and any compilation or derivative thereof is the
+ *  proprietary information of Koninklijke Philips Electronics N.V.
+ *  and is confidential in nature.
+ *  Under no circumstances is this software to be exposed to or placed
+ *  under an Open Source License of any type without the expressed
+ *  written permission of Koninklijke Philips Electronics N.V.
+ *
+ *          %name: PlfApiDvbsTuning.dd %
+ *       %version: FUSIONR3Ext_TVG13.1.1 %
+ * %date_modified: Thu Sep 18 18:13:01 2008 %
+ *    %derived_by: anuma %
+ */
+
+
+#ifndef _PLFAPIDVBSTUNING_DD_
+#define _PLFAPIDVBSTUNING_DD_
+
+/** koala group PlfApiDvbsTuning **/
+/** koala using infraglobals **/
+
+
+
+typedef struct HsvDvbSParams
+{
+  int constel;
+  int symbolrate;
+  int polarization;
+
+  int lockstatus;
+  int lnbnumber;
+
+  int sqi;
+  int ssi;
+  int ber;
+  
+  Nat8 activeplp;
+  int plpcount;
+  Nat8 plpids[256];
+} HsvDvbSParams; /** koala type HsvDvbSParams **/
+
+typedef struct  HsvDvbSLNBConfig
+{
+  int LNBType;
+  int BurstSelect;
+  int LNBNumber;
+  int Tone;
+  int LUserBandNumber;    
+  int LUserBandFrequency; 
+} HsvDvbSLNBConfig; /** koala type HsvDvbSLNBConfig **/
+
+typedef struct  HsvDvbSUnicableConfig
+{
+  int UserBandNumber;
+  int UserBandFrequency;
+} HsvDvbSUnicableConfig; /** koala type HsvDvbSUnicableConfig **/
+
+
+typedef struct  HsvDvbSCustomLNBConfig
+{
+  int Custom_High_LO_Value;
+  int Custom_Low_LO_Value;
+  int CustomPow;
+} HsvDvbSCustomLNBConfig; /** koala type HsvDvbSCustomLNBConfig **/
+
+
+#endif

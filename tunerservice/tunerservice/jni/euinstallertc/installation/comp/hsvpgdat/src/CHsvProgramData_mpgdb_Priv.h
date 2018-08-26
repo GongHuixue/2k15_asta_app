@@ -1,0 +1,661 @@
+#ifndef  _CHSVPROGRAMDATA_MPGDB_PRIV_H
+#define  _CHSVPROGRAMDATA_MPGDB_PRIV_H 
+
+#include <InfraGlobals.h>
+#include <provreq.h>
+#include <IHsvChannelMapOperation.h>
+#include <IHsvFlashFileSystemResources.h>
+#include <IHsvProgramDatabase.h>
+#include <IHsvProgramDatabaseConstants.h>
+#include <IHsvPower.h>
+#include <IHsvProgramDataDiv.h>
+#include <IHsvChannelLibReturnCodes.h>
+#include <IProdApiFlashFileSystemDirectoryExEx.h>
+#include <IHsvProgramDataControl.h>
+#include <IHsvProgramDataControl3.h>
+#include <IHsvProgramDataNotify.h>
+#include <IHsvChanlibPosixLight.h>
+#include <IHsvChannelLibSyncEvents.h>
+#include <IRealTimeKernel.h>
+#include <IHsvDvbSiSortedTableIds.h>
+#include <IHsvSortedTable2.h>
+#include <IHsvSortedTableConfigurationEx.h>
+#include <IHsvTcSystemSettings.h>
+#include <CTCMwBase.h>
+
+
+class CHsvProgramData_mpgdb_Priv;
+#define CLASSSCOPE CHsvProgramData_mpgdb_Priv::
+#include "locals_mpgdb.h"
+
+class CHsvProgramData_mpgdb_Priv : public CTCMwBase
+{
+public:
+virtual ~CHsvProgramData_mpgdb_Priv();
+
+private:
+void params__init(void);
+Bool  mCheckForUpdatesDigitalTS (void *Data, int Index, int *NoItemsChangedDigitalTS, int *ItemIDs);
+Bool  mCheckForUpdatesDigitalTSInTempDb (int SubTableId, void *Data, int *NoItemsChangedDigitalTS, int *ItemIDs);
+
+private:
+#define MEMBERVARS
+#include "locals_mpgdb.h"
+#undef MEMBERVARS
+//Provided interfaces
+static int Preparecount;
+private:
+IHsvChannelMapOperationImpl(CHsvProgramData_mpgdb_Priv,chmapop);
+IHsvFlashFileSystemResourcesImpl(CHsvProgramData_mpgdb_Priv,ffsres);
+IHsvProgramDatabaseImpl(CHsvProgramData_mpgdb_Priv,ipgdb);
+IHsvProgramDatabaseConstantsImpl(CHsvProgramData_mpgdb_Priv,ipgdbconst);
+IHsvPowerImpl(CHsvProgramData_mpgdb_Priv,ipgdbpow);
+IHsvSortedTableConfigurationExImpl(CHsvProgramData_mpgdb_Priv,freqmaptableconf);
+IHsvSortedTableConfigurationExImpl(CHsvProgramData_mpgdb_Priv,tstableconf);
+IHsvSortedTableConfigurationExImpl(CHsvProgramData_mpgdb_Priv,digsrvtableconf);
+IHsvSortedTableConfigurationExImpl(CHsvProgramData_mpgdb_Priv,analogtableconf);
+IHsvSortedTableConfigurationExImpl(CHsvProgramData_mpgdb_Priv,presettableconf);
+IHsvSortedTableConfigurationExImpl(CHsvProgramData_mpgdb_Priv,tempfreqmaptableconf);
+IHsvSortedTableConfigurationExImpl(CHsvProgramData_mpgdb_Priv,temptstableconf);
+IHsvSortedTableConfigurationExImpl(CHsvProgramData_mpgdb_Priv,tempdigsrvtableconf);
+IHsvSortedTableConfigurationExImpl(CHsvProgramData_mpgdb_Priv,tempanalogtableconf);
+IHsvSortedTableConfigurationExImpl(CHsvProgramData_mpgdb_Priv,temppresettableconf);
+IHsvSortedTableConfigurationExImpl(CHsvProgramData_mpgdb_Priv,backupfreqmaptableconf);
+IHsvSortedTableConfigurationExImpl(CHsvProgramData_mpgdb_Priv,backuptstableconf);
+IHsvSortedTableConfigurationExImpl(CHsvProgramData_mpgdb_Priv,backupdigsrvtableconf);
+IHsvSortedTableConfigurationExImpl(CHsvProgramData_mpgdb_Priv,backupanalogtableconf);
+IHsvSortedTableConfigurationExImpl(CHsvProgramData_mpgdb_Priv,backuppresettableconf);
+
+
+
+public:
+ProvidesInterface<IHsvChannelMapOperation>	chmapop;
+
+ProvidesInterface<IHsvFlashFileSystemResources>	ffsres;
+
+ProvidesInterface<IHsvProgramDatabase>	ipgdb;
+
+ProvidesInterface<IHsvProgramDatabaseConstants>	ipgdbconst;
+
+ProvidesInterface<IHsvPower>	ipgdbpow;
+ProvidesInterface<IHsvSortedTableConfigurationEx>	freqmaptableconf;
+ProvidesInterface<IHsvSortedTableConfigurationEx>	tstableconf;
+ProvidesInterface<IHsvSortedTableConfigurationEx>	digsrvtableconf;
+ProvidesInterface<IHsvSortedTableConfigurationEx>	analogtableconf;
+ProvidesInterface<IHsvSortedTableConfigurationEx>	presettableconf;
+ProvidesInterface<IHsvSortedTableConfigurationEx>	tempfreqmaptableconf;
+ProvidesInterface<IHsvSortedTableConfigurationEx>	temptstableconf;
+ProvidesInterface<IHsvSortedTableConfigurationEx>	tempdigsrvtableconf;
+ProvidesInterface<IHsvSortedTableConfigurationEx>	tempanalogtableconf;
+ProvidesInterface<IHsvSortedTableConfigurationEx>	temppresettableconf;
+ProvidesInterface<IHsvSortedTableConfigurationEx>	backupfreqmaptableconf;
+ProvidesInterface<IHsvSortedTableConfigurationEx>	backuptstableconf;
+ProvidesInterface<IHsvSortedTableConfigurationEx>	backupdigsrvtableconf;
+ProvidesInterface<IHsvSortedTableConfigurationEx>	backupanalogtableconf;
+ProvidesInterface<IHsvSortedTableConfigurationEx>	backuppresettableconf;
+
+
+//Required interfaces
+public:
+RequiresInterface<IHsvProgramDataDiv>	div;
+RequiresInterface<IHsvChannelLibReturnCodes>	err;
+RequiresInterface<IProdApiFlashFileSystemDirectoryExEx>	ffsdir;
+RequiresInterface<IHsvProgramDataControl>	pgctl;
+RequiresInterface<IHsvProgramDataControl3>	pgctl3;
+RequiresInterface<IHsvProgramDataNotify>	pgdatN;
+RequiresInterface<IHsvChanlibPosixLight>	rtk;
+RequiresInterface<IHsvChannelLibSyncEvents>	sync;
+RequiresInterface<IRealTimeKernel>		corertk;
+RequiresInterface<IHsvInstallationNotify> insN;
+RequiresInterface<IHsvSortedTable2>	srtdb2;
+RequiresInterface<IHsvDvbSiSortedTableIds>	srtdbids;
+RequiresInterface<IHsvTcSystemSettings>	sysset;
+
+public:
+CHsvProgramData_mpgdb_Priv():i__chmapop(this),i__ffsres(this),i__ipgdb(this),i__ipgdbconst(this),i__ipgdbpow(this),i__freqmaptableconf(this), i__tstableconf(this), i__digsrvtableconf(this), i__analogtableconf(this), i__presettableconf(this), i__tempfreqmaptableconf(this), i__temptstableconf(this), i__tempdigsrvtableconf(this), i__tempanalogtableconf(this), i__temppresettableconf(this),i__backupfreqmaptableconf(this), i__backuptstableconf(this), i__backupdigsrvtableconf(this), i__backupanalogtableconf(this), i__backuppresettableconf(this)
+{
+chmapop	=	&i__chmapop;
+ffsres	=	&i__ffsres;
+ipgdb	=	&i__ipgdb;
+ipgdbconst	=	&i__ipgdbconst;
+ipgdbpow	=	&i__ipgdbpow;
+freqmaptableconf	=	&i__freqmaptableconf;
+tstableconf			=	&i__tstableconf;
+digsrvtableconf		=	&i__digsrvtableconf;
+analogtableconf		=	&i__analogtableconf;
+presettableconf		=	&i__presettableconf;
+tempfreqmaptableconf=	&i__tempfreqmaptableconf;
+temptstableconf		=	&i__temptstableconf;
+tempdigsrvtableconf	=	&i__tempdigsrvtableconf;
+tempanalogtableconf	=	&i__tempanalogtableconf;
+temppresettableconf	=	&i__temppresettableconf;
+backupfreqmaptableconf=	&i__backupfreqmaptableconf;
+backuptstableconf		=	&i__backuptstableconf;
+backupdigsrvtableconf	=	&i__backupdigsrvtableconf;
+backupanalogtableconf	=	&i__backupanalogtableconf;
+backuppresettableconf	=	&i__backuppresettableconf;
+
+
+module__init();
+params__init();
+}
+
+};
+
+#ifdef GENERATE__LEGACY__DEFINES
+#define	ipgdb_SqliteDatabase 	IHsvProgramDatabase_SqliteDatabase
+#define	ipgdb_TempDatabase 		IHsvProgramDatabase_TempDatabase
+#define ipgdb_DatabaseModeNormal	IHsvProgramDatabase_DatabaseModeNormal
+#define ipgdb_DatabaseModeCam	IHsvProgramDatabase_DatabaseModeCam
+#define div_iPresent() (div.Present())
+#define div_DefaultSystemLanguage	div->DefaultSystemLanguage()
+#define div_OobSupported	div->OobSupported()
+#define div_NoOfMinorChannelsToStoreAntenna	div->NoOfMinorChannelsToStoreAntenna()
+#define div_NoOfMinorChannelsToStoreCable	div->NoOfMinorChannelsToStoreCable()
+#define div_MaxNoOfChannelsToStoreAntenna	div->MaxNoOfChannelsToStoreAntenna()
+#define div_MaxNoOfChannelsToStoreCable	div->MaxNoOfChannelsToStoreCable()
+#define div_MaxNoOfPrograms	div->MaxNoOfPrograms()
+#define div_PersistentMemoryFileVersion	div->PersistentMemoryFileVersion()
+#define div_DefaultTunerPresetFrequency	div->DefaultTunerPresetFrequency()
+#define div_HsvAntennaMajorTable	div->HsvAntennaMajorTable()
+#define div_HsvAntennaPtcTable	div->HsvAntennaPtcTable()
+#define div_HsvCableMajorTable	div->HsvCableMajorTable()
+#define div_HsvCablePtcTable	div->HsvCablePtcTable()
+#define div_HsvOobMajorTable	div->HsvOobMajorTable()
+#define div_HsvOobPtcTable	div->HsvOobPtcTable()
+#define div_PersistentMemUpdateTimeout	div->PersistentMemUpdateTimeout()
+#define div_CookieDefaultValue	div->CookieDefaultValue()
+#define div_EpgCookieDefaultValue	div->EpgCookieDefaultValue()
+#define div_TxtCookieDefaultValue	div->TxtCookieDefaultValue()
+#define div_AppsCookieDefaultValue	div->AppsCookieDefaultValue()
+#define div_ProgramViewForUS	div->ProgramViewForUS()
+#define div_ChannelNameLength	div->ChannelNameLength()
+#define div_HsvAntennaAnalogTable	div->HsvAntennaAnalogTable()
+#define div_HsvAntennaDigSrvcTable	div->HsvAntennaDigSrvcTable()
+#define div_HsvAntennaDigPtcTable	div->HsvAntennaDigPtcTable()
+#define div_HsvAntennaFreqMapTable	div->HsvAntennaFreqMapTable()
+#define div_HsvCableAnalogTable	div->HsvCableAnalogTable()
+#define div_HsvCableDigSrvcTable	div->HsvCableDigSrvcTable()
+#define div_HsvCableDigPtcTable	div->HsvCableDigPtcTable()
+#define div_HsvCableFreqMapTable	div->HsvCableFreqMapTable()
+#define div_MaxNoOfChannelsToStoreAntennaUserTable	div->MaxNoOfChannelsToStoreAntennaUserTable()
+#define div_MaxNoOfChannelsToStoreAntennaDigSrvcTable	div->MaxNoOfChannelsToStoreAntennaDigSrvcTable()
+#define div_MaxNoOfChannelsToStoreAntennaDigTSTable	div->MaxNoOfChannelsToStoreAntennaDigTSTable()
+#define div_MaxNoOfChannelsToStoreAntennaDigPtcTable	div->MaxNoOfChannelsToStoreAntennaDigPtcTable()
+#define div_MaxNoOfChannelsToStoreAntennaAnalogTable	div->MaxNoOfChannelsToStoreAntennaAnalogTable()
+#define div_MaxNoOfMultiplexsToStoreAntennaFreqMapTable	div->MaxNoOfMultiplexsToStoreAntennaFreqMapTable()
+#define div_MaxNoOfChannelsToStoreCableUserTable	div->MaxNoOfChannelsToStoreCableUserTable()
+#define div_MaxNoOfChannelsToStoreCableDigSrvcTable	div->MaxNoOfChannelsToStoreCableDigSrvcTable()
+#define div_MaxNoOfChannelsToStoreCableDigTSTable	div->MaxNoOfChannelsToStoreCableDigTSTable()
+#define div_MaxNoOfChannelsToStoreCableDigPtcTable	div->MaxNoOfChannelsToStoreCableDigPtcTable()
+#define div_MaxNoOfChannelsToStoreCableAnalogTable	div->MaxNoOfChannelsToStoreCableAnalogTable()
+#define div_MaxNoOfMultiplexsToStoreCableFreqMapTable	div->MaxNoOfMultiplexsToStoreCableFreqMapTable()
+#define div_AnalogOnly	div->AnalogOnly()
+#define div_InstallDuplicateTsids(medium)	div->InstallDuplicateTsids(medium)
+#define div_PrimaryFileVersion	div->PrimaryFileVersion()
+#define div_SecondaryFileVersion	div->SecondaryFileVersion()
+#define div_ChannelListVariant	div->ChannelListVariant()
+#define div_DefaultChannelList	IHsvProgramDataDiv_DefaultChannelList
+#define div_DualChannelList	IHsvProgramDataDiv_DualChannelList
+#define div_TripleChannelList	IHsvProgramDataDiv_TripleChannelList
+#define div_ChannelNameSource	div->ChannelNameSource()
+#define div_TripletKey(medium)	div->TripletKey(medium)
+#define div_ExtendedName	IHsvProgramDataDiv_ExtendedName
+#define div_ShortName	IHsvProgramDataDiv_ShortName
+#define div_Default	IHsvProgramDataDiv_Default
+#define div_UpdateChannelName(medium)	div->UpdateChannelName(medium)
+#define err_iPresent() (err.Present())
+#define err_Ok	IHsvChannelLibReturnCodes_Ok
+#define err_BadParameter	IHsvChannelLibReturnCodes_BadParameter
+#define err_ChannelTableEmpty	IHsvChannelLibReturnCodes_ChannelTableEmpty
+#define err_ChannelTableExhausted	IHsvChannelLibReturnCodes_ChannelTableExhausted
+#define err_MinorNumbersExhausted	IHsvChannelLibReturnCodes_MinorNumbersExhausted
+#define err_NotSupported	IHsvChannelLibReturnCodes_NotSupported
+#define err_FileError	IHsvChannelLibReturnCodes_FileError
+#define err_ChannelTableVersionError	IHsvChannelLibReturnCodes_ChannelTableVersionError
+#define err_ChannelTableCrcError	IHsvChannelLibReturnCodes_ChannelTableCrcError
+#define err_ChannelNotInstalled	IHsvChannelLibReturnCodes_ChannelNotInstalled
+#define err_NVMError	IHsvChannelLibReturnCodes_NVMError
+#define ffsdir_iPresent() (ffsdir.Present())
+#define ffsdir_AvPlf	IProdApiFlashFileSystemDirectoryExEx_AvPlf
+#define ffsdir_CeApps	IProdApiFlashFileSystemDirectoryExEx_CeApps
+#define ffsdir_CeDcp	IProdApiFlashFileSystemDirectoryExEx_CeDcp
+#define ffsdir_CeDvp	IProdApiFlashFileSystemDirectoryExEx_CeDvp
+#define ffsdir_CeGs	IProdApiFlashFileSystemDirectoryExEx_CeGs
+#define ffsdir_CeInfra	IProdApiFlashFileSystemDirectoryExEx_CeInfra
+#define ffsdir_CeSvc	IProdApiFlashFileSystemDirectoryExEx_CeSvc
+#define ffsdir_CeTlpod	IProdApiFlashFileSystemDirectoryExEx_CeTlpod
+#define ffsdir_CeTv	IProdApiFlashFileSystemDirectoryExEx_CeTv
+#define ffsdir_CeVlfw	IProdApiFlashFileSystemDirectoryExEx_CeVlfw
+#define ffsdir_Fac	IProdApiFlashFileSystemDirectoryExEx_Fac
+#define ffsdir_GfxMgr	IProdApiFlashFileSystemDirectoryExEx_GfxMgr
+#define ffsdir_HySvc	IProdApiFlashFileSystemDirectoryExEx_HySvc
+#define ffsdir_Infra	IProdApiFlashFileSystemDirectoryExEx_Infra
+#define ffsdir_JagDvp	IProdApiFlashFileSystemDirectoryExEx_JagDvp
+#define ffsdir_Juice	IProdApiFlashFileSystemDirectoryExEx_Juice
+#define ffsdir_NhApi	IProdApiFlashFileSystemDirectoryExEx_NhApi
+#define ffsdir_TvSvc	IProdApiFlashFileSystemDirectoryExEx_TvSvc
+#define ffsdir_TxPlf	IProdApiFlashFileSystemDirectoryExEx_TxPlf
+#define ffsdir_TxSvc	IProdApiFlashFileSystemDirectoryExEx_TxSvc
+#define ffsdir_CeHtv	IProdApiFlashFileSystemDirectoryExEx_CeHtv
+#define ffsdir_Tv520Avi	IProdApiFlashFileSystemDirectoryExEx_Tv520Avi
+#define ffsdir_CbMhg	IProdApiFlashFileSystemDirectoryExEx_CbMhg
+#define ffsdir_Tv	IProdApiFlashFileSystemDirectoryExEx_Tv
+#define ffsdir_TvPlf	IProdApiFlashFileSystemDirectoryExEx_TvPlf
+#define ffsdir_NumCustomers	IProdApiFlashFileSystemDirectoryExEx_NumCustomers
+#define ffsdir_SharedRes	IProdApiFlashFileSystemDirectoryExEx_SharedRes
+#define ffsdir_Ols	IProdApiFlashFileSystemDirectoryExEx_Ols
+#define ffsdir_Demo	IProdApiFlashFileSystemDirectoryExEx_Demo
+#define ffsdir_Home	IProdApiFlashFileSystemDirectoryExEx_Home
+#define ffsdir_Dfu	IProdApiFlashFileSystemDirectoryExEx_Dfu
+#define ffsdir_Upg	IProdApiFlashFileSystemDirectoryExEx_Upg
+#define ffsdir_Broadcast	IProdApiFlashFileSystemDirectoryExEx_Broadcast
+#define ffsdir_ReadOnce	IProdApiFlashFileSystemDirectoryExEx_ReadOnce
+#define ffsdir_ReadUpgrade	IProdApiFlashFileSystemDirectoryExEx_ReadUpgrade
+#define ffsdir_ReadWrite	IProdApiFlashFileSystemDirectoryExEx_ReadWrite
+#define ffsdir_ReadRFS	IProdApiFlashFileSystemDirectoryExEx_ReadRFS
+#define ffsdir_Boot	IProdApiFlashFileSystemDirectoryExEx_Boot
+#define ffsdir_Data	IProdApiFlashFileSystemDirectoryExEx_Data
+#define ffsdir_NumPaths	IProdApiFlashFileSystemDirectoryExEx_NumPaths
+#define ffsdir_MaxStringLength	IProdApiFlashFileSystemDirectoryExEx_MaxStringLength
+#define ffsdir_GetDirPath(direc,pathtype,subsystem)	ffsdir->GetDirPath(direc,pathtype,subsystem)
+#define ffsdir_GetDirPathLength(pathtype,subsystem)	ffsdir->GetDirPathLength(pathtype,subsystem)
+#define ffsdir_GetDirPathStr(direc,pathtype,subsystem)	ffsdir->GetDirPathStr(direc,pathtype,subsystem)
+#define ffsdir_GetDirPathLengthStr(pathtype,subsystem)	ffsdir->GetDirPathLengthStr(pathtype,subsystem)
+#define pgctl_iPresent() (pgctl.Present())
+#define pgctl_Terrestrial	IHsvProgramDataControl_Terrestrial
+#define pgctl_Cable	IHsvProgramDataControl_Cable
+#define pgctl_Satellite	IHsvProgramDataControl_Satellite
+#define pgctl_SetSelectedMedium(medium)	pgctl->SetSelectedMedium(medium)
+#define pgctl_GetSelectedMedium()	pgctl->GetSelectedMedium()
+#define pgctl_SetInstalledMedium(medium)	pgctl->SetInstalledMedium(medium)
+#define pgctl_GetInstalledMedium()	pgctl->GetInstalledMedium()
+#define pgctl_GetCurrentProgram(Channel)	pgctl->GetCurrentProgram(Channel)
+#define pgctl_SelectChannel(channel)	pgctl->SelectChannel(channel)
+#define pgctl_DirectTuning(param)	pgctl->DirectTuning(param)
+#define pgctl_GetUserParentalRating(Rating)	pgctl->GetUserParentalRating(Rating)
+#define pgctl_GetStreamParentalRating(Rating)	pgctl->GetStreamParentalRating(Rating)
+#define pgctl_IsChannelLocked(Status)	pgctl->IsChannelLocked(Status)
+#define pgctl_EnableSubtitle()	pgctl->EnableSubtitle()
+#define pgctl_DisableSubtitle()	pgctl->DisableSubtitle()
+#define pgctl_DisableClosedCaption()	pgctl->DisableClosedCaption()
+#define pgctl_EnableClosedCaption()	pgctl->EnableClosedCaption()
+#define pgctl_GetCCSettings(CCSetting)	pgctl->GetCCSettings(CCSetting)
+#define pgctl3_iPresent() (pgctl3.Present())
+#define pgctl3_Terrestrial	IHsvProgramDataControl3_Terrestrial
+#define pgctl3_Cable	IHsvProgramDataControl3_Cable
+#define pgctl3_Satellite	IHsvProgramDataControl3_Satellite
+#define pgctl3_CcOn	IHsvProgramDataControl3_CcOn
+#define pgctl3_CcOff	IHsvProgramDataControl3_CcOff
+#define pgctl3_CcOnDuringMute	IHsvProgramDataControl3_CcOnDuringMute
+#define pgctl3_SubtitleOff	IHsvProgramDataControl3_SubtitleOff
+#define pgctl3_SubtitleOn	IHsvProgramDataControl3_SubtitleOn
+#define pgctl3_SubtitleOnDuringMute	IHsvProgramDataControl3_SubtitleOnDuringMute
+#define pgctl3_SelectionTypeNormal	IHsvProgramDataControl3_SelectionTypeNormal
+#define pgctl3_SelectionTypeQuite	IHsvProgramDataControl3_SelectionTypeQuite
+#define pgctl3_SelectionTypeNonDestructive	IHsvProgramDataControl3_SelectionTypeNonDestructive
+#define pgctl3_SelectionTypeQuiteNonDestructive	IHsvProgramDataControl3_SelectionTypeQuiteNonDestructive
+#define pgctl3_SetSelectedMedium(medium)	pgctl3->SetSelectedMedium(medium)
+#define pgctl3_GetSelectedMedium()	pgctl3->GetSelectedMedium()
+#define pgctl3_SetInstalledMedium(medium)	pgctl3->SetInstalledMedium(medium)
+#define pgctl3_GetInstalledMedium()	pgctl3->GetInstalledMedium()
+#define pgctl3_SelectChannel(seltype,channel)	pgctl3->SelectChannel(seltype,channel)
+#define pgctl3_DirectTuning(param)	pgctl3->DirectTuning(param)
+#define pgctl3_GetUserParentalRating(Rating)	pgctl3->GetUserParentalRating(Rating)
+#define pgctl3_GetStreamParentalRating(Rating)	pgctl3->GetStreamParentalRating(Rating)
+#define pgctl3_IsChannelLocked(Status)	pgctl3->IsChannelLocked(Status)
+#define pgctl3_EnableSubtitle()	pgctl3->EnableSubtitle()
+#define pgctl3_DisableSubtitle()	pgctl3->DisableSubtitle()
+#define pgctl3_DisableClosedCaption()	pgctl3->DisableClosedCaption()
+#define pgctl3_EnableClosedCaption()	pgctl3->EnableClosedCaption()
+#define pgctl3_GetCCSettings(CCSetting)	pgctl3->GetCCSettings(CCSetting)
+#define pgctl3_GetCurrentProgram(Channel)	pgctl3->GetCurrentProgram(Channel)
+#define pgctl3_EnableLocks(enable)	pgctl3->EnableLocks(enable)
+#define pgctl3_GetSubtitleSetting(SubtitleSetting)	pgctl3->GetSubtitleSetting(SubtitleSetting)
+#define pgctl3_GetCurrentPMTPID()	pgctl3->GetCurrentPMTPID()
+#define pgctl3_SetChannelUniqueNodeId(channel,node_id)	pgctl3->SetChannelUniqueNodeId(channel,node_id)
+#define pgctl3_GetCurrentSubtitleStatus(SubtitleType)	pgctl3->GetCurrentSubtitleStatus(SubtitleType)
+#define pgctl3_GetCurrentTeletextStatus(Present)	pgctl3->GetCurrentTeletextStatus(Present)
+#define pgctl3_GetCurrentVisuallyImpairedStatus(Present)	pgctl3->GetCurrentVisuallyImpairedStatus(Present)
+#define pgctl3_GetCurrentAudioLanguage(Language)	pgctl3->GetCurrentAudioLanguage(Language)
+#define pgctl3_GetCurrentSubtitleLanguage(Language)	pgctl3->GetCurrentSubtitleLanguage(Language)
+#define pgctl3_GetCurrentAudioType(AudioType)	pgctl3->GetCurrentAudioType(AudioType)
+#define pgctl3_GetCurrentSubtitleType(SubtitleType)	pgctl3->GetCurrentSubtitleType(SubtitleType)
+#define pgctl3_GetCurrentSatelliteName(SatelliteName)	pgctl3->GetCurrentSatelliteName(SatelliteName)
+#define pgctl3_SaveChannelMap(destdir,MapType)	pgctl3->SaveChannelMap(destdir,MapType)
+#define pgctl3_LoadChannelMap(sourcedir,MapType)	pgctl3->LoadChannelMap(sourcedir,MapType)
+#define pgdatN_iPresent() (pgdatN.Present())
+#define pgdatN_OnChannelAdded(channel)	pgdatN->OnChannelAdded(channel)
+#define pgdatN_OnChannelRemoved(channel)	pgdatN->OnChannelRemoved(channel)
+#define pgdatN_OnChannelUpdated(channel,attribute)	pgdatN->OnChannelUpdated(channel,attribute)
+#define pgdatN_OnChannelTableReset()	pgdatN->OnChannelTableReset()
+#define pgdatN_OnChannelTableChanged()	pgdatN->OnChannelTableChanged()
+#define pgdatN_OnChannelsRearranged(channel1,channel2)	pgdatN->OnChannelsRearranged(channel1,channel2)
+#define pgdatN_OnChannelTableUpdateStart()	pgdatN->OnChannelTableUpdateStart()
+#define pgdatN_OnChannelTableUpdateEnd(Reset)	pgdatN->OnChannelTableUpdateEnd(Reset)
+#define pgdatN_OnChannelsSwapped(channel1,channel2)	pgdatN->OnChannelsSwapped(channel1,channel2)
+#define rtk_iPresent() (rtk.Present())
+#define rtk_SemCreate(key)	rtk->SemCreate(key)
+#define rtk_SemRelease(fildes)	rtk->SemRelease(fildes)
+#define rtk_SemAcquire(fildes)	rtk->SemAcquire(fildes)
+#define sync_iPresent() (sync.Present())
+#define sync_EnableEvents(Status)	sync->EnableEvents(Status)
+#define sync_MasterEnableEvents(Status)	sync->MasterEnableEvents(Status)
+#define sync_OnInsert(tableid,data)	sync->OnInsert(tableid,data)
+#define sync_OnUpdate(tableid,data)	sync->OnUpdate(tableid,data)
+#define sync_OnDelete(tableid,data)	sync->OnDelete(tableid,data)
+#define ffsres_Directories	i__ffsres.m_Directories
+#define ffsres_Files	i__ffsres.m_Files
+#define ffsres_Size	i__ffsres.m_Size
+#define ffsres_FilesOpen	i__ffsres.m_FilesOpen
+#define ffsres_WriteRate	i__ffsres.m_WriteRate
+#define ffsres_ReadRate	i__ffsres.m_ReadRate
+#define ipgdbconst_Antenna	IHsvProgramDatabaseConstants_Antenna
+#define ipgdbconst_Cable	IHsvProgramDatabaseConstants_Cable
+#define ipgdbconst_TempAntenna	IHsvProgramDatabaseConstants_TempAntenna
+#define ipgdbconst_TempCable	IHsvProgramDatabaseConstants_TempCable
+#define ipgdbconst_Satellite	IHsvProgramDatabaseConstants_Satellite
+#define ipgdbconst_TempSatellite	IHsvProgramDatabaseConstants_TempSatellite
+#define ipgdbconst_Analog	IHsvProgramDatabaseConstants_Analog
+#define ipgdbconst_DigitalTS	IHsvProgramDatabaseConstants_DigitalTS
+#define ipgdbconst_DigitalService	IHsvProgramDatabaseConstants_DigitalService
+#define ipgdbconst_Preset	IHsvProgramDatabaseConstants_Preset
+#define ipgdbconst_FrequencyMapTable	IHsvProgramDatabaseConstants_FrequencyMapTable
+#define ipgdbconst_CurrentDigitalService	IHsvProgramDatabaseConstants_CurrentDigitalService
+#define ipgdbconst_CurrentDigitalTS	IHsvProgramDatabaseConstants_CurrentDigitalTS
+#define ipgdbconst_CurrentAnalog	IHsvProgramDatabaseConstants_CurrentAnalog
+#define ipgdbconst_CurrentPreset	IHsvProgramDatabaseConstants_CurrentPreset
+#define ipgdbconst_CurrentFrequencyMapTable	IHsvProgramDatabaseConstants_CurrentFrequencyMapTable
+#define ipgdbconst_SatInfo	IHsvProgramDatabaseConstants_SatInfo
+#define ipgdbconst_CurrentSatInfo	IHsvProgramDatabaseConstants_CurrentSatInfo
+#define corertk_iPresent() (corertk.Present())
+#define corertk_PrioHighest	corertk->PrioHighest()
+#define corertk_PrioHigh	corertk->PrioHigh()
+#define corertk_PrioAboveNormal	corertk->PrioAboveNormal()
+#define corertk_PrioNormal	corertk->PrioNormal()
+#define corertk_PrioBelowNormal	corertk->PrioBelowNormal()
+#define corertk_PrioLow	corertk->PrioLow()
+#define corertk_PrioLowest	corertk->PrioLowest()
+#define corertk_TskCreate(func,priority,stacksize)	corertk->TskCreate(func,priority,stacksize)
+#define corertk_TskCreateNoWatchdog(func,priority,stacksize)	corertk->TskCreateNoWatchdog(func,priority,stacksize)
+#define corertk_TskDelete(tsk)	corertk->TskDelete(tsk)
+#define corertk_TskCurrent()	corertk->TskCurrent()
+#define corertk_TskSetPriority(tsk,priority)	corertk->TskSetPriority(tsk,priority)
+#define corertk_TskSuspend(msecs)	corertk->TskSuspend(msecs)
+#define corertk_TskResume(tsk)	corertk->TskResume(tsk)
+#define corertk_TskBeginCriticalSection()	corertk->TskBeginCriticalSection()
+#define corertk_TskEndCriticalSection()	corertk->TskEndCriticalSection()
+#define corertk_TskFeedWatchdog()	corertk->TskFeedWatchdog()
+#define corertk_TskBoostWatchdog(seconds)	corertk->TskBoostWatchdog(seconds)
+#define corertk_TskWatchdogPeriod()	corertk->TskWatchdogPeriod()
+#define corertk_IsrBegin()	corertk->IsrBegin()
+#define corertk_IsrEnd()	corertk->IsrEnd()
+#define corertk_IsrEvtSend(tsk,evt)	corertk->IsrEvtSend(tsk,evt)
+#define corertk_IsrMbxSend(mbx,msg,param1,param2)	corertk->IsrMbxSend(mbx,msg,param1,param2)
+#define corertk_SemCreate()	corertk->SemCreate()
+#define corertk_SemCreateWithCeiling(ceiling)	corertk->SemCreateWithCeiling(ceiling)
+#define corertk_SemDelete(sem)	corertk->SemDelete(sem)
+#define corertk_SemAcquire(sem)	corertk->SemAcquire(sem)
+#define corertk_SemAcquireNoWait(sem)	corertk->SemAcquireNoWait(sem)
+#define corertk_SemRelease(sem)	corertk->SemRelease(sem)
+#define corertk_EvtCreate(tsk)	corertk->EvtCreate(tsk)
+#define corertk_EvtDelete(tsk,evt)	corertk->EvtDelete(tsk,evt)
+#define corertk_EvtSend(tsk,evt)	corertk->EvtSend(tsk,evt)
+#define corertk_EvtReceive(mask)	corertk->EvtReceive(mask)
+#define corertk_EvtReceiveNoWait(mask)	corertk->EvtReceiveNoWait(mask)
+#define corertk_EvtReceiveWait(mask,msecs)	corertk->EvtReceiveWait(mask,msecs)
+#define corertk_EvtGetReserved(tsk)	corertk->EvtGetReserved(tsk)
+#define corertk_TmrCreate(tsk,evt)	corertk->TmrCreate(tsk,evt)
+#define corertk_TmrDelete(tmr)	corertk->TmrDelete(tmr)
+#define corertk_TmrEvery(tmr,msecs)	corertk->TmrEvery(tmr,msecs)
+#define corertk_TmrOnce(tmr,msecs)	corertk->TmrOnce(tmr,msecs)
+#define corertk_TmrCancel(tmr)	corertk->TmrCancel(tmr)
+#define corertk_TmrTime()	corertk->TmrTime()
+#define corertk_TmrResolution()	corertk->TmrResolution()
+#define corertk_MbxCreate()	corertk->MbxCreate()
+#define corertk_MbxDelete(mbx)	corertk->MbxDelete(mbx)
+#define corertk_MbxSend(mbx,msg,param1,param2)	corertk->MbxSend(mbx,msg,param1,param2)
+#define corertk_MbxReceive(mbx,msg)	corertk->MbxReceive(mbx,msg)
+#define corertk_MbxReceiveNoWait(mbx,msg)	corertk->MbxReceiveNoWait(mbx,msg)
+#define corertk_TlsCreate(size)	corertk->TlsCreate(size)
+#define srtdb2_iPresent() (srtdb2.Present())
+#define srtdb2_OperatorEqual	IHsvSortedTable2_OperatorEqual
+#define srtdb2_OperatorSmaller	IHsvSortedTable2_OperatorSmaller
+#define srtdb2_OperatorGreater	IHsvSortedTable2_OperatorGreater
+#define srtdb2_GetNoOfRecords(tableid)	srtdb2->GetNoOfRecords(tableid)
+#define srtdb2_Init(tableid)	srtdb2->Init(tableid)
+#define srtdb2_Insert(tableid,PrimaryKey,SecondaryKey,TeritiaryKey,QuaternaryKey,data)	srtdb2->Insert(tableid,PrimaryKey,SecondaryKey,TeritiaryKey,QuaternaryKey,data)
+#define srtdb2_Update(tableid,PrimaryKey,SecondaryKey,TeritiaryKey,QuaternaryKey,data)	srtdb2->Update(tableid,PrimaryKey,SecondaryKey,TeritiaryKey,QuaternaryKey,data)
+#define srtdb2_Delete(tableid,PrimaryKey,SecondaryKey,TeritiaryKey,QuaternaryKey)	srtdb2->Delete(tableid,PrimaryKey,SecondaryKey,TeritiaryKey,QuaternaryKey)
+#define srtdb2_SearchOnPrimaryKey(tableid,PrimaryKey,from,to)	srtdb2->SearchOnPrimaryKey(tableid,PrimaryKey,from,to)
+#define srtdb2_SearchOnPrimaryAndSecondaryKey(tableid,PrimaryKey,SecondaryKey,from,to)	srtdb2->SearchOnPrimaryAndSecondaryKey(tableid,PrimaryKey,SecondaryKey,from,to)
+#define srtdb2_QueryOnKey(tableid,PrimaryKey,SecondaryKey,TeritiaryKey,QuaternaryKey,data)	srtdb2->QueryOnKey(tableid,PrimaryKey,SecondaryKey,TeritiaryKey,QuaternaryKey,data)
+#define srtdb2_QueryOnIndex(tableid,index,data)	srtdb2->QueryOnIndex(tableid,index,data)
+#define srtdb2_SearchOnKey(tableid,PrimaryKey,SecondaryKey,TeritiaryKey,QuaternaryKey,index)	srtdb2->SearchOnKey(tableid,PrimaryKey,SecondaryKey,TeritiaryKey,QuaternaryKey,index)
+#define srtdb2_SearchOnKey2(tableid,PrimaryKey,SecondaryKey,TeritiaryKey,QuaternaryKey,op,index)	srtdb2->SearchOnKey2(tableid,PrimaryKey,SecondaryKey,TeritiaryKey,QuaternaryKey,op,index)
+#define srtdbids_FreqMapTable	 reinterpret_cast<int>(&i__freqmaptableconf)
+#define srtdbids_DigTsTable	 reinterpret_cast<int>(&i__tstableconf)
+#define srtdbids_DigSrvTable	 reinterpret_cast<int>(&i__digsrvtableconf)
+#define srtdbids_AnalogTable	 reinterpret_cast<int>(&i__analogtableconf)
+#define srtdbids_PresetTable	 reinterpret_cast<int>(&i__presettableconf)
+#define srtdbids_TempFreqMapTable	 reinterpret_cast<int>(&i__tempfreqmaptableconf)
+#define srtdbids_TempDigTsTable	 reinterpret_cast<int>(&i__temptstableconf)
+#define srtdbids_TempDigSrvTable	 reinterpret_cast<int>(&i__tempdigsrvtableconf)
+#define srtdbids_TempAnalogTable	 reinterpret_cast<int>(&i__tempanalogtableconf)
+#define srtdbids_TempPresetTable	 reinterpret_cast<int>(&i__temppresettableconf)
+#define srtdbids_BackupFreqMapTable	 reinterpret_cast<int>(&i__backupfreqmaptableconf)
+#define srtdbids_BackupDigTsTable	 reinterpret_cast<int>(&i__backuptstableconf)
+#define srtdbids_BackupDigSrvTable	 reinterpret_cast<int>(&i__backupdigsrvtableconf)
+#define srtdbids_BackupAnalogTable	 reinterpret_cast<int>(&i__backupanalogtableconf)
+#define srtdbids_BackupPresetTable	 reinterpret_cast<int>(&i__backuppresettableconf)
+#define freqmaptableconf_MaxElements	i__freqmaptableconf.m_MaxElements
+#define freqmaptableconf_ElementSize	i__freqmaptableconf.m_ElementSize
+#define freqmaptableconf_ThreadSafe	i__freqmaptableconf.m_ThreadSafe
+#define freqmaptableconf_Primary	IHsvSortedTableConfigurationEx_Primary
+#define freqmaptableconf_Secondary	IHsvSortedTableConfigurationEx_Secondary
+#define freqmaptableconf_Teritiary	IHsvSortedTableConfigurationEx_Teritiary
+#define freqmaptableconf_Quaternary	IHsvSortedTableConfigurationEx_Quaternary
+#define freqmaptableconf_SortCriteria	i__freqmaptableconf.m_SortCriteria
+#define freqmaptableconf_SmallerKey	IHsvSortedTableConfigurationEx_SmallerKey
+#define freqmaptableconf_Equal	IHsvSortedTableConfigurationEx_Equal
+#define freqmaptableconf_BiggerKey	IHsvSortedTableConfigurationEx_BiggerKey
+#define tstableconf_MaxElements	i__tstableconf.m_MaxElements
+#define tstableconf_ElementSize	i__tstableconf.m_ElementSize
+#define tstableconf_ThreadSafe	i__tstableconf.m_ThreadSafe
+#define tstableconf_Primary	IHsvSortedTableConfigurationEx_Primary
+#define tstableconf_Secondary	IHsvSortedTableConfigurationEx_Secondary
+#define tstableconf_Teritiary	IHsvSortedTableConfigurationEx_Teritiary
+#define tstableconf_Quaternary	IHsvSortedTableConfigurationEx_Quaternary
+#define tstableconf_SortCriteria	i__tstableconf.m_SortCriteria
+#define tstableconf_SmallerKey	IHsvSortedTableConfigurationEx_SmallerKey
+#define tstableconf_Equal	IHsvSortedTableConfigurationEx_Equal
+#define tstableconf_BiggerKey	IHsvSortedTableConfigurationEx_BiggerKey
+#define digsrvtableconf_MaxElements	i__digsrvtableconf.m_MaxElements
+#define digsrvtableconf_ElementSize	i__digsrvtableconf.m_ElementSize
+#define digsrvtableconf_ThreadSafe	i__digsrvtableconf.m_ThreadSafe
+#define digsrvtableconf_Primary	IHsvSortedTableConfigurationEx_Primary
+#define digsrvtableconf_Secondary	IHsvSortedTableConfigurationEx_Secondary
+#define digsrvtableconf_Teritiary	IHsvSortedTableConfigurationEx_Teritiary
+#define digsrvtableconf_Quaternary	IHsvSortedTableConfigurationEx_Quaternary
+#define digsrvtableconf_SortCriteria	i__digsrvtableconf.m_SortCriteria
+#define digsrvtableconf_SmallerKey	IHsvSortedTableConfigurationEx_SmallerKey
+#define digsrvtableconf_Equal	IHsvSortedTableConfigurationEx_Equal
+#define digsrvtableconf_BiggerKey	IHsvSortedTableConfigurationEx_BiggerKey
+#define analogtableconf_MaxElements	i__analogtableconf.m_MaxElements
+#define analogtableconf_ElementSize	i__analogtableconf.m_ElementSize
+#define analogtableconf_ThreadSafe	i__analogtableconf.m_ThreadSafe
+#define analogtableconf_Primary	IHsvSortedTableConfigurationEx_Primary
+#define analogtableconf_Secondary	IHsvSortedTableConfigurationEx_Secondary
+#define analogtableconf_Teritiary	IHsvSortedTableConfigurationEx_Teritiary
+#define analogtableconf_Quaternary	IHsvSortedTableConfigurationEx_Quaternary
+#define analogtableconf_SortCriteria	i__analogtableconf.m_SortCriteria
+#define analogtableconf_SmallerKey	IHsvSortedTableConfigurationEx_SmallerKey
+#define analogtableconf_Equal	IHsvSortedTableConfigurationEx_Equal
+#define analogtableconf_BiggerKey	IHsvSortedTableConfigurationEx_BiggerKey
+#define presettableconf_MaxElements	i__presettableconf.m_MaxElements
+#define presettableconf_ElementSize	i__presettableconf.m_ElementSize
+#define presettableconf_ThreadSafe	i__presettableconf.m_ThreadSafe
+#define presettableconf_Primary	IHsvSortedTableConfigurationEx_Primary
+#define presettableconf_Secondary	IHsvSortedTableConfigurationEx_Secondary
+#define presettableconf_Teritiary	IHsvSortedTableConfigurationEx_Teritiary
+#define presettableconf_Quaternary	IHsvSortedTableConfigurationEx_Quaternary
+#define presettableconf_SortCriteria	i__presettableconf.m_SortCriteria
+#define presettableconf_SmallerKey	IHsvSortedTableConfigurationEx_SmallerKey
+#define presettableconf_Equal	IHsvSortedTableConfigurationEx_Equal
+#define presettableconf_BiggerKey	IHsvSortedTableConfigurationEx_BiggerKey
+#define tempfreqmaptableconf_MaxElements	i__tempfreqmaptableconf.m_MaxElements
+#define tempfreqmaptableconf_ElementSize	i__tempfreqmaptableconf.m_ElementSize
+#define tempfreqmaptableconf_ThreadSafe	i__tempfreqmaptableconf.m_ThreadSafe
+#define tempfreqmaptableconf_Primary	IHsvSortedTableConfigurationEx_Primary
+#define tempfreqmaptableconf_Secondary	IHsvSortedTableConfigurationEx_Secondary
+#define tempfreqmaptableconf_Teritiary	IHsvSortedTableConfigurationEx_Teritiary
+#define tempfreqmaptableconf_Quaternary	IHsvSortedTableConfigurationEx_Quaternary
+#define tempfreqmaptableconf_SortCriteria	i__tempfreqmaptableconf.m_SortCriteria
+#define tempfreqmaptableconf_SmallerKey	IHsvSortedTableConfigurationEx_SmallerKey
+#define tempfreqmaptableconf_Equal	IHsvSortedTableConfigurationEx_Equal
+#define tempfreqmaptableconf_BiggerKey	IHsvSortedTableConfigurationEx_BiggerKey
+#define temptstableconf_MaxElements	i__temptstableconf.m_MaxElements
+#define temptstableconf_ElementSize	i__temptstableconf.m_ElementSize
+#define temptstableconf_ThreadSafe	i__temptstableconf.m_ThreadSafe
+#define temptstableconf_Primary	IHsvSortedTableConfigurationEx_Primary
+#define temptstableconf_Secondary	IHsvSortedTableConfigurationEx_Secondary
+#define temptstableconf_Teritiary	IHsvSortedTableConfigurationEx_Teritiary
+#define temptstableconf_Quaternary	IHsvSortedTableConfigurationEx_Quaternary
+#define temptstableconf_SortCriteria	i__temptstableconf.m_SortCriteria
+#define temptstableconf_SmallerKey	IHsvSortedTableConfigurationEx_SmallerKey
+#define temptstableconf_Equal	IHsvSortedTableConfigurationEx_Equal
+#define temptstableconf_BiggerKey	IHsvSortedTableConfigurationEx_BiggerKey
+#define tempdigsrvtableconf_MaxElements	i__tempdigsrvtableconf.m_MaxElements
+#define tempdigsrvtableconf_ElementSize	i__tempdigsrvtableconf.m_ElementSize
+#define tempdigsrvtableconf_ThreadSafe	i__tempdigsrvtableconf.m_ThreadSafe
+#define tempdigsrvtableconf_Primary	IHsvSortedTableConfigurationEx_Primary
+#define tempdigsrvtableconf_Secondary	IHsvSortedTableConfigurationEx_Secondary
+#define tempdigsrvtableconf_Teritiary	IHsvSortedTableConfigurationEx_Teritiary
+#define tempdigsrvtableconf_Quaternary	IHsvSortedTableConfigurationEx_Quaternary
+#define tempdigsrvtableconf_SortCriteria	i__tempdigsrvtableconf.m_SortCriteria
+#define tempdigsrvtableconf_SmallerKey	IHsvSortedTableConfigurationEx_SmallerKey
+#define tempdigsrvtableconf_Equal	IHsvSortedTableConfigurationEx_Equal
+#define tempdigsrvtableconf_BiggerKey	IHsvSortedTableConfigurationEx_BiggerKey
+#define tempanalogtableconf_MaxElements	i__tempanalogtableconf.m_MaxElements
+#define tempanalogtableconf_ElementSize	i__tempanalogtableconf.m_ElementSize
+#define tempanalogtableconf_ThreadSafe	i__tempanalogtableconf.m_ThreadSafe
+#define tempanalogtableconf_Primary	IHsvSortedTableConfigurationEx_Primary
+#define tempanalogtableconf_Secondary	IHsvSortedTableConfigurationEx_Secondary
+#define tempanalogtableconf_Teritiary	IHsvSortedTableConfigurationEx_Teritiary
+#define tempanalogtableconf_Quaternary	IHsvSortedTableConfigurationEx_Quaternary
+#define tempanalogtableconf_SortCriteria	i__tempanalogtableconf.m_SortCriteria
+#define tempanalogtableconf_SmallerKey	IHsvSortedTableConfigurationEx_SmallerKey
+#define tempanalogtableconf_Equal	IHsvSortedTableConfigurationEx_Equal
+#define tempanalogtableconf_BiggerKey	IHsvSortedTableConfigurationEx_BiggerKey
+#define temppresettableconf_MaxElements	i__temppresettableconf.m_MaxElements
+#define temppresettableconf_ElementSize	i__temppresettableconf.m_ElementSize
+#define temppresettableconf_ThreadSafe	i__temppresettableconf.m_ThreadSafe
+#define temppresettableconf_Primary	IHsvSortedTableConfigurationEx_Primary
+#define temppresettableconf_Secondary	IHsvSortedTableConfigurationEx_Secondary
+#define temppresettableconf_Teritiary	IHsvSortedTableConfigurationEx_Teritiary
+#define temppresettableconf_Quaternary	IHsvSortedTableConfigurationEx_Quaternary
+#define temppresettableconf_SortCriteria	i__temppresettableconf.m_SortCriteria
+#define temppresettableconf_SmallerKey	IHsvSortedTableConfigurationEx_SmallerKey
+#define temppresettableconf_Equal	IHsvSortedTableConfigurationEx_Equal
+#define temppresettableconf_BiggerKey	IHsvSortedTableConfigurationEx_BiggerKey
+#define backupfreqmaptableconf_MaxElements	i__backupfreqmaptableconf.m_MaxElements
+#define backupfreqmaptableconf_ElementSize	i__backupfreqmaptableconf.m_ElementSize
+#define backupfreqmaptableconf_ThreadSafe	i__backupfreqmaptableconf.m_ThreadSafe
+#define backupfreqmaptableconf_Primary	IHsvSortedTableConfigurationEx_Primary
+#define backupfreqmaptableconf_Secondary	IHsvSortedTableConfigurationEx_Secondary
+#define backupfreqmaptableconf_Teritiary	IHsvSortedTableConfigurationEx_Teritiary
+#define backupfreqmaptableconf_Quaternary	IHsvSortedTableConfigurationEx_Quaternary
+#define backupfreqmaptableconf_SortCriteria	i__backupfreqmaptableconf.m_SortCriteria
+#define backupfreqmaptableconf_SmallerKey	IHsvSortedTableConfigurationEx_SmallerKey
+#define backupfreqmaptableconf_Equal	IHsvSortedTableConfigurationEx_Equal
+#define backupfreqmaptableconf_BiggerKey	IHsvSortedTableConfigurationEx_BiggerKey
+#define backuptstableconf_MaxElements	i__backuptstableconf.m_MaxElements
+#define backuptstableconf_ElementSize	i__backuptstableconf.m_ElementSize
+#define backuptstableconf_ThreadSafe	i__backuptstableconf.m_ThreadSafe
+#define backuptstableconf_Primary	IHsvSortedTableConfigurationEx_Primary
+#define backuptstableconf_Secondary	IHsvSortedTableConfigurationEx_Secondary
+#define backuptstableconf_Teritiary	IHsvSortedTableConfigurationEx_Teritiary
+#define backuptstableconf_Quaternary	IHsvSortedTableConfigurationEx_Quaternary
+#define backuptstableconf_SortCriteria	i__backuptstableconf.m_SortCriteria
+#define backuptstableconf_SmallerKey	IHsvSortedTableConfigurationEx_SmallerKey
+#define backuptstableconf_Equal	IHsvSortedTableConfigurationEx_Equal
+#define backuptstableconf_BiggerKey	IHsvSortedTableConfigurationEx_BiggerKey
+#define backupdigsrvtableconf_MaxElements	i__backupdigsrvtableconf.m_MaxElements
+#define backupdigsrvtableconf_ElementSize	i__backupdigsrvtableconf.m_ElementSize
+#define backupdigsrvtableconf_ThreadSafe	i__backupdigsrvtableconf.m_ThreadSafe
+#define backupdigsrvtableconf_Primary	IHsvSortedTableConfigurationEx_Primary
+#define backupdigsrvtableconf_Secondary	IHsvSortedTableConfigurationEx_Secondary
+#define backupdigsrvtableconf_Teritiary	IHsvSortedTableConfigurationEx_Teritiary
+#define backupdigsrvtableconf_Quaternary	IHsvSortedTableConfigurationEx_Quaternary
+#define backupdigsrvtableconf_SortCriteria	i__backupdigsrvtableconf.m_SortCriteria
+#define backupdigsrvtableconf_SmallerKey	IHsvSortedTableConfigurationEx_SmallerKey
+#define backupdigsrvtableconf_Equal	IHsvSortedTableConfigurationEx_Equal
+#define backupdigsrvtableconf_BiggerKey	IHsvSortedTableConfigurationEx_BiggerKey
+#define backupanalogtableconf_MaxElements	i__backupanalogtableconf.m_MaxElements
+#define backupanalogtableconf_ElementSize	i__backupanalogtableconf.m_ElementSize
+#define backupanalogtableconf_ThreadSafe	i__backupanalogtableconf.m_ThreadSafe
+#define backupanalogtableconf_Primary	IHsvSortedTableConfigurationEx_Primary
+#define backupanalogtableconf_Secondary	IHsvSortedTableConfigurationEx_Secondary
+#define backupanalogtableconf_Teritiary	IHsvSortedTableConfigurationEx_Teritiary
+#define backupanalogtableconf_Quaternary	IHsvSortedTableConfigurationEx_Quaternary
+#define backupanalogtableconf_SortCriteria	i__backupanalogtableconf.m_SortCriteria
+#define backupanalogtableconf_SmallerKey	IHsvSortedTableConfigurationEx_SmallerKey
+#define backupanalogtableconf_Equal	IHsvSortedTableConfigurationEx_Equal
+#define backupanalogtableconf_BiggerKey	IHsvSortedTableConfigurationEx_BiggerKey
+#define backuppresettableconf_MaxElements	i__backuppresettableconf.m_MaxElements
+#define backuppresettableconf_ElementSize	i__backuppresettableconf.m_ElementSize
+#define backuppresettableconf_ThreadSafe	i__backuppresettableconf.m_ThreadSafe
+#define backuppresettableconf_Primary	IHsvSortedTableConfigurationEx_Primary
+#define backuppresettableconf_Secondary	IHsvSortedTableConfigurationEx_Secondary
+#define backuppresettableconf_Teritiary	IHsvSortedTableConfigurationEx_Teritiary
+#define backuppresettableconf_Quaternary	IHsvSortedTableConfigurationEx_Quaternary
+#define backuppresettableconf_SortCriteria	i__backuppresettableconf.m_SortCriteria
+#define backuppresettableconf_SmallerKey	IHsvSortedTableConfigurationEx_SmallerKey
+#define backuppresettableconf_Equal	IHsvSortedTableConfigurationEx_Equal
+#define backuppresettableconf_BiggerKey	IHsvSortedTableConfigurationEx_BiggerKey
+#define sysset_iPresent() (sysset.Present())
+#define sysset_AudioFormatStandard	IHsvTcSystemSettings_AudioFormatStandard
+#define sysset_AudioFormatAdvanced	IHsvTcSystemSettings_AudioFormatAdvanced
+#define sysset_SetSystemLanguage(lang)	sysset->SetSystemLanguage(lang)
+#define sysset_GetSystemLanguage()	sysset->GetSystemLanguage()
+#define sysset_SetPreferredPrimaryAudioLanguage(lang)	sysset->SetPreferredPrimaryAudioLanguage(lang)
+#define sysset_GetPreferredPrimaryAudioLanguage()	sysset->GetPreferredPrimaryAudioLanguage()
+#define sysset_GetPreferredSecondarySubtitleLanguage()	sysset->GetPreferredSecondarySubtitleLanguage()
+#define sysset_SetPreferredSecondarySubtitleLanguage(lang)	sysset->SetPreferredSecondarySubtitleLanguage(lang)
+#define sysset_GetPreferredSecondaryAudioLanguage()	sysset->GetPreferredSecondaryAudioLanguage()
+#define sysset_SetPreferredSecondaryAudioLanguage(lang)	sysset->SetPreferredSecondaryAudioLanguage(lang)
+#define sysset_SetPreferredPrimarySubtitleLanguage(lang)	sysset->SetPreferredPrimarySubtitleLanguage(lang)
+#define sysset_GetPreferredPrimarySubtitleLanguage()	sysset->GetPreferredPrimarySubtitleLanguage()
+#define sysset_SetPreferredAudioFormat(format)	sysset->SetPreferredAudioFormat(format)
+#define sysset_GetPreferredAudioFormat()	sysset->GetPreferredAudioFormat()
+#define sysset_SetPreferredPrimaryTxtLanguage(lang)	sysset->SetPreferredPrimaryTxtLanguage(lang)
+#define sysset_GetPreferredPrimaryTxtLanguage()	sysset->GetPreferredPrimaryTxtLanguage()
+#define sysset_SetPreferredSecondaryTxtLanguage(lang)	sysset->SetPreferredSecondaryTxtLanguage(lang)
+#define sysset_GetPreferredSecondaryTxtLanguage()	sysset->GetPreferredSecondaryTxtLanguage()
+#define sysset_SetSystemCountry(country)	sysset->SetSystemCountry(country)
+#define sysset_GetSystemCountry()	sysset->GetSystemCountry()
+#define sysset_SetInstallCountry(country)	sysset->SetInstallCountry(country)
+#define sysset_GetInstallCountry()	sysset->GetInstallCountry()
+#define sysset_SetInstallCity(city)	sysset->SetInstallCity(city)
+#define sysset_SetSystemCity(city)	sysset->SetSystemCity(city)
+#define sysset_GetInstallCity()	sysset->GetInstallCity()
+#define sysset_GetSystemCity()	sysset->GetSystemCity()
+#define sysset_SetInstallRfSetting(value)	sysset->SetInstallRfSetting(value)
+#define sysset_SetPbsMode(value)	sysset->SetPbsMode(value)
+#define sysset_GetPbsMode()	sysset->GetPbsMode()
+#else //GENERATE__LEGACY__DEFINES
+#ifdef CLASSSCOPE
+#undef CLASSSCOPE
+#endif
+#ifdef FPCALL
+#undef FPCALL
+#endif
+#ifdef NOCLASS
+#undef NOCLASS
+#endif
+#define LOCAL_UNDEFINES
+#include "locals_mpgdb.h"
+#undef LOCAL_UNDEFINES
+#endif //GENERATE__LEGACY__DEFINES
+#endif
+

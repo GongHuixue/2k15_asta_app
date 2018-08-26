@@ -1,0 +1,312 @@
+/*
+ *  Copyright(C) 2003 Koninklijke Philips Electronics N.V.,
+ *  All Rights Reserved.
+ *  This  source code and any compilation or derivative thereof is the
+ *  proprietary information of Koninklijke Philips Electronics N.V.
+ *  and is confidential in nature.
+ *  Under no circumstances is this software to be exposed to or placed
+ *  under an Open Source License of any type without the expressed
+ *  written permission of Koninklijke Philips Electronics N.V.
+ *
+ *          %name: txplf_t.dd %
+ *       %version: TVG_tv550r4dev %
+ * %date_modified: Wed Nov 17 18:11:09 2004 %
+ *    %derived_by: lakshminb %
+ */
+
+/** koala group CTxtPlatformTypes **/
+/** koala using infraglobals **/
+/** koala using txtfnt **/
+
+#ifndef  _TXPLF_T_DD_
+#define  _TXPLF_T_DD_
+
+typedef Int16 TxtPageHandle;			/** koala type TxtPageHandle **/
+#define NOHND	(-1)
+
+typedef Int16 PageNr;					/** koala type PageNr **/
+#define INVALID_PAGENR              ((Int16)(0x07ff))
+#define INVALID_PAGE_TENS_UNITS     ((Int16)(0x0ff))
+#define PG_ANY                      ((Int16)(0x07ff))
+#define MAG_ANY                     ((Int16)(0x0f))
+
+typedef Int16 Subcode;					/** koala type Subcode **/
+#define SC_ANY                      ((Int16)(0x3f7f))
+#define INVALID_SUBCODE             ((Int16)(0xffff))
+#define SC_INVALID                  ((Int16)(0xffff))
+
+typedef Nat8 PacketNumber;				/** koala type PacketNumber **/
+
+#define PACKET_0       (0)
+#define PACKET_1       (1)
+#define PACKET_2       (2)
+#define PACKET_3       (3)
+#define PACKET_4       (4)
+#define PACKET_5       (5)
+#define PACKET_6       (6)
+#define PACKET_7       (7)
+#define PACKET_8       (8)
+#define PACKET_9       (9)
+#define PACKET_10     (10)
+#define PACKET_11     (11)
+#define PACKET_12     (12)
+#define PACKET_13     (13)
+#define PACKET_14     (14)
+#define PACKET_15     (15)
+#define PACKET_16     (16)
+#define PACKET_17     (17)
+#define PACKET_18     (18)
+#define PACKET_19     (19)
+#define PACKET_20     (20)
+#define PACKET_21     (21)
+#define PACKET_22     (22)
+#define PACKET_23     (23)
+#define PACKET_24     (24)
+
+#define PACKET_25     (25)
+
+#define PACKET_26     (26)
+#define PACKET_26_0   (26)
+#define PACKET_26_1   ( PACKET_26_0  + 1 )
+#define PACKET_26_2   ( PACKET_26_1  + 1 )
+#define PACKET_26_3   ( PACKET_26_2  + 1 )
+#define PACKET_26_4   ( PACKET_26_3  + 1 )
+#define PACKET_26_5   ( PACKET_26_4  + 1 )
+#define PACKET_26_6   ( PACKET_26_5  + 1 )
+#define PACKET_26_7   ( PACKET_26_6  + 1 )
+#define PACKET_26_8   ( PACKET_26_7  + 1 )
+#define PACKET_26_9   ( PACKET_26_8  + 1 )
+#define PACKET_26_10  ( PACKET_26_9  + 1 )
+#define PACKET_26_11  ( PACKET_26_10 + 1 )
+#define PACKET_26_12  ( PACKET_26_11 + 1 )
+#define PACKET_26_13  ( PACKET_26_12 + 1 )
+#define PACKET_26_14  ( PACKET_26_13 + 1 )
+#define PACKET_26_15  ( PACKET_26_14 + 1 )
+
+#define PACKET_27_0   ( PACKET_26    +16 ) /* Des codes 1,2 and 3 not used */
+#define PACKET_27_4   ( PACKET_27_0  + 1 )
+
+#define PACKET_28_0   ( PACKET_27_4  + 1 )
+#define PACKET_28_1   ( PACKET_28_0  + 1 ) /* Des codes 2 not used */
+#define PACKET_28_3   ( PACKET_28_1  + 1 )
+
+#define NR_PACKETS    ( PACKET_28_3  + 1 )
+
+/* Note: The values in the next enum are used in txt_decode.
+   Potentially some other types can also be folded onto each other (e.g. ptMIP and ptMOT)
+   It might me better to delete items like ptGPOP and ptGDRCS
+*/
+typedef enum							/** koala type PageType **/
+{
+	ptUnknown = 0,
+	ptNormal = 1,
+	ptBTT = 2,
+	ptAIT = 3,
+	ptMPT = 4,
+	ptMPTEX = 4,
+	ptMIP = 5,
+	ptMOT = 6,
+	ptPOP = 7,
+	ptGPOP = 7,
+	ptDRCS = 8,
+	ptGDRCS = 8,
+	ptData = 9
+	/* EPG, ACI, ... */
+} PageType;
+
+
+/** koala type TLanguage **/
+typedef Language TLanguage;
+
+/** koala type FncReceived **/
+typedef void (*FncReceived)( int tag, PageNr page, Subcode subcode, Bool arvd_drop, Nat16 CtrlBits );
+
+/** koala type FncDecoded **/
+typedef void (*FncDecoded)(void);
+
+/* Values for IPageDisplay::SetDisplayMode */
+#define TDM_OFF         (0) /* dsu_ModeOff */
+#define TDM_40CHARS     (1) /* dsu_Mode40Chars */
+#define TDM_56CHARS     (2) /* dsu_Mode56Chars */
+#define TDM_80CHARS     (3) /* dsu_Mode80Chars */
+#define TDM_4056AUTO    (4) /* (dsu_Mode80Chars+1) */
+
+/* values for IPageDisplay::SetActiveWindow */
+#define TAW_LEFT        (0)
+#define TAW_RIGHT       (1)
+
+/* values for ITxtBundleData */
+
+typedef enum
+{
+        stStream_1_2 = 0,
+        stStream_1   = 1,
+        stStream_2   = 2
+} StreamType;                           /** koala type StreamType **/
+
+typedef enum
+{
+        bndevtDataBlockReady      = 0,
+        bndevtApplicationFound    = 1,
+        bndevtApplicationNotFound = 2,
+        bndevtBufferFull          = 3,
+        bndevtAcquisitionTurnedOff= 4
+} BundleEvent;                          /** koala type BundleEvent **/
+
+typedef Nat8* DataBlockAddress;         /** koala type DataBlockAddress **/
+
+typedef void (*BundleCallBackFn)( BundleEvent );  /** koala type BundleCallBackFn **/
+
+/* for ITxtBroadcastServices */
+
+typedef struct
+{
+        Nat8 hours;
+        Nat8 minutes;
+        Nat8 seconds;
+} Time;	      /** koala type Time **/
+
+typedef struct
+{
+        Nat8 day;
+        Nat8 month;
+        Nat8 hours;
+        Nat8 minutes;
+} PilCode;   /** koala type PilCode **/
+
+typedef struct
+{
+        Nat8 label_channel_identifier;
+        Bool label_update_flag;
+        Bool prepare_to_record_flag;
+} LabelInfo; /** koala type LabelInfo **/
+
+typedef struct
+{
+        Nat8 program_control_status;
+        Bool mode_identifier;
+} ProgramControlInfo; /** koala type ProgramControlInfo **/
+
+typedef Nat32 Mjd; /** koala type Mjd **/
+
+typedef void (*Packet830CbFn) ( void ); /** koala type Packet830CbFn **/
+typedef void (*VpsCbFn) ( void ); /** koala type VpsCbFn **/
+
+/* for ITxtMip */
+
+typedef enum                                
+{
+    PageFunction_NotTx,
+    PageFunction_SingleNormal,
+    PageFunction_Normal,
+    PageFunction_Normal_MultiPage1,
+    PageFunction_Normal_MultiPage2,
+    PageFunction_Reserved1,
+    PageFunction_Subtitle,
+    PageFunction_SubtitleMenu,
+    PageFunction_Abnormal,
+    PageFunction_Warning,
+    PageFunction_ProgInfo_MultiPage,
+    PageFunction_ProgInfo,
+    PageFunction_Now_Next,
+    PageFunction_Index_MultiPage,
+    PageFunction_Index,
+    PageFunction_NonPublic,
+    PageFunction_SingleSchedule,
+    PageFunction_Schedule,
+    PageFunction_Schedule_MultiPage1,
+    PageFunction_Schedule_MultiPage2,
+    PageFunction_Reserved2,
+    PageFunction_DataBroadcast1,
+    PageFunction_DataBroadcast2,
+    PageFunction_DataBroadcast3,
+    PageFunction_ClearDataBdcast_EPG,
+    PageFunction_ClearDataBroadcast,
+    PageFunction_DRCS,
+    PageFunction_Object,
+    PageFunction_Systems,
+    PageFunction_DRCS_MOT1,
+    PageFunction_DRCS_MOT2,
+    PageFunction_DRCS_MOT3,
+    PageFunction_DRCS_MOT4,
+    PageFunction_Object_MOT1,
+    PageFunction_Object_MOT2,
+    PageFunction_Object_MOT3,
+    PageFunction_Object_MOT4,
+    PageFunction_Systems_Broadcaster,
+    PageFunction_Engg_Test,
+    PageFunction_Systems_Display,
+    PageFunction_KeywordSearch_Multi,
+    PageFunction_KeywordSearch,
+    PageFunction_Reserved3,
+    PageFunction_ACI,
+    PageFunction_TOP,
+    PageFunction_Reserved4
+
+}PageFunction;                          /** koala type PageFunction **/
+
+typedef enum                                
+{
+    Mg_Fw_Dec,		/*Magazine wrapping, Forward direction and Decimal page */
+    Tr_Fw_Dec,		/*Transmission wrapping, Forward direction and Decimal page */
+    Mg_Rw_Dec,		/*Magazine wrapping, Reverse direction and Decimal page*/
+    Tr_Rw_Dec,		/*Transmission wrapping, Reverse direction and Decimal page */
+    Mg_Fw_Hex,		/*Magazine wrapping, Forward direction and Hex page */
+    Tr_Fw_Hex,		/*Transmission wrapping, Forward direction and Hex page */
+    Mg_Rw_Hex,  	/*Magazine wrapping, Reverse direction and Hex page*/
+    Tr_Rw_Hex	    /*Transmission wrapping, Reverse direction and Hex page*/
+
+}SearchFunction;                        /** koala type SearchFunction **/
+
+typedef struct
+{
+    PageNr   pno;
+    Subcode  subcode;
+} TxtPage;                             /** koala type TxtPage **/
+
+
+/* Page Language/ Character set related functions */
+
+#define LANGUAGE_REGION_INVALID (-1)
+
+typedef enum
+{
+    G0CharSet_Latin,
+    G0CharSet_Cyrillic1,
+    G0CharSet_Cyrillic2,
+    G0CharSet_Cyrillic3,
+    G0CharSet_Greek,
+    G0CharSet_Arabic,
+    G0CharSet_Hebrew,
+    G0CharSet_Reserved,
+    G0CharSet_None
+} G0CharSet;                 /** koala type G0CharSet   **/
+
+typedef enum
+{
+    NatOptSubset_English = 0,
+    NatOptSubset_German,
+    NatOptSubset_Swedish,
+    NatOptSubset_Finnish = 2,
+    NatOptSubset_Hungarian = 2,
+    NatOptSubset_Italian,
+    NatOptSubset_French,
+    NatOptSubset_Portuguese,
+    NatOptSubset_Spanish = 5,
+    NatOptSubset_Czech,
+    NatOptSubset_Slovak = 6,
+    NatOptSubset_Polish,
+    NatOptSubset_Turkish,
+    NatOptSubset_Serbian,
+    NatOptSubset_Croatian = 9,
+    NatOptSubset_Slovenian = 9,
+    NatOptSubset_Rumanian,
+    NatOptSubset_Estonian,
+    NatOptSubset_Lettish,
+    NatOptSubset_Lithuanian = 12,
+    NatOptSubset_Reserved,
+    NatOptSubset_None
+} NatOptSubset;             /** koala type NatOptSubset   **/
+
+
+#endif

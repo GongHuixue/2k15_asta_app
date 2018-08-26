@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/dialogues_feedback_container_width"
+    android:layout_height="@dimen/dialogues_feedback_container_height"
+    android:background="@color/color_dialog_bg" >
+
+    <RelativeLayout
+        android:id="@+id/layout_digit_entry"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="-158.5dp"
+        android:layout_marginTop="-138.5dp"
+        android:background="@color/transparent" >
+
+        <TextView
+            android:id="@+id/dialog_title"
+            style="@style/dialogues_network_frequency_header_title_text_style"
+            android:layout_width="@dimen/dialogues_feedback_header_title_text_width"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/dialogues_feedback_header_title_text_x1"
+            android:layout_marginTop="@dimen/dialogues_feedback_header_title_text_y1" />
+
+        <ImageView
+            android:layout_width="@dimen/dialogues_feedback_header_divider_width"
+            android:layout_height="@dimen/dialogues_feedback_header_divider_height"
+            android:layout_marginLeft="@dimen/dialogues_feedback_header_divider_x1"
+            android:layout_marginTop="@dimen/dialogues_feedback_header_divider_y1"
+            android:background="@org.droidtv.ui.tvwidget2k15:drawable/panels_horizontal_divider" />
+
+        <TextView
+            android:id="@+id/dialog_description"
+            style="@style/dialogues_network_frequency_description_text_style"
+            android:layout_width="@dimen/dialogues_feedback_header_sub_title_text_width"
+            android:layout_height="@dimen/dialogues_feedback_header_sub_title_text_height"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/dialogues_feedback_header_sub_title_text_x1"
+            android:layout_marginTop="@dimen/dialogues_feedback_header_sub_title_text_y1" />
+
+ 		<org.droidtv.ui.tvwidget2k15.wizardframework.common.RadioSelector
+ 		    android:id="@+id/dialog_RadioList"
+            android:layout_width="@dimen/dialogues_feedback_list_container_width"
+            android:layout_height="@dimen/dialogues_feedback_list_container_height"
+            android:layout_marginLeft="@dimen/dialogues_feedback_list_container_x1"
+            android:layout_marginTop="@dimen/dialogues_feedback_list_container_y1" />
+      
+        <Button
+            android:id="@+id/dialog_skip"
+            style="@org.droidtv.ui.tvwidget2k15:style/button_style"
+            android:layout_width="@dimen/dialogues_feedback_button_cancel_width"
+            android:layout_height="@dimen/dialogues_feedback_button_cancel_height"
+            android:layout_marginLeft="@dimen/dialogues_feedback_button_cancel_x1"
+            android:layout_marginTop="@dimen/dialogues_feedback_button_cancel_y1"
+            android:text="@org.droidtv.ui.strings:string/MAIN_BUTTON_SKIP"
+			android:textAllCaps="false"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/dialog_done"
+            style="@org.droidtv.ui.tvwidget2k15:style/button_style"
+            android:layout_width="@dimen/dialogues_feedback_button_update_selection_width"
+            android:layout_height="@dimen/dialogues_feedback_button_update_selection_height"
+            android:layout_marginLeft="@dimen/dialogues_feedback_button_update_selection_x1"
+            android:layout_marginTop="@dimen/dialogues_feedback_button_update_selection_y1"
+			android:textAllCaps="false"
+            android:text="@org.droidtv.ui.strings:string/MAIN_BUTTON_DONE" />
+    </RelativeLayout>
+
+</RelativeLayout>

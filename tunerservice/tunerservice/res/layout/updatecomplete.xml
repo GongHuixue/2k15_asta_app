@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:id="@+id/layout_update_finish_screen"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/wizard_install_satellite_fullscan_panels_npanel_wizard_bg_height"
+        android:layout_marginLeft="-115dp"
+        android:layout_marginTop="-70dp" >
+
+        <TextView
+            android:id="@+id/searchFinishText"
+            style="@style/wizard_install_satellite_fullscan_npanel_col01_row01_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/wizard_install_satellite_fullscan_npanel_col01_row01_text_x1"
+            android:layout_marginTop="@dimen/wizard_install_satellite_fullscan_npanel_col01_unit02_header_text_y1"
+            android:text="@org.droidtv.ui.strings:string/MAIN_WI_UPDATE_COMPLETED"
+            android:visibility="visible"
+            android:width="400dp" />
+
+        <TextView
+            android:id="@+id/line1String"
+            style="@style/wizard_install_satellite_fullscan_npanel_col01_row01_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/searchFinishText"
+            android:layout_marginLeft="@dimen/wizard_install_satellite_fullscan_npanel_col01_row01_text_x1"
+            android:layout_marginTop="7dp"
+            android:visibility="invisible"
+            android:width="400dp" />
+
+        <TextView
+            android:id="@+id/line1Value"
+            style="@style/wizard_install_satellite_fullscan_npanel_col01_row02_unit01_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/line1String"
+            android:layout_toRightOf="@id/line1String"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/line2String"
+            style="@style/wizard_install_satellite_fullscan_npanel_col01_row01_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line1String"
+            android:layout_marginLeft="@dimen/wizard_install_satellite_fullscan_npanel_col01_row01_text_x1"
+            android:layout_marginTop="7dp"
+            android:visibility="invisible"
+            android:width="400dp" />
+
+        <TextView
+            android:id="@+id/line2Value"
+            style="@style/wizard_install_satellite_fullscan_npanel_col01_row02_unit01_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/line2String"
+            android:layout_toRightOf="@id/line2String"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/line3String"
+            style="@style/wizard_install_satellite_fullscan_npanel_col01_row01_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line2String"
+            android:layout_marginLeft="@dimen/wizard_install_satellite_fullscan_npanel_col01_row01_text_x1"
+            android:layout_marginTop="7dp"
+            android:visibility="invisible"
+            android:width="400dp" />
+
+        <TextView
+            android:id="@+id/line3Value"
+            style="@style/wizard_install_satellite_fullscan_npanel_col01_row02_unit01_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/line3String"
+            android:layout_toRightOf="@id/line3String"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/line4String"
+            style="@style/wizard_install_satellite_fullscan_npanel_col01_row01_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line3String"
+            android:layout_marginLeft="@dimen/wizard_install_satellite_fullscan_npanel_col01_row01_text_x1"
+            android:layout_marginTop="7dp"
+            android:visibility="invisible"
+            android:width="400dp" />
+
+        <TextView
+            android:id="@+id/line4Value"
+            style="@style/wizard_install_satellite_fullscan_npanel_col01_row02_unit01_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/line4String"
+            android:layout_toRightOf="@id/line4String"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+</RelativeLayout>

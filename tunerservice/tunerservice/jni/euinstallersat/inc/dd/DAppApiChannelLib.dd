@@ -1,0 +1,50 @@
+/*
+ *  Copyright(C) 2003 Koninklijke Philips Electronics N.V.,
+ *  All Rights Reserved.
+ *  This  source code and any compilation or derivative thereof is the
+ *  proprietary information of Koninklijke Philips Electronics N.V.
+ *  and is confidential in nature.
+ *  Under no circumstances is this software to be exposed to or placed
+ *  under an Open Source License of any type without the expressed
+ *  written permission of Koninklijke Philips Electronics N.V.
+ *
+ *          %name: DAppApiChannelLib.dd %
+ *             %version: TV550_8 %
+ *    %date_modified: Thu Jun 19 15:57:25 2008 %
+ *    %derived_by: sachic %  
+ */
+
+/** koala public group ChannelLibGlobals **/
+/** koala using infraglobals **/
+
+
+#ifndef _DAPPAPICHANNELLIB_DD_
+#define _DAPPAPICHANNELLIB_DD_
+typedef enum
+{
+    AppApiNoSource = 0,     /** koala type AppApiNoSource **/  
+    AppApiMainTuner,        /** koala type AppApiMainTuner **/
+    AppApiAuxTuner,         /** koala type AppApiAuxTuner **/
+    AppApiAvIn0,            /** koala type AppApiAvIn0 **/ 
+    AppApiAvIn1,            /** koala type AppApiAvIn1 **/
+    AppApiAvIn2,            /** koala type AppApiAvIn2 **/
+    AppApiAvIn3,            /** koala type AppApiAvIn3 **/
+    AppApiAvIn4,            /** koala type AppApiAvIn4 **/
+    AppApiAvIn5,            /** koala type AppApiAvIn5 **/ 
+    AppApiAvIn6,            /** koala type AppApiAvIn6 **/
+    AppApiAvIn7,            /** koala type AppApiAvIn7 **/
+    AppApiAvIn8,            /** koala type AppApiAvIn8 **/ 
+    AppApiAvIn9,            /** koala type AppApiAvIn9 **/ 
+    AppApiAvIn10,           /** koala type AppApiAvIn10 **/  
+	AppApiAvIn11,			/** koala type AppApiAvIn11 **/  
+    AppApiSpdif1,           /** koala type AppApiSpdif1 **/
+    AppApiSpdif2,           /** koala type AppApiSpdif2 **/
+    AppApiLr1,              /** koala type AppApiLr1 **/
+    AppApiAny,              /** koala type AppApiAny **/
+    AppApiCentreInput,      /** koala type AppApiCentreInput **/
+    AppApiUnknownSource,    /** koala type AppApiUnknownSource **/
+    AppApiMaxSources        /** koala type AppApiMaxSources **/
+}AppApiSource;              /** koala type AppApiSource **/
+
+
+#endif /* _DAPPAPICHANNELLIB_DD_ */

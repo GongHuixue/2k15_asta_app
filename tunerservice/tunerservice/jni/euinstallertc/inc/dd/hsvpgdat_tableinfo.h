@@ -1,0 +1,30 @@
+
+			/* Major Table*/			/* Sub Table*/						/* TableName*/		/* Type Stored */
+TABLE_ITEM(	ipgdbconst_Cable,		ipgdbconst_FrequencyMapTable,		"FrqMapTable",		HsvPgdatDigFreqMapData	)
+TABLE_ITEM(	ipgdbconst_Cable,		ipgdbconst_DigitalTS,				"DigTsTable",		HsvPgdatDigTSData		)
+TABLE_ITEM(	ipgdbconst_Cable,		ipgdbconst_DigitalService,			"DigSrvTable",		HsvPgdatDigServiceData	)
+TABLE_ITEM(	ipgdbconst_Cable,		ipgdbconst_Preset,					"PresetTable",		HsvPgdatPresetData		)
+TABLE_ITEM(	ipgdbconst_Cable,		ipgdbconst_Analog,					"AnalogTable",		HsvPgdatAnalogData		)
+/*TABLE_ITEM(	ipgdbconst_TempCable,	ipgdbconst_CurrentFrequencyMapTable,"TempFrqMapTable",	HsvPgdatDigFreqMapData	)
+TABLE_ITEM(	ipgdbconst_TempCable,	ipgdbconst_CurrentDigitalTS,		"TempDigTsTable",	HsvPgdatDigTSData		)
+TABLE_ITEM(	ipgdbconst_TempCable,	ipgdbconst_CurrentDigitalService,	"TempDigSrvTable",	HsvPgdatDigServiceData	)
+TABLE_ITEM(	ipgdbconst_TempCable,	ipgdbconst_CurrentPreset,			"TempPresetTable",	HsvPgdatPresetData		)
+TABLE_ITEM(	ipgdbconst_TempCable,	ipgdbconst_CurrentAnalog,			"TempAnalogTable",	HsvPgdatAnalogData		)
+*/
+	TABLE_ITEM( ipgdbconst_Cable,	ipgdbconst_CurrentFrequencyMapTable,"TempFrqMapTable",	HsvPgdatDigFreqMapData	)
+	TABLE_ITEM( ipgdbconst_Cable,	ipgdbconst_CurrentDigitalTS,		"TempDigTsTable",	HsvPgdatDigTSData		)
+	TABLE_ITEM( ipgdbconst_Cable,	ipgdbconst_CurrentDigitalService,	"TempDigSrvTable",	HsvPgdatDigServiceData	)
+	TABLE_ITEM( ipgdbconst_Cable,	ipgdbconst_CurrentPreset,			"TempPresetTable",	HsvPgdatPresetData		)
+	TABLE_ITEM( ipgdbconst_Cable,	ipgdbconst_CurrentAnalog,			"TempAnalogTable",	HsvPgdatAnalogData		)
+	
+
+TABLE_ITEM(	ipgdbconst_Antenna,		ipgdbconst_FrequencyMapTable,		"FrqMapTable",		HsvPgdatDigFreqMapData	)
+TABLE_ITEM(	ipgdbconst_Antenna,		ipgdbconst_DigitalTS,				"DigTsTable",		HsvPgdatDigTSData		)
+TABLE_ITEM(	ipgdbconst_Antenna,		ipgdbconst_DigitalService,			"DigSrvTable",		HsvPgdatDigServiceData	)
+TABLE_ITEM(	ipgdbconst_Antenna,		ipgdbconst_Preset,					"PresetTable",		HsvPgdatPresetData		)
+TABLE_ITEM(	ipgdbconst_Antenna,		ipgdbconst_Analog,					"AnalogTable",		HsvPgdatAnalogData		)
+TABLE_ITEM(	ipgdbconst_Antenna,	ipgdbconst_CurrentFrequencyMapTable,"TempFrqMapTable",	HsvPgdatDigFreqMapData	)
+TABLE_ITEM(	ipgdbconst_Antenna,	ipgdbconst_CurrentDigitalTS,		"TempDigTsTable",	HsvPgdatDigTSData		)
+TABLE_ITEM(	ipgdbconst_Antenna,	ipgdbconst_CurrentDigitalService,	"TempDigSrvTable",	HsvPgdatDigServiceData	)
+TABLE_ITEM(	ipgdbconst_Antenna,	ipgdbconst_CurrentPreset,			"TempPresetTable",	HsvPgdatPresetData		)
+TABLE_ITEM(	ipgdbconst_Antenna,	ipgdbconst_CurrentAnalog,			"TempAnalogTable",	HsvPgdatAnalogData		)

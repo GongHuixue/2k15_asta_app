@@ -1,0 +1,245 @@
+/*
+ *  Copyright(C) 2003 Koninklijke Philips Electronics N.V.,
+ *  All Rights Reserved.
+ *  This  source code and any compilation or derivative thereof is the
+ *  proprietary information of Koninklijke Philips Electronics N.V.
+ *  and is confidential in nature.
+ *  Under no circumstances is this software to be exposed to or placed
+ *  under an Open Source License of any type without the expressed
+ *  written permission of Koninklijke Philips Electronics N.V.
+ *
+ *          %name: HsvSdmLocals.dd %
+ *       %version: TVG_tv550r4dev %
+ * %date_modified: Fri Feb 17 17:17:30 2006 %
+ *    %derived_by: lakshminb %
+ *       %version: TVG_tv550r4dev %
+ * %date_modified: Fri Feb 17 17:17:30 2006 %
+ *    %derived_by: lakshminb %
+ */
+
+#ifndef _SDMLOCALS_DD_
+#define _SDMLOCALS_DD_
+/** koala group HsvSdmLocals **/
+/** koala using infraglobals **/
+/** koala using HsvSdmGlobals **/
+/** koala using HsvSectionFilterTypes **/
+
+
+#define SDMDEBUG
+
+#ifndef SDMDEBUG
+#define HSV_TS_PACKETFIELDS \
+    unsigned char TableId;\
+    Bool          SyntaxId;\
+    Bool          PrivateId;\
+    Bool          CurrentNextId;\
+    unsigned short SectionLength;\
+    unsigned short Attrib;\
+             char VersionNumber;\
+    unsigned char SectionNumber;\
+    unsigned char LastSectionNumber
+#else
+#define HSV_TS_PACKETFIELDS \
+    unsigned char TableId;\
+    Bool          SyntaxId;\
+    Bool          PrivateId;\
+    Bool          CurrentNextId;\
+    unsigned short SectionLength;\
+    unsigned short Attrib;\
+             char VersionNumber;\
+    unsigned char SectionNumber;\
+    unsigned char LastSectionNumber;\
+    unsigned char AquiredTime
+#endif
+
+#define HSV_INVALID_VERSION     (-1)
+#define HSV_ANY_VERSION         (-2)
+#define HSV_INVALID_SCT_REQUEST 0x0
+#define HSV_CRC_LENGTH          (4)
+#define MAX_PMT_SECTION_SIZE    (1024)      /* The maximum possible size of a PMT section */
+
+
+/* utilities */
+/* this can not be used with 'a' as zero          */
+/* otherwise will result in 'a' bits set from LSB */
+#define HSV_SET_BITS(a) ( 0xffffffff >> (32 - a) )
+#define HSV_TO_LOWER(x) ( ( (x) >= 'A' && (x) <= 'Z' ) ? ( (x) - 'A' + 'a')  : ( (x) ) )
+
+
+
+/** koala type HsvSdmTsSection **/
+typedef struct   
+{
+   HSV_TS_PACKETFIELDS;
+}HsvSdmTsSection; 
+
+#define HSV_SI_PACKETFIELDS\
+    HSV_TS_PACKETFIELDS;\
+    unsigned char ProtocolVer
+
+/** koala type HsvSdmSiSection **/
+typedef struct
+{
+   HSV_SI_PACKETFIELDS;    
+}HsvSdmSiSection;
+
+#define HSV_SECTION_BUFFER_SIZE (1024*8)
+
+
+#define MAX_REQUESTS_PER_SECTION 3
+/** koala type HsvRequestInfo **/
+typedef struct 
+{
+    int                    Pid;    
+    int                    TableId;
+    int                    NoOfSubscribers;
+    Nat16                  TableIdExtension;
+    Bool                   FilterRequested;    
+    Nat8                   ModeArray[SCT_FLT_DEPTH];
+    Nat8                   MatchArray[SCT_FLT_DEPTH];
+    Nat8                   MaskArray[SCT_FLT_DEPTH];    
+    Nat32                  SubscrIds[MAX_REQUESTS_PER_SECTION];
+    void*                  pTsDmxSectFilter;
+    void*                  pTsDmxPidFilter;
+    void*                  pTsDmxStreamPtr;
+    void*                  pTsDmxStreamBufferPtr;
+    int                    BufferSize;
+    HsvSectionCrcMode      CrcMode;
+    Bool                   ContinuousMode;            
+}HsvRequestInfo;
+
+/** koala type HsvBufferInfo **/
+typedef struct 
+{
+    HsvDemux               Demux;
+    int                    Pid;    
+    int                    TableId;
+    Nat32                  Cookie;
+    HsvSectionCallback     SctCallback;
+    int                    VersionNumber;
+    Nat32                  RecdSections;
+}HsvBufferInfo;
+
+/** koala type HsvRequestInfo2 **/
+typedef struct 
+{
+    int                    Pid;    
+    int                    TableId;
+    int                    NoOfSubscribers;
+    Bool                   FilterRequested; 
+    Nat8                   ModeArray[SCT_FLT_DEPTH];    /* SCT_FLT_DEPTH defined in HsvSdmGlobals */
+    Nat8                   MatchArray[SCT_FLT_DEPTH];
+    Nat8                   MaskArray[SCT_FLT_DEPTH];        
+    Nat32                  SubscrIds[MAX_REQUESTS_PER_SECTION];
+    void*                  pTsDmxPesNotifier;
+    void*                  pTsDmxSectFilter;
+    void*                  pTsDmxPidFilter;
+    void*                  pTsDmxStreamPtr;
+    void*                  pTsDmxStreamBufferPtr;
+    int                    BufferSize;
+    HsvSectionCrcMode      CrcMode;
+    Bool                   ContinuousMode;        
+    Bool                   TableIdExtnValid;
+    int                    TableIdExtn;
+}HsvRequestInfo2;
+
+
+/** koala type HsvBufferInfo2 **/
+typedef struct 
+{
+    HsvDemux                    Demux;
+    int                         Pid;    
+    int                         TableId;
+    Nat32                       Cookie;
+    HsvSectionCallback          SctCallback;
+    HsvSectionFilterCallback    SctFltCallBack;
+    HsvPesCallback              PesCallback;
+    int                         StrmWlkCookie;
+    int                         VersionNumber;
+    Nat32                       RecdSections;
+}HsvBufferInfo2;
+
+
+typedef struct VirtualChanelType
+{
+    HsvVirtualChannelInfo  Info;
+    HsvComponentInfo       Comp;
+    Bool                   ETMloc;
+    char                   VersionNumber;
+}HsvVirtualChannel; /** koala type HsvVirtualChannel **/
+
+
+typedef struct
+{
+    int   TableType;
+    int   Pid;
+    char  Version;
+    char  MgtVersionNumber;
+}HsvMgtTable;       /** koala type HsvMgtTable **/
+
+
+
+/* Types used in MpegDataManager component */
+#define MAX_DESCRIPTORS                     (3)
+
+/** koala type HsvPmtSection **/
+typedef struct HsvPmtSection
+{
+    Nat16               ProgramNumber;
+    Nat8                VersionNumber;
+    Nat8                PatVersionNumber;
+    Nat16               ProgramMapPid;
+    Nat32               SubscriptionId;
+    HsvDescriptor*      CcDescriptor;
+    HsvDescriptor*      Ac3Descriptor;
+    HsvDescriptor*      CaDescriptor;
+    /*Nat8                SectionPointer[MAX_PMT_SECTION_SIZE];*/
+    void*               SectionPointer;
+    Bool                CcDescriptorParsed;
+    Bool                CaDescriptorParsed;
+    Bool                Ac3DescriptorParsed;
+    HsvComponentInfo    ProgramComponentInfo;    
+} HsvPmtSection;
+
+
+
+
+/** koala type HsvEventData **/
+typedef struct HsvEventData
+{
+    HsvEventInfo                evtinfo;
+    Nat32                       SourceId;
+    HsvChannel                  channel;            /* Might not be required at all. Investigate possibility of removal */
+    Nat8                        EtmLocation;
+    Nat8                        EitVersion;
+    Nat8                        EttVersion;
+    HsvCcDescriptorInfo         CcDescriptor;
+    HsvAc3AudioInfo             Ac3Descriptor;
+    HsvCaDescriptorInfo         CaDescriptor;
+    Nat8                        CcDataPresent;
+    Nat8                        CaDataPresent;
+    Nat8                        Ac3DataPresent;
+    Nat32                       EitCookie;
+    Nat32                       EttCookie;
+} HsvEventData;
+
+
+
+#define     HSV_DESCRIPTOR_SOURCE_EIT       ( 0x00 )
+#define     HSV_DESCRIPTOR_SOURCE_PMT       ( 0x01 )
+#define     HSV_DESCRIPTOR_SOURCE_UNDEFINED ( 0xff )
+
+/** koala type HsvEventKeys **/ 
+typedef struct HsvEventKeys
+{
+    HsvChannel      Channel;                  /* Used for notification purposes. This field links us to the HsvEvent structure */
+    Nat32           SourceId;
+    HsvDemux        Demux;                    /* To signify if the demux on which this channel was required */  
+    int             ProgramNumber;            /* The program number associated with this channel */   
+    Nat8            CcDescriptorSource;       /* This field can take on the values of only the macros defined above */
+    Nat8            CaDescriptorSource;
+    Nat8            Ac3DescriptorSource;
+    int             TimerId;
+} HsvEventKeys;
+
+#endif

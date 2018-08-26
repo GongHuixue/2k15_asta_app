@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Wed Jan 08 2014 13:41:35 GMT+0530-->
+<resources>
+<style name="wizards_unicable_header_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/hnl">
+	<item name="android:gravity">left</item>
+</style>
+<style name="wizards_unicable_panels_npanel_titlebar_normal_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/hll">
+	<item name="android:gravity">left</item>
+</style>
+<style name="wizards_unicable_panels_npanel_titlebar_activated_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/hll">
+	<item name="android:gravity">left</item>
+</style>
+<style name="wizards_unicable_npanel_textfield_digit_01_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/llr">
+	<item name="android:gravity">center</item>
+</style>
+<style name="wizards_unicable_npanel_textfield_digit_02_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/llr">
+	<item name="android:gravity">center</item>
+</style>
+<style name="wizards_unicable_npanel_textfield_digit_03_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/llr">
+	<item name="android:gravity">center</item>
+</style>
+<style name="wizards_unicable_npanel_textfield_digit_04_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/llr">
+	<item name="android:gravity">center</item>
+</style>
+<style name="wizards_unicable_npanel_textfield_digit_05_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/llr">
+	<item name="android:gravity">center</item>
+</style>
+<style name="wizards_unicable_npanel_textfield_digit_06_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/llr">
+	<item name="android:gravity">center</item>
+</style>
+<style name="wizards_unicable_npanel_textfield_digit_07_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/llr">
+	<item name="android:gravity">center</item>
+</style>
+<style name="wizards_unicable_npanel_col02_description_string_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/bsr">
+	<item name="android:gravity">left</item>
+</style>
+<style name="wizards_unicable_npanel_previous_button_normal_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/lnr">
+	<item name="android:gravity">center</item>
+</style>
+<style name="wizards_unicable_npanel_next_button_default_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/lnr">
+	<item name="android:gravity">center</item>
+</style>
+</resources>

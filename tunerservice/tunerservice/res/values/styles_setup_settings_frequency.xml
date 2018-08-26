@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Tue Mar 25 2014 09:15:27 GMT+0530-->
+<resources>
+<style name="setup_settings_frequency_04_npanel_list02_cancel_button_normal_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/lnr">
+	<item name="android:gravity">center</item>
+</style>
+<style name="setup_settings_frequency_04_npanel_list02_done_button_normal_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/lnr">
+	<item name="android:gravity">center</item>
+</style>
+<style name="setup_settings_frequency_04_npanel_column03_description_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/ltr">
+	<item name="android:gravity">left</item>
+</style>
+<style name="setup_settings_frequency_03_npanel_column03_description_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/ltr">
+	<item name="android:gravity">left</item>
+</style>
+<style name="setup_settings_frequency_02_npanel_column03_description_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/ltr">
+	<item name="android:gravity">left</item>
+</style>
+<style name="setup_settings_frequency_01_npanel_column03_description_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/ltr">
+	<item name="android:gravity">left</item>
+</style>
+</resources>

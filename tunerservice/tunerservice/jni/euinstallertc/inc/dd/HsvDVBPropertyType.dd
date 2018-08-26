@@ -1,0 +1,57 @@
+/*  Copyright(C) 2003 Koninklijke Philips Electronics N.V.,
+*  All Rights Reserved.
+* This  source code and any compilation or derivative thereof is the
+*  proprietary information of Koninklijke Philips Electronics N.V.
+*  and is confidential in nature.
+*  Under no circumstances is this software to be exposed to or placed
+*  under an Open Source License of any type without the expressed
+*  written permission of Koninklijke Philips Electronics N.V.
+*  		%name: HsvDVBPropertyType.dd %
+*      	%version: TVG_tv550r4dev %
+* 		%date_modified: Thu Sep 22 17:30:29 2005 %
+*   	     %derived_by: lakshminb %
+*/
+
+/** koala group HsvDVBProperty **/
+/** koala using HsvDvbSiGlobals **/
+/** koala using HsvPropertyTypes **/
+
+#ifndef _HSVDVBPROPERTY
+#define _HSVDVBPROPERTY
+
+/* All Types typedefed as the exported types */
+
+
+typedef enum {
+#define _HSVDVBCONFINTERNAL
+#define HSVDVBPROPERTYITEM(ppty,typ,std,table) Hsv##std##table##ppty##Property,
+#include "hsvproperty.h"
+    HsvDvbPropertyDummy
+#undef HSVDVBPROPERTYITEM
+#undef _HSVDVBCONFINTERNAL
+} HsvDVBPropertyType; /** koala type HsvDVBPropertyType **/
+
+/* Typedef all the generated types to internal types */
+#define HSVDVBPROPERTYITEM(ppty,typ,std,table) typedef typ Hsv##std##table##ppty##Type; 
+#include "hsvproperty.h"
+#undef HSVDVBPROPERTYITEM
+
+/* These macros will be deprecated. It will be replaced by the next ones */
+#ifndef HSVSPID
+#define HSVSPID(ppty, std, table ) Hsv##std##table##ppty##Property
+#endif
+
+#ifndef HSVSPTYPE
+#define HSVSPTYPE(ppty, std, table) Hsv##std##table##ppty##Type
+#endif
+
+#ifndef HSVSPROPID
+#define HSVSPROPID(ppty, std, table ) Hsv##std##table##ppty##Property
+#endif
+
+#ifndef HSVSPROPTYPE
+#define HSVSPROPTYPE(ppty, std, table) Hsv##std##table##ppty##Type
+#endif
+
+
+#endif

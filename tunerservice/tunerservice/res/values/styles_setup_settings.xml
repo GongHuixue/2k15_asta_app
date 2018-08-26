@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Thu Feb 20 2014 16:52:47 GMT+0530 -->
+<resources>
+<style name="setup_settings_header_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/hnl">
+<item name="android:gravity">left</item>
+</style>
+<style name="setup_settings_singleslider_panels_npanel_titlebar_normal_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/hll">
+<item name="android:gravity">left</item>
+</style>
+<style name="setup_settings_singleslider_panels_npanel_titlebar_activated_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/hll">
+<item name="android:gravity">left</item>
+</style>
+<style name="setup_settings_picker_panels_npanel_titlebar_normal_01_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/hll">
+<item name="android:gravity">left</item>
+</style>
+<style name="setup_settings_picker_panels_npanel_titlebar_normal_02_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/hll">
+<item name="android:gravity">left</item>
+</style>
+<style name="setup_settings_picker_panels_npanel_titlebar_activated_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/hll">
+<item name="android:gravity">left</item>
+</style>
+<style name="setup_settings_picker_npanel_list01_row01_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/llr">
+<item name="android:gravity">left</item>
+</style>
+<style name="setup_settings_picker_npanel_list01_row02_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/llr">
+<item name="android:gravity">left</item>
+</style>
+<style name="setup_settings_picker_npanel_day_picker_label_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/lnl">
+<item name="android:gravity">center</item>
+</style>
+<style name="setup_settings_picker_npanel_month_picker_label_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/lnl">
+<item name="android:gravity">center</item>
+</style>
+<style name="setup_settings_picker_npanel_year_picker_label_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/lnl">
+<item name="android:gravity">center</item>
+</style>
+<style name="setup_settings_collapsed_tiny_panels_npanel_titlebar_normal_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/hll">
+<item name="android:gravity">left</item>
+</style>
+<style name="setup_settings_collapsed_tiny_panels_npanel_titlebar_activated_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/hll">
+<item name="android:gravity">left</item>
+</style>
+<style name="setup_settings_collapsed_tiny_list_row01_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/llr">
+<item name="android:gravity">left</item>
+</style>
+<style name="setup_settings_collapsed_tiny_list_row02_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/llr">
+<item name="android:gravity">left</item>
+</style>
+<style name="setup_settings_collapsed_small_panels_npanel_titlebar_normal_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/hll">
+<item name="android:gravity">left</item>
+</style>
+<style name="setup_settings_collapsed_small_panels_npanel_titlebar_activated_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/hll">
+<item name="android:gravity">left</item>
+</style>
+<style name="setup_settings_collapsed_small_list_row01_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/llr">
+<item name="android:gravity">left</item>
+</style>
+<style name="setup_settings_collapsed_small_list_row02_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/llr">
+<item name="android:gravity">left</item>
+</style>
+<style name="setup_settings_panels_npanel_titlebar_normal_01_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/hll">
+<item name="android:gravity">left</item>
+</style>
+<style name="setup_settings_panels_npanel_titlebar_normal_02_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/hll">
+<item name="android:gravity">left</item>
+</style>
+<style name="setup_settings_panels_npanel_titlebar_activated_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/hll">
+<item name="android:gravity">left</item>
+</style>
+<style name="setup_settings_npanel_list01_row01_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/llr">
+<item name="android:gravity">left</item>
+</style>
+<style name="setup_settings_npanel_list01_row02_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/llr">
+<item name="android:gravity">left</item>
+</style>
+<style name="setup_settings_npanel_list02_row01_activated_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/llr">
+<item name="android:gravity">left</item>
+</style>
+<style name="setup_settings_npanel_list02_row02_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/llr">
+<item name="android:gravity">left</item>
+</style>
+<style name="setup_settings_npanel_column03_image01_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/lsr">
+<item name="android:gravity">center</item>
+</style>
+<style name="setup_settings_npanel_column03_image02_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/lsr">
+<item name="android:gravity">center</item>
+</style>
+<style name="setup_settings_npanel_column03_description_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/btr">
+<item name="android:gravity">left</item>
+</style>
+<style name="wall_color_description_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/lsl">
+<item name="android:gravity">left</item>
+</style>
+
+<style name="setup_settings_easypq_description_hint_text" parent="@style/setup_settings_npanel_column03_description_text_style">
+<item name="android:textSize">12sp</item> 
+</style>
+</resources>

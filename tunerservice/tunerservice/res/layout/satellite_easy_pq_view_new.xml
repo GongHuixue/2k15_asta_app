@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/easyPQRelLayout"
+    android:layout_width="147dp"
+    android:layout_height="fill_parent"
+    android:background="@org.droidtv.ui.tvwidget2k15:drawable/panels_divider_left_transparent_bg" >
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/setup_settings_npanel_column03_description_text_style"
+        android:layout_width="@dimen/setup_settings_npanel_column03_description_text_width"
+        android:layout_height="@dimen/setup_settings_npanel_column03_description_text_height"
+        android:layout_marginLeft="@dimen/setup_hint_description_marginLeft_top_align"
+        android:layout_marginTop="@dimen/setup_hint_description_marginTop_top_align"
+        android:gravity="left|top" />
+
+</RelativeLayout>

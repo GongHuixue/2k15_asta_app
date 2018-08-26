@@ -1,0 +1,268 @@
+/*
+ *  Copyright(C) 2003 Koninklijke Philips Electronics N.V.,
+ *  All Rights Reserved.
+ *  This  source code and any compilation or derivative thereof is the
+ *  proprietary information of Koninklijke Philips Electronics N.V.
+ *  and is confidential in nature.
+ *  Under no circumstances is this software to be exposed to or placed
+ *  under an Open Source License of any type without the expressed
+ *  written permission of Koninklijke Philips Electronics N.V.
+ *
+ *          %name: HsvSdmGlobals.dd %
+ *       %version: TVG_1 %
+ * %date_modified: Fri Jun 23 14:02:38 2006 %
+ *       %version: TVG_1 %
+ * %date_modified: Fri Jun 23 14:02:38 2006 %
+ *    %derived_by: aneeshc %*/
+
+#ifndef _SDMGLOBALS_DD_
+#define _SDMGLOBALS_DD_
+/** koala group HsvSdmGlobals **/
+/** koala using infraglobals **/
+/** koala using HsvGlobals **/
+
+typedef enum
+{
+    HsvDmxMain=0x0,
+    HsvDmxAux,
+    HsvDmxOob,
+    HsvDmxLast
+}HsvDemux; /** koala type HsvDemux **/
+
+/** koala type HsvDescriptor **/
+#define MAX_DESCRIPTOR_LENGTH               (255)
+typedef struct HsvDescriptor
+{
+    Nat8    tag;
+    Nat8    length;
+    Nat8    data[MAX_DESCRIPTOR_LENGTH];
+    Nat8    dummy[3];               /* To ensure that the structure size is a word multiple. See brg28mgr#4724*/
+}HsvDescriptor;
+
+/* virtual channel related*/
+#define HSV_SHORTNAME_LENGTH 7
+typedef struct
+{
+    int             ShortName[HSV_SHORTNAME_LENGTH];
+    int             ModulationType;
+    int             Frequency;
+    int             TsId;
+    int             ProgramNo;
+    Bool            AccessControlled;
+    Bool            Hide;
+    Bool            HideGuide;
+    int             ServiceType;
+    int             SourceId;
+    void           *ExtendedName;
+    HsvChannel      Channel;
+
+}HsvVirtualChannelInfo; /** koala type HsvVirtualChannelInfo **/
+
+typedef struct
+{
+    int LangCode;
+    int AudioPid;
+}HsvAudioInfo; /** koala type HsvAudioInfo **/
+
+#define MAX_NO_OF_LANGUAGES 32
+typedef struct
+{
+    int VideoPid;
+    int PcrPid;
+    int NrOfAudioLanguages;
+    HsvAudioInfo AudioInfo[MAX_NO_OF_LANGUAGES];
+}HsvComponentInfo; /** koala type HsvComponentInfo **/
+
+typedef struct
+{
+    Bool DsStatus;
+    Nat8 DayOfMonth;
+    Nat8 Hour;
+}HsvDayLightSavings; /** koala type HsvDayLightSavings **/
+
+
+typedef struct
+{
+    int   AbbrevRatingValueStringLength;
+    int   RatingValueStringLength;
+    void *AbbrevRatingValueString;
+    void *RatingValueString;
+}HsvRatingValueInfo; /** koala type HsvRatingValueInfo **/
+
+/*----------------------------------------*/
+/* Structures to hold data found in CC descriptor */
+
+#define HSV_MAX_CLOSED_CAPTION_SERVICES     ( 32 )
+
+/** koala type HsvClosedCaptionInfo **/
+typedef struct
+{
+    unsigned int    IsCCOfLine21Type        : 1;
+    unsigned int    Line21Field1ORField2    : 1;
+    unsigned int    CaptionServiceNumber    : 5;
+    unsigned int    IsEasyReader            : 1;
+    unsigned int    IsWideAspectRatio       : 1;
+    unsigned int    LanguageCode            : 8;
+}HsvClosedCaptionInfo;
+
+
+/** koala type HsvCcDescriptorInfo **/
+typedef struct
+{
+    int                     NumServices;
+    HsvClosedCaptionInfo    CcServices[ HSV_MAX_CLOSED_CAPTION_SERVICES ];
+} HsvCcDescriptorInfo;
+
+
+/* Structures to hold the content advisory descriptor related information */
+
+/* Supported regions re US + Canada */
+#define HSV_MAX_RATING_REGIONS              ( 21 )
+
+/* Max number of dimensions supported in US + canada regions is 8*/
+#define HSV_MAX_RATING_DIMENSIONS           ( 20 )
+
+
+
+
+/** koala type HsvRatingDimensionInfo **/
+typedef struct
+{
+    Nat8    RatingDimension;
+    Nat8    RatingValue;
+} HsvRatingDimensionInfo;
+
+
+/** koala type HsvRatingRegionInfo **/
+typedef struct
+{
+    Nat8                        RatingRegion;
+    Nat8                        NumRatedDimensions;
+    HsvRatingDimensionInfo      RatingDimensionInfo[ HSV_MAX_RATING_DIMENSIONS ];
+    Nat8                        RatingDescriptionLength;
+    Nat16                       RatingDescriptionText[HSV_MAX_RATING_DESCRIPTION_TEXT_LENGTH] ;
+} HsvRatingRegionInfo;
+
+
+/** koala type HsvCaDescriptorInfo **/
+
+typedef struct
+{
+    Nat8                    NumRatingRegions;
+    HsvRatingRegionInfo     RatingRegionInfo[ HSV_MAX_RATING_REGIONS ];
+}HsvCaDescriptorInfo;
+
+/*----------------------------------------*/
+
+
+
+
+/*----------------------------------------*/
+/* AC-3 descriptor related information */
+
+/** koala type HsvAc3AudioInfo **/
+typedef struct
+{
+    Nat8     SampleRateCode;
+    Nat8     BitStreamID;
+    Nat8     BitRateCode;
+    Nat8     SurroundMode;
+
+    Bool     IsExactBitRate         : 1;
+    Bool     IsAudioCodingModeValid : 1;
+    Bool     IsNumChannelsValid     : 1;
+
+    Nat8     AudioChannelCodingMode;
+    Nat8     NumEncodedChannels;
+    Nat8     LanguageCode;
+
+
+}HsvAc3AudioInfo;
+
+/*----------------------------------------*/
+#define HSV_SHOW_WORD(p)             ( ((*(p))<<8)| (*((p)+1)) )
+#define HSV_GETSECTION_LENGTH(p)     ((HSV_SHOW_WORD((p)+1)&0x0fff)+3)
+
+/*----------------------------------------*/
+/*The superset of Eas information, contains complete information*/
+#define     MAX_ORIGNATOR_CODE_LGTH     (3)
+#define     MAX_EVNT_CODE_LGTH          (255)
+#define     MAX_LOCATION_CODE_SIZE      (32)
+#define     MAX_EXCEPTION_COUNT         (32)
+#define     MAX_MSS_LENGTH              (256)
+
+
+typedef struct
+{
+    Nat8            stateCode                           ;   /*in the range of 0 to 99 that represents the state or territory affected by the emergency alert*/
+    int             countySubdivision           :   4   ;   /*4 bit number in the range of 0 to 9 that defines the county subdivisions*/
+    int             countyCode                  :   10  ;   /*in the range of 0 to 999 that identifies a county within a state*/
+
+}HsvLocationCode;/** koala type HsvLocationCode **/
+
+typedef struct
+{
+    Bool            inBandReference;    /*boolean flag when set indicates whether the exception major/minor channels are are inband  */
+    HsvChannel      excepChannel;
+    
+}HsvExcepDetail;/** koala type HsvExcepDetail **/
+
+/** koala type HsvEasSuperSetData **/
+typedef struct 
+{
+
+    HsvDemux        dmx                                             ;/*the main or the aux demux*/
+    Nat8            protocolVersion                                 ;/*at present the value is always 0 */
+    Int16           EASeventID                                      ;/*a 16 bit Id that identifies the particular EA Event */
+    char            EASoriginatorCode[MAX_ORIGNATOR_CODE_LGTH]  ;   /*indicates the entity that originally initiated the activation of the EAS*/
+    Nat8            EASeventCodeLength                              ;/*indicates the length in bytes of the message that follows */
+    char            EASeventCode[MAX_EVNT_CODE_LGTH]                ;/*check*//*The EAS event code indicating the nature of activation*/
+    Nat8            natureOfActvTxtLength                           ;/*Indicates the total lenght in bytes of the activation text that follows*/
+    Nat8            natureOfActivationTxt[MAX_MSS_LENGTH]           ;   /*it represents a short textual representation of the event code for display*/
+                                                                        /* size is set to 256 to ensure that a cast to a HsvDescriptor will still work */
+    Nat8            alertmessageTimeRemaining                   ;   /*an 8 bit field that indicates the time remaining in seconds*/
+    Nat32           eventStartTime                              ;   /*a 32 bit unsigned integer representing the start time of the alert in seconds since 00 hours january6th 1980*/
+    Nat16           eventDuration                               ;   /*represents in minutes the time for which the alert is expected to last*/
+    Nat8            alertPriority                               ;   /*a 4 bit unsiged integer that indicates the priority of the alert*/				
+    HsvChannel      detailsChannelNum                           ;/*indicates the major/minor channel number associated with a details channel*/
+    Nat16           alertTextLength                             ;/*indicates the total length in bytes of the alert text that follows*/
+    Nat8            alertText[MAX_MSS_LENGTH]                   ;/*containing a multiple string structure which represents a textual description of the emergency alert*/
+                                                                /* size is set to 256 to ensure that a cast to a HsvDescriptor will still work */
+    Nat8            locationCodeCount                           ;/*interger in the range of 1 to 31 that represents the number of region definations to follow in the "for" loop	*/	
+    HsvLocationCode locationCodeDetails[MAX_LOCATION_CODE_SIZE];       /*see structure location_code*/
+    Nat8            exceptionCount                                  ;   /*An 8 bit unsigned integer number that represents the number of iterations ofthe "for" loop*/
+    HsvExcepDetail  exceptionDetails[MAX_EXCEPTION_COUNT]           ;   /*see structure exception details*/
+    
+
+}HsvEasSuperSetData;
+
+typedef struct HsvNetworkInfo {
+    Nat16 OriginalNetworkId;
+    Nat16 ServiceId;
+    Nat16 LogicalChannel;
+    Bool  ServiceVisibility;
+} HsvNetworkInfo;   /** koala type HsvNetworkInfo **/
+ 
+typedef struct HsvDemuxSectionFilter {
+    int     Pid;
+    Bool    AnyTable;       /* =0 => Next Field shall be used */
+    int     TableId;
+    Bool    AnyVersion;     /* =0 => Next Field shall be used */
+    int     VersionNo; 
+    Bool    AnyTableId_Ext; /* =0 => Next Field shall be used */
+    int     Tableid_Ext;
+    Bool    AnySection;     /* =0 => Next Field shall be used */
+    int     SectionNo;
+}HsvDemuxSectionFilter; /** koala type HsvDemuxSectionFilter **/
+
+/*----------------------------------------*/
+#define HSV_MAP_DEST_TO_DMX(dest)   (dest==HsvMain)?HsvDmxMain:HsvDmxAux
+#define HSV_MAP_DMX_TO_DEST(dmx)    (dmx==HsvDmxMain)?HsvMain:HsvAux
+
+#undef SCT_FLT_DEPTH
+#define SCT_FLT_DEPTH                  (12)
+
+/** koala type HsvPesCallback **/
+typedef Bool (*HsvPesCallback)(HsvDestination dest, Nat32 sectionid, Nat32 cookie );
+#endif
+

@@ -1,0 +1,761 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Thu Dec 19 2013 12:54:32 GMT+0530-->
+<resources>
+<!--Layout_DTR_Search_v1.0.psd-->
+<dimen name="dtr_search_header_text_height">27dp</dimen>
+
+<dimen name="dtr_search_header_text_width">459dp</dimen>
+
+<dimen name="dtr_search_header_text_x1">21dp</dimen>
+
+<dimen name="dtr_search_header_text_y1">23dp</dimen>
+
+<dimen name="dtr_search_header_text_x2">480dp</dimen>
+
+<dimen name="dtr_search_header_text_y2">50dp</dimen>
+
+<dimen name="dtr_search_panels_npanel_standard_bg_height">420dp</dimen>
+
+<dimen name="dtr_search_panels_npanel_standard_bg_width">946.5dp</dimen>
+
+<dimen name="dtr_search_panels_npanel_standard_bg_x1">0dp</dimen>
+
+<dimen name="dtr_search_panels_npanel_standard_bg_y1">60dp</dimen>
+
+<dimen name="dtr_search_panels_npanel_standard_bg_x2">946.5dp</dimen>
+
+<dimen name="dtr_search_panels_npanel_standard_bg_y2">480dp</dimen>
+
+<dimen name="dtr_search_panels_npanel_titlebar_normal_height">420dp</dimen>
+
+<dimen name="dtr_search_panels_npanel_titlebar_normal_width">48dp</dimen>
+
+<dimen name="dtr_search_panels_npanel_titlebar_normal_x1">0dp</dimen>
+
+<dimen name="dtr_search_panels_npanel_titlebar_normal_y1">60dp</dimen>
+
+<dimen name="dtr_search_panels_npanel_titlebar_normal_x2">48dp</dimen>
+
+<dimen name="dtr_search_panels_npanel_titlebar_normal_y2">480dp</dimen>
+
+<dimen name="dtr_search_panels_npanel_titlebar_normal_verticle_text_height">320dp</dimen>
+
+<dimen name="dtr_search_panels_npanel_titlebar_normal_verticle_text_width">26.5dp</dimen>
+
+<dimen name="dtr_search_panels_npanel_titlebar_normal_verticle_text_x1">11dp</dimen>
+
+<dimen name="dtr_search_panels_npanel_titlebar_normal_verticle_text_y1">95dp</dimen>
+
+<dimen name="dtr_search_panels_npanel_titlebar_normal_verticle_text_x2">37.5dp</dimen>
+
+<dimen name="dtr_search_panels_npanel_titlebar_normal_verticle_text_y2">415dp</dimen>
+
+<dimen name="dtr_search_panels_npanel_titlebar_normal_dots_icon_height">19dp</dimen>
+
+<dimen name="dtr_search_panels_npanel_titlebar_normal_dots_icon_width">24dp</dimen>
+
+<dimen name="dtr_search_panels_npanel_titlebar_normal_dots_icon_x1">12dp</dimen>
+
+<dimen name="dtr_search_panels_npanel_titlebar_normal_dots_icon_y1">430.5dp</dimen>
+
+<dimen name="dtr_search_panels_npanel_titlebar_normal_dots_icon_x2">36dp</dimen>
+
+<dimen name="dtr_search_panels_npanel_titlebar_normal_dots_icon_y2">449.5dp</dimen>
+
+<dimen name="dtr_search_panels_npanel_titlebar_activated_height">420dp</dimen>
+
+<dimen name="dtr_search_panels_npanel_titlebar_activated_width">48dp</dimen>
+
+<dimen name="dtr_search_panels_npanel_titlebar_activated_x1">48dp</dimen>
+
+<dimen name="dtr_search_panels_npanel_titlebar_activated_y1">60dp</dimen>
+
+<dimen name="dtr_search_panels_npanel_titlebar_activated_x2">96dp</dimen>
+
+<dimen name="dtr_search_panels_npanel_titlebar_activated_y2">480dp</dimen>
+
+<dimen name="dtr_search_panels_npanel_titlebar_activated_verticle_text_height">320dp</dimen>
+
+<dimen name="dtr_search_panels_npanel_titlebar_activated_verticle_text_width">26.5dp</dimen>
+
+<dimen name="dtr_search_panels_npanel_titlebar_activated_verticle_text_x1">60.5dp</dimen>
+
+<dimen name="dtr_search_panels_npanel_titlebar_activated_verticle_text_y1">95dp</dimen>
+
+<dimen name="dtr_search_panels_npanel_titlebar_activated_verticle_text_x2">87dp</dimen>
+
+<dimen name="dtr_search_panels_npanel_titlebar_activated_verticle_text_y2">415dp</dimen>
+
+<dimen name="dtr_search_npanel_picker01_height">140dp</dimen>
+
+<dimen name="dtr_search_npanel_picker01_width">70dp</dimen>
+
+<dimen name="dtr_search_npanel_picker01_x1">111dp</dimen>
+
+<dimen name="dtr_search_npanel_picker01_y1">94dp</dimen>
+
+<dimen name="dtr_search_npanel_picker01_x2">181dp</dimen>
+
+<dimen name="dtr_search_npanel_picker01_y2">234dp</dimen>
+
+<dimen name="dtr_search_npanel_picker02_height">140dp</dimen>
+
+<dimen name="dtr_search_npanel_picker02_width">70dp</dimen>
+
+<dimen name="dtr_search_npanel_picker02_x1">185dp</dimen>
+
+<dimen name="dtr_search_npanel_picker02_y1">94dp</dimen>
+
+<dimen name="dtr_search_npanel_picker02_x2">255dp</dimen>
+
+<dimen name="dtr_search_npanel_picker02_y2">234dp</dimen>
+
+<dimen name="dtr_search_npanel_picker03_height">140dp</dimen>
+
+<dimen name="dtr_search_npanel_picker03_width">70dp</dimen>
+
+<dimen name="dtr_search_npanel_picker03_x1">259dp</dimen>
+
+<dimen name="dtr_search_npanel_picker03_y1">94dp</dimen>
+
+<dimen name="dtr_search_npanel_picker03_x2">329dp</dimen>
+
+<dimen name="dtr_search_npanel_picker03_y2">234dp</dimen>
+
+<dimen name="dtr_search_npanel_picker_dot_height">30dp</dimen>
+
+<dimen name="dtr_search_npanel_picker_dot_width">2dp</dimen>
+
+<dimen name="dtr_search_npanel_picker_dot_x1">335dp</dimen>
+
+<dimen name="dtr_search_npanel_picker_dot_y1">150dp</dimen>
+
+<dimen name="dtr_search_npanel_picker_dot_x2">337dp</dimen>
+
+<dimen name="dtr_search_npanel_picker_dot_y2">180dp</dimen>
+
+<dimen name="dtr_search_npanel_picker04_height">140dp</dimen>
+
+<dimen name="dtr_search_npanel_picker04_width">70dp</dimen>
+
+<dimen name="dtr_search_npanel_picker04_x1">343.5dp</dimen>
+
+<dimen name="dtr_search_npanel_picker04_y1">93.5dp</dimen>
+
+<dimen name="dtr_search_npanel_picker04_x2">413.5dp</dimen>
+
+<dimen name="dtr_search_npanel_picker04_y2">233.5dp</dimen>
+
+<dimen name="dtr_search_npanel_picker05_height">140dp</dimen>
+
+<dimen name="dtr_search_npanel_picker05_width">70dp</dimen>
+
+<dimen name="dtr_search_npanel_picker05_x1">417.5dp</dimen>
+
+<dimen name="dtr_search_npanel_picker05_y1">94dp</dimen>
+
+<dimen name="dtr_search_npanel_picker05_x2">487.5dp</dimen>
+
+<dimen name="dtr_search_npanel_picker05_y2">234dp</dimen>
+
+<dimen name="dtr_search_npanel_picker_header_text_height">20dp</dimen>
+
+<dimen name="dtr_search_npanel_picker_header_text_width">376.5dp</dimen>
+
+<dimen name="dtr_search_npanel_picker_header_text_x1">111dp</dimen>
+
+<dimen name="dtr_search_npanel_picker_header_text_y1">240dp</dimen>
+
+<dimen name="dtr_search_npanel_picker_header_text_x2">487.5dp</dimen>
+
+<dimen name="dtr_search_npanel_picker_header_text_y2">260dp</dimen>
+
+<dimen name="dtr_search_npanel_verticle_divider_height">335dp</dimen>
+
+<dimen name="dtr_search_npanel_verticle_divider_width">1dp</dimen>
+
+<dimen name="dtr_search_npanel_verticle_divider_x1">511.5dp</dimen>
+
+<dimen name="dtr_search_npanel_verticle_divider_y1">70dp</dimen>
+
+<dimen name="dtr_search_npanel_verticle_divider_x2">512.5dp</dimen>
+
+<dimen name="dtr_search_npanel_verticle_divider_y2">405dp</dimen>
+
+<dimen name="dtr_search_npanel_waiting_anim_height">28dp</dimen>
+
+<dimen name="dtr_search_npanel_waiting_anim_width">29dp</dimen>
+
+<dimen name="dtr_search_npanel_waiting_anim_x1">709.5dp</dimen>
+
+<dimen name="dtr_search_npanel_waiting_anim_y1">223.5dp</dimen>
+
+<dimen name="dtr_search_npanel_waiting_anim_x2">738.5dp</dimen>
+
+<dimen name="dtr_search_npanel_waiting_anim_y2">251.5dp</dimen>
+
+<dimen name="dtr_search_result_string01_text_height">20dp</dimen>
+
+<dimen name="dtr_search_result_string01_text_width">209dp</dimen>
+
+<dimen name="dtr_search_result_string01_text_x1">532.5dp</dimen>
+
+<dimen name="dtr_search_result_string01_text_y1">92dp</dimen>
+
+<dimen name="dtr_search_result_string01_text_x2">741.5dp</dimen>
+
+<dimen name="dtr_search_result_string01_text_y2">112dp</dimen>
+
+<dimen name="dtr_search_result_string01_status_text_height">20dp</dimen>
+
+<dimen name="dtr_search_result_string01_status_text_width">141.5dp</dimen>
+
+<dimen name="dtr_search_result_string01_status_text_x1">765.5dp</dimen>
+
+<dimen name="dtr_search_result_string01_status_text_y1">91dp</dimen>
+
+<dimen name="dtr_search_result_string01_status_text_x2">907dp</dimen>
+
+<dimen name="dtr_search_result_string01_status_text_y2">111dp</dimen>
+
+<dimen name="dtr_search_result_string02_text_height">20dp</dimen>
+
+<dimen name="dtr_search_result_string02_text_width">209dp</dimen>
+
+<dimen name="dtr_search_result_string02_text_x1">532.5dp</dimen>
+
+<dimen name="dtr_search_result_string02_text_y1">115dp</dimen>
+
+<dimen name="dtr_search_result_string02_text_x2">741.5dp</dimen>
+
+<dimen name="dtr_search_result_string02_text_y2">135dp</dimen>
+
+<dimen name="dtr_search_result_string02_status_signal_height">12dp</dimen>
+
+<dimen name="dtr_search_result_string02_status_signal_width">22dp</dimen>
+
+<dimen name="dtr_search_result_string02_status_signal_x1">768.5dp</dimen>
+
+<dimen name="dtr_search_result_string02_status_signal_y1">118dp</dimen>
+
+<dimen name="dtr_search_result_string02_status_signal_x2">790.5dp</dimen>
+
+<dimen name="dtr_search_result_string02_status_signal_y2">130dp</dimen>
+
+<dimen name="dtr_search_result_string02_status_signal_text_height">16.5dp</dimen>
+
+<dimen name="dtr_search_result_string02_status_signal_text_width">114.5dp</dimen>
+
+<dimen name="dtr_search_result_string02_status_signal_text_x1">792.5dp</dimen>
+
+<dimen name="dtr_search_result_string02_status_signal_text_y1">116dp</dimen>
+
+<dimen name="dtr_search_result_string02_status_signal_text_x2">907dp</dimen>
+
+<dimen name="dtr_search_result_string02_status_signal_text_y2">132.5dp</dimen>
+
+<dimen name="dtr_search_result_string03_text_height">20dp</dimen>
+
+<dimen name="dtr_search_result_string03_text_width">209dp</dimen>
+
+<dimen name="dtr_search_result_string03_text_x1">532.5dp</dimen>
+
+<dimen name="dtr_search_result_string03_text_y1">139dp</dimen>
+
+<dimen name="dtr_search_result_string03_text_x2">741.5dp</dimen>
+
+<dimen name="dtr_search_result_string03_text_y2">159dp</dimen>
+
+<dimen name="dtr_search_result_string03_status_signal_height">12dp</dimen>
+
+<dimen name="dtr_search_result_string03_status_signal_width">23dp</dimen>
+
+<dimen name="dtr_search_result_string03_status_signal_x1">768.5dp</dimen>
+
+<dimen name="dtr_search_result_string03_status_signal_y1">142dp</dimen>
+
+<dimen name="dtr_search_result_string03_status_signal_x2">791.5dp</dimen>
+
+<dimen name="dtr_search_result_string03_status_signal_y2">154dp</dimen>
+
+<dimen name="dtr_search_result_string03_status_signal_text_height">16.5dp</dimen>
+
+<dimen name="dtr_search_result_string03_status_signal_text_width">20.5dp</dimen>
+
+<dimen name="dtr_search_result_string03_status_signal_text_x1">792.5dp</dimen>
+
+<dimen name="dtr_search_result_string03_status_signal_text_y1">139.5dp</dimen>
+
+<dimen name="dtr_search_result_string03_status_signal_text_x2">813dp</dimen>
+
+<dimen name="dtr_search_result_string03_status_signal_text_y2">156dp</dimen>
+
+<dimen name="dtr_search_result_string04_text_height">20dp</dimen>
+
+<dimen name="dtr_search_result_string04_text_width">209dp</dimen>
+
+<dimen name="dtr_search_result_string04_text_x1">532.5dp</dimen>
+
+<dimen name="dtr_search_result_string04_text_y1">163dp</dimen>
+
+<dimen name="dtr_search_result_string04_text_x2">741.5dp</dimen>
+
+<dimen name="dtr_search_result_string04_text_y2">183dp</dimen>
+
+<dimen name="dtr_search_result_string04_status_text_height">20dp</dimen>
+
+<dimen name="dtr_search_result_string04_status_text_width">141.5dp</dimen>
+
+<dimen name="dtr_search_result_string04_status_text_x1">765.5dp</dimen>
+
+<dimen name="dtr_search_result_string04_status_text_y1">161.5dp</dimen>
+
+<dimen name="dtr_search_result_string04_status_text_x2">907dp</dimen>
+
+<dimen name="dtr_search_result_string04_status_text_y2">181.5dp</dimen>
+
+<dimen name="dtr_search_result_string05_text_height">20dp</dimen>
+
+<dimen name="dtr_search_result_string05_text_width">209dp</dimen>
+
+<dimen name="dtr_search_result_string05_text_x1">532.5dp</dimen>
+
+<dimen name="dtr_search_result_string05_text_y1">187dp</dimen>
+
+<dimen name="dtr_search_result_string05_text_x2">741.5dp</dimen>
+
+<dimen name="dtr_search_result_string05_text_y2">207dp</dimen>
+
+<dimen name="dtr_search_result_string05_status_text_height">20dp</dimen>
+
+<dimen name="dtr_search_result_string05_status_text_width">141.5dp</dimen>
+
+<dimen name="dtr_search_result_string05_status_text_x1">765.5dp</dimen>
+
+<dimen name="dtr_search_result_string05_status_text_y1">185.5dp</dimen>
+
+<dimen name="dtr_search_result_string05_status_text_x2">907dp</dimen>
+
+<dimen name="dtr_search_result_string05_status_text_y2">205.5dp</dimen>
+
+<dimen name="dtr_search_result_string06_text_height">20dp</dimen>
+
+<dimen name="dtr_search_result_string06_text_width">209dp</dimen>
+
+<dimen name="dtr_search_result_string06_text_x1">532.5dp</dimen>
+
+<dimen name="dtr_search_result_string06_text_y1">211dp</dimen>
+
+<dimen name="dtr_search_result_string06_text_x2">741.5dp</dimen>
+
+<dimen name="dtr_search_result_string06_text_y2">231dp</dimen>
+
+<dimen name="dtr_search_result_string06_status_text_height">20dp</dimen>
+
+<dimen name="dtr_search_result_string06_status_text_width">141.5dp</dimen>
+
+<dimen name="dtr_search_result_string06_status_text_x1">765.5dp</dimen>
+
+<dimen name="dtr_search_result_string06_status_text_y1">209.5dp</dimen>
+
+<dimen name="dtr_search_result_string06_status_text_x2">907dp</dimen>
+
+<dimen name="dtr_search_result_string06_status_text_y2">229.5dp</dimen>
+
+<dimen name="dtr_search_result_string07_text_height">20dp</dimen>
+
+<dimen name="dtr_search_result_string07_text_width">209dp</dimen>
+
+<dimen name="dtr_search_result_string07_text_x1">532.5dp</dimen>
+
+<dimen name="dtr_search_result_string07_text_y1">235dp</dimen>
+
+<dimen name="dtr_search_result_string07_text_x2">741.5dp</dimen>
+
+<dimen name="dtr_search_result_string07_text_y2">255dp</dimen>
+
+<dimen name="dtr_search_result_string07_status_text_height">20dp</dimen>
+
+<dimen name="dtr_search_result_string07_status_text_width">141.5dp</dimen>
+
+<dimen name="dtr_search_result_string07_status_text_x1">765.5dp</dimen>
+
+<dimen name="dtr_search_result_string07_status_text_y1">233.5dp</dimen>
+
+<dimen name="dtr_search_result_string07_status_text_x2">907dp</dimen>
+
+<dimen name="dtr_search_result_string07_status_text_y2">253.5dp</dimen>
+
+<dimen name="dtr_search_result_string08_text_height">20dp</dimen>
+
+<dimen name="dtr_search_result_string08_text_width">209dp</dimen>
+
+<dimen name="dtr_search_result_string08_text_x1">532.5dp</dimen>
+
+<dimen name="dtr_search_result_string08_text_y1">259dp</dimen>
+
+<dimen name="dtr_search_result_string08_text_x2">741.5dp</dimen>
+
+<dimen name="dtr_search_result_string08_text_y2">279dp</dimen>
+
+<dimen name="dtr_search_result_string08_status_text_height">20dp</dimen>
+
+<dimen name="dtr_search_result_string08_status_text_width">141.5dp</dimen>
+
+<dimen name="dtr_search_result_string08_status_text_x1">765.5dp</dimen>
+
+<dimen name="dtr_search_result_string08_status_text_y1">258dp</dimen>
+
+<dimen name="dtr_search_result_string08_status_text_x2">907dp</dimen>
+
+<dimen name="dtr_search_result_string08_status_text_y2">278dp</dimen>
+
+<dimen name="dtr_search_npanel_horizontal_divider_height">1dp</dimen>
+
+<dimen name="dtr_search_npanel_horizontal_divider_width">816.5dp</dimen>
+
+<dimen name="dtr_search_npanel_horizontal_divider_x1">108dp</dimen>
+
+<dimen name="dtr_search_npanel_horizontal_divider_y1">405dp</dimen>
+
+<dimen name="dtr_search_npanel_horizontal_divider_x2">924.5dp</dimen>
+
+<dimen name="dtr_search_npanel_horizontal_divider_y2">406dp</dimen>
+
+<dimen name="dtr_search_npanel_previous_button_normal_height">42dp</dimen>
+
+<dimen name="dtr_search_npanel_previous_button_normal_width">168dp</dimen>
+
+<dimen name="dtr_search_npanel_previous_button_normal_x1">250.5dp</dimen>
+
+<dimen name="dtr_search_npanel_previous_button_normal_y1">418dp</dimen>
+
+<dimen name="dtr_search_npanel_previous_button_normal_x2">418.5dp</dimen>
+
+<dimen name="dtr_search_npanel_previous_button_normal_y2">460dp</dimen>
+
+<dimen name="dtr_search_npanel_previous_button_normal_text_height">20dp</dimen>
+
+<dimen name="dtr_search_npanel_previous_button_normal_text_width">136dp</dimen>
+
+<dimen name="dtr_search_npanel_previous_button_normal_text_x1">266.5dp</dimen>
+
+<dimen name="dtr_search_npanel_previous_button_normal_text_y1">430.5dp</dimen>
+
+<dimen name="dtr_search_npanel_previous_button_normal_text_x2">402.5dp</dimen>
+
+<dimen name="dtr_search_npanel_previous_button_normal_text_y2">450.5dp</dimen>
+
+<dimen name="dtr_search_npanel_network_button_normal_height">42dp</dimen>
+
+<dimen name="dtr_search_npanel_network_button_normal_width">168dp</dimen>
+
+<dimen name="dtr_search_npanel_network_button_normal_x1">418.5dp</dimen>
+
+<dimen name="dtr_search_npanel_network_button_normal_y1">418dp</dimen>
+
+<dimen name="dtr_search_npanel_network_button_normal_x2">586.5dp</dimen>
+
+<dimen name="dtr_search_npanel_network_button_normal_y2">460dp</dimen>
+
+<dimen name="dtr_search_npanel_network_button_normal_text_height">20dp</dimen>
+
+<dimen name="dtr_search_npanel_network_button_normal_text_width">136dp</dimen>
+
+<dimen name="dtr_search_npanel_network_button_normal_text_x1">434.5dp</dimen>
+
+<dimen name="dtr_search_npanel_network_button_normal_text_y1">430.5dp</dimen>
+
+<dimen name="dtr_search_npanel_network_button_normal_text_x2">570.5dp</dimen>
+
+<dimen name="dtr_search_npanel_network_button_normal_text_y2">450.5dp</dimen>
+
+<dimen name="dtr_search_npanel_search_button_default_height">42dp</dimen>
+
+<dimen name="dtr_search_npanel_search_button_default_width">168dp</dimen>
+
+<dimen name="dtr_search_npanel_search_button_default_x1">586.5dp</dimen>
+
+<dimen name="dtr_search_npanel_search_button_default_y1">418dp</dimen>
+
+<dimen name="dtr_search_npanel_search_button_default_x2">754.5dp</dimen>
+
+<dimen name="dtr_search_npanel_search_button_default_y2">460dp</dimen>
+
+<dimen name="dtr_search_npanel_search_button_default_text_height">20dp</dimen>
+
+<dimen name="dtr_search_npanel_search_button_default_text_width">136dp</dimen>
+
+<dimen name="dtr_search_npanel_search_button_default_text_x1">602.5dp</dimen>
+
+<dimen name="dtr_search_npanel_search_button_default_text_y1">430.5dp</dimen>
+
+<dimen name="dtr_search_npanel_search_button_default_text_x2">738.5dp</dimen>
+
+<dimen name="dtr_search_npanel_search_button_default_text_y2">450.5dp</dimen>
+
+<dimen name="dtr_search_npanel_done_button_normal_height">42dp</dimen>
+
+<dimen name="dtr_search_npanel_done_button_normal_width">168dp</dimen>
+
+<dimen name="dtr_search_npanel_done_button_normal_x1">754.5dp</dimen>
+
+<dimen name="dtr_search_npanel_done_button_normal_y1">418dp</dimen>
+
+<dimen name="dtr_search_npanel_done_button_normal_x2">922.5dp</dimen>
+
+<dimen name="dtr_search_npanel_done_button_normal_y2">460dp</dimen>
+
+<dimen name="dtr_search_npanel_done_button_normal_text_height">20dp</dimen>
+
+<dimen name="dtr_search_npanel_done_button_normal_text_width">136dp</dimen>
+
+<dimen name="dtr_search_npanel_done_button_normal_text_x1">770.5dp</dimen>
+
+<dimen name="dtr_search_npanel_done_button_normal_text_y1">430.5dp</dimen>
+
+<dimen name="dtr_search_npanel_done_button_normal_text_x2">906.5dp</dimen>
+
+<dimen name="dtr_search_npanel_done_button_normal_text_y2">450.5dp</dimen>
+
+<dimen name="dtr_search_satellite_npanel_picker01_height">140dp</dimen>
+
+<dimen name="dtr_search_satellite_npanel_picker01_width">70dp</dimen>
+
+<dimen name="dtr_search_satellite_npanel_picker01_x1">111dp</dimen>
+
+<dimen name="dtr_search_satellite_npanel_picker01_y1">94dp</dimen>
+
+<dimen name="dtr_search_satellite_npanel_picker01_x2">181dp</dimen>
+
+<dimen name="dtr_search_satellite_npanel_picker01_y2">234dp</dimen>
+
+<dimen name="dtr_search_satellite_npanel_picker02_height">140dp</dimen>
+
+<dimen name="dtr_search_satellite_npanel_picker02_width">70dp</dimen>
+
+<dimen name="dtr_search_satellite_npanel_picker02_x1">185dp</dimen>
+
+<dimen name="dtr_search_satellite_npanel_picker02_y1">94dp</dimen>
+
+<dimen name="dtr_search_satellite_npanel_picker02_x2">255dp</dimen>
+
+<dimen name="dtr_search_satellite_npanel_picker02_y2">234dp</dimen>
+
+<dimen name="dtr_search_satellite_npanel_picker03_height">140dp</dimen>
+
+<dimen name="dtr_search_satellite_npanel_picker03_width">70dp</dimen>
+
+<dimen name="dtr_search_satellite_npanel_picker03_x1">259dp</dimen>
+
+<dimen name="dtr_search_satellite_npanel_picker03_y1">94dp</dimen>
+
+<dimen name="dtr_search_satellite_npanel_picker03_x2">329dp</dimen>
+
+<dimen name="dtr_search_satellite_npanel_picker03_y2">234dp</dimen>
+
+<dimen name="dtr_search_satellite_npanel_picker04_height">140dp</dimen>
+
+<dimen name="dtr_search_satellite_npanel_picker04_width">70dp</dimen>
+
+<dimen name="dtr_search_satellite_npanel_picker04_x1">333dp</dimen>
+
+<dimen name="dtr_search_satellite_npanel_picker04_y1">93.5dp</dimen>
+
+<dimen name="dtr_search_satellite_npanel_picker04_x2">403dp</dimen>
+
+<dimen name="dtr_search_satellite_npanel_picker04_y2">233.5dp</dimen>
+
+<dimen name="dtr_search_satellite_npanel_picker05_height">140dp</dimen>
+
+<dimen name="dtr_search_satellite_npanel_picker05_width">70dp</dimen>
+
+<dimen name="dtr_search_satellite_npanel_picker05_x1">407dp</dimen>
+
+<dimen name="dtr_search_satellite_npanel_picker05_y1">94dp</dimen>
+
+<dimen name="dtr_search_satellite_npanel_picker05_x2">477dp</dimen>
+
+<dimen name="dtr_search_satellite_npanel_picker05_y2">234dp</dimen>
+
+<dimen name="dtr_search_satellite_npanel_picker_header_text_height">20dp</dimen>
+
+<dimen name="dtr_search_satellite_npanel_picker_header_text_width">366dp</dimen>
+
+<dimen name="dtr_search_satellite_npanel_picker_header_text_x1">111dp</dimen>
+
+<dimen name="dtr_search_satellite_npanel_picker_header_text_y1">240dp</dimen>
+
+<dimen name="dtr_search_satellite_npanel_picker_header_text_x2">477dp</dimen>
+
+<dimen name="dtr_search_satellite_npanel_picker_header_text_y2">260dp</dimen>
+
+<dimen name="dtr_search_analogsearch_panels_npanel_standard_bg_height">420dp</dimen>
+
+<dimen name="dtr_search_analogsearch_panels_npanel_standard_bg_width">479.5dp</dimen>
+
+<dimen name="dtr_search_analogsearch_panels_npanel_standard_bg_x1">0dp</dimen>
+
+<dimen name="dtr_search_analogsearch_panels_npanel_standard_bg_y1">60dp</dimen>
+
+<dimen name="dtr_search_analogsearch_panels_npanel_standard_bg_x2">479.5dp</dimen>
+
+<dimen name="dtr_search_analogsearch_panels_npanel_standard_bg_y2">480dp</dimen>
+
+<dimen name="dtr_search_analogsearch_npanel_picker01_height">140dp</dimen>
+
+<dimen name="dtr_search_analogsearch_npanel_picker01_width">70dp</dimen>
+
+<dimen name="dtr_search_analogsearch_npanel_picker01_x1">111dp</dimen>
+
+<dimen name="dtr_search_analogsearch_npanel_picker01_y1">94dp</dimen>
+
+<dimen name="dtr_search_analogsearch_npanel_picker01_x2">181dp</dimen>
+
+<dimen name="dtr_search_analogsearch_npanel_picker01_y2">234dp</dimen>
+
+<dimen name="dtr_search_analogsearch_npanel_picker02_height">140dp</dimen>
+
+<dimen name="dtr_search_analogsearch_npanel_picker02_width">70dp</dimen>
+
+<dimen name="dtr_search_analogsearch_npanel_picker02_x1">185dp</dimen>
+
+<dimen name="dtr_search_analogsearch_npanel_picker02_y1">94dp</dimen>
+
+<dimen name="dtr_search_analogsearch_npanel_picker02_x2">255dp</dimen>
+
+<dimen name="dtr_search_analogsearch_npanel_picker02_y2">234dp</dimen>
+
+<dimen name="dtr_search_analogsearch_npanel_picker03_height">140dp</dimen>
+
+<dimen name="dtr_search_analogsearch_npanel_picker03_width">70dp</dimen>
+
+<dimen name="dtr_search_analogsearch_npanel_picker03_x1">259dp</dimen>
+
+<dimen name="dtr_search_analogsearch_npanel_picker03_y1">94dp</dimen>
+
+<dimen name="dtr_search_analogsearch_npanel_picker03_x2">329dp</dimen>
+
+<dimen name="dtr_search_analogsearch_npanel_picker03_y2">234dp</dimen>
+
+<dimen name="dtr_search_analogsearch_npanel_waiting_anim_height">28dp</dimen>
+
+<dimen name="dtr_search_analogsearch_npanel_waiting_anim_width">29dp</dimen>
+
+<dimen name="dtr_search_analogsearch_npanel_waiting_anim_x1">392dp</dimen>
+
+<dimen name="dtr_search_analogsearch_npanel_waiting_anim_y1">195dp</dimen>
+
+<dimen name="dtr_search_analogsearch_npanel_waiting_anim_x2">421dp</dimen>
+
+<dimen name="dtr_search_analogsearch_npanel_waiting_anim_y2">223dp</dimen>
+
+<dimen name="dtr_search_analogsearch_npanel_picker_header_text_height">20dp</dimen>
+
+<dimen name="dtr_search_analogsearch_npanel_picker_header_text_width">218dp</dimen>
+
+<dimen name="dtr_search_analogsearch_npanel_picker_header_text_x1">111dp</dimen>
+
+<dimen name="dtr_search_analogsearch_npanel_picker_header_text_y1">240dp</dimen>
+
+<dimen name="dtr_search_analogsearch_npanel_picker_header_text_x2">329dp</dimen>
+
+<dimen name="dtr_search_analogsearch_npanel_picker_header_text_y2">260dp</dimen>
+
+<dimen name="dtr_search_analogsearch_npanel_panels_horizontal_divider_height">1dp</dimen>
+
+<dimen name="dtr_search_analogsearch_npanel_panels_horizontal_divider_width">350dp</dimen>
+
+<dimen name="dtr_search_analogsearch_npanel_panels_horizontal_divider_x1">108dp</dimen>
+
+<dimen name="dtr_search_analogsearch_npanel_panels_horizontal_divider_y1">405dp</dimen>
+
+<dimen name="dtr_search_analogsearch_npanel_panels_horizontal_divider_x2">458dp</dimen>
+
+<dimen name="dtr_search_analogsearch_npanel_panels_horizontal_divider_y2">406dp</dimen>
+
+<dimen name="dtr_search_analogsearch_npanel_network_button_normal_height">42dp</dimen>
+
+<dimen name="dtr_search_analogsearch_npanel_network_button_normal_width">168dp</dimen>
+
+<dimen name="dtr_search_analogsearch_npanel_network_button_normal_x1">110.5dp</dimen>
+
+<dimen name="dtr_search_analogsearch_npanel_network_button_normal_y1">418dp</dimen>
+
+<dimen name="dtr_search_analogsearch_npanel_network_button_normal_x2">278.5dp</dimen>
+
+<dimen name="dtr_search_analogsearch_npanel_network_button_normal_y2">460dp</dimen>
+
+<dimen name="dtr_search_analogsearch_npanel_network_button_normal_text_height">20dp</dimen>
+
+<dimen name="dtr_search_analogsearch_npanel_network_button_normal_text_width">136dp</dimen>
+
+<dimen name="dtr_search_analogsearch_npanel_network_button_normal_text_x1">126.5dp</dimen>
+
+<dimen name="dtr_search_analogsearch_npanel_network_button_normal_text_y1">430.5dp</dimen>
+
+<dimen name="dtr_search_analogsearch_npanel_network_button_normal_text_x2">262.5dp</dimen>
+
+<dimen name="dtr_search_analogsearch_npanel_network_button_normal_text_y2">450.5dp</dimen>
+
+<dimen name="dtr_search_analogsearch_npanel_search_button_default_height">42dp</dimen>
+
+<dimen name="dtr_search_analogsearch_npanel_search_button_default_width">168dp</dimen>
+
+<dimen name="dtr_search_analogsearch_npanel_search_button_default_x1">278.5dp</dimen>
+
+<dimen name="dtr_search_analogsearch_npanel_search_button_default_y1">418dp</dimen>
+
+<dimen name="dtr_search_analogsearch_npanel_search_button_default_x2">446.5dp</dimen>
+
+<dimen name="dtr_search_analogsearch_npanel_search_button_default_y2">460dp</dimen>
+
+<dimen name="dtr_search_analogsearch_npanel_search_button_default_text_height">20dp</dimen>
+
+<dimen name="dtr_search_analogsearch_npanel_search_button_default_text_width">136dp</dimen>
+
+<dimen name="dtr_search_analogsearch_npanel_search_button_default_text_x1">294.5dp</dimen>
+
+<dimen name="dtr_search_analogsearch_npanel_search_button_default_text_y1">430.5dp</dimen>
+
+<dimen name="dtr_search_analogsearch_npanel_search_button_default_text_x2">430.5dp</dimen>
+
+<dimen name="dtr_search_analogsearch_npanel_search_button_default_text_y2">450.5dp</dimen>
+
+<dimen name="dtr_search_analogfinetune_npanel_picker_dot_height">30dp</dimen>
+
+<dimen name="dtr_search_analogfinetune_npanel_picker_dot_width">2dp</dimen>
+
+<dimen name="dtr_search_analogfinetune_npanel_picker_dot_x1">168dp</dimen>
+
+<dimen name="dtr_search_analogfinetune_npanel_picker_dot_y1">150dp</dimen>
+
+<dimen name="dtr_search_analogfinetune_npanel_picker_dot_x2">170dp</dimen>
+
+<dimen name="dtr_search_analogfinetune_npanel_picker_dot_y2">180dp</dimen>
+
+<dimen name="dtr_search_analogfinetune_npanel_picker_activated_highlighted_height">140dp</dimen>
+
+<dimen name="dtr_search_analogfinetune_npanel_picker_activated_highlighted_width">105dp</dimen>
+
+<dimen name="dtr_search_analogfinetune_npanel_picker_activated_highlighted_x1">111dp</dimen>
+
+<dimen name="dtr_search_analogfinetune_npanel_picker_activated_highlighted_y1">94dp</dimen>
+
+<dimen name="dtr_search_analogfinetune_npanel_picker_activated_highlighted_x2">216dp</dimen>
+
+<dimen name="dtr_search_analogfinetune_npanel_picker_activated_highlighted_y2">234dp</dimen>
+
+<dimen name="dtr_search_analogfinetune_npanel_picker_header_text_height">20dp</dimen>
+
+<dimen name="dtr_search_analogfinetune_npanel_picker_header_text_width">105dp</dimen>
+
+<dimen name="dtr_search_analogfinetune_npanel_picker_header_text_x1">111dp</dimen>
+
+<dimen name="dtr_search_analogfinetune_npanel_picker_header_text_y1">240dp</dimen>
+
+<dimen name="dtr_search_analogfinetune_npanel_picker_header_text_x2">216dp</dimen>
+
+<dimen name="dtr_search_analogfinetune_npanel_picker_header_text_y2">260dp</dimen>
+
+</resources>

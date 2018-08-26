@@ -1,0 +1,44 @@
+/*  Copyright(C) 2003 Koninklijke Philips Electronics N.V.,
+*  All Rights Reserved.
+* This  source code and any compilation or derivative thereof is the
+*  proprietary information of Koninklijke Philips Electronics N.V.
+*  and is confidential in nature.
+*  Under no circumstances is this software to be exposed to or placed
+*  under an Open Source License of any type without the expressed
+*  written permission of Koninklijke Philips Electronics N.V.
+*  		%name: HsvPMTDescriptors.dd %
+*      	%version: TVG_tv550r4dev1 %
+* 		%date_modified: Thu Aug 14 15:03:45 2008 %
+*   	     %derived_by: aneeshc %
+*/
+/* Generated code. Dont edit */
+/** koala group HsvPMTDescriptors **/
+
+#if !defined(PMTDESCRIPTOR)
+#define __HYSVCINTERNAL
+#define PMTDESCRIPTOR(a, b )  PMT_##b,
+#endif
+
+#ifdef __HYSVCINTERNAL
+typedef enum
+{
+#endif
+PMTDESCRIPTOR( 0x45 ,VBI_data		)
+PMTDESCRIPTOR( 0x46 ,VBI_teletext		)
+PMTDESCRIPTOR( 0x56 ,Teletext			)
+PMTDESCRIPTOR( 0x59 ,Subtitling			)
+PMTDESCRIPTOR( 0x0A ,ISO_639_language   )
+PMTDESCRIPTOR( 0x6A, AC3)
+PMTDESCRIPTOR( 0x52, Stream_Identifier)
+PMTDESCRIPTOR( 0x66 ,Data_broadcast_id			)
+PMTDESCRIPTOR( 0x7C ,AAC			)
+PMTDESCRIPTOR( 0x28 ,AVC			)
+PMTDESCRIPTOR( 0x7A, AC3Plus)
+PMTDESCRIPTOR( 0x7F, SupplementaryAudio)
+#ifdef __HYSVCINTERNAL
+PMTDESCRIPTOR( 0xFF ,MAX_DESCRIPTOR )
+} HsvPMTDescriptors;
+#undef __HYSVCINTERNAL
+#endif /* __HYSVCINTERNAL */
+
+#undef PMTDESCRIPTOR

@@ -1,0 +1,56 @@
+/*  Copyright(C) 2003 Koninklijke Philips Electronics N.V.,
+*  All Rights Reserved.
+* This  source code and any compilation or derivative thereof is the
+*  proprietary information of Koninklijke Philips Electronics N.V.
+*  and is confidential in nature.
+*  Under no circumstances is this software to be exposed to or placed
+*  under an Open Source License of any type without the expressed
+*  written permission of Koninklijke Philips Electronics N.V.
+*  		%name: HsvDVBSIDescriptors.dd %
+*      	%version: TVG_tv550r4dev %
+* 		%date_modified: Thu Nov 13 12:11:25 2008 %
+*   	     %derived_by: lakshminb %
+*/
+/*  Generated code. Dont edit. */
+/** koala group HsvDVBSIDescriptors **/
+/* This dd file should be one per standard.*/
+/*  Generated code. Dont edit. */
+#ifndef HSVDESCRIPTORITEM
+#define __HYSVCINTERNAL
+#define HSVDESCRIPTORITEM(a, b )  HsvDVB_##b##Desciptor_ID,
+#endif
+HSVDESCRIPTORITEM( 0x0A ,ISO_639_language			)
+HSVDESCRIPTORITEM( 0x4A ,Linkage			)
+HSVDESCRIPTORITEM( 0x4E ,ExtendedEvent			)
+HSVDESCRIPTORITEM( 0x4D ,ShortEvent			)
+HSVDESCRIPTORITEM( 0x5F ,Private_Data_Specifier			)
+HSVDESCRIPTORITEM( 0x6A ,AC3			)
+HSVDESCRIPTORITEM( 0x40 ,Network_Name			)
+HSVDESCRIPTORITEM( 0x45 ,VBI_data			)
+HSVDESCRIPTORITEM( 0x46 ,VBI_teletext			)
+HSVDESCRIPTORITEM( 0x48 ,Service			)
+HSVDESCRIPTORITEM( 0x52 ,Stream_Identifier			)
+HSVDESCRIPTORITEM( 0x53 ,CA_identifier			)
+HSVDESCRIPTORITEM( 0x54 ,Content			)
+HSVDESCRIPTORITEM( 0x55 ,Parental_Rating			)
+HSVDESCRIPTORITEM( 0x56 ,Teletext			)
+HSVDESCRIPTORITEM( 0x58 ,LocalTimeOffset			)
+HSVDESCRIPTORITEM( 0x59 ,Subtitling			)
+HSVDESCRIPTORITEM( 0x66 ,Data_broadcast_id			)
+HSVDESCRIPTORITEM( 0x83 ,Logical_Channel			)
+HSVDESCRIPTORITEM( 0x7C ,AAC			)
+HSVDESCRIPTORITEM( 0x28 ,AVC			)
+HSVDESCRIPTORITEM( 0x7A ,AC3Plus			)
+HSVDESCRIPTORITEM( 0x44 ,Cable_Del_Sys)
+HSVDESCRIPTORITEM( 0x62 ,Freq_List			)       //rashojit   
+HSVDESCRIPTORITEM( 0x87 ,Logical_Channel2)
+HSVDESCRIPTORITEM( 0x88 ,HDSimulcastLCN)
+HSVDESCRIPTORITEM( 0x86 ,ServiceAttribute)
+HSVDESCRIPTORITEM( 0x7F ,SupplementaryAudio)
+#ifdef __HYSVCINTERNAL
+HSVDESCRIPTORITEM( 0xFF ,MAX          )
+#undef __HYSVCINTERNAL
+#endif /* __HYSVCINTERNAL */
+
+#undef HSVDESCRIPTORITEM
+

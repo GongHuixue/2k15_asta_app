@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Fri Apr 11 2014 05:49:32 GMT+0530-->
+<resources>
+<!--Layout_Input_Modal_Dialog_Pickers_v1.0.psd-->
+<dimen name="input_modal_dialog_pickers_01_panels_standard_bg_height">372.5dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_panels_standard_bg_width">732.5dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_panels_standard_bg_x1">114dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_panels_standard_bg_y1">105.5dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_panels_standard_bg_x2">846.5dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_panels_standard_bg_y2">478dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_header_text_height">28dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_header_text_width">512.5dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_header_text_x1">148dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_header_text_y1">136.5dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_header_text_x2">660.5dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_header_text_y2">164.5dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_header_panels_horizontal_divider_height">1dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_header_panels_horizontal_divider_width">698dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_header_panels_horizontal_divider_x1">131dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_header_panels_horizontal_divider_y1">168.5dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_header_panels_horizontal_divider_x2">829dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_header_panels_horizontal_divider_y2">169.5dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_description_text_height">48dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_description_text_width">670dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_description_text_x1">148dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_description_text_y1">176dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_description_text_x2">818dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_description_text_y2">224dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_picker01_height">140dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_picker01_width">70dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_picker01_x1">148dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_picker01_y1">245dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_picker01_x2">218dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_picker01_y2">385dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_picker_dot_height">30dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_picker_dot_width">2dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_picker_dot_x1">223dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_picker_dot_y1">302.5dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_picker_dot_x2">225dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_picker_dot_y2">332.5dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_picker02_height">140dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_picker02_width">70dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_picker02_x1">230dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_picker02_y1">245dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_picker02_x2">300dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_picker02_y2">385dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_bottom_panels_horizontal_divider_height">1dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_bottom_panels_horizontal_divider_width">698dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_bottom_panels_horizontal_divider_x1">131dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_bottom_panels_horizontal_divider_y1">409dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_bottom_panels_horizontal_divider_x2">829dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_bottom_panels_horizontal_divider_y2">410dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_left_button_normal_height">42dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_left_button_normal_width">168dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_left_button_normal_x1">480dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_left_button_normal_y1">418dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_left_button_normal_x2">648dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_left_button_normal_y2">460dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_left_button_normal_text_height">19.5dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_left_button_normal_text_width">136dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_left_button_normal_text_x1">496dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_left_button_normal_text_y1">429dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_left_button_normal_text_x2">632dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_left_button_normal_text_y2">448.5dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_right_button_normal_height">42dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_right_button_normal_width">168dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_right_button_normal_x1">648dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_right_button_normal_y1">418dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_right_button_normal_x2">816dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_right_button_normal_y2">460dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_right_button_normal_text_height">19.5dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_right_button_normal_text_width">136dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_right_button_normal_text_x1">664dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_right_button_normal_text_y1">429dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_right_button_normal_text_x2">800dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_01_right_button_normal_text_y2">448.5dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_02_panels_standard_bg_height">372.5dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_02_panels_standard_bg_width">732.5dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_02_panels_standard_bg_x1">114dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_02_panels_standard_bg_y1">105.5dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_02_panels_standard_bg_x2">846.5dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_02_panels_standard_bg_y2">478dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_02_header_text_height">28dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_02_header_text_width">512.5dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_02_header_text_x1">148dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_02_header_text_y1">136.5dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_02_header_text_x2">660.5dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_02_header_text_y2">164.5dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_02_header_panels_horizontal_divider_height">1dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_02_header_panels_horizontal_divider_width">698dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_02_header_panels_horizontal_divider_x1">131dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_02_header_panels_horizontal_divider_y1">168.5dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_02_header_panels_horizontal_divider_x2">829dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_02_header_panels_horizontal_divider_y2">169.5dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_02_description_text_height">48dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_02_description_text_width">670dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_02_description_text_x1">148dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_02_description_text_y1">176dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_02_description_text_x2">818dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_02_description_text_y2">224dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_02_picker_height">140dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_02_picker_width">88dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_02_picker_x1">148dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_02_picker_y1">245dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_02_picker_x2">236dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_02_picker_y2">385dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_02_bottom_panels_horizontal_divider_height">1dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_02_bottom_panels_horizontal_divider_width">698dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_02_bottom_panels_horizontal_divider_x1">131dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_02_bottom_panels_horizontal_divider_y1">409dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_02_bottom_panels_horizontal_divider_x2">829dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_02_bottom_panels_horizontal_divider_y2">410dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_02_left_button_normal_height">42dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_02_left_button_normal_width">168dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_02_left_button_normal_x1">480dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_02_left_button_normal_y1">418dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_02_left_button_normal_x2">648dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_02_left_button_normal_y2">460dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_02_left_button_normal_text_height">19.5dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_02_left_button_normal_text_width">136dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_02_left_button_normal_text_x1">496dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_02_left_button_normal_text_y1">429dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_02_left_button_normal_text_x2">632dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_02_left_button_normal_text_y2">448.5dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_02_right_button_normal_height">42dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_02_right_button_normal_width">168dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_02_right_button_normal_x1">648dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_02_right_button_normal_y1">418dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_02_right_button_normal_x2">816dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_02_right_button_normal_y2">460dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_02_right_button_normal_text_height">19.5dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_02_right_button_normal_text_width">136dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_02_right_button_normal_text_x1">664dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_02_right_button_normal_text_y1">429dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_02_right_button_normal_text_x2">800dp</dimen>
+
+<dimen name="input_modal_dialog_pickers_02_right_button_normal_text_y2">448.5dp</dimen>
+
+</resources>

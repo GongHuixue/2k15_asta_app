@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@color/color_npanel_bg" >
+
+    <TextView
+        android:id="@+id/lcn_conflict_title_text"
+        android:layout_width="@dimen/wizards_input_step_top_gradient_width"
+        android:layout_height="@dimen/wizards_input_step_top_gradient_height"
+        android:layout_gravity="center_vertical"
+        android:drawableLeft="@org.droidtv.ui.tvwidget2k15:drawable/wizards_header_icon"
+        android:drawablePadding="@dimen/wizards_input_step_header_textding_width"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/wizards_input_step_wizards_header_icon_x1"
+        android:text="@org.droidtv.ui.strings:string/MAIN_TI_AUTOSTORE_LCN_CONFLICT"
+        android:textAppearance="@org.droidtv.ui.tvwidget2k15:style/hlr" />
+
+    <org.droidtv.ui.tvwidget2k15.VerticalText
+        android:id="@+id/verticalText1"
+        style="@org.droidtv.ui.tvwidget2k15:style/verticalTextStyle"
+        android:drawableBottom="@org.droidtv.ui.tvwidget2k15:drawable/drawable_text_view"
+        android:layout_width="48dp"
+        android:layout_height="@dimen/wizards_satellite_fullscan_wizard_stacks_height"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="@dimen/wizards_satellite_fullscan_wizard_stacks_y1"
+        android:text="@org.droidtv.ui.strings:string/MAIN_TI_AUTOSTORE_LCN_CONFLICT"
+        android:textColor="#FFFFFF" />
+
+    <View
+        android:id="@+id/bg_verticaldivider_left"
+        android:layout_width="@dimen/wizards_satellite_fullscan_wizard_container_divider_width"
+        android:layout_height="@dimen/wizards_satellite_fullscan_wizard_container_divider_height"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="@dimen/wizards_satellite_fullscan_wizard_container_divider_y1"
+        android:background="@org.droidtv.ui.tvwidget2k15:drawable/npaneldivider" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="400dp"
+        android:layout_marginLeft="@dimen/wizards_process_settings_panels_npanel_wizard_bg_x1"
+        android:layout_marginTop="@dimen/wizards_process_settings_panels_npanel_wizard_bg_y1"
+        android:layout_toRightOf="@+id/bg_verticaldivider_left" >
+
+        <ListView
+            android:id="@+id/lcn_numberlist"
+            style="@org.droidtv.ui.tvwidget2k15:style/DefaultListViewStyle"
+            android:layout_width="328dp"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="30dp"
+            android:scrollbars="vertical" />
+
+        <View
+            android:id="@+id/bg_verticaldivider_right"
+            android:layout_width="@dimen/wizards_satellite_fullscan_wizard_container_divider_width"
+            android:layout_height="@dimen/wizards_satellite_fullscan_wizard_container_divider_height"
+            android:layout_marginTop="39dp"
+            android:layout_marginLeft="329dp"
+            android:background="@org.droidtv.ui.tvwidget2k15:drawable/npaneldivider" />
+
+        <ListView
+            android:id="@+id/lcn_channellist"
+            style="@org.droidtv.ui.tvwidget2k15:style/DefaultListViewStyle"
+            android:layout_width="328dp"
+            android:layout_height="fill_parent"
+            android:layout_alignBottom="@+id/lcn_numberlist"
+            android:layout_alignTop="@+id/lcn_numberlist"
+            android:layout_toRightOf="@+id/bg_verticaldivider_right"
+            android:scrollbars="vertical" />
+    </RelativeLayout>
+
+    <org.droidtv.ui.tvwidget2k15.ColorKeys
+        android:id="@+id/lcn_colorkeys"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+    </org.droidtv.ui.tvwidget2k15.ColorKeys>
+
+</RelativeLayout>

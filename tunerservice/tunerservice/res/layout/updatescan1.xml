@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <TextView
+            android:id="@+id/satname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentTop="true" />
+        
+        <TextView
+            android:id="@+id/tvchAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/satname"
+            android:layout_marginTop="5dp"
+            android:visibility="visible"
+            android:text="@org.droidtv.ui.strings:string/MAIN_WI_SAT_TV_CHANNELS_ADDED" />
+
+        <TextView
+            android:id="@+id/tvchAddValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tvchAdd"
+            android:layout_alignBottom="@+id/tvchAdd"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="150dp"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/tvchRemove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/tvchAdd"
+            android:layout_marginTop="5dp"
+            android:visibility="visible"
+            android:text="@org.droidtv.ui.strings:string/MAIN_WI_SAT_TV_CHANNELS_REMOVED" />
+
+        <TextView
+            android:id="@+id/tvchRemoveValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tvchRemove"
+            android:layout_alignBottom="@+id/tvchRemove"
+            android:layout_alignLeft="@+id/tvchAddValue"
+            android:visibility="invisible"
+             />
+
+        <TextView
+            android:id="@+id/radiochAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/tvchRemove"
+            android:layout_marginTop="5dp"
+            android:visibility="visible"
+            android:text="@org.droidtv.ui.strings:string/MAIN_WI_SAT_RADIO_CHANNELS_ADDED" />
+
+        <TextView
+            android:id="@+id/radiochAddValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/radiochAdd"
+            android:layout_alignBottom="@+id/radiochAdd"
+            android:layout_alignLeft="@+id/tvchRemoveValue"
+            android:visibility="invisible"
+             />
+
+        <TextView
+            android:id="@+id/radiochremove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/radiochAdd"
+            android:layout_marginTop="5dp"
+            android:visibility="visible"
+            android:text="@org.droidtv.ui.strings:string/MAIN_WI_SAT_RADIO_CHANNELS_REMOVED"></TextView>
+
+        <TextView
+            android:id="@+id/radiochremovevalue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/radiochremove"
+            android:layout_alignBaseline="@+id/radiochremove"
+            android:layout_alignLeft="@+id/radiochAddValue"
+            android:visibility="invisible"
+             />
+
+        <TextView
+            android:id="@+id/totalprogresstext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/radiochremove"
+            android:layout_marginTop="10dp"
+            android:text="@org.droidtv.ui.strings:string/MAIN_WI_TOTAL_PROGRESS" />
+
+        <ProgressBar
+            android:id="@+id/totalProgress"
+            style="@org.droidtv.ui.tvwidget2k15:style/ProgressBarStyleDefault.Wizard"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/totalprogresstext"
+            android:layout_marginTop="10dp" 
+            android:focusable="true"
+            android:max="100"/>
+
+        <TextView
+            android:id="@+id/step"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/totalProgress"
+            android:layout_marginTop="10dp"
+            android:text="@org.droidtv.ui.strings:string/MAIN_WI_STEP" />
+
+        <ProgressBar
+            android:id="@+id/installationProgress"
+            style="@org.droidtv.ui.tvwidget2k15:style/ProgressBarStyleDefault.Wizard"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/step" 
+            android:focusable="true"
+            android:max="100"/>
+
+
+    </RelativeLayout>

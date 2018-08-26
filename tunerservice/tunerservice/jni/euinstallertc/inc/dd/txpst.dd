@@ -1,0 +1,121 @@
+/*
+ *  Copyright(C) 2003 Koninklijke Philips Electronics N.V.,
+ *  All Rights Reserved.
+ *  This  source code and any compilation or derivative thereof is the
+ *  proprietary information of Koninklijke Philips Electronics N.V.
+ *  and is confidential in nature.
+ *  Under no circumstances is this software to be exposed to or placed
+ *  under an Open Source License of any type without the expressed
+ *  written permission of Koninklijke Philips Electronics N.V.
+ *
+ *          %name: txpst.dd %
+ *       %version: TVG_tv550r4dev %
+ * %date_modified: Mon Mar 22 12:50:06 2004 %
+ *    %derived_by: lakshminb %
+ */
+ 
+
+
+/* HVA
+	This file contains all implementation types and extern declarations
+	that are NOT present on any interface, but are needed to implement
+	some of the interface functions as macro's
+*/
+
+/** koala group CTxtPageStoreTypes **/
+/** koala using CTxtPlatformTypes **/
+
+#ifndef _TXPST_DD_
+#define _TXPST_DD_
+
+
+/** koala type PacketId **/
+typedef Nat16 PacketId;		/* Max 65535 packets (0 unused) for 2.8Mb cache */
+#define NOPKT (0)				/* defines the null value for packet ID's */
+
+#define PAGE_AGE            (0x05)
+#define PAGE_OPEN_READ      (0x02)
+#define PAGE_OPEN_WRITE     (0x01)
+#define PAGE_HAS_SUBCODES   (0x80)
+#define PAGETYPEBITS        (0x3f)
+
+/** koala type FncCallBack **/
+typedef void (*FncCallBack)( PageNr page); 
+
+/* HVA
+	These structures used to be embedded in each other. This does not compile
+	correctly using the Tasking compiler (struct alignment problems).
+
+	Changed to these three structures to ensure packets are EXACTLY 44 bytes.
+*/
+
+typedef struct {			/** koala type TxtPacket **/
+    Nat8 data[40];
+    Nat8 PacketNr;
+    Nat8  RefCnt;
+    PacketId NextPacketId;
+} TxtPacket;
+
+/** koala type TxtPacket0 **/
+#define PAGE_NUMBER         (0x07ff) /* For Page Number */
+
+typedef struct {			
+    Nat8 data[32];
+    PageNr pagenr; /* Only the 11 LSBits are used for storing Page numbers */
+    Subcode subcode;
+    PacketId nextindex;
+    PacketId previndex;
+    Nat8  controlbits;
+    Nat8  RefCnt;
+    PacketId NextPacketId;
+} TxtPacket0;
+
+typedef struct {			/** koala type SubcodePacket **/
+    PacketId indices[20];
+    Nat8  new_max_subcode;
+    Nat8  max_subcode;
+    PacketId NextPacketId;
+} SubcodePacket;
+
+
+
+/** koala type PageCallbackEntry **/
+typedef struct {
+    PageNr pagenr;
+    Subcode subcode;
+    int tag;
+    FncReceived func;
+    Int8 next;
+} PageCallbackEntry;
+
+extern PageCallbackEntry PageCallbacks[];
+
+
+/** koala type PageTableEntry **/
+
+
+typedef struct {
+    Nat8 MustRefCnt;
+    Nat8 WantRefCnt;
+    Nat8 PageType; /* upper bit is used to indicate that a page has a subcode packet, rest contains PageType */
+    PacketId FirstPacketId;
+    Int8 Callback;
+    Nat8 PageAge;/* For Page Aging */
+} PageTableEntry;
+
+extern PageTableEntry PageTable[];
+
+typedef struct {
+    PageNr  pagenr;
+    Subcode subcode;
+    TxtPacket *packets[NR_PACKETS];
+    PacketId pktid[NR_PACKETS];
+    Nat8 inuse; 
+} PageLinkCacheEntry;
+
+extern PageLinkCacheEntry PageLinkCache[];
+
+extern Int8 PageDataTable [8][10];
+extern Bool AllPagesInTransmission;
+
+#endif

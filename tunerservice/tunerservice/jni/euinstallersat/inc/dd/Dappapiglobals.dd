@@ -1,0 +1,45 @@
+#ifndef __APPAPIGLOBALS_DD_
+#define __APPAPIGLOBALS_DD_
+
+/** koala public group appapiglobals **/
+/** koala using Address **/ 
+/** koala using Nat   **/
+/** koala using Nat32 **/
+/** koala using Int32 **/
+
+typedef void (*AppApiBigPumpFunc)( int size, Address buf );       /** koala public type AppApiBigPumpFunc **/
+
+typedef void          AppApiFile;                                 /** koala public type AppApiFile   **/
+typedef int           AppApiStatus;                               /** koala public type AppApiStatus **/
+typedef void          AppApiDir;                                  /** koala public type AppApiDir    **/
+
+typedef struct
+{
+    char d_name[256];
+} AppApiDirEnt;                                                   /** koala public type AppApiDirEnt **/
+
+
+#undef st_atime
+#undef st_mtime
+#undef st_ctime
+
+typedef struct
+  {
+    Nat32 st_dev;
+    Nat32 st_ino;
+    Nat   st_mode;
+    Nat   st_nlink;
+    Nat   st_uid;
+    Nat   st_gid;
+    Nat32 st_rdev;
+    Int32 st_size;
+    Int32 st_pad3;
+    Int32 st_atime;
+    Int32 st_mtime;
+    Int32 st_ctime;
+    Int32 st_blksize;
+    Int32 st_blocks;
+} AppApiStat;                                                     /** koala public type AppApiStat   **/
+
+
+#endif

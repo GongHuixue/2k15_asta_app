@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/SETUP_MENU"
+    applicationClassName="org.droidtv.euinstallertc.wizard.settings.DigitalReceptionTestActivity"
+    cookie="org.droidtv.euinstallertc.settings.SettingsConstants.MAIN_ANALOGUE_MANUAL_INSTALLATION"
+    label="org.droidtv.ui.strings.R.string.MAIN_ANALOGUE_MANUAL_INSTALLATION" >
+
+    <menu
+        android:id="@+id/MAIN_ANALOGUE_MANUAL_INSTALLATION"
+        applicationClassName="org.droidtv.euinstallertc.settings.SettingsHandler"
+        contextID="manual_installation"
+        contextLevel="3"
+        cookie="org.droidtv.euinstallertc.settings.SettingsConstants.MAIN_ANALOGUE_MANUAL_INSTALLATION"
+        easyPQ="org.droidtv.tunerservice.R.array.ch_analogue_manual_installation"
+        label="org.droidtv.ui.strings.R.string.MAIN_ANALOGUE_MANUAL_INSTALLATION" >
+        <item
+            android:id="@+id/MAIN_SYSTEM"
+            applicationClassName="org.droidtv.euinstallertc.settings.SettingsHandler"
+            contextID="system"
+            contextLevel="3"
+            cookie="org.droidtv.euinstallertc.settings.SettingsConstants.MAIN_SYSTEM"
+            cookieList="org.droidtv.tunerservice.R.array.generic_index"
+            easyPQ="org.droidtv.tunerservice.R.array.ch_system"
+            label="org.droidtv.ui.strings.R.string.MAIN_SYSTEM"
+            listType="generic"
+            nodeType="org.droidtv.ui.tvwidget2k15.setupmenuframework.common.ListMenuItem"
+            textList="org.droidtv.tunerservice.R.array.menu_country_string">
+        </item>
+        <item
+            android:id="@+id/MAIN_FIND_CHANNEL"
+            applicationClassName="org.droidtv.euinstallertc.settings.SettingsHandler"
+            collapse="true"
+            contextID="search_channel"
+            contextLevel="3"
+            cookie="org.droidtv.euinstallertc.settings.SettingsConstants.MAIN_FIND_CHANNEL"
+            easyPQ="org.droidtv.tunerservice.R.array.ch_search"
+            label="org.droidtv.ui.strings.R.string.MAIN_FIND_CHANNEL"
+            nodeType="org.droidtv.euinstallertc.settings.AnalogSearchMenuItem">
+        </item>
+
+        <menu
+            android:id="@+id/MAIN_STORE_CURRENT_CHANNEL"
+            applicationClassName="org.droidtv.euinstallertc.settings.SettingsHandler"
+            contextID="store_current_channel"
+            contextLevel="3"
+            cookie="org.droidtv.euinstallertc.settings.SettingsConstants.MAIN_STORE_CURRENT_CHANNEL"
+            easyPQ="org.droidtv.tunerservice.R.array.ch_store_current_channel"
+            label="org.droidtv.ui.strings.R.string.MAIN_STORE_CURRENT_CHANNEL" >
+        </menu>
+        <menu
+            android:id="@+id/MAIN_STORE_AS_NEW_CHANNEL"
+            applicationClassName="org.droidtv.euinstallertc.settings.SettingsHandler"
+            contextID="store_as_new_channel"
+            contextLevel="3"
+            cookie="org.droidtv.euinstallertc.settings.SettingsConstants.MAIN_STORE_AS_NEW_CHANNEL"
+            easyPQ="org.droidtv.tunerservice.R.array.ch_store_as_new_channel"
+            label="org.droidtv.ui.strings.R.string.MAIN_STORE_AS_NEW_CHANNEL" >
+        </menu>
+    </menu>
+
+    <menu
+        android:id="@+id/MAIN_REORDER"
+        applicationClassName="org.droidtv.euinstallertc.settings.SettingsHandler"
+        contextID="reorder"
+        contextLevel="3"
+        cookie="org.droidtv.euinstallertc.settings.SettingsConstants.MAIN_REORDER"
+        easyPQ="org.droidtv.tunerservice.R.array.ch_reorder"
+        label="org.droidtv.ui.strings.R.string.MAIN_REORDER" >
+    </menu>
+
+</menu>

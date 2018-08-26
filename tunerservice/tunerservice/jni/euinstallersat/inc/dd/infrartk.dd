@@ -1,0 +1,48 @@
+/*
+ *  Copyright(C) 2003 Koninklijke Philips Electronics N.V.,
+ *  All Rights Reserved.
+ *  This  source code and any compilation or derivative thereof is the
+ *  proprietary information of Koninklijke Philips Electronics N.V.
+ *  and is confidential in nature.
+ *  Under no circumstances is this software to be exposed to or placed
+ *  under an Open Source License of any type without the expressed
+ *  written permission of Koninklijke Philips Electronics N.V.
+ *
+ *          %name: infrartk.dd %
+ *       %version: brg45mgr#4 %
+ * %date_modified: Thu Dec 09 16:33:25 2010 %
+ *    %derived_by: cappellw %
+ */
+
+
+#ifndef _INFRARTK_DD_
+#define _INFRARTK_DD_
+
+
+/** koala public group infrartk **/
+/** koala public using infraglobals **/
+/** koala public using appapiglobals**/
+
+/* for IRealTimeKernel */
+
+typedef Nat8  Task;                     /** koala public type Task **/
+typedef Nat8  Semaphore;                /** koala public type Semaphore **/
+typedef Nat16 Event;                    /** koala public type Event **/
+typedef Nat8  Mailbox;                  /** koala public type Mailbox **/
+typedef int   Talos;                    /** koala public type Talos **/
+
+typedef void (*TaskFunction)(void);                              /** koala public type TaskFunction **/
+typedef void*  Timer;                                            /** koala public type Timer **/
+typedef struct { int msg; int param1 ; Nat32 param2 ; } Message; /** koala public type Message **/
+
+
+/* for IPump */
+struct EngineStruct;
+typedef struct EngineStruct* PumpEngine;                        /** koala public type PumpEngine **/
+struct MessageStruct;
+typedef struct MessageStruct* PumpMessage;                      /** koala public type PumpMessage **/
+typedef int Pump;                                                /** koala public type Pump **/
+typedef void (*PumpFunc)(int,Nat32);                             /** koala public type PumpFunc **/
+typedef void (*BigPumpFunc)(int, Address);                       /** koala public type BigPumpFunc **/
+
+#endif

@@ -1,0 +1,63 @@
+#ifndef HSVDVBSDT_M
+#define HSVDVBSDT_M
+
+#define GENERATE__LEGACY__DEFINES
+
+#include "../CHsvDvbSDT.h"
+#include "CHsvDvbSDT_Priv.h"
+
+
+#undef GENERATE__LEGACY__DEFINES
+void CHsvDvbSDT_Priv::params__init(void)
+{
+    sdtmainconf_MaxElements    = 1000;   
+    sdtmainconf_ElementSize    = sizeof(HsvSDTSection);   
+    sdtmainconf_SortCriteria   = sdtmainconf_Primary | sdtmainconf_Secondary| sdtmainconf_Teritiary;   
+
+    sdtsubconf_MaxElements    = 1000;   
+    sdtsubconf_ElementSize    = sizeof(HsvSDTSection);   
+    sdtsubconf_SortCriteria   = sdtmainconf_Primary | sdtmainconf_Secondary| sdtmainconf_Teritiary;   
+	   
+    linkmainconf_MaxElements    = 100;   
+    linkmainconf_ElementSize    = sizeof(HsvLinkageInfo);   
+    linkmainconf_SortCriteria   = linkmainconf_Primary | linkmainconf_Secondary | linkmainconf_Teritiary;    
+
+}
+CHsvDvbSDT_Priv::~CHsvDvbSDT_Priv()
+{
+}
+//public class connections
+CHsvDvbSDT::CHsvDvbSDT()
+{
+ m_priv = new CHsvDvbSDT_Priv();
+dmxsecfN	= m_priv->dmxsecfN;
+ena	= m_priv->ena;
+linkmainconf	= m_priv->linkmainconf;
+pow	= m_priv->pow;
+sdtena	= m_priv->sdtena;
+sdtmainconf	= m_priv->sdtmainconf;
+sdtsubconf	= m_priv->sdtsubconf;
+strapi	= m_priv->strapi;
+strmfltr	= m_priv->strmfltr;
+Freesatena = m_priv->Freesatena;
+m_priv->charsetutil	=charsetutil;
+m_priv->cids	=cids;
+m_priv->conf	=conf;
+m_priv->ctrlN	=ctrlN;
+m_priv->div	=div;
+m_priv->dvbsvc	=dvbsvc;
+m_priv->eurdiv	=eurdiv;
+m_priv->ins	=ins;
+m_priv->pakgins	=pakgins;
+m_priv->sec	=sec;
+m_priv->srtdb	=srtdb;
+m_priv->srtdbids	=srtdbids;
+m_priv->strapiN	=strapiN;
+m_priv->ctrl	=ctrl;
+m_priv->ipmtstrapi = ipmtstrapi;
+}
+CHsvDvbSDT::~CHsvDvbSDT()
+{
+ delete m_priv;
+}
+#endif

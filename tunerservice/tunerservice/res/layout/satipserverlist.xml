@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/wizard_install_satellite_fullscan_panels_npanel_wizard_bg_height" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/wizard_install_satellite_fullscan_panels_npanel_wizard_bg_height"
+        android:layout_marginLeft="-48dp"
+        android:layout_marginTop="-90dp" >
+
+        <org.droidtv.ui.tvwidget2k15.wizardframework.common.RadioSelector
+            android:id="@+id/radioList"
+            style="@org.droidtv.ui.tvwidget2k15:style/DefaultListViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/wizard_step1_npanel_description01_text_x1"
+            android:layout_marginTop="@dimen/wizard_step1_npanel_header_text_y1"
+            android:scrollbars="vertical"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/bodyText"
+            android:layout_width="@dimen/wizard_step1_npanel_description01_text_width"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/wizard_step1_npanel_description01_text_x1"
+            android:layout_marginTop="@dimen/wizard_step1_npanel_header_text_y1"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+</RelativeLayout>

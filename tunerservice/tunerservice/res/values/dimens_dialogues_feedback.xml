@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Fri Oct 31 2014 15:14:03 GMT+0530-->
+<resources>
+<!--Layout_Dialogues_Feedback_v2.4.psd-->
+<dimen name="dialogues_feedback_container_height">263dp</dimen>
+
+<dimen name="dialogues_feedback_container_width">644dp</dimen>
+
+<dimen name="dialogues_feedback_container_x1">158.5dp</dimen>
+
+<dimen name="dialogues_feedback_container_y1">138.5dp</dimen>
+
+<dimen name="dialogues_feedback_container_x2">802.5dp</dimen>
+
+<dimen name="dialogues_feedback_container_y2">401.5dp</dimen>
+
+<dimen name="dialogues_feedback_padding_top_height">22dp</dimen>
+
+<dimen name="dialogues_feedback_padding_top_width">22dp</dimen>
+
+<dimen name="dialogues_feedback_padding_top_x1">158dp</dimen>
+
+<dimen name="dialogues_feedback_padding_top_y1">138.5dp</dimen>
+
+<dimen name="dialogues_feedback_padding_top_x2">180dp</dimen>
+
+<dimen name="dialogues_feedback_padding_top_y2">160.5dp</dimen>
+
+<dimen name="dialogues_feedback_padding_left_height">30dp</dimen>
+
+<dimen name="dialogues_feedback_padding_left_width">30dp</dimen>
+
+<dimen name="dialogues_feedback_padding_left_x1">158dp</dimen>
+
+<dimen name="dialogues_feedback_padding_left_y1">138.5dp</dimen>
+
+<dimen name="dialogues_feedback_padding_left_x2">188dp</dimen>
+
+<dimen name="dialogues_feedback_padding_left_y2">168.5dp</dimen>
+
+<dimen name="dialogues_feedback_padding_bottom_height">20dp</dimen>
+
+<dimen name="dialogues_feedback_padding_bottom_width">20dp</dimen>
+
+<dimen name="dialogues_feedback_padding_bottom_x1">158dp</dimen>
+
+<dimen name="dialogues_feedback_padding_bottom_y1">381.5dp</dimen>
+
+<dimen name="dialogues_feedback_padding_bottom_x2">178dp</dimen>
+
+<dimen name="dialogues_feedback_padding_bottom_y2">401.5dp</dimen>
+
+<dimen name="dialogues_feedback_padding_right_height">30dp</dimen>
+
+<dimen name="dialogues_feedback_padding_right_width">30dp</dimen>
+
+<dimen name="dialogues_feedback_padding_right_x1">772dp</dimen>
+
+<dimen name="dialogues_feedback_padding_right_y1">138.5dp</dimen>
+
+<dimen name="dialogues_feedback_padding_right_x2">802dp</dimen>
+
+<dimen name="dialogues_feedback_padding_right_y2">168.5dp</dimen>
+
+<dimen name="dialogues_feedback_header_title_text_height">22dp</dimen>
+
+<dimen name="dialogues_feedback_header_title_text_width">408dp</dimen>
+
+<dimen name="dialogues_feedback_header_title_text_x1">188dp</dimen>
+
+<dimen name="dialogues_feedback_header_title_text_y1">160.5dp</dimen>
+
+<dimen name="dialogues_feedback_header_title_text_x2">596dp</dimen>
+
+<dimen name="dialogues_feedback_header_title_text_y2">182.5dp</dimen>
+
+<dimen name="dialogues_feedback_header_sub_title_text_height">18.5dp</dimen>
+
+<dimen name="dialogues_feedback_header_sub_title_text_width">408dp</dimen>
+
+<dimen name="dialogues_feedback_header_sub_title_text_x1">188dp</dimen>
+
+<dimen name="dialogues_feedback_header_sub_title_text_y1">181dp</dimen>
+
+<dimen name="dialogues_feedback_header_sub_title_text_x2">596dp</dimen>
+
+<dimen name="dialogues_feedback_header_sub_title_text_y2">199.5dp</dimen>
+
+<dimen name="dialogues_feedback_header_right_text_height">18.5dp</dimen>
+
+<dimen name="dialogues_feedback_header_right_text_width">156dp</dimen>
+
+<dimen name="dialogues_feedback_header_right_text_x1">616.5dp</dimen>
+
+<dimen name="dialogues_feedback_header_right_text_y1">181dp</dimen>
+
+<dimen name="dialogues_feedback_header_right_text_x2">772.5dp</dimen>
+
+<dimen name="dialogues_feedback_header_right_text_y2">199.5dp</dimen>
+
+<dimen name="dialogues_feedback_list_container_height">88dp</dimen>
+
+<dimen name="dialogues_feedback_list_container_width">584dp</dimen>
+
+<dimen name="dialogues_feedback_list_container_x1">188.5dp</dimen>
+
+<dimen name="dialogues_feedback_list_container_y1">233dp</dimen>
+
+<dimen name="dialogues_feedback_list_container_x2">772.5dp</dimen>
+
+<dimen name="dialogues_feedback_list_container_y2">321dp</dimen>
+
+<dimen name="dialogues_feedback_list_container_margin_bottom_height">24dp</dimen>
+
+<dimen name="dialogues_feedback_list_container_margin_bottom_width">24dp</dimen>
+
+<dimen name="dialogues_feedback_list_container_margin_bottom_x1">188.5dp</dimen>
+
+<dimen name="dialogues_feedback_list_container_margin_bottom_y1">321dp</dimen>
+
+<dimen name="dialogues_feedback_list_container_margin_bottom_x2">212.5dp</dimen>
+
+<dimen name="dialogues_feedback_list_container_margin_bottom_y2">345dp</dimen>
+
+<dimen name="dialogues_feedback_list_container_margin_top_height">16dp</dimen>
+
+<dimen name="dialogues_feedback_list_container_margin_top_width">16dp</dimen>
+
+<dimen name="dialogues_feedback_list_container_margin_top_x1">188.5dp</dimen>
+
+<dimen name="dialogues_feedback_list_container_margin_top_y1">217dp</dimen>
+
+<dimen name="dialogues_feedback_list_container_margin_top_x2">204.5dp</dimen>
+
+<dimen name="dialogues_feedback_list_container_margin_top_y2">233dp</dimen>
+
+<dimen name="dialogues_feedback_list_item_height">26dp</dimen>
+
+<dimen name="dialogues_feedback_list_item_width">298dp</dimen>
+
+<dimen name="dialogues_feedback_list_item_x1">188.5dp</dimen>
+
+<dimen name="dialogues_feedback_list_item_y1">233dp</dimen>
+
+<dimen name="dialogues_feedback_list_item_x2">486.5dp</dimen>
+
+<dimen name="dialogues_feedback_list_item_y2">259dp</dimen>
+
+<dimen name="dialogues_feedback_list_item_radio_button_height">18dp</dimen>
+
+<dimen name="dialogues_feedback_list_item_radio_button_width">18dp</dimen>
+
+<dimen name="dialogues_feedback_list_item_radio_button_x1">200.5dp</dimen>
+
+<dimen name="dialogues_feedback_list_item_radio_button_y1">237dp</dimen>
+
+<dimen name="dialogues_feedback_list_item_radio_button_x2">218.5dp</dimen>
+
+<dimen name="dialogues_feedback_list_item_radio_button_y2">255dp</dimen>
+
+<dimen name="dialogues_feedback_list_item_text_height">21dp</dimen>
+
+<dimen name="dialogues_feedback_list_item_text_width">260dp</dimen>
+
+<dimen name="dialogues_feedback_list_item_text_x1">226.5dp</dimen>
+
+<dimen name="dialogues_feedback_list_item_text_y1">238.5dp</dimen>
+
+<dimen name="dialogues_feedback_list_item_text_x2">486.5dp</dimen>
+
+<dimen name="dialogues_feedback_list_item_text_y2">259.5dp</dimen>
+
+<dimen name="dialogues_feedback_list_row_01_height">26dp</dimen>
+
+<dimen name="dialogues_feedback_list_row_01_width">584dp</dimen>
+
+<dimen name="dialogues_feedback_list_row_01_x1">188.5dp</dimen>
+
+<dimen name="dialogues_feedback_list_row_01_y1">233dp</dimen>
+
+<dimen name="dialogues_feedback_list_row_01_x2">772.5dp</dimen>
+
+<dimen name="dialogues_feedback_list_row_01_y2">259dp</dimen>
+
+<dimen name="dialogues_feedback_list_row_margin_bottom_height">5dp</dimen>
+
+<dimen name="dialogues_feedback_list_row_margin_bottom_width">5dp</dimen>
+
+<dimen name="dialogues_feedback_list_row_margin_bottom_x1">188.5dp</dimen>
+
+<dimen name="dialogues_feedback_list_row_margin_bottom_y1">259dp</dimen>
+
+<dimen name="dialogues_feedback_list_row_margin_bottom_x2">193.5dp</dimen>
+
+<dimen name="dialogues_feedback_list_row_margin_bottom_y2">264dp</dimen>
+
+<dimen name="dialogues_feedback_list_row_02_height">26dp</dimen>
+
+<dimen name="dialogues_feedback_list_row_02_width">584dp</dimen>
+
+<dimen name="dialogues_feedback_list_row_02_x1">188.5dp</dimen>
+
+<dimen name="dialogues_feedback_list_row_02_y1">264dp</dimen>
+
+<dimen name="dialogues_feedback_list_row_02_x2">772.5dp</dimen>
+
+<dimen name="dialogues_feedback_list_row_02_y2">290dp</dimen>
+
+<dimen name="dialogues_feedback_header_divider_height">1dp</dimen>
+
+<dimen name="dialogues_feedback_header_divider_width">644dp</dimen>
+
+<dimen name="dialogues_feedback_header_divider_x1">158dp</dimen>
+
+<dimen name="dialogues_feedback_header_divider_y1">215.5dp</dimen>
+
+<dimen name="dialogues_feedback_header_divider_x2">802dp</dimen>
+
+<dimen name="dialogues_feedback_header_divider_y2">216.5dp</dimen>
+
+<dimen name="dialogues_feedback_header_divider_padding_top_height">16dp</dimen>
+
+<dimen name="dialogues_feedback_header_divider_padding_top_width">16dp</dimen>
+
+<dimen name="dialogues_feedback_header_divider_padding_top_x1">158dp</dimen>
+
+<dimen name="dialogues_feedback_header_divider_padding_top_y1">199.5dp</dimen>
+
+<dimen name="dialogues_feedback_header_divider_padding_top_x2">174dp</dimen>
+
+<dimen name="dialogues_feedback_header_divider_padding_top_y2">215.5dp</dimen>
+
+<dimen name="dialogues_feedback_content_padding_top_height">16dp</dimen>
+
+<dimen name="dialogues_feedback_content_padding_top_width">16dp</dimen>
+
+<dimen name="dialogues_feedback_content_padding_top_x1">158dp</dimen>
+
+<dimen name="dialogues_feedback_content_padding_top_y1">216.5dp</dimen>
+
+<dimen name="dialogues_feedback_content_padding_top_x2">174dp</dimen>
+
+<dimen name="dialogues_feedback_content_padding_top_y2">232.5dp</dimen>
+
+<dimen name="dialogues_feedback_button_cancel_height">36dp</dimen>
+
+<dimen name="dialogues_feedback_button_cancel_width">160dp</dimen>
+
+<dimen name="dialogues_feedback_button_cancel_x1">436dp</dimen>
+
+<dimen name="dialogues_feedback_button_cancel_y1">345.5dp</dimen>
+
+<dimen name="dialogues_feedback_button_cancel_x2">596dp</dimen>
+
+<dimen name="dialogues_feedback_button_cancel_y2">381.5dp</dimen>
+
+<dimen name="dialogues_feedback_button_update_selection_height">36dp</dimen>
+
+<dimen name="dialogues_feedback_button_update_selection_width">160dp</dimen>
+
+<dimen name="dialogues_feedback_button_update_selection_x1">612dp</dimen>
+
+<dimen name="dialogues_feedback_button_update_selection_y1">345.5dp</dimen>
+
+<dimen name="dialogues_feedback_button_update_selection_x2">772dp</dimen>
+
+<dimen name="dialogues_feedback_button_update_selection_y2">381.5dp</dimen>
+
+</resources>

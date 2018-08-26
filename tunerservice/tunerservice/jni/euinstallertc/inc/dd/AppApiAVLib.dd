@@ -1,0 +1,44 @@
+/** koala public group AppApiAVLib **/
+/** koala using infraglobals **/
+
+#ifndef _APPAPIAVLIB_DD_
+#define _APPAPIAVLIB_DD_
+
+
+#define    AppApiUnkownDestination 0
+#define    AppApiMain             1    
+#define    AppApiAux              2
+#define    AppApiSpeakersOut      4
+#define    AppApiLineOut          8
+#define    AppApiSpdifOut         16
+#define    AppApiHeadphonesOut    32
+#define    AppApiAvOut1           64
+#define    AppApiAvOut2           128
+#define    AppApiTsOut            256
+
+typedef int AppApiDestination;
+
+typedef enum
+{
+    AppApisrcNoSource =0,
+    AppApisrcMainTuner,
+    AppApisrcAuxTuner,
+    AppApisrcDigitalTuner,
+    AppApisrcAvIn0,
+    AppApisrcAvIn1,
+    AppApisrcAvIn2,
+    AppApisrcAvIn3,
+    AppApisrcAvIn4,
+    AppApisrcAvIn5,
+    AppApisrcAvIn6,
+    AppApisrcAvIn7,
+    AppApisrcAvIn8,
+    AppApisrcAvIn9,
+    AppApisrcSpdif,
+    AppApisrcSpdif2,
+    AppApisrc1394,
+    AppApisrcUnknownSource
+
+}AppApiPresetSource;    /** koala type AppApiPresetSource **/
+
+#endif /* _APPAPIAVLIB_DD_ */

@@ -1,0 +1,276 @@
+/*
+ *  Copyright(C) 2003 Koninklijke Philips Electronics N.V.,
+ *  All Rights Reserved.
+ *  This  source code and any compilation or derivative thereof is the
+ *  proprietary information of Koninklijke Philips Electronics N.V.
+ *  and is confidential in nature.
+ *  Under no circumstances is this software to be exposed to or placed
+ *  under an Open Source License of any type without the expressed
+ *  written permission of Koninklijke Philips Electronics N.V.
+ *
+ *          %name: HsvDVBPgmDataGlobals.dd %
+ *       %version: TVG_1 % 
+ *       %version: TVG_1 % 
+ * %date_modified: Thu Feb 26 20:42:15 2009 %
+ *    %derived_by: aneeshc %
+ */
+
+
+#ifndef _HsvDVBPgmDataGlobals_DD_
+#define _HsvDVBPgmDataGlobals_DD_
+
+/** koala using infraglobals **/
+/** koala group HsvDVBPgmDataGlobals **/
+
+#define MAX_CHANNEL_NAME (23)
+
+
+
+#define INVALID_KEY              (0)
+
+
+#define GETINDEXFORFLASH(a,b) (((a) & 0x0000ffff) |\
+                                ((b&0x00000003)<<16))
+#define INSERT_RECORD           (1)
+#define UPDATE_RECORD           (2)
+#define GETDBOPER(n) (((n) & 0x00030000) >> 16)
+#define GETFLASHINDEX(n)  ((n) & 0x0000ffff)
+
+#define __HSVLASTDEFINED
+
+typedef enum {
+    HsvOUI_Philips = 0,
+    HsvOUI_Last
+}HsvOUI;
+
+#undef __HSVLASTDEFINED
+
+/*NOTE:- While updating the structures please update the Flash Structures too*/
+
+
+/* Primary Key for the HsvDVBPresetData is PresetNumber ,
+ No secondary or teritiary key*/
+
+typedef struct
+{
+    Nat32     		CesvcCookie;                    /* Requirements Driven */
+    Nat32     		AppsCookie;                     /* Requirements Driven */
+    Nat32     		TxtCookie;                      /* Requirements Driven */
+    int             FlashIndex;  
+    
+   union 
+    {
+        struct
+        {   /*Digital channel*/
+            Nat16  		    OriginalNetworkId;      /* Standard driven => 16bit */
+    	    Nat16  		    ServiceId;              /* Standard driven => 16bit */
+            Nat16  		    Tsid;                   /* Standard driven => 16bit */            
+            Nat16		    StreamPriority;
+    	    Nat32		    Frequency;			/* fix me to be moved outside with Nat16 */
+        }Digital;
+        struct
+        {   /*Analog Channel*/
+            Nat32		 	Frequency;              /* 32 bit */
+            Nat8            PlatformPreset;         /* 0 to 100 */
+            Nat8            dummy1;
+            Nat16           dummy2;
+        }Analog;
+    }ChannelId; 
+    Int16 		    PresetNumber;                   /* 0 to 999 */
+                        
+    Nat8 		    Type;                           /* Analog or Digital 1 byte  for word allignment */ 
+    Nat8    		SystemHidden:1;                 /* TRUE/FALSE 1 byte  for word allignment*/
+    Nat8            UserHidden:1;                   /* TRUE/FALSE 1 byte  for word allignment*/
+    Nat8            NewPreset:1;                    /* TRUE/FALSE 1 byte for word allignment*/
+    Nat8	        EPGEnabled:1;		    /* TRUE/FALSE 1 byte for word alignment */ 
+    Nat8            UpdateName:1;                   /* UpdateName=> 1 bit */
+    Nat8            UserMoved:1;
+    Nat8            UserMovedConsequent:1;
+    Nat8            EPGShortInfo:1;
+	Nat8			NumericSelect;
+}HsvDVBPresetData; /** koala type HsvDVBPresetData **/  
+
+
+/* Structure for Analog Service */  
+/*NOTE:- While updating the structures please update the Flash Structures too*/
+/* Primary Key for the HsvAnalogData is Preset - which is Platform preset 
+ No secondary or teritiary key*/
+typedef struct
+{
+	Int32		Frequency;                      /* 32 bit */     
+    Int32		FineTuneFrequency;              /* 32 bit */
+    /* To be decided => deprecated ?*/
+    int			SignalStrength;    
+    int			InstallMode;
+    int			FineTuneOffset;                 /* 32 bit */
+    int			ColourSystem;
+    Nat16		ChannelName[MAX_CHANNEL_NAME];  /* Unicoded string */    
+    Nat16		CniNi;                          /* CNI data from teletext*/
+    Nat8		DataIndicator;                  /* Data indicator as in HsvGlobals.dd*/
+    Nat8		Preset;                         /* 0 to 100 Platform preset No*/
+    Nat8		ModulationType;                 /* Not more than 256 */     
+    Nat8		Decoder:4;                      /* 3 values   */
+    Nat8		ChannelVirgin:1;                /* TRUE/FALSE */
+    Nat8		Attenuator:1;                   /* TRUE/FALSE */
+    Nat8		Tuned:1;                        /* TRUE/FALSE */
+    Nat8		DeTuned:1;                      /* TRUE/FALSE */
+    Nat8		AgcInstalled:1;	                /* TRUE/FALSE */
+    Nat8		UserMoved:1;                      /* TRUE/FALSE */
+    Nat8		UserMovedConsequent:1;                 /* TRUE/FALSE */
+    Nat8        dummy:5;                         /* dummy for word alaignment*/
+
+}HsvAnalogData;  /** koala type HsvAnalogData **/   
+
+/* Primary Key for the HsvDVBDigitalTSData  Onwid , secondary key is Tsid
+ - which is Platform preset  No teritiary key*/
+/*NOTE:- While updating the structures please update the Flash Structures too present in hsvpgdat2_mdigtsitems.h*/
+typedef struct
+{    
+    Nat32		Frequency;            /* 32 bit */ 
+    int			FlashIndex;           /* FlashIndex values will be below 1000 */   
+    Int32		TimeError;            /* TimeError -> Could be a 32 bit int */   
+    Int32		FrequencyError;       /* FrequencyError -> Could be a 32 bit int*/   
+    Nat32		ASignalStrength;      /* Same as Platform */
+    Nat32		VSignalStrength;      /* Same as Platform */
+    Nat32		QSignalStrength;      /* Same as Platform Signal Quality*/
+    Nat16 	 	OriginalNetworkId;    /* Standard driven => 16bit */  
+    Nat16 	 	NetworkId;            /* Standard driven => 16bit */  
+    Nat16  		Tsid;                 /* Standard driven => 16bit */ 
+    Nat16		ChannelInformation;   /* Not more than 256 ChannelInformation */   
+    Nat8    	ModulationType;       /* Not more than 256 Modulation Types */     
+    Nat8		CodeRate;             /* Not more than 256 CodeRate */     
+    Nat8		HierarchyMode;        /* Not more than 256 HierarchyMode */     
+    Nat8		GuardInterval;        /* Not more than 256 GuardInterval */     
+    Nat8		IqMode;               /* Not more than 256 IqMode */   
+    Nat8		TxMode;               /* Not more than 256 TxMode */   
+    Nat8		ChannelBandwidth;     /* Do we need to store it */  
+    Nat8		StreamPriority;       /* HP or LP stream */
+    Nat8		FrequencyOffset;      /* Not more than 256 FrequencyOffset */       
+    Nat8		PtcListVersion;       /* As small as possible. 256 loop size is ok */         
+    Nat8    	TSVersion;            /* Standard driven => 5bit  */ 
+    Nat8		UserInstalled:1;      /* TRUE/FALSE*/
+    Nat8		GridInfo:5;	          /* Not more than 32 values */
+    Nat8		DecoderType:2;        /* Not more than 3 values => can be Antenna, DVBC and DVBT */
+    Nat32		SymbolRate;	          /* Not more than 32 values For DVBC, */
+	Nat32		SDTVersion;
+	Nat32		NITVersion;
+    Nat32       CDSDFrequency;
+}HsvDVBDigitalTSData;       /** koala type HsvDVBDigitalTSData **/
+
+
+/*NOTE:- While updating the structures please update the Flash Structures too in hsvpgdat2_digsrvcitems.h*/
+/* Primary Key for the HsvDVBDigitalServiceData  Onwid , secondary key is ServiceId 
+- which is Platform preset  No teritiary key*/
+typedef struct
+{     
+    Nat16	    Frequency;                      /* Standard driven => 13bit */
+    Nat16	    AudioPid;                       /* Standard driven => 13bit */
+	Nat16       VideoPid;                       /* Standard driven => 13bit */               
+	Nat16       PcrPid;                         /* Standard driven => 13bit */    
+    Int16     	Preset;                         /* 0 to 999 */    
+    Nat8        Type;							/* Standard HsvChannelType  */
+    Nat16       ServiceId;                      /* Standard driven => 16bit */          
+    Nat16 	 	OriginalNetworkId;              /* Standard driven => 16bit */          
+    Nat16       Tsid;                           /* Standard driven => 16bit */
+    Nat16       LCN;                            /* Standard driven => 16bit */ 
+    Nat16       StreamPriority;                 /* Sweden boxer dummy*/
+    Nat16       ChannelName[MAX_CHANNEL_NAME];  /* Unicoded string */ 
+    Nat8        ServiceListVersion;             /* As small as possible. 256 loop size is ok */  
+    Nat8        ServiceType;                    /* Standards driven => 8bit */    
+    Nat8        OUI:4;                          /* PgData defined values */
+    Nat8        VisibleService:4;               /* PgData defined values */
+    Nat8        DuplicateSvc:1;                 /* duplicate remaoval diversity*/
+    //Nat8        dummy1;
+    Nat8        UserMoved:1;        
+    Nat8        UserMovedConsequent:1;
+    Nat8        dummy1:5;
+    Nat8        ScramblingStatus;//mohanan
+    Nat8        VideoStreamType;//mohanan
+    Nat8        VideoDescPresent;//mohanan
+    Nat8        DecoderType;                    /* Not more than 3 values => can be Antenna, DVBC and DVBT */
+    Nat32		SymbolRate;	                    /* Not more than 32 values For DVBC, */
+	Nat32		SDTVersion;
+	Nat32		NITVersion;
+    Nat8        NewPreset;
+	Nat16		SecAudioPid;
+	Nat32		AudioStreamType;
+	Nat16       PmtPid;                       /* Standard driven => 13bit */               
+	Nat8		NumericSelect;
+	Nat32		SvcDateStamp;
+	Nat8		FreeCiMode:1;
+	Nat8		dummy2:7;
+	Nat16		LowPrioLCN;
+	Nat8        LowPrioVisibleService:4;
+    Nat8        dummy3:4;
+    Nat8        UserHidden;
+}HsvDVBDigitalServiceData;  /** koala type HsvDVBDigitalServiceData **/
+
+/*NOTE:- While updating the structures please update the Flash Structures too*/
+/* Primary Key for the HsvDVBFrequencyMapData  Onwid , secondary key is Tsid 
+- No teritiary key*/
+typedef struct
+{     
+    
+    int			FlashIndex;                     /* FlashIndex values will be below 1000 */   
+    Nat16 	 	OriginalNetworkId;              /* Standard driven => 16bit */          
+    Nat16       Tsid;                           /* Standard driven => 16bit */
+    Nat32	    Frequency;                      /* Standard driven => 13bit */
+    Nat8    	ModulationType;                 /* Not more than 256 Modulation Types */     
+    Nat32		SymbolRate;	                    /* Not more than 32 values For DVBC, */
+    Nat8		DecoderType;	                    /* Not more than 32 values For DVBC, */
+    
+}HsvDVBFrequencyMapData;  /** koala type HsvDVBFrequencyMapData **/
+
+
+/* FLASH STRUCTURES*/
+typedef struct
+{
+    Nat32     	CesvcCookie;
+    Nat32     	AppsCookie;
+    Nat32     	TxtCookie;
+    Int32		Frequency;
+    Int32		FineTuneFrequency;
+    int			FineTuneOffset;
+    int			ColourSystem;
+    int			InstallMode;
+    int			SignalStrength;    
+    Nat16     	PresetNumber;
+    int			FlashIndex;   // to mark as deleted
+    Nat16		ChannelName[MAX_CHANNEL_NAME]; 
+    Int8     	Plfpreset;     /* Platform preset */
+    Nat8		ModulationType;	
+    Nat8		Decoder:4; 	
+    Nat8		ChannelVirgin:1; 
+    Nat8		Attenuator:1;                   
+    Nat8		Tuned:1;                       
+    Nat8		DeTuned:1;  
+    Nat8    	SystemHidden:1;              
+    Nat8		UserHidden:1;   
+    Nat8		NewPreset:1; 
+    Nat8		AgcInstalled:1;  
+    Nat8		EPGEnabled:1;   
+    Nat8        EPGShortInfo:1;
+    Nat16		CniNi;                          /* CNI data from teletext*/
+    Nat8		DataIndicator;                  /* Data indicator as in HsvGlobals.dd*/
+    Nat8        UpdateName:1;                   /* UpdateName=> 1 bit */
+}HsvFlashAnalogRecord;
+
+
+
+typedef struct
+{
+
+    Nat32     	CesvcCookie;
+    Nat32     	AppsCookie;
+    Nat32     	TxtCookie; 
+    Nat16 	 	OriginalNetworkId;              /* Standard driven => 16bit */          
+    Nat16       Tsid;                           /* Standard driven => 16bit */
+    Nat16	    Frequency;                      /* Standard driven => 13bit */
+    Nat8    	ModulationType;                 /* Not more than 256 Modulation Types */     
+    Nat32		SymbolRate;	                    /* Not more than 32 values For DVBC, */
+}HsvFlashFrequencyMapRecord; /** HsvFlashFrequencyMapRecord **/ /* this is missing in above structures */
+/** koala group HsvIteratorCallBack **/
+typedef int (*HsvIteratorCallBack)(Address Record);
+
+typedef void*  HsvFile;  /** koala type HsvFile **/
+#endif

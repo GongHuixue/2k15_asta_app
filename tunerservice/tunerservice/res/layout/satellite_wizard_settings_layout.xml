@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.droidtv.euinstallersat.settingsframework.SettingsNode xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/HOTEL_SETUP_MENU"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:tag="@org.droidtv.ui.strings:string/MAIN_BUTTON_SETTINGS" >
+
+    <org.droidtv.euinstallersat.settingsframework.SettingsNode
+        android:id="@+id/CONNECTION_TYPE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        controllable="true"
+        easyPQ="@array/ch_sat_connection_type"
+        android:tag="@org.droidtv.ui.strings:string/MAIN_CONNECTION_TYPE" >
+    </org.droidtv.euinstallersat.settingsframework.SettingsNode>
+
+    <org.droidtv.euinstallersat.settingsframework.SettingsNode
+        android:id="@+id/MAIN_HOMING_TRANSPONDER"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        controllable="true"
+        easyPQ="@array/ch_homing_transponder"
+        android:tag="@org.droidtv.ui.strings:string/MAIN_HOMING_TRANSPONDER" >
+
+        <org.droidtv.euinstallersat.settings.node.DigitEntryNode
+            android:id="@+id/MAIN_CH_SAT_HOMING_FREQUENCY"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            controllable="true"
+            easyPQ="@array/ch_sat_homing_frequency"
+            eumContext="org.droidtv.euinstallersat.settings.SatelliteHelpConstants.ContextID_frequency"
+            eumContextLevel="3"
+            android:tag="@org.droidtv.ui.strings:string/MAIN_CH_SAT_HOMING_FREQUENCY" >
+        </org.droidtv.euinstallersat.settings.node.DigitEntryNode>
+
+        <org.droidtv.euinstallersat.settingsframework.common.ListSettingsNode
+            android:id="@+id/MAIN_CH_SAT_HOMING_POLARISATION"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            data="@array/homing_polarization"
+            data_id="@array/homing_polarization_id"
+            easyPQ="@array/ch_sat_homing_polarisation"
+            eumContext="org.droidtv.euinstallersat.settings.SatelliteHelpConstants.ContextID_polarisation"
+            eumContextLevel="3"
+            android:tag="@org.droidtv.ui.strings:string/MAIN_CH_SAT_HOMING_POLARISATION" >
+        </org.droidtv.euinstallersat.settingsframework.common.ListSettingsNode>
+
+        <org.droidtv.euinstallersat.settingsframework.common.ListSettingsNode
+            android:id="@+id/CD_HOMING_SYMBOL_RATE_MODE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            data="@array/symbol_rate_string"
+            data_id="@array/dynamic_data_id"
+            easyPQ="@array/ch_sat_symbol_rate_mode"
+            android:tag="@org.droidtv.ui.strings:string/MAIN_SYMBOL_RATE_MODE" >
+        </org.droidtv.euinstallersat.settingsframework.common.ListSettingsNode>
+
+        <org.droidtv.euinstallersat.settings.node.DigitEntryNode
+            android:id="@+id/CD_HOMING_SYMBOL_RATE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            controllable="true"
+            easyPQ="@array/ch_sat_symbol_rate"
+            android:tag="@org.droidtv.ui.strings:string/MAIN_SYMBOL_RATE" >
+        </org.droidtv.euinstallersat.settings.node.DigitEntryNode>
+    </org.droidtv.euinstallersat.settingsframework.SettingsNode>
+
+    <org.droidtv.euinstallersat.settingsframework.SettingsNode
+        android:id="@+id/CD_LNB_SETTINGS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        controllable="true"
+        easyPQ="@array/ch_lnb_settings"
+        android:tag="@org.droidtv.ui.strings:string/MAIN_LNB_SETTINGS" >
+
+        <org.droidtv.euinstallersat.settingsframework.SettingsNode
+            android:id="@+id/CD_LNB_ONE_SETTINGS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            controllable="true"
+            easyPQ="@array/ch_lnb_1_settings"
+            android:tag="@org.droidtv.ui.strings:string/MAIN_LNB_1_SETTINGS" >
+
+            <org.droidtv.euinstallersat.settingsframework.common.ListSettingsNode
+                android:id="@+id/CD_LNB_ONE_LNBPOWER"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                data="@array/cd_lnb_power"
+                data_id="@array/onoff"
+                easyPQ="@array/ch_lnb_power"
+                android:tag="@org.droidtv.ui.strings:string/MAIN_LNB_POWER" >
+            </org.droidtv.euinstallersat.settingsframework.common.ListSettingsNode>
+
+            <org.droidtv.euinstallersat.settings.node.DigitEntryNode
+                android:id="@+id/CD_LNB_ONE_LOW_FREQ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                controllable="true"
+                easyPQ="@array/ch_low_lo_freq"
+                android:tag="@org.droidtv.ui.strings:string/MAIN_LOW_LO_FREQ" >
+            </org.droidtv.euinstallersat.settings.node.DigitEntryNode>
+
+            <org.droidtv.euinstallersat.settings.node.DigitEntryNode
+                android:id="@+id/CD_LNB_ONE_HIGH_FREQ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                controllable="true"
+                easyPQ="@array/ch_high_lo_freq"
+                android:tag="@org.droidtv.ui.strings:string/MAIN_HIGH_LO_FREQ" >
+            </org.droidtv.euinstallersat.settings.node.DigitEntryNode>
+        </org.droidtv.euinstallersat.settingsframework.SettingsNode>
+
+        <org.droidtv.euinstallersat.settingsframework.SettingsNode
+            android:id="@+id/CD_LNB_TWO_SETTINGS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            controllable="true"
+            easyPQ="@array/ch_lnb_2_settings"
+            android:tag="@org.droidtv.ui.strings:string/MAIN_LNB_2_SETTINGS" >
+
+            <org.droidtv.euinstallersat.settingsframework.common.ListSettingsNode
+                android:id="@+id/CD_LNB_TWO_LNBPOWER"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                data="@array/cd_lnb_power"
+                data_id="@array/onoff"
+                easyPQ="@array/ch_lnb_power"
+                android:tag="@org.droidtv.ui.strings:string/MAIN_LNB_POWER" >
+            </org.droidtv.euinstallersat.settingsframework.common.ListSettingsNode>
+
+
+            <org.droidtv.euinstallersat.settings.node.DigitEntryNode
+                android:id="@+id/CD_LNB_TWO_LOW_FREQ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                controllable="true"
+                easyPQ="@array/ch_low_lo_freq"
+                android:tag="@org.droidtv.ui.strings:string/MAIN_LOW_LO_FREQ" >
+            </org.droidtv.euinstallersat.settings.node.DigitEntryNode>
+
+            <org.droidtv.euinstallersat.settings.node.DigitEntryNode
+                android:id="@+id/CD_LNB_TWO_HIGH_FREQ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                controllable="true"
+                easyPQ="@array/ch_high_lo_freq"
+                android:tag="@org.droidtv.ui.strings:string/MAIN_HIGH_LO_FREQ" >
+            </org.droidtv.euinstallersat.settings.node.DigitEntryNode>
+        </org.droidtv.euinstallersat.settingsframework.SettingsNode>
+
+        <org.droidtv.euinstallersat.settingsframework.SettingsNode
+            android:id="@+id/CD_LNB_THREE_SETTINGS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            controllable="true"
+            easyPQ="@array/ch_lnb_3_settings"
+            android:tag="@org.droidtv.ui.strings:string/MAIN_LNB_3_SETTINGS" >
+
+            <org.droidtv.euinstallersat.settingsframework.common.ListSettingsNode
+                android:id="@+id/CD_LNB_THREE_LNBPOWER"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                data="@array/cd_lnb_power"
+                data_id="@array/onoff"
+                easyPQ="@array/ch_lnb_power"
+                android:tag="@org.droidtv.ui.strings:string/MAIN_LNB_POWER" >
+            </org.droidtv.euinstallersat.settingsframework.common.ListSettingsNode>
+
+
+            <org.droidtv.euinstallersat.settings.node.DigitEntryNode
+                android:id="@+id/CD_LNB_THREE_LOW_FREQ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                controllable="true"
+                easyPQ="@array/ch_low_lo_freq"
+                android:tag="@org.droidtv.ui.strings:string/MAIN_LOW_LO_FREQ" >
+            </org.droidtv.euinstallersat.settings.node.DigitEntryNode>
+
+            <org.droidtv.euinstallersat.settings.node.DigitEntryNode
+                android:id="@+id/CD_LNB_THREE_HIGH_FREQ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                controllable="true"
+                easyPQ="@array/ch_high_lo_freq"
+                android:tag="@org.droidtv.ui.strings:string/MAIN_HIGH_LO_FREQ" >
+            </org.droidtv.euinstallersat.settings.node.DigitEntryNode>
+        </org.droidtv.euinstallersat.settingsframework.SettingsNode>
+
+        <org.droidtv.euinstallersat.settingsframework.SettingsNode
+            android:id="@+id/CD_LNB_FOUR_SETTINGS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            controllable="true"
+            easyPQ="@array/ch_lnb_4_settings"
+            android:tag="@org.droidtv.ui.strings:string/MAIN_LNB_4_SETTINGS" >
+
+            <org.droidtv.euinstallersat.settingsframework.common.ListSettingsNode
+                android:id="@+id/CD_LNB_FOUR_LNBPOWER"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                data="@array/cd_lnb_power"
+                data_id="@array/onoff"
+                easyPQ="@array/ch_lnb_power"
+                android:tag="@org.droidtv.ui.strings:string/MAIN_LNB_POWER" >
+            </org.droidtv.euinstallersat.settingsframework.common.ListSettingsNode>
+
+
+            <org.droidtv.euinstallersat.settings.node.DigitEntryNode
+                android:id="@+id/CD_LNB_FOUR_LOW_FREQ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                controllable="true"
+                easyPQ="@array/ch_low_lo_freq"
+                android:tag="@org.droidtv.ui.strings:string/MAIN_LOW_LO_FREQ" >
+            </org.droidtv.euinstallersat.settings.node.DigitEntryNode>
+
+            <org.droidtv.euinstallersat.settings.node.DigitEntryNode
+                android:id="@+id/CD_LNB_FOUR_HIGH_FREQ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                controllable="true"
+                easyPQ="@array/ch_high_lo_freq"
+                android:tag="@org.droidtv.ui.strings:string/MAIN_HIGH_LO_FREQ" >
+            </org.droidtv.euinstallersat.settings.node.DigitEntryNode>
+        </org.droidtv.euinstallersat.settingsframework.SettingsNode>
+    </org.droidtv.euinstallersat.settingsframework.SettingsNode>
+
+</org.droidtv.euinstallersat.settingsframework.SettingsNode>

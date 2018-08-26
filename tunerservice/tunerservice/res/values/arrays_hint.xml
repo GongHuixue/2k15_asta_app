@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <string-array name="ch_search_for_channels">
+        <item>org.droidtv.ui.strings.R.string.MAIN_CH_SEARCH_FOR_CHANNELS</item>
+    </string-array>
+    <string-array name="ch_automatic_channel_update">
+        <item>org.droidtv.ui.strings.R.string.MAIN_CH_AUTOMATIC_CHANNEL_UPDATE</item>
+    </string-array>
+    <string-array name="ch_channel_update_message">
+        <item>org.droidtv.ui.strings.R.string.MAIN_CH_CHANNEL_UPDATE_MESSAGE</item>
+    </string-array>
+    <string-array name="ch_digital_test_reception">
+        <item>org.droidtv.ui.strings.R.string.MAIN_CH_DIGITAL_TEST_RECEPTION</item>
+    </string-array>
+    <string-array name="ch_analogue_manual_installation">
+        <item>org.droidtv.ui.strings.R.string.MAIN_CH_ANALOGUE_MANUAL_INSTALLATION</item>
+    </string-array>
+    <string-array name="ch_manual_installation">
+        <item>org.droidtv.ui.strings.R.string.MAIN_CH_MANUAL_INSTALLATION</item>
+    </string-array>
+    <string-array name="ch_reorder">
+        <item>org.droidtv.ui.strings.R.string.MAIN_CH_REORDER</item>
+    </string-array>
+    <string-array name="ch_symbol_rate_mode">
+        <item>org.droidtv.ui.strings.R.string.MAIN_CH_SYMBOL_RATE_MODE</item>
+    </string-array>
+    <string-array name="ch_predefined_symbol_rates">
+        <item>org.droidtv.ui.strings.R.string.MAIN_CH_PREDEFINED_SYMBOL_RATES</item>
+    </string-array>
+    <string-array name="ch_symbol_rate_1">
+        <item>org.droidtv.ui.strings.R.string.MAIN_CH_SYMBOL_RATE_1</item>
+    </string-array>
+    <string-array name="ch_symbol_rate_2">
+        <item>org.droidtv.ui.strings.R.string.MAIN_CH_SYMBOL_RATE_2</item>
+    </string-array>
+    <string-array name="ch_search">
+        <item>org.droidtv.ui.strings.R.string.MAIN_CH_SEARCH</item>
+    </string-array>
+    <string-array name="ch_system">
+        <item>org.droidtv.ui.strings.R.string.MAIN_CH_SYSTEM</item>
+    </string-array>
+    <string-array name="ch_search_channel">
+        <item>org.droidtv.ui.strings.R.string.MAIN_CH_SEARCH_CHANNEL</item>
+    </string-array>
+    <string-array name="ch_store_current_channel">
+        <item>org.droidtv.ui.strings.R.string.MAIN_CH_STORE_CURRENT_CHANNEL</item>
+    </string-array>
+    <string-array name="ch_store_as_new_channel">
+        <item>org.droidtv.ui.strings.R.string.MAIN_CH_STORE_AS_NEW_CHANNEL</item>
+    </string-array>
+    <string-array name="ch_dvbt_settings">
+        <item>org.droidtv.ui.strings.R.string.MAIN_ANTENNA_DVBT</item>
+    </string-array>
+    <string-array name="ch_dvbc_settings">
+        <item>org.droidtv.ui.strings.R.string.MAIN_CABLE_DVBC</item>
+    </string-array>
+    <string-array name="ch_frequency_scan">
+        <item>org.droidtv.ui.strings.R.string.MAIN_CH_FREQUENCY_SCAN</item>
+    </string-array>
+    <string-array name="ch_frequency_step_size">
+        <item>org.droidtv.ui.strings.R.string.MAIN_CH_FREQUENCY_STEP_SIZE</item>
+    </string-array>
+    <string-array name="ch_network_id_mode">
+        <item>org.droidtv.ui.strings.R.string.MAIN_CH_NETWORK_ID_MODE</item>
+    </string-array>
+    <string-array name="ch_network_id">
+        <item>org.droidtv.ui.strings.R.string.MAIN_CH_NETWORK_ID</item>
+    </string-array>
+    <string-array name="ch_network_frequency_mode">
+        <item>org.droidtv.ui.strings.R.string.MAIN_CH_NETWORK_FREQUENCY_MODE</item>
+    </string-array>
+    <string-array name="ch_network_frequency">
+        <item>org.droidtv.ui.strings.R.string.MAIN_CH_NETWORK_FREQUENCY</item>
+    </string-array>
+    <string-array name="ch_digital_channels">
+        <item>org.droidtv.ui.strings.R.string.MAIN_CH_DIGITAL_CHANNELS</item>
+    </string-array>
+    <string-array name="ch_free_scrambled">
+        <item>org.droidtv.ui.strings.R.string.MAIN_CH_FREE_SCRAMBLED</item>
+    </string-array>
+    <string-array name="ch_finetune">
+        <item>org.droidtv.ui.strings.R.string.MAIN_FINE_TUNE</item>
+    </string-array>
+    <string-array name="ch_frequncy_number">
+        <item>org.droidtv.ui.strings.R.string.MAIN_CH_FREQUENCY_NUMBER</item>
+    </string-array>
+    <string-array name="hide_hint">
+        <item>org.droidtv.ui.strings.R.string.MAIN_NONE</item>
+	</string-array>
+	<string-array name="ch_dtt_scan_cable">
+        <item>org.droidtv.ui.strings.R.string.MAIN_DTT_SCAN</item>
+    </string-array>
+    <string-array name="ch_dual_analog_pass">
+        <item>org.droidtv.ui.strings.R.string.MAIN_DUAL_ANALOG_PASS</item>
+    </string-array>
+    <string-array name="ch_sat_search_for_satellite">
+        <item>org.droidtv.ui.strings.R.string.MAIN_CH_SAT_SEARCH_FOR_SATELLITE</item>
+    </string-array>
+    <string-array name="ch_sat_automatic_channel_update">
+        <item>org.droidtv.ui.strings.R.string.MAIN_CH_SAT_AUTOMATIC_CHANNEL_UPDATE</item>
+    </string-array>
+    <string-array name="ch_sat_automatic_update_option">
+        <item>org.droidtv.ui.strings.R.string.MAIN_CH_SAT_AUTOMATIC_UPDATE_OPTION</item>
+    </string-array>
+    <string-array name="ch_sat_manual_installation">
+        <item>org.droidtv.ui.strings.R.string.MAIN_CH_SAT_MANUAL_INSTALLATION</item>
+    </string-array>
+    <string-array name="ch_test_reception">
+        <item>org.droidtv.ui.strings.R.string.MAIN_CH_TEST_RECEPTION</item>
+    </string-array>
+    <string-array name="ch_homing_transponder">
+        <item>org.droidtv.ui.strings.R.string.MAIN_CH_HOMING_TRANSPONDER</item>
+    </string-array>
+    <string-array name="ch_lnb_1_settings">
+        <item>org.droidtv.ui.strings.R.string.MAIN_CH_LNB_1_SETTINGS</item>
+    </string-array>
+    <string-array name="ch_lnb_2_settings">
+        <item>org.droidtv.ui.strings.R.string.MAIN_CH_LNB_2_SETTINGS</item>
+    </string-array>
+    <string-array name="ch_lnb_3_settings">
+        <item>org.droidtv.ui.strings.R.string.MAIN_CH_LNB_3_SETTINGS</item>
+    </string-array>
+    <string-array name="ch_lnb_4_settings">
+        <item>org.droidtv.ui.strings.R.string.MAIN_CH_LNB_4_SETTINGS</item>
+    </string-array>
+    <string-array name="ch_sat_reorder">
+        <item>org.droidtv.ui.strings.R.string.MAIN_CH_SAT_REORDER</item>
+    </string-array>
+    <string-array name="ch_sat_update_sorting_list">
+        <item>org.droidtv.ui.strings.R.string.MAIN_CH_SAT_UPDATE_SORTING_LIST</item>
+    </string-array>
+    <string-array name="ch_sat_homing_transponder">
+        <item>org.droidtv.ui.strings.R.string.MAIN_CH_SAT_HOMING_TRANSPONDER</item>
+    </string-array>
+    <string-array name="ch_sat_lnb">
+        <item>org.droidtv.ui.strings.R.string.MAIN_CH_SAT_LNB</item>
+    </string-array>
+    <string-array name="ch_sat_polarisation">
+        <item>org.droidtv.ui.strings.R.string.MAIN_CH_SAT_POLARISATION</item>
+    </string-array>
+    <string-array name="ch_sat_symbol_rate_mode">
+        <item>org.droidtv.ui.strings.R.string.MAIN_CH_SAT_SYMBOL_RATE_MODE</item>
+    </string-array>
+    <string-array name="ch_sat_symbol_rate">
+        <item>org.droidtv.ui.strings.R.string.MAIN_CH_SAT_SYMBOL_RATE</item>
+    </string-array>
+    <string-array name="ch_sat_frequency">
+        <item>org.droidtv.ui.strings.R.string.MAIN_CH_SAT_FREQUENCY</item>
+    </string-array>
+    <string-array name="ch_sat_search">
+        <item>org.droidtv.ui.strings.R.string.MAIN_CH_SAT_SEARCH</item>
+    </string-array>
+    <string-array name="ch_sat_tuner">
+        <item>org.droidtv.ui.strings.R.string.MAIN_CH_SAT_TUNER</item>
+    </string-array>
+    <string-array name="ch_sat_homing_frequency">
+        <item>org.droidtv.ui.strings.R.string.MAIN_CH_SAT_HOMING_FREQUENCY</item>
+    </string-array>
+    <string-array name="ch_sat_homing_polarisation">
+        <item>org.droidtv.ui.strings.R.string.MAIN_CH_SAT_HOMING_POLARISATION</item>
+    </string-array>
+    <string-array name="ch_lnb_power">
+        <item>org.droidtv.ui.strings.R.string.MAIN_CH_LNB_POWER</item>
+    </string-array>
+    <string-array name="ch_22khz_tone">
+        <item>org.droidtv.ui.strings.R.string.MAIN_CH_22KHZ_TONE</item>
+    </string-array>
+    <string-array name="ch_low_lo_freq">
+        <item>org.droidtv.ui.strings.R.string.MAIN_CH_LOW_LO_FREQ</item>
+    </string-array>
+    <string-array name="ch_high_lo_freq">
+        <item>org.droidtv.ui.strings.R.string.MAIN_CH_HIGH_LO_FREQ</item>
+    </string-array>
+    <string-array name="ch_lnb_settings">
+        <item>org.droidtv.ui.strings.R.string.MAIN_LNB_SETTINGS</item>
+    </string-array>
+    <string-array name="ch_sat_connection_type">
+        <item>org.droidtv.ui.strings.R.string.MAIN_CONNECTION_TYPE</item>
+    </string-array>
+    <string-array name="sat_ip_fec">
+        <item>org.droidtv.tunerservice.R.string.MAIN_SAT_IP_FEC</item>
+    </string-array>
+    <string-array name="sat_hide_hint">
+        <item>org.droidtv.ui.strings.R.string.MAIN_NONE</item>
+    </string-array>
+     <string-array name="lnb_selection">
+        <item>org.droidtv.ui.strings.R.string.MAIN_LNB_SELECTION</item>
+    </string-array>
+
+</resources>

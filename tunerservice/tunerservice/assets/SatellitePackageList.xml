@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<PackageList>
+	<NumPackageGroups> 10 </NumPackageGroups>
+	<PackageGroup>
+		<PackageGroupId> 1 </PackageGroupId>
+		<PackageGroupName>M7</PackageGroupName>
+		<PackageId1> 18 </PackageId1>
+		<PackageId2> 19 </PackageId2>
+		<PackageId3> 20 </PackageId3>
+		<PackageId4> 21 </PackageId4>
+		<PackageId5> 22 </PackageId5>
+		<PackageId6> 23 </PackageId6>
+		<PackageId7> 24  </PackageId7>
+		<PackageId8> 25 </PackageId8>
+		<PackageId9> 26 </PackageId9>
+		<PackageId10> 35 </PackageId10>
+	</PackageGroup>
+	<PackageGroup>
+		<PackageGroupId> 5 </PackageGroupId>
+		<PackageGroupName>DIGITURK</PackageGroupName>
+		<PackageId1> 27 </PackageId1>
+		<PackageId2> 28 </PackageId2>
+		<PackageId3> 65535 </PackageId3>
+		<PackageId4> 65535 </PackageId4>
+		<PackageId5> 65535 </PackageId5>
+		<PackageId6> 65535 </PackageId6>
+		<PackageId7> 65535 </PackageId7>
+		<PackageId8> 65535 </PackageId8>
+		<PackageId9> 65535 </PackageId9>
+		<PackageId10> 65535 </PackageId10>
+	</PackageGroup>
+	<PackageGroup>
+		<PackageGroupId> 3 </PackageGroupId>
+		<PackageGroupName>Pol</PackageGroupName>
+		<PackageId1> 4 </PackageId1>
+		<PackageId2> 5 </PackageId2>
+		<PackageId3> 65535 </PackageId3>
+		<PackageId4> 65535 </PackageId4>
+		<PackageId5> 65535 </PackageId5>
+		<PackageId6> 65535 </PackageId6>
+		<PackageId7> 65535 </PackageId7>
+		<PackageId8> 65535 </PackageId8>
+		<PackageId9> 65535 </PackageId9>
+		<PackageId10> 65535 </PackageId10>
+	</PackageGroup>
+	<PackageGroup>
+		<PackageGroupId> 2 </PackageGroupId>
+		<PackageGroupName>Canal Digital</PackageGroupName>
+		<PackageId1> 14 </PackageId1>
+		<PackageId2> 15 </PackageId2>
+		<PackageId3> 16 </PackageId3>
+		<PackageId4> 17 </PackageId4>
+		<PackageId5> 65535 </PackageId5>
+		<PackageId6> 65535 </PackageId6>
+		<PackageId7> 65535 </PackageId7>
+		<PackageId8> 65535 </PackageId8>
+		<PackageId9> 65535 </PackageId9>
+		<PackageId10> 65535 </PackageId10>
+	</PackageGroup>
+	<PackageGroup>
+		<PackageGroupId> 4 </PackageGroupId>
+		<PackageGroupName>NTV+</PackageGroupName>
+		<PackageId1> 29 </PackageId1>
+		<PackageId2> 65535 </PackageId2>
+		<PackageId3> 65535 </PackageId3>
+		<PackageId4> 65535 </PackageId4>
+		<PackageId5> 65535 </PackageId5>
+		<PackageId6> 65535 </PackageId6>
+		<PackageId7> 65535 </PackageId7>
+		<PackageId8> 65535 </PackageId8>
+		<PackageId9> 65535 </PackageId9>
+		<PackageId10> 65535 </PackageId10>
+	</PackageGroup>
+	<PackageGroup>
+		<PackageGroupId> 6 </PackageGroupId>
+		<PackageGroupName>Poland N</PackageGroupName>
+		<PackageId1> 6 </PackageId1>
+		<PackageId2> 9 </PackageId2>
+		<PackageId3> 65535 </PackageId3>
+		<PackageId4> 65535 </PackageId4>
+		<PackageId5> 65535 </PackageId5>
+		<PackageId6> 65535 </PackageId6>
+		<PackageId7> 65535 </PackageId7>
+		<PackageId8> 65535 </PackageId8>
+		<PackageId9> 65535 </PackageId9>
+		<PackageId10> 65535 </PackageId10>
+	</PackageGroup>
+	<PackageGroup>
+		<PackageGroupId> 8 </PackageGroupId>
+		<PackageGroupName>OpProfile</PackageGroupName>
+		<PackageId1> 32 </PackageId1>
+		<PackageId2> 65535 </PackageId2>
+		<PackageId3> 65535 </PackageId3>
+		<PackageId4> 65535 </PackageId4>
+		<PackageId5> 65535 </PackageId5>
+		<PackageId6> 65535 </PackageId6>
+		<PackageId7> 65535 </PackageId7>
+		<PackageId8> 65535 </PackageId8>
+		<PackageId9> 65535 </PackageId9>
+		<PackageId10> 65535 </PackageId10>
+	</PackageGroup>	
+	<PackageGroup>
+		<PackageGroupId> 11 </PackageGroupId>
+		<PackageGroupName>Freesat</PackageGroupName>
+		<PackageId1> 33 </PackageId1>
+		<PackageId2> 65535 </PackageId2>
+		<PackageId3> 65535 </PackageId3>
+		<PackageId4> 65535 </PackageId4>
+		<PackageId5> 65535 </PackageId5>
+		<PackageId6> 65535 </PackageId6>
+		<PackageId7> 65535 </PackageId7>
+		<PackageId8> 65535 </PackageId8>
+		<PackageId9> 65535 </PackageId9>
+		<PackageId10> 65535 </PackageId10>
+	</PackageGroup>
+	<PackageGroup>
+		<PackageGroupId> 12 </PackageGroupId>
+		<PackageGroupName>Tricolor</PackageGroupName>
+		<PackageId1> 36 </PackageId1>
+		<PackageId2> 37 </PackageId2>
+		<PackageId3> 65535 </PackageId3>
+		<PackageId4> 65535 </PackageId4>
+		<PackageId5> 65535 </PackageId5>
+		<PackageId6> 65535 </PackageId6>
+		<PackageId7> 65535 </PackageId7>
+		<PackageId8> 65535 </PackageId8>
+		<PackageId9> 65535 </PackageId9>
+		<PackageId10> 65535 </PackageId10>
+	</PackageGroup>
+	<PackageGroup>
+		<PackageGroupId> 9 </PackageGroupId>
+		<PackageGroupName>AstraLCN</PackageGroupName>
+		<PackageId1> 34 </PackageId1>
+		<PackageId2> 65535 </PackageId2>
+		<PackageId3> 65535 </PackageId3>
+		<PackageId4> 65535 </PackageId4>
+		<PackageId5> 65535 </PackageId5>
+		<PackageId6> 65535 </PackageId6>
+		<PackageId7> 65535  </PackageId7>
+		<PackageId8> 65535 </PackageId8>
+		<PackageId9> 65535 </PackageId9>
+		<PackageId10> 65535 </PackageId10>
+	</PackageGroup>	
+	<NumRankingEntries>8</NumRankingEntries>
+	<PredefinedRankingList>
+		<PackageEntry>
+			<PackageId>1</PackageId>
+			<PackageName>Austrian List</PackageName>
+			<PackageListName>Austria :Channel List</PackageListName>
+			<CountryId>0</CountryId>
+			<Sat1 Mandatory="Y">1</Sat1>
+			<Sat2 Mandatory="N">FFFF</Sat2>
+			<Sat3 Mandatory="N">FFFF</Sat3>
+			<Sat4 Mandatory="N">FFFF</Sat4>
+			<SatIP>1</SatIP>
+			<PredefBin>AustriaList.bin</PredefBin>
+		</PackageEntry>
+		<PackageEntry>
+			<PackageId>2</PackageId>
+			<PackageName>German FTA List</PackageName>
+			<PackageListName>Germany  Switzerland: Free-To-Air</PackageListName>
+			<CountryId>7</CountryId>
+			<Sat1 Mandatory="Y">1</Sat1>
+			<Sat2 Mandatory="N">FFFF</Sat2>
+			<Sat3 Mandatory="N">FFFF</Sat3>
+			<Sat4 Mandatory="N">FFFF</Sat4>
+			<SatIP>0</SatIP>
+			<PredefBin>GermanFTAList.bin</PredefBin>
+		</PackageEntry>
+		<PackageEntry>
+			<PackageId>3</PackageId>
+			<PackageName>German HD+ List</PackageName>
+			<PackageListName>Germany : Free-To-Air:Incl HD-Plus</PackageListName>
+			<CountryId>7</CountryId>
+			<Sat1 Mandatory="Y">1</Sat1>
+			<Sat2 Mandatory="N">FFFF</Sat2>
+			<Sat3 Mandatory="N">FFFF</Sat3>
+			<Sat4 Mandatory="N">FFFF</Sat4>
+			<SatIP>1</SatIP>
+			<PredefBin>GermanHDPlusList.bin</PredefBin>
+		</PackageEntry>
+		<PackageEntry>
+			<PackageId>7</PackageId>
+			<PackageName>Swiss French list</PackageName>
+			<PackageListName>Switzerland : French channel list +Eutelsat</PackageListName>
+			<CountryId>24</CountryId>
+			<Sat1 Mandatory="Y">2</Sat1>
+			<Sat2 Mandatory="N">1</Sat2>
+			<Sat3 Mandatory="N">FFFF</Sat3>
+			<Sat4 Mandatory="N">FFFF</Sat4>
+			<SatIP>0</SatIP>			
+			<PredefBin>SwissFrenchList.bin</PredefBin>
+		</PackageEntry>
+		<PackageEntry>
+			<PackageId>8</PackageId>
+			<PackageName>Swiss German list</PackageName>
+			<PackageListName>Switzerland : German channel list + Eutelsat</PackageListName>
+			<CountryId>24</CountryId>
+			<Sat1 Mandatory="Y">2</Sat1>
+			<Sat2 Mandatory="N">1</Sat2>
+			<Sat3 Mandatory="N">FFFF</Sat3>
+			<Sat4 Mandatory="N">FFFF</Sat4>
+			<SatIP>0</SatIP>
+			<PredefBin>SwissGermanList.bin</PredefBin>
+		</PackageEntry>
+		<PackageEntry>
+			<PackageId>12</PackageId>
+			<PackageName>D-SMART (Turksat 42*E . Hotbird13*E)</PackageName>
+			<PackageListName>Turkey : D-SMART (Turksat 42*E - Hotbird 13*E)</PackageListName>
+			<CountryId>25</CountryId>
+			<Sat1 Mandatory="Y">5</Sat1>
+			<Sat2 Mandatory="Y">2</Sat2>
+			<Sat3 Mandatory="N">FFFF</Sat3>
+			<Sat4 Mandatory="N">FFFF</Sat4>
+			<SatIP>0</SatIP>
+			<PredefBin>DSmartTurkSatHotbird.bin</PredefBin>
+		</PackageEntry>
+		<PackageEntry>
+			<PackageId>13</PackageId>
+			<PackageName>D-SMART (Turksat 42*E)</PackageName>
+			<PackageListName>Turkey : D-SMART (Turksat 42*E)</PackageListName>
+			<CountryId>25</CountryId>
+			<Sat1 Mandatory="Y">5</Sat1>
+			<Sat2 Mandatory="N">FFFF</Sat2>
+			<Sat3 Mandatory="N">FFFF</Sat3>
+			<Sat4 Mandatory="N">FFFF</Sat4>
+			<SatIP>0</SatIP>
+			<PredefBin>DSmartTurkSat.bin</PredefBin>
+		</PackageEntry>
+		<PackageEntry>
+			<PackageId>30</PackageId>
+			<PackageName>Turksat</PackageName>
+			<PackageListName>Turkey: Turksat</PackageListName>
+			<CountryId>25</CountryId>
+			<Sat1 Mandatory="Y">5</Sat1>
+			<Sat2 Mandatory="N">FFFF</Sat2>
+			<Sat3 Mandatory="N">FFFF</Sat3>
+			<Sat4 Mandatory="N">FFFF</Sat4>
+			<SatIP>0</SatIP>
+			<PredefBin>TurkSat_FTA.bin</PredefBin>	
+		</PackageEntry>
+	</PredefinedRankingList>
+	<NumHomingPackages>32</NumHomingPackages>
+	<HomingBasedPackages>
+		<PackageEntry>
+			<PackageId>24</PackageId>
+			<PackageName>AustriaSat</PackageName>
+			<PackageListName>AustriaSat</PackageListName>
+			<CountryId>0</CountryId>
+			<Sat1 Mandatory="Y">3</Sat1>
+			<Sat2 Mandatory="N">1</Sat2>
+			<Sat3 Mandatory="N">FFFF</Sat3>
+			<Sat4 Mandatory="N">FFFF</Sat4>
+			<SatIP>0</SatIP>
+		</PackageEntry>
+		<PackageEntry>
+			<PackageId>20</PackageId>
+			<PackageName>TV Vlaanderen HD</PackageName>
+			<PackageListName>TV Vlaanderen HD</PackageListName>
+			<CountryId>1</CountryId>
+			<Sat1 Mandatory="Y">3</Sat1>
+			<Sat2 Mandatory="N">1</Sat2>
+			<Sat3 Mandatory="N">FFFF</Sat3>
+			<Sat4 Mandatory="N">FFFF</Sat4>
+			<SatIP>0</SatIP>
+		</PackageEntry>
+		<PackageEntry>
+			<PackageId>21</PackageId>
+			<PackageName>TV Vlaanderen SD</PackageName>
+			<PackageListName>TV Vlaanderen SD</PackageListName>
+			<CountryId>1</CountryId>
+			<Sat1 Mandatory="Y">3</Sat1>
+			<Sat2 Mandatory="N">1</Sat2>
+			<Sat3 Mandatory="N">FFFF</Sat3>
+			<Sat4 Mandatory="N">FFFF</Sat4>
+			<SatIP>0</SatIP>
+		</PackageEntry>
+		<PackageEntry>
+			<PackageId>22</PackageId>
+			<PackageName>TeleSAT Belgium</PackageName>
+			<PackageListName>TeleSAT Belgium</PackageListName>
+			<CountryId>1</CountryId>
+			<Sat1 Mandatory="Y">3</Sat1>
+			<Sat2 Mandatory="N">1</Sat2>
+			<Sat3 Mandatory="N">FFFF</Sat3>
+			<Sat4 Mandatory="N">FFFF</Sat4>
+			<SatIP>0</SatIP>
+		</PackageEntry>
+		<PackageEntry>
+			<PackageId>25</PackageId>
+			<PackageName>Skylink / CS Link Cesko </PackageName>
+			<PackageListName>Skylink / CS Link Cesko</PackageListName>
+			<CountryId>3</CountryId>
+			<Sat1 Mandatory="Y">3</Sat1>
+			<Sat2 Mandatory="N">1</Sat2>
+			<Sat3 Mandatory="N">FFFF</Sat3>
+			<Sat4 Mandatory="N">FFFF</Sat4>
+			<SatIP>0</SatIP>
+		</PackageEntry>
+		<PackageEntry>
+			<PackageId>23</PackageId>
+			<PackageName>TeleSAT Luxemburg</PackageName>
+			<PackageListName>TeleSAT Luxemburg</PackageListName>
+			<CountryId>12</CountryId>
+			<Sat1 Mandatory="Y">3</Sat1>
+			<Sat2 Mandatory="N">1</Sat2>
+			<Sat3 Mandatory="N">FFFF</Sat3>
+			<Sat4 Mandatory="N">FFFF</Sat4>
+			<SatIP>0</SatIP>
+		</PackageEntry>
+		<PackageEntry>
+			<PackageId>18</PackageId>
+			<PackageName>Canal Digitaal HD</PackageName>
+			<PackageListName>Canal Digitaal HD</PackageListName>
+			<CountryId>13</CountryId>
+			<Sat1 Mandatory="Y">3</Sat1>
+			<Sat2 Mandatory="N">1</Sat2>
+			<Sat3 Mandatory="N">FFFF</Sat3>
+			<Sat4 Mandatory="N">FFFF</Sat4>
+			<SatIP>0</SatIP>
+		</PackageEntry>
+		<PackageEntry>
+			<PackageId>19</PackageId>
+			<PackageName>Canal Digitaal SD</PackageName>
+			<PackageListName>Canal Digitaal SD</PackageListName>
+			<CountryId>13</CountryId>
+			<Sat1 Mandatory="Y">3</Sat1>
+			<Sat2 Mandatory="N">1</Sat2>
+			<Sat3 Mandatory="N">FFFF</Sat3>
+			<Sat4 Mandatory="N">FFFF</Sat4>
+			<SatIP>0</SatIP>
+		</PackageEntry>
+		<PackageEntry>
+			<PackageId>26</PackageId>
+			<PackageName>Skylink / CS Link Slovensko</PackageName>
+			<PackageListName>Skylink / CS Link Slovensko</PackageListName>
+			<CountryId>20</CountryId>
+			<Sat1 Mandatory="Y">3</Sat1>
+			<Sat2 Mandatory="N">1</Sat2>
+			<Sat3 Mandatory="N">FFFF</Sat3>
+			<Sat4 Mandatory="N">FFFF</Sat4>
+			<SatIP>0</SatIP>
+		</PackageEntry>
+		<PackageEntry>
+			<PackageId>14</PackageId>
+			<PackageName>Canal Digital Norway</PackageName>
+			<PackageListName>Canal Digital Norway</PackageListName>
+			<CountryId>14</CountryId>
+			<Sat1 Mandatory="Y">7</Sat1>
+			<Sat2 Mandatory="N">FFFF</Sat2>
+			<Sat3 Mandatory="N">FFFF</Sat3>
+			<Sat4 Mandatory="N">FFFF</Sat4>
+			<SatIP>0</SatIP>
+		</PackageEntry>
+		<PackageEntry>
+			<PackageId>15</PackageId>
+			<PackageName>Canal Digital Sweden</PackageName>
+			<PackageListName>Canal Digital Sweden</PackageListName>
+			<CountryId>23</CountryId>
+			<Sat1 Mandatory="Y">7</Sat1>
+			<Sat2 Mandatory="N">FFFF</Sat2>
+			<Sat3 Mandatory="N">FFFF</Sat3>
+			<Sat4 Mandatory="N">FFFF</Sat4>
+			<SatIP>0</SatIP>
+		</PackageEntry>
+		<PackageEntry>
+			<PackageId>16</PackageId>
+			<PackageName>Canal Digital Finland</PackageName>
+			<PackageListName>Canal Digital Finland</PackageListName>
+			<CountryId>5</CountryId>
+			<Sat1 Mandatory="Y">7</Sat1>
+			<Sat2 Mandatory="N">FFFF</Sat2>
+			<Sat3 Mandatory="N">FFFF</Sat3>
+			<Sat4 Mandatory="N">FFFF</Sat4>
+			<SatIP>0</SatIP>
+		</PackageEntry>
+		<PackageEntry>
+			<PackageId>17</PackageId>
+			<PackageName>Canal Digital Denmark</PackageName>
+			<PackageListName>Canal Digital Denmark</PackageListName>
+			<CountryId>4</CountryId>
+			<Sat1 Mandatory="Y">7</Sat1>
+			<Sat2 Mandatory="N">FFFF</Sat2>
+			<Sat3 Mandatory="N">FFFF</Sat3>
+			<Sat4 Mandatory="N">FFFF</Sat4>
+			<SatIP>0</SatIP>
+		</PackageEntry>
+		<PackageEntry>
+			<PackageId>28</PackageId>
+			<PackageName>DigiTurk Eutelsat</PackageName>
+			<PackageListName>DigiTurk Eutelsat</PackageListName>
+			<CountryId>25</CountryId>
+			<Sat1 Mandatory="Y">6</Sat1>
+			<Sat2 Mandatory="N">FFFF</Sat2>
+			<Sat3 Mandatory="N">FFFF</Sat3>
+			<Sat4 Mandatory="N">FFFF</Sat4>
+			<SatIP>0</SatIP>
+		</PackageEntry>
+		<PackageEntry>
+			<PackageId>28</PackageId>
+			<PackageName>DigiTurk Eutelsat</PackageName>
+			<PackageListName>DigiTurk Eutelsat</PackageListName>
+			<CountryId>25</CountryId>
+			<Sat1 Mandatory="Y">9</Sat1>
+			<Sat2 Mandatory="N">FFFF</Sat2>
+			<Sat3 Mandatory="N">FFFF</Sat3>
+			<Sat4 Mandatory="N">FFFF</Sat4>
+			<SatIP>0</SatIP>
+		</PackageEntry>
+		<PackageEntry>
+			<PackageId>28</PackageId>
+			<PackageName>DigiTurk Eutelsat</PackageName>
+			<PackageListName>DigiTurk Eutelsat</PackageListName>
+			<CountryId>25</CountryId>
+			<Sat1 Mandatory="Y">8</Sat1>
+			<Sat2 Mandatory="N">FFFF</Sat2>
+			<Sat3 Mandatory="N">FFFF</Sat3>
+			<Sat4 Mandatory="N">FFFF</Sat4>
+			<SatIP>0</SatIP>
+		</PackageEntry>
+		<PackageEntry>
+			<PackageId>28</PackageId>
+			<PackageName>DigiTurk Eutelsat</PackageName>
+			<PackageListName>DigiTurk Eutelsat</PackageListName>
+			<CountryId>25</CountryId>
+			<Sat1 Mandatory="Y">A</Sat1>
+			<Sat2 Mandatory="N">FFFF</Sat2>
+			<Sat3 Mandatory="N">FFFF</Sat3>
+			<Sat4 Mandatory="N">FFFF</Sat4>
+			<SatIP>0</SatIP>
+		</PackageEntry>
+		<PackageEntry>
+			<PackageId>28</PackageId>
+			<PackageName>DigiTurk Eutelsat</PackageName>
+			<PackageListName>DigiTurk Eutelsat</PackageListName>
+			<CountryId>25</CountryId>
+			<Sat1 Mandatory="Y">B</Sat1>
+			<Sat2 Mandatory="N">FFFF</Sat2>
+			<Sat3 Mandatory="N">FFFF</Sat3>
+			<Sat4 Mandatory="N">FFFF</Sat4>
+			<SatIP>0</SatIP>
+		</PackageEntry>
+		<PackageEntry>
+			<PackageId>28</PackageId>
+			<PackageName>DigiTurk Eutelsat</PackageName>
+			<PackageListName>DigiTurk Eutelsat</PackageListName>
+			<CountryId>25</CountryId>
+			<Sat1 Mandatory="Y">C</Sat1>
+			<Sat2 Mandatory="N">FFFF</Sat2>
+			<Sat3 Mandatory="N">FFFF</Sat3>
+			<Sat4 Mandatory="N">FFFF</Sat4>
+			<SatIP>0</SatIP>
+		</PackageEntry>
+		<PackageEntry>
+			<PackageId>27</PackageId>
+			<PackageName>DigiTurk Turksat</PackageName>
+			<PackageListName>DigiTurk Turksat</PackageListName>
+			<CountryId>25</CountryId>
+			<Sat1 Mandatory="Y">5</Sat1>
+			<Sat2 Mandatory="N">FFFF</Sat2>
+			<Sat3 Mandatory="N">FFFF</Sat3>
+			<Sat4 Mandatory="N">FFFF</Sat4>
+			<SatIP>0</SatIP>
+		</PackageEntry>
+		<PackageEntry>
+			<PackageId>36</PackageId>
+			<PackageName>Tricolor SD</PackageName>
+			<PackageListName>Tricolor SD</PackageListName>
+			<CountryId>18</CountryId>
+			<Sat1 Mandatory="Y">D</Sat1>
+			<Sat2 Mandatory="N">FFFF</Sat2>
+			<Sat3 Mandatory="N">FFFF</Sat3>
+			<Sat4 Mandatory="N">FFFF</Sat4>
+			<SatIP>0</SatIP>
+		</PackageEntry>
+		<PackageEntry>
+			<PackageId>37</PackageId>
+			<PackageName>Tricolor HD</PackageName>
+			<PackageListName>Tricolor HD</PackageListName>
+			<CountryId>18</CountryId>
+			<Sat1 Mandatory="Y">D</Sat1>
+			<Sat2 Mandatory="N">FFFF</Sat2>
+			<Sat3 Mandatory="N">FFFF</Sat3>
+			<Sat4 Mandatory="N">FFFF</Sat4>
+			<SatIP>0</SatIP>
+		</PackageEntry>
+		<PackageEntry>
+			<PackageId>29</PackageId>
+			<PackageName> NTV+ </PackageName>
+			<PackageListName> NTV+ </PackageListName>
+			<CountryId>18</CountryId>
+			<Sat1 Mandatory="Y">D</Sat1>
+			<Sat2 Mandatory="N">FFFF</Sat2>
+			<Sat3 Mandatory="N">FFFF</Sat3>
+			<Sat4 Mandatory="N">FFFF</Sat4>
+			<SatIP>0</SatIP>
+		</PackageEntry>
+		<PackageEntry>
+			<PackageId>4</PackageId>
+			<PackageName>CYFRA+ list</PackageName>
+			<PackageListName>Poland :CYFRA</PackageListName>
+			<CountryId>15</CountryId>
+			<Sat1 Mandatory="Y">2</Sat1>
+			<Sat2 Mandatory="N">FFFF</Sat2>
+			<Sat3 Mandatory="N">FFFF</Sat3>
+			<Sat4 Mandatory="N">FFFF</Sat4>
+			<SatIP>0</SatIP>
+			<PredefBin>CyfraPlusList.bin</PredefBin>
+		</PackageEntry>
+		<PackageEntry>
+			<PackageId>5</PackageId>
+			<PackageName>CYFROWY POLSAT list</PackageName>
+			<PackageListName>Poland : CYFROWY POLSAT</PackageListName>
+			<CountryId>15</CountryId>
+			<Sat1 Mandatory="Y">2</Sat1>
+			<Sat2 Mandatory="N">FFFF</Sat2>
+			<Sat3 Mandatory="N">FFFF</Sat3>
+			<Sat4 Mandatory="N">FFFF</Sat4>
+			<SatIP>0</SatIP>
+			<PredefBin>CyfrowyPolsatList.bin</PredefBin>
+		</PackageEntry>
+		<PackageEntry>
+			<PackageId>6</PackageId>
+			<PackageName>N - ITI Neovision list</PackageName>
+			<PackageListName>Poland : N-HD</PackageListName>
+			<CountryId>15</CountryId>
+			<Sat1 Mandatory="Y">2</Sat1>
+			<Sat2 Mandatory="N">FFFF</Sat2>
+			<Sat3 Mandatory="N">FFFF</Sat3>
+			<Sat4 Mandatory="N">FFFF</Sat4>
+			<SatIP>0</SatIP>
+			<PredefBin>NITINeoVisionList.bin</PredefBin>
+		</PackageEntry>
+		<PackageEntry>
+			<PackageId>9</PackageId>
+			<PackageName>SMART HD</PackageName>
+			<PackageListName>Poland : SMART-HD</PackageListName>
+			<CountryId>15</CountryId>
+			<Sat1 Mandatory="Y">2</Sat1>
+			<Sat2 Mandatory="N">FFFF</Sat2>
+			<Sat3 Mandatory="N">FFFF</Sat3>
+			<Sat4 Mandatory="N">FFFF</Sat4>
+			<SatIP>0</SatIP>
+		</PackageEntry>
+		<PackageEntry>
+			<PackageId>31</PackageId>
+			<PackageName>FranSat</PackageName>
+			<PackageListName>FranSat</PackageListName>
+			<CountryId>6</CountryId>
+			<Sat1 Mandatory="Y">E</Sat1>
+			<Sat2 Mandatory="N">FFFF</Sat2>
+			<Sat3 Mandatory="N">FFFF</Sat3>
+			<Sat4 Mandatory="N">FFFF</Sat4>
+			<SatIP>0</SatIP>
+		</PackageEntry>	
+		<PackageEntry>
+			<PackageId>34</PackageId>
+			<PackageName>Astra LCN</PackageName>
+			<PackageListName>Astra LCN</PackageListName>
+			<CountryId>7</CountryId>
+			<Sat1 Mandatory="Y">1</Sat1>
+			<Sat2 Mandatory="N">FFFF</Sat2>
+			<Sat3 Mandatory="N">FFFF</Sat3>
+			<Sat4 Mandatory="N">FFFF</Sat4>
+			<SatIP>1</SatIP>
+		</PackageEntry>
+		<PackageEntry>
+			<PackageId>35</PackageId>
+			<PackageName>AustriaSat Magyarorszag</PackageName>
+			<PackageListName>AustriaSat Magyarorszag</PackageListName>
+			<CountryId>9</CountryId>
+			<Sat1 Mandatory="Y">3</Sat1>
+			<Sat2 Mandatory="N">F</Sat2>
+			<Sat3 Mandatory="N">FFFF</Sat3>
+			<Sat4 Mandatory="N">FFFF</Sat4>
+			<SatIP>0</SatIP>
+		</PackageEntry>	
+		<PackageEntry>
+			<PackageId>32</PackageId>
+			<PackageName>OpProfile</PackageName>
+			<PackageListName>OpProfile</PackageListName>
+			<CountryId>65535</CountryId>
+			<Sat1 Mandatory="Y">E</Sat1>
+			<Sat2 Mandatory="N">FFFF</Sat2>
+			<Sat3 Mandatory="N">FFFF</Sat3>
+			<Sat4 Mandatory="N">FFFF</Sat4>
+			<SatIP>0</SatIP>
+		</PackageEntry>
+		<PackageEntry>
+			<PackageId>33</PackageId>
+			<PackageName>Freesat</PackageName>
+			<PackageListName>Freesat</PackageListName>
+			<CountryId>26</CountryId>
+			<Sat1 Mandatory="Y">4</Sat1>
+			<Sat2 Mandatory="N">FFFF</Sat2>
+			<Sat3 Mandatory="N">FFFF</Sat3>
+			<Sat4 Mandatory="N">FFFF</Sat4>
+			<SatIP>0</SatIP>
+		</PackageEntry>
+	</HomingBasedPackages>
+</PackageList>
+
+
+		
+
+

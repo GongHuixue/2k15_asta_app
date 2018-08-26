@@ -1,0 +1,24 @@
+/** koala group AppApiAnalogTypes **/
+
+#ifndef _APPAPIANALOGTYPES_DD_
+#define _APPAPIANALOGTYPES_DD_
+
+
+typedef enum
+{
+    AppApiUnknownColorSystem = -1,
+    AppApiInvalidColorSystem = -2,
+    AppApiPal   = 0,
+    AppApiSecam = 1,
+    AppApiNtsc  = 2
+}AppApiColorSystem;     /** koala type AppApiColorSystem **/
+
+typedef enum
+{
+    AppApiDecNone = 0,
+    AppApiDecExt1 = 1,
+    AppApiDecExt2 = 2    
+}AppApiDecExtns;     /** koala type AppApiDecExtns **/
+
+
+#endif

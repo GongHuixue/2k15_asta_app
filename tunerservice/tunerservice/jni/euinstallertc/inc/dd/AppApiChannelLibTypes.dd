@@ -1,0 +1,701 @@
+/*
+
+ *  Copyright(C) 2004 Koninklijke Philips Electronics N.V.,
+
+ *  All Rights Reserved.
+
+ *  This  source code and any compilation or derivative thereof is the
+
+ *  proprietary information of Koninklijke Philips Electronics N.V.
+
+ *  and is confidential in nature.
+
+ *  Under no circumstances is this software to be exposed to or placed
+
+ *  under an Open Source License of any type without the expressed
+
+ *  written permission of Koninklijke Philips Electronics N.V.
+
+ *
+
+ *    %name: AppApiChannelLibTypes.dd %
+
+ *    %version: TVG_Fusion_8.1.1 %_RR %
+
+ *    %date_modified: Fri Feb 20 16:21:59 2009 %
+
+ *    %derived_by: dnilanjan %
+
+ */
+
+
+
+/** koala group AppApiChannelLibTypes   **/
+
+/** koala using PlfApiFrontend **/
+
+#ifndef _APPAPICHANNELLIBTYPES_DD_
+
+#define _APPAPICHANNELLIBTYPES_DD_
+
+
+#ifdef __cplusplus
+#include "DPlfApiFrontend.dd"    
+#endif
+
+typedef unsigned int AppApiReturnCode;        /** koala type AppApiReturnCode **/
+
+
+
+
+typedef enum
+
+{
+
+    AppApiUnknown=0,
+
+    AppApiAnalog,   
+
+    AppApiProgram,  
+
+    AppApiOnePart,  
+
+    AppApiTwoPart,  
+
+    AppApiRadio     
+
+}AppApiChannelType;     /** koala type AppApiChannelType **/
+
+
+
+typedef struct
+
+{
+
+    AppApiChannelType Type;
+
+    int Ptc;
+
+    union
+
+    {
+
+        int OnePart;
+
+        int AnalogNo;
+
+        int Digit;
+
+        struct
+
+        {
+
+            int MajorNo;
+
+            int MinorNo;
+
+        }TwoPart;
+
+        
+
+    }Channel;    
+
+
+
+}AppApiChannel;              /** koala type AppApiChannel **/
+
+
+
+typedef enum
+
+{
+    AppApiParentalNone       = 0x00000001,
+
+    AppApiParentalGen4       = 0x00000002,
+
+    AppApiParentalGen5       = 0x00000004,
+
+    AppApiParentalGen6       = 0x00000008,
+
+    AppApiParentalGen7       = 0x00000010,
+
+    AppApiParentalGen8       = 0x00000020,
+
+    AppApiParentalGen9       = 0x00000040,
+
+    AppApiParentalGen10      = 0x00000080,
+
+    AppApiParentalGen11      = 0x00000100,
+
+    AppApiParentalGen12      = 0x00000200,
+
+    AppApiParentalGen13      = 0x00000400,
+
+    AppApiParentalGen14      = 0x00000800,
+
+    AppApiParentalGen15      = 0x00001000,
+
+    AppApiParentalGen16      = 0x00002000,
+
+    AppApiParentalGen17      = 0x00004000,
+
+    AppApiParentalGen18      = 0x00008000,
+
+    AppApiUniversalFrance    = 0x00010000,
+
+    AppApiParentalFrance     = 0x00020000,
+
+    AppApiXRatedSpain        = 0x00040000,
+    
+	AppApiForAllSpain		 = 0x00080000,			
+	
+	AppApiChildrenSpain      = 0x00100000	
+
+}AppApiDVBRatings;		     /** koala type AppApiDVBRatings **/
+
+
+
+typedef enum
+
+{
+
+    AppApiBraArNone				= 0x00000001,
+
+    AppApiBraAr10  				= 0x00000002,
+
+    AppApiBraAr12  				= 0x00000003,
+
+    AppApiBraAr14  				= 0x00000004,
+
+    AppApiBraAr16				= 0x00000005,
+
+    AppApiBraAr18				= 0x00000006
+
+}AppApiISDBTAgeRatings;        /** koala type AppApiISDBTAgeRatings **/
+
+
+
+typedef enum
+
+{
+
+    AppApiBraCrNone			 	= 0x00000000,
+
+    AppApiBraCrDrug            	= 0x00000010,
+
+    AppApiBraCrViolence         = 0x00000020,
+
+    AppApiBraCrDrugViolence     = 0x00000030,
+
+    AppApiBraCrSex              = 0x00000040,
+
+    AppApiBraCrSexDrug          = 0x00000050,
+
+    AppApiBraCrSexViolence     	= 0x00000060,
+
+    AppApiBraCrViolenceDrugSex  = 0x00000070
+
+}AppApiISDBTContentRatings;        /** koala type AppApiISDBTContentRatings **/
+
+
+
+typedef enum
+
+{
+	AppApiRatingTypeNone,
+	
+    AppApiDVBRatingType,
+
+    AppApiISDBTRatingType
+
+}AppApiParentalRatingType;          /** koala type AppApiParentalRatingType **/
+
+
+
+typedef struct
+
+{
+
+    AppApiParentalRatingType    RatingType;
+
+    union
+
+    {
+
+        AppApiDVBRatings    DvbRating;
+
+        struct
+
+        {
+
+            AppApiISDBTAgeRatings       Age;
+
+            AppApiISDBTContentRatings   Content;
+
+        }ISDBTRating;
+
+    }AppApiRating;   
+
+}AppApiParentalRating;              /** koala type AppApiParentalRating **/
+
+
+
+/*
+
+Following attributes will be used for setting the attributes for Tuning to a Frequency.
+
+This is typically used for Digital DVB-T channels where Frequency, BW, Modulation type
+
+are known upfront but the corresponding AppApiChannel is not known.
+
+*/
+
+
+
+typedef enum
+
+{
+
+	AppApiAnalogType = 0,
+
+	AppApiDVBTType   = 0x1,
+
+	AppApiDVBCType   = 0x2,
+
+	AppApiDVBSType   = 0x4,
+
+	AppApiISDBTType  = 0x8,
+
+	AppApiDVBT2Type  = 0x10
+
+}AppApiTuningType;		/** koala type AppApiTuningType **/
+
+
+typedef enum
+{
+	AppApiUndefinedSubtitle = 0,
+		
+	AppApiDVBSubtitle,
+	
+	AppApiTelextSubtitle,
+	
+	AppApiHearingImpairedSubtitle	
+	
+}AppApiSubtitleType; /** koala type AppApiSubtitleType **/
+
+
+
+typedef enum
+
+{
+	AppApiUndefinedAudio = 0,
+		
+	AppApiVisualImpairedAudio,
+	
+	AppApiHearingImpairedAudio
+	
+}AppApiAudioType; /** koala type AppApiSubtitleType **/
+
+
+typedef enum
+
+{
+
+	AppApiTvSystemNone      = tmFe_TvSystemNone,    
+
+	AppApiTvSystemBg        = tmFe_TvSystemBg,      
+
+	AppApiTvSystemD         = tmFe_TvSystemD,       
+
+	AppApiTvSystemDk        = tmFe_TvSystemDk,      
+
+	AppApiTvSystemDk1       = tmFe_TvSystemDk1,     
+
+	AppApiTvSystemDk2       = tmFe_TvSystemDk2,    
+
+	AppApiTvSystemI         = tmFe_TvSystemI,       
+
+	AppApiTvSystemH         = tmFe_TvSystemH,       
+
+	AppApiTvSystemK1        = tmFe_TvSystemK1,      
+
+	AppApiTvSystemL         = tmFe_TvSystemL,       
+
+	AppApiTvSystemL1        = tmFe_TvSystemL1,      
+
+	AppApiTvSystemM         = tmFe_TvSystemM,       
+
+	AppApiTvSystemN         = tmFe_TvSystemN,       
+
+	AppApiTvSystemC64Qam    = tmFe_TvSystemC64Qam,  
+
+	AppApiTvSystemC256Qam   = tmFe_TvSystemC256Qam, 
+
+	AppApiTvSystemT8Vsb     = tmFe_TvSystemT8Vsb,   
+
+	AppApiTvSystemT16Vsb    = tmFe_TvSystemT16Vsb,
+
+}AppApiTvSystem;		/** koala type AppApiTvSystem **/
+
+
+
+
+
+
+typedef enum
+
+{
+
+	AppApiInvalidModulation = 0,	/** koala type  AppApiInvalidModulation  **/
+
+	AppApiAutoModulation    ,		/** koala type  AppApiAutoModulation     **/
+
+	AppApiBpskModulation	,		/** koala type  AppApiBpskModulation     **/
+
+	AppApiQpskModulation	,		/** koala type  AppApiQpskModulation     **/
+
+	AppApiPsk8Modulation	,		/** koala type  AppApiPsk8Modulation     **/
+
+	AppApiQam4Modulation    ,		/** koala type  AppApiQam4Modulation     **/
+
+	AppApiQam16Modulation   ,		/** koala type  AppApiQam16Modulation    **/
+
+    AppApiQam32Modulation   ,		/** koala type  AppApiQam32Modulation    **/
+
+    AppApiQam64Modulation   ,		/** koala type  AppApiQam64Modulation    **/
+
+	AppApiQam128Modulation  ,		/** koala type  AppApiQam128Modulation   **/
+
+	AppApiQam256Modulation  ,		/** koala type  AppApiQam256Modulation   **/
+
+	AppApiQam512Modulation  ,		/** koala type  AppApiQam512Modulation   **/
+
+	AppApiQam1024Modulation ,		/** koala type  AppApiQam1024Modulation  **/
+
+	AppApiVsb8Modulation    ,		/** koala type  AppApiVsb8Modulation     **/
+
+	AppApiVsb16Modulation   		/** koala type  AppApiVsb16Modulation    **/
+
+}AppApiModulation;		/** koala type AppApiModulation **/
+
+
+
+typedef enum
+
+{
+
+
+	AppApiBandwidthAuto      = 0 ,		/** koala type  AppApiBandwidthAuto  **/
+
+	AppApiBandwidth6MHz       ,		/** koala type  AppApiBandwidth6MHz  **/
+
+	AppApiBandwidth7MHz       ,		/** koala type  AppApiBandwidth7MHz  **/
+
+	AppApiBandwidth8MHz ,      		/** koala type  AppApiBandwidth8MHz  **/
+
+	AppApiBandwidthUnknown   ,	/** koala type  AppApiBandwidthUnknown  **/
+
+	AppApiBandwidthInvalid    		/** koala type  AppApiBandwidthInvalid  **/
+
+}AppApiBandwidth;		/** koala type AppApiBandwidth **/
+
+
+
+typedef enum
+
+{
+
+    AppApiDvbTypeNone  	= 0x00,
+
+    AppApiDvbTypeC  	= 0x01,
+
+	AppApiDvbTypeT  	= 0x02,
+
+	AppApiDvbTypeCLite  = 0x03,
+
+    AppApiDvbTypeTLite  = 0x04,
+
+}AppApiDvbChannelType;  /** koala type AppApiDvbChannelType **/
+
+
+typedef enum 
+{
+	AppApiOperatorNone = 0,
+
+	AppApiOperatorZiggo = 1,
+
+	AppApiOperatorUPC = 2,
+
+	AppApiOperatorSKY = 3,
+
+	AppApiOperatorHDPLUS =4,
+
+	AppApiOperatorORF = 5,
+
+	AppApiOperatorDigiTurk = 6,
+
+	AppApiOperatorDSmart = 7,
+
+	AppApiOperatorKDG = 8,
+
+	AppApiOperatorKabelBW = 9,
+    AppApiOperatorUnityMedia = 10
+
+}AppApiOperator;  /** koala type AppApiOperator **/
+
+typedef enum
+{
+	AppApiCanalDigitaalHD	= 18,
+	AppApiCanalDigitaalSD	= 19,
+	AppApiTvVlaanderenHD 	= 20,
+	AppApiTvVlaanderenSD	= 21,
+	AppApiTelesatBel	    = 22,
+	AppApiTelesatLux	    = 23,
+	AppApiAusrtia	        = 24,
+	AppApiCzechRepublic	    = 25,
+	AppApiSlovakRepublic	= 26,
+	AppApiDigiTurkSat 		= 27,
+	AppApiDigiEutelSat 		= 28
+}AppApiPackageId;			/** koala type AppApiPackageId **/
+
+
+typedef enum
+{
+    AppApiPolarizationVertical    = 0,
+
+    AppApiPolarizationHorizontal
+
+}AppApiPolarization; /** koala type AppApiPolarization **/
+
+typedef enum
+{
+	AppApiPackage 	 = 0x01,
+	AppApiNonPackage = 0x02,
+	AppApiCommon 	 = 0x03
+}AppApiServicePackageInfo;
+
+
+typedef struct
+
+{
+
+	AppApiTuningType Type;
+
+	union
+
+	{
+
+		struct 
+
+		{
+
+			int Frequency;
+
+			AppApiTvSystem TvSystem;
+
+		}AnalogParam;
+
+		struct
+
+		{
+
+			int Frequency;
+
+			AppApiBandwidth Bandwidth;
+
+			int Modulation;
+
+		}DVBTParam;
+
+		struct
+
+		{
+
+			int Frequency;
+
+			unsigned long SymbolRate;
+
+			int Modulation;
+
+		}DVBCParam;
+
+		struct
+
+		{
+
+		    int Frequency;
+
+		}ISDBTParam;
+
+		struct
+
+		{
+			int sat_id;
+			int tp_id; /* Internal to DVBS2 - Iterator */
+			int Frequency;
+			unsigned long SymbolRate;
+		}DVBSParam;
+
+		struct
+
+		{
+
+			int Frequency;
+
+			AppApiBandwidth Bandwidth;
+
+			int Modulation;
+
+		}DVBT2Param;
+
+	}TuningParams;
+
+}AppApiDirectTuningParameters;	/** koala type AppApiDirectTuningParameters **/
+
+
+typedef struct
+
+{
+
+	AppApiTuningType Type;
+
+	union
+
+	{
+
+		struct 
+
+		{
+
+			int Frequency;
+
+			AppApiTvSystem TvSystem;
+
+		}AnalogParam;
+
+		struct
+
+		{
+
+			int Frequency;
+
+			AppApiBandwidth Bandwidth;
+
+			int Modulation;
+			
+			int ProgramNumber;
+
+		}DVBTParam;
+
+		struct
+
+		{
+
+			int Frequency;
+
+			unsigned long SymbolRate;
+
+			int Modulation;
+			
+			int ProgramNumber;
+
+		}DVBCParam;
+
+		struct
+
+		{
+
+		    int Frequency;
+
+		}ISDBTParam;
+
+		struct
+
+		{
+			int sat_id;
+			int tp_id; /* Internal to DVBS2 - Iterator */
+			int Frequency;
+			int ProgramNumber;
+			unsigned long SymbolRate;
+		}DVBSParam;
+
+		struct
+
+		{
+
+			int Frequency;
+
+			AppApiBandwidth Bandwidth;
+
+			int Modulation;
+			
+			int ProgramNumber;
+
+		}DVBT2Param;
+
+	}TuningParams;
+
+}AppApiDirectTuningParameters2;	/** koala type AppApiDirectTuningParameters2 **/
+
+typedef struct
+
+{
+
+	Nat16 			                OnId;
+
+	Nat16 			                TsId;	
+
+	Nat8                            Ptc;
+
+   	AppApiDirectTuningParameters    Params;
+	
+	int 							PackageMux;
+	
+}AppApiMultiplex;           /** koala type AppApiMultiplex **/
+
+
+
+typedef enum
+
+{
+
+    AppApiMediaInvalid = 0,
+
+    AppApiMediaVideo,
+
+    AppApiMediaAudio,
+
+    AppApiMediaPCR,
+
+    AppApiMediaSubtitle,
+
+    AppApiMediaClosedCaption,
+
+    AppApiMediaTeletext,
+    
+    AppApiMediaIPSubtitle,
+
+    AppApiMediaIPClosedCaption
+    
+
+}AppApiMediaStreamTypes;          /** koala type AppApiMediaStreamTypes **/
+
+
+typedef enum
+
+{
+ 	 	
+	AppApiSelectionTypeNormal = 0,
+	
+	AppApiSelectionTypeQuite,
+	
+	AppApiSelectionTypeNonDestructive,
+	
+	AppApiSelectionTypeQuiteNonDestructive,
+	
+	AppApiSelectionTypeInvalid
+	
+}AppApiSelectionTypes; 			/** koala type AppApiSelectionTypes **/
+
+#endif
+

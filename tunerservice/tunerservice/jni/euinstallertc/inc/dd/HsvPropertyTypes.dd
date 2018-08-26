@@ -1,0 +1,654 @@
+/*
+ *  Copyright(C) 2003 Koninklijke Philips Electronics N.V.,
+ *  All Rights Reserved.
+ *  This  source code and any compilation or derivative thereof is the
+ *  proprietary information of Koninklijke Philips Electronics N.V.
+ *  and is confidential in nature.
+ *  Under no circumstances is this software to be exposed to or placed
+ *  under an Open Source License of any type without the expressed
+ *  written permission of Koninklijke Philips Electronics N.V.
+ *
+ *          %name: HsvPropertyTypes.dd %
+ *       %version: TVG_fusion_8 %
+ * %date_modified: Sat Feb 14 13:17:16 2009 %
+ *    %derived_by: zaheer %
+ */
+ 
+
+/** koala group HsvPropertyTypes **/
+/** koala using infraglobals **/
+/** koala using HsvDvbSiGlobals **/
+
+#ifndef _HSVPROPERTYTYPES
+#define _HSVPROPERTYTYPES
+
+/*  This is a collection of the types of all vectored properties exported by hysvc 
+    through strapi */
+
+/* Media type definitions */
+
+#define HSV_VIDEO_TYPE                  ((Nat32)((0x01) << 24))
+#define HSV_MPEG_AUDIO_TYPE             ((Nat32)((0x02) << 24))
+#define HSV_SUBTITLE_TYPE               ((Nat32)((0x03) << 24))
+#define HSV_AC3_TYPE                    ((Nat32)((0x04) << 24))
+#define HSV_AAC_TYPE                    ((Nat32)((0x05) << 24))
+#define HSV_AC3PLUS_TYPE                ((Nat32)((0x06) << 24))
+#define HSV_HEAAC_TYPE                  ((Nat32)((0x07) << 24))
+#define HSV_PREMIXED_VI_TYPE            ((Nat32)((0x08) << 24))
+#define HSV_SPOKEN_SUBTITLES_TYPE       ((Nat32)((0x10) << 24))
+#define HSV_INVALID_COMPONENT_TYPE      (-1)
+#define HSV_INVALID_PAGE_ID             (-1)
+#define HSV_INVALID_PAGE_NO             (-1)
+
+#define MAX_NETWORK_NAME_SIZE              (140)
+#define MAX_CHANNEL_LIST_NAME_SIZE         (140)
+#define MAX_NO_ALT_FREQ_PER_MUX            (10)
+
+#define HSV_MPEG_AUDIO_HEARING_IMPAIRED ((0x02) << 8 )
+#define HSV_TXT_SUBTITLE_HEARING_IMPAIRED ((0x05) << 8 )
+#define HSV_MPEG_AUDIO_VISUALLY_IMPAIRED ((0x03) << 8 )
+#define HSV_EAC3_AUDIO_VISUALLY_IMPAIRED  ((0x04) << 8 )
+
+/* Check if a type is video */
+#define HSV_IS_VIDEO(type)              ( ((type) != (HSV_INVALID_COMPONENT_TYPE)) && (((type) & 0x0F000000) == (HSV_VIDEO_TYPE)))
+
+/* Check if the specified type is an MPEG audio variant*/
+#define HSV_IS_MPEG_AUDIO(type)         ( ((type) != ((Nat32)HSV_INVALID_COMPONENT_TYPE)) && (((type) & 0x0F000000) == (HSV_MPEG_AUDIO_TYPE)))
+
+
+/* Check if the specified type denotes an AC3 audio variant*/
+#define HSV_IS_AC3_AUDIO(type)          ( ((type) != ((Nat32)HSV_INVALID_COMPONENT_TYPE)) && (((type) & 0x0F000000) == (HSV_AC3_TYPE)))
+
+/* Check if the specified type denotes an AAC audio variant*/
+#define HSV_IS_AAC_AUDIO(type)          ( ((type) != ((Nat32)HSV_INVALID_COMPONENT_TYPE)) && (((type) & 0x0F000000) == (HSV_AAC_TYPE)))
+
+/* Check if the specified type denotes a HEAAC audio variant*/
+#define HSV_IS_HEAAC_AUDIO(type)        ( ((type) != ((Nat32)HSV_INVALID_COMPONENT_TYPE)) && (((type) & 0x0F000000) == (HSV_HEAAC_TYPE)))
+
+/* Check if the specified type denotes an AC3Plus audio variant*/
+#define HSV_IS_AC3PLUS_AUDIO(type)      ( ((type) != ((Nat32)HSV_INVALID_COMPONENT_TYPE)) && (((type) & 0x0F000000) == (HSV_AC3PLUS_TYPE)))
+
+/* Check if the specified type denotes an Broadcast Pre-Mixed VI Audio variant*/
+#define HSV_IS_PREMIXED_VI_AUDIO(type)  ( ((type) != ((Nat32)HSV_INVALID_COMPONENT_TYPE)) && (((type) & HSV_PREMIXED_VI_TYPE) == (HSV_PREMIXED_VI_TYPE)))
+
+#define HSV_IS_SPOKEN_SUBTITLES(type)  ( ((type) != (HSV_INVALID_COMPONENT_TYPE)) && (((type) & HSV_SPOKEN_SUBTITLES_TYPE) == (HSV_SPOKEN_SUBTITLES_TYPE)))
+
+/* Check if the specified type is associated to particular text types */
+#define HSV_IS_TXT_SUBTITLE(type)       ( ((type) != ((Nat32)HSV_INVALID_COMPONENT_TYPE)) && (((type) & 0x0F000000) == (HSV_SUBTITLE_TYPE)) && ( ( ( ((type)&(0xFF00)) >> 8) == ((Nat32)0x02) ) || (( ((type)&(0xFF00)) >> 8) == ((Nat32)0x05)) ) )
+
+#define HSV_IS_SUBTITLE(type)           ( ((type) != ((Nat32)HSV_INVALID_COMPONENT_TYPE)) && (((type) & 0x0F000000) == (HSV_SUBTITLE_TYPE)))
+
+/*component type byte's b2b1b0 = 100 -> MultiChannel,000 MonoChannel, 001 1+1 Mode , 010 Stereo 011 2channel dolby surround stereo*/
+#define HSV_IS_NON_MULTICHANNEL_AC3_TYPE(type) ( (type != HSV_INVALID_COMPONENT_TYPE) && ( ((((type & 0xFF0000) >> 16) & 0x04) == 0x00) || ((((type & 0xFF0000) >> 16) & 0x04) == 0x01)  \
+											|| ((((type & 0xFF0000) >> 16) & 0x04) == 0x02) || ((((type & 0xFF0000) >> 16) & 0x04) == 0x03)))
+#define HSV_IS_MULTICHANNEL_AC3_SUBSTREAM_TYPE(type) (((type&0x07) == 0x04) || ((type&0x07) == 0x05))
+
+/* Check if the specified type is a hearing impaired type (audio, teletext or subtitle) */
+#define HSV_IS_HEARING_IMPAIRED(type)   ( (((type) != ((Nat32)HSV_INVALID_COMPONENT_TYPE))) && (\
+( ((HSV_IS_MPEG_AUDIO((type))))  && (((type) & 0xFF00) == ((Nat32)HSV_MPEG_AUDIO_HEARING_IMPAIRED))) ||\
+( ((HSV_IS_TXT_SUBTITLE((type))) && (((type) & 0xFF00) == ((Nat32)HSV_TXT_SUBTITLE_HEARING_IMPAIRED))))||\
+( (((HSV_IS_AC3_AUDIO((type)))   && ((((type)>>16)& (3 << 3))== (Nat32)0x18 )))) ||\
+( (((HSV_IS_AC3PLUS_AUDIO((type)))   && ((((type)>>16)& (3 << 3))== (Nat32)0x18 )))) ||\
+( (((HSV_IS_AAC_AUDIO((type)))   && ((((type)>>16)& (3 << 3))== (Nat32)0x18 )))) ||\
+( (((HSV_IS_HEAAC_AUDIO((type)))   && ((((type)>>16)& (3 << 3))== (Nat32)0x18 )))) ||\
+( (((HSV_IS_SUBTITLE((type)))    && ((((type) & (0xFF0000)) >> 16) >= (Nat32)0x20) && ((((type) & (0xFF0000)) >> 16) <= (Nat32)0x24)))) ) )
+
+/* Check if the specified type is a hearing impaired type (audio, teletext or subtitle) */
+#define HSV_IS_VISUALLY_IMPAIRED_COMMENTARY(type)   ( (((type) != ((Nat32)HSV_INVALID_COMPONENT_TYPE))) && (\
+( ((HSV_IS_MPEG_AUDIO((type))))  && (((type) & 0xFF00) == ((Nat32)HSV_MPEG_AUDIO_VISUALLY_IMPAIRED))) ||\
+( (((HSV_IS_AC3_AUDIO((type)))       && (((((type)>>16)& (3 << 3))== (Nat32)0x10 ) || ((((type) & 0xFF00) == ((Nat32)HSV_MPEG_AUDIO_VISUALLY_IMPAIRED))) ) )) ) ||\
+( (((HSV_IS_AC3PLUS_AUDIO((type)))   && (((((type)>>16)& (3 << 3))== (Nat32)0x10 ) || ((((type) & 0xFF00) == ((Nat32)HSV_MPEG_AUDIO_VISUALLY_IMPAIRED))) || ((((type) & 0xFF00) == ((Nat32)HSV_EAC3_AUDIO_VISUALLY_IMPAIRED)))  ) )) ) ||\
+( (((HSV_IS_HEAAC_AUDIO((type)))     && (((((type)>>16)& (3 << 3))== (Nat32)0x10 ) || ((((type) & 0xFF00) == ((Nat32)HSV_MPEG_AUDIO_VISUALLY_IMPAIRED))) ) )) ) ||\
+( (((HSV_IS_AAC_AUDIO((type)))       && (((((type)>>16)& (3 << 3))== (Nat32)0x10 ) || ((((type) & 0xFF00) == ((Nat32)HSV_MPEG_AUDIO_VISUALLY_IMPAIRED))) ) )) )   ) )
+
+#define	HSV_IS_HDSUBTITLE(type)    ( ((((type) & (0xFF0000)) >> 16) == 0x14) ||  ((((type) & (0xFF0000)) >> 16) == 0x24))
+
+/*New parser Definition parameters--This is done to avoid multiple inclusion of Parser .h in NIT,SDT,TDT,TOT folders*/
+#define HSV_BYTE            8
+#define HSV_BYTES2          16
+#define HSV_BYTES3          24
+#define HSV_BYTES4          32
+
+/*#define NBITS(x)                (0xFFFFFFFF >> (32-x))
+#define GETNEXT32(ptr,byt,bit)  (((((ptr[byt + 1])<<BYTES3) | ((ptr[byt+2])<<BYTES2) | ((ptr[byt+3])<<BYTE) | ((ptr[byt+4])))) >> (BYTE-bit))
+#define GETCURBITS(ptr,byt,bit) (ptr[byt]<<(BYTES3 + bit))
+#define GETFULL32(ptr,byt,bit)  (GETNEXT32(ptr,byt,bit)|GETCURBITS(ptr,byt,bit))
+#define GETNBITS(ptr,byt,bit,n) (((GETFULL32(ptr,byt,bit)>>(BYTES4-n))) & (NBITS(n)))*/
+
+#define GETNBITS(v32,bit,n)     (((v32>>(HSV_BYTES4-(bit + n)))) & (NBITS(n)))
+#define NBITS(x)            (0xFFFFFFFF >> (32-x))
+
+#define GET32(byt)              (((((ptr[byt])<<HSV_BYTES3) | ((ptr[byt+1])<<HSV_BYTES2) | ((ptr[byt+2])<<HSV_BYTE) | (ptr[byt+3]))))
+#define GET16(byt)              (((ptr[byt])<<HSV_BYTE) | (ptr[byt+1]))
+
+#define GET32PTR(ptr,byt)       (((((ptr[byt])<<HSV_BYTES3) | ((ptr[byt+1])<<HSV_BYTES2) | ((ptr[byt+2])<<HSV_BYTE) | (ptr[byt+3]))))
+
+#define HSV_PARSER_MIN(a,b)                ((a < b)? a : b)
+
+#define HSV_SHOW_WORD(p)                    ( ((*(p))<<8)| (*((p)+1)) )
+#define HSV_GETSECTION_LENGTH(p)            ((HSV_SHOW_WORD((p)+1)&0x0fff)+3)
+#define GET_PRIVATE_DATA_SPECIFIER(ptr)     ((*(ptr - 6) == 0x5F) ? GET32PTR((ptr - 4),0): 0)
+
+#define HSV_AVC_PROFILE_BASELINE			66
+#define HSV_AVC_PROFILE_MAIN				77
+#define HSV_AVC_PROFILE_EXTENDED			88
+#define HSV_AVC_PROFILE_HIGH				100
+
+#define HSV_AVC_PROFILE_SUPPORTED(value)    ((value == HSV_AVC_PROFILE_BASELINE) || (value == HSV_AVC_PROFILE_MAIN) || (value == HSV_AVC_PROFILE_EXTENDED) || (value == HSV_AVC_PROFILE_HIGH))
+#define HSV_AVC_LEVEL_SUPPORTED(value)		((value == 9) || (value == 10) || (value == 11) || (value == 12) || (value == 13) || (value == 20) || \
+											 (value == 21) || (value == 22) || (value == 30) || (value == 31) || (value == 32) || (value == 40) || \
+											 (value == 41) || (value == 42))
+
+#define MAX_LCNS						(8)
+#define MAX_CDSD_PER_TS    				10
+#define MAX_DSD_PER_TS     				20
+/*typedef unsigned int Nat32;
+typedef unsigned short Nat16;
+typedef unsigned char Nat8;
+typedef unsigned int DateTime;
+typedef void* Address;
+typedef int Bool;
+#define TRUE 1
+#define FALSE 0*/
+
+/*New parser Definition parameters*/
+
+
+/***************************DVB Standard*********************************/
+/************************Compound Properties*************************************/
+#define MAXSERVICENAMELEN 40    /** koala type HsvMaxServiceLen **/
+#define MAXCONTENTLABLENAMELEN  40    /** koala type HsvMaxContentLableNamelen **/
+
+typedef struct HsvDVBService {
+    Nat16 Original_NetworkId;   /* Primary Key */
+    Nat16 ServiceId;            /* Primary Key */
+    Nat16 ServiceName[MAXSERVICENAMELEN + 1];   
+    Nat8  ServiceType;
+    Nat8  Running_Status;
+    Bool  SIPresent;
+} HsvDVBService;    /** koala type HsvDVBService **/
+/*********************************NIT********************************************/
+typedef struct HsvNITTS {
+    Nat16 Original_NetworkId;   /* Primary Key */
+    Nat16 Tsid;                 /* Primary Key */
+    Bool  LCNPresent;
+    Nat8  VersionNumber;        /* TimeStamp */
+} HsvNITTS; /** koala type HsvNITTS **/
+
+typedef struct HsvNITLCN {
+    Nat16 NetworkId;
+    Nat16 Original_NetworkId;   /* Primary Key */
+    Nat16 Tsid;                 /* Secondary Key */
+    Nat16 ServiceId;            /* Tertiary Key */
+    Nat16 LogicalChannelNum;
+	Nat16 LCN[MAX_LCNS];
+    Bool  VisibleService;
+    Nat8  VersionNumber;    /* TimeStamp */
+} HsvNITLCN; /** koala type HsvNITLCN **/
+
+#define MAX_CDSD_PER_TS    10
+
+typedef struct HsvNITCableDS {
+    Nat16 NetworkId;
+    Nat16 Tsid;
+    Nat16 Original_NetworkId;
+    Nat8 NumOfCDSD;
+    int VersionNumber;
+    struct{
+        Nat8 FEC_Outer;
+        Nat8 FEC_Inner;
+        Nat8 Modulation;
+        int SymbolRate;
+        int Frequency;
+    }CDSD[MAX_CDSD_PER_TS];
+} HsvNITCableDS;    /** koala type HsvNITCableDS **/
+
+typedef HsvNITCableDS HsvNITOtherCableDS;
+
+typedef HsvNITCableDS HsvNITTSRelocated;
+
+typedef struct HsvNITOtherNetworkIdInfo {
+    Nat16 NetworkId;    /* Primary Key */
+    Nat16 Name[MAX_NETWORK_NAME_SIZE];
+    int VersionNumber;
+} HsvNITOtherNetworkIdInfo; /** koala type HsvNITOtherNetworkIdInfo **/
+
+
+typedef struct HsvNITFrequencyList
+{
+    Nat16 Original_NetworkId;	/* Primary Key */
+    Nat16 Tsid;					/* Secondary Key */
+    int   NoOfFreqs;
+    Nat32 Frequency[MAX_NO_ALT_FREQ_PER_MUX];
+    int VersionNumber;
+} HsvNITFreqList;	/** koala type HsvNITFreqList **/
+
+typedef struct HsvNITLCN2 {
+    Nat16 NetworkId;
+    Nat16 Original_NetworkId;
+    Nat16 Tsid;
+    Nat8  ChannelListId;
+    Nat32 CountryCode;
+    Nat16 ServiceId;
+    Nat16 LogicalChannelNum;
+	Nat16 LCN[MAX_LCNS];
+    Bool  VisibleService;
+    Nat8  VersionNumber;
+} HsvNITLCN2;	/** koala type HsvNITLCN2 **/
+
+/*This Is Apmea Specific Structure for Channel List in LCNV2*/
+typedef struct HsvNITFAVORITECHANNELLISTLCNV2 {
+    Nat16 Original_NetworkId;
+    Nat16 Tsid;
+    Nat8  ChannelListId; //Secondary Key
+    Nat32 CountryCode;   //Primary Key
+	Nat16 ChannelListName[MAX_CHANNEL_LIST_NAME_SIZE +1];	
+    Nat16 ServiceId;	//Tertiary Key
+	Nat16 LCN;
+    Bool  VisibleService;
+	Nat8  VersionNumber;
+} HsvNITFAVORITECHANNELLISTLCNV2;	/** koala type HsvNITLCN2 **/
+
+typedef struct HsvNITHDSLCN {
+    Nat16 NetworkId;
+    Nat16 Original_NetworkId;   /* Primary Key */
+    Nat16 Tsid;                 /* Secondary Key */
+    Nat16 ServiceId;            /* Tertiary Key */
+    Nat16 LogicalChannelNum;
+    Bool  VisibleService;
+    Nat8  VersionNumber;    /* TimeStamp */
+} HsvNITHDSLCN; /** koala type HsvNITHDSLCN **/
+
+typedef struct HsvNITSRVCATRB {
+    Nat16 NetworkId;
+    Nat16 Original_NetworkId;   /* Primary Key */
+    Nat16 Tsid;                 /* Secondary Key */
+    Nat16 ServiceId;            /* Tertiary Key */
+    Bool  NumericSelect;
+    Bool  VisibleService;
+    Nat8  VersionNumber;    /* TimeStamp */
+} HsvNITSRVCATRB; /** koala type HsvNITSRVCATRB **/
+
+typedef struct HsvNITServiceList{
+    Nat16 NetworkId;
+    Nat16 Original_NetworkId;   /* Primary Key */
+    Nat16 Tsid;                 /* Secondary Key */
+    Nat16 ServiceId;            /* Tertiary Key */
+    Nat8  ServiceType;
+    Nat8  VersionNumber;
+} HsvNITServiceList; /** koala type HsvNITServiceList **/
+
+/*This Is for CanalDigitalCR*/
+typedef struct HsvActualTsId {
+    Nat16 Original_NetworkId;
+    Nat16 Tsid;
+	Nat8  VersionNumber;
+}HsvActualTsId;
+	
+
+/*********************************SDT***********************************************/
+
+typedef struct HsvSDTService {
+    Nat16 Original_NetworkId;   /* Primary Key */
+    Nat16 ServiceId;            /* Primary Key */
+    Nat16 ServiceName[MAXSERVICENAMELEN + 1]; 
+    Nat8  ServiceType;
+    Bool  EIT_Schedule_Flag;
+    Bool  EIT_Present_Following_Flag;
+    Nat8  Running_Status;
+    Bool  Free_CA_Mode;
+    Nat8  VersionNumber;    /* TimeStamp */
+	Bool  Free_Ci_Mode;
+	Bool  Match_Brand_Flag;
+	Nat16 NumBrandIds; 
+	Nat16 Brand_Ids[23]; 
+	Nat16 TsId;
+} HsvSDTService; /** koala type HsvSDTService **/
+
+typedef struct HsvSDTLinkageInfo {
+    HsvLinkageType  LinkageType;    /** koala using HsvLinkageType **/
+    Nat16 Original_NetworkId;
+    Nat16 Tsid;
+    Nat16 ServiceId;
+} HsvSDTLinkageInfo; /** koala type HsvSDTLinkageInfo **/
+
+
+typedef struct HsvNITLinkageInfo {
+    HsvLinkageType  LinkageType;    /** koala using HsvLinkageType **/
+    Nat16 NetworkId;
+    Nat16 Original_NetworkId;
+    Nat16 Tsid;
+    Nat16 ServiceId;
+    int VersionNumber;
+    Nat32 OUI[5];
+} HsvNITLinkageInfo; /** koala type HsvNITLinkageInfo **/
+
+typedef struct HsvSDTCellID
+{
+	Nat16	 Original_NetworkId; 
+	Nat16	 Tsid; 
+	Nat16	 ServiceId; 
+	Nat32	 NumGlobalCellIDs;//Total Number Of CellId in each service
+	Nat16	 GlobalCellID[128];
+	Nat8	 Availability_flag;
+} HsvSDTCellID;
+
+
+typedef struct {
+	Nat16 OnId; /* Primary Key */
+    Nat16 Tsid; /* Secondary Key */
+	Nat16 ServiceId; /* Tertiary Key */
+    Nat32 LangCode; /* Quaternary Key */
+    Nat16 ServiceName[MAXSERVICENAMELEN + 1]; 	
+	Nat8  VersionNumber;
+}HsvSDTMultiLingSvcName;
+
+
+typedef HsvNITLinkageInfo HsvNITOtherLinkageInfo;
+typedef HsvNITLinkageInfo HsvCamNITLinkageInfo;
+
+/*********************************EIT***********************************************/
+
+#define MAX_CONTENTS 1
+#define MAX_SHORTNAME_SIZE (40)
+//#define MAX_SHORTDESC_SIZE (255 + 1)
+#define MAX_EXTENDEDNAME_SIZE (25)
+//#define MAX_EXTENDEDDESC_SIZE (256 + 1)
+#define MAX_EVENT_ITEMS 5
+#define MAX_EXTENDEDTEXT_SIZE 25
+#define MAX_EXTENDEDDESC_SIZE (4096)
+
+#define MAX_EXTENDED_ITEMS  (16)
+#define MAX_EXTENDED_ITEM_DESCCHAR_SIZE  (50+1) 
+#define MAX_EXTENDED_ITEMCHAR_SIZE  (100+1) 
+
+#define MAX_REGION_NAME_SIZE	(50)
+typedef struct HsvEITEvent {
+    Nat16 Original_NetworkId;
+	Nat16 TsId;
+	Nat16 ServiceId;
+    DateTime dt;      /** koala using infraglobals **/
+	Nat16 EventId;
+	Nat32 Duration;
+	Nat8  RunningStatus;
+	Bool  Free_CA_Mode;
+
+    struct {
+	    Nat8  ContentNibble;  /* Content_Nibble */
+	    Nat8  UserNibble; /* User Nibble */
+    }ContentDesc [MAX_CONTENTS]; 
+
+    struct {
+	    Nat8 LanguageId;
+	    Nat16 ShortName[MAX_SHORTNAME_SIZE + 1];	/* Null terminated Unicode */
+	    Nat16 ShortDesc[MAX_SHORTDESC_SIZE];	/* Null terminated Unicode */
+        /* fixme: Extended Name & Itemised list not included yet */
+    } EvtDesc;  
+} HsvEITEvent; /** koala type HsvEITEvent **/
+
+
+/*********************************TOT***********************************************/
+
+typedef struct HsvTOTTimeOffsetInfo {
+    Nat8  CountryId;
+    Nat8  Timezone;
+    Bool  Polarity;
+    DateTime TimeOffset;
+    DateTime ChangeDt;
+    DateTime NextTimeOffset;
+    int   Version;
+}HsvTOTTimeOffsetInfo; /** koala type HsvTOTTimeOffsetInfo **/
+
+
+/***************************MPEG Standard*********************************/
+
+/********************************PAT**************************************/
+
+typedef struct HsvPATProgramPIDInfo {
+    Nat16   ProgramNumber;
+    Nat16   Pid;
+} HsvPATProgramPIDInfo;/** koala type HsvPATProgramPIDInfo **/    
+
+
+/********************************PMT**************************************/
+
+/********Macros for AC-3 Component Type***************/
+#define FULL_SERVICE_FLAG(x)        ((x & 0x40)  >> 6)
+#define SERVICE_TYPE_FLAGS(x)       ((x & 0x38)  >> 3)
+#define NO_OF_CHANNELS_FLAGS(x)     (x & 0x07)
+
+typedef struct HsvPMTAudioInfo {
+    Nat16  ProgramNumber;
+    Nat8   LangCode;
+    Nat32  Language;
+    Nat32  AudioType;   /* Flattened type and component type into one structure */    
+    Nat16  Pid;
+    Nat16  PmtVersion;
+	Nat16  NoOfISO639Lang;
+	int    AACProfileAndLevel;
+	int    EAC3VIPresent;
+	int    ADSubstreamValue;
+} HsvPMTAudioInfo; /** koala type HsvPMTAudioInfo **/
+
+typedef struct HsvPMTSubtitlingInfo {
+    Nat16  ProgramNumber;
+    Nat8   LangCode;
+    Nat32  Language;
+    Nat32  Type;  
+    Nat16  Pid;
+    Nat16  CompositionPageId;
+    Nat16  AncilliaryPageId;
+    Nat8   TeletextMagazieNo;
+    Nat8   TeletextPageNo;    
+    Nat16  PmtVersion;
+} HsvPMTSubtitlingInfo; /** koala type HsvPMTSubtitlingInfo **/
+
+typedef struct HsvPMTTeletextInfo {
+    Nat16  ProgramNumber;
+    Nat8   LangCode;
+    Nat32  Language;
+    Nat32  Type;  
+    Nat16  Pid;
+    Nat8   TeletextMagazieNo;
+    Nat8   TeletextPageNo;
+    Nat16  PmtVersion;
+} HsvPMTTeletextInfo;   /** koala type HsvPMTTeletextInfo **/
+
+
+typedef struct HsvPMTBasicPidInfo {
+    Nat16   ProgramNumber;
+    Nat16   VideoPid;
+    Nat16   PcrPid;
+    Nat16   TeletextPid;
+    Nat16   PmtVersion;
+    Nat8    VideoStreamType;//mohanan
+} HsvPMTBasicPidInfo;  /** koala type HsvBasicPidInfo **/
+
+
+typedef struct HsvPMTSection {
+    Nat16       ProgramNumber;
+    void   *    PmtSectionPointer;
+} HsvPMTSection;  /** koala type HsvPMTSection **/
+
+typedef struct HsvPMTComponentTagInfo {
+    Nat16       ProgramNumber;
+    Nat16       ComponentTag;
+    Nat16       Pid;
+    Nat16       PmtVersion;
+} HsvPMTComponentTagInfo;  /** koala type HsvPMTComponentTagInfo **/
+
+typedef struct HsvPMTDatabroadcastInfo {
+    Nat32       OUI;
+    Nat16       ProgramNumber;
+    Nat16       Pid;
+    Nat16       PmtVersion;
+    Nat8        Update_Type;
+    Nat8        Update_Version_Flag;
+    Nat8        Update_Version;
+} HsvPMTDatabroadcastInfo;  /** koala type HsvPMTDatabroadcastInfo **/
+
+typedef struct HsvDateTime {
+    int Version;
+    DateTime    dt;
+}HsvDateTime;	/** koala type HsvDateTime **/
+
+
+typedef struct HsvExtendedEventInfo{
+	int		ServiceId;
+	int		OnId;
+	int		Tsid;
+	int		EventId;
+	Nat16	Info[ MAX_EXTENDEDDESC_SIZE ];
+	struct 
+    { 
+        Nat16   ItemDescChar[MAX_EXTENDED_ITEM_DESCCHAR_SIZE]; 
+        Nat16   ItemChar[MAX_EXTENDED_ITEMCHAR_SIZE]; 
+    }EventItems[MAX_EXTENDED_ITEMS]; 
+	
+}HsvExtendedEventInfo;
+
+typedef struct HsvEITShortDesc{
+	int		ServiceId;
+	int		OnId;
+	int		Tsid;
+	int		EventId;
+	Nat16	Text[ MAX_SHORTDESC_SIZE ];
+	
+}HsvEITShortDesc;
+
+
+typedef struct {
+	Nat16 NetworkId;
+	Nat8  RegionDepth;
+	Nat32 Langcode;
+    Nat32 CountryCode;
+	struct
+    {
+		Nat16 RegionCode;
+		char  RegionName[MAX_REGION_NAME_SIZE+1];
+        struct
+        {
+            Nat16 RegionCode;
+			char  RegionName[MAX_REGION_NAME_SIZE+1];
+            struct
+            {
+                Nat16 RegionCode;
+                char  RegionName[MAX_REGION_NAME_SIZE+1];
+            }Tertiary;
+        }Secondary;
+    }Primary;
+	Nat8  VersionNumber;
+}HsvNITTargetRegionName;
+
+#define MAX_REGIONS_PER_SERVICE			15
+
+typedef struct {
+	Nat16 OnId;
+    Nat16 Tsid;
+	Nat16 ServiceId;
+    Nat16 NetworkId;
+    Nat32 CountryCode;
+	struct 
+	{
+		Nat8 RegionDepth;
+		int RegionMap [ MAX_REGIONS_PER_SERVICE ][ 4 ];   
+	}RegionList;
+
+	Nat8  TsLoop;
+	Nat8  VersionNumber;
+}HsvNITTargetRegion;
+
+
+typedef struct {
+	Nat16 OnId;
+    Nat16 Tsid;
+	Nat16 ServiceId;
+    Nat16 NetworkId;
+    Nat32 CountryCode;
+	struct 
+	{
+		Nat8 RegionDepth;
+		int RegionMap [ MAX_REGIONS_PER_SERVICE ][ 4 ];   
+	}RegionList;
+
+	Nat8  TsLoop;
+	Nat8  VersionNumber;
+}HsvSDTTargetRegion;
+
+typedef struct {
+	int level_idc;
+	int profile_idc;
+}HsvAVCInfo;
+
+typedef struct HsvCamNITCableDS {
+    Nat32 TsId;
+    Nat16 OriginalNetworkId;
+    Nat16 NetworkId;
+    Nat8  NumOfDSD;
+    struct{
+        Nat8  Modulation;
+        Nat32 SymbolRate;
+        Nat32 Frequency;
+    }DSD[MAX_DSD_PER_TS];
+} HsvCamNITCableDS;    /** koala type HsvCamNITCableDS **/
+typedef struct HsvCamNITTerrestrialDS
+{
+    Nat32 TsId;
+    Nat16 OriginalNetworkId;
+    Nat16 NetworkId;
+    Nat8 NumOfDSD;
+    struct{
+        Nat32    Frequency;
+        Nat8     Bandwidth;
+        Nat8     Priority;
+		Nat8	 Modulation;
+    }DSD[MAX_DSD_PER_TS];
+} HsvCamNITTerrestrialDS;    /** koala type HsvCamNITTerrestrialDS **/
+typedef struct HsvCamNITC2DS {
+    Nat32 TsId;
+    Nat16 OriginalNetworkId;
+    Nat16 NetworkId;
+    Nat8 NumOfDSD;
+    struct{
+        Nat8     PLP_Id;
+        Nat16    SystemId;
+        Nat32    Frequency;
+    }DSD[MAX_DSD_PER_TS];
+} HsvCamNITC2DS;    /** koala type HsvCamNITC2DS **/
+typedef struct HsvCamNITT2DS
+{
+    Nat32 TsId;
+    Nat16 OriginalNetworkId;
+    Nat16 NetworkId;
+    Nat8 NumOfDSD;
+    struct{
+        Nat8     PLP_Id;
+        Nat8     Bandwidth;
+        Nat32    Frequency;
+    }DSD[MAX_DSD_PER_TS];
+} HsvCamNITT2DS;    /** koala type HsvCamNITT2DS **/
+typedef struct HsvCamNITService
+{
+	Nat16 	 TsId;
+    Nat16 	 OriginalNetworkId;
+    Nat16    ServiceId;
+	Nat8     ServiceType;
+	Nat8     VisibleServiceFlag;
+	Nat8     SelectableServiceFlag;
+	Nat16    LogicalChannelNumber;
+	Nat16 	 ServiceName[MAXSERVICENAMELEN + 1];
+} HsvCamNITService;    /** koala type HsvCamNITService **/
+typedef struct HsvCamNITContentLabel
+{
+    Nat8     ContentByteMin;
+	Nat8     ContentByteMax;
+	Nat8     LabelCharLen;
+	Nat8     LabelChar[MAXCONTENTLABLENAMELEN + 1];
+	Nat32    ISO_639_Language_Code;
+} HsvCamNITContentLabel;    /** koala type HsvCamNITContentLabel **/
+typedef enum
+{
+	EnmTypeCamNITData = 0,
+	EnmTypeTuneDSDescData
+}HsvCamSdmParserEvents;		/** koala type HsvCamSdmParserEvents **/
+#endif

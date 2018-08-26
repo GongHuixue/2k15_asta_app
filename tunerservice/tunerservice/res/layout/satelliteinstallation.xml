@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.droidtv.euinstallersat.wizard.SatelliteWizard xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/installationWizard"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:tag="@org.droidtv.ui.strings:string/MAIN_VB_SATELLITE_INSTALLATION" >
+
+    <org.droidtv.euinstallersat.wizard.screen.InstallModes
+        android:id="@+id/installmodes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="Start Installation" >
+    </org.droidtv.euinstallersat.wizard.screen.InstallModes>
+
+    <org.droidtv.euinstallersat.wizard.screen.StartScreen
+        android:id="@+id/reinstallstart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="@org.droidtv.ui.strings:string/MAIN_VB_SAT_AUTOSTORE_START" >
+    </org.droidtv.euinstallersat.wizard.screen.StartScreen>
+
+    <org.droidtv.euinstallersat.wizard.screen.PreScan
+        android:id="@+id/prescan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="@org.droidtv.ui.strings:string/MAIN_VB_SAT_PRESCAN" >
+    </org.droidtv.euinstallersat.wizard.screen.PreScan>
+
+    <org.droidtv.euinstallersat.wizard.screen.PackageSelection
+        android:id="@+id/packageSelection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="@org.droidtv.ui.strings:string/MAIN_VB_SAT_PACKAGE_SELECTION" >
+    </org.droidtv.euinstallersat.wizard.screen.PackageSelection>
+
+    <org.droidtv.euinstallersat.wizard.screen.QuickFull
+        android:id="@+id/quickorfull"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="@org.droidtv.ui.strings:string/MAIN_VB_SAT_QUICK_FULL" >
+    </org.droidtv.euinstallersat.wizard.screen.QuickFull>
+
+    <org.droidtv.euinstallersat.wizard.screen.InstallScreen
+        android:id="@+id/installscreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="@org.droidtv.ui.strings:string/MAIN_VB_SAT_INSTALLING" >
+    </org.droidtv.euinstallersat.wizard.screen.InstallScreen>
+
+    <org.droidtv.euinstallersat.wizard.screen.FinishScreen
+        android:id="@+id/finishscreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="@org.droidtv.ui.strings:string/MAIN_VB_SAT_AUTOSTORE_FINISHED" >
+    </org.droidtv.euinstallersat.wizard.screen.FinishScreen>
+
+    <org.droidtv.euinstallersat.wizard.screen.UpdateSatellite
+        android:id="@+id/updateSatellite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="@org.droidtv.ui.strings:string/MAIN_VB_SAT_UPDATE_CHANNELS" >
+    </org.droidtv.euinstallersat.wizard.screen.UpdateSatellite>
+
+    <org.droidtv.euinstallersat.wizard.screen.UpdateScan
+        android:id="@+id/updateScan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="@org.droidtv.ui.strings:string/MAIN_VB_SAT_UPDATING" >
+    </org.droidtv.euinstallersat.wizard.screen.UpdateScan>
+
+    <org.droidtv.euinstallersat.wizard.screen.SatelliteSelection
+        android:id="@+id/satelliteSelection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="@org.droidtv.ui.strings:string/MAIN_VB_SAT_SATELLITE_SELECTION" >
+    </org.droidtv.euinstallersat.wizard.screen.SatelliteSelection>
+
+    <org.droidtv.euinstallersat.wizard.screen.FinishUpdate
+        android:id="@+id/finishupdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="@org.droidtv.ui.strings:string/MAIN_VB_SAT_UPDATE_FINISHED" >
+    </org.droidtv.euinstallersat.wizard.screen.FinishUpdate>
+
+    <org.droidtv.euinstallersat.wizard.screen.AddSatellitePreScan
+        android:id="@+id/addsatprescan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="@org.droidtv.ui.strings:string/MAIN_VB_SAT_PRESCAN" >
+    </org.droidtv.euinstallersat.wizard.screen.AddSatellitePreScan>
+
+    <org.droidtv.euinstallersat.wizard.screen.AddSatelliteInstall
+        android:id="@+id/addsatinstall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="@org.droidtv.ui.strings:string/MAIN_VB_SAT_INSTALLING" >
+    </org.droidtv.euinstallersat.wizard.screen.AddSatelliteInstall>
+
+    <org.droidtv.euinstallersat.wizard.screen.AddSatelliteFinish
+        android:id="@+id/addsatfinish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="@org.droidtv.ui.strings:string/MAIN_VB_SAT_AUTOSTORE_FINISHED" >
+    </org.droidtv.euinstallersat.wizard.screen.AddSatelliteFinish>
+
+    <org.droidtv.euinstallersat.wizard.screen.RemoveSatSatelliteSelection
+        android:id="@+id/removestat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="@org.droidtv.ui.strings:string/MAIN_VB_SAT_SATELLITE_REMOVE" >
+    </org.droidtv.euinstallersat.wizard.screen.RemoveSatSatelliteSelection>
+
+    <org.droidtv.euinstallersat.wizard.screen.DualTuner
+        android:id="@+id/dualTuner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="@org.droidtv.ui.strings:string/MAIN_VB_SAT_AUTOSTORE_DUAL_TUNER" >
+    </org.droidtv.euinstallersat.wizard.screen.DualTuner>
+
+    <org.droidtv.euinstallersat.wizard.screen.VirginInstallTeaserScreen
+        android:id="@+id/virginInstallTeaser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="@org.droidtv.ui.strings:string/MAIN_VB_SAT_AUTOSTORE_START" >
+    </org.droidtv.euinstallersat.wizard.screen.VirginInstallTeaserScreen>
+
+    <org.droidtv.euinstallersat.wizard.screen.MiniPrescanScreen
+        android:id="@+id/miniPrescan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="@org.droidtv.ui.strings:string/MAIN_VB_SAT_UPDATE_MINI_PRESCAN" >
+    </org.droidtv.euinstallersat.wizard.screen.MiniPrescanScreen>
+
+    <org.droidtv.euinstallersat.wizard.screen.CamSelection
+        android:id="@+id/camSelection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="@org.droidtv.ui.strings:string/MAIN_VB_SAT_AUTOSTORE_START" >
+    </org.droidtv.euinstallersat.wizard.screen.CamSelection>
+
+    <org.droidtv.euinstallersat.wizard.screen.CamInstallation
+        android:id="@+id/camInstallation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="@org.droidtv.ui.strings:string/MAIN_VB_SAT_INSTALLING" >
+    </org.droidtv.euinstallersat.wizard.screen.CamInstallation>
+
+    <org.droidtv.euinstallersat.wizard.screen.PinEntryScreen
+        android:id="@+id/pincodeSelector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="@org.droidtv.ui.strings:string/MAIN_VB_PINCODE" >
+    </org.droidtv.euinstallersat.wizard.screen.PinEntryScreen>
+
+<org.droidtv.euinstallersat.wizard.screen.FreesatPostcodeEntry
+        android:id="@+id/freesat_postcode_entry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="@org.droidtv.ui.strings:string/MAIN_VB_SAT_POSTCODE" >
+    </org.droidtv.euinstallersat.wizard.screen.FreesatPostcodeEntry>
+    
+<org.droidtv.euinstallersat.wizard.satip.SatIPStartScreen
+        android:id="@+id/satIPStartScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="@org.droidtv.ui.strings:string/MAIN_VB_SAT_AUTOSTORE_START" >
+    </org.droidtv.euinstallersat.wizard.satip.SatIPStartScreen>
+    
+     <org.droidtv.euinstallersat.wizard.satip.SatIPHubScreen
+        android:id="@+id/satIPHubScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="@string/MAIN_VB_SAT_IP_AUTOSTORE" >
+    </org.droidtv.euinstallersat.wizard.satip.SatIPHubScreen>
+
+    <org.droidtv.euinstallersat.wizard.satip.SatIPServerListScreen
+        android:id="@+id/satIPServerListScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="@string/MAIN_VB_SAT_IP_SERVER" >
+    </org.droidtv.euinstallersat.wizard.satip.SatIPServerListScreen>
+    
+      <org.droidtv.euinstallersat.wizard.satip.SatIPPreScan
+        android:id="@+id/satIPPrescan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="@org.droidtv.ui.strings:string/MAIN_VB_SAT_PRESCAN" >
+    </org.droidtv.euinstallersat.wizard.satip.SatIPPreScan>
+    
+    <org.droidtv.euinstallersat.wizard.screen.TricolorRegionSelectionScreen
+        android:id="@+id/tricolor_region_selection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="@string/MAIN_VB_SELECT_REGION" >
+    </org.droidtv.euinstallersat.wizard.screen.TricolorRegionSelectionScreen>
+
+	<org.droidtv.euinstallersat.wizard.screen.HBBTVPrivacyStatementScreen
+        android:id="@+id/hbbtvprivacystatement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="@org.droidtv.ui.strings:string/MAIN_VB_ONLINE_PRIVACY" >
+    </org.droidtv.euinstallersat.wizard.screen.HBBTVPrivacyStatementScreen>
+
+</org.droidtv.euinstallersat.wizard.SatelliteWizard>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+   <TextView
+        android:id="@+id/startBody"
+        style="@org.droidtv.ui.tvwidget2k15:style/lml"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:width="@dimen/wizard_step1_npanel_description01_text_width" />
+
+</RelativeLayout>

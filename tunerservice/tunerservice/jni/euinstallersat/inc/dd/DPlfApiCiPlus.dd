@@ -1,0 +1,376 @@
+/** koala public group PlfApiCIPlus **/
+
+/** koala public type CIPlusVersion_e               **/
+/** koala public type CIPlusTSMode_e                **/
+/** koala public type CIPlusStatus_e                **/
+/** koala public type CIPlusOrigin_e                **/
+/** koala public type CIPlusEvent_e                 **/
+/** koala public type CIPlusHandle                  **/
+/** koala public type CIPlusApplicationType_e       **/
+/** koala public type CIPlusResult_e                **/
+/** koala public type CIPlus_HC_TuneStatus          **/
+/** koala public type CIPlus_HC_ReleaseStatus       **/
+/** koala public type CIPlusCaListMng_e             **/
+/** koala public type CIPlusCaCommand_e             **/
+/** koala public type CIPlusRequestType_e           **/
+/** koala public type CIPlusUPGRReply_e             **/
+/** koala public type CIPlusCaApplicationList_s     **/
+/** koala public type CIPlusCaEnable_e              **/
+/** koala public type CIPlusCaEnableStream_s        **/
+/** koala public type CIPlusUPGRType_e              **/
+/** koala public type CIPlusUPGRReset_e             **/
+/** koala public type CIPlusApplicationInfo_s       **/
+/** koala public type CIPlusSAS_DataStatus_e               **/
+/** koala public type CIPlusSAS_SessionStatus_e               **/
+/** koala public type CIPlusSAS_OipfStatus_e               **/
+/** koala public type OP_ProfileType               **/
+/** koala public type OP_RefreshFlag               **/
+/** koala public type OP_ErrorFlag               **/
+/** koala public type OP_DeliverySystem               **/
+/** koala public type OP_EITpfUsage               **/
+/** koala public type OP_EITschedUsage               **/
+/** koala public type OP_TuneStatus               **/
+/** koala public type Op_SearchSettings               **/
+/** koala public type Op_SearchStatus               **/
+/** koala public type Op_ProfileInfo               **/
+/** koala public type OPTune_Status               **/
+/** koala public type Op_TuneStatus               **/
+
+/** koala using infraglobals **/
+
+#ifndef DPLFAPICIPLUS
+#define DPLFAPICIPLUS
+
+typedef enum{
+    CI_Plus,
+    CI_V1
+} CIPlusVersion_e;
+
+
+typedef enum{
+    Invalid_Shun_Mode = -1,
+    TS_ByPass,
+    TS_PassThrough
+} CIPlusTSMode_e;
+
+typedef enum{
+    Success = 0,
+    Error
+} CIPlusResult_e;
+
+typedef enum {
+	HC_TUNE_OK,
+	HC_TUNE_BAD_DS_DESC,
+	HC_TUNE_NOT_LOCKING,
+	HC_TUNE_BUSY,
+	HC_TUNE_BAD_PARAM,
+	HC_TUNE_SERV_NOT_FOUND,
+	HC_TUNE_ERROR_UNDEFINED
+} CIPlus_HC_TuneStatus;
+
+typedef enum {
+	HC_RELEASE_OK,
+	HC_RELEASE_REFUSED
+}CIPlus_HC_ReleaseStatus;
+
+typedef enum{
+    Status_Inactive = 0,
+    Status_Initialising,
+    Status_Initialsed,
+    Status_Authorised,
+    Status_NOT_Authorised,
+    Status_V1
+} CIPlusStatus_e;
+
+typedef enum{
+    Origin_EX_STA,
+    Origin_EX_CC,
+    Origin_RS_AI,
+    Origin_RS_AMMI,
+    Origin_RS_CA,
+    Origin_RS_DT,
+    Origin_RS_HC,
+    Origin_RS_HLC,
+    Origin_RS_LSC,
+    Origin_RS_MMI,
+    Origin_RS_SAS,
+    Origin_RS_UPGR,
+    Origin_RS_AUTH,
+    Origin_RS_OP,
+    Origin_STK_RM,
+    Origin_STK_SES,
+    Origin_STK_TRA,
+    Origin_STK_DLK,
+    Origin_STK_PHY
+} CIPlusOrigin_e;
+
+typedef enum{
+    Event_NO_READY_SIGNAL = 0,
+    Event_WRONG_CARD_TYPE,
+    Event_DATA_RS_FAIL,
+    Event_DATA_SIZE_NEGO,
+    Event_NO_CTC_REPLY,
+    Event_NO_PROFILE_REPLY,
+    Event_NO_CA_INFO_REPLY,
+    Event_NO_OTHER_REPLY,
+    Event_COM_ERROR,
+    Event_POLLING_LOST,
+    Event_TKELERROR,
+    Event_DATA_SIZE_WARNING,
+    Event_ERROR_BAD_PMT,
+    Event_BAD_HOSTCERT,
+    Event_DM_ERROR,
+    Event_CC_SAC_FAILED,
+    Event_CC_CCK_FAILED,            
+    Event_CC_AUTH_FAILED_SIGN,      
+    Event_CC_AUTH_FAILED_AK,
+    Event_CC_AUTH_FAILED_COMPK,     
+    Event_CC_AUTH_FAILED_DH,        
+    Event_CC_BAD_CICAMCERT_SYNTAX,  
+    Event_CC_BAD_CICAMCERT_EXPIRED, 
+    Event_CC_BAD_CICAMCERT_SIGN,    
+    Event_NONE = 999,       /* used when only status change  is notified without event */
+    Event_UNKNOWN = 1000    /* unknown value */
+} CIPlusEvent_e;
+
+typedef enum{
+    Application_TYPE_CA,
+    Application_TYPE_EPD,
+    Application_TYPE_SU,
+    Application_TYPE_NI,
+    Application_TYPE_AA,
+    Application_TYPE_UNCLASSIFIED,
+    Application_TYPE_RESERVED
+} CIPlusApplicationType_e;
+
+typedef enum{
+    Request_File = 1,
+    Request_Data
+} CIPlusRequestType_e;
+
+typedef enum{
+    List_MGMT_MORE = 0x00,
+    List_MGMT_FIRST = 0x01,
+    List_MGMT_LAST = 0x02,
+    List_MGMT_ONLY = 0x03,
+    List_MGMT_ADD = 0x04,
+    List_MGMT_UPDATE = 0x05,
+    List_MGMT_DEFAULT = 0xFF
+} CIPlusCaListMng_e;
+
+
+typedef enum{
+    Ok_DESCRAMBLING = 0x01,
+    Ok_MMI = 0x02,
+    Ok_QUERY = 0x03,
+    Not_SELECTED = 0x04,
+    Cmd_DEFAULT = 0xFF
+}CIPlusCaCommand_e;
+
+typedef enum{
+    Enable_NONE = 0x00,
+    Enable_POSSIBLE = 0x01,
+    Enable_COND_PURCHASE = 0x02,
+    Enable_COND_TECHNICAL = 0x03,
+    Enable_NOT_POSSIBLE_ENT = 0x71,
+    Enable_NOT_POSSIBLE_TEC = 0x73
+} CIPlusCaEnable_e;
+
+typedef enum {
+    MMI_Enquiry,
+    MMI_List,
+    MMI_Menu
+} CIPlusMMIType_e;
+
+typedef enum {
+    UPGR_REPLY_NO,
+    UPGR_REPLY_YES,
+    UPGR_REPLY_ASK_MMI
+} CIPlusUPGRReply_e;
+
+typedef enum {
+    UPGR_TYPE_DELAYED,
+    UPGR_TYPE_IMMEDIATE
+} CIPlusUPGRType_e;
+
+typedef enum {
+    UPGR_PCMCIA_RESET,
+    UPGR_CAM_RESET,
+    UPGR_NO_RESET
+} CIPlusUPGRReset_e;
+
+
+typedef Nat16 CIPlusHandle;
+
+typedef struct
+{
+    CIPlusApplicationType_e Application_Type;
+    Nat16                   Application_Manufacturer;
+    Nat16                   Applciation_Code;
+    Nat16                   Menu_String_Len;
+    unsigned char           Menu_String[ 255 ];
+
+} CIPlusApplicationInfo_s;
+
+typedef struct
+{
+    Nat16               Pid;
+    CIPlusCaEnable_e    Ca_Enable;
+} CIPlusCaEnableStream_s;
+
+typedef struct {
+    Nat16 sessionId;
+    Nat16 caSystemId;
+} CIPlusCaApplicationList_s;
+
+typedef enum _OP_ProfileType {
+	OP_TYPE_0 = 0,	/*! the CICAM doesn’t support any profile*/
+	OP_TYPE_1		/*! the CICAM supports profiled operation (logical channel list and CICAM NIT) */
+} OP_ProfileType;
+typedef enum _OP_RefreshFlag {
+	OP_REFRESH_NO = 0,			/*! No refresh needed, the CICAM is up to date*/
+	OP_REFRESH_WARNING,		/*! A refresh is needed but is not urgent. The host shall initiate a profile search when convenient */
+	OP_REFRESH_URGENT,		/*! A refresh is needed and is urgent. The host shall initiate a profile search as soon as possible */
+	OP_REFRESH_SCHEDULED		/*! A scheduled refresh is requested by the CICAM. The host shall initiate a profile search at 
+											specified date/time */
+} OP_RefreshFlag;
+typedef enum _OP_ErrorFlag {
+	OP_ERROR_NONE = 0,							/*! No Error */
+	OP_ERROR_PROFILE,							/*! The CICAM has encountered and error. No profile information is available. */
+	OP_ERROR_UNSUPPORTED_DELIVERY_SYSTEM,	/*! The CICAM doesn’t support the delivery system descriptor reported by host */
+	OP_ERROR_CANCELED							/*! The operator search has been interrupted and is incomplete */
+} OP_ErrorFlag;
+typedef enum _OP_DeliverySystem {
+	OP_DS_UNSPECIFIED = 0,					/*! Unspecified (CI+ 1.3). This should not occurs if CICAM is compliant CI+ 1.3.1 */
+	OP_DS_CABLE,							/*! cable network DVB-C and/or DVB-C2. */		
+	OP_DS_SATELLITE,						/*! satellite network DVB-S and/or DVB-S2 */
+	OP_DS_CABLE_SATELLITE,				/*! cable network and satellite network */
+	OP_DS_TERRESTRIAL,						/*! terrestrial network DVB-T and/or DVB-T2 */
+	OP_DS_CABLE_TERRESTRIAL,				/*! cable network and terrestrial network */
+	OP_DS_SATELLITE_TERRESTRIAL,			/*! satellite network and terrestrial network */ 
+	OP_DS_CABLE_SATELLITE_TERRESTRIAL	/*! cable network and satellite network and terrestrial network */
+} OP_DeliverySystem;
+typedef enum _OP_EITpfUsage {
+	OP_EIT_PF_NONE = 0,			/*! EIT table not present */
+	OP_EIT_PF_LOCAL_MULTIPLEX,	/*! EIT table present on local multiplex (i.e on multiplex containing the service only) */
+	OP_EIT_PF_CROSS_CARRIED		/*! EIT table present and fully cross carried (i.e host may remain on same multiplex to acquire 
+											      the complete set of EIT information) */
+} OP_EITpfUsage;
+typedef enum _OP_EITschedUsage {
+	OP_EIT_SCHED_NONE = 0,				/*! EIT table not present */
+	OP_EIT_SCHED_LOCAL_MULTIPLEX,	/*! EIT table present on local multiplex (i.e on multiplex containing the service only) */
+	OP_EIT_SCHED_CROSS_CARRIED,		/*! EIT table present and fully cross carried (i.e host may remain on same multiplex 
+												      to acquire the complete set of EIT information). */
+	OP_EIT_SCHED_BARKER_CHANNEL,		/*! EIT table present and is available on a Barker channel (i.e host is require to 
+												      move to the Barker channel to acquire the complete set of EIT information). */
+	OP_EIT_SCHED_USING_APPLICATION	/*! The EPG information is delivered using an application */
+} OP_EITschedUsage;
+typedef struct _Op_SearchSettings {
+	Nat8     	Unattended_Flag;		/*! 0 indicates that user is present and interactive display may be used by CICAM. 1 indicates 
+											      that user is not present and the host is not able to service any interactive request */
+	Nat8  	Service_Type_Length;	/*! Length of Service_Type */
+	Nat8* 	Service_Type;			/*! Specifies the types of service the host is able to present. Service type values are defined by
+											      service_type_field in service_descriptor described in EN 300 468*/
+	Nat8 	Delivery_Cap_Length;	/*! Length of Delivery_Capability */
+	Nat8* 	Delivery_Capability;		/*! Describes the delivery system(s) which are supported by the host. Each delivery system
+											      is described in EN 300 468 delivery system descriptor descriptor tag, any extended descriptor 
+											      shall be preceded by extended descriptor tag (0x7f)*/
+	Nat8 	Application_Cap_Length;	/*! Length of Application_Capability */
+	Nat8* 	Application_Capability;	/*! Describes zero or more applications that are supported by the host. Each application is described 
+											      by ETSI TR 101 162 data broadcastid value of 16-bits */
+} Op_SearchSettings;
+typedef struct _Op_SearchStatus {
+	Nat8 				Info_Version;				/*! Circular profile information version from 0 to 7 */
+	Nat8 				NIT_Version;				/*! Circular version number of the CICAM NIT from 0 to 31 */
+	OP_ProfileType 		Profile_Type;				/*! Type for the profile_type in Status body that indicates if CICAM support 
+															      profiled operation */
+	Nat8 				Initialised_Flag;				/*! 0 indicates that profile has not been initialised. 1 indicates that profile has 
+															      been initialised by CICAM */
+	Nat8					Entitlement_Change_Flag;	/*! 0 indicates no entitlement change. 1 indicates that an unacknoledged 
+															      entitlement change is pending */
+	Nat8 				Entitlement_Valid_Flag;		/*! 0 indicates no entitlement rigth. 1 indicates valid enetitlement rigths. (For
+															      information only) */
+	OP_RefreshFlag 		Refresh_Request_Flag;		/*! Type for the refresh_request_flag in Status body set when the CICAM 
+															      requires a tuning operation */
+	OP_ErrorFlag 			Error_Flag;					/*! Type for the error flag in Status body which contains the status of the 
+															      current active profile*/
+	OP_DeliverySystem 	Delivery_System_Hint;		/*! Type for the delivery_system_hint in Status body which contains the 
+															      delivery system supported by the operator profile */
+	Nat16 				Refresh_Request_Date;		/*! Date of the next scheduled refresh requested CICAM. The date is define as 
+															      UTC Modified Julian (MJD) as defined in EN 300 468 [4] */
+	Nat8 				Refresh_Request_Time;		/*! Time of the next scheduled refresh requested by CICAM. Integer value from 
+															      0 to 239 representing the number of 6 minuts from midnight. 0 = midnight, 
+															      239 = 6 minuts to midnight */
+} Op_SearchStatus;
+typedef struct _Op_ProfileInfo {
+	Nat8 				info_Valid;					/*! indicates if the operator information is present */
+	Nat8 				info_Version;				/*! uniquely identifies the version of the profile information. incremented by 1, 
+															      wrapping to 0, when the profile information changes*/ 
+	/* following information is valid only if info_Valid== 1 */
+	Nat16				cicam_Original_Network_Id;	/*! unambiguously identifies the original_network_id identity of the service
+															      operator */
+	Nat32 					cicam_Identifier;			/*! identifies a particular hardware instance of the CICAM*/
+	Nat8 				character_Code_Table;		/*! Identify the default character set encoding used on the network. 0x00 
+															      represent the DVB character code table 00 Latin alphabet*/
+	Nat8 				character_Code_Table_2;	/*! If Character_Code_Table=0x1F, this field is the encoding_type_id which indicates the
+															      encoding scheme of the string according to the allocation found in ETSI TR 101 162.
+															      If Character_Code_Table=0x10, this field is the second_byte_value which is the first 
+															      byte of the 16-bit value used to specify the character code table as defined in ETSI 
+															      EN 300 468 Annex A Table A.4 */
+	Nat8 				character_Code_Table_3;	/*! If Character_Code_Table=0x10, this field is the second_byte_value which is the
+															      second byte of the 16-bit value used to specify the character code table as defined in 
+															      ETSI EN 300 468 Annex A Table A.4 */
+	Nat8 				sDT_Running_Trusted;		/*! 0 indicates that the running_status field of SDT shall be interpreted to be always in a 
+															      running state. 1 indicates that the running_status field of SDT is trusted */
+	Nat8 				eIT_Running_Trusted;		/*! 0 indicates that the running_status field of EIT shall be interpreted to be always in a 
+															      running state. 1 indicates that the running_status field of EIT is trusted */
+	OP_EITpfUsage 		eIT_Pf_Usage;				/*! Describes the operating mode of the EIT p/f event information in the network */
+	OP_EITschedUsage 	eIT_Schedule_Usage;		/*! Describes the operating mode of the EIT schedule event information in the network */
+	Nat8 				extended_Event_Usage;		/*! indicates if the operator information is present */
+	Nat8 				sDT_Other_Trusted;			/*! 0 indicates that the running_status field of SDT shall be interpreted to be always in a 
+															      running state. 1 indicates that the running_status field of SDT is trusted */
+	Nat8 				eIT_Event_Trigger;			/*! 0 indicates that the EIT p/f transition is inaccurate. 1 indicates that the EIT p/f
+															      transition is accurate and may be used to start and stop recording of an event */
+	Nat8 				iSO_639_Lang_Code[3];		/*! Identifies the default language code of unlabelled text fields and elementary stream
+															      components */
+	Nat16 				profile_Name_Length;		/*! Length of Profile_Name */
+	Nat8* 				profile_Name;				/*! Text information coded using the character set and methods define in ETSI EN 300 468. 
+															      The profile name shall be used to label a profile */
+}Op_ProfileInfo;
+typedef enum _OP_Tune_Status {
+    TVSERVER_CIPLUS_OP_TUNE_STATUS_SUCCESS = 0,		/*! Tuning operation was successful. The tuner is locked and TS pass through CICAM*/
+    TVSERVER_CIPLUS_OP_TUNE_STATUS_NOT_SUPPORTED,	/*! The delivery system descriptor is not supported by the Host*/
+    TVSERVER_CIPLUS_OP_TUNE_STATUS_INVALID,			/*! The delivery system descriptor parameters are invalid.*/
+    TVSERVER_CIPLUS_OP_TUNE_STATUS_FAILED				/*! Tuning operation failed. No signal is present*/
+} OPTune_Status;
+typedef struct _Op_TuneStatus {
+	Nat8 			Descriptor_Number;		/*! Identifies the next unprocessed descriptor number in the operator_tune(). A value of 0xff indicates 
+											      that the Host has reached the end of the table. The descriptors are counted from 0.*/
+	Nat8 			Signal_Strength;			/*! Specifies the signal strength as a percentage value in the range 0 to 100 */
+	Nat8 			Signal_Quality;			/*! Specifies the quality of the signal as a percentage value in the range 0 to 100 */
+	OPTune_Status 	Status;					/*! Length of Descriptor_Loop */
+	Nat16 			Descriptor_Loop_Length;	/*! Length of Descriptor_Loop */	
+	Nat8* 			Descriptor_Loop;		/*! Loop of delivery system descriptor that describes the currently tuned location of the Host that is 
+											      passing through the CICAM or descriptors causing an error */
+} Op_TuneStatus;
+typedef enum {
+	SAS_DATA_AVAILABLE,
+	SAS_DATA_NOT_AVAILABLE
+} CIPlusSAS_DataStatus_e;
+
+typedef enum {
+	SAS_CONNECT_ESTABLISHED,
+	SAS_NO_ASSOCIATED_VENDOR,
+	SAS_NO_MORE_CONNECTION,
+	SAS_RESERVED
+} CIPlusSAS_SessionStatus_e;
+
+typedef enum {
+	SAS_OIPF_OK = 0x00,						/* oips_status code: command succesfully handled */
+	SAS_OIPF_UNSPECIFED_ERROR = 0x01,		/* oips_status code: failed because an unspecified error occurred. Unspecified status values returned from the CI+ module are also mapped to this error */
+	SAS_OIPF_OUT_OF_TIME = 0x02,				/* oips_status code: the CI+ was unable to complete the necessary computations in the time allotted */
+	SAS_OIPF_WRONG_FORMAT = 0x03 ,			/* oips_status code: oipf_ca_vendor_specific_information (inside the command message) has a wrong format */
+	SAS_OIPF_USER_CONSENT_NEEDED = 0x04,	/* oips_status code: failed because user consent is needed for the command */
+	SAS_OIPF_UNKNOWN_DRM_SYSTEM = 0x05,	/* oips_status code: failed because the specified CA system in ca_system_id is unknown */
+} CIPlusSAS_OipfStatus_e;
+#endif /* DPLFAPICIPLUS */

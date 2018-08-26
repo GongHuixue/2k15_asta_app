@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">TunerService</string>
+	<string name="MAIN_CANALDIGITAL">Canal Digital</string>
+	<string name="MAIN_TELEMACH">Telemach</string>
+	<string name="MAIN_COMHEM">ComHem</string>
+    <string name="MAIN_WI_SAT_IP_AUTOSTORE_START">Change the satellite setting or start searching for satellites.
+    \n\nCurrent setting is Search for satellites with a Sat>IP server.
+    \n\nIf you need another setting or use a Unicable setup, select Settings first.
+    \n\nBefore you search for satellites, make sure your satellite dish is properly aligned and connected.</string>
+    <string name="MAIN_SAT_IP">Sat>IP: 1 to 4 Satellites</string>
+    <string name="MAIN_TI_SAT_IP_AUTOSTORE">Sat>IP</string>
+    <string name="MAIN_VB_SAT_IP_AUTOSTORE">Sat>IP</string>
+    <string name="MAIN_SAT_IP_AUTOSTORE_CONNECT_TO_NETWORK">Connect to Network</string>
+    <string name="MAIN_SAT_IP_AUTOSTORE_CONNECT_TO_SERVER">Connect to Sat>IPServer</string>
+    <string name="MAIN_SAT_IP_AUTOSTORE_SEARCH_FOR_SATELLITE">Search for Satellite</string>
+    <string name="MAIN_SAT_IP_AUTOSTORE_INSTALL">Install Satellite</string>
+    <string name="MAIN_WI_SAT_IP_AUTOSTORE_CONNECT_TO_NETWORK">Connect to Network</string>
+    <string name="MAIN_WI_SAT_IP_AUTOSTORE_CONNECT_TO_SERVER">Connect to Sat>IPServer</string>
+    <string name="MAIN_WI_SAT_IP_AUTOSTORE_SEARCH_FOR_SATELLITE">Search for Satellite</string>
+    <string name="MAIN_WI_SAT_IP_AUTOSTORE_INSTALL">Install Satellite</string>
+    <string name="MAIN_TI_SAT_IP_NETWORK_CABLE">Network Cable</string>
+    <string name="MAIN_DI_SAT_IP_NETWORK_CABLE">It is recommended to connect the tv with network cable to your home\nnetwork</string>
+    <string name="MAIN_VB_SAT_IP_SERVER">Sat>IP Server</string>
+    <string name="MAIN_WI_SAT_IP_SERVER">No Sat>IP server found.</string>
+    <string name="MAIN_WI_SAT_IP_NO_SERVERS_FOUND">Switch on your Sat>IP server or connect it to the home\nnetwork.</string>
+    <string name="MAIN_WI_SAT_IP_PRESCAN_FAILED">The TV could not locate the satellite Astra 19.2E\n\nPlease check your disk direction and try again.</string>
+    <string name="MAIN_WI_SAT_IP_PRESCAN_COMPLETED">Ready to install\nchannels of this\nsatellite</string>
+    <string name="MAIN_TI_SAT_IP_NO_NETWORK">No Network Found</string>
+    <string name="MAIN_DI_SAT_IP_PRESCAN_COMPLETED">No Network Found\nYou want to connect to your home network?</string>
+    <string name="MAIN_MSG_SAT_IP_PRESCAN_NOT_POSSIBLE">Prescan not possible as no Sat>IP server detected</string>
+    <string name="MAIN_MSG_SAT_IP_INSTALLATION_NOT_POSSIBLE">Installation not possible as no Sat>IP stream found</string>
+    <string name="MAIN_SAT_IP_FEC">FEC</string>
+    <string name="MAIN_SAT_IP_MODULATION_SYSTEM">Modulation System</string>
+    <string name="MAIN_SAT_IP_DVBS">DVB-S</string>
+    <string name="MAIN_SAT_IP_DVBS2">DVB-S2</string>
+    <string name="MAIN_SAT_IP_MODULATION_TYPE">Modulation Type</string>
+    <string name="MAIN_SAT_IP_QPSK">QPSK</string>
+    <string name="MAIN_SAT_IP_M8PSK">M8PSK</string>
+    <string name="MAIN_SAT_IP_QAM_16">QAM 16</string>
+    <string name="MAIN_SAT_IP_QAM_64">QAM 64</string>
+    <string name="MAIN_SAT_IP_QAM_256">QAM 256</string>
+    <string name="MAIN_SAT_IP_ROLL_OFF">Roll Off</string>
+    <string name="MAIN_SAT_IP_PILOTS">Pilots</string>
+    <string name="MAIN_VB_SELECT_REGION">Select Region</string>
+    <string name="MAIN_BOUQUET_TRICOLOR_HD">Russia Tricolor HD</string>
+    <string name="MAIN_BOUQUET_TRICOLOR_SD">Russia Tricolor SD</string>
+    <string-array name="ws_symbol_rate_mode">
+        <item>@org.droidtv.ui.strings:string/MAIN_AUTOMATIC</item>
+        <item>@org.droidtv.ui.strings:string/MAIN_MANUAL</item>
+    </string-array>
+    <string-array name="ws_dvbt_settings">
+        <item>@org.droidtv.ui.strings:string/MAIN_FREQUENCY_SCAN</item>
+    </string-array>
+    <string-array name="ws_dvbc_settings">
+        <item>@org.droidtv.ui.strings:string/MAIN_FREQUENCY_SCAN</item>
+        <item>@org.droidtv.ui.strings:string/MAIN_FREQUENCY_STEP_SIZE</item>
+        <item>@org.droidtv.ui.strings:string/MAIN_NETWORK_FREQUENCY_MODE</item>
+        <item>@org.droidtv.ui.strings:string/MAIN_NETWORK_FREQUENCY</item>
+    </string-array>
+    <string-array name="ws_frequency_scan">
+        <item>@org.droidtv.ui.strings:string/MAIN_QUICK_SCAN</item>
+        <item>@org.droidtv.ui.strings:string/MAIN_FULL_SCAN</item>
+    </string-array>
+    <string-array name="ws_frequency_stepsize">
+        <item>@org.droidtv.ui.strings:string/MAIN_1_MHZ</item>
+        <item>@org.droidtv.ui.strings:string/MAIN_8_MHZ</item>
+    </string-array>
+    <string-array name="ws_network_id_mode">
+        <item>@org.droidtv.ui.strings:string/MAIN_AUTOMATIC</item>
+        <item>@org.droidtv.ui.strings:string/MAIN_MANUAL</item>
+    </string-array>
+    <string-array name="ws_network_frequency_mode">
+        <item>@org.droidtv.ui.strings:string/MAIN_AUTOMATIC</item>
+        <item>@org.droidtv.ui.strings:string/MAIN_MANUAL</item>
+    </string-array>
+    <string-array name="ws_digital_option">
+        <item>@org.droidtv.ui.strings:string/MAIN_ON</item>
+        <item>@org.droidtv.ui.strings:string/MAIN_OFF</item>
+    </string-array>
+    <string-array name="ws_free_scrambled">
+        <item>@org.droidtv.ui.strings:string/MAIN_FREE_PLUS_SCRAMBLED</item>
+        <item>@org.droidtv.ui.strings:string/MAIN_FREE_CHANNELS_ONLY</item>
+    </string-array>
+    <string-array name="ws_dtt_scan_cable">
+        <item>@org.droidtv.ui.strings:string/MAIN_ON</item>
+        <item>@org.droidtv.ui.strings:string/MAIN_OFF</item>
+    </string-array>
+	 <string-array name="ws_dual_analog_pass">
+        <item>@org.droidtv.ui.strings:string/MAIN_ON</item>
+        <item>@org.droidtv.ui.strings:string/MAIN_OFF</item>
+    </string-array>	
+</resources>

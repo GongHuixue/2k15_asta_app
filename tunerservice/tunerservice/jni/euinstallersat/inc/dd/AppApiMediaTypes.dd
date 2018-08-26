@@ -1,0 +1,126 @@
+
+/** koala group AppApiMediaTypes **/
+#ifndef _APPAPIMEDIATYPES_DD_
+#define _APPAPIMEDIATYPES_DD_
+
+#define INVALID_PID         0x1FFF
+#define INVALID_STREAM_TYPE 0xFF
+
+typedef enum 
+{
+    AppApi_ISOIEC_11172_STREAM_TYPE_VIDEO          = 0x01,
+    AppApi_ISOIEC_13818_2_STREAM_TYPE_VIDEO        = 0x02,
+    AppApi_ISOIEC_11172_2_STREAM_TYPE_VIDEO        = 0x02,
+    AppApi_H264_STREAM_TYPE_VIDEO                  = 0x1B,
+}AppApiVideoStreamType;        /** koala type AppApiVideoStreamType **/
+
+typedef enum 
+{
+    AppApi_ISOIEC_11172_STREAM_TYPE_AUDIO          = 0x03,
+    AppApi_ISOIEC_13818_3_STREAM_TYPE_AUDIO        = 0x04,
+    AppApi_ATSC_A52_STREAM_TYPE_AC3                = 0x81,
+    AppApi_MPEG4_STREAM_TYPE_HEAAC                 = 0x11,
+    AppApi_MPEG4_STREAM_TYPE_AAC                   = 0x0F,
+    AppApi_MPEG4_STREAM_TYPE_AC3PLUS		   = 0x06
+}AppApiAudioStreamType;        /** koala type AppApiAudioStreamType **/
+
+typedef enum
+{
+	AppApiAnalogService						  = 0x00, 
+    AppApiTelevisionService                   = 0x01, 
+    AppApiRadioService                        = 0x02,
+	AppApiTeletextService					  = 0x03, 
+	AppApiNVODTimeshiftedService			  = 0x04,
+	AppApiNVODReferenceService				  = 0x05,
+	AppApiMosaicService						  = 0x06,
+	AppApiDVBMHPService						  = 0x10,
+    AppApiAdvCodecRadioService                = 0x0A,
+    AppApiDatabroadcastService                = 0x0C,
+    AppApiMPEG2HDService                      = 0x11,
+    AppApiAdvCodecSDTelevisionService         = 0x16,	
+	AppApiAdvCodecSDNVODTimeShiftedService	  = 0x17,
+	AppApiAdvCodecSDNVODReferenceService	  = 0x18,
+    AppApiAdvCodecHDTelevisionService         = 0x19, 
+	AppApi3DHDDigitalService                  = 0x1C,  
+	AppApiAdvCodecHDNVODTimeShiftedService    = 0x20,
+	AppApiAdvCodecHDNVODReferenceService	  = 0x21,	   
+	/* For China */
+	AppApiPALCodedSignal					  = 0x07,
+	AppApiSECAMCodedSignal					  = 0x08,
+	AppApiUserDefinedHD1					  = 0x81,
+	AppApiUserDefinedHD2					  = 0xB8,
+	AppApiUserDefinedHD3					  = 0xF1,
+	AppApiUserDefinedHD4					  = 0xF9,
+	AppApiUserDefinedRadioChannelWithVideoComp = 0x82,
+	AppApiSkyHD								   =  0xD3,  //CR AN-5819
+	AppApiHevcService			= 0x1F
+}AppApiServiceType;             /** koala type AppApiServiceType **/
+
+
+typedef struct
+{
+    Nat16                   ProgramNumber;
+    int                     Index;
+    Nat16                   VersionNumber;
+    Nat16                   PcrPid;
+    Nat16                   VideoPid;
+    AppApiVideoStreamType   VideoStreamType;
+}AppApiBasicPidInfo;            /** koala type AppApiBasicPidInfo **/
+
+typedef struct
+{
+    Nat16  ProgramNumber;
+    Nat16  VersionNumber;
+    Nat16  Pid;
+    Nat32 LangCode;
+    Nat8  Language;
+    Nat16  AudioType;
+
+    AppApiAudioStreamType   StreamType;
+    Bool                    HearingImpaired;
+    Bool                    VisuallyImpaired;
+    Nat16                   NoOfISO639Lang;
+    Bool                    AC3;
+    Bool                    AC3Plus;
+    Bool                    AAC;
+    Bool                    HEAAC;
+}AppApiAudioInfo;               /** koala type AppApiAudioInfo **/
+typedef struct
+{
+    Nat16  ProgramNumber;
+    Nat16  VersionNumber;
+    Nat16  ComponentTag;
+    Nat16  Pid;
+    Nat32  LangCode;
+    Nat8   Language;   
+    Nat8   StreamType;
+    Nat16  NoOfISO639Lang;    
+}AppApiDigCCLanguageInfo;       /** koala type AppApiDigCCLanguageInfo **/
+
+typedef struct
+{
+    Nat16 ProgramNumber;
+    Nat16 VersionNumber;
+    Nat32 CountryCode;
+    Nat8  Rating;
+}AppApiStreamParentalRating;          /** koala type AppApiStreamParentalRating **/
+
+typedef struct
+{
+    Nat16 ProgramNumber;
+    Nat16 VersionNumber;
+    Nat16 ComponentTag;
+    Nat16 Pid;
+    Nat8  StreamType;
+    Nat32 ISO_639_Language_Code;
+}AppApiComponentInfo;           /** koala type AppApiComponentInfo **/
+
+typedef struct
+{
+    Nat16 ProgramNumber;
+    Nat16 VersionNumber;
+    Nat16 DataComponentId;
+    Nat8  DMF;
+    Nat8  Timing;    
+}AppApiDataComponentInfo;           /** koala type AppApiDataComponentInfo **/
+#endif

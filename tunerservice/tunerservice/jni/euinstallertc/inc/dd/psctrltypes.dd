@@ -1,0 +1,97 @@
+/*
+ *  Copyright(C) 2003 Koninklijke Philips Electronics N.V.,
+ *  All Rights Reserved.
+ *  This  source code and any compilation or derivative thereof is the
+ *  proprietary information of Koninklijke Philips Electronics N.V.
+ *  and is confidential in nature.
+ *  Under no circumstances is this software to be exposed to or placed
+ *  under an Open Source License of any type without the expressed
+ *  written permission of Koninklijke Philips Electronics N.V.
+ *
+ *          %name: psctrltypes.dd %
+ *       %version: TVG_tv550r4dev1 %
+ * %date_modified: Thu Sep 18 18:14:26 2008 %
+ *    %derived_by: lakshminb %
+ */
+
+#ifndef _POWERCTRLTYPES_DD_
+#define  _POWERCTRLTYPES_DD_
+
+/** koala group powerstc **/
+/** koala using infrakey **/
+
+typedef enum 
+{
+    msg_KeyRelated,
+    msg_PowerRelated,
+    msg_Stepwise,
+    msg_MonitorPresenceTimeout,
+    msg_DropKeys
+} PscMsgType;
+
+
+typedef enum 
+{
+    PscPowOff = 0,
+	PscPowBasic,
+    PscPowSby,
+    PscPowUpdateSby,
+    PscPowOn,
+    PscPowDirectSby,
+    PscPowSvcSby,
+    PscPowSwUpgrade,
+    PscPowColdBoot
+} PwrMode;   /** koala type PwrMode **/
+                
+typedef enum 
+{
+    MainOn,
+    RC5,
+    P50,
+    LocalKey,
+    OnTimer,
+    ServiceDef,
+    Dealer,
+    Factory,
+    Gemstar,
+    PscSoftwareRestart,
+    PscExternalInterrupt
+} WkupReason; /** koala type WkupReason **/
+
+typedef enum
+{
+    KeyState_Normal=0,
+    KeyState_Factory,
+    KeyState_Dealer
+} RoutingStatus;/** koala type RoutingStatus **/
+
+#define     MSG_PARAM_STEP_UP                   0
+#define     MSG_PARAM_STEP_DOWN                 1
+
+
+typedef enum
+{
+    PscLedOn = 0,
+    PscLedOff,
+    PscLedBlink,         /* repeatedly */
+    PscLedFlash          /* once only  */
+} GlowDescriptor;     /** koala type GlowDescriptor **/
+
+typedef struct
+{
+    GlowDescriptor gd;
+    int            msec_on;
+    int            msec_off;
+}LedDesc;            /** koala type LedDesc **/
+
+
+#define LED_OneHz    ( 500 )            /* ontime = offtime = 500 msecs */
+#define LED_P5Hz     ( LED_OneHz * 2  )
+#define LED_P25Hz    ( LED_OneHz * 4  )
+#define LED_TwoHz    ( LED_OneHz / 2  )
+#define LED_ThreeHz  ( LED_OneHz / 3  )
+#define LED_FourHz   ( LED_OneHz / 4  )
+#define LED_FiveHz   ( LED_OneHz / 5  )
+#define LED_TenHz    ( LED_OneHz / 10 )
+
+#endif

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="generic_off_on">
+        <item>org.droidtv.ui.strings.R.string.MAIN_OFF</item>
+        <item>org.droidtv.ui.strings.R.string.MAIN_ON</item>
+    </string-array>
+    <string-array name="menu_country_string">
+        <item>org.droidtv.ui.strings.R.string.MAIN_WEST_EUROPE</item>
+        <item>org.droidtv.ui.strings.R.string.MAIN_EAST_EUROPE</item>
+        <item>org.droidtv.ui.strings.R.string.MAIN_UK</item>
+        <item>org.droidtv.ui.strings.R.string.MAIN_FRANCE</item>
+    </string-array>
+    <string-array name="generic_index">
+        <item>org.droidtv.euinstallertc.settings.SettingsConstants.index_0</item>
+        <item>org.droidtv.euinstallertc.settings.SettingsConstants.index_1</item>
+        <item>org.droidtv.euinstallertc.settings.SettingsConstants.index_2</item>
+        <item>org.droidtv.euinstallertc.settings.SettingsConstants.index_3</item>
+        <item>org.droidtv.euinstallertc.settings.SettingsConstants.index_4</item>
+        <item>org.droidtv.euinstallertc.settings.SettingsConstants.index_5</item>
+        <item>org.droidtv.euinstallertc.settings.SettingsConstants.index_6</item>
+        <item>org.droidtv.euinstallertc.settings.SettingsConstants.index_7</item>
+        <item>org.droidtv.euinstallertc.settings.SettingsConstants.index_8</item>
+    </string-array>
+    
+    <string-array name="frequency_scan">
+        <item>org.droidtv.ui.strings.R.string.MAIN_QUICK_SCAN</item>
+        <item>org.droidtv.ui.strings.R.string.MAIN_FULL_SCAN</item>
+    </string-array>
+    <string-array name="frequency_step_size">
+        <item>org.droidtv.ui.strings.R.string.MAIN_1_MHZ</item>
+        <item>org.droidtv.ui.strings.R.string.MAIN_8_MHZ</item>
+    </string-array>
+    <string-array name="network_frequency_mode">
+        <item>org.droidtv.ui.strings.R.string.MAIN_AUTOMATIC</item>
+        <item>org.droidtv.ui.strings.R.string.MAIN_MANUAL</item>
+    </string-array>
+    <string-array name="free_scrambled">
+        <item>org.droidtv.ui.strings.R.string.MAIN_FREE_PLUS_SCRAMBLED</item>
+        <item>org.droidtv.ui.strings.R.string.MAIN_FREE_CHANNELS_ONLY</item>
+    </string-array>
+
+    <integer-array name="predefinedSymbolRateArray">
+        <item> 0 </item>
+        <item> 1 </item>
+        <item> 2 </item>
+        <item> 3 </item>
+        <item> 4 </item>
+        <item> 5 </item>
+        <item> 6 </item>
+        <item> 7 </item>
+        <item> 8 </item>
+    </integer-array>
+    <integer-array name="startupMessageOptions">
+        <item> 0 </item>
+        <item> 1 </item>
+    </integer-array>
+    <integer-array name="automaticUpdateOptions">
+        <item> 0 </item>
+        <item> 1 </item>
+    </integer-array>
+    <integer-array name="indexedvalues">
+        <item> 0 </item>
+        <item> 1 </item>
+    </integer-array>
+    <integer-array name="menu_item_id">
+        <item> 0 </item>
+        <item> 1 </item>
+        <item> 2 </item>
+        <item> 3 </item>
+        <item> 4 </item>
+        <item> 5 </item>
+        <item> 6 </item>
+        <item> 7 </item>
+        <item> 8 </item>
+    </integer-array>
+
+    <string-array name="menu_sym_rate_mode_string">
+        <item>	@org.droidtv.ui.strings:string/MAIN_AUTOMATIC</item>
+        <item>	@org.droidtv.ui.strings:string/MAIN_MANUAL</item>
+    </string-array>
+    <string-array name="service_off_on">
+        <item>@org.droidtv.ui.strings:string/MAIN_OFF</item>
+        <item>@org.droidtv.ui.strings:string/MAIN_ON</item>
+    </string-array>
+    <string-array name="menu_frequncy_number">
+        <item>@org.droidtv.ui.strings:string/MAIN_FREQUENCY</item>
+        <item>@org.droidtv.ui.strings:string/MAIN_CHANNEL_NUMBER</item>
+    </string-array>
+
+    <item name="DTR_SCREEN" type="id"/>
+  
+    <string-array name="sat_generic_index">
+        <item>org.droidtv.euinstallersat.settings.SettingsConstants.index_0</item>
+        <item>org.droidtv.euinstallersat.settings.SettingsConstants.index_1</item>
+        <item>org.droidtv.euinstallersat.settings.SettingsConstants.index_2</item>
+        <item>org.droidtv.euinstallersat.settings.SettingsConstants.index_3</item>
+        <item>org.droidtv.euinstallersat.settings.SettingsConstants.index_4</item>
+        <item>org.droidtv.euinstallersat.settings.SettingsConstants.index_5</item>
+        <item>org.droidtv.euinstallersat.settings.SettingsConstants.index_6</item>
+        <item>org.droidtv.euinstallersat.settings.SettingsConstants.index_7</item>
+        <item>org.droidtv.euinstallersat.settings.SettingsConstants.index_8</item>
+    </string-array>
+    <integer-array name="satAutomaticUpdateOptions">
+       	<item> 0 </item>
+       	<item> 1 </item>
+       	<item> 2 </item>
+       	<item> 3 </item>
+    </integer-array>
+    <integer-array name="polarisationIds">
+       	<item> 0 </item>
+       	<item> 1 </item>
+    </integer-array>
+    <integer-array name="manual_install_lnb_id">
+       	<item> 0 </item>
+       	<item> 1 </item>
+       	<item> 2 </item>
+       	<item> 3 </item>
+    </integer-array>
+    <integer-array name="dynamic_data_id">
+       	<item> 0 </item>
+       	<item> 1 </item>
+       	<item> 2 </item>
+       	<item> 3 </item>
+       	<item> 4 </item>
+       	<item> 5 </item>
+       	<item> 6 </item>
+    </integer-array>
+     <integer-array name = "onoff">
+         <item>1</item>
+         <item >0</item>
+     </integer-array>
+     <integer-array name = "on_off_automatic">
+         <item >1</item>
+         <item >0</item>
+         <item >2</item>
+     </integer-array>
+    <string-array name="sat_service_off_on">
+        <item>org.droidtv.ui.strings.R.string.MAIN_OFF</item>
+        <item>org.droidtv.ui.strings.R.string.MAIN_ON</item>
+    </string-array>
+    <string-array name="symbol_rate_string">
+        <item>org.droidtv.ui.strings.R.string.MAIN_AUTOMATIC</item>
+        <item>org.droidtv.ui.strings.R.string.MAIN_MANUAL</item>
+    </string-array>
+    <string-array name="tuner_string">
+        <item>org.droidtv.ui.strings.R.string.MAIN_TUNER1</item>
+        <item>org.droidtv.ui.strings.R.string.MAIN_TUNER2</item>
+    </string-array>
+	<string-array name="homing_polarization">
+        <item>org.droidtv.ui.strings.R.string.MAIN_VERTICAL</item>
+        <item>org.droidtv.ui.strings.R.string.MAIN_HORIZONTAL</item>
+    </string-array>
+	<integer-array name="homing_polarization_id">
+       	<item>0</item>
+       	<item>1</item>
+    </integer-array>
+
+    <string-array name="manual_install_lnb"></string-array>
+    <string-array name="polarisation"></string-array>
+    <string-array name="automatic_update_options"></string-array>
+    <string-array name="cd_lnb_power">
+        <item>org.droidtv.ui.strings.R.string.MAIN_ON</item>
+        <item>org.droidtv.ui.strings.R.string.MAIN_OFF</item>
+    </string-array>
+    <string-array name="cd_22khztone">
+        <item>org.droidtv.ui.strings.R.string.MAIN_ON</item>
+        <item>org.droidtv.ui.strings.R.string.MAIN_OFF</item>
+        <item>org.droidtv.ui.strings.R.string.MAIN_AUTOMATIC</item>
+    </string-array>
+    <string-array name="fec_string">
+        <item>12</item>
+        <item>23</item>
+        <item>34</item>
+        <item>56</item>
+        <item>78</item>
+        <item>89</item>
+        <item>35</item>
+        <item>45</item>
+        <item>910</item>
+    </string-array>
+    <string-array name="modulation_system">
+        <item>@string/MAIN_SAT_IP_DVBS</item>
+        <item>@string/MAIN_SAT_IP_DVBS2</item>
+    </string-array>
+    <string-array name="modulation_type">
+        <item>@string/MAIN_SAT_IP_QPSK</item>
+        <item>@string/MAIN_SAT_IP_M8PSK</item>
+        <item>@string/MAIN_SAT_IP_QAM_16</item>
+        <item>@string/MAIN_SAT_IP_QAM_64</item>
+        <item>@string/MAIN_SAT_IP_QAM_256</item>
+    </string-array>
+    <string-array name="roll_off">
+        <item>0.2</item>
+        <item>0.30</item>
+        <item>0.35</item>
+    </string-array>
+    <string-array name="pilot_off_on">
+        <item>org.droidtv.ui.strings.R.string.MAIN_OFF</item>
+        <item>org.droidtv.ui.strings.R.string.MAIN_ON</item>
+    </string-array>
+
+</resources>

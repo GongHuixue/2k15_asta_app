@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/ci_input_modal_dialog_07_panels_standard_bg_width"
+    android:layout_height="@dimen/ci_input_modal_dialog_07_panels_standard_bg_height"
+    android:layout_marginLeft="@dimen/ci_input_modal_dialog_07_panels_standard_bg_x1"
+    android:layout_marginTop="@dimen/ci_input_modal_dialog_07_panels_standard_bg_x1"
+    android:layout_marginRight="@dimen/ci_input_modal_dialog_07_panels_standard_bg_x1"
+    android:layout_marginBottom="@dimen/ci_input_modal_dialog_07_panels_standard_bg_x1"
+>    
+    
+     <TextView
+        android:id="@+id/titletext"
+        android:layout_width="@dimen/ci_input_modal_dialog_07_header_text_width"
+        android:layout_height="@dimen/ci_input_modal_dialog_07_header_text_height"
+        android:layout_marginLeft="@dimen/ci_input_modal_dialog_07_header_text_x1"
+        android:layout_marginTop="@dimen/ci_input_modal_dialog_07_header_text_y1"
+        android:layout_marginRight="@dimen/ci_input_modal_dialog_07_header_text_x2"
+        android:layout_marginBottom="@dimen/ci_input_modal_dialog_07_header_text_y2"
+        android:visibility="invisible"
+        style="@style/ci_input_modal_dialog_01_header_text_style"
+        />
+       <TextView
+        android:id="@+id/subtitle"
+        android:layout_width="@dimen/ci_input_modal_dialog_07_header_info_text_width"
+        android:layout_height="@dimen/ci_input_modal_dialog_07_header_info_text_height"
+        android:layout_marginLeft="@dimen/ci_input_modal_dialog_07_header_info_text_x1"
+        android:layout_marginTop="@dimen/ci_input_modal_dialog_07_header_info_text_y1"
+        android:layout_marginRight="@dimen/ci_input_modal_dialog_07_header_info_text_x2"
+        android:layout_marginBottom="@dimen/ci_input_modal_dialog_07_header_info_text_y2"
+        style="@style/ci_input_modal_dialog_07_header_info_text_style"
+       android:visibility="invisible"
+></TextView>
+       
+       
+     <View
+            android:id="@+id/view1"
+            android:layout_width="@dimen/ci_input_modal_dialog_07_header_panels_horizontal_divider_width"
+            android:layout_height="@dimen/ci_input_modal_dialog_07_header_panels_horizontal_divider_height"
+            android:layout_marginLeft="@dimen/ci_input_modal_dialog_07_header_panels_horizontal_divider_x1"
+            android:layout_marginTop="@dimen/ci_input_modal_dialog_07_header_panels_horizontal_divider_y1"
+            android:layout_marginRight="@dimen/ci_input_modal_dialog_07_header_panels_horizontal_divider_x2"
+            android:layout_marginBottom="@dimen/ci_input_modal_dialog_07_header_panels_horizontal_divider_y2"
+            android:visibility="visible"
+            android:background="@org.droidtv.ui.tvwidget2k15:drawable/panels_horizontal_divider"
+            />
+
+    <FrameLayout
+        android:id="@+id/bodytext"
+        android:layout_width="@dimen/ci_input_modal_dialog_07_header_panels_horizontal_divider_width"
+        android:layout_height="@dimen/ci_input_modal_dialog_07_dialog_center_height"
+        android:layout_marginLeft="@dimen/ci_input_modal_dialog_07_header_panels_horizontal_divider_x1"
+        android:layout_marginTop="@dimen/ci_input_modal_dialog_07_dialog_center_y1"
+        android:layout_marginRight="@dimen/ci_input_modal_dialog_07_dialog_center_x2"
+        android:layout_marginBottom="@dimen/ci_input_modal_dialog_07_dialog_center_y2">
+
+       
+
+    </FrameLayout>
+
+     <View
+            android:id="@+id/view2"
+            android:layout_width="@dimen/ci_input_modal_dialog_07_bottom_panels_horizontal_divider_width"
+            android:layout_height="@dimen/ci_input_modal_dialog_07_bottom_panels_horizontal_divider_height"
+            android:layout_marginLeft="@dimen/ci_input_modal_dialog_07_bottom_panels_horizontal_divider_x1"
+            android:layout_marginTop="@dimen/ci_input_modal_dialog_07_bottom_panels_horizontal_divider_y1"
+            android:layout_marginRight="@dimen/ci_input_modal_dialog_07_bottom_panels_horizontal_divider_x2"
+            android:layout_marginBottom="@dimen/ci_input_modal_dialog_07_bottom_panels_horizontal_divider_y2"
+            android:visibility="visible"
+            android:background="@org.droidtv.ui.tvwidget2k15:drawable/panels_horizontal_divider"
+            />
+   
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="@dimen/ci_input_modal_dialog_07_left_button_normal_width"
+            android:layout_height="@dimen/ci_input_modal_dialog_07_left_button_normal_height"
+            android:layout_marginLeft="@dimen/ci_input_modal_dialog_07_left_button_normal_x1"
+            android:layout_marginTop="@dimen/ci_input_modal_dialog_07_left_button_normal_y1"
+            android:layout_marginRight="@dimen/ci_input_modal_dialog_07_left_button_normal_x2"
+            android:layout_marginBottom="@dimen/ci_input_modal_dialog_07_left_button_normal_y2"
+            android:visibility="invisible"
+            android:background="@org.droidtv.ui.tvwidget2k15:drawable/buttons"
+            >
+             <requestFocus/>
+        </Button> 
+            
+        
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="@dimen/ci_input_modal_dialog_07_right_button_default_width"
+            android:layout_height="@dimen/ci_input_modal_dialog_07_right_button_default_height"
+            android:layout_marginLeft="@dimen/ci_input_modal_dialog_07_right_button_default_x1"
+            android:layout_marginTop="@dimen/ci_input_modal_dialog_07_right_button_default_y1"
+            android:layout_marginRight="@dimen/ci_input_modal_dialog_07_right_button_default_x2"
+            android:layout_marginBottom="@dimen/ci_input_modal_dialog_07_right_button_default_y2"
+             android:visibility="invisible"
+            android:background="@org.droidtv.ui.tvwidget2k15:drawable/buttons" 
+            />
+        
+         <Button
+            android:id="@+id/button2"
+            android:layout_width="@dimen/ci_input_modal_dialog_07_left_button1_normal_width"
+            android:layout_height="@dimen/ci_input_modal_dialog_07_left_button1_normal_height"
+            android:layout_marginLeft="@dimen/ci_input_modal_dialog_07_left_button1_normal_x1"
+            android:layout_marginTop="@dimen/ci_input_modal_dialog_07_left_button1_normal_y1"
+            android:layout_marginRight="@dimen/ci_input_modal_dialog_07_left_button1_normal_x2"
+            android:layout_marginBottom="@dimen/ci_input_modal_dialog_07_left_button1_normal_y2"
+             android:visibility="invisible"
+            android:background="@org.droidtv.ui.tvwidget2k15:drawable/buttons" />
+        
+         
+           <Button
+            android:id="@+id/button3"
+              android:layout_width="@dimen/ci_input_modal_dialog_07_left_button2_normal_width"
+            android:layout_height="@dimen/ci_input_modal_dialog_07_left_button2_normal_height"
+            android:layout_marginLeft="@dimen/ci_input_modal_dialog_07_left_button2_normal_x1"
+            android:layout_marginTop="@dimen/ci_input_modal_dialog_07_left_button2_normal_y1"
+            android:layout_marginRight="@dimen/ci_input_modal_dialog_07_left_button2_normal_x2"
+            android:layout_marginBottom="@dimen/ci_input_modal_dialog_07_left_button2_normal_y2"
+             android:visibility="invisible"
+            android:background="@org.droidtv.ui.tvwidget2k15:drawable/buttons" />
+
+           
+           <TextView
+        android:id="@+id/bottomText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16.5dp"
+        android:layout_marginTop="335dp"
+        android:textSize="@dimen/ci_messagedialog_titletext_size">
+               
+           </TextView>
+</merge>

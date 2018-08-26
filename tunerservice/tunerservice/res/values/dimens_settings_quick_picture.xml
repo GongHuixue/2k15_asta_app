@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Tue Jan 13 2015 10:48:47 GMT+0530-->
+<resources>
+<!--Layout_Settings_Quick_Picture_v2.4.psd-->
+<dimen name="settings_quick_picture_top_gradient_height">84dp</dimen>
+
+<dimen name="settings_quick_picture_top_gradient_width">960dp</dimen>
+
+<dimen name="settings_quick_picture_top_gradient_x1">0dp</dimen>
+
+<dimen name="settings_quick_picture_top_gradient_y1">0dp</dimen>
+
+<dimen name="settings_quick_picture_top_gradient_x2">960dp</dimen>
+
+<dimen name="settings_quick_picture_top_gradient_y2">84dp</dimen>
+
+<dimen name="settings_quick_picture_header_text_height">25dp</dimen>
+
+<dimen name="settings_quick_picture_header_text_width">460dp</dimen>
+
+<dimen name="settings_quick_picture_header_text_x1">20dp</dimen>
+
+<dimen name="settings_quick_picture_header_text_y1">27dp</dimen>
+
+<dimen name="settings_quick_picture_header_text_x2">480dp</dimen>
+
+<dimen name="settings_quick_picture_header_text_y2">52dp</dimen>
+
+<dimen name="settings_quick_picture_colorkey_bar_height">44dp</dimen>
+
+<dimen name="settings_quick_picture_colorkey_bar_width">960dp</dimen>
+
+<dimen name="settings_quick_picture_colorkey_bar_x1">0dp</dimen>
+
+<dimen name="settings_quick_picture_colorkey_bar_y1">496dp</dimen>
+
+<dimen name="settings_quick_picture_colorkey_bar_x2">960dp</dimen>
+
+<dimen name="settings_quick_picture_colorkey_bar_y2">540dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_height">362dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_width">960dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_x1">0dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_y1">98dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_x2">960dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_y2">460dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_stacks_height">362dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_stacks_width">88dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_stacks_x1">0dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_stacks_y1">98dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_stacks_x2">88dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_stacks_y2">460dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_01_height">362dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_01_width">298dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_01_x1">88dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_01_y1">98dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_01_x2">386dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_01_y2">460dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_01_padding_left_height">8dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_01_padding_left_width">8dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_01_padding_left_x1">88dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_01_padding_left_y1">98dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_01_padding_left_x2">96dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_01_padding_left_y2">106dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_01_padding_right_height">20dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_01_padding_right_width">20dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_01_padding_right_x1">366dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_01_padding_right_y1">98dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_01_padding_right_x2">386dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_01_padding_right_y2">118dp</dimen>
+
+<dimen name="settings_quick_picture_list_row_01_height">26dp</dimen>
+
+<dimen name="settings_quick_picture_list_row_01_width">270dp</dimen>
+
+<dimen name="settings_quick_picture_list_row_01_x1">96dp</dimen>
+
+<dimen name="settings_quick_picture_list_row_01_y1">98dp</dimen>
+
+<dimen name="settings_quick_picture_list_row_01_x2">366dp</dimen>
+
+<dimen name="settings_quick_picture_list_row_01_y2">124dp</dimen>
+
+<dimen name="settings_quick_picture_list_row_bottom_margin_height">5dp</dimen>
+
+<dimen name="settings_quick_picture_list_row_bottom_margin_width">5dp</dimen>
+
+<dimen name="settings_quick_picture_list_row_bottom_margin_x1">96dp</dimen>
+
+<dimen name="settings_quick_picture_list_row_bottom_margin_y1">124dp</dimen>
+
+<dimen name="settings_quick_picture_list_row_bottom_margin_x2">101dp</dimen>
+
+<dimen name="settings_quick_picture_list_row_bottom_margin_y2">129dp</dimen>
+
+<dimen name="settings_quick_picture_list_row_02_height">26dp</dimen>
+
+<dimen name="settings_quick_picture_list_row_02_width">270dp</dimen>
+
+<dimen name="settings_quick_picture_list_row_02_x1">96dp</dimen>
+
+<dimen name="settings_quick_picture_list_row_02_y1">129dp</dimen>
+
+<dimen name="settings_quick_picture_list_row_02_x2">366dp</dimen>
+
+<dimen name="settings_quick_picture_list_row_02_y2">155dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_01_divider_height">362dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_01_divider_width">1dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_01_divider_x1">386dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_01_divider_y1">98dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_01_divider_x2">387dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_01_divider_y2">460dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_02_height">362dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_02_width">298dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_02_x1">387dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_02_y1">98dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_02_x2">685dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_02_y2">460dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_02_divider_height">362dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_02_divider_width">1dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_02_divider_x1">685dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_02_divider_y1">98dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_02_divider_x2">686dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_02_divider_y2">460dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_03_height">362dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_03_width">274dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_03_x1">686dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_03_y1">98dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_03_x2">960dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_03_y2">460dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_03_padding_left_height">20dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_03_padding_left_width">20dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_03_padding_left_x1">686dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_03_padding_left_y1">98dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_03_padding_left_x2">706dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_03_padding_left_y2">118dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_03_padding_right_height">20dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_03_padding_right_width">20dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_03_padding_right_x1">940dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_03_padding_right_y1">98dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_03_padding_right_x2">960dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_03_padding_right_y2">118dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_03_hint_image01_height">60dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_03_hint_image01_width">103dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_03_hint_image01_x1">706dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_03_hint_image01_y1">98dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_03_hint_image01_x2">809dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_03_hint_image01_y2">158dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_03_hint_image01_text_height">18.5dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_03_hint_image01_text_width">103dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_03_hint_image01_text_x1">706dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_03_hint_image01_text_y1">164dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_03_hint_image01_text_x2">809dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_03_hint_image01_text_y2">182.5dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_03_hint_image02_height">60dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_03_hint_image02_width">103dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_03_hint_image02_x1">706dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_03_hint_image02_y1">193dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_03_hint_image02_x2">809dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_03_hint_image02_y2">253dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_03_hint_image02_text_height">18.5dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_03_hint_image02_text_width">103dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_03_hint_image02_text_x1">706dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_03_hint_image02_text_y1">259dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_03_hint_image02_text_x2">809dp</dimen>
+
+<dimen name="settings_quick_picture_npanel_container_03_hint_image02_text_y2">277.5dp</dimen>
+
+<dimen name="settings_quick_picture_hint_text_height">114.5dp</dimen>
+
+<dimen name="settings_quick_picture_hint_text_width">234dp</dimen>
+
+<dimen name="settings_quick_picture_hint_text_x1">706dp</dimen>
+
+<dimen name="settings_quick_picture_hint_text_y1">292dp</dimen>
+
+<dimen name="settings_quick_picture_hint_text_x2">940dp</dimen>
+
+<dimen name="settings_quick_picture_hint_text_y2">406.5dp</dimen>
+
+<dimen name="settings_quick_picture_power_meter_height">18dp</dimen>
+
+<dimen name="settings_quick_picture_power_meter_width">234dp</dimen>
+
+<dimen name="settings_quick_picture_power_meter_x1">706dp</dimen>
+
+<dimen name="settings_quick_picture_power_meter_y1">442dp</dimen>
+
+<dimen name="settings_quick_picture_power_meter_x2">940dp</dimen>
+
+<dimen name="settings_quick_picture_power_meter_y2">460dp</dimen>
+
+<dimen name="settings_quick_picture_collapsed_container_height">540dp</dimen>
+
+<dimen name="settings_quick_picture_collapsed_container_width">316dp</dimen>
+
+<dimen name="settings_quick_picture_collapsed_container_x1">0dp</dimen>
+
+<dimen name="settings_quick_picture_collapsed_container_y1">0dp</dimen>
+
+<dimen name="settings_quick_picture_collapsed_container_x2">316dp</dimen>
+
+<dimen name="settings_quick_picture_collapsed_container_y2">540dp</dimen>
+
+<dimen name="settings_quick_picture_collapsed_npanel_stacks_height">362dp</dimen>
+
+<dimen name="settings_quick_picture_collapsed_npanel_stacks_width">88dp</dimen>
+
+<dimen name="settings_quick_picture_collapsed_npanel_stacks_x1">0dp</dimen>
+
+<dimen name="settings_quick_picture_collapsed_npanel_stacks_y1">98dp</dimen>
+
+<dimen name="settings_quick_picture_collapsed_npanel_stacks_x2">88dp</dimen>
+
+<dimen name="settings_quick_picture_collapsed_npanel_stacks_y2">460dp</dimen>
+
+<dimen name="settings_quick_picture_collapsed_list_panel_padding_left_height">8dp</dimen>
+
+<dimen name="settings_quick_picture_collapsed_list_panel_padding_left_width">8dp</dimen>
+
+<dimen name="settings_quick_picture_collapsed_list_panel_padding_left_x1">88dp</dimen>
+
+<dimen name="settings_quick_picture_collapsed_list_panel_padding_left_y1">98dp</dimen>
+
+<dimen name="settings_quick_picture_collapsed_list_panel_padding_left_x2">96dp</dimen>
+
+<dimen name="settings_quick_picture_collapsed_list_panel_padding_left_y2">106dp</dimen>
+
+<dimen name="settings_quick_picture_collapsed_list_container_height">362dp</dimen>
+
+<dimen name="settings_quick_picture_collapsed_list_container_width">228dp</dimen>
+
+<dimen name="settings_quick_picture_collapsed_list_container_x1">88dp</dimen>
+
+<dimen name="settings_quick_picture_collapsed_list_container_y1">138dp</dimen>
+
+<dimen name="settings_quick_picture_collapsed_list_container_x2">316dp</dimen>
+
+<dimen name="settings_quick_picture_collapsed_list_container_y2">500dp</dimen>
+
+<dimen name="settings_quick_picture_collapsed_list_panel_padding_right_height">20dp</dimen>
+
+<dimen name="settings_quick_picture_collapsed_list_panel_padding_right_width">20dp</dimen>
+
+<dimen name="settings_quick_picture_collapsed_list_panel_padding_right_x1">296dp</dimen>
+
+<dimen name="settings_quick_picture_collapsed_list_panel_padding_right_y1">98dp</dimen>
+
+<dimen name="settings_quick_picture_collapsed_list_panel_padding_right_x2">316dp</dimen>
+
+<dimen name="settings_quick_picture_collapsed_list_panel_padding_right_y2">118dp</dimen>
+
+<dimen name="settings_quick_picture_collapsed_list_row01_height">26dp</dimen>
+
+<dimen name="settings_quick_picture_collapsed_list_row01_width">200dp</dimen>
+
+<dimen name="settings_quick_picture_collapsed_list_row01_x1">96dp</dimen>
+
+<dimen name="settings_quick_picture_collapsed_list_row01_y1">98dp</dimen>
+
+<dimen name="settings_quick_picture_collapsed_list_row01_x2">296dp</dimen>
+
+<dimen name="settings_quick_picture_collapsed_list_row01_y2">124dp</dimen>
+
+<dimen name="settings_quick_picture_collapsed_list_row_bottom_margin_height">5dp</dimen>
+
+<dimen name="settings_quick_picture_collapsed_list_row_bottom_margin_width">5dp</dimen>
+
+<dimen name="settings_quick_picture_collapsed_list_row_bottom_margin_x1">96dp</dimen>
+
+<dimen name="settings_quick_picture_collapsed_list_row_bottom_margin_y1">124dp</dimen>
+
+<dimen name="settings_quick_picture_collapsed_list_row_bottom_margin_x2">101dp</dimen>
+
+<dimen name="settings_quick_picture_collapsed_list_row_bottom_margin_y2">129dp</dimen>
+
+<dimen name="settings_quick_picture_collapsed_list_row02_height">26dp</dimen>
+
+<dimen name="settings_quick_picture_collapsed_list_row02_width">200dp</dimen>
+
+<dimen name="settings_quick_picture_collapsed_list_row02_x1">96dp</dimen>
+
+<dimen name="settings_quick_picture_collapsed_list_row02_y1">129dp</dimen>
+
+<dimen name="settings_quick_picture_collapsed_list_row02_x2">296dp</dimen>
+
+<dimen name="settings_quick_picture_collapsed_list_row02_y2">155dp</dimen>
+
+<dimen name="settings_quick_picture_collapsed_power_meter_container_height">56dp</dimen>
+
+<dimen name="settings_quick_picture_collapsed_power_meter_container_width">293.5dp</dimen>
+
+<dimen name="settings_quick_picture_collapsed_power_meter_container_x1">646.5dp</dimen>
+
+<dimen name="settings_quick_picture_collapsed_power_meter_container_y1">402dp</dimen>
+
+<dimen name="settings_quick_picture_collapsed_power_meter_container_x2">940dp</dimen>
+
+<dimen name="settings_quick_picture_collapsed_power_meter_container_y2">468dp</dimen>
+
+<dimen name="settings_quick_picture_collapsed_power_meter_height">18dp</dimen>
+
+<dimen name="settings_quick_picture_collapsed_power_meter_width">233.5dp</dimen>
+
+<dimen name="settings_quick_picture_collapsed_power_meter_x1">706.5dp</dimen>
+
+<dimen name="settings_quick_picture_collapsed_power_meter_y1">426dp</dimen>
+
+<dimen name="settings_quick_picture_collapsed_power_meter_x2">910dp</dimen>
+
+<dimen name="settings_quick_picture_collapsed_power_meter_y2">444dp</dimen>
+
+<dimen name="settings_quick_picture_collapsed_power_meter_divider">10dp</dimen>
+
+</resources>

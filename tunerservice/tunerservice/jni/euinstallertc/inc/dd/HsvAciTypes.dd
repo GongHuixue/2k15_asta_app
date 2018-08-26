@@ -1,0 +1,124 @@
+/*
+ *  Copyright(C) 2003 Koninklijke Philips Electronics N.V.,
+ *  All Rights Reserved.
+ *  This  source code and any compilation or derivative thereof is the
+ *  proprietary information of Koninklijke Philips Electronics N.V.
+ *  and is confidential in nature.
+ *  Under no circumstances is this software to be exposed to or placed
+ *  under an Open Source License of any type without the expressed
+ *  written permission of Koninklijke Philips Electronics N.V.
+ *
+ *          %name: HsvAciTypes.dd %
+ *       %version: TVG_tv550r4dev %
+ * %date_modified: Thu Sep 18 18:13:52 2008 %
+ *    %derived_by: lakshminb %
+ */
+
+#ifndef  _HSVACITYPES_DD_
+#define  _HSVACITYPES_DD_
+
+/** koala group HsvAciTypes **/
+/** koala using infraglobals **/
+/** koala using CTxtPlatformTypes **/
+
+
+typedef enum
+{
+    pgAciPriorityInvalid = 0,
+    pgAciPriority4,
+    pgAciPriority3,
+    pgAciPriority2,
+    pgAciPriority1
+}HsvAciPriority; /** koala type HsvAciPriority **/
+
+
+typedef enum
+{
+    SinglePackageMode,
+    MultiPackageMode,
+    InvalidMode
+}HsvAciMode;           /** koala type HsvAciMode **/
+
+typedef enum
+{
+    AciLanguageCzech,	
+    AciLanguageDanish,		
+    AciLanguageDutch,		
+    AciLanguageEnglish,	
+    AciLanguageFinnish,		
+    AciLanguageFrench,	
+    AciLanguageGerman,		
+    AciLanguageGreek,		
+    AciLanguageHungarian,		
+    AciLanguageItalian	,	
+    AciLanguageTurkish	,	
+    AciLanguageNorwegian,		
+    AciLanguagePolish,		
+    AciLanguagePortuguese,	
+    AciLanguageRomanian,	
+    AciLanguageRussian	,	
+    AciLanguageSpanish	,
+    AciLanguageSwedish	,	
+    AciLanguageInvalid		
+
+} HsvAciLanguage;          /** koala type HsvAciLanguage**/
+
+typedef enum
+{
+    AciNetworkCable,		
+    AciNetworkTerrestrial,		
+    AciNetworkSatellite,		
+    AciNetworkInvalid
+} HsvAciNetwork;           /** koala type HsvAciNetwork **/
+
+typedef enum
+{
+    AciBroadcasterCable,			
+    AciBroadcasterTerrestrial,		
+    AciBroadcasterSatellite,			
+    AciBroadcasterInvalid	
+} HsvAciBroadcaster;           /** koala type HsvAciBroadcaster **/
+
+typedef enum
+{
+    AciSystemPalSecamBg, 		
+    AciSystemSecamL,			
+    AciSystemPalM,				
+    AciSystemNtscM,		
+    AciSystemPalI,                         	
+    AciSystemSecamDk,
+    AciSystemInvalid
+} HsvAciSystem;           /** koala type HsvAciSystem **/
+
+typedef struct
+{
+    char *  name;
+    Nat16   cniNi;
+} HsvCniName;    /** koala type HsvCniName **/
+
+
+
+
+/** koala type HsvAciSingleInfo **/
+typedef struct
+{
+   Nat32       frequency;
+   Nat8        aciSystem;
+   PageNr      pageNo;
+   Nat8        presetNo;
+   Nat8        channelName[6];
+} HsvAciSingleInfo;
+
+/** koala type HsvAciMultiInfo **/
+typedef struct
+{
+   Nat32       freqLabel;
+   PageNr      pageNo;
+   Nat8        serviceLabel[3];
+   Bool        carrierPresent;
+   Bool        teletextPresent;
+} HsvAciMultiInfo;
+
+
+
+#endif

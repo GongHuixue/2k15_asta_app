@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@org.droidtv.ui.tvwidget2k15:dimen/list_textview_rowheight" >
+
+    <RelativeLayout
+        android:id="@+id/tickMark"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="0dp"
+        android:background="@org.droidtv.ui.tvwidget2k15:drawable/tick_mark" />
+
+    <TextView
+        android:id="@+id/displayText"
+        android:layout_width="350dp"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/tickMark"
+        android:background="@org.droidtv.ui.tvwidget2k15:drawable/list_item_activated_textbackground"
+        android:gravity="center_vertical"
+        android:textAppearance="@org.droidtv.ui.tvwidget2k15:style/llr.ActivatedTextStyle" />
+
+    <TextView
+        android:id="@+id/displaySubText"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/displayText"
+        android:background="@org.droidtv.ui.tvwidget2k15:drawable/list_item_activated_textbackground"
+        android:gravity="center_vertical"
+        android:textAppearance="@org.droidtv.ui.tvwidget2k15:style/llr.ActivatedTextStyle" />
+
+</RelativeLayout>

@@ -1,0 +1,629 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Tue Jan 27 2015 12:20:40 GMT+0530-->
+<resources>
+<!--Layout_Wizards_Satellite_Fullscan_v2.1.psd-->
+<dimen name="wizards_satellite_fullscan_top_gradient_height">84dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_top_gradient_width">960dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_top_gradient_x1">0dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_top_gradient_y1">0dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_top_gradient_x2">960dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_top_gradient_y2">84dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizards_header_icon_height">36dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizards_header_icon_width">36dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizards_header_icon_x1">20dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizards_header_icon_y1">18dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizards_header_icon_x2">56dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizards_header_icon_y2">54dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_header_text_height">25dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_header_text_width">410.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_header_text_x1">70dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_header_text_y1">27dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_header_text_x2">480.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_header_text_y2">52dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_header_textding_height">14dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_header_textding_width">14dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_header_textding_x1">56dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_header_textding_y1">27dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_header_textding_x2">70dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_header_textding_y2">41dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_progress_bar_height">1dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_progress_bar_width">960dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_progress_bar_x1">0dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_progress_bar_y1">83dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_progress_bar_x2">960dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_progress_bar_y2">84dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_main_container_height">442dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_main_container_width">960dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_main_container_x1">0dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_main_container_y1">98dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_main_container_x2">960dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_main_container_y2">540dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_npanel_container_height">362dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_npanel_container_width">960dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_npanel_container_x1">0dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_npanel_container_y1">98dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_npanel_container_x2">960dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_npanel_container_y2">460dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_stacks_height">362dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_stacks_width">88dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_stacks_x1">0dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_stacks_y1">98dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_stacks_x2">88dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_stacks_y2">460dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_container_01_height">362dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_container_01_width">482.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_container_01_x1">88dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_container_01_y1">98dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_container_01_x2">570.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_container_01_y2">460dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_container_01_padding_left_height">20dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_container_01_padding_left_width">20dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_container_01_padding_left_x1">88dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_container_01_padding_left_y1">128dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_container_01_padding_left_x2">108dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_container_01_padding_left_y2">148dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_container_01_padding_right_height">20dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_container_01_padding_right_width">20dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_container_01_padding_right_x1">550.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_container_01_padding_right_y1">98dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_container_01_padding_right_x2">570.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_container_01_padding_right_y2">118dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_header_tv_text_height">19.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_header_tv_text_width">86.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_header_tv_text_x1">364dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_header_tv_text_y1">98dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_header_tv_text_x2">450.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_header_tv_text_y2">117.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_header_radio_text_height">19.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_header_radio_text_width">86.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_header_radio_text_x1">464dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_header_radio_text_y1">98dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_header_radio_text_x2">550.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_header_radio_text_y2">117.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row01_text_height">19.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row01_text_width">235.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row01_text_x1">108dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row01_text_y1">128dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row01_text_x2">343.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row01_text_y2">147.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row01_tv_result_text_height">19.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row01_tv_result_text_width">86.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row01_tv_result_text_x1">363.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row01_tv_result_text_y1">128dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row01_tv_result_text_x2">450dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row01_tv_result_text_y2">147.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row01_radio_result_text_height">19.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row01_radio_result_text_width">86.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row01_radio_result_text_x1">464dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row01_radio_result_text_y1">128dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row01_radio_result_text_x2">550.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row01_radio_result_text_y2">147.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row_padding_bottom_height">16dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row_padding_bottom_width">16dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row_padding_bottom_x1">108dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row_padding_bottom_y1">141.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row_padding_bottom_x2">124dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row_padding_bottom_y2">157.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row02_text_height">19.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row02_text_width">235.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row02_text_x1">108dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row02_text_y1">157.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row02_text_x2">343.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row02_text_y2">177dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row02_tv_result_text_height">19.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row02_tv_result_text_width">86.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row02_tv_result_text_x1">363.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row02_tv_result_text_y1">157.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row02_tv_result_text_x2">450dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row02_tv_result_text_y2">177dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row02_radio_result_text_height">19.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row02_radio_result_text_width">86.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row02_radio_result_text_x1">464dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row02_radio_result_text_y1">157.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row02_radio_result_text_x2">550.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row02_radio_result_text_y2">177dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row03_text_height">19.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row03_text_width">235.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row03_text_x1">108dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row03_text_y1">187dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row03_text_x2">343.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row03_text_y2">206.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row03_tv_result_text_height">19.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row03_tv_result_text_width">86.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row03_tv_result_text_x1">363.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row03_tv_result_text_y1">187dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row03_tv_result_text_x2">450dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row03_tv_result_text_y2">206.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row03_radio_result_text_height">19.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row03_radio_result_text_width">86.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row03_radio_result_text_x1">464dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row03_radio_result_text_y1">187dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row03_radio_result_text_x2">550.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row03_radio_result_text_y2">206.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row04_text_height">19.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row04_text_width">235.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row04_text_x1">108dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row04_text_y1">216.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row04_text_x2">343.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row04_text_y2">236dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row04_tv_result_text_height">19.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row04_tv_result_text_width">86.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row04_tv_result_text_x1">363.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row04_tv_result_text_y1">216.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row04_tv_result_text_x2">450dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row04_tv_result_text_y2">236dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row04_radio_result_text_height">19.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row04_radio_result_text_width">86.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row04_radio_result_text_x1">464dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row04_radio_result_text_y1">216.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row04_radio_result_text_x2">550.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row04_radio_result_text_y2">236dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row05_text_height">19.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row05_text_width">235.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row05_text_x1">108dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row05_text_y1">246dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row05_text_x2">343.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row05_text_y2">265.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row05_tv_result_text_height">19.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row05_tv_result_text_width">86.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row05_tv_result_text_x1">363.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row05_tv_result_text_y1">246dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row05_tv_result_text_x2">450dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row05_tv_result_text_y2">265.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row05_radio_result_text_height">19.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row05_radio_result_text_width">86.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row05_radio_result_text_x1">464dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row05_radio_result_text_y1">246dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row05_radio_result_text_x2">550.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_row05_radio_result_text_y2">265.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_step_progressbar_header_text_height">19.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_step_progressbar_header_text_width">182dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_step_progressbar_header_text_x1">108dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_step_progressbar_header_text_y1">354dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_step_progressbar_header_text_x2">290dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_step_progressbar_header_text_y2">373.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_step_progressbar_height">4dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_step_progressbar_width">182dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_step_progressbar_x1">108dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_step_progressbar_y1">376.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_step_progressbar_x2">290dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_step_progressbar_y2">380.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_step_progressbar_value_text_height">19dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_step_progressbar_value_text_width">45dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_step_progressbar_value_text_x1">301.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_step_progressbar_value_text_y1">370.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_step_progressbar_value_text_x2">346.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_step_progressbar_value_text_y2">389.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_total_progress_progressbar_header_text_height">19.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_total_progress_progressbar_header_text_width">182dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_total_progress_progressbar_header_text_x1">108dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_total_progress_progressbar_header_text_y1">412dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_total_progress_progressbar_header_text_x2">290dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_total_progress_progressbar_header_text_y2">431.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_total_progress_progressbar_height">4dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_total_progress_progressbar_width">182dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_total_progress_progressbar_x1">108dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_total_progress_progressbar_y1">435.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_total_progress_progressbar_x2">290dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_total_progress_progressbar_y2">439.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_total_progress_progressbar_value_text_height">19dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_total_progress_progressbar_value_text_width">45dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_total_progress_progressbar_value_text_x1">301.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_total_progress_progressbar_value_text_y1">429.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_total_progress_progressbar_value_text_x2">346.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_total_progress_progressbar_value_text_y2">448.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_padding_right_height">20dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_padding_right_width">20dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_padding_right_x1">343.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_padding_right_y1">128dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_padding_right_x2">363.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_list_padding_right_y2">148dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_container_divider_height">362dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_container_divider_width">1dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_container_divider_x1">570.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_container_divider_y1">98dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_container_divider_x2">571.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_container_divider_y2">460dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_container_02_height">362dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_container_02_width">388.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_container_02_x1">571.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_container_02_y1">98dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_container_02_x2">960dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_container_02_y2">460dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_container_02_padding_left_height">20dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_container_02_padding_left_width">20dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_container_02_padding_left_x1">571.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_container_02_padding_left_y1">98dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_container_02_padding_left_x2">591.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_container_02_padding_left_y2">118dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_container_02_padding_right_height">20dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_container_02_padding_right_width">20dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_container_02_padding_right_x1">940dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_container_02_padding_right_y1">98dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_container_02_padding_right_x2">960dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_container_02_padding_right_y2">118dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_container_02_loader_height">36dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_container_02_loader_width">36dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_container_02_loader_x1">591.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_container_02_loader_y1">98dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_container_02_loader_x2">627.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_container_02_loader_y2">134dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_container_02_hint_description_text_height">128dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_container_02_hint_description_text_width">348.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_container_02_hint_description_text_x1">591.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_container_02_hint_description_text_y1">151dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_container_02_hint_description_text_x2">940dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_wizard_container_02_hint_description_text_y2">279dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_footer_container_height">80dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_footer_container_width">960dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_footer_container_x1">0dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_footer_container_y1">460dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_footer_container_x2">960dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_footer_container_y2">540dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_footer_button_cancel_height">36dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_footer_button_cancel_width">160dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_footer_button_cancel_x1">108dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_footer_button_cancel_y1">484dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_footer_button_cancel_x2">268dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_footer_button_cancel_y2">520dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_footer_button_search_again_height">36dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_footer_button_search_again_width">160dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_footer_button_search_again_x1">428dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_footer_button_search_again_y1">484dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_footer_button_search_again_x2">588dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_footer_button_search_again_y2">520dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_footer_button_previous_height">36dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_footer_button_previous_width">160dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_footer_button_previous_x1">604dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_footer_button_previous_y1">484dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_footer_button_previous_x2">764dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_footer_button_previous_y2">520dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_footer_button_next_height">36dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_footer_button_next_width">160dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_footer_button_next_x1">780dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_footer_button_next_y1">484dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_footer_button_next_x2">940dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_footer_button_next_y2">520dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_footer_button_padding_left_height">16.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_footer_button_padding_left_width">16dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_footer_button_padding_left_x1">764dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_footer_button_padding_left_y1">484dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_footer_button_padding_left_x2">780dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_footer_button_padding_left_y2">500.5dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_footer_container_padding_top_height">24dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_footer_container_padding_top_width">24dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_footer_container_padding_top_x1">0dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_footer_container_padding_top_y1">460dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_footer_container_padding_top_x2">24dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_footer_container_padding_top_y2">484dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_footer_container_padding_left_height">56dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_footer_container_padding_left_width">108dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_footer_container_padding_left_x1">0dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_footer_container_padding_left_y1">484dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_footer_container_padding_left_x2">108dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_footer_container_padding_left_y2">540dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_footer_container_padding_right_height">20dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_footer_container_padding_right_width">20dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_footer_container_padding_right_x1">940dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_footer_container_padding_right_y1">520dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_footer_container_padding_right_x2">960dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_footer_container_padding_right_y2">540dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_footer_container_padding_bottom_height">20dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_footer_container_padding_bottom_width">20dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_footer_container_padding_bottom_x1">0dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_footer_container_padding_bottom_y1">520dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_footer_container_padding_bottom_x2">20dp</dimen>
+
+<dimen name="wizards_satellite_fullscan_footer_container_padding_bottom_y2">540dp</dimen>
+
+</resources>

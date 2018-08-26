@@ -1,0 +1,278 @@
+ /*****************************************************************************************
+ *  Copyright(C) 2003 Koninklijke Philips Electronics N.V., All Rights Reserved.
+ *
+ *  This	source code and any compilation or derivative thereof is the proprietary
+ *  information of Koninklijke Philips Electronics N.V. and is confidential in nature.
+ *  Under no circumstances is this software to be exposed to or placed under an Open
+ *  Source License of any type without the expressed written permission of Koninklijke
+ *  Philips Electronics N.V.
+ *
+ *  %name: CesCIApplicationTypes.dd %
+ *  %version:  TVG_Android_1 %
+ *  %date_modified:  %
+ *  %derived_by: Anu Mary %
+ *
+ *****************************************************************************************/
+
+
+#ifndef _CESCIAPPLICATION_DD_
+#define _CESCIAPPLICATION_DD_
+
+/** koala group cesciapps**/
+/** koala using infraglobals**/
+
+
+typedef struct
+{
+    Nat32 ApplicationID;
+    Nat16 LogicalAddress;
+    Nat16 ApplicationManufacturer;
+    Nat16 ManufactureCode;
+    Nat8  ApplicationType;
+    Nat8  AppNameLength;
+    Nat16* AppName;
+}CesCIApplicationInformation; /** koala type CesCIApplicationInformation **/
+
+typedef struct
+{
+    Nat32 NumberOfApplications;
+    CesCIApplicationInformation* ApplicationInformation;
+}CesCIApplicationInformationList; /** koala type CesCIApplicationInformationList **/
+
+/************************Datatypes regarding HC Command*******************************/
+typedef enum {
+    HC_TUNE_REPLY_OK =0,
+    HC_TUNE_REPLY_BAD_DS_DESC,
+    HC_TUNE_REPLY_NOT_LOCKING,
+    HC_TUNE_REPLY_BUSY,
+    HC_TUNE_REPLY_BAD_PARAM,
+    HC_TUNE_REPLY_SERV_NOT_FOUND,
+    HC_TUNE_REPLY_ERROR_UNDEFINED
+} HC_Tune_Reply_Status;/** koala type HC_Tune_Reply_Status **/
+typedef enum {
+    HC_TUNE_RELEASE_STATUS_OK =0,
+    HC_TUNE_RELEASE_STATUS_REFUSED
+}Hc_Tune_ReleaseStatus;/** koala type Hc_Tune_ReleaseStatus **/
+
+/************************Datatypes regarding OP Command*******************************/
+
+#define MAX_TUNE_DATA_SIZE 1024
+#define MAX_NIT_DATA_SIZE (4096 * 2)
+#define MAX_PROFILE_NAME_SIZE 255
+
+typedef enum {
+    OP_PROFILE_TYPE_INVALID = -1,
+    OP_PROFILE_TYPE_0 = 0,	/*! the CICAM doesn’t support any profile*/
+    OP_PROFILE_TYPE_1		/*! the CICAM supports profiled operation (logical channel list and CICAM NIT) */
+} OP_Profile;   /** koala type OP_Profile **/
+
+
+typedef enum  {
+    OP_REFRESHFLAG_NO = 0,          /*! No refresh needed, the CICAM is up to date*/
+    OP_REFRESHFLAG_WARNING,     /*! A refresh is needed but is not urgent. The host shall initiate a profile search when convenient */
+    OP_REFRESHFLAG_URGENT,        /*! A refresh is needed and is urgent. The host shall initiate a profile search as soon as possible */
+    OP_REFRESHFLAG_SCHEDULED    /*! A scheduled refresh is requested by the CICAM. The host shall initiate a profile search at 
+                                                                specified date/time */
+} OP_RefreshRequestFlag;        /** koala type OP_RefreshRequestFlag **/
+
+typedef enum  {
+    OP_ERRORFLAG_NONE = 0,                                            /*! No Error */
+    OP_ERRORFLAG_PROFILE,                                             /*! The CICAM has encountered and error. No profile information is available. */
+    OP_ERRORFLAG_UNSUPPORTED_DELIVERY_SYSTEM,   /*! The CICAM doesn’t support the delivery system descriptor reported by host */
+    OP_ERRORFLAG_CANCELED                                           /*! The operator search has been interrupted and is incomplete */
+} OP_Error_Flag;                                                            /** koala type OP_Error_Flag **/
+
+
+
+typedef enum  {
+    OP_DELIVERYSYSTEM_UNSPECIFIED = 0,                              /*! Unspecified (CI+ 1.3). This should not occurs if CICAM is compliant CI+ 1.3.1 */
+    OP_DELIVERYSYSTEM_CABLE,                                                /*! cable network DVB-C and/or DVB-C2. */
+    OP_DELIVERYSYSTEM_SATELLITE,                                        /*! satellite network DVB-S and/or DVB-S2 */
+    OP_DELIVERYSYSTEM_CABLE_SATELLITE,                            /*! cable network and satellite network */
+    OP_DELIVERYSYSTEM_TERRESTRIAL,                                   /*! terrestrial network DVB-T and/or DVB-T2 */
+    OP_DELIVERYSYSTEM_CABLE_TERRESTRIAL,                        /*! cable network and terrestrial network */
+    OP_DELIVERYSYSTEM_SATELLITE_TERRESTRIAL,                /*! satellite network and terrestrial network */ 
+    OP_DELIVERYSYSTEM_CABLE_SATELLITE_TERRESTRIAL     /*! cable network and satellite network and terrestrial network */
+} OP_DeliverySys;                                                                 /** koala type OP_DeliverySys **/
+
+
+
+typedef enum {
+    OP_EITPF_NONE = 0,                         /*! EIT table not present */
+    OP_EITPF_LOCAL_MULTIPLEX,          /*! EIT table present on local multiplex (i.e on multiplex containing the service only) */
+    OP_EITPF_CROSS_CARRIED              /*! EIT table present and fully cross carried (i.e host may remain on same multiplex to acquire 
+                                                                     the complete set of EIT information) */
+} OP_EIT_pfUsage;                           /** koala type OP_EIT_pfUsage **/
+
+
+
+typedef enum  {
+    OP_EITSCHED_NONE = 0,                      /*! EIT table not present */
+    OP_EITSCHED_LOCAL_MULTIPLEX,       /*! EIT table present on local multiplex (i.e on multiplex containing the service only) */
+    OP_EITSCHED_CROSS_CARRIED,          /*! EIT table present and fully cross carried (i.e host may remain on same multiplex 
+                                                                     to acquire the complete set of EIT information). */
+    OP_EITSCHED_BARKER_CHANNEL,       /*! EIT table present and is available on a Barker channel (i.e host is require to 
+                                                                     move to the Barker channel to acquire the complete set of EIT information). */
+    OP_EITSCHED_USING_APPLICATION   /*! The EPG information is delivered using an application */
+} OP_EIT_schedUsage;                        /** koala type OP_EIT_schedUsage **/
+
+
+
+typedef enum {
+    OP_TUNESTATUS_SUCCESS = 0,          /*! Tuning operation was successful. The tuner is locked and TS pass through CICAM*/
+    OP_TUNESTATUS_NOT_SUPPORTED,   /*! The delivery system descriptor is not supported by the Host*/
+    OP_TUNESTATUS_INVALID,                /*! The delivery system descriptor parameters are invalid.*/
+    OP_TUNESTATUS_FAILED                   /*! Tuning operation failed. No signal is present*/
+} OP_Status;                                        /** koala type OP_Status **/
+
+typedef struct _Op_Search_Settings {
+    Nat8 Unattended_Flag;            /*! 0 indicates that user is present and interactive display may be used by CICAM. 1 indicates 
+                                                              that user is not present and the host is not able to service any interactive request */
+    Nat8 Service_Type_Length;     /*! Length of Service_Type */
+    Nat8 *Service_Type;                /*! Specifies the types of service the host is able to present. Service type values are defined by
+                                                             service_type_field in service_descriptor described in EN 300 468*/
+    Nat8 Delivery_Cap_Length;     /*! Length of Delivery_Capability */
+    Nat8 *Delivery_Capability;      /*! Describes the delivery system(s) which are supported by the host. Each delivery system
+                                                           is described in EN 300 468 delivery system descriptor descriptor tag, any extended descriptor 
+                                                           shall be preceded by extended descriptor tag (0x7f)*/
+    Nat8 Application_Cap_Length; /*! Length of Application_Capability */
+    Nat8 *Application_Capability;  /*! Describes zero or more applications that are supported by the host. Each application is described 
+                                                               by ETSI TR 101 162 data broadcastid value of 16-bits */
+} Op_Search_Settings;           /** koala type Op_Search_Settings **/
+
+typedef struct _Op_Search_Status {
+    Nat8 Info_Version;                                               /*! Circular profile information version from 0 to 7 */
+    Nat8 NIT_Version;                                                /*! Circular version number of the CICAM NIT from 0 to 31 */
+    OP_Profile Profile_Type;                                       /*! Type for the profile_type in Status body that indicates if CICAM support 
+                                                                                        profiled operation */
+    Nat8 Initialised_Flag;                                           /*! 0 indicates that profile has not been initialised. 1 indicates that profile has 
+                                                                                        been initialised by CICAM */
+    Nat8 Entitlement_Change_Flag;                           /*! 0 indicates no entitlement change. 1 indicates that an unacknoledged 
+                                                                                        entitlement change is pending */
+    Nat8 Entitlement_Valid_Flag;                               /*! 0 indicates no entitlement rigth. 1 indicates valid enetitlement rigths. (For
+                                                                                        information only) */
+    OP_RefreshRequestFlag Refresh_Request_Flag;     /*! Type for the refresh_request_flag in Status body set when the CICAM 
+                                                                                        requires a tuning operation */
+    OP_Error_Flag Error_Flag;                                     /*! Type for the error flag in Status body which contains the status of the 
+                                                                                        current active profile*/
+    Nat16 Delivery_System_Hint;                              /*! Type for the delivery_system_hint in Status body which contains the 
+                                                                                       delivery system supported by the operator profile */
+    Nat16 Refresh_Request_Date;                             /*! Date of the next scheduled refresh requested CICAM. The date is define as 
+                                                                                       UTC Modified Julian (MJD) as defined in EN 300 468 [4] */
+    Nat8 Refresh_Request_Time;                              /*! Time of the next scheduled refresh requested by CICAM. Integer value from 
+                                                                                       0 to 239 representing the number of 6 minuts from midnight. 0 = midnight, 
+                                                                                       239 = 6 minuts to midnight */
+
+} Op_Search_Status;     /** koala type Op_Search_Status **/
+
+
+typedef struct _Op_Profile_Info {
+    Nat8 info_Valid;                                /*! indicates if the operator information is present */
+    Nat8 info_Version;                            /*! uniquely identifies the version of the profile information. incremented by 1, 
+                                                                    wrapping to 0, when the profile information changes*/ 
+                                                             /* following information is valid only if info_Valid== 1 */
+    Nat16 cicam_Original_Network_Id; /*! unambiguously identifies the original_network_id identity of the service
+                                                                   operator */
+    Nat32 cicam_Identifier;                  /*! identifies a particular hardware instance of the CICAM*/
+    Nat8 character_Code_Table;          /*! Identify the default character set encoding used on the network. 0x00 
+                                                                  represent the DVB character code table 00 Latin alphabet*/
+    Nat8 character_Code_Table_2;      /*! If Character_Code_Table=0x1F, this field is the encoding_type_id which indicates the
+                                                                  encoding scheme of the string according to the allocation found in ETSI TR 101 162.
+                                                                  If Character_Code_Table=0x10, this field is the second_byte_value which is the first 
+                                                                  byte of the 16-bit value used to specify the character code table as defined in ETSI 
+                                                                  EN 300 468 Annex A Table A.4 */
+    Nat8 character_Code_Table_3;      /*! If Character_Code_Table=0x10, this field is the second_byte_value which is the
+                                                                  second byte of the 16-bit value used to specify the character code table as defined in 
+                                                                  ETSI EN 300 468 Annex A Table A.4 */
+    Nat8 sDT_Running_Trusted;           /*! 0 indicates that the running_status field of SDT shall be interpreted to be always in a 
+                                                                 running state. 1 indicates that the running_status field of SDT is trusted */
+    Nat8 eIT_Running_Trusted;           /*! 0 indicates that the running_status field of EIT shall be interpreted to be always in a 
+                                                                 running state. 1 indicates that the running_status field of EIT is trusted */
+    OP_EIT_pfUsage eIT_Pf_Usage;      /*! Describes the operating mode of the EIT p/f event information in the network */
+    OP_EIT_schedUsage eIT_Schedule_Usage;   /*! Describes the operating mode of the EIT schedule event information in the network */
+    Nat8  extended_Event_Usage;                     /*! indicates if the operator information is present */
+    Nat8 sDT_Other_Trusted;                             /*! 0 indicates that the running_status field of SDT shall be interpreted to be always in a 
+                                                                                running state. 1 indicates that the running_status field of SDT is trusted */
+    Nat8 eIT_Event_Trigger;                              /*! 0 indicates that the EIT p/f transition is inaccurate. 1 indicates that the EIT p/f
+                                                                                transition is accurate and may be used to start and stop recording of an event */
+    Nat8 iSO_639_Lang_Code[3];                       /*! Identifies the default language code of unlabelled text fields and elementary stream
+                                                                                components */
+    Nat16 profile_Name_Length;                       /*! Length of Profile_Name */
+    Nat8 profile_Name[MAX_PROFILE_NAME_SIZE];   /*! Text information coded using the character set and methods define in ETSI EN 300 468. 
+                                                                                     The profile name shall be used to label a profile */
+}Op_Profile_Info;       /** koala type Op_Profile_Info **/
+
+typedef struct _Op_ProfileStatusInfo{
+    Op_Search_Status  op_Status;
+    Op_Profile_Info     op_Info;
+}Op_ProfileStatusInfo;/** koala type Op_ProfileStatusInfo **/
+
+typedef struct _Op_ProfileSearchStatus{
+    Op_Search_Status  op_Status;
+}Op_ProfileSearchStatus;/** koala type Op_ProfileSearchStatus **/
+
+
+typedef struct _Op_ProfileNitData{
+    Bool   NitStatus;
+    Nat16 NitDataLength;
+    Nat8   NitData[MAX_NIT_DATA_SIZE];
+} Op_ProfileNitData;/** koala type Op_ProfileNitData **/
+
+typedef struct _Op_ProfileTuneData{
+    Nat16 TuneDataLength;
+    Nat8   TuneData[MAX_TUNE_DATA_SIZE];
+}Op_ProfileTuneData;/** koala type Op_ProfileTuneData **/
+
+
+typedef struct _Op_Tune_Status {
+    Nat8 Descriptor_Number;     /*! Identifies the next unprocessed descriptor number in the operator_tune(). A value of 0xff indicates 
+                                                        that the Host has reached the end of the table. The descriptors are counted from 0.*/
+    Nat8 Signal_Strength;           /*! Specifies the signal strength as a percentage value in the range 0 to 100 */
+    Nat8 Signal_Quality;             /*! Specifies the quality of the signal as a percentage value in the range 0 to 100 */
+    Nat8 Status;                          /*! Length of Descriptor_Loop */
+    Nat16 Descriptor_Loop_Length;   /*! Length of Descriptor_Loop */	
+    Nat8 *Descriptor_Loop;                /*! Loop of delivery system descriptor that describes the currently tuned location of the Host that is 
+                                                               passing through the CICAM or descriptors causing an error */
+} Op_Tune_Status;/** koala type Op_Tune_Status **/
+
+
+
+/************************Datatypes regarding MMI Command*******************************/
+#define MAX_MENU_CHOICES            255
+#define MAX_TEXT_LENGTH             255
+
+typedef struct
+{
+    Nat16 length;
+    Nat16 textPtr[MAX_TEXT_LENGTH+1];          /** koala type CesCIMmiText **/
+}CesCIMmiText;
+typedef struct
+{
+    Nat16 blind;
+    Nat16 lenAnswer;
+    CesCIMmiText prompt;    /*txt to display*/
+}CesCIMmiEnq;               /** koala type CesCIMmiEnq **/
+
+typedef struct
+{
+    Nat16 numOfChoices;     /* without title,subtitle and bottomline*/
+    CesCIMmiText itemPtr[MAX_MENU_CHOICES+1];
+}CesCIMmiMenu;              /** koala type CesCIMmiMenu **/
+
+#define CesCIMmiList    CesCIMmiMenu    /** koala type CesCIMmiList **/
+
+/********************Datatypes regarding MMI Command Response*****************************/
+
+typedef struct
+{
+    Nat16 answer;
+    CesCIMmiText response;
+}CesCIMmiAnsw;  /** koala type CesCIMmiAnsw **/
+
+typedef union
+{
+    CesCIMmiAnsw answEnq;
+    Nat16 choice;
+}CesCIMmiResponse;       /** koala type CesCIMmiResponse **/
+
+#endif

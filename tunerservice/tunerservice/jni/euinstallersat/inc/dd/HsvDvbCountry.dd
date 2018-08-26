@@ -1,0 +1,68 @@
+/*
+ *  Copyright(C) 2003 Koninklijke Philips Electronics N.V.,
+ *  All Rights Reserved.
+ *  This  source code and any compilation or derivative thereof is the
+ *  proprietary information of Koninklijke Philips Electronics N.V.
+ *  and is confidential in nature.
+ *  Under no circumstances is this software to be exposed to or placed
+ *  under an Open Source License of any type without the expressed
+ *  written permission of Koninklijke Philips Electronics N.V.
+ *
+ *          %name: HsvDvbCountry.dd %
+ *       %version: TVG_1 %
+ * %date_modified: Thu Sep 18 18:24:10 2008 %
+ *    %derived_by: aneeshc %
+ */
+ 
+
+/** koala group HsvDvbCountryTypes **/
+/** koala using infraglobals **/
+
+#ifndef _DVB_COUNTRY_IDS
+#define _DVB_COUNTRY_IDS
+
+
+#ifndef COUNTRYITEM
+#define COUNTRYITEM(a, b, c,d)
+#endif
+
+/* Refer to http://www.davros.org/misc/iso3166.html 
+and
+http://userpage.chemie.fu-berlin.de/diverse/doc/ISO_3166.html*/
+
+
+#define ASCII(X)    ( (Nat32) (X) )
+#define COUNTRYCODE(X,Y,Z)  ( (ASCII(X) << 16) | (ASCII(Y) << 8) | ASCII(Z) )
+
+
+COUNTRYITEM(	COUNTRYCODE('A','U','T'),		1,  Austria         ,40   )
+COUNTRYITEM(	COUNTRYCODE('B','E','L'),		2,  Belgium         ,56   )
+COUNTRYITEM(	COUNTRYCODE('H','R','V'),		3,  Croatia         ,191  )
+COUNTRYITEM(	COUNTRYCODE('C','Z','E'),		4,  CzechRepublic   ,203  )
+COUNTRYITEM(	COUNTRYCODE('D','N','K'),		5,  Denmark         ,208  )
+COUNTRYITEM(	COUNTRYCODE('F','I','N'),		6,  Finland         ,246  )
+COUNTRYITEM(	COUNTRYCODE('F','R','A'),		7,  France          ,250  )
+COUNTRYITEM(	COUNTRYCODE('D','E','U'),		8,  Germany         ,276  )    
+COUNTRYITEM(	COUNTRYCODE('G','R','C'),		9,  Greece          ,300  )
+COUNTRYITEM(	COUNTRYCODE('H','U','N'),		10, Hungary         ,348  )
+COUNTRYITEM(	COUNTRYCODE('I','R','L'),		11, Ireland         ,372  )
+COUNTRYITEM(	COUNTRYCODE('I','T','A'),		12, Italy           ,380  )
+COUNTRYITEM(	COUNTRYCODE('L','U','X'),		13, Luxembourg      ,442  )
+COUNTRYITEM(	COUNTRYCODE('N','L','D'),		14, Netherlands     ,528  )
+COUNTRYITEM(	COUNTRYCODE('N','O','R'),		15, Norway          ,578  )
+COUNTRYITEM(	COUNTRYCODE('P','O','L'),		16, Poland          ,616  )
+COUNTRYITEM(	COUNTRYCODE('P','R','T'),		17, Portugal        ,620  )
+COUNTRYITEM(	COUNTRYCODE('R','O','U'),		18, Romania         ,642  )
+COUNTRYITEM(	COUNTRYCODE('R','U','S'),		19, Russia          ,643  )
+COUNTRYITEM(	COUNTRYCODE('S','C','G'),		20, Serbia          ,687  )
+COUNTRYITEM(	COUNTRYCODE('S','V','K'),		21, Slovakia        ,703  )
+COUNTRYITEM(	COUNTRYCODE('S','V','N'),		22, Slovenia        ,705  )
+COUNTRYITEM(	COUNTRYCODE('E','S','P'),		23, Spain           ,724  )
+COUNTRYITEM(	COUNTRYCODE('S','W','E'),		24, Sweden          ,753  )
+COUNTRYITEM(	COUNTRYCODE('C','H','E'),		25, Switzerland     ,756  )
+COUNTRYITEM(	COUNTRYCODE('T','U','R'),		26, Turkey          ,792  )
+COUNTRYITEM(	COUNTRYCODE('G','B','R'),		27, UK              ,826  )
+COUNTRYITEM(	COUNTRYCODE('X','X','X'),		28, Other           ,1023 )
+COUNTRYITEM(	COUNTRYCODE('A','U','S'),		29, Australia       ,36   )
+
+#endif

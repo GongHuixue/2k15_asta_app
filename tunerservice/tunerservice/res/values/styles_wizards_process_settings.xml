@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Mon Aug 05 2013 10:15:47 GMT+0530-->
+<resources>
+<style name="wizards_process_settings_header_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/hnl">
+	<item name="android:gravity">left</item>
+</style>
+<style name="wizards_process_settings_panels_npanel_titlebar_normal_vertical_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/hll">
+	<item name="android:gravity">left</item>
+</style>
+<style name="wizards_process_settings_panels_npanel_titlebar_activated_vertical_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/hll">
+	<item name="android:gravity">left</item>
+</style>
+<style name="wizards_process_settings_npanel_list01_row01_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/llr">
+	<item name="android:gravity">left</item>
+</style>
+<style name="wizards_process_settings_npanel_list01_row02_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/llr">
+	<item name="android:gravity">left</item>
+</style>
+<style name="wizards_process_settings_npanel_col01_finish_button_normal_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/lnr">
+	<item name="android:gravity">center</item>
+</style>
+<style name="wizards_process_settings_npanel_list02_row01_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/llr">
+	<item name="android:gravity">left</item>
+</style>
+</resources>

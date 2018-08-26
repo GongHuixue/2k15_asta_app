@@ -1,0 +1,150 @@
+/*  Copyright(C) 2003 Koninklijke Philips Electronics N.V.,
+*  All Rights Reserved.
+* This  source code and any compilation or derivative thereof is the
+*  proprietary information of Koninklijke Philips Electronics N.V.
+*  and is confidential in nature.
+*  Under no circumstances is this software to be exposed to or placed
+*  under an Open Source License of any type without the expressed
+*  written permission of Koninklijke Philips Electronics N.V.
+*  		%name: HsvEITTableTypes.dd %
+*      	%version: TVG_tv550r4dev1 %
+* 		%date_modified: Thu Feb 19 19:34:57 2009 %
+*   	     %derived_by: aneeshc %
+*/
+/*  Generated code. Dont edit. */
+/** koala group HsvEITTables **/
+/** koala using infraglobals **/
+/** koala using HsvSdmGlobals **/
+/** koala using HsvSdmLocals **/
+/** koala using HsvDvbTablesCommon **/
+
+
+
+
+#define EIT_ACTUAL_PF_TABLEID			0x4E
+#define EIT_OTHER_PF_TABLEID			0x4F
+#define EIT_SCHED_ACTUAL4_TABLEID		0x50
+#define EIT_SCHED_ACTUAL8_TABLEID		0x51
+#define EIT_SCHED_OTHER4_TABLEID		0x60
+#define EIT_SCHED_OTHER8_TABLEID		0x61
+
+#define BYTE            8
+#define BYTES2          16
+#define BYTES3          24
+#define BYTES4          32
+
+/*#define NBITS(x)                (0xFFFFFFFF >> (32-x))
+#define GETNEXT32(ptr,byt,bit)  (((((ptr[byt + 1])<<BYTES3) | ((ptr[byt+2])<<BYTES2) | ((ptr[byt+3])<<BYTE) | ((ptr[byt+4])))) >> (BYTE-bit))
+#define GETCURBITS(ptr,byt,bit) (ptr[byt]<<(BYTES3 + bit))
+#define GETFULL32(ptr,byt,bit)  (GETNEXT32(ptr,byt,bit)|GETCURBITS(ptr,byt,bit))
+#define GETNBITS(ptr,byt,bit,n) (((GETFULL32(ptr,byt,bit)>>(BYTES4-n))) & (NBITS(n)))*/
+
+#define NBITS(x)            (0xFFFFFFFF >> (32-x))
+
+
+#define MIN(a,b)                ((a < b)? a : b)
+
+#define HSV_SHOW_WORD(p)                    ( ((*(p))<<8)| (*((p)+1)) )
+#define HSV_GETSECTION_LENGTH(p)            ((HSV_SHOW_WORD((p)+1)&0x0fff)+3)
+#define GET_PRIVATE_DATA_SPECIFIER(ptr)     ((*(ptr - 6) == 0x5F) ? GET32PTR((ptr - 4),0): 0)
+
+typedef struct _Eit_Parser{
+   Nat8     TableId;
+    Nat8     section_syntax_indicator;
+    Nat16     section_length;
+    Nat16     service_id;
+    Nat8     version_number;
+    Nat8     current_next_indicator;
+    Nat8     section_number;
+    Nat8     last_section_number;
+    Nat16     transport_stream_id;
+    Nat16     original_network_id;
+    Nat8     segment_last_section_number;
+    Nat8     TsLoopDataNum;
+    struct _TsLoopData{
+    Nat16     event_id;
+    Nat16     StartDate;
+    Nat32     StartTime;
+    Nat32     duration;
+    Nat8     running_status;
+    Nat16     descriptors_loop_length;
+    
+    struct _TsExtendedEvent_Descriptor{
+        Nat8     DescriptorTag;
+        Nat8     DescriptorLen;
+        Nat8     DescNumber;
+        Nat8     LastDescNumber;
+        Nat32     LangCode;
+        Nat8     LenOfItems;
+        Nat8     ItemDataLen;
+    struct _TsItemData{
+        Nat8     ItemDescLen;
+        Nat8     ItemDescChar[51];
+        Nat8     ItemCharLen;
+        Nat8     ItemChar[101];
+    }ItemData[16];
+        Nat8     TextLen;
+        Nat8     TextChar[256];
+        Nat8     DescriptorValid;
+    }ExtendedEvent_Descriptor[16];
+    
+    Nat8     ExtendedEventNum;
+    
+    struct _TsShortEvent_Descriptor{
+        Nat8     DescriptorTag;
+        Nat8     DescriptorLen;
+        Nat32     LangCode;
+        Nat8     EventNameLen;
+        Nat8     EventName[80];
+        Nat8     TextNameLen;
+        Nat8     TextName[256];
+        Nat8     DescriptorValid;
+    }ShortEvent_Descriptor[16];
+    
+    Nat8     ShortEventNum;
+    
+    struct _TsContent_Descriptor{
+        Nat8     DescriptorTag;
+        Nat8     DescriptorLen;
+        Nat8     ContentNibbleLen;
+    struct _TsContentNibble{
+        Nat8     Content1;
+        Nat8     Content2;
+        Nat8     User1;
+        Nat8     User2;
+    }ContentNibble[2];
+        Nat8     DescriptorValid;
+    }Content_Descriptor[2];
+    
+    Nat8     ContentDescNum;
+    
+    struct _TsParentalRating_Descriptor{
+        Nat8     DescriptorTag;
+        Nat8     DescriptorLen;
+        Nat8     CountryRatingNum;
+    struct _TsCountryRating{
+        Nat32     CountryCode;
+        Nat8     Rating;
+    }CountryRating[20];
+        Nat8     DescriptorValid;
+    }ParentalRating_Descriptor[2];
+    
+    Nat8     ParentalRatingNum;
+
+	struct _TsLinkage_Descriptor{
+        Nat8     DescriptorTag;
+        Nat8     DescriptorLen;
+        Nat16    TSID;
+        Nat16    ONID;
+        Nat16    ServiceId;
+        Nat8     LinkageType;
+        Nat16    Private_ByteLen;
+        Nat8     Private_Byte[40];
+        Nat8     DescriptorValid;
+    }Linkage_Descriptor[64];
+    
+    Nat8     LinkageDescNum;
+    }TsLoopData[10];
+
+}HsvEITTable ;/** koala type HsvEITTable **/
+

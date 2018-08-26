@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Fri Sep 19 2014 11:43:08 GMT+0530-->
+<resources>
+<!--Layout_Dialogues_Network_Frequency_v2.4.psd-->
+<dimen name="dialogues_network_frequency_container_height">392dp</dimen>
+
+<dimen name="dialogues_network_frequency_container_width">644dp</dimen>
+
+<dimen name="dialogues_network_frequency_container_x1">158dp</dimen>
+
+<dimen name="dialogues_network_frequency_container_y1">74dp</dimen>
+
+<dimen name="dialogues_network_frequency_container_x2">802dp</dimen>
+
+<dimen name="dialogues_network_frequency_container_y2">466dp</dimen>
+
+<dimen name="dialogues_network_frequency_padding_top_height">22dp</dimen>
+
+<dimen name="dialogues_network_frequency_padding_top_width">22dp</dimen>
+
+<dimen name="dialogues_network_frequency_padding_top_x1">158dp</dimen>
+
+<dimen name="dialogues_network_frequency_padding_top_y1">74dp</dimen>
+
+<dimen name="dialogues_network_frequency_padding_top_x2">180dp</dimen>
+
+<dimen name="dialogues_network_frequency_padding_top_y2">96dp</dimen>
+
+<dimen name="dialogues_network_frequency_padding_left_height">30dp</dimen>
+
+<dimen name="dialogues_network_frequency_padding_left_width">30dp</dimen>
+
+<dimen name="dialogues_network_frequency_padding_left_x1">158dp</dimen>
+
+<dimen name="dialogues_network_frequency_padding_left_y1">74dp</dimen>
+
+<dimen name="dialogues_network_frequency_padding_left_x2">188dp</dimen>
+
+<dimen name="dialogues_network_frequency_padding_left_y2">104dp</dimen>
+
+<dimen name="dialogues_network_frequency_padding_bottom_height">20dp</dimen>
+
+<dimen name="dialogues_network_frequency_padding_bottom_width">20dp</dimen>
+
+<dimen name="dialogues_network_frequency_padding_bottom_x1">158dp</dimen>
+
+<dimen name="dialogues_network_frequency_padding_bottom_y1">446dp</dimen>
+
+<dimen name="dialogues_network_frequency_padding_bottom_x2">178dp</dimen>
+
+<dimen name="dialogues_network_frequency_padding_bottom_y2">466dp</dimen>
+
+<dimen name="dialogues_network_frequency_padding_right_height">30dp</dimen>
+
+<dimen name="dialogues_network_frequency_padding_right_width">30dp</dimen>
+
+<dimen name="dialogues_network_frequency_padding_right_x1">772dp</dimen>
+
+<dimen name="dialogues_network_frequency_padding_right_y1">74dp</dimen>
+
+<dimen name="dialogues_network_frequency_padding_right_x2">802dp</dimen>
+
+<dimen name="dialogues_network_frequency_padding_right_y2">104dp</dimen>
+
+<dimen name="dialogues_network_frequency_header_title_text_height">22dp</dimen>
+
+<dimen name="dialogues_network_frequency_header_title_text_width">407.5dp</dimen>
+
+<dimen name="dialogues_network_frequency_header_title_text_x1">188dp</dimen>
+
+<dimen name="dialogues_network_frequency_header_title_text_y1">96dp</dimen>
+
+<dimen name="dialogues_network_frequency_header_title_text_x2">595.5dp</dimen>
+
+<dimen name="dialogues_network_frequency_header_title_text_y2">118dp</dimen>
+
+<dimen name="dialogues_network_frequency_header_divider_height">1dp</dimen>
+
+<dimen name="dialogues_network_frequency_header_divider_width">644dp</dimen>
+
+<dimen name="dialogues_network_frequency_header_divider_x1">158dp</dimen>
+
+<dimen name="dialogues_network_frequency_header_divider_y1">134dp</dimen>
+
+<dimen name="dialogues_network_frequency_header_divider_x2">802dp</dimen>
+
+<dimen name="dialogues_network_frequency_header_divider_y2">135dp</dimen>
+
+<dimen name="dialogues_network_frequency_header_divider_padding_top_height">16dp</dimen>
+
+<dimen name="dialogues_network_frequency_header_divider_padding_top_width">16dp</dimen>
+
+<dimen name="dialogues_network_frequency_header_divider_padding_top_x1">158dp</dimen>
+
+<dimen name="dialogues_network_frequency_header_divider_padding_top_y1">118dp</dimen>
+
+<dimen name="dialogues_network_frequency_header_divider_padding_top_x2">174dp</dimen>
+
+<dimen name="dialogues_network_frequency_header_divider_padding_top_y2">134dp</dimen>
+
+<dimen name="dialogues_network_frequency_description_text_height">34.5dp</dimen>
+
+<dimen name="dialogues_network_frequency_description_text_width">584dp</dimen>
+
+<dimen name="dialogues_network_frequency_description_text_x1">188dp</dimen>
+
+<dimen name="dialogues_network_frequency_description_text_y1">157dp</dimen>
+
+<dimen name="dialogues_network_frequency_description_text_x2">772dp</dimen>
+
+<dimen name="dialogues_network_frequency_description_text_y2">191.5dp</dimen>
+
+<dimen name="dialogues_network_frequency_picker_01_height">166dp</dimen>
+
+<dimen name="dialogues_network_frequency_picker_01_width">52dp</dimen>
+
+<dimen name="dialogues_network_frequency_picker_01_x1">198dp</dimen>
+
+<dimen name="dialogues_network_frequency_picker_01_y1">215dp</dimen>
+
+<dimen name="dialogues_network_frequency_picker_01_x2">250dp</dimen>
+
+<dimen name="dialogues_network_frequency_picker_01_y2">381dp</dimen>
+
+<dimen name="dialogues_network_frequency_picker_01_margin_top_height">23.5dp</dimen>
+
+<dimen name="dialogues_network_frequency_picker_01_margin_top_width">23.5dp</dimen>
+
+<dimen name="dialogues_network_frequency_picker_01_margin_top_x1">188dp</dimen>
+
+<dimen name="dialogues_network_frequency_picker_01_margin_top_y1">191.5dp</dimen>
+
+<dimen name="dialogues_network_frequency_picker_01_margin_top_x2">211.5dp</dimen>
+
+<dimen name="dialogues_network_frequency_picker_01_margin_top_y2">215dp</dimen>
+
+<dimen name="dialogues_network_frequency_picker_01_margin_left_height">10dp</dimen>
+
+<dimen name="dialogues_network_frequency_picker_01_margin_left_width">10dp</dimen>
+
+<dimen name="dialogues_network_frequency_picker_01_margin_left_x1">188dp</dimen>
+
+<dimen name="dialogues_network_frequency_picker_01_margin_left_y1">215dp</dimen>
+
+<dimen name="dialogues_network_frequency_picker_01_margin_left_x2">198dp</dimen>
+
+<dimen name="dialogues_network_frequency_picker_01_margin_left_y2">225dp</dimen>
+
+<dimen name="dialogues_network_frequency_picker_dot_height">5dp</dimen>
+
+<dimen name="dialogues_network_frequency_picker_dot_width">5dp</dimen>
+
+<dimen name="dialogues_network_frequency_picker_dot_x1">255dp</dimen>
+
+<dimen name="dialogues_network_frequency_picker_dot_y1">295.5dp</dimen>
+
+<dimen name="dialogues_network_frequency_picker_dot_x2">260dp</dimen>
+
+<dimen name="dialogues_network_frequency_picker_dot_y2">300.5dp</dimen>
+
+<dimen name="dialogues_network_frequency_picker_dot_padding_left_height">5dp</dimen>
+
+<dimen name="dialogues_network_frequency_picker_dot_padding_left_width">5dp</dimen>
+
+<dimen name="dialogues_network_frequency_picker_dot_padding_left_x1">250dp</dimen>
+
+<dimen name="dialogues_network_frequency_picker_dot_padding_left_y1">295.5dp</dimen>
+
+<dimen name="dialogues_network_frequency_picker_dot_padding_left_x2">255dp</dimen>
+
+<dimen name="dialogues_network_frequency_picker_dot_padding_left_y2">300.5dp</dimen>
+
+<dimen name="dialogues_network_frequency_picker_dot_padding_right_height">5dp</dimen>
+
+<dimen name="dialogues_network_frequency_picker_dot_padding_right_width">5dp</dimen>
+
+<dimen name="dialogues_network_frequency_picker_dot_padding_right_x1">260dp</dimen>
+
+<dimen name="dialogues_network_frequency_picker_dot_padding_right_y1">295.5dp</dimen>
+
+<dimen name="dialogues_network_frequency_picker_dot_padding_right_x2">265dp</dimen>
+
+<dimen name="dialogues_network_frequency_picker_dot_padding_right_y2">300.5dp</dimen>
+
+<dimen name="dialogues_network_frequency_picker_02_height">166dp</dimen>
+
+<dimen name="dialogues_network_frequency_picker_02_width">52dp</dimen>
+
+<dimen name="dialogues_network_frequency_picker_02_x1">265dp</dimen>
+
+<dimen name="dialogues_network_frequency_picker_02_y1">215dp</dimen>
+
+<dimen name="dialogues_network_frequency_picker_02_x2">317dp</dimen>
+
+<dimen name="dialogues_network_frequency_picker_02_y2">381dp</dimen>
+
+<dimen name="dialogues_network_frequency_button_cancel_height">36dp</dimen>
+
+<dimen name="dialogues_network_frequency_button_cancel_width">160dp</dimen>
+
+<dimen name="dialogues_network_frequency_button_cancel_x1">187.5dp</dimen>
+
+<dimen name="dialogues_network_frequency_button_cancel_y1">410.5dp</dimen>
+
+<dimen name="dialogues_network_frequency_button_cancel_x2">347.5dp</dimen>
+
+<dimen name="dialogues_network_frequency_button_cancel_y2">446.5dp</dimen>
+
+<dimen name="dialogues_network_frequency_button_schedule_height">36dp</dimen>
+
+<dimen name="dialogues_network_frequency_button_schedule_width">160dp</dimen>
+
+<dimen name="dialogues_network_frequency_button_schedule_x1">612dp</dimen>
+
+<dimen name="dialogues_network_frequency_button_schedule_y1">410.5dp</dimen>
+
+<dimen name="dialogues_network_frequency_button_schedule_x2">772dp</dimen>
+
+<dimen name="dialogues_network_frequency_button_schedule_y2">446.5dp</dimen>
+
+</resources>

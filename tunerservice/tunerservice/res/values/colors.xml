@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="transparent">#80000000</color>
+    <color name="color_npanel_bg">@org.droidtv.ui.tvwidget2k15:color/setupmenu_background_color</color>
+    <color name="color_dialog_bg">@org.droidtv.ui.tvwidget2k15:color/modaldialog_background_color</color>
+</resources>

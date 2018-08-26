@@ -1,0 +1,36 @@
+/*  Copyright(C) 2003 Koninklijke Philips Electronics N.V.,
+*  All Rights Reserved.
+* This  source code and any compilation or derivative thereof is the
+*  proprietary information of Koninklijke Philips Electronics N.V.
+*  and is confidential in nature.
+*  Under no circumstances is this software to be exposed to or placed
+*  under an Open Source License of any type without the expressed
+*  written permission of Koninklijke Philips Electronics N.V.
+*  		%name: HsvEITDescriptors.dd %
+*      	%version: TVG_tv550r4dev1 %
+* 		%date_modified: Thu Sep 18 18:18:06 2008 %
+*   	     %derived_by: aneeshc %
+*/
+/* Generated code. Dont edit */
+/** koala group HsvEITDescriptors **/
+
+#if !defined(EITDESCRIPTOR)
+#define __HYSVCINTERNAL
+#define EITDESCRIPTOR(a, b )  EIT_##b,
+#endif
+
+#ifdef __HYSVCINTERNAL
+typedef enum
+{
+#endif
+EITDESCRIPTOR( 0x4E ,ExtendedEvent			)
+EITDESCRIPTOR( 0x4D ,ShortEvent			)
+EITDESCRIPTOR( 0x54 ,Content			)
+EITDESCRIPTOR( 0x55 ,Parental_Rating			)
+#ifdef __HYSVCINTERNAL
+EITDESCRIPTOR( 0xFF ,MAX_DESCRIPTOR )
+} HsvEITDescriptors ;
+#undef __HYSVCINTERNAL
+#endif /* __HYSVCINTERNAL */
+
+#undef EITDESCRIPTOR

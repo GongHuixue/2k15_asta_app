@@ -1,0 +1,90 @@
+/*
+ *  Copyright(C) 2003 Koninklijke Philips Electronics N.V.,
+ *  All Rights Reserved.
+ *  This  source code and any compilation or derivative thereof is the
+ *  proprietary information of Koninklijke Philips Electronics N.V.
+ *  and is confidential in nature.
+ *  Under no circumstances is this software to be exposed to or placed
+ *  under an Open Source License of any type without the expressed
+ *  written permission of Koninklijke Philips Electronics N.V.
+ *
+ *          %name: ndk_globals.dd %
+ *       %version: TVG_tv550r4dev %
+ * %date_modified: Tue Aug 21 13:31:50 2007 %
+ *    %derived_by: lakshminb %
+ */
+ 
+
+
+#ifndef _NDK_GLOBALS_DD_
+#define _NDK_GLOBALS_DD_
+
+/** koala using infraglobals **/
+#define CID_LAYER_BITSHIFT  12
+#define CID_LAYER_DEVLIB    (0x4 << CID_LAYER_BITSHIFT)
+
+#define CID_CLASS_BITSHIFT      28
+#define CID_CLASS_BITMASK       (0xF << CID_CLASS_BITSHIFT)
+#define CID_GET_CLASS(compId)   ((compId & CID_CLASS_BITMASK) >> CID_CLASS_BITSHIFT)
+
+#define CID_TAG_BITSHIFT        16
+#define CID_TAG_BITMASK         (0xFF << CID_TAG_BITSHIFT)
+#define CID_TAG_NONE            (0x00 << CID_TAG_BITSHIFT)
+#define CID_TAG_CUSTOMER        (0xE0 << CID_TAG_BITSHIFT)
+#define TAG(number)             ((number) << CID_TAG_BITSHIFT)
+
+#define ERR_COMP_UNIQUE_START   0x800 /* 0x800-0xBFF: Component unique    */
+#define CID_CLASS_NONE          (0x1 << CID_CLASS_BITSHIFT)
+#define CID_TYPE_NONE           (0x0 << CID_TYPE_BITSHIFT)
+#define CID_TYPE_BITSHIFT       24
+#define CID_TYPE_BITMASK        (0xF << CID_TYPE_BITSHIFT)
+#define CID_GET_TYPE(compId)    ((compId & CID_TYPE_BITMASK) >> CID_TYPE_BITSHIFT)
+#define CTYP_NOCLASS_NOTYPE     (CID_CLASS_NONE | CID_TYPE_NONE)
+#define CID_COMP_GPIO           (TAG(0x06) | CTYP_NOCLASS_NOTYPE)
+
+#define tmUnitNone              (-1)
+#define tmUnit0                 0
+#define tmUnit1                 1
+#define tmUnit2                 2
+#define tmUnit3                 3
+#define tmUnit4                 4
+
+
+#define TM_OK 0
+
+#if (defined (SDE4_BUILD) && !defined (TMNXTYPES_H)) || !defined (SDE4_BUILD)
+
+typedef int tmPowerState_t;             /** koala public type tmPowerState_t **/
+typedef int *ptmPowerState_t;           /** koala public type ptmPowerState_t **/
+#define tmPowerOn               0
+#define tmPowerStandby          1
+#define tmPowerSuspend          2
+#define tmPowerOff              3
+
+/** koala public type tmSWVersion_t **/
+/** koala public type ptmSWVersion_t **/
+typedef struct tmSWVersion
+{
+    Nat32      compatibilityNr;        /* Interface compatibility number */
+    Nat32      majorVersionNr;         /* Interface major version number */
+    Nat32      minorVersionNr;         /* Interface minor version number */
+
+}   tmSWVersion_t, *ptmSWVersion_t;
+
+typedef int   tmInstance_t;      /** koala public type tmInstance_t **/
+typedef int   tmUnitSelect_t;    /** koala public type tmUnitSelect_t **/
+typedef int   *ptmUnitSelect_t;  /** koala public type ptmUnitSelect_t **/
+typedef void (*tmCallback_t) (Nat32 events, void *pData, Nat32 userData); /** koala public type tmCallback_t **/
+
+
+typedef Nat32 tmErrorCode_t;     /** koala public type tmErrorCode_t **/
+#endif
+typedef Nat32 ErrorCode_t;       /** koala public type ErrorCode_t **/
+
+
+/** koala public group ndk_globals **/
+
+#endif /* _NDK_GLOBALS_DD_ */
+
+
+

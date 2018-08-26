@@ -1,0 +1,157 @@
+/*
+ *  Copyright(C) 2003 Koninklijke Philips Electronics N.V.,
+ *  All Rights Reserved.
+ *  This  source code and any compilation or derivative thereof is the
+ *  proprietary information of Koninklijke Philips Electronics N.V.
+ *  and is confidential in nature.
+ *  Under no circumstances is this software to be exposed to or placed
+ *  under an Open Source License of any type without the expressed
+ *  written permission of Koninklijke Philips Electronics N.V.
+ *
+ *          %name: txirdrv.dd %
+ *       %version: TVG_tv550r4dev %
+ * %date_modified: Fri Mar 05 14:50:12 2004 %
+ *    %derived_by: lakshminb %
+ */
+
+#ifndef _TXIRDRV_DD_
+#define _TXIRDRV_DD_
+
+/** koala group CTxtIrDisplayDriverTypes **/
+
+/** koala using infraglobals **/
+/** koala using IRAM **/
+/** koala using Font **/
+
+/** koala type TOtcChar **/
+/* TOtcChar | This is the structure for character coding of ArtistIC as 4 bytes. */
+typedef struct
+{
+    unsigned char   Byte0; /* Byte 0: character code, underline */
+    unsigned char   Byte1; /* Byte 1: mode, ...                 */
+    unsigned char   Byte2; /* Byte 2: foreground colour, ...    */
+    unsigned char   Byte3; /* Byte 3: background colour, ...    */
+} TOtcChar;
+
+/** koala type TWOtcChar **/
+/* TWOtcChar | This is the structure for character coding of ArtistIC as 2 Words. */
+typedef struct 
+{
+    unsigned short  Word0;  /* Word 0: The 2 LSBytes of a TOtcChar */
+    unsigned short  Word1;  /* Word 1: The 2 MSBytes of a TOtcChar */
+} TWOtcChar;
+
+/** koala type TLongOtcChar **/
+typedef Nat32         TLongOtcChar;
+
+/** koala type TConvAttrUnion **/
+/* TConvAttrUnion | Union for conversion attributes with two views: as a bitfield in ArtistIC like organization and as 4 Bytes structure. */
+typedef union
+{ 
+    TOtcChar         OtcChar; 	  /* Only used for initialization with 0 */ 
+    TWOtcChar        WordOtcChar; /* Used for bit shifting and value modification */
+    TLongOtcChar     LongOtcChar; /* Used for bit shifting and value modification */
+} TConvAttrUnion;
+
+/** koala type TAttributeMemory **/
+typedef struct 
+{
+    /* Byte 0 - 3 */
+    TConvAttrUnion  ConvAttr;      /* Conversion attributes */
+    
+    /* Byte 4 starts here */
+    unsigned int    DirectMode     : 1; /* Direct or Buffered Mode        */ 
+    unsigned int    ScreenMode     : 1; /* ScreenMode Chinese/Latin       */ 
+    unsigned int    FontContext    : 5; /* The current font context used to display alphabet shapes */ 
+    unsigned int    LatinMode      : 1; /* Latin or Chinese mode          */ 
+
+    /* Byte 5 starts here */
+    /* Serial Attributes */
+    unsigned int    ColourBankFg   : 1; /* Colour bank foreground         */ 
+    unsigned int    ColourBankBg   : 1; /* Colour bank background         */ 
+    unsigned int    Italics        : 1; /* Italics attribute              */ 
+    unsigned int    Overline       : 1; /* Overline attribute             */ 
+    unsigned int    StructuredBg   : 1; /* Structured backgrond attribute */ 
+    unsigned int    SerialAtAfter  : 1; /* Serial At/After attribute      */ 
+    unsigned int    Shadow         : 2; /* Shadow attribute               */ 
+
+} TAttributeMemory;
+
+
+/** koala type WinId **/
+typedef struct 
+{
+    TAttributeMemory AttrMem; /* Conversion Attributes, ... */
+    Nat8 top_left_x_pos;      /* Top left row */
+    Nat8 top_left_y_pos;      /* Top left column */
+    Nat8 bottom_right_x_pos;  /* Bottom right row */
+    Nat8 bottom_right_y_pos;  /* Bottom right column */
+    int  cur_pos;             /* Current conversion position */
+} WinId;
+
+/** koala type TWindowId **/
+typedef WinId* TWindowId;
+
+
+typedef struct
+{
+    Nat32 NEAR* frmBuf;
+    int         displayMode;
+    Font        fontTeletext;
+} txplf__drv_struct_type;
+/* koala typ txplf__drv_struct_type */
+
+extern txplf__drv_struct_type  IRAM txplf__drv_struct;
+
+#define txdrv_frameBuffer  ( txplf__drv_struct.frmBuf )
+#define txdrv_displayMode  ( txplf__drv_struct.displayMode )
+#define txdrv_fontTeletext ( txplf__drv_struct.fontTeletext )
+
+#define     CH_Clear_Filter         ( 0x00000000 )
+#define     CH_Language_Filter      ( 0x7F )
+#define     CH_Under_Filter         ( 0x80 )
+#define     CH_FGCCol_Filter        ( 0x3E )
+#define     CH_BGCol_Filter         ( 0xF8 )
+#define     CH_FMode_Filter         ( 0xC0 )
+#define     CH_FPhase_Filter        ( 0x03 )
+#define     CH_Box_Filter           ( 0x04 )
+
+
+#define     DIRECT_MODE             ( -1 )
+
+#define dsdrv_ClearConvAttributes( ca ) ( ca.LongOtcChar = CH_Clear_Filter )
+
+#define dsdrv_SetConvUnderlineSeparate( ConvAttr, Underlining ) \
+( ConvAttr.OtcChar.Byte0 = (Nat8)( (ConvAttr.OtcChar.Byte0 & ~CH_Under_Filter) | (Underlining << 7) ))
+
+#define dsdrv_SetConvForegroundColour( ConvAttr, FgColor )\
+( ConvAttr.OtcChar.Byte2 = (Nat8)( (ConvAttr.OtcChar.Byte2 & ~CH_FGCCol_Filter) | (FgColor << 1) ))
+#define dsdrv_SetConvBackgroundColour( ConvAttr, BgColor )\
+( ConvAttr.OtcChar.Byte3 = (Nat8)( (ConvAttr.OtcChar.Byte3 & ~CH_BGCol_Filter) | (BgColor << 3) ))
+#define dsdrv_SetConvLanguageContext( ConvAttr , Language )\
+( ConvAttr.OtcChar.Byte0 = (Nat8)( (ConvAttr.OtcChar.Byte0 & ~CH_Language_Filter) | (Language & CH_Language_Filter) ))
+
+/* FlashMode */
+#define dsdrv_SetConvFlashMode( ConvAttr, FlMode ) \
+(ConvAttr.OtcChar.Byte2 = (DISPMOD>>7) ? \
+((Nat8)( (ConvAttr.OtcChar.Byte2 & ~CH_FMode_Filter) | ((FlMode & 0x03) << 6)) ) : \
+((Nat8)( (ConvAttr.OtcChar.Byte2 & ~CH_FMode_Filter) | (((FlMode & 0x01) << 7) | ((FlMode & 0x02) << 5)))))
+#define dsdrv_GetConvFlashMode( ConvAttr ) \
+((DISPMOD>>7) ? ((ConvAttr.OtcChar.Byte2 & 0x0c0) >> 6) : \
+(((ConvAttr.OtcChar.Byte2 & 0x80) >> 7) | ((ConvAttr.OtcChar.Byte2 & 0x40) >> 5)))
+
+/* FlashPhase */
+#define dsdrv_SetConvFlashPhase( ConvAttr, FlPhase )\
+( ConvAttr.OtcChar.Byte3 = (Nat8)( (ConvAttr.OtcChar.Byte3 & ~CH_FPhase_Filter) | FlPhase ))
+#define dsdrv_GetConvFlashPhase( ConvAttr ) (ConvAttr.OtcChar.Byte3 & CH_FPhase_Filter)
+
+/* SkipConversionPosition */
+#define dsdrv_SkipConversionPosition( handl )    ( ((handl)->cur_pos)++ )
+
+/* Box */
+#define dsdrv_SetConvBox( ConvAttr, Boxing )\
+( ConvAttr.OtcChar.Byte3 = (Nat8)( (ConvAttr.OtcChar.Byte3 & ~CH_Box_Filter) | (Boxing << 2) ))
+#define dsdrv_GetConvBox( ConvAttr ) (Bool)((ConvAttr.OtcChar.Byte3 & CH_Box_Filter) >> 2)
+
+
+#endif

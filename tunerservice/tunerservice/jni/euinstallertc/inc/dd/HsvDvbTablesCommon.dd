@@ -1,0 +1,110 @@
+/*
+ *  Copyright(C) 2003 Koninklijke Philips Electronics N.V.,
+ *  All Rights Reserved.
+ *  This  source code and any compilation or derivative thereof is the
+ *  proprietary information of Koninklijke Philips Electronics N.V.
+ *  and is confidential in nature.
+ *  Under no circumstances is this software to be exposed to or placed
+ *  under an Open Source License of any type without the expressed
+ *  written permission of Koninklijke Philips Electronics N.V.
+ *
+ *          %name: HsvDvbTablesCommon.dd %
+ *       %version: TVG_tv550r4dev1 %
+ * %date_modified: Thu Sep 18 18:20:00 2008 %
+ *    %derived_by: aneeshc %
+ */
+ 
+#ifndef _HSVDVBTABLESCOMMON
+#define _HSVDVBTABLESCOMMON
+/** koala group HsvDvbTablesCommon **/
+
+
+/*******************Section Exploder Macros**************************************/
+
+#define parsec_GetBits(sectionid, table_id, Struct , handle, cookie, bits, typ, data )   \
+		data = strmwlk_GetBits(sectionid, bits)
+
+#define parsec_ShowBits(sectionid, table_id, Struct , handle, cookie, bits, typ, data )   \
+		data = strmwlk_ShowBits(sectionid, bits)
+
+#define parsec_SkipBytes(sectionid, table_id, Struct , handle, cookie, bits, typ, data )   \
+		strmwlk_SkipBits(sectionid, Struct.bits << 3)
+
+#define parsec_SkipBits(sectionid, table_id, Struct , handle, cookie, bits, typ, data )   \
+		strmwlk_SkipBits(sectionid, bits)
+
+#define parsec_CopyBytes(sectionid, table_id, Struct, handle, cookie, bits, typ, data ) \
+        data = (void *)mem_malloc(Struct.bits);\
+        strmwlk_CopyBits(sectionid,(Address )data, Struct.bits << 3)
+
+#define parsec_CopyBits(sectionid, table_id, Struct, handle, cookie, bits, typ, data ) \
+        strmwlk_CopyBits(sectionid,(Address )&data, bits)
+
+#define parsec_SeekBits(sectionid, table_id, Struct, handle, cookie, bits, typ, data ) \
+        strmwlk_SeekBits(sectionid,(Address )&data, bits)
+
+#define parsec_GetDescriptor( sectionid, table_id, Struct , handle, cookie, bits, typ, data )  \
+		par_ParseDescriptors( sectionid, table_id, handle, Struct.bits, cookie) 
+		
+#define parsec_GetSSUDescriptor( sectionid, table_id, Struct , handle, cookie, bits, typ, data )  \
+        par_ParseSSUDescriptors( sectionid, table_id, handle, &(Struct.bits), cookie)
+
+#define parsec_GetCompatibilityDescriptor( sectionid, table_id, Struct , handle, cookie, bits, typ, data )  \
+        par_ParseCompatibilityDescriptors( sectionid, table_id, (Address )&data, &(Struct.bits), cookie)
+
+#define parsec_GetPrivateData( sectionid, table_id, Struct , handle, cookie, bits, typ, data )  \
+        par_ParsePrivateData( sectionid, table_id, (Address )&data, (int *) &(Struct.bits), (int)cookie)
+
+#define parsec_GetTable( sectionid, table_id, Struct, handle, cookie, bits, typ, data ) \
+        par_Table( sectionid, table_id, handle, Struct.bits, cookie)     
+
+/***********************Parser Exploder Macros**********************************/
+#define par_YES(field, data)	par_##field(data)
+#define par_NA(field, data) 
+#define par_NO(field, data) 
+
+/*********************Declarator Exploder Macros********************************/
+#define decl_Linear(typ, field, size)	typ field;			
+#define decl_Array(typ, field, size)	typ field[size];
+#define decl_NA(typ, field, size)
+
+/***********************Logger Exploder Macros*************************************/
+
+#define sdmlog_GetBitsTrace(name, sectionid, table_id, Struct , handle, cookie, bits, typ, data )   \
+		sdmlog_LogTrace(#name, sectionid, table_id,  bits, NULL)
+
+#define sdmlog_ShowBitsTrace(name, sectionid, table_id, Struct , handle, cookie, bits, typ, data )   \
+		sdmlog_LogTrace(#name, sectionid, table_id,  bits, NULL)
+
+#define sdmlog_SkipBytesTrace(name, sectionid, table_id, Struct , handle, cookie, bits, typ, data )   \
+		sdmlog_LogTrace(#name, sectionid, table_id,  Struct.bits << 3, NULL)
+
+#define sdmlog_SkipBitsTrace(name, sectionid, table_id, Struct , handle, cookie, bits, typ, data )   \
+		sdmlog_LogTrace(#name, sectionid, table_id,  bits, NULL)
+
+#define sdmlog_CopyBitsTrace(name, sectionid, table_id, Struct, handle, cookie, bits, typ, data ) \
+		sdmlog_LogTrace(#name, sectionid, table_id,  bits, NULL)
+
+#define sdmlog_SeekBitsTrace(name, sectionid, table_id, Struct, handle, cookie, bits, typ, data ) \
+		sdmlog_LogTrace(#name, sectionid, table_id,  bits, NULL)
+
+#define sdmlog_GetDescriptorTrace(name, sectionid, table_id, Struct , handle, cookie, bits, typ, data )  
+
+#define sdmlog_GetSSUDescriptorTrace(name, sectionid, table_id, Struct , handle, cookie, bits, typ, data )  
+
+#define sdmlog_GetCompatibilityDescriptorTrace(name, sectionid, table_id, Struct , handle, cookie, bits, typ, data )  
+
+#define sdmlog_GetPrivateDataTrace( name, sectionid, table_id, Struct , handle, cookie, bits, typ, data )  
+
+#define sdmlog_GetTableTrace(name, sectionid, table_id, Struct, handle, cookie, bits, typ, data ) \
+		sdmlog_LogTrace(#name, sectionid, table_id,  Struct.bits, NULL)
+
+
+
+#define BITS(x)  ( (x) << 3)
+#define BYTES(x) ( (x) >> 3)
+
+#define NA
+
+#endif
+			

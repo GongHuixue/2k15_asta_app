@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Fri Sep 06 2013 10:29:49 GMT+0530-->
+<resources>
+<!--Layout_Wizard_picker_v1.0.psd-->
+<dimen name="wizard_picker_header_text_height">27dp</dimen>
+
+<dimen name="wizard_picker_header_text_width">459dp</dimen>
+
+<dimen name="wizard_picker_header_text_x1">21dp</dimen>
+
+<dimen name="wizard_picker_header_text_y1">23dp</dimen>
+
+<dimen name="wizard_picker_header_text_x2">480dp</dimen>
+
+<dimen name="wizard_picker_header_text_y2">50dp</dimen>
+
+<dimen name="wizard_picker_panels_npanels_standard_bg_height">422dp</dimen>
+
+<dimen name="wizard_picker_panels_npanels_standard_bg_width">946dp</dimen>
+
+<dimen name="wizard_picker_panels_npanels_standard_bg_x1">0dp</dimen>
+
+<dimen name="wizard_picker_panels_npanels_standard_bg_y1">59dp</dimen>
+
+<dimen name="wizard_picker_panels_npanels_standard_bg_x2">946dp</dimen>
+
+<dimen name="wizard_picker_panels_npanels_standard_bg_y2">481dp</dimen>
+
+<dimen name="wizard_picker_panels_npanel_titlebar_normal_height">422dp</dimen>
+
+<dimen name="wizard_picker_panels_npanel_titlebar_normal_width">48dp</dimen>
+
+<dimen name="wizard_picker_panels_npanel_titlebar_normal_x1">0dp</dimen>
+
+<dimen name="wizard_picker_panels_npanel_titlebar_normal_y1">59dp</dimen>
+
+<dimen name="wizard_picker_panels_npanel_titlebar_normal_x2">48dp</dimen>
+
+<dimen name="wizard_picker_panels_npanel_titlebar_normal_y2">481dp</dimen>
+
+<dimen name="wizard_picker_panels_npanel_titlebar_normal_text_height">313dp</dimen>
+
+<dimen name="wizard_picker_panels_npanel_titlebar_normal_text_width">26dp</dimen>
+
+<dimen name="wizard_picker_panels_npanel_titlebar_normal_text_x1">12dp</dimen>
+
+<dimen name="wizard_picker_panels_npanel_titlebar_normal_text_y1">91dp</dimen>
+
+<dimen name="wizard_picker_panels_npanel_titlebar_normal_text_x2">38dp</dimen>
+
+<dimen name="wizard_picker_panels_npanel_titlebar_normal_text_y2">404dp</dimen>
+
+<dimen name="wizard_picker_npanel_list_row01_height">42dp</dimen>
+
+<dimen name="wizard_picker_npanel_list_row01_width">328dp</dimen>
+
+<dimen name="wizard_picker_npanel_list_row01_x1">50.5dp</dimen>
+
+<dimen name="wizard_picker_npanel_list_row01_y1">80dp</dimen>
+
+<dimen name="wizard_picker_npanel_list_row01_x2">378.5dp</dimen>
+
+<dimen name="wizard_picker_npanel_list_row01_y2">122dp</dimen>
+
+<dimen name="wizard_picker_npanel_list_row01_text_height">22dp</dimen>
+
+<dimen name="wizard_picker_npanel_list_row01_text_width">258.5dp</dimen>
+
+<dimen name="wizard_picker_npanel_list_row01_text_x1">72dp</dimen>
+
+<dimen name="wizard_picker_npanel_list_row01_text_y1">90dp</dimen>
+
+<dimen name="wizard_picker_npanel_list_row01_text_x2">330.5dp</dimen>
+
+<dimen name="wizard_picker_npanel_list_row01_text_y2">112dp</dimen>
+
+<dimen name="wizard_picker_npanel_list_row02_height">42dp</dimen>
+
+<dimen name="wizard_picker_npanel_list_row02_width">328dp</dimen>
+
+<dimen name="wizard_picker_npanel_list_row02_x1">50.5dp</dimen>
+
+<dimen name="wizard_picker_npanel_list_row02_y1">122dp</dimen>
+
+<dimen name="wizard_picker_npanel_list_row02_x2">378.5dp</dimen>
+
+<dimen name="wizard_picker_npanel_list_row02_y2">164dp</dimen>
+
+<dimen name="wizard_picker_npanel_list_row02_text_height">22dp</dimen>
+
+<dimen name="wizard_picker_npanel_list_row02_text_width">258.5dp</dimen>
+
+<dimen name="wizard_picker_npanel_list_row02_text_x1">72dp</dimen>
+
+<dimen name="wizard_picker_npanel_list_row02_text_y1">132.5dp</dimen>
+
+<dimen name="wizard_picker_npanel_list_row02_text_x2">330.5dp</dimen>
+
+<dimen name="wizard_picker_npanel_list_row02_text_y2">154.5dp</dimen>
+
+<dimen name="wizard_picker_npanel_list_panels_divider_height">378.5dp</dimen>
+
+<dimen name="wizard_picker_npanel_list_panels_divider_width">1dp</dimen>
+
+<dimen name="wizard_picker_npanel_list_panels_divider_x1">376dp</dimen>
+
+<dimen name="wizard_picker_npanel_list_panels_divider_y1">81dp</dimen>
+
+<dimen name="wizard_picker_npanel_list_panels_divider_x2">377dp</dimen>
+
+<dimen name="wizard_picker_npanel_list_panels_divider_y2">459.5dp</dimen>
+
+<dimen name="wizard_picker_npanel_picker_header_text_height">26.5dp</dimen>
+
+<dimen name="wizard_picker_npanel_picker_header_text_width">376.5dp</dimen>
+
+<dimen name="wizard_picker_npanel_picker_header_text_x1">401dp</dimen>
+
+<dimen name="wizard_picker_npanel_picker_header_text_y1">93.5dp</dimen>
+
+<dimen name="wizard_picker_npanel_picker_header_text_x2">777.5dp</dimen>
+
+<dimen name="wizard_picker_npanel_picker_header_text_y2">120dp</dimen>
+
+<dimen name="wizard_picker_npanel_picker_horizontal_divider_height">1dp</dimen>
+
+<dimen name="wizard_picker_npanel_picker_horizontal_divider_width">400.5dp</dimen>
+
+<dimen name="wizard_picker_npanel_picker_horizontal_divider_x1">389dp</dimen>
+
+<dimen name="wizard_picker_npanel_picker_horizontal_divider_y1">132.5dp</dimen>
+
+<dimen name="wizard_picker_npanel_picker_horizontal_divider_x2">789.5dp</dimen>
+
+<dimen name="wizard_picker_npanel_picker_horizontal_divider_y2">133.5dp</dimen>
+
+<dimen name="wizard_picker_npanel_picker01_height">140dp</dimen>
+
+<dimen name="wizard_picker_npanel_picker01_width">70dp</dimen>
+
+<dimen name="wizard_picker_npanel_picker01_x1">401dp</dimen>
+
+<dimen name="wizard_picker_npanel_picker01_y1">170.5dp</dimen>
+
+<dimen name="wizard_picker_npanel_picker01_x2">471dp</dimen>
+
+<dimen name="wizard_picker_npanel_picker01_y2">310.5dp</dimen>
+
+<dimen name="wizard_picker_npanel_picker_activated_height">140dp</dimen>
+
+<dimen name="wizard_picker_npanel_picker_activated_width">70dp</dimen>
+
+<dimen name="wizard_picker_npanel_picker_activated_x1">475dp</dimen>
+
+<dimen name="wizard_picker_npanel_picker_activated_y1">170.5dp</dimen>
+
+<dimen name="wizard_picker_npanel_picker_activated_x2">545dp</dimen>
+
+<dimen name="wizard_picker_npanel_picker_activated_y2">310.5dp</dimen>
+
+<dimen name="wizard_picker_npanel_picker03_height">140dp</dimen>
+
+<dimen name="wizard_picker_npanel_picker03_width">70dp</dimen>
+
+<dimen name="wizard_picker_npanel_picker03_x1">549dp</dimen>
+
+<dimen name="wizard_picker_npanel_picker03_y1">170.5dp</dimen>
+
+<dimen name="wizard_picker_npanel_picker03_x2">619dp</dimen>
+
+<dimen name="wizard_picker_npanel_picker03_y2">310.5dp</dimen>
+
+<dimen name="wizard_picker_npanel_picker_dot_height">2dp</dimen>
+
+<dimen name="wizard_picker_npanel_picker_dot_width">2dp</dimen>
+
+<dimen name="wizard_picker_npanel_picker_dot_x1">625dp</dimen>
+
+<dimen name="wizard_picker_npanel_picker_dot_y1">245.5dp</dimen>
+
+<dimen name="wizard_picker_npanel_picker_dot_x2">627dp</dimen>
+
+<dimen name="wizard_picker_npanel_picker_dot_y2">247.5dp</dimen>
+
+<dimen name="wizard_picker_npanel_picker04_height">140dp</dimen>
+
+<dimen name="wizard_picker_npanel_picker04_width">70dp</dimen>
+
+<dimen name="wizard_picker_npanel_picker04_x1">633.5dp</dimen>
+
+<dimen name="wizard_picker_npanel_picker04_y1">170dp</dimen>
+
+<dimen name="wizard_picker_npanel_picker04_x2">703.5dp</dimen>
+
+<dimen name="wizard_picker_npanel_picker04_y2">310dp</dimen>
+
+<dimen name="wizard_picker_npanel_picker05_height">140dp</dimen>
+
+<dimen name="wizard_picker_npanel_picker05_width">70dp</dimen>
+
+<dimen name="wizard_picker_npanel_picker05_x1">707.5dp</dimen>
+
+<dimen name="wizard_picker_npanel_picker05_y1">170.5dp</dimen>
+
+<dimen name="wizard_picker_npanel_picker05_x2">777.5dp</dimen>
+
+<dimen name="wizard_picker_npanel_picker05_y2">310.5dp</dimen>
+
+<dimen name="wizard_picker_npanel_panels_horizontal_divider_height">1dp</dimen>
+
+<dimen name="wizard_picker_npanel_panels_horizontal_divider_width">400.5dp</dimen>
+
+<dimen name="wizard_picker_npanel_panels_horizontal_divider_x1">389dp</dimen>
+
+<dimen name="wizard_picker_npanel_panels_horizontal_divider_y1">405dp</dimen>
+
+<dimen name="wizard_picker_npanel_panels_horizontal_divider_x2">789.5dp</dimen>
+
+<dimen name="wizard_picker_npanel_panels_horizontal_divider_y2">406dp</dimen>
+
+<dimen name="wizard_picker_npanel_search_button_normal_height">42dp</dimen>
+
+<dimen name="wizard_picker_npanel_search_button_normal_width">168dp</dimen>
+
+<dimen name="wizard_picker_npanel_search_button_normal_x1">445.5dp</dimen>
+
+<dimen name="wizard_picker_npanel_search_button_normal_y1">418dp</dimen>
+
+<dimen name="wizard_picker_npanel_search_button_normal_x2">613.5dp</dimen>
+
+<dimen name="wizard_picker_npanel_search_button_normal_y2">460dp</dimen>
+
+<dimen name="wizard_picker_npanel_search_button_normal_text_height">20dp</dimen>
+
+<dimen name="wizard_picker_npanel_search_button_normal_text_width">136dp</dimen>
+
+<dimen name="wizard_picker_npanel_search_button_normal_text_x1">461.5dp</dimen>
+
+<dimen name="wizard_picker_npanel_search_button_normal_text_y1">430.5dp</dimen>
+
+<dimen name="wizard_picker_npanel_search_button_normal_text_x2">597.5dp</dimen>
+
+<dimen name="wizard_picker_npanel_search_button_normal_text_y2">450.5dp</dimen>
+
+<dimen name="wizard_picker_npanel_done_button_default_height">42dp</dimen>
+
+<dimen name="wizard_picker_npanel_done_button_default_width">168dp</dimen>
+
+<dimen name="wizard_picker_npanel_done_button_default_x1">613.5dp</dimen>
+
+<dimen name="wizard_picker_npanel_done_button_default_y1">418dp</dimen>
+
+<dimen name="wizard_picker_npanel_done_button_default_x2">781.5dp</dimen>
+
+<dimen name="wizard_picker_npanel_done_button_default_y2">460dp</dimen>
+
+<dimen name="wizard_picker_npanel_done_button_default_text_height">20dp</dimen>
+
+<dimen name="wizard_picker_npanel_done_button_default_text_width">136dp</dimen>
+
+<dimen name="wizard_picker_npanel_done_button_default_text_x1">629.5dp</dimen>
+
+<dimen name="wizard_picker_npanel_done_button_default_text_y1">430.5dp</dimen>
+
+<dimen name="wizard_picker_npanel_done_button_default_text_x2">765.5dp</dimen>
+
+<dimen name="wizard_picker_npanel_done_button_default_text_y2">450.5dp</dimen>
+
+</resources>

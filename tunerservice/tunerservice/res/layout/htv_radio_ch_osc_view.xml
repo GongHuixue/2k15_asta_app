@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/htv_radio_ch_osc_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000" >
+
+    <TextView
+        android:id="@+id/text_day"
+        android:layout_height="40.5dp"
+        android:layout_width="255.5dp"
+        android:layout_marginTop="170.5dp"
+        android:layout_marginLeft="352dp"
+        android:gravity="center_horizontal|bottom"
+        android:fontFamily="sans-serif-light"
+        android:textColor="#FFFFFFFF"
+        android:text="@string/hello"
+        android:textSize="35sp" />
+
+    <TextView
+        android:id="@+id/text_time_invalid"
+        android:layout_height="110dp"
+        android:layout_width="470dp"
+        android:layout_marginTop="224dp"
+        android:layout_marginLeft="244.5dp"
+        android:gravity="center_horizontal|bottom"
+        android:fontFamily="sans-serif-light"
+        android:textColor="#FFFFFFFF"
+        android:text="@string/app_name"
+        android:textSize="50sp" />
+
+        <!--
+            android:layout_width="470dp"
+            android:layout_marginLeft="244.5dp"
+            change to width=match_parent and merginLeft=0
+        -->
+    <TextView
+        android:id="@+id/text_time"
+        android:layout_height="110dp"
+        android:layout_width="match_parent"
+        android:layout_marginTop="224dp"
+        android:layout_marginLeft="0dp"
+        android:gravity="center_horizontal|bottom"
+        android:fontFamily="sans-serif-light"
+        android:textColor="#FFFFFFFF"
+        android:text="@string/hello"
+        android:textSize="105sp" />
+
+    <TextView
+        android:id="@+id/text_date"
+        android:layout_height="40.5dp"
+        android:layout_width="255.5dp"
+        android:layout_marginTop="335.5dp"
+        android:layout_marginLeft="352dp"
+        android:gravity="center_horizontal|bottom"
+        android:fontFamily="sans-serif-light"
+        android:textColor="#FFFFFFFF"
+        android:text="@string/hello"
+        android:textSize="35sp" />
+
+</RelativeLayout>

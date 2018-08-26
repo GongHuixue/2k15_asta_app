@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Thu Nov 14 2013 12:31:54 GMT+0530-->
+<resources>
+<style name="wizard_pinentry_header_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/hnl">
+	<item name="android:gravity">left</item>
+</style>
+<style name="wizard_pinentry_panels_npanel_titlebar_normal_01_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/hll">
+	<item name="android:gravity">left</item>
+</style>
+<style name="wizard_pinentry_panels_npanel_titlebar_activated_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/hll">
+	<item name="android:gravity">left</item>
+</style>
+<style name="wizard_pinentry_npanel_title01_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/llr">
+	<item name="android:gravity">left</item>
+</style>
+<style name="wizard_pinentry_npanel_title02_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/llr">
+	<item name="android:gravity">left</item>
+</style>
+<style name="wizard_pinentry_npanel_col02_description_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/bsr">
+	<item name="android:gravity">left</item>
+</style>
+<style name="wizard_pinentry_npanel_previous_button_normal_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/lnr">
+	<item name="android:gravity">center</item>
+</style>
+<style name="wizard_pinentry_npanel_next_button_default_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/lnr">
+	<item name="android:gravity">center</item>
+</style>
+</resources>

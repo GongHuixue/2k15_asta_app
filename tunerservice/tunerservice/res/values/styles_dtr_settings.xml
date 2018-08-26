@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Wed Sep 10 2014 11:02:41 GMT+0530-->
+<resources>
+<style name="dtr_settings_result_string01_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/lsl">
+	<item name="android:gravity">left</item>
+</style>
+<style name="dtr_settings_result_string01_status_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/lsl">
+	<item name="android:gravity">left</item>
+</style>
+<style name="dtr_settings_result_string02_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/lsl">
+	<item name="android:gravity">left</item>
+</style>
+<style name="dtr_settings_result_string02_status_signal_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/lsl">
+	<item name="android:gravity">left</item>
+</style>
+<style name="dtr_settings_result_string03_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/lsl">
+	<item name="android:gravity">left</item>
+</style>
+<style name="dtr_settings_result_string03_status_signal_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/lsl">
+	<item name="android:gravity">left</item>
+</style>
+<style name="dtr_settings_result_string04_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/lsl">
+	<item name="android:gravity">left</item>
+</style>
+<style name="dtr_settings_result_string04_status_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/lsl">
+	<item name="android:gravity">left</item>
+</style>
+<style name="dtr_settings_result_string05_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/lsl">
+	<item name="android:gravity">left</item>
+</style>
+<style name="dtr_settings_result_string05_status_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/lsl">
+	<item name="android:gravity">left</item>
+</style>
+<style name="dtr_settings_result_string06_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/lsl">
+	<item name="android:gravity">left</item>
+</style>
+<style name="dtr_settings_result_string06_status_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/lsl">
+	<item name="android:gravity">left</item>
+</style>
+<style name="dtr_settings_result_string07_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/lsl">
+	<item name="android:gravity">left</item>
+</style>
+<style name="dtr_settings_result_string07_status_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/lsl">
+	<item name="android:gravity">left</item>
+</style>
+<style name="dtr_settings_result_string08_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/lsl">
+	<item name="android:gravity">left</item>
+</style>
+<style name="dtr_settings_result_string08_status_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/lsl">
+	<item name="android:gravity">left</item>
+</style>
+<style name="dtr_settings_picker_title_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/lsr">
+	<item name="android:gravity">center</item>
+</style>
+</resources>

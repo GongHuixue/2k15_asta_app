@@ -1,0 +1,39 @@
+/*
+ *  Copyright(C) 2003 Koninklijke Philips Electronics N.V.,
+ *  All Rights Reserved.
+ *  This  source code and any compilation or derivative thereof is the
+ *  proprietary information of Koninklijke Philips Electronics N.V.
+ *  and is confidential in nature.
+ *  Under no circumstances is this software to be exposed to or placed
+ *  under an Open Source License of any type without the expressed
+ *  written permission of Koninklijke Philips Electronics N.V.
+ *
+ *    %name: txtfnt.dd %
+ *    %version: TVG_tv550r4dev %
+ *    %date_modified: Thu Dec 23 14:22:17 2004 %
+ *    %modified_by: username %  
+ *    %derived_by: lakshminb %
+ */
+
+
+
+#ifndef _TXTFNT_DD_
+#define _TXTFNT_DD_
+
+/** koala group txtfnt **/
+/** koala using infraglobals **/
+
+
+/** koala type Font **/
+typedef int Font;
+#define NOFNT (-1)
+
+/** koala type Language **/
+typedef int Language;
+
+/** koala type FontTbl **/
+typedef void ROM *FontTbl;
+
+
+#endif
+

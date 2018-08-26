@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <TextView
+        android:id="@+id/bodytext"
+        style="@style/ci_input_modal_dialog_03_description_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/ci_input_modal_dialog_07_list01_row01_text_x1"
+        android:layout_marginTop="@dimen/ci_input_modal_dialog_07_list01_row01_text_y1" >
+    </TextView>
+
+</RelativeLayout>

@@ -1,0 +1,37 @@
+/*  Copyright(C) 2003 Koninklijke Philips Electronics N.V.,
+*  All Rights Reserved.
+* This  source code and any compilation or derivative thereof is the
+*  proprietary information of Koninklijke Philips Electronics N.V.
+*  and is confidential in nature.
+*  Under no circumstances is this software to be exposed to or placed
+*  under an Open Source License of any type without the expressed
+*  written permission of Koninklijke Philips Electronics N.V.
+*  		%name: HsvEITSectionConf.dd %
+*      	%version: TVG_tv550r4dev %
+* 		%date_modified: Thu Sep 18 18:17:57 2008 %
+*   	     %derived_by: lakshminb %
+*/
+
+/** koala group HsvEITSectionConfiguration **/
+
+#ifndef HSVEITSECTIONITEM
+#define _HSVEITCONFINTERNAL
+#define HSVEITSECTIONITEM(no, typ, tid, secid, div)  Hsvdvbeit##typ##Section = no,
+typedef enum
+{
+#endif
+HSVEITSECTIONITEM(1, ActualPreset,       0x4E,  0,    EitNowNextActual   )
+HSVEITSECTIONITEM(2, ActualFollow,       0x4E,  1,    EitNowNextActual   )
+HSVEITSECTIONITEM(3, OtherPresent,       0x4F,  0,    EitNowNextOther    )
+HSVEITSECTIONITEM(4, OtherFollow,        0x4F,  1,    EitNowNextOther    )
+HSVEITSECTIONITEM(5, ActualSched4,       0x50,  0xFF, EitSchedActual     )
+HSVEITSECTIONITEM(6, ActualSched8,       0x51,  0xFF, EitSchedActual     )
+HSVEITSECTIONITEM(7, OtherSched4,        0x60,  0xFF, EitSchedOther      )
+HSVEITSECTIONITEM(8, OtherSched8,        0x61,  0xFF, EitSchedOther      )
+#ifdef _HSVEITCONFINTERNAL
+HSVEITSECTIONITEM(9, Last,              0xFF,  0xFF, None)
+} HsvEITSectionType; /** koala type HsvEITSectionType **/
+#undef _HSVEITCONFINTERNAL
+#endif
+#undef HSVEITSECTIONITEM
+

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Fri Apr 11 2014 05:49:32 GMT+0530-->
+<resources>
+<style name="input_modal_dialog_pickers_01_header_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/hnr">
+	<item name="android:gravity">left</item>
+</style>
+<style name="input_modal_dialog_pickers_01_description_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/bnr">
+	<item name="android:gravity">left</item>
+</style>
+<style name="input_modal_dialog_pickers_01_left_button_normal_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/lnr">
+	<item name="android:gravity">center</item>
+</style>
+<style name="input_modal_dialog_pickers_01_right_button_normal_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/lnr">
+	<item name="android:gravity">center</item>
+</style>
+<style name="input_modal_dialog_pickers_02_header_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/hnr">
+	<item name="android:gravity">left</item>
+</style>
+<style name="input_modal_dialog_pickers_02_description_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/bnr">
+	<item name="android:gravity">left</item>
+</style>
+<style name="input_modal_dialog_pickers_02_left_button_normal_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/lnr">
+	<item name="android:gravity">center</item>
+</style>
+<style name="input_modal_dialog_pickers_02_right_button_normal_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/lnr">
+	<item name="android:gravity">center</item>
+</style>
+</resources>

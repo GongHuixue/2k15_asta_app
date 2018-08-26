@@ -1,0 +1,54 @@
+/*
+ *  Copyright(C) 2003 Koninklijke Philips Electronics N.V.,
+ *  All Rights Reserved.
+ *  This  source code and any compilation or derivative thereof is the
+ *  proprietary information of Koninklijke Philips Electronics N.V.
+ *  and is confidential in nature.
+ *  Under no circumstances is this software to be exposed to or placed
+ *  under an Open Source License of any type without the expressed
+ *  written permission of Koninklijke Philips Electronics N.V.
+ *
+ *          %name: HsvStreamFilters.dd %
+ *       %version: TVG_tv550r4dev %
+ * %date_modified: Thu Aug 14 15:07:24 2008 %
+ *    %derived_by: lakshminb %
+ */
+ 
+
+/** koala group HsvStreamFilters **/
+/** koala using infraglobals **/
+
+#ifndef _STREAMFILTERS
+#define _STREAMFILTERS
+
+/* This is the last version of this file till now ! */
+
+typedef enum {
+    HsvStartMode,          /* Not used now */
+    HsvCurrentCountry,     /* Used for ? */
+    HsvCurrentLanguage,    /* Used for ? */
+    HsvCurrentProgram,     /* monitor program */
+    HsvExtraProgram0,       
+    HsvExtraProgram1,       
+    HsvExtraProgram2,       
+    HsvExtraProgram3,       
+    HsvExtraProgram4,       
+    HsvExtraProgram5,       
+    HsvOtherSDTOnwidId,    /* For monitoring an Other Service */
+    HsvOtherSDTServiceId,  /* For monitoring an Other Service */
+    HsvActualEitScheduleService,   /* Actual EIT schedule information for specified service */
+    HsvOtherEitScheduleService,     /* Other EIT schedule information for specified service */
+    HsvExtendedInfoEventId,     /* Event ID for which extended info is needed. Always maps to current service  */
+    HsvExtendedInfoONId,     /* Onid to uniquely identify the Extended Info along with SerID & TsID */
+	HsvExtendedInfoTsId,     /* TsId to uniquely identify the Extended Info along with SerID & ONID */
+    HsvExtendedInfoSerId,     /* SerId to uniquely identify the Extended Info along with ONID & TsID*/
+    HsvShortDescEventId,
+    HsvShortDescONId,
+	HsvShortDescTsId,
+    HsvShortDescSerId,
+    HsvUNTPID
+    /* Add : OtherTsService and OtherSDTServiceId*/
+} HsvStreamFilter; /** koala type HsvStreamFilter **/
+
+
+#endif

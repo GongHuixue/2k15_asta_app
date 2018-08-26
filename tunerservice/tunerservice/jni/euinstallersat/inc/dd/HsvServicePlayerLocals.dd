@@ -1,0 +1,59 @@
+/*
+ *  Copyright(C) 2003 Koninklijke Philips Electronics N.V.,
+ *  All Rights Reserved.
+ *  This  source code and any compilation or derivative thereof is the
+ *  proprietary information of Koninklijke Philips Electronics N.V.
+ *  and is confidential in nature.
+ *  Under no circumstances is this software to be exposed to or placed
+ *  under an Open Source License of any type without the expressed
+ *  written permission of Koninklijke Philips Electronics N.V.
+ *
+ *          %name: HsvServicePlayerLocals.dd %
+ *       %version: TVG_1 %
+ * %date_modified: Thu Sep 18 18:25:10 2008 %
+ *    %derived_by: aneeshc %
+ */
+
+
+#ifndef _HSVSERVICEPLAYERLOCALS_DD_
+#define _HSVSERVICEPLAYERLOCALS_DD_
+
+/** koala group HsvServicePlayerLocals**/
+/** koala using HsvSdmGlobals **/
+/** koala using HsvGlobals **/
+
+/** koala type HsvPrgmWindow **/
+typedef enum
+{
+    HsvNoWindow = -1,
+    HsvMainWindow = 0,
+    HsvAuxWindow = 1,
+    NumWindows
+}HsvPrgmWindow;
+
+/*typedef enum
+{
+    HsvAnalogue = 1,
+    HsvMpegTs = 2,
+    HsvMpegAudioOnly = 4,
+    HsvDv = 8,
+    HsvUnknownStmType = 16,
+    HsvDataBroadcast = 32,
+    HsvInvalidType = 0xff
+}HsvServiceType;*/
+
+/** koala type HsvLocator **/
+typedef struct
+{
+    HsvChannel          ChannelNo;
+    HsvPrgmWindow       Window;
+    HsvComponentInfo    CompInfo;
+    int 			    PhysicalChannelNumber;
+    int 			    ModulationType;
+    int 			    SourceId;
+    int                 ProgramNo;
+    int	                ServiceType;
+}HsvLocator;
+
+#endif
+

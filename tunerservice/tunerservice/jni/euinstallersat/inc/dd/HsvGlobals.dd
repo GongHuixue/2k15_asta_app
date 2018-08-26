@@ -1,0 +1,588 @@
+/*
+ *  Copyright(C) 2003 Koninklijke Philips Electronics N.V.,
+ *  All Rights Reserved.
+ *  This  source code and any compilation or derivative thereof is the
+ *  proprietary information of Koninklijke Philips Electronics N.V.
+ *  and is confidential in nature.
+ *  Under no circumstances is this software to be exposed to or placed
+ *  under an Open Source License of any type without the expressed
+ *  written permission of Koninklijke Philips Electronics N.V.
+ *
+ *          %name: HsvGlobals.dd %
+ *       %version: TVG_1.1.1 %
+ * %date_modified: Thu Aug 21 20:22:44 2008 %
+ *    %derived_by: lakshminb %
+ */
+
+
+
+#ifndef _HSVGLOBALS_DD_
+#define _HSVGLOBALS_DD_
+
+
+/** koala type HsvGlobals **/
+/** koala using infraglobals **/
+/** koala using HsvDVBProperty **/
+/** koala using ChannelLibGlobals **/
+/** koala using AppApiAVLib **/
+/** koala using HsvProgramLocals **/
+
+#ifdef WIN32
+//#undef ASSERT
+//#define ASSERT(x)  
+#endif
+
+
+
+/*
+typedef struct
+{
+    HsvChannelType Type;
+    int Ptc;
+    union
+    {
+        int OnePart;
+        int AnalogNo;
+        int Digit;
+        struct
+        {
+            int MajorNo;
+            int MinorNo;
+        }TwoPart;
+        
+    }Channel;    
+
+}HsvChannel;*/
+#define ONEPART(c)   ((c).Channel.OnePart)
+#define DIGIT(c)     ((c).Channel.Digit)
+#define ANALOGNO(c)  ((c).Channel.AnalogNo)
+#define MAJORNO(c)   ((c).Channel.TwoPart.MajorNo)
+#define MINORNO(c)   ((c).Channel.TwoPart.MinorNo)
+#define HSVINVALIDPID   (-1)
+#define HSVINVALIDLANGUAGE  (0xFFFF)
+#define HSVINVALIDMEDIATYPE (-1)
+#define HSVINVALIDKEY       (-1)
+
+#define    HsvUnknown       AppApiUnknown
+#define    HsvAnalog        AppApiAnalog
+#define    HsvProgram       AppApiProgram
+#define    HsvOnePart       AppApiOnePart
+#define    HsvTwoPart       AppApiTwoPart
+#define    HsvRadio         AppApiRadio
+
+
+#define HsvNoSource         AppApiNoSource
+#define HsvMainTuner        AppApiMainTuner
+#define HsvAuxTuner         AppApiAuxTuner
+#define HsvAvIn0            AppApiAvIn0
+#define HsvAvIn1            AppApiAvIn1
+#define HsvAvIn2            AppApiAvIn2
+#define HsvAvIn3            AppApiAvIn3
+#define HsvAvIn4            AppApiAvIn4
+#define HsvAvIn5            AppApiAvIn5
+#define HsvAvIn6            AppApiAvIn6
+#define HsvAvIn7            AppApiAvIn7
+#define HsvAvIn8            AppApiAvIn8
+#define HsvAvIn9            AppApiAvIn9
+#define HsvAvIn10           AppApiAvIn10
+#define HsvAvIn11           AppApiAvIn11
+#define HsvSpdif1           AppApiSpdif1
+#define HsvSpdif2           AppApiSpdif2
+#define HsvLr1              AppApiLr1
+#define HsvAny              AppApiAny
+#define HsvCentreInput      AppApiCentreInput
+#define HsvUnknownSource    AppApiUnknownSource
+#define HsvMaxSources       AppApiMaxSources
+
+
+
+typedef AppApiSource        HsvSource;			/** koala type HsvSource **/
+typedef AppApiChannelType   HsvChannelType;		/** koala type HsvChannelType **/
+typedef AppApiDestination	HsvDestination;		/** koala type HsvDestination **/
+typedef AppApiMultiplex 	HsvMultiplex;		/** koala type HsvMultiplex **/
+typedef AppApiModulation	HsvConstellation;	/** koala type HsvConstellation **/
+typedef AppApiBandwidth		HsvChanBandwidth;	/** koala type HsvChanBandwidth **/
+
+#define HsvUnkownDestination    AppApiUnkownDestination
+#define HsvMain					AppApiMain
+#define HsvAux					AppApiAux
+#define HsvSpeakersOut			AppApiSpeakersOut
+#define HsvLineOut				AppApiLineOut
+#define HsvSpdifOut				AppApiSpdifOut
+#define HsvHeadphonesOut        AppApiHeadphonesOut
+#define HsvAvOut1				AppApiAvOut1
+#define HsvAvOut2				AppApiAvOut2
+#define HsvTsOut				AppApiTsOut
+
+/* 16 characters need to be displayed, as per requirements */
+#define HSV_MAX_RATING_DESCRIPTION_TEXT_LENGTH  (16)
+typedef struct
+{
+    Nat16       EventId;
+    DateTime    StartTime;
+    Nat32       EventDuration;
+    void        *EventTitleString;
+    void        *EventETMString;        
+    Nat16       LockType;
+    Nat32       LockValue;
+    Nat16       DynamicRatingText[HSV_MAX_RATING_DESCRIPTION_TEXT_LENGTH];      
+}HsvEventInfo; /** koala type HsvEventInfo **/
+
+typedef enum
+{
+    InvalidModulation,
+    AutoModulation,
+	BpskModulation,
+	QpskModulation,
+	Psk8Modulation,
+	Qam4Modulation,
+	Qam16Modulation,
+	Qam32Modulation,
+	Qam64Modulation,
+    Qam128Modulation,
+    Qam256Modulation,
+    Qam512Modulation,
+    Qam1024Modulation,
+    Vsb8Modulation,
+    Vsb16Modulation,
+}HsvModulationType; /** koala type HsvModulationType **/
+
+/*typedef struct
+{
+	Nat16 			OnId;
+	Nat16 			TsId;
+	Nat32 			Frequency;
+	HsvModulationType	ModulationType;
+	Nat32 			SymbolRate;
+    	Nat8 			DecoderType;
+}HsvMultiplex;*/
+
+
+/* Sujith : 6476 */
+/* Since the diversity has been increased, the size of the array defined here also needs to be increased */
+/* An extra 1 for the NULL padding */
+#define HSV_CHANNEL_NAME_LENGTH (21 + 1 ) 
+
+typedef struct
+{
+    HsvChannel                  Channel;
+    int                         ServiceType;
+    int                         SourceId;
+    Nat16                       ChannelName[HSV_CHANNEL_NAME_LENGTH];
+    int                         ProgramNo;
+    int                         AudioPid;
+    int                         VideoPid;
+    int                         PcrPid;
+    HsvModulationType           ModulationType;
+    int                         Attenuator;
+    int                         SignalStrength;
+    int                         Tsid;
+    Bool                        UserHidden;
+    Bool                        SystemHidden;
+    Bool                        UpdateName;
+    Nat32                       ScreenFormat;
+    Nat32                       Cookie;
+    Nat8                        InsVersion;
+    Nat8                        PtcInsVersion;
+}HsvChannelData; /** koala type HsvChannelData **/
+
+typedef enum
+{
+    HsvAnalogue = 1,
+    HsvMpegTs = 2,
+    HsvMpegAudioOnly = 4,
+    HsvDv = 8,
+    HsvDataBroadcast= 16,
+    HsvUnknownStmType = 32,
+    HsvMpeg4Ts = 64,
+    HsvInvalidType = 0xff
+}HsvStreamType;/** koala type HsvStreamType **/
+
+
+/* Number of seconds between January 6 1980 (start time for GPS)  and January 1 1996( start time for infra)*/
+#define HSV_UTCTIME_TO_INFRATIME_OFFSET         ( 504489600 )
+
+/** koala type HsvSectionCallback **/
+typedef Bool (*HsvSectionCallback)(HsvDestination dest, Nat32 sectionid,Nat32 cookie, int eventid);
+
+#define MASK_RECEIVED       (0x01)
+#define MASK_ARD            (0x02)
+#define MASK_VPS            (0x04)
+#define MASK_PKT830CNI      (0x08)
+#define MASK_PKT830NI       (0x10)
+#define MASK_TXTTRNAVLBL    (0x20)
+#define MASK_ATTENUATOR     (0x40)
+
+typedef struct 
+{ 
+   char *           Name;
+   int              Frequency; 
+   int              tvSystem; 
+   int              SignalStrength; 
+   Nat16            CniNi;   
+   Nat8             DataIndicator;      /*bit 0 If true it indicates that the preset data received is valid.
+                                          bit 1 if true it indicates that the CNI is ARD, otherwise ZDF.
+                                          bit 2 if true it indicates that the CNI/NI data is received from VPS.
+                                          bit 3 if true it indicates that the CNI/NI data is received from Pkt830 format 2
+                                          bit 4 if true it indicates that the CNI/NI data is received from Pkt830 format 1*/                                          
+
+} HsvPresetSortData; /** koala type HsvPresetSortData **/
+
+
+/** koala group HsvCookieNvmTypes **/
+
+typedef enum
+{
+  Boolean = 0,
+  Integer
+
+}HsvCookieValueType; /** koala type HsvCookieValueType **/
+
+/* HsvCookieInfo contains information for a entry in the Cookie for reading/writing NVM */
+
+typedef struct 
+{
+    char ShortName[10]; /* If required for debugging purpose, otherwise 
+                                              can be removed */
+    
+   
+
+    Nat8 Position;   /* Bit position (0 to 31) at which this value starts in the Cookie 
+                        Ex: for favorite Bit, Position = 0, For Delta Volume Position = 6 */
+    Nat32 Mask;      /* Mask to extract the cookie value Ex. for Favorite 0x0000001
+                        For Delta Volume 0x000007C0*/
+    HsvCookieValueType Type;    /* Type of the Cookie as in HvsCookieType */
+
+}HsvCookieNvmInfo; /** koala type HsvCookieNvmInfo **/
+
+typedef enum
+{
+    TvSystemNone = 0,
+    TvSystemBg,
+    TvSystemD,
+    TvSystemDk,
+    TvSystemDk1,
+    TvSystemDk2,
+    TvSystemI,
+    TvSystemH,
+    TvSystemK1,
+    TvSystemL,
+    TvSystemL1,
+    TvSystemM,
+    TvSystemN,
+    TvSystemC64Qam,
+    TvSystemC256Qam,
+    TvSystemT8Vsb,
+    TvSystemT16Vsb
+}HsvTvSystem;
+
+/* 16 characters need to be displayed, as per requirements */
+#define HSV_MAX_RATING_DESCRIPTION_TEXT_LENGTH  (16)
+/*----------------------------------------*/
+/* RRT related strcutures */
+
+#define MAX_RATING_VALUES_PER_DIMENSION       (16)
+#define MAX_RATING_DIMENSIONS                 (256)
+#define MAX_RRT_ITEM_STRING_LENGTH            (75)  /* 50 is as per requirements */
+
+typedef struct
+{
+    Nat8        RegionId;       
+    int         AbbrevRatingValueStringLength;
+    void *      AbbrevRatingValueString;
+    int         RatingValueStringLength;
+    void *      RatingValueString;
+}HsvRRTRatingValueInfo; /** koala type HsvRRTRatingValueInfo **/
+
+
+
+typedef struct
+{
+    Nat8                    RegionId;       
+    Bool                    GraduatedScale;
+    Nat8                    NumRatingValues;    
+    Nat8                    RatingDimensionNameLength;
+    void *                  RatingDimensionName;
+}HsvRRTRatingDimensionInfo; /** koala type HsvRRTRatingDimensionInfo **/
+
+
+
+typedef struct
+{
+    Nat8                        Version;
+    Nat8                        RegionId;
+    Nat8                        NumRatingDimensions;
+    Nat8                        RatingRegionNameLength;
+    void *                      RatingRegionName;
+}HsvRRTRatingRegionInfo;        /** koala type HsvRRTRatingRegionInfo **/
+
+/*----------------------------------------*/
+
+#define ALL_LANGUAGES    (32)
+
+typedef enum
+{
+	InvalidService			= -1,
+	AnalogService			= 0x00, 
+    TelevisionService       = 0x01, 
+    RadioService            = 0x02,
+    TeletextService         = 0x03,
+    NVODReferenceService    = 0x04,
+    NVODTimeShiftedService  = 0x05,
+    MosaicService           = 0x06,
+    DatabroadcastService    = 0x0C,
+    DVBMHPService           = 0x10,
+
+    /* New Added */
+    MPEG2HDService                      = 0x11,
+    AdvCodecSDTelevisionService         = 0x16,
+    AdvCodecSDNVODTimeShiftedService    = 0x17,
+    AdvCodecSDNVODReferenceService      = 0x18,
+    AdvCodecHDTelevisionService         = 0x19,
+    AdvCodecHDNVODTimeShiftedService    = 0x1A,            
+    AdvCodecHDNVODReferenceService      = 0x1B,
+    /* For DVBC*/
+    AdvCodecRadioService                = 0x0A,
+
+	/* For China */
+	PALCodedSignal			= 0x07,
+	SECAMCodedSignal		= 0x08,
+	UserDefinedHD1			= 0x81,
+	UserDefinedHD2			= 0xB8,
+	UserDefinedHD3			= 0xF1,
+	UserDefinedHD4			= 0xF9
+    
+}HsvServiceType; /** koala type HsvServiceType **/
+
+typedef enum
+{
+    HsvStreamPriorityHigh = 0,
+    HsvStreamPriorityLow
+}HsvStreamPriority; /** koala type HsvStreamPriority **/
+
+
+#define HsvChanBandwidthUnknown		AppApiBandwidthUnknown
+#define HsvChanBandwidthInvalid		AppApiBandwidthInvalid
+#define HsvChanBandwidth6MHz		AppApiBandwidth6MHz
+#define HsvChanBandwidth7MHz		AppApiBandwidth7MHz
+#define HsvChanBandwidth8MHz		AppApiBandwidth8MHz
+#define HsvChanBandwidthAuto		AppApiBandwidthAuto
+
+/*
+typedef enum 
+{ 
+    HsvChanBandwidthUnknown,
+    HsvChanBandwidthInvalid,
+    HsvChanBandwidth6MHz, 
+    HsvChanBandwidth7MHz, 
+    HsvChanBandwidth8MHz, 
+    HsvChanBandwidthAuto
+}HsvChanBandwidth; koala type HsvChanBandwidth */
+
+typedef enum 
+{
+    HsvCodeRateUnknown,
+    HsvCodeRateInvalid,
+    HsvCodeRateNone,
+    HsvCodeRate1_2, 
+    HsvCodeRate2_3, 
+    HsvCodeRate3_4, 
+    HsvCodeRate5_6, 
+    HsvCodeRate6_7, 
+    HsvCodeRate7_8, 
+    HsvCodeRate8_9, 
+    HsvCodeRateAuto
+}HsvCodeRate;       /** koala type HsvCodeRate **/
+    
+typedef enum 
+{
+    HsvHierarchyModeUnknown,
+    HsvHierarchyModeInvalid,
+    HsvHierarchyAlpha1, 
+    HsvHierarchyAlpha2, 
+    HsvHierarchyAlpha4, 
+    HsvHierarchyNone,   
+    HsvHierarchyModeAuto
+}HsvHierarchyMode;  /** koala type HsvHierarchyMode **/
+
+typedef enum 
+{
+    HsvGuardIntervalUnknown,
+    HsvGuardIntervalInvalid,
+    HsvGuardInterval1_32,
+    HsvGuardInterval1_16,
+    HsvGuardInterval1_8, 
+    HsvGuardInterval1_4, 
+    HsvGuardIntervalAuto
+}HsvGuardInterval;  /** koala type HsvGuardInterval **/
+
+typedef enum 
+{
+    HsvTxModeUnknown,
+    HsvTxModeInvalid,
+    HsvTxMode2k, 
+    HsvTxMode8k, 
+    HsvTxModeAuto
+}HsvTxMode;      /** koala type HsvTxMode **/
+
+typedef enum 
+{
+    HsvOffsetNone,
+    HsvOffsetInvalid,
+    HsvOffsetUnknown,
+    HsvOffsetP1d6MHz,
+    HsvOffsetP2d6MHz,
+    HsvOffsetP3d6MHz,
+    HsvOffsetM1d6MHz,
+    HsvOffsetM2d6MHz,
+    HsvOffsetM3d6MHz,
+    HsvOffsetAuto
+}HsvFrequencyOffset;    /** koala type HsvFrequencyOffset **/
+
+
+#define HsvUnknownConstellation		AppApiInvalidModulation
+#define HsvBpsk						AppApiBpskModulation
+#define HsvQpsk						AppApiQpskModulation
+#define Hsv8psk						AppApiPsk8Modulation
+#define HsvQam4						AppApiQam4Modulation
+#define HsvQam16					AppApiQam16Modulation
+#define HsvQam32					AppApiQam32Modulation
+#define HsvQam64					AppApiQam64Modulation
+#define HsvQam128					AppApiQam128Modulation
+#define HsvQam256					AppApiQam256Modulation
+#define HsvQam512					AppApiQam512Modulation
+#define HsvQam1024					AppApiQam1024Modulation
+#define HsvVsb8						AppApiVsb8Modulation
+#define HsvVsb16					AppApiVsb16Modulation
+#define HsvAutoConstellation		AppApiAutoModulation
+
+
+/*
+typedef enum 
+{	
+    HsvUnknownConstellation,
+    HsvBpsk,
+    HsvQpsk,
+    Hsv8psk,
+    HsvQam4,
+    HsvQam16,
+    HsvQam32,
+    HsvQam64,
+    HsvQam128,
+    HsvQam256,
+    HsvQam1024,
+    HsvVsb8,
+    HsvVsb16,
+    HsvAutoConstellation
+}HsvConstellation;  koala type HsvConstellation */
+
+typedef enum 
+{
+    HsvUnknownIqMode,
+    HsvIqModeNormal,
+    HsvIqModeInverse,
+    HsvIqModeAuto
+}HsvIqMode;         /** koala type HsvIqMode **/
+
+typedef enum 
+{
+    Hsv_ISOIEC_11172_STREAM_TYPE_VIDEO          = 0x01,
+    Hsv_ISOIEC_13818_2_STREAM_TYPE_VIDEO        = 0x02,
+    Hsv_ISOIEC_11172_2_STREAM_TYPE_VIDEO        = 0x02,
+    Hsv_ISOIEC_11172_STREAM_TYPE_AUDIO          = 0x03,
+    Hsv_ISOIEC_13818_3_STREAM_TYPE_AUDIO        = 0x04,
+    Hsv_ISOIEC_13818_1_STREAM_TYPE_PRIVATE      = 0x06,
+    Hsv_ISOIEC_13818_6_STREAM_TYPE_B            = 0x0B,
+    Hsv_ATSC_A52_STREAM_TYPE_AC3                = 0x81,
+    Hsv_H264_STREAM_TYPE_VIDEO                  = 0x1B,
+    Hsv_MPEG4_STREAM_TYPE_HEAAC                 = 0x11,
+    Hsv_MPEG4_STREAM_TYPE_AAC                   = 0x0F
+}HsvAVStreamType; /** koala type HsvAVStreamType **/
+typedef enum 
+{
+	HsvDecNone = 0,
+	HsvDecExt1 = 1,
+	HsvDecExt2 = 2
+}HsvDecoderType; /** koala type HsvDecoderType **/
+
+
+//#define div_ServiceNameLength	(23)
+#define div_ServiceNameLength	(41)//AN-81540
+#define MAX_CONFLICT_SERVICES	(20)
+
+typedef struct
+{
+	Nat16 LCN;
+	int   NoOfServices;
+	Bool  AutomaticConflictResolution;
+	struct
+	{
+		int	  DbIndex;
+		Nat16 ServiceName[div_ServiceNameLength];
+	}ServiceInfo[MAX_CONFLICT_SERVICES];
+	int UserPreferedServiceIndex; 
+}HsvConflictServicesData; /** koala type HsvConflictServicesData **/
+
+#define MAX_NETWORKS			(15)
+#define MAX_REGION_NAME_SIZE	(50)
+
+typedef enum
+{
+	HsvPrimaryRegion = 1,
+	HsvSecondaryRegion,
+	HsvTertiaryRegion
+}HsvEnmRegionType; /** koala type HsvEnmRegionType **/
+
+typedef struct
+{
+	Nat32	Langcode;
+	Nat16	NoOfRegions;
+	struct
+    {
+		Nat16	NoOfRegions;
+        Nat16	RegionName[MAX_REGION_NAME_SIZE];
+        Nat32	RegionCode;
+		struct
+        {
+			Nat16	NoOfRegions;
+            Nat16	RegionName[MAX_REGION_NAME_SIZE];
+	        Nat32	RegionCode;
+            struct
+            {            
+				Nat16	RegionName[MAX_REGION_NAME_SIZE];
+	            Nat32	RegionCode;
+			}Tertiary[MAX_NETWORKS];
+		
+		}Secondary[MAX_NETWORKS];
+
+	}Primary[MAX_NETWORKS];
+}HsvNetworkRegionsData;	/** koala type HsvNetworkRegionsData **/
+
+#define MAX_REGIONS_PER_SERVICE			15
+#define MAX_NUMBER_SERVICES				1000
+
+
+#define MULT_REGION_DEPTH_INDEX			0
+#define MULT_PRIMARY_INDEX			1
+#define MULT_SECONDARY_INDEX			2
+#define MULT_TERTIARY_INDEX			3
+
+
+typedef struct {
+	
+	Nat16 OnId;
+    Nat16 Tsid;
+	Nat16 ServiceId;
+    Nat16 NetworkId;
+	Nat32 CountryCode;
+	struct 
+	{
+		Nat8 RegionDepth;
+		Nat16 RegionMap [ MAX_REGIONS_PER_SERVICE ][ 4 ];   
+	}RegionList;
+
+	Nat8  TsLoop;
+	Nat8  VersionNumber;
+}HsvTargetRegionCache;   /** koala type HsvTargetRegionCache **/
+
+#endif

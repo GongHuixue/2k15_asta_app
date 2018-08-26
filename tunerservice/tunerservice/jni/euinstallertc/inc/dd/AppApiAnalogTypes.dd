@@ -1,0 +1,45 @@
+/** koala group AppApiAnalogTypes **/
+
+#ifndef _APPAPIANALOGTYPES_DD_
+#define _APPAPIANALOGTYPES_DD_
+
+/** koala using PlfApiFrontend **/
+
+typedef enum
+{
+    AppApiUnknownColorSystem = -1,
+    AppApiInvalidColorSystem = -2,
+    AppApiPal   = 0,
+    AppApiSecam = 1,
+    AppApiNtsc  = 2
+}AppApiColorSystem;     /** koala type AppApiColorSystem **/
+
+typedef enum
+{
+    AppApiDecNone = 0,
+    AppApiDecExt1 = 1,
+    AppApiDecExt2 = 2    
+}AppApiDecExtns;     /** koala type AppApiDecExtns **/
+
+#if 0
+#define AppApiTvSystemNone       tmFe_TvSystemNone      /** koala type AppApiTvSystemNone    **/
+#define AppApiTvSystemBg         tmFe_TvSystemBg        /** koala type AppApiTvSystemBg      **/
+#define AppApiTvSystemD          tmFe_TvSystemD         /** koala type AppApiTvSystemD       **/
+#define AppApiTvSystemDk         tmFe_TvSystemDk        /** koala type AppApiTvSystemDk      **/
+#define AppApiTvSystemDk1        tmFe_TvSystemDk1       /** koala type AppApiTvSystemDk1     **/
+#define AppApiTvSystemDk2        tmFe_TvSystemDk2       /** koala type AppApiTvSystemDk2     **/
+#define AppApiTvSystemI          tmFe_TvSystemI         /** koala type AppApiTvSystemI       **/
+#define AppApiTvSystemH          tmFe_TvSystemH         /** koala type AppApiTvSystemH       **/
+#define AppApiTvSystemK1         tmFe_TvSystemK1        /** koala type AppApiTvSystemK1      **/
+#define AppApiTvSystemL          tmFe_TvSystemL         /** koala type AppApiTvSystemL       **/
+#define AppApiTvSystemL1         tmFe_TvSystemL1        /** koala type AppApiTvSystemL1      **/
+#define AppApiTvSystemM          tmFe_TvSystemM         /** koala type AppApiTvSystemM       **/
+#define AppApiTvSystemN          tmFe_TvSystemN         /** koala type AppApiTvSystemN       **/
+#define AppApiTvSystemC64Qam     tmFe_TvSystemC64Qam    /** koala type AppApiTvSystemC64Qam  **/
+#define AppApiTvSystemC256Qam    tmFe_TvSystemC256Qam   /** koala type AppApiTvSystemC256Qam **/
+#define AppApiTvSystemT8Vsb      tmFe_TvSystemT8Vsb     /** koala type AppApiTvSystemT8Vsb   **/
+#define AppApiTvSystemT16Vsb     tmFe_TvSystemT16Vsb    /** koala type AppApiTvSystemT16Vsb  **/
+
+#endif
+
+#endif

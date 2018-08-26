@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/wizard_install_satellite_fullscan_panels_npanel_wizard_bg_height" >
+
+    <RelativeLayout
+        android:id="@+id/layout_unicable"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/wizard_install_satellite_fullscan_panels_npanel_wizard_bg_height"
+        android:layout_marginLeft="-96dp"
+        android:layout_marginTop="-90dp" >
+      
+        <View
+            android:id="@+id/bg"
+            android:layout_width="@dimen/wizards_unicable_npanel_textfield_bg_normal_width"
+            android:layout_height="@dimen/wizards_unicable_npanel_textfield_bg_normal_height"
+            android:layout_marginLeft="@dimen/wizards_unicable_npanel_textfield_bg_normal_x1"
+            android:layout_marginTop="@dimen/wizards_unicable_npanel_textfield_bg_normal_y1"
+            android:background="@org.droidtv.ui.tvwidget2k15:drawable/textfields_bg_normal" />
+        
+        <View
+            android:id="@+id/bg_focused"
+            android:layout_width="@dimen/wizards_unicable_npanel_textfield_bg_normal_width"
+            android:layout_height="@dimen/wizards_unicable_npanel_textfield_bg_normal_height"
+            android:layout_marginLeft="@dimen/wizards_unicable_npanel_textfield_bg_normal_x1"
+            android:layout_marginTop="@dimen/wizards_unicable_npanel_textfield_bg_normal_y1"
+            android:background="@org.droidtv.ui.tvwidget2k15:drawable/textfields_bg_highlighted" />
+      
+        <TextView
+            android:id="@+id/digit1"
+            style="@org.droidtv.ui.tvwidget2k15:style/lml"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/wizards_unicable_npanel_textfield_digit_01_text_height"
+            android:layout_marginLeft="@dimen/wizards_unicable_npanel_textfield_digit_01_text_x1"
+            android:layout_marginTop="@dimen/wizards_unicable_npanel_textfield_digit_01_text_y1"
+            android:textColor="@org.droidtv.ui.tvwidget2k15:color/filter_disabled_focussed"
+            android:nextFocusRight="@+id/digit2"
+            android:visibility="visible" >
+        </TextView>
+
+        <View
+            android:id="@+id/divider1"
+            android:layout_width="@dimen/wizards_unicable_npanel_textfield_formatted_divider_01_width"
+            android:layout_height="@dimen/wizards_unicable_npanel_textfield_formatted_divider_01_height"
+            android:layout_marginLeft="@dimen/wizards_unicable_npanel_textfield_formatted_divider_01_x1"
+            android:layout_marginTop="@dimen/wizards_unicable_npanel_textfield_formatted_divider_01_y1"
+            android:background="@org.droidtv.ui.tvwidget2k15:drawable/textfields_formatted_divider" />
+
+        <TextView
+            android:id="@+id/digit2"
+           style="@org.droidtv.ui.tvwidget2k15:style/lml"
+            android:layout_width="@dimen/wizards_unicable_npanel_textfield_digit_02_text_width"
+            android:layout_height="@dimen/wizards_unicable_npanel_textfield_digit_02_text_height"
+            android:layout_marginLeft="@dimen/wizards_unicable_npanel_textfield_digit_02_text_x1"
+            android:layout_marginTop="@dimen/wizards_unicable_npanel_textfield_digit_02_text_y1"
+            android:textColor="@org.droidtv.ui.tvwidget2k15:color/filter_disabled_focussed"
+            android:nextFocusRight="@+id/digit3"
+            android:nextFocusLeft="@+id/digit1"
+            android:visibility="visible" >
+        </TextView>
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="@dimen/wizards_unicable_npanel_textfield_formatted_divider_02_width"
+            android:layout_height="@dimen/wizards_unicable_npanel_textfield_formatted_divider_02_height"
+            android:layout_marginLeft="@dimen/wizards_unicable_npanel_textfield_formatted_divider_02_x1"
+            android:layout_marginTop="@dimen/wizards_unicable_npanel_textfield_formatted_divider_02_y1"
+            android:background="@org.droidtv.ui.tvwidget2k15:drawable/textfields_formatted_divider" />
+
+        <TextView
+            android:id="@+id/digit3"
+           style="@org.droidtv.ui.tvwidget2k15:style/lml"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/wizards_unicable_npanel_textfield_digit_03_text_height"
+            android:layout_marginLeft="@dimen/wizards_unicable_npanel_textfield_digit_03_text_x1"
+            android:layout_marginTop="@dimen/wizards_unicable_npanel_textfield_digit_03_text_y1"
+            android:textColor="@org.droidtv.ui.tvwidget2k15:color/filter_disabled_focussed"
+            android:nextFocusRight="@+id/digit4"
+            android:nextFocusLeft="@+id/digit2"
+            android:visibility="visible" >
+        </TextView>
+
+        <View
+            android:id="@+id/divider3"
+            android:layout_width="@dimen/wizards_unicable_npanel_textfield_formatted_divider_03_width"
+            android:layout_height="@dimen/wizards_unicable_npanel_textfield_formatted_divider_03_height"
+            android:layout_marginLeft="@dimen/wizards_unicable_npanel_textfield_formatted_divider_03_x1"
+            android:layout_marginTop="@dimen/wizards_unicable_npanel_textfield_formatted_divider_03_y1"
+            android:background="@org.droidtv.ui.tvwidget2k15:drawable/textfields_formatted_divider" />
+
+        <TextView
+            android:id="@+id/digit4"
+            style="@org.droidtv.ui.tvwidget2k15:style/lml"
+            android:layout_width="@dimen/wizards_unicable_npanel_textfield_digit_04_text_width"
+            android:layout_height="@dimen/wizards_unicable_npanel_textfield_digit_04_text_height"
+            android:layout_marginLeft="@dimen/wizards_unicable_npanel_textfield_digit_04_text_x1"
+            android:layout_marginTop="@dimen/wizards_unicable_npanel_textfield_digit_04_text_y1"
+            android:textColor="@org.droidtv.ui.tvwidget2k15:color/filter_disabled_focussed"
+            android:nextFocusRight="@+id/digit5"
+            android:nextFocusLeft="@+id/digit3"
+            android:visibility="visible" >
+        </TextView>
+
+        <View
+            android:id="@+id/divider4"
+            android:layout_width="@dimen/wizards_unicable_npanel_textfield_formatted_divider_04_width"
+            android:layout_height="@dimen/wizards_unicable_npanel_textfield_formatted_divider_04_height"
+            android:layout_marginLeft="@dimen/wizards_unicable_npanel_textfield_formatted_divider_04_x1"
+            android:layout_marginTop="@dimen/wizards_unicable_npanel_textfield_formatted_divider_04_y1"
+            android:background="@org.droidtv.ui.tvwidget2k15:drawable/textfields_formatted_divider" />
+
+        <View
+            android:id="@+id/dividerDot"
+            android:layout_width="@dimen/dtr_search_npanel_picker_dot_width"
+            android:layout_height="@dimen/dtr_search_npanel_picker_dot_height"
+            android:layout_marginLeft="302dp"
+            android:layout_marginTop="94.5dp"
+            android:background="@org.droidtv.ui.tvwidget2k15:drawable/textfields_ip_divider" />
+
+        <View
+            android:id="@+id/divider5"
+            android:layout_width="@dimen/wizards_unicable_npanel_textfield_formatted_divider_05_width"
+            android:layout_height="@dimen/wizards_unicable_npanel_textfield_formatted_divider_05_height"
+            android:layout_marginLeft="@dimen/wizards_unicable_npanel_textfield_formatted_divider_05_x1"
+            android:layout_marginTop="@dimen/wizards_unicable_npanel_textfield_formatted_divider_05_y1"
+            android:background="@org.droidtv.ui.tvwidget2k15:drawable/textfields_formatted_divider" />
+
+        <TextView
+            android:id="@+id/digit5"
+            style="@org.droidtv.ui.tvwidget2k15:style/lml"
+            android:layout_width="@dimen/wizards_unicable_npanel_textfield_digit_05_text_width"
+            android:layout_height="@dimen/wizards_unicable_npanel_textfield_digit_05_text_height"
+            android:layout_marginLeft="@dimen/wizards_unicable_npanel_textfield_digit_05_text_x1"
+            android:layout_marginTop="@dimen/wizards_unicable_npanel_textfield_digit_05_text_y1"
+            android:textColor="@org.droidtv.ui.tvwidget2k15:color/filter_disabled_focussed"
+            android:nextFocusRight="@+id/digit6"
+            android:nextFocusLeft="@+id/digit4"
+            android:visibility="visible" >
+        </TextView>
+
+        <View
+            android:id="@+id/divider6"
+            android:layout_width="@dimen/wizards_unicable_npanel_textfield_formatted_divider_06_width"
+            android:layout_height="@dimen/wizards_unicable_npanel_textfield_formatted_divider_06_height"
+            android:layout_marginLeft="@dimen/wizards_unicable_npanel_textfield_formatted_divider_06_x1"
+            android:layout_marginTop="@dimen/wizards_unicable_npanel_textfield_formatted_divider_06_y1"
+            android:background="@org.droidtv.ui.tvwidget2k15:drawable/textfields_formatted_divider" />
+
+        <TextView
+            android:id="@+id/digit6"
+            style="@org.droidtv.ui.tvwidget2k15:style/lml"
+            android:layout_width="@dimen/wizards_unicable_npanel_textfield_digit_06_text_width"
+            android:layout_height="@dimen/wizards_unicable_npanel_textfield_digit_06_text_height"
+            android:layout_marginLeft="@dimen/wizards_unicable_npanel_textfield_digit_06_text_x1"
+            android:layout_marginTop="@dimen/wizards_unicable_npanel_textfield_digit_06_text_y1"
+            android:textColor="@org.droidtv.ui.tvwidget2k15:color/filter_disabled_focussed"
+            android:visibility="visible" >
+        </TextView>
+
+        <View
+            android:id="@+id/divider7"
+            android:layout_width="@dimen/wizards_unicable_npanel_textfield_formatted_divider_07_width"
+            android:layout_height="@dimen/wizards_unicable_npanel_textfield_formatted_divider_07_height"
+            android:layout_marginLeft="@dimen/wizards_unicable_npanel_textfield_formatted_divider_07_x1"
+            android:layout_marginTop="@dimen/wizards_unicable_npanel_textfield_formatted_divider_07_y1"
+            android:background="@org.droidtv.ui.tvwidget2k15:drawable/textfields_formatted_divider" />
+
+        <TextView
+            android:id="@+id/digit7"
+            style="@org.droidtv.ui.tvwidget2k15:style/lml"
+            android:layout_width="@dimen/wizards_unicable_npanel_textfield_digit_07_text_width"
+            android:layout_height="@dimen/wizards_unicable_npanel_textfield_digit_07_text_height"
+            android:layout_marginLeft="@dimen/wizards_unicable_npanel_textfield_digit_07_text_x1"
+            android:layout_marginTop="@dimen/wizards_unicable_npanel_textfield_digit_07_text_y1"
+            android:textColor="@org.droidtv.ui.tvwidget2k15:color/filter_disabled_focussed"
+            android:nextFocusRight="@+id/digit6"
+            android:visibility="visible" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/minimum"
+            style="@org.droidtv.ui.tvwidget2k15:style/lml"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/wizards_unicable_npanel_string01_text_height"
+            android:layout_marginLeft="@dimen/wizards_unicable_npanel_string01_text_x1"
+            android:layout_marginTop="@dimen/wizards_unicable_npanel_string01_text_y1"
+            android:visibility="visible" >
+        </TextView>
+
+         <TextView
+            android:id="@+id/maximum"
+            style="@org.droidtv.ui.tvwidget2k15:style/lml"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/wizards_unicable_npanel_string02_text_height"
+            android:layout_marginLeft="@dimen/wizards_unicable_npanel_string02_text_x1"
+            android:layout_marginTop="@dimen/wizards_unicable_npanel_string02_text_y1"
+            android:visibility="visible" >
+        </TextView>
+    </RelativeLayout>
+
+</RelativeLayout>

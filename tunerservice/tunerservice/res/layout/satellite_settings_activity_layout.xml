@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/color_npanel_bg" >
+
+        <org.droidtv.ui.tvwidget2k15.NPanelBrowser
+            android:id="@+id/SatelliteSettingsBrowser"
+            style="@org.droidtv.ui.tvwidget2k15:style/PanelBrowserContentExplorer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/setup_settings_panels_npanels_standard_bg_x1"
+            android:layout_marginTop="@dimen/settings_ambilight_styles_root_level_npanel_container_y1" >
+        </org.droidtv.ui.tvwidget2k15.NPanelBrowser>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/wizard_settings_title_text"
+        style="@style/setup_settings_header_text_style"
+        android:layout_width="@dimen/setup_settings_header_text_width"
+        android:layout_height="@dimen/setup_settings_header_text_height"
+        android:layout_marginLeft="@dimen/setup_settings_header_text_x1"
+        android:layout_marginTop="@dimen/setup_settings_header_text_y1"
+        android:text="@org.droidtv.ui.strings:string/MAIN_VB_SATELLITE_INSTALLATION" />
+
+    <org.droidtv.ui.tvwidget2k15.ColorKeys
+        android:id="@+id/colorKeys"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+    </org.droidtv.ui.tvwidget2k15.ColorKeys>
+
+    <org.droidtv.euinstallersat.settings.EasyPqView
+        android:id="@+id/easyPQView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:visibility="visible" >
+    </org.droidtv.euinstallersat.settings.EasyPqView>
+
+</RelativeLayout>

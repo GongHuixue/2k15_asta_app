@@ -1,0 +1,34 @@
+/*  Copyright(C) 2003 Koninklijke Philips Electronics N.V.,
+*  All Rights Reserved.
+* This  source code and any compilation or derivative thereof is the
+*  proprietary information of Koninklijke Philips Electronics N.V.
+*  and is confidential in nature.
+*  Under no circumstances is this software to be exposed to or placed
+*  under an Open Source License of any type without the expressed
+*  written permission of Koninklijke Philips Electronics N.V.
+*  		%name: HsvEITPropertyConf.dd %
+*      	%version: TVG_tv550r4dev1 %
+* 		%date_modified: Thu Sep 18 18:18:17 2008 %
+*   	     %derived_by: integration %
+*/
+
+/* Defining koala group to escape koala warning */
+/** koala group HsvEITPropertyConf **/
+
+#ifndef HSVEITPROPERTYITEM
+#define HSVEITPROPERTYITEM(a,b,c,d)
+#endif
+
+HSVEITPROPERTYITEM(ActualEITPresent,   srtdbids_EitPresentActual,  EIT_PF,       EitNowNextActual)
+HSVEITPROPERTYITEM(ActualEITFollow,    srtdbids_EitFollowActual,   EIT_PF,       EitNowNextActual)
+HSVEITPROPERTYITEM(OtherEITPresent,     -1,                        EIT_PF,       EitNowNextOther )
+HSVEITPROPERTYITEM(OtherEITFollow,      -1,                        EIT_PF,       EitNowNextOther )
+HSVEITPROPERTYITEM(ActualEITSched,     srtdbids_EitScheduleActual, EIT_Sched,    EitSchedActual  )
+HSVEITPROPERTYITEM(OtherEITSched,      -1,                         EIT_Sched,    EitSchedOther   )
+HSVEITPROPERTYITEM(ActualPresentRating,-1,                         Rating,       EitNowNextActual)
+HSVEITPROPERTYITEM(ExtendedInfo,       -1,                         EIT_Ext,      EitSchedActual)
+HSVEITPROPERTYITEM(ShortDesc,          -1,                         EIT_ShortDesc,EitSchedActual)
+HSVEITPROPERTYITEM(ExtendedInfoForNow, -1,                         EIT_ExtNow,   EitNowNextActual)
+HSVEITPROPERTYITEM(ExtendedInfoForNext,-1,                         EIT_ExtNext,  EitNowNextActual)
+
+

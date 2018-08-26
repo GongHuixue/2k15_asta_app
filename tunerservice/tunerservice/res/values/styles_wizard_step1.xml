@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Mon Jul 29 2013 14:58:17 GMT+0530-->
+<resources>
+<style name="wizard_step1_header_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/hnl">
+	<item name="android:gravity">left</item>
+</style>
+<style name="wizard_step1_panels_npanel_titlebar_activated_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/hll">
+	<item name="android:gravity">left</item>
+</style>
+<style name="wizard_step1_npanel_header_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/hnl">
+	<item name="android:gravity">left</item>
+</style>
+<style name="wizard_step1_npanel_description01_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/bnr">
+	<item name="android:gravity">left</item>
+</style>
+<style name="wizard_step1_npanel_skip_button_normal_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/lnr">
+	<item name="android:gravity">center</item>
+</style>
+<style name="wizard_step1_npanel_settings_button_normal_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/lnr">
+	<item name="android:gravity">center</item>
+</style>
+<style name="wizard_step1_npanel_start_button_default_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/lnr">
+	<item name="android:gravity">center</item>
+</style>
+</resources>

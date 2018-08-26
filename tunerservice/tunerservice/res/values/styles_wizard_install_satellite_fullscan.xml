@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Fri Aug 02 2013 18:36:44 GMT+0530-->
+<resources>
+<style name="wizard_install_satellite_fullscan_header_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/hnl">
+	<item name="android:gravity">left</item>
+</style>
+<style name="wizard_install_satellite_fullscan_panels_npanel_titlebar_normal_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/hll">
+	<item name="android:gravity">left</item>
+</style>
+<style name="wizard_install_satellite_fullscan_panels_npanel_titlebar_activated_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/hll">
+	<item name="android:gravity">left</item>
+</style>
+<style name="wizard_install_satellite_fullscan_npanel_col01_unit01_header_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/hsr">
+	<item name="android:gravity">left</item>
+</style>
+<style name="wizard_install_satellite_fullscan_npanel_col01_unit02_header_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/hsr">
+	<item name="android:gravity">left</item>
+</style>
+<style name="wizard_install_satellite_fullscan_npanel_col01_row01_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/bnr">
+	<item name="android:gravity">left</item>
+</style>
+<style name="wizard_install_satellite_fullscan_npanel_col01_row01_unit01_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/bnr">
+	<item name="android:gravity">left</item>
+</style>
+<style name="wizard_install_satellite_fullscan_npanel_col01_row01_unit02_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/bnr">
+	<item name="android:gravity">left</item>
+</style>
+<style name="wizard_install_satellite_fullscan_npanel_col01_row02_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/bnr">
+	<item name="android:gravity">left</item>
+</style>
+<style name="wizard_install_satellite_fullscan_npanel_col01_row02_unit01_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/bnr">
+	<item name="android:gravity">left</item>
+</style>
+<style name="wizard_install_satellite_fullscan_npanel_col01_row02_unit02_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/bnr">
+	<item name="android:gravity">left</item>
+</style>
+<style name="wizard_install_satellite_fullscan_npanel_col01_progress_bar01_header_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/hsr">
+	<item name="android:gravity">left</item>
+</style>
+<style name="wizard_install_satellite_fullscan_npanel_col01_progress_bar01_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/lnl">
+	<item name="android:gravity">left</item>
+</style>
+<style name="wizard_install_satellite_fullscan_npanel_col01_progress_bar02_header_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/hsr">
+	<item name="android:gravity">left</item>
+</style>
+<style name="wizard_install_satellite_fullscan_npanel_col01_progress_bar02_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/lnl">
+	<item name="android:gravity">left</item>
+</style>
+<style name="wizard_install_satellite_fullscan_npanel_col02_description_text1_l_bsr_style" parent="@org.droidtv.ui.tvwidget2k15:style/bsr">
+	<item name="android:gravity">left</item>
+</style>
+<style name="wizard_install_satellite_fullscan_npanel_button_activated_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/lnr">
+	<item name="android:gravity">center</item>
+</style>
+<style name="wizard_install_satellite_fullscan_npanel_search_button_normal_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/lnr">
+	<item name="android:gravity">center</item>
+</style>
+<style name="wizard_install_satellite_fullscan_npanel_previous_button_normal_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/lnr">
+	<item name="android:gravity">center</item>
+</style>
+<style name="wizard_install_satellite_fullscan_npanel_next_button_default_text_style" parent="@org.droidtv.ui.tvwidget2k15:style/lnr">
+	<item name="android:gravity">center</item>
+</style>
+</resources>

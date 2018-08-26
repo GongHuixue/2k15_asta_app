@@ -1,0 +1,454 @@
+/*  Copyright(C) 2003 Koninklijke Philips Electronics N.V.,
+*  All Rights Reserved.
+* This  source code and any compilation or derivative thereof is the
+*  proprietary information of Koninklijke Philips Electronics N.V.
+*  and is confidential in nature.
+*  Under no circumstances is this software to be exposed to or placed
+*  under an Open Source License of any type without the expressed
+*  written permission of Koninklijke Philips Electronics N.V.
+*  		%name: HsvDVBSIDescriptorParser.dd %
+*      	%version: TVG_tv550r4dev1 %
+* 		%date_modified: Thu Nov 13 12:11:18 2008 %
+*   	     %derived_by: integration %
+*/
+
+/*  Generated code. Dont edit. */
+/** koala type HsvDVBSIDescriptorParser **/ /* Defining koala group to escape koala warning */
+/** koala using infraglobals **/
+/** koala using HsvDvbTablesCommon **/
+#ifndef HSVISOAUDIOINFO
+#define HSVISOAUDIOINFO(field, typ, declfunc, parfunc, secfunc, bits, name)
+#endif
+
+HSVISOAUDIOINFO(Language	,Nat32	,Linear	,NA	,GetBits	,24	,ISO_639_language_code	)
+HSVISOAUDIOINFO(Type	,Nat8	,Linear	,NA	,GetBits	,8	,audio_type	)
+#undef HSVISOAUDIOINFO
+
+
+#ifndef HSVLINKAGEWRAPPER
+#define HSVLINKAGEWRAPPER(field, typ, declfunc, parfunc, secfunc, bits, name)
+#endif
+
+#undef HSVLINKAGEWRAPPER
+
+#ifndef HSVLINKAGEHEADER
+#define HSVLINKAGEHEADER(field, typ, declfunc, parfunc, secfunc, bits, name)
+#endif
+
+HSVLINKAGEHEADER(Tsid	,Nat16	,Linear	,NA	,GetBits	,16	,transport_stream_id	)
+HSVLINKAGEHEADER(OrigNWId	,Nat16	,Linear	,NA	,GetBits	,16	,original_network_id	)
+HSVLINKAGEHEADER(SvcId	,Nat16	,Linear	,NA	,GetBits	,16	,service_id	)
+HSVLINKAGEHEADER(Type	,Nat8	,Linear	,NA	,GetBits	,8	,linkage_type	)
+#undef HSVLINKAGEHEADER
+
+#ifndef HSVSWDLPRIVATEDATA
+#define HSVSWDLPRIVATEDATA(field, typ, declfunc, parfunc, secfunc, bits, name)
+#endif
+
+HSVSWDLPRIVATEDATA(SwdlPvtDataLen	,Nat16	,Linear	,NA	,SkipBits	,0	,SwdlPvtDataLenDummy	)
+HSVSWDLPRIVATEDATA(SSULinkData  	,    HsvLinkagePrivateData	,    Linear	,NA	,    GetPrivateData	,SwdlPvtDataLen	,SwdlPrivateData	)
+#undef HSVSWDLPRIVATEDATA
+
+#ifndef HSVPRIVATEDATA1
+#define HSVPRIVATEDATA1(field, typ, declfunc, parfunc, secfunc, bits, name)
+#endif
+
+HSVPRIVATEDATA1(NA	,NA	,NA	,NA	,SkipBits	,8	,private_data_byte	)
+#undef HSVPRIVATEDATA1
+
+#ifndef HSVDESCRIPTORINFO
+#define HSVDESCRIPTORINFO(field, typ, declfunc, parfunc, secfunc, bits, name)
+#endif
+
+HSVDESCRIPTORINFO(DescriptorNo	,Nat8	,Linear	,NA	,GetBits	,4	,descriptor_number	)
+HSVDESCRIPTORINFO(LastDescriptorNo	,Nat8	,Linear	,NA	,GetBits	,4	,last_descriptor_number	)
+HSVDESCRIPTORINFO(Language	,Nat32	,Linear	,NO	,GetBits	,24	,ISO_639_language_code	)
+HSVDESCRIPTORINFO(ItemsLen	,Nat8	,Linear	,NA	,GetBits	,8	,length_of_items	)
+#undef HSVDESCRIPTORINFO
+
+#ifndef HSVEVENTDESC
+#define HSVEVENTDESC(field, typ, declfunc, parfunc, secfunc, bits, name)
+#endif
+
+HSVEVENTDESC(ItemDescLen	,Nat8	,Linear	,NA	,GetBits	,8	,item_description_length	)
+#undef HSVEVENTDESC
+
+#ifndef HSVITEMDESCCHAR
+#define HSVITEMDESCCHAR(field, typ, declfunc, parfunc, secfunc, bits, name)
+#endif
+
+HSVITEMDESCCHAR(itemdescstr	,char	,Linear	,NA	,GetBits	,8	,item_description_char	)
+#undef HSVITEMDESCCHAR
+
+#ifndef HSVEVENT
+#define HSVEVENT(field, typ, declfunc, parfunc, secfunc, bits, name)
+#endif
+
+HSVEVENT(ItemLen	,Nat8	,Linear	,NA	,GetBits	,8	,item_length	)
+#undef HSVEVENT
+
+#ifndef HSVITEMCHAR
+#define HSVITEMCHAR(field, typ, declfunc, parfunc, secfunc, bits, name)
+#endif
+
+HSVITEMCHAR(itemstr	,char	,Linear	,NA	,GetBits	,8	,item_char	)
+#undef HSVITEMCHAR
+
+#ifndef HSVEVENTITEMS
+#define HSVEVENTITEMS(field, typ, declfunc, parfunc, secfunc, bits, name)
+#endif
+
+#undef HSVEVENTITEMS
+
+#ifndef HSVITEMTEXT
+#define HSVITEMTEXT(field, typ, declfunc, parfunc, secfunc, bits, name)
+#endif
+
+HSVITEMTEXT(TextLen	,Nat8	,Linear	,NA	,GetBits	,8	,text_length	)
+#undef HSVITEMTEXT
+
+#ifndef HSVTEXT
+#define HSVTEXT(field, typ, declfunc, parfunc, secfunc, bits, name)
+#endif
+
+HSVTEXT(textstr	,char	,Linear	,NA	,GetBits	,8	,text_char	)
+#undef HSVTEXT
+
+#ifndef HSVSHORTEVENTHEADER
+#define HSVSHORTEVENTHEADER(field, typ, declfunc, parfunc, secfunc, bits, name)
+#endif
+
+HSVSHORTEVENTHEADER(Language	,Nat32	,Linear	,NO	,GetBits	,24	,ISO_639_language_code	)
+HSVSHORTEVENTHEADER(EventNameLen	,Nat8	,Linear	,NA	,GetBits	,8	,event_name_length	)
+#undef HSVSHORTEVENTHEADER
+
+#ifndef HSVSHORTEVENTCHAR
+#define HSVSHORTEVENTCHAR(field, typ, declfunc, parfunc, secfunc, bits, name)
+#endif
+
+HSVSHORTEVENTCHAR(eventnamechar	,char	,Linear	,NA	,GetBits	,8	,event_name_char	)
+#undef HSVSHORTEVENTCHAR
+
+#ifndef HSVSHORTITEMTEXT
+#define HSVSHORTITEMTEXT(field, typ, declfunc, parfunc, secfunc, bits, name)
+#endif
+
+HSVSHORTITEMTEXT(TextLen	,Nat8	,Linear	,NA	,GetBits	,8	,text_length	)
+#undef HSVSHORTITEMTEXT
+
+#ifndef HSVSHORTTEXT
+#define HSVSHORTTEXT(field, typ, declfunc, parfunc, secfunc, bits, name)
+#endif
+
+HSVSHORTTEXT(textstr	,char	,Linear	,NA	,GetBits	,8	,text_char	)
+#undef HSVSHORTTEXT
+
+#ifndef HSVSHORTEVENTWRAPPER
+#define HSVSHORTEVENTWRAPPER(field, typ, declfunc, parfunc, secfunc, bits, name)
+#endif
+
+#undef HSVSHORTEVENTWRAPPER
+
+#ifndef HSVPRIVATEINFO
+#define HSVPRIVATEINFO(field, typ, declfunc, parfunc, secfunc, bits, name)
+#endif
+
+HSVPRIVATEINFO(PvtDataSpecifier	,Nat32	,Linear	,NA	,GetBits	,32	,private_data_specifier	)
+#undef HSVPRIVATEINFO
+
+#ifndef HSVAC3HEADER
+#define HSVAC3HEADER(field, typ, declfunc, parfunc, secfunc, bits, name)
+#endif
+
+HSVAC3HEADER(ComponentTypeFlag	,Bool	,Linear	,NA	,GetBits	,1	,component_type_flag	)
+HSVAC3HEADER(NA	,Na	,NA	,NA	,SkipBits	,1	,bsid_flag	)
+HSVAC3HEADER(NA	,Na	,NA	,NA	,SkipBits	,1	,mainid_flag	)
+HSVAC3HEADER(NA	,Na	,NA	,NA	,SkipBits	,1	,asvc_flag	)
+HSVAC3HEADER(NA	,Na	,NA	,NA	,SkipBits	,4	,reserved_flags	)
+#undef HSVAC3HEADER
+
+#ifndef HSVAC3INFO
+#define HSVAC3INFO(field, typ, declfunc, parfunc, secfunc, bits, name)
+#endif
+
+HSVAC3INFO(ComponentType	,Nat8	,Linear	,NA	,GetBits	,8	,component_type	)
+#undef HSVAC3INFO
+
+#ifndef HSVIGNORESTRUCT
+#define HSVIGNORESTRUCT(field, typ, declfunc, parfunc, secfunc, bits, name)
+#endif
+
+HSVIGNORESTRUCT(reserved	,Bool	,Linear	,NA	,GetBits	,8	,reserved	)
+#undef HSVIGNORESTRUCT
+
+#ifndef HSVNWNAMESTRING
+#define HSVNWNAMESTRING(field, typ, declfunc, parfunc, secfunc, bits, name)
+#endif
+
+HSVNWNAMESTRING(Name	,char	,Linear	,NA	,GetBits	,8	,char	)
+#undef HSVNWNAMESTRING
+
+#ifndef HSVNETWORKNAME
+#define HSVNETWORKNAME(field, typ, declfunc, parfunc, secfunc, bits, name)
+#endif
+
+#undef HSVNETWORKNAME
+
+#ifndef HSVVBIDATAHEADERINFO
+#define HSVVBIDATAHEADERINFO(field, typ, declfunc, parfunc, secfunc, bits, name)
+#endif
+
+HSVVBIDATAHEADERINFO(DataSvcID	,Nat8	,Linear	,NA	,GetBits	,8	,data_service_id	)
+HSVVBIDATAHEADERINFO(DataSvcDescLen	,Nat8	,Linear	,NA	,GetBits	,8	,data_service_description_length	)
+#undef HSVVBIDATAHEADERINFO
+
+#ifndef HSVVBISERVICEDESC
+#define HSVVBISERVICEDESC(field, typ, declfunc, parfunc, secfunc, bits, name)
+#endif
+
+HSVVBISERVICEDESC(NA	,NA	,NA	,NA	,SkipBits	,2	,reserved_future_use	)
+HSVVBISERVICEDESC(Parity	,Bool	,Linear	,NA	,SkipBits	,1	,field_parity	)
+HSVVBISERVICEDESC(LineOffset	,Nat8	,Linear	,NA	,SkipBits	,5	,line_offset	)
+#undef HSVVBISERVICEDESC
+
+#ifndef HSVDUMMYSERVICEDESC
+#define HSVDUMMYSERVICEDESC(field, typ, declfunc, parfunc, secfunc, bits, name)
+#endif
+
+HSVDUMMYSERVICEDESC(NA	,NA	,NA	,NA	,SkipBits	,8	,reserved_future_use	)
+#undef HSVDUMMYSERVICEDESC
+
+#ifndef HSVVBIDATAINFO
+#define HSVVBIDATAINFO(field, typ, declfunc, parfunc, secfunc, bits, name)
+#endif
+
+#undef HSVVBIDATAINFO
+
+#ifndef HSVVBITELETEXTINFO
+#define HSVVBITELETEXTINFO(field, typ, declfunc, parfunc, secfunc, bits, name)
+#endif
+
+HSVVBITELETEXTINFO(Language	,Nat32	,Linear	,NO	,GetBits	,24	,ISO_639_language_code	)
+HSVVBITELETEXTINFO(Type	,Nat8	,Linear	,NA	,GetBits	,5	,teletext_type	)
+HSVVBITELETEXTINFO(MagazineNo	,Nat8	,Linear	,NA	,GetBits	,3	,teletext_magazine_number	)
+HSVVBITELETEXTINFO(PageNo	,Nat8	,Linear	,NA	,GetBits	,8	,teletext_page_number	)
+#undef HSVVBITELETEXTINFO
+
+#ifndef HSVSERVICEDESC
+#define HSVSERVICEDESC(field, typ, declfunc, parfunc, secfunc, bits, name)
+#endif
+
+HSVSERVICEDESC(ServiceType	,Nat8	,Linear	,NA	,GetBits	,8	,service_type	)
+HSVSERVICEDESC(ServiceProviderNameLen	,Nat8	,Linear	,NA	,GetBits	,8	,service_provider_name_length	)
+#undef HSVSERVICEDESC
+
+#ifndef HSVSVCPROVIDERCHAR
+#define HSVSVCPROVIDERCHAR(field, typ, declfunc, parfunc, secfunc, bits, name)
+#endif
+
+HSVSVCPROVIDERCHAR(service_provider	,char	,Linear	,NA	,GetBits	,8	,char	)
+#undef HSVSVCPROVIDERCHAR
+
+#ifndef HSVSERVICENAME
+#define HSVSERVICENAME(field, typ, declfunc, parfunc, secfunc, bits, name)
+#endif
+
+HSVSERVICENAME(ServiceNameLen	,Nat8	,Linear	,NA	,GetBits	,8	,service_name_length	)
+#undef HSVSERVICENAME
+
+#ifndef HSVSVCCHAR
+#define HSVSVCCHAR(field, typ, declfunc, parfunc, secfunc, bits, name)
+#endif
+
+HSVSVCCHAR(service	,char	,Linear	,NA	,GetBits	,8	,char	)
+#undef HSVSVCCHAR
+
+#ifndef HSVSTREAMIDINFO
+#define HSVSTREAMIDINFO(field, typ, declfunc, parfunc, secfunc, bits, name)
+#endif
+
+HSVSTREAMIDINFO(ComponentTag	,Nat8	,Linear	,NA	,GetBits	,8	,ComponentTag	)
+#undef HSVSTREAMIDINFO
+
+#ifndef HSVCAIDINFO
+#define HSVCAIDINFO(field, typ, declfunc, parfunc, secfunc, bits, name)
+#endif
+
+HSVCAIDINFO(CAId	,Nat16	,Linear	,NO	,GetBits	,16	,CA_System_id	)
+#undef HSVCAIDINFO
+
+#ifndef HSVCONTENTINFO
+#define HSVCONTENTINFO(field, typ, declfunc, parfunc, secfunc, bits, name)
+#endif
+
+HSVCONTENTINFO(ContentNibbleLevel1	,Nat8	,Linear	,NO	,GetBits	,4	,content_nibble_level_1	)
+HSVCONTENTINFO(ContentNibbleLevel2	,Nat8	,Linear	,NO	,GetBits	,4	,content_nibble_level_2	)
+HSVCONTENTINFO(UserNibble1	,       Nat8	,Linear	,NO	,GetBits	,4	,user_nibble	)
+HSVCONTENTINFO(UserNibble2	,       Nat8	,Linear	,NO	,GetBits	,4	,user_nibble	)
+#undef HSVCONTENTINFO
+
+#ifndef HSVRATINGINFO
+#define HSVRATINGINFO(field, typ, declfunc, parfunc, secfunc, bits, name)
+#endif
+
+HSVRATINGINFO(CountryCode	,Nat32	,Linear	,NO	,GetBits	,24	,CountryCode	)
+HSVRATINGINFO(Rating	,Nat8	,Linear	,NA	,GetBits	,8	,rating	)
+#undef HSVRATINGINFO
+
+#ifndef HSVTELETEXTINFO
+#define HSVTELETEXTINFO(field, typ, declfunc, parfunc, secfunc, bits, name)
+#endif
+
+HSVTELETEXTINFO(Language	,Nat32	,Linear	,NO	,GetBits	,24	,ISO_639_language_code	)
+HSVTELETEXTINFO(Type	,Nat8	,Linear	,NA	,GetBits	,5	,teletext_type	)
+HSVTELETEXTINFO(MagazineNo	,Nat8	,Linear	,NA	,GetBits	,3	,teletext_magazine_number	)
+HSVTELETEXTINFO(PageNo	,Nat8	,Linear	,NA	,GetBits	,8	,teletext_page_number	)
+#undef HSVTELETEXTINFO
+
+#ifndef HSVTIMEOFFSET
+#define HSVTIMEOFFSET(field, typ, declfunc, parfunc, secfunc, bits, name)
+#endif
+
+HSVTIMEOFFSET(CountryCode	,Nat32	,Linear	,YES	,GetBits	,24	,country_code	)
+HSVTIMEOFFSET(RegionId	,Nat8	,Linear	,NA	,GetBits	,6	,country_region_id	)
+HSVTIMEOFFSET(NA	,NA	,NA	,NA	,SkipBits	,1	,reserved	)
+HSVTIMEOFFSET(Polarity	,Bool	,Linear	,NA	,GetBits	,1	,local_time_offset_polarity	)
+HSVTIMEOFFSET(TimeOffset	,Nat16	,Linear	,NA	,GetBits	,16	,local_time_offset	)
+HSVTIMEOFFSET(ChangeDate	,Nat16	,Linear	,NA	,GetBits	,16	,time_of_change	)
+HSVTIMEOFFSET(ChangeTime	,Nat32	,Linear	,NA	,GetBits	,24	,time_of_change	)
+HSVTIMEOFFSET(NextTimeOffset	,Nat16	,Linear	,NA	,GetBits	,16	,next_time_offset	)
+#undef HSVTIMEOFFSET
+
+#ifndef HSVSUBTILINGINFO
+#define HSVSUBTILINGINFO(field, typ, declfunc, parfunc, secfunc, bits, name)
+#endif
+
+HSVSUBTILINGINFO(Language	,Nat32	,Linear	,NO	,GetBits	,24	,ISO_639_language_code	)
+HSVSUBTILINGINFO(Type	,Nat8	,Linear	,NA	,GetBits	,8	,subtitling_type	)
+HSVSUBTILINGINFO(CompositionPageId	,Nat16	,Linear	,NA	,GetBits	,16	,composition_page_id	)
+HSVSUBTILINGINFO(AncilliaryPageId	,Nat16	,Linear	,NA	,GetBits	,16	,ancillary_page_id	)
+#undef HSVSUBTILINGINFO
+
+#ifndef HSVDBID_HEADER
+#define HSVDBID_HEADER(field, typ, declfunc, parfunc, secfunc, bits, name)
+#endif
+
+HSVDBID_HEADER(databroadcastid	,Nat16	,Linear	,NA	,GetBits	,16	,data_broadcast_id	)
+#undef HSVDBID_HEADER
+
+
+#ifndef HSVDBID_DATA
+#define HSVDBID_DATA(field, typ, declfunc, parfunc, secfunc, bits, name)
+#endif
+HSVDBID_DATA(PvtDataLen	,    Nat32	,Linear	,NA	,SkipBits	,0	,PvtDataLenDummy	)
+HSVDBID_DATA(SSUData  	,    HsvDataBroadCastSelectorBytes	,    Linear 	,NA	,    GetPrivateData, PvtDataLen	,PrivateData)
+#undef HSVDBID_DATA
+
+
+#ifndef HSVLOGICAL_CHANNEL_INFO
+#define HSVLOGICAL_CHANNEL_INFO(field, typ, declfunc, parfunc, secfunc, bits, name)
+#endif
+
+HSVLOGICAL_CHANNEL_INFO(ServiceId	,Nat16	,Linear	,NA	,GetBits	,16	,service_id	)
+HSVLOGICAL_CHANNEL_INFO(LogicalChannelNum	,Nat16	,Linear	,YES	,GetBits	,16	,logical_channel	)
+HSVLOGICAL_CHANNEL_INFO(DummyGoBack	,NA	,NA	,NO	,SkipBits	,(-16)	,dummy	)
+HSVLOGICAL_CHANNEL_INFO(VisibleServiceFlag	,Nat16	,Linear	,YES	,GetBits	,16	,visibilityflag	)
+#undef HSVLOGICAL_CHANNEL_INFO
+
+#ifndef HSVDUMMYLCN
+#define HSVDUMMYLCN(field, typ, declfunc, parfunc, secfunc, bits, name)
+#endif
+
+HSVDUMMYLCN(lcndummy	,Nat32	,Linear	,NA	,SkipBits	,32	,lcndummy	)
+#undef HSVDUMMYLCN
+
+#ifndef HSVCABLEDELSYS
+#define HSVCABLEDELSYS(field, typ, declfunc, parfunc, secfunc, bits, name)
+#endif
+
+HSVCABLEDELSYS(Frequency,   Nat32	,Linear	,YES 	,GetBits	,32	,frequency	)
+HSVCABLEDELSYS(NA,          NA      ,NA,     NO	    ,SkipBits	,12	,future_use	)
+HSVCABLEDELSYS(FEC_Outer,   Nat8    ,Linear	,NO 	,GetBits	,4	,fec_outer)
+HSVCABLEDELSYS(Modulation,  Nat8    ,Linear	,YES    ,GetBits	,8	,Modulation)
+HSVCABLEDELSYS(SymbolRate,  Nat32   ,Linear	,YES 	,GetBits	,28	,symbol_rate)
+HSVCABLEDELSYS(FEC_Inner,   Nat8    ,Linear	,NO 	,GetBits	,4	,fec_inner)
+#undef HSVCABLEDELSYS
+
+
+#ifndef HSVFREQLISTHEADER
+#define HSVFREQLISTHEADER(field, typ, declfunc, parfunc, secfunc, bits, name)
+#endif
+
+HSVFREQLISTHEADER(NA              ,NA     ,NA     ,NO     ,SkipBits       ,6       ,future_use)
+HSVFREQLISTHEADER(Coding_Type     ,Nat8   ,Linear ,NO     ,GetBits        ,2       ,coding_type)
+
+#undef HSVFREQLISTHEADER
+
+#ifndef HSVFREQLISTCFS
+#define HSVFREQLISTCFS(field, typ, declfunc, parfunc, secfunc, bits, name)
+#endif
+
+HSVFREQLISTCFS(Centre_Frequency   ,Nat32  ,Linear ,YES    ,GetBits        ,32      ,centre_frequency)
+
+#undef HSVFREQLISTCFS
+#ifndef HSVLCNV2HEADER1
+#define HSVLCNV2HEADER1(field, typ, declfunc, parfunc, secfunc, bits, name)
+#endif
+
+HSVLCNV2HEADER1(ChannelListId           ,Nat8	,Linear	,NO 	,GetBits	,8	,channel_list_id	    )
+HSVLCNV2HEADER1(ChannelListNameLen      ,Nat8   ,Linear ,NO	    ,GetBits	,8	,channel_list_name_len  )
+
+#undef HSVLCNV2HEADER1
+
+#ifndef HSVLCNV2HEADER2
+#define HSVLCNV2HEADER2(field, typ, declfunc, parfunc, secfunc, bits, name)
+#endif
+
+HSVLCNV2HEADER2(CountryCode       ,Nat32	,Linear	,YES 	,GetBits	,24	,country_code        )
+HSVLCNV2HEADER2(NoOfServices      ,Nat8     ,Linear ,NO	    ,GetBits	,8	,no_of_services      )
+
+#undef HSVLCNV2HEADER2
+
+#ifndef HSVLCN2INFO
+#define HSVLCN2INFO(field, typ, declfunc, parfunc, secfunc, bits, name)
+#endif
+
+HSVLCN2INFO(ServiceId2       	,Nat16	,Linear	,NO	    ,GetBits	,16	    ,serviceid2	     )
+HSVLCN2INFO(VisibleServiceFlag2	,Bool	,Linear	,NO 	,GetBits	,1	    ,visibilityflag2 )
+HSVLCN2INFO(NA	                ,NA	    ,NA	    ,NA	    ,SkipBits	,1	    ,futureuse       )
+HSVLCN2INFO(LogicalChannelNum2	,Nat16	,Linear	,NO 	,GetBits	,14     ,logicalchannel2 )   
+
+
+#undef HSVLCN2INFO
+
+
+#ifndef HSVHDSLCNINFO
+#define HSVHDSLCNINFO(field, typ, declfunc, parfunc, secfunc, bits, name)
+#endif
+
+HSVHDSLCNINFO(ServiceId          	,Nat16	,Linear	,NO	    ,GetBits	,16 	,serviceid3	        )
+HSVHDSLCNINFO(VisibleServiceFlag	,Bool	,Linear	,NO	    ,GetBits	,1	    ,visibilityflag3	)
+HSVHDSLCNINFO(NA	                ,NA	    ,NA	    ,NA	    ,SkipBits	,5  	,futureuse	        )
+HSVHDSLCNINFO(LogicalChannelNum	    ,Nat16	,Linear	,NO	    ,GetBits	,10	    ,logicalchannel3	)
+
+#undef HSVHDSLCNINFO
+
+#ifndef HSVSRVCATRBDESCINFO
+#define HSVSRVCATRBDESCINFO(field, typ, declfunc, parfunc, secfunc, bits, name)
+#endif
+
+HSVSRVCATRBDESCINFO(ServiceId        ,Nat16	,Linear	,NO	    ,GetBits	,16 	,serviceid4	        )
+HSVSRVCATRBDESCINFO(NA	             ,NA    ,NA	    ,NA	    ,SkipBits	,6  	,futureuse	        )
+HSVSRVCATRBDESCINFO(NumSelFlag       ,Bool	,Linear	,NO	    ,GetBits	,1		,numselflag	        )
+HSVSRVCATRBDESCINFO(VisibleSrvcFlag  ,Bool	,Linear	,NO	    ,GetBits	,1	 	,visiblesrcflag     )
+
+#undef HSVSRVCATRBDESCINFO
+#ifndef HSVSUPPLEMENTARYAUDIOINFO
+#define HSVSUPPLEMENTARYAUDIOINFO(field, typ, declfunc, parfunc, secfunc, bits, name)
+#endif
+
+HSVSUPPLEMENTARYAUDIOINFO(Mix_Type	                ,Bool	,Linear	,NO	,GetBits	,1	,mix_type	            )
+HSVSUPPLEMENTARYAUDIOINFO(Editorial_Classification	,Nat8	,Linear	,NA	,GetBits	,5	,editorial_classification    	)
+HSVSUPPLEMENTARYAUDIOINFO(Language_Code_Present 	,Bool	,Linear	,No	,GetBits	,1	,language_code_present	)
+HSVSUPPLEMENTARYAUDIOINFO(ISO_639_Language_Code 	,Nat32	,Linear	,No	,GetBits	,1	,ISO_639_language_code	)
+#undef HSVSUPPLEMENTARYAUDIOINFO

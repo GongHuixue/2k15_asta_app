@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/wizard_install_satellite_fullscan_panels_npanel_wizard_bg_height" >
+
+    <RelativeLayout
+        android:id="@+id/layout_dtr_1"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/wizard_install_satellite_fullscan_panels_npanel_wizard_bg_height"
+        android:layout_marginLeft="-48dp"
+        android:layout_marginTop="-90dp" >
+
+        <TextView
+            android:id="@+id/textBody"
+            android:layout_width="@dimen/wizard_step1_npanel_description01_text_width"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/wizard_step1_npanel_description01_text_x1"
+            android:layout_marginTop="@dimen/wizard_step1_npanel_header_text_y1" />
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/waiting_anmimation"
+        style="@org.droidtv.ui.tvwidget2k15:style/IndeterminatePbStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="visible" />
+
+</RelativeLayout>

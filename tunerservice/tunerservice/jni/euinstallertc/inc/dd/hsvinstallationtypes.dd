@@ -1,0 +1,299 @@
+/*
+ *  Copyright(C) 2003 Koninklijke Philips Electronics N.V.,
+ *  All Rights Reserved.
+ *  This  source code and any compilation or derivative thereof is the
+ *  proprietary information of Koninklijke Philips Electronics N.V.
+ *  and is confidential in nature.
+ *  Under no circumstances is this software to be exposed to or placed
+ *  under an Open Source License of any type without the expressed
+ *  written permission of Koninklijke Philips Electronics N.V.
+ *
+ *          %name: hsvinstallationtypes.dd %
+ *       %version: TVG_FusionR3Ext_6 % 
+ *       %version: TVG_FusionR3Ext_6 % 
+ * %date_modified: Wed Oct 15 11:44:40 2008 %
+ *    %derived_by: ponraman %  
+ *    %derived_by: ponraman %  
+ */
+
+/** koala group HsvInstallationTypes **/
+
+/****************************************************************************
+ * Local include files
+ ****************************************************************************/
+#ifndef _HSVINS_CONSTS_H
+#define _HSVINS_CONSTS_H
+
+#define MAX_MUXES_PER_NTK       (94)
+#define MAX_MUXES_PER_NTK_FOR_CAM       (100)
+#define Max_Mux_present_Ts		(50)
+#define MAX_SYMBOL_RATES        (MAX_MUXES_PER_NTK)
+#define MAX_FREQUENCY_LIST      (MAX_MUXES_PER_NTK)
+#define MAX_MODULATION_TYPES    (MAX_MUXES_PER_NTK)
+
+/*Run-time error codes*/
+
+/* fixme: Define more error codes like this -> 2hrs */
+#define INS_INVALID_TURNON                    (1)
+#define INS_FRONTEND_NOT_INITIALISED          (2)
+#define INS_USECASE_SELECTION_FAILED          (3)
+#define INS_FAILED_TO_ADDREF                  (4)
+#define INS_FAILED_TO_GET_CHANTBL_INTERFACE   (5)
+#define INS_FAILED_TO_GET_DIGDEMOD_INTERFACE  (6)
+#define INS_FAILED_TO_GET_SIGSTR_INTERFACE    (7)
+#define INS_FAILED_TO_SUBSCRIBE_TO_TUNINGNTF  (8)
+#define INS_FAILED_TO_SUBSCRIBE_TO_SIGSTRNTF  (9)
+#define INS_FAILED_TO_SUBSCRIBE_TO_DIGDEMODNTF (10)
+#define INS_COMMAND_NOT_ALLOWED               (11)
+#define INS_INVALID_SWITCH_CASE               (12)
+#define INS_UNEXPECTED_DELETION               (13)
+#define INS_UNEXPECTED_CORRUPTION             (14)
+#define INS_PRESET_TABLE_FULL                 (15)
+#define INS_NO_TRANSPORT_STREAM               (16)
+#define INS_FAILED_TO_GET_RFAMP_INTERFACE     (17)
+#define INS_FAILED_TO_SUBSCRIBE_TO_CHANDECNTF (18)
+
+#define INVALID_VALUE                       (-1)
+#define SIGSTRENGTHZERO                     ( 0 )                                            
+
+#define INVALID_PRESET  (0xFFFF)    /* fixme -> 0.5hr */
+#define INVALID_FREQUENCY   (Nat32 )(0)
+
+/* IMPORTANT: The upper bit of LCN field is used to invalidate LCNs temporarily */
+/* This is critical for insertion sort */
+#define INVALID_LCN       (0xC000)    
+#define INVALIDATE(x)     ((x) |= 0x8000)
+#define REVALIDATE(x)     ((x) &= 0x7FFF)  
+#define ISVALID(x)        (!(0x8000 & (x)))  
+#define ISINVALID(x)      ((0x8000 & (x)) == 0x8000)
+
+
+/*Macro for a switch statement*/
+/* Its not used anywhere but looks like a nice macro 
+   Dont feel like removing it 
+*/
+#define SWITCH(A,B,C,D,E)    ((A) == (B))?((C) = (D)):((C) = (E))
+
+
+#define ONPRESETTABLEFULL (1)
+#define ONPRESETADDED     (2)
+#define ONPRESETUPDATED   (3)
+/* fixme: Add Hsv prefix 0.5hr */                 
+/* Installation passes -- Analog and digital */
+typedef enum 
+{
+    pAnalog=0,
+    pDigital,
+    MaxInstallationPass
+}HsvInstallationPass;   /** koala type HsvInstallationPass **/
+
+/*use cases*/
+typedef enum
+{
+    AnalogUseCase = 0,
+    DigitalUseCase
+}HsvUseCaseType;        /** koala type HsvUseCaseType **/
+
+
+typedef struct InstallationStatus
+{
+    int                     State;
+    HsvInstallationPass        Pass;
+
+    Nat8                    Mode;
+    Nat8                    Medium;
+    
+    Nat32                   Frequency;
+    
+    
+    Nat16                   AnalogChannelsAdded;
+    Nat16                   DigitalChannelsFound;
+    Nat16                   DigitalChannelsAdded;
+    Nat16                   DigitalChannelsRemoved;
+    
+    Nat16                   CurrentOnwid;
+    Bool                    Stopped;
+    Nat8                    InstallationVersion;
+    int                     Country;
+    Nat16             		LastInstalledPreset;
+    int                 	SkipInstallation;
+	Bool 					vbi_enabled;
+}TypeInstallationStatus;    /** koala type TypeInstallationStatus **/
+
+
+#define LCN_BLOCK_GAP (0)
+
+#define div_MinValidLCNValue    (1)
+#define div_MaxValidLCNValue    (999)
+
+#define MAX_ANALOG_CHANNELS (100)   /* To be a diversity */
+#define MAX_PRESETS (1000)           /* To be a diversity */
+
+#define VALID_LCN_RANGE(x)  (((x) <= div_MaxValidLCNValue) && ( div_MinValidLCNValue <= (x)))
+
+#define INVALID_ZERO_LCN (0x4000)
+
+#define 	UNITY_MinValidLCNValue    				(0)
+#define 	UNITY_MaxValidLCNValue    				(999)
+#define 	VALID_LCN_RANGE_UNITY(x)				(((x) <= UNITY_MaxValidLCNValue) && (UNITY_MinValidLCNValue <= (x)))
+
+#define 	BLIZOO_MinValidLCNValue    				(0)
+#define 	BLIZOO_MaxValidLCNValue    				(999)
+#define 	VALID_LCN_RANGE_BLIZOO(x)				(((x) <= BLIZOO_MaxValidLCNValue) && (BLIZOO_MinValidLCNValue <= (x)))
+
+#define 	UAE_MinValidLCNValue    				(1)
+#define 	UAE_MaxValidLCNValue    				(799)
+#define 	VALID_LCN_RANGE_UAE(x)					(((x) <= UAE_MaxValidLCNValue) && (UAE_MinValidLCNValue <= (x)))
+
+
+
+
+
+/* Analog Types */
+
+typedef enum {
+    /*TV System parameters*/
+    HsvInsTvSystemBg         = 0,              /* same as InsTvSystemWestEurope */
+    HsvInsTvSystemDk         = 1,              /* same as InsTvSystemEastEurope */
+    HsvInsTvSystemI          = 2,              /* same as InsTvSystemUK */
+    HsvInsTvSystemL          = 3,              /* same as InsTvSystemFrance */
+    HsvInsTvSystemM          = 5,    
+    HsvInsTvSystemAuto       = 6
+}HsvAnalogTvSystem;     /** koala type HsvAnalogTvSystem **/
+
+typedef enum {
+    /*Color System parameters*/
+    HsvInsColourSystemPal     = 0,
+    HsvInsColourSystemSecam   = 1,
+    HsvInsColourSystemNtsc358 = 2,
+    HsvInsColourSystemNtsc443 = 3,
+    HsvInsColourSystemAuto    = 4,
+    HsvInsColourSystemInvalid = 5,  
+    HsvInsColourSystemNtscUnknown= 6 
+}HsvAnalogColourSystem; /** koala type HsvAnalogColourSystem **/
+
+
+typedef struct {
+    Nat32                   Frequency;
+    Nat32                   SymbolRate;
+    Nat8                    DecoderType;
+    Nat8                    ModulationType;   
+    Nat8                    CodeRateHigh;         
+    Nat8                    CodeRateLow;         
+    Nat8                    HierarchyMode;    
+    Nat8                    GuardInterval;    
+    Nat8                    TxMode;           
+    Nat8                    IqMode;           
+    Nat8                    ChannelBandwidth; 
+    Nat8                    StreamPriority;   
+    Nat16                   ChannelInformation;   
+    Int32                   TimeError;        
+    Int32                   FrequencyError;   
+    Nat8                    FrequencyOffset;  
+    Nat32                   VSignalStrength;
+    Nat32                   ASignalStrength;
+    Nat32                   QSignalStrength;
+    Nat32                   CDSDFrequency;
+    Nat8                    NITVersion;
+}HsvInstallationPTC;    /** koala type HsvInstallationPTC **/
+
+typedef struct SignalStrengthStatus
+{
+    Nat32                   VSigStrength;
+    Nat32                   ASigStrength;
+    Nat32                   QSigStrength;
+    Nat32                   SSigStrength;
+
+    Bool                    VSigStrMeasured;
+    Bool                    ASigStrMeasured;
+    Bool                    QSigStrMeasured;
+    Bool                    SSigStrMeasured;
+    Bool                    SigStrMeasured;    
+    
+    Nat32                   VMinSigStr;                         /*minimum signal strength supported*/     
+    Nat32                   VMaxSigStr;                         /*maximum signal strength supported*/
+    Nat32                   AMinSigStr;                         /*minimum signal strength supported*/     
+    Nat32                   AMaxSigStr;                         /*maximum signal strength supported*/
+    Nat32                   QMinSigStr;                         /*minimum signal strength supported*/     
+    Nat32                   QMaxSigStr;                         /*maximum signal strength supported*/
+    Nat32                   SMinSigStr;                         /*minimum signal strength supported*/     
+    Nat32                   SMaxSigStr;                         /*maximum signal strength supported*/
+}TypeSignalStrengthStatus;  /** koala type TypeSignalStrengthStatus **/
+
+/* For DVB-C. Will be stored in Flash as persistent settings */
+#define     INVALID_NETWORKID   (0xFFFF)
+#define     INVALID_ONID        (0xFFFF)
+
+typedef struct
+{
+    Nat8    ScanMode;                               /* Quick/Full Scan */
+    Nat8    SymbolRateMode;                         /* Auto/Manual */
+    Nat8    SymbolRateLen;                          /* Size of the array */
+    Nat32   SymbolRate[MAX_SYMBOL_RATES];           /* Array of SymbolRates */
+    Nat8    NetworkIDMode;                          /* Auto/Manual */
+    Nat16   NetworkID;                              /* Can be any valid networkId */
+    Nat8    NetworkFrequencyMode;                   /* Auto/Manual */
+    Nat8    NetworkFrequencyLen;                    /* Size of the array */
+    Nat32   NetworkFrequency[MAX_FREQUENCY_LIST];   /* List of frequencies fixed per country */
+    Nat8    ModulationMode;                         /* Auto/Manual */
+    Nat8    ModulationLen;                          /* Length of the array Modulation */
+    Nat32   Modulation[MAX_MODULATION_TYPES];       /* List of Mod types fixed per country */
+    Bool    DigitalOption;                          /* ON - DVBC_Lite OFF - NO DVBC */
+    Nat8    UserSymbolRateLen;
+    Nat32   UserSymbolRate[MAX_SYMBOL_RATES]; 
+    int     FreqStepSize;
+    int     InstalledCity;                          /* For china, as NVM is not avbl. hence flash approach followed */  
+    Nat16   InstalledONID;
+    Nat8    ScrambledState; 
+    Nat8    NetworkOperator;                        /* for Netherlands Cable */
+	Nat8    LCNSorting;
+	Bool    DualAnalogPass;
+    Bool    DTTScanonAnalog;
+	Bool    LCNOption;
+}HsvDVBSettings;    /** koala type HsvDVBSettings **/
+
+#define MAX_CDSD_PER_TS    10
+typedef struct
+{
+    Nat8 TargetNITType;
+    Nat16 TargetNITValue;
+    Nat8 NumOfTs;
+    int CurrentTsIndex; 
+    struct 
+    {
+        Nat16 ONID;
+        Nat16 Tsid;
+        Bool Installed;
+        Nat8 NumOfCDSD;
+        int CurrentCDSDIndex;
+        struct
+        {
+            Nat32 SymbolRate;
+            Nat32 Frequency;
+            Nat8 Modulation;
+        }CableDescParam[MAX_CDSD_PER_TS];
+        
+        Nat8 NumOfAltTs;
+        int CurrentAltTsIndex;
+        struct
+        {
+            Nat32 SymbolRate;
+            Nat32 Frequency;
+            Nat8 Modulation;
+        }AltTsParam[MAX_CDSD_PER_TS];
+    }TsParam[MAX_MUXES_PER_NTK];
+}t_CableDSDesc;
+
+#define MAX_SERVICES                (1000)
+typedef struct
+{
+    Nat8 VersionNumber;
+    Nat16 NumOfRecords;
+    struct
+    {
+        Nat16 Onid;
+        Nat16 Tsid;
+        Nat16 ServiceId;
+    }mSvcListInfo[MAX_SERVICES];
+}t_ServiceList;
+#endif

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.droidtv.euinstallertc.settingsframework.SettingsNode xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/MAIN_VB_INSTALLATION_SETTINGS"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:tag="@org.droidtv.ui.strings:string/MAIN_VB_INSTALLATION_SETTINGS" >
+
+    <org.droidtv.euinstallertc.settingsframework.common.ListSettingsNode
+        android:id="@+id/ws_dvbt_settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        data="@array/ws_dvbt_settings"
+        data_id="@array/indexedvalues"
+        easyPQ="@array/ch_dvbt_settings"
+        eumContext="org.droidtv.euinstallertc.settings.ChannelHelpConstants.ContextID_dvbt_settings"
+        eumContextLevel="3"
+        list_type="TYPE_GENERIC_LIST"
+        android:tag="DVB-T Installation settings" >
+    </org.droidtv.euinstallertc.settingsframework.common.ListSettingsNode>
+
+    <org.droidtv.euinstallertc.settingsframework.common.ListSettingsNode
+        android:id="@+id/ws_dvbc_settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        data="@array/ws_dvbc_settings"
+        data_id="@array/indexedvalues"
+        easyPQ="@array/ch_dvbc_settings"
+        eumContext="org.droidtv.euinstallertc.settings.ChannelHelpConstants.ContextID_dvbc_settings"
+        eumContextLevel="3"
+        list_type="TYPE_GENERIC_LIST"
+        android:tag="DVB-C Installation settings" >
+    </org.droidtv.euinstallertc.settingsframework.common.ListSettingsNode>
+
+    <org.droidtv.euinstallertc.settingsframework.common.ListSettingsNode
+        android:id="@+id/ws_frequency_scan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        data="@array/ws_frequency_scan"
+        data_id="@array/indexedvalues"
+        easyPQ="@array/ch_frequency_scan"
+        eumContext="org.droidtv.euinstallertc.settings.ChannelHelpConstants.ContextID_frequency_scan"
+        eumContextLevel="3"
+        list_type="TYPE_GENERIC_LIST"
+        android:tag="@org.droidtv.ui.strings:string/MAIN_FREQUENCY_SCAN" >
+    </org.droidtv.euinstallertc.settingsframework.common.ListSettingsNode>
+
+    <org.droidtv.euinstallertc.settingsframework.common.ListSettingsNode
+        android:id="@+id/ws_frequency_stepsize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        data="@array/ws_frequency_stepsize"
+        data_id="@array/indexedvalues"
+        easyPQ="@array/ch_frequency_step_size"
+        eumContext="org.droidtv.euinstallertc.settings.ChannelHelpConstants.ContextID_frequency_step_size"
+        eumContextLevel="3"
+        list_type="TYPE_GENERIC_LIST"
+        android:tag="@org.droidtv.ui.strings:string/MAIN_FREQUENCY_STEP_SIZE" >
+    </org.droidtv.euinstallertc.settingsframework.common.ListSettingsNode>
+
+    <org.droidtv.euinstallertc.settingsframework.common.ListSettingsNode
+        android:id="@+id/ws_network_id_mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        data="@array/ws_network_id_mode"
+        data_id="@array/indexedvalues"
+        easyPQ="@array/ch_network_id_mode"
+        eumContext="org.droidtv.euinstallertc.settings.ChannelHelpConstants.ContextID_network_id_mode"
+        eumContextLevel="3"
+        list_type="TYPE_GENERIC_LIST"
+        android:tag="@org.droidtv.ui.strings:string/MAIN_NETWORK_ID_MODE" >
+    </org.droidtv.euinstallertc.settingsframework.common.ListSettingsNode>
+
+    <org.droidtv.euinstallertc.wizard.settings.SettingsNetworkFreqNode
+        android:id="@+id/ws_network_id_entry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        controllable="true"
+        easyPQ="@array/ch_network_id"
+        eumContext="org.droidtv.euinstallertc.settings.ChannelHelpConstants.ContextID_network_id"
+        eumContextLevel="3"
+        android:tag="@org.droidtv.ui.strings:string/MAIN_NETWORK_ID" >
+    </org.droidtv.euinstallertc.wizard.settings.SettingsNetworkFreqNode>
+
+    <org.droidtv.euinstallertc.settingsframework.common.ListSettingsNode
+        android:id="@+id/ws_network_frequency_mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        data="@array/ws_network_frequency_mode"
+        data_id="@array/indexedvalues"
+        easyPQ="@array/ch_network_frequency_mode"
+        eumContext="org.droidtv.euinstallertc.settings.ChannelHelpConstants.ContextID_network_frequency_mode"
+        eumContextLevel="3"
+        list_type="TYPE_GENERIC_LIST"
+        android:tag="@org.droidtv.ui.strings:string/MAIN_NETWORK_FREQUENCY_MODE" >
+    </org.droidtv.euinstallertc.settingsframework.common.ListSettingsNode>
+
+    <org.droidtv.euinstallertc.wizard.settings.SettingsNetworkFreqNode
+        android:id="@+id/ws_network_frequency_entry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        controllable="true"
+        easyPQ="@array/ch_network_frequency"
+        eumContext="org.droidtv.euinstallertc.settings.ChannelHelpConstants.ContextID_network_frequency"
+        eumContextLevel="3"
+        android:tag="@org.droidtv.ui.strings:string/MAIN_NETWORK_FREQUENCY" >
+    </org.droidtv.euinstallertc.wizard.settings.SettingsNetworkFreqNode>
+
+    <org.droidtv.euinstallertc.settingsframework.common.ListSettingsNode
+        android:id="@+id/ws_digital_option"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        data="@array/ws_digital_option"
+        data_id="@array/indexedvalues"
+        easyPQ="@array/ch_digital_channels"
+        eumContext="org.droidtv.euinstallertc.settings.ChannelHelpConstants.ContextID_digital_channels"
+        eumContextLevel="3"
+        list_type="TYPE_GENERIC_LIST"
+        android:tag="@org.droidtv.ui.strings:string/MAIN_DIGITAL_CHANNELS" >
+    </org.droidtv.euinstallertc.settingsframework.common.ListSettingsNode>
+
+</org.droidtv.euinstallertc.settingsframework.SettingsNode>
